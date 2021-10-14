@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./vue.min.js"></script>
+    <script src="./pop.js"></script>
+</head>
+
+<body>
+    <section id="box">
+        <button @click="clickShow">click</button>
+        <hidden v-if="isShow" @stop-show="close"></hidden>
+    </section>
+
+    <template id="hiddenPopUps">
+        <section class="maskLayer">
+            <div class="popUpBox">
+                <div @click="clickClose" class="closeBtn">
+                    x
+                </div>
+                <div class="popContent">
+                    <p>para</p>
+                </div>
+                <div class="confirmBlk">
+                    <a href="#" class="confirmBtn">yes</a>
+                    <a href="#" class="confirmBtn">no</a>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</body>
+
+</html>

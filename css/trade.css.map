@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../pages/trade.scss"
+    ],
+    "names": [],
+    "file": "trade.css"
+}

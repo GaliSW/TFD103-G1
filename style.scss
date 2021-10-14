@@ -1,0 +1,108 @@
+@import "layout/grid";
+@import "mixin/var";
+@import "base/color";
+@import "module/pagination";
+
+@include grids(12);
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.title1,
+.title2 {
+    border: 1px solid red;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+.centerBox {
+    @include center;
+    @include border();
+    @include border_r(5);
+    @include shadow(5, 5, 5);
+}
+
+.box {
+    background-color: red;
+
+    @include desktop_small {
+        background-color: yellow;
+    }
+}
+
+.btn {
+    @include btn_on(50, 10) {
+        @include center;
+        background-color: red;
+    }
+}
+
+//*****pop*****
+
+.maskLayer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    .popUpBox {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $dark_green;
+        @include border(2, $tiffiny_green);
+        @include border_r(5);
+
+        .closeBtn {
+            background-color: $tiffiny_green;
+            @include border_r(2);
+            font-size: $fontsize_h2;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+
+        .popContent {
+            text-align: center;
+            color: $tiffiny_green;
+            margin-top: 80px;
+            height: 200px;
+        }
+
+        .confirmBlk {
+            display: flex;
+            justify-content: space-evenly;
+
+            .confirmBtn {
+                text-align: center;
+                line-height: 30px;
+                text-decoration: none;
+                @include border(3, $tiffiny_green);
+                padding: 10px 25px;
+                color: $tiffiny_green;
+                background-color: $dark_blue;
+                width: 100px;
+                height: 30px;
+                @include border_r(3);
+            }
+        }
+    }
+}

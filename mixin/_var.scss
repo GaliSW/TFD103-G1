@@ -1,0 +1,70 @@
+//置中
+@mixin center {
+    margin: 0 auto;
+}
+
+//圓角
+@mixin border_r($num) {
+    border-radius: $num+px;
+}
+
+//陰影
+@mixin shadow($x, $y, $blur) {
+    box-shadow: $x+px $y+px $blur+px;
+}
+
+//外框線
+@mixin border($n:1, $color:red) {
+    border: $n+px solid $color;
+}
+
+//斷點
+@mixin desktop {
+    @media (min-width:992px) and (max-width:1200px) {
+        @content;
+    }
+}
+
+@mixin desktop_small {
+    @media (min-width:768px) and (max-width:991.98px) {
+        @content;
+    }
+}
+
+@mixin pad {
+    @media (min-width:578px) and (max-width:767.98px) {
+        @content;
+    }
+}
+
+@mixin pad_small {
+    @media (min-width:414px) and (max-width:577.98px) {
+        @content;
+    }
+}
+
+@mixin pad_small {
+    @media (min-width:375px) and (max-width:413.98px) {
+        @content;
+    }
+}
+
+@mixin btn_blur ($w, $p) {
+    color: rgba(96, 205, 144, 1);
+    width: $w;
+    padding: $p;
+    background-color: rgba(14, 52, 97, 1);
+    border: 3px solid rgba(96, 205, 144, 1);
+    text-align: center;
+    @content;
+}
+
+@mixin btn_on ($w, $p) {
+    color: rgba(14, 52, 97, 1);
+    width: $w;
+    padding: $p;
+    background-color: rgba(96, 205, 144, 1);
+    border: 3px solid rgba(14, 52, 97, 1);
+    text-align: center;
+    @content;
+}

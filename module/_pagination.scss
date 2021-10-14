@@ -1,0 +1,45 @@
+/** pagination  */
+.pagination {
+    @include center;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.pagination_list {
+    @include center;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    width: 500px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination_list li {
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.6rem;
+    background-color: $dark_blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    color: $tiffiny_green;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2), inset 0 2px 5px rgba(0, 0, 0, .1);
+    transition: .3s;
+}
+
+.pagination_list li:hover {
+    background-color: $light_green;
+    color: $dark_blue;
+}
+
+.pagination_list li.focus {
+    background-color: $light_green;
+    color: $dark_blue;
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../pages/manager.scss"
+    ],
+    "names": [],
+    "file": "manager.css"
+}

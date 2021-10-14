@@ -1,0 +1,199 @@
+/** pagination  */
+.pagination {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.pagination_list {
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  position: relative;
+  width: 500px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination_list li {
+  margin: 0 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.6rem;
+  background-color: #0e3461;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #10c5b1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: .3s;
+}
+
+.pagination_list li:hover {
+  background-color: #60cd90;
+  color: #0e3461;
+}
+
+.pagination_list li.focus {
+  background-color: #60cd90;
+  color: #0e3461;
+}
+
+.col-1 {
+  width: 8.33333%;
+}
+
+.col-2 {
+  width: 16.66667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33333%;
+}
+
+.col-5 {
+  width: 41.66667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33333%;
+}
+
+.col-8 {
+  width: 66.66667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33333%;
+}
+
+.col-11 {
+  width: 91.66667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title1,
+.title2 {
+  border: 1px solid red;
+  box-sizing: border-box;
+  height: 40px;
+}
+
+.centerBox {
+  margin: 0 auto;
+  border: 1px solid red;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px;
+}
+
+.box {
+  background-color: red;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .box {
+    background-color: yellow;
+  }
+}
+
+.btn {
+  color: #0e3461;
+  width: 50;
+  padding: 10;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+  margin: 0 auto;
+  background-color: red;
+}
+
+.maskLayer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popUpBox {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  border-radius: 5px;
+}
+
+.closeBtn {
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.popContent {
+  text-align: center;
+  color: #60cd90;
+  margin-top: 80px;
+  height: 200px;
+}
+
+.popUpBox .confirmBlk {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.popUpBox .confirmBtn {
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  border: 3px solid #10c5b1;
+  padding: 10px 25px;
+  color: #10c5b1;
+  background-color: #0e3461;
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+}
+/*# sourceMappingURL=style.css.map */
