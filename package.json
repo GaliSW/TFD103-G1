@@ -1,0 +1,28 @@
+{
+  "name": "TFD103-G1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pop.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GaliSW/TFD103-G1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GaliSW/TFD103-G1/issues"
+  },
+  "homepage": "https://github.com/GaliSW/TFD103-G1#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.43.2"
+  }
+}
