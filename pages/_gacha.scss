@@ -1,0 +1,48 @@
+.js .slider-single>div:nth-child(1n+2) {
+    display: none
+}
+
+.js .slider-single.slick-initialized>div:nth-child(1n+2) {
+    display: block
+}
+
+#page {
+    /* border: 1px solid red; */
+    width: 500px;
+    margin: 0 50px 0 30px;
+}
+
+.slider-single {
+    /* border: 1px solid red; */
+    margin-left: 0px;
+}
+
+.slider-single div {
+    /* border: 1px solid blue; */
+    width: 100%;
+    font-size: 0;
+    padding: 0;
+}
+
+.slider-single img {
+    width: 500px;
+    height: 500px;
+    margin: 0;
+    font-size: 0;
+}
+
+.slider-nav img {
+    width: 100%;
+    padding: 0;
+    /* border: 1px solid yellow ; */
+}
+
+.slider-nav {
+    display: flex;
+    margin-top: 30px;
+    /* border: 1px solid yellow ; */
+    justify-content: center;
+    /* padding: 0; */
+    width: 500px;
+    /* font-size: 0; */
+}
