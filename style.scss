@@ -1,6 +1,31 @@
-@import "layout/grid";
-@import "mixin/mixins";
 @import "base/color";
-@import "module/pagination";
+@import "base/font";
 
-@import "pages/gacha.scss";
+@import "mixin/mixins";
+
+@import "module/card";
+@import "module/pagination";
+@import "module/pop";
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/grid";
+
+@import "pages/collection";
+@import "pages/contact";
+@import "pages/deposit";
+@import "pages//entry";
+@import "pages/forgot";
+@import "pages/gacha";
+@import "pages/index";
+@import "pages/intro";
+@import "pages/login";
+@import "pages/manager";
+@import "pages/member";
+@import "pages/my_role";
+@import "pages/news";
+@import "pages/news_in";
+@import "pages/product";
+@import "pages/role";
+@import "pages/signup";
+@import "pages/trade";
