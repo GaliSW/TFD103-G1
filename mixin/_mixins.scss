@@ -20,7 +20,8 @@
 
 //斷點
 @mixin desktop {
-    @media (min-width:992px) and (max-width:1200px) {
+    @media (min-width:992px) {
+        max-width: 1200px;
         @content;
     }
 }
