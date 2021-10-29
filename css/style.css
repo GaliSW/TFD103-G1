@@ -1591,27 +1591,33 @@ main.member_info div.content div.contain_list div.edit div.edit_detail form.book
   display: block;
 }
 
-main.member_info div.popUpBox {
+main.member_info section.maskLayer {
+  left: 0;
+  height: 100vw;
+}
+
+main.member_info section.maskLayer div.popUpBox {
   background-color: #0e3461;
   width: 75%;
   z-index: 3;
+  height: 510px;
 }
 
-main.member_info div.popUpBox div.popContent {
+main.member_info section.maskLayer div.popUpBox div.popContent {
   margin-top: 20px;
 }
 
-main.member_info div.popUpBox div.title {
+main.member_info section.maskLayer div.popUpBox div.title {
   width: 75%;
   margin: 0 auto;
 }
 
-main.member_info div.popUpBox div.title h3 {
+main.member_info section.maskLayer div.popUpBox div.title h3 {
   font-size: 24px;
   color: white;
 }
 
-main.member_info div.popUpBox div.title div.line {
+main.member_info section.maskLayer div.popUpBox div.title div.line {
   margin-top: 15px;
   margin-bottom: 35px;
   width: 100%;
@@ -1620,7 +1626,7 @@ main.member_info div.popUpBox div.title div.line {
   background-color: #10c5b1;
 }
 
-main.member_info div.popUpBox div.contain {
+main.member_info section.maskLayer div.popUpBox div.contain {
   width: 75%;
   margin: 0 auto;
   display: -webkit-box;
@@ -1630,14 +1636,14 @@ main.member_info div.popUpBox div.contain {
       flex-wrap: wrap;
 }
 
-main.member_info div.popUpBox div.contain div.back {
+main.member_info section.maskLayer div.popUpBox div.contain div.back {
   width: 250px;
   height: 350px;
   border: 1px solid gray;
   background-color: gray;
 }
 
-main.member_info div.popUpBox div.contain div.back div.circle {
+main.member_info section.maskLayer div.popUpBox div.contain div.back div.circle {
   border: 1px solid #10c5b1;
   width: 250px;
   height: 250px;
@@ -1646,12 +1652,12 @@ main.member_info div.popUpBox div.contain div.back div.circle {
   margin-top: 50px;
 }
 
-main.member_info div.popUpBox div.contain div.back div.circle img {
+main.member_info section.maskLayer div.popUpBox div.contain div.back div.circle img {
   width: 100%;
   height: 100%;
 }
 
-main.member_info div.popUpBox div.contain div.btn_area {
+main.member_info section.maskLayer div.popUpBox div.contain div.btn_area {
   width: 300px;
   margin-left: 100px;
   display: -webkit-box;
@@ -1666,7 +1672,7 @@ main.member_info div.popUpBox div.contain div.btn_area {
           justify-content: flex-end;
 }
 
-main.member_info div.popUpBox div.contain div.btn_area button {
+main.member_info section.maskLayer div.popUpBox div.contain div.btn_area button {
   color: #60cd90;
   width: 300px;
   padding: 10px;
@@ -1676,7 +1682,7 @@ main.member_info div.popUpBox div.contain div.btn_area button {
   position: relative;
 }
 
-main.member_info div.popUpBox div.contain div.btn_area button:hover {
+main.member_info section.maskLayer div.popUpBox div.contain div.btn_area button:hover {
   color: #0e3461;
   width: 300px;
   padding: 10px;
@@ -1686,11 +1692,11 @@ main.member_info div.popUpBox div.contain div.btn_area button:hover {
   position: relative;
 }
 
-main.member_info div.popUpBox div.contain div.btn_area button.input_btn {
+main.member_info section.maskLayer div.popUpBox div.contain div.btn_area button.input_btn {
   margin-bottom: 20px;
 }
 
-main.member_info div.popUpBox div.contain div.btn_area input {
+main.member_info section.maskLayer div.popUpBox div.contain div.btn_area input {
   position: absolute;
   top: 0;
   left: 0;
