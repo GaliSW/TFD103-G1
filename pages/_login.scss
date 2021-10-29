@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main.login {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../image/login/back.jpg);
+    padding-top: 200px;
+    padding-bottom: 100px;
+    width: 100%;
+    background-position: right bottom;
+    margin: 0;
+    box-sizing: border-box;
+
+
+    div.contain {
+        // border: 1px solid $dark_green;
+        // background-color: $dark_green;
+        @include center;
+        @include grids(12);
+        display: flex;
+        flex-wrap: wrap;
+        width: 1200px;
+        max-width: 95%;
+
+
+        h1 {
+            color: white;
+            margin-bottom: 35px;
+        }
+
+        .login_contain,
+        .signup_contain {
+            @include center;
+            width: 400px;
+        }
+
+        input {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            width: 400px;
+            max-width: 95%;
+            height: 35px;
+        }
+
+        button.btn_login,
+        button.btn_confirm,
+        button.btn_signup {
+            @include btn_blur(100%, 10px);
+            max-width: 400px;
+        }
+
+        button.btn_login:hover,
+        button.btn_confirm:hover,
+        button.btn_signup:hover {
+            @include btn_on(100%, 10px);
+            max-width: 400px;
+        }
+
+        .login_contain {
+            // display: none;
+
+            #login_error {
+                color: red;
+
+            }
+
+            button.forgot {
+                color: gray;
+                text-decoration: underline;
+                background-color: transparent;
+                @include border(0);
+                cursor: pointer;
+            }
+
+
+        }
+
+        .signup_contain {
+            color: white;
+            font-size: 20px;
+
+            button {
+                margin-top: 10px;
+            }
+
+            div.content {
+                margin-top: 15px;
+                font-size: 20px;
+                line-height: 1.5;
+
+                .fa-check {
+                    color: $light_green;
+                    margin-right: 10px;
+
+                }
+            }
+
+        }
+
+        .forget_contain {
+            @include center;
+            // border: 1px solid black;
+            width: 400px;
+            display: none;
+
+            .forget_error {
+                color: red;
+            }
+
+            button.backToLogin {
+                color: gray;
+                text-decoration: underline;
+                background-color: transparent;
+                @include border(0);
+                cursor: pointer;
+            }
+        }
+
+        .forget_contain,
+        .login_contain{
+            display: none;
+        }
+        .bookmark{
+            display: block;
+        }
+    }
+}

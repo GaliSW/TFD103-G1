@@ -1,9 +1,13 @@
 /** pagination  */
 .pagination {
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .pagination_list {
@@ -13,9 +17,15 @@
   position: relative;
   width: 500px;
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .pagination_list li {
@@ -24,13 +34,21 @@
   height: 40px;
   font-size: 1.6rem;
   background-color: #0e3461;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 8px;
   cursor: pointer;
   color: #10c5b1;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  -webkit-transition: .3s;
   transition: .3s;
 }
 
@@ -56,7 +74,8 @@
   position: absolute;
   top: 25%;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   background-color: #024f3f;
   border: 2px solid #10c5b1;
   width: 400px;
@@ -84,8 +103,12 @@
 }
 
 .popUpBox .confirmBlk {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .popUpBox .confirmBtn {
@@ -99,6 +122,426 @@
   width: 100px;
   height: 30px;
   border-radius: 3px;
+}
+
+main.collection {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../image/member/back.jpg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 100%;
+  background-position: left top;
+}
+
+main.collection .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+main.collection .container .col-1 {
+  width: 8.33333%;
+}
+
+main.collection .container .col-2 {
+  width: 16.66667%;
+}
+
+main.collection .container .col-3 {
+  width: 25%;
+}
+
+main.collection .container .col-4 {
+  width: 33.33333%;
+}
+
+main.collection .container .col-5 {
+  width: 41.66667%;
+}
+
+main.collection .container .col-6 {
+  width: 50%;
+}
+
+main.collection .container .col-7 {
+  width: 58.33333%;
+}
+
+main.collection .container .col-8 {
+  width: 66.66667%;
+}
+
+main.collection .container .col-9 {
+  width: 75%;
+}
+
+main.collection .container .col-10 {
+  width: 83.33333%;
+}
+
+main.collection .container .col-11 {
+  width: 91.66667%;
+}
+
+main.collection .container .col-12 {
+  width: 100%;
+}
+
+main.collection div.collect_contain {
+  border: 1px solid #0e3461;
+  background-color: white;
+  padding: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+main.collection div.collect_contain img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+main.collection div.collect_contain div.contain_bar {
+  background-color: #10c5b1;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 42px;
+  line-height: 42px;
+}
+
+main.collection div.collect_contain div.contain_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  height: 200px;
+  line-height: 200px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main.collection div.collect_contain div.contain_list hr {
+  width: 95%;
+  margin: 0 auto;
+}
+
+main.collection div.collect_contain div.contain_list div.trade_button {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 35px 0;
+}
+
+main.collection div.collect_contain div.contain_list div.trade_button button.buy,
+main.collection div.collect_contain div.contain_list div.trade_button button.change {
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+main.collection div.collect_contain div.contain_list div.trade_button button.buy:hover,
+main.collection div.collect_contain div.contain_list div.trade_button button.change:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+main.collection div.collect_contain div._off {
+  background-color: rgba(201, 200, 200, 0.8);
+}
+
+main.collection div.collect_contain div._off div.trade_button {
+  color: red;
+}
+
+main.collection div.collect_contain button.delete_btn {
+  background-color: transparent;
+  border: 0px solid red;
+}
+
+main.collection div.collect_contain button.delete_btn .fa-trash-alt {
+  color: red;
+  font-size: 24px;
+}
+
+main.deposit {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../image/deposit/back.jpg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main.deposit div.container {
+  width: 1200px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+main.deposit div.container .col-1 {
+  width: 8.33333%;
+}
+
+main.deposit div.container .col-2 {
+  width: 16.66667%;
+}
+
+main.deposit div.container .col-3 {
+  width: 25%;
+}
+
+main.deposit div.container .col-4 {
+  width: 33.33333%;
+}
+
+main.deposit div.container .col-5 {
+  width: 41.66667%;
+}
+
+main.deposit div.container .col-6 {
+  width: 50%;
+}
+
+main.deposit div.container .col-7 {
+  width: 58.33333%;
+}
+
+main.deposit div.container .col-8 {
+  width: 66.66667%;
+}
+
+main.deposit div.container .col-9 {
+  width: 75%;
+}
+
+main.deposit div.container .col-10 {
+  width: 83.33333%;
+}
+
+main.deposit div.container .col-11 {
+  width: 91.66667%;
+}
+
+main.deposit div.container .col-12 {
+  width: 100%;
+}
+
+main.deposit div.container div#app {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main.deposit div.container div#app button {
+  width: 200px;
+  height: 230px;
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 70px;
+  border: 0;
+}
+
+main.deposit div.container div#app button div.point {
+  background-image: url(../image/deposit/point.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 15px;
+  height: 30px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2px;
+  line-height: 30px;
+}
+
+main.deposit div.container div#app button div.photo {
+  width: 100%;
+  position: relative;
+}
+
+main.deposit div.container div#app button div.photo img {
+  max-width: 100%;
+  z-index: 0;
+  position: relative;
+}
+
+main.deposit div.container div#app button div.photo span {
+  z-index: 1;
+  position: relative;
+  color: white;
+  bottom: 50px;
+}
+
+main.deposit {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../image/deposit/back.jpg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main.deposit div.container {
+  width: 1200px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+main.deposit div.container .col-1 {
+  width: 8.33333%;
+}
+
+main.deposit div.container .col-2 {
+  width: 16.66667%;
+}
+
+main.deposit div.container .col-3 {
+  width: 25%;
+}
+
+main.deposit div.container .col-4 {
+  width: 33.33333%;
+}
+
+main.deposit div.container .col-5 {
+  width: 41.66667%;
+}
+
+main.deposit div.container .col-6 {
+  width: 50%;
+}
+
+main.deposit div.container .col-7 {
+  width: 58.33333%;
+}
+
+main.deposit div.container .col-8 {
+  width: 66.66667%;
+}
+
+main.deposit div.container .col-9 {
+  width: 75%;
+}
+
+main.deposit div.container .col-10 {
+  width: 83.33333%;
+}
+
+main.deposit div.container .col-11 {
+  width: 91.66667%;
+}
+
+main.deposit div.container .col-12 {
+  width: 100%;
+}
+
+main.deposit div.container div.deposit_pay {
+  background-color: #024f3f;
+  padding-bottom: 100px;
+}
+
+main.deposit div.container div.deposit_pay div.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+main.deposit div.container div.deposit_pay div.title div.credit_img {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 15px;
+}
+
+main.deposit div.container div.deposit_pay div.title div.credit_img img {
+  width: 102%;
+  height: 102%;
+  position: relative;
+}
+
+main.deposit div.container div.deposit_pay div.title h3 {
+  font-size: 24px;
+  color: white;
+  line-height: 80px;
+}
+
+main.deposit div.container div.deposit_pay form.credit {
+  color: white;
+  margin: 0 auto;
+}
+
+main.deposit div.container div.deposit_pay form.credit div {
+  margin-bottom: 20px;
+}
+
+main.deposit div.container div.deposit_pay form.credit div span.credit_detail {
+  width: 72px;
+  text-align: justify;
+  display: inline-block;
+  text-align-last: justify;
+}
+
+main.deposit div.container div.deposit_pay form.credit div input {
+  width: 50px;
+  height: 25px;
+}
+
+main.deposit div.container div.deposit_pay form.credit div select {
+  height: 25px;
+}
+
+main.deposit div.container div.deposit_pay form.credit button {
+  color: #60cd90;
+  width: 100%;
+  padding: 10px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  max-width: 300px;
+}
+
+main.deposit div.container div.deposit_pay form.credit button:hover {
+  color: #0e3461;
+  width: 100%;
+  padding: 10px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+  max-width: 300px;
 }
 
 .js .slider-single > div:nth-child(1n+2) {
@@ -141,12 +584,1232 @@
 }
 
 .slider-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
   /* border: 1px solid yellow ; */
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   /* padding: 0; */
   width: 500px;
   /* font-size: 0; */
+}
+
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main.login {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../image/login/back.jpg);
+  padding-top: 200px;
+  padding-bottom: 100px;
+  width: 100%;
+  background-position: right bottom;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main.login div.contain {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1200px;
+  max-width: 95%;
+}
+
+main.login div.contain .col-1 {
+  width: 8.33333%;
+}
+
+main.login div.contain .col-2 {
+  width: 16.66667%;
+}
+
+main.login div.contain .col-3 {
+  width: 25%;
+}
+
+main.login div.contain .col-4 {
+  width: 33.33333%;
+}
+
+main.login div.contain .col-5 {
+  width: 41.66667%;
+}
+
+main.login div.contain .col-6 {
+  width: 50%;
+}
+
+main.login div.contain .col-7 {
+  width: 58.33333%;
+}
+
+main.login div.contain .col-8 {
+  width: 66.66667%;
+}
+
+main.login div.contain .col-9 {
+  width: 75%;
+}
+
+main.login div.contain .col-10 {
+  width: 83.33333%;
+}
+
+main.login div.contain .col-11 {
+  width: 91.66667%;
+}
+
+main.login div.contain .col-12 {
+  width: 100%;
+}
+
+main.login div.contain h1 {
+  color: white;
+  margin-bottom: 35px;
+}
+
+main.login div.contain .login_contain,
+main.login div.contain .signup_contain {
+  margin: 0 auto;
+  width: 400px;
+}
+
+main.login div.contain input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 400px;
+  max-width: 95%;
+  height: 35px;
+}
+
+main.login div.contain button.btn_login,
+main.login div.contain button.btn_confirm,
+main.login div.contain button.btn_signup {
+  color: #60cd90;
+  width: 100%;
+  padding: 10px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  max-width: 400px;
+}
+
+main.login div.contain button.btn_login:hover,
+main.login div.contain button.btn_confirm:hover,
+main.login div.contain button.btn_signup:hover {
+  color: #0e3461;
+  width: 100%;
+  padding: 10px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+  max-width: 400px;
+}
+
+main.login div.contain .login_contain #login_error {
+  color: red;
+}
+
+main.login div.contain .login_contain button.forgot {
+  color: gray;
+  text-decoration: underline;
+  background-color: transparent;
+  border: 0px solid red;
+  cursor: pointer;
+}
+
+main.login div.contain .signup_contain {
+  color: white;
+  font-size: 20px;
+}
+
+main.login div.contain .signup_contain button {
+  margin-top: 10px;
+}
+
+main.login div.contain .signup_contain div.content {
+  margin-top: 15px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+main.login div.contain .signup_contain div.content .fa-check {
+  color: #60cd90;
+  margin-right: 10px;
+}
+
+main.login div.contain .forget_contain {
+  margin: 0 auto;
+  width: 400px;
+  display: none;
+}
+
+main.login div.contain .forget_contain .forget_error {
+  color: red;
+}
+
+main.login div.contain .forget_contain button.backToLogin {
+  color: gray;
+  text-decoration: underline;
+  background-color: transparent;
+  border: 0px solid red;
+  cursor: pointer;
+}
+
+main.login div.contain .forget_contain,
+main.login div.contain .login_contain {
+  display: none;
+}
+
+main.login div.contain .bookmark {
+  display: block;
+}
+
+main.member {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../image/member/back.jpg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 100%;
+  background-position: left top;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main.member .main_contain {
+  max-width: 1200px;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+main.member .main_contain .col-1 {
+  width: 8.33333%;
+}
+
+main.member .main_contain .col-2 {
+  width: 16.66667%;
+}
+
+main.member .main_contain .col-3 {
+  width: 25%;
+}
+
+main.member .main_contain .col-4 {
+  width: 33.33333%;
+}
+
+main.member .main_contain .col-5 {
+  width: 41.66667%;
+}
+
+main.member .main_contain .col-6 {
+  width: 50%;
+}
+
+main.member .main_contain .col-7 {
+  width: 58.33333%;
+}
+
+main.member .main_contain .col-8 {
+  width: 66.66667%;
+}
+
+main.member .main_contain .col-9 {
+  width: 75%;
+}
+
+main.member .main_contain .col-10 {
+  width: 83.33333%;
+}
+
+main.member .main_contain .col-11 {
+  width: 91.66667%;
+}
+
+main.member .main_contain .col-12 {
+  width: 100%;
+}
+
+main.member div.bar {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.member div.bar div.trading,
+main.member div.bar div.points,
+main.member div.bar div.information {
+  border: 1px solid #0e3461;
+  text-align: center;
+  background-color: white;
+  padding-bottom: 20px;
+}
+
+main.member div.bar div.title {
+  width: 100%;
+  background-color: #0e3461;
+  color: white;
+  font-size: 24px;
+}
+
+main.member div.bar button {
+  background-color: transparent;
+  width: 200px;
+  margin: 0 auto;
+  color: #0e3461;
+  border: 0px solid red;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+main.member div.bar button a {
+  color: #0e3461;
+  text-decoration: none;
+}
+
+main.member div.bar button._on {
+  background-color: #0e3461;
+}
+
+main.member div.bar button._on a {
+  color: white;
+}
+
+main.member div.button_bar {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.member div.button_bar button {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  background-color: white;
+  border: 1px solid #0e3461;
+}
+
+main.member div.button_bar button._on, main.member div.button_bar button.bookmark {
+  background-color: #0e3461;
+  color: white;
+  border: 1px solid white;
+}
+
+main.member div.content {
+  border: 1px solid #0e3461;
+  background-color: white;
+  padding: 0;
+}
+
+main.member div.content img {
+  width: 130px;
+  height: 145px;
+  margin: 0 auto;
+}
+
+main.member div.content div.contain_bar {
+  background-color: #0e3461;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 42px;
+  line-height: 42px;
+}
+
+main.member div.content div.contain_bar .apply_date,
+main.member div.content div.contain_bar .my_role,
+main.member div.content div.contain_bar .product {
+  text-align: center;
+  font-size: 20px;
+}
+
+main.member div.content div.contain_bar .status {
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+main.member div.content div.contain_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  height: 150px;
+  line-height: 150px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main.member div.content div.contain_list button {
+  color: #60cd90;
+  width: 100;
+  padding: 10px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+}
+
+main.member div.content div.contain_list button:hover {
+  color: #0e3461;
+  width: 100;
+  padding: 10px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+main.member div.content div.contain_list button.delete {
+  background-color: transparent;
+  border: 0px solid red;
+}
+
+main.member div.content div.contain_list button.delete .fa-trash-alt {
+  color: red;
+  font-size: 24px;
+}
+
+main.member div.content hr {
+  width: 95%;
+  margin: 0 auto;
+}
+
+main.member div.content div._off {
+  background-color: rgba(201, 200, 200, 0.8);
+}
+
+main.member div.content div._off span.trade_status {
+  color: red;
+}
+
+main.member div.content div.saler_contain div.trade_button button.confirm,
+main.member div.content div.saler_contain div.trade_button button.reject {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+main.member div.content div.saler_contain div.trade_button button.confirm {
+  margin-top: 30px;
+}
+
+main.trading_list {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../image/member/back.jpg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 100%;
+  background-position: left top;
+}
+
+main.trading_list .main_contain {
+  max-width: 1200px;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+main.trading_list .main_contain .col-1 {
+  width: 8.33333%;
+}
+
+main.trading_list .main_contain .col-2 {
+  width: 16.66667%;
+}
+
+main.trading_list .main_contain .col-3 {
+  width: 25%;
+}
+
+main.trading_list .main_contain .col-4 {
+  width: 33.33333%;
+}
+
+main.trading_list .main_contain .col-5 {
+  width: 41.66667%;
+}
+
+main.trading_list .main_contain .col-6 {
+  width: 50%;
+}
+
+main.trading_list .main_contain .col-7 {
+  width: 58.33333%;
+}
+
+main.trading_list .main_contain .col-8 {
+  width: 66.66667%;
+}
+
+main.trading_list .main_contain .col-9 {
+  width: 75%;
+}
+
+main.trading_list .main_contain .col-10 {
+  width: 83.33333%;
+}
+
+main.trading_list .main_contain .col-11 {
+  width: 91.66667%;
+}
+
+main.trading_list .main_contain .col-12 {
+  width: 100%;
+}
+
+main.trading_list div.bar {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.trading_list div.bar div.trading,
+main.trading_list div.bar div.points,
+main.trading_list div.bar div.information {
+  border: 1px solid #0e3461;
+  text-align: center;
+  background-color: white;
+  padding-bottom: 20px;
+}
+
+main.trading_list div.bar div.title {
+  width: 100%;
+  background-color: #0e3461;
+  color: white;
+  font-size: 24px;
+}
+
+main.trading_list div.bar button {
+  background-color: transparent;
+  width: 200px;
+  margin: 0 auto;
+  color: #0e3461;
+  border: 0px solid red;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+main.trading_list div.bar button a {
+  color: #0e3461;
+  text-decoration: none;
+}
+
+main.trading_list div.bar button._on {
+  background-color: #0e3461;
+}
+
+main.trading_list div.bar button._on a {
+  color: white;
+}
+
+main.trading_list div.button_bar {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.trading_list div.button_bar button {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  background-color: white;
+  border: 1px solid #0e3461;
+}
+
+main.trading_list div.button_bar button._on, main.trading_list div.button_bar button.bookmark {
+  background-color: #0e3461;
+  color: white;
+  border: 1px solid white;
+}
+
+main.trading_list div.content {
+  border: 1px solid #0e3461;
+  background-color: white;
+  padding: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+main.trading_list div.content div.dropdown {
+  text-align: right;
+}
+
+main.trading_list div.content div.dropdown select {
+  background-color: transparent;
+  border: 0px solid red;
+  color: #60cd90;
+  text-decoration: underline;
+}
+
+main.trading_list div.content img {
+  width: 130px;
+  height: 145px;
+  margin: 0 auto;
+}
+
+main.trading_list div.content div.contain_bar {
+  background-color: #0e3461;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 42px;
+  line-height: 42px;
+}
+
+main.trading_list div.content div.contain_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  height: 150px;
+  line-height: 150px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main.trading_list div.content div.contain_list hr {
+  width: 95%;
+  margin: 0 auto;
+}
+
+main.points_list {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../image/member/back.jpg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 100%;
+  background-position: left top;
+}
+
+main.points_list .main_contain {
+  max-width: 1200px;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+main.points_list .main_contain .col-1 {
+  width: 8.33333%;
+}
+
+main.points_list .main_contain .col-2 {
+  width: 16.66667%;
+}
+
+main.points_list .main_contain .col-3 {
+  width: 25%;
+}
+
+main.points_list .main_contain .col-4 {
+  width: 33.33333%;
+}
+
+main.points_list .main_contain .col-5 {
+  width: 41.66667%;
+}
+
+main.points_list .main_contain .col-6 {
+  width: 50%;
+}
+
+main.points_list .main_contain .col-7 {
+  width: 58.33333%;
+}
+
+main.points_list .main_contain .col-8 {
+  width: 66.66667%;
+}
+
+main.points_list .main_contain .col-9 {
+  width: 75%;
+}
+
+main.points_list .main_contain .col-10 {
+  width: 83.33333%;
+}
+
+main.points_list .main_contain .col-11 {
+  width: 91.66667%;
+}
+
+main.points_list .main_contain .col-12 {
+  width: 100%;
+}
+
+main.points_list div.bar {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.points_list div.bar div.trading,
+main.points_list div.bar div.points,
+main.points_list div.bar div.information {
+  border: 1px solid #0e3461;
+  text-align: center;
+  background-color: white;
+  padding-bottom: 20px;
+}
+
+main.points_list div.bar div.title {
+  width: 100%;
+  background-color: #0e3461;
+  color: white;
+  font-size: 24px;
+}
+
+main.points_list div.bar button {
+  background-color: transparent;
+  width: 200px;
+  margin: 0 auto;
+  color: #0e3461;
+  border: 0px solid red;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+main.points_list div.bar button a {
+  color: #0e3461;
+  text-decoration: none;
+}
+
+main.points_list div.bar button._on {
+  background-color: #0e3461;
+}
+
+main.points_list div.bar button._on a {
+  color: white;
+}
+
+main.points_list div.content {
+  border: 1px solid #0e3461;
+  background-color: white;
+  padding: 0;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+main.points_list div.content div.dropdown {
+  text-align: right;
+}
+
+main.points_list div.content div.dropdown select {
+  background-color: transparent;
+  border: 0px solid red;
+  color: #60cd90;
+  text-decoration: underline;
+}
+
+main.points_list div.content img {
+  width: 130px;
+  height: 145px;
+  margin: 0 auto;
+}
+
+main.points_list div.content div.contain_bar {
+  background-color: #0e3461;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 42px;
+  line-height: 42px;
+}
+
+main.points_list div.content div.contain_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  height: 150px;
+  line-height: 150px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main.points_list div.content div.contain_list hr {
+  width: 95%;
+  margin: 0 auto;
+}
+
+main.member_info {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../image/member/back.jpg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 100%;
+  background-position: left top;
+}
+
+main.member_info .main_contain {
+  max-width: 1200px;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+main.member_info .main_contain .col-1 {
+  width: 8.33333%;
+}
+
+main.member_info .main_contain .col-2 {
+  width: 16.66667%;
+}
+
+main.member_info .main_contain .col-3 {
+  width: 25%;
+}
+
+main.member_info .main_contain .col-4 {
+  width: 33.33333%;
+}
+
+main.member_info .main_contain .col-5 {
+  width: 41.66667%;
+}
+
+main.member_info .main_contain .col-6 {
+  width: 50%;
+}
+
+main.member_info .main_contain .col-7 {
+  width: 58.33333%;
+}
+
+main.member_info .main_contain .col-8 {
+  width: 66.66667%;
+}
+
+main.member_info .main_contain .col-9 {
+  width: 75%;
+}
+
+main.member_info .main_contain .col-10 {
+  width: 83.33333%;
+}
+
+main.member_info .main_contain .col-11 {
+  width: 91.66667%;
+}
+
+main.member_info .main_contain .col-12 {
+  width: 100%;
+}
+
+main.member_info div.bar {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.member_info div.bar div.trading,
+main.member_info div.bar div.points,
+main.member_info div.bar div.information {
+  border: 1px solid #0e3461;
+  text-align: center;
+  background-color: white;
+  padding-bottom: 20px;
+}
+
+main.member_info div.bar div.title {
+  width: 100%;
+  background-color: #0e3461;
+  color: white;
+  font-size: 24px;
+}
+
+main.member_info div.bar button {
+  background-color: transparent;
+  width: 200px;
+  margin: 0 auto;
+  color: #0e3461;
+  border: 0px solid red;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+main.member_info div.bar button a {
+  color: #0e3461;
+  text-decoration: none;
+}
+
+main.member_info div.bar button._on {
+  background-color: #0e3461;
+}
+
+main.member_info div.bar button._on a {
+  color: white;
+}
+
+main.member_info div.content {
+  border: 1px solid #0e3461;
+  background-color: white;
+  padding: 0;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+main.member_info div.content div.contain_bar {
+  background-color: #0e3461;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 42px;
+  line-height: 42px;
+  padding-left: 10px;
+}
+
+main.member_info div.content div.contain_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+main.member_info div.content div.contain_list button.member_img {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0;
+  cursor: pointer;
+  margin-right: 45px;
+}
+
+main.member_info div.content div.contain_list button.member_img div.img_outside {
+  width: 100%;
+  height: 100%;
+}
+
+main.member_info div.content div.contain_list button.member_img div.img_outside img {
+  width: 100%;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+main.member_info div.content div.contain_list button.member_img div.img_cover {
+  width: 100%;
+  height: 50%;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(201, 200, 200, 0.8);
+  border-radius: 0 0 100% 100%;
+}
+
+main.member_info div.content div.contain_list button.member_img div.img_cover .fa-camera {
+  font-size: 40px;
+  position: relative;
+  top: 25%;
+}
+
+main.member_info div.content div.contain_list div.edit {
+  margin-top: 25px;
+  text-align: left;
+  width: 400px;
+  max-width: 95%;
+}
+
+main.member_info div.content div.contain_list div.edit div.edit_detail {
+  margin-top: 30px;
+}
+
+main.member_info div.content div.contain_list div.edit div.edit_detail button.edit_btn {
+  background-color: transparent;
+  border: 0px solid red;
+  color: #60cd90;
+  text-decoration: underline;
+  padding: 0;
+}
+
+main.member_info div.content div.contain_list div.edit div.edit_detail button.black_btn {
+  color: black;
+  text-decoration: none;
+}
+
+main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password {
+  margin-top: 15px;
+}
+
+main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 400px;
+  max-width: 95%;
+  height: 35px;
+}
+
+main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password button {
+  color: #60cd90;
+  width: 100%;
+  padding: 10px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  max-width: 400px;
+}
+
+main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password {
+  display: none;
+}
+
+main.member_info div.content div.contain_list div.edit div.edit_detail form.bookmark {
+  display: block;
+}
+
+main.signup {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../image/signup/b1.png);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main.signup .main_contain {
+  border: 1px solid #024f3f;
+  background-color: #024f3f;
+  margin: 0 auto;
+  width: 1200px;
+  max-width: 95%;
+}
+
+main.signup .main_contain .col-1 {
+  width: 8.33333%;
+}
+
+main.signup .main_contain .col-2 {
+  width: 16.66667%;
+}
+
+main.signup .main_contain .col-3 {
+  width: 25%;
+}
+
+main.signup .main_contain .col-4 {
+  width: 33.33333%;
+}
+
+main.signup .main_contain .col-5 {
+  width: 41.66667%;
+}
+
+main.signup .main_contain .col-6 {
+  width: 50%;
+}
+
+main.signup .main_contain .col-7 {
+  width: 58.33333%;
+}
+
+main.signup .main_contain .col-8 {
+  width: 66.66667%;
+}
+
+main.signup .main_contain .col-9 {
+  width: 75%;
+}
+
+main.signup .main_contain .col-10 {
+  width: 83.33333%;
+}
+
+main.signup .main_contain .col-11 {
+  width: 91.66667%;
+}
+
+main.signup .main_contain .col-12 {
+  width: 100%;
+}
+
+main.signup .main_contain .title {
+  margin-top: 75px;
+  margin-bottom: 40px;
+}
+
+main.signup .main_contain .title h1 {
+  color: white;
+  float: right;
+  margin-bottom: 20px;
+}
+
+main.signup .main_contain .title .bar {
+  width: 100%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.signup .main_contain .title .bar .write {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  background-color: white;
+  font-size: 20px;
+  line-height: 30px;
+  color: #60cd90;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+main.signup .main_contain .title .bar .write .triangle1 {
+  position: relative;
+  top: -30px;
+  right: -15px;
+  float: right;
+  border-left: 15px solid white;
+  border-right: 0px solid red;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  width: 0px;
+  height: 0px;
+}
+
+main.signup .main_contain .title .bar .sucessBar {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  background-color: white;
+  font-size: 20px;
+  line-height: 30px;
+  color: #60cd90;
+}
+
+main.signup .main_contain .title .bar ._on {
+  background-color: #60cd90;
+  color: white;
+}
+
+main.signup .main_contain .title .bar ._on .triangle1 {
+  border-left: 15px solid #60cd90;
+}
+
+main.signup .main_contain .form_contain {
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
+main.signup .main_contain .form_contain form label {
+  color: white;
+}
+
+main.signup .main_contain .form_contain form input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 400px;
+  max-width: 95%;
+  height: 35px;
+}
+
+main.signup .main_contain .form_contain form button {
+  color: #60cd90;
+  width: 100%;
+  padding: 10px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  max-width: 400px;
+}
+
+main.signup .main_contain .form_contain form button:hover {
+  color: #0e3461;
+  width: 100%;
+  padding: 10px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+  max-width: 400px;
+}
+
+main.signup .main_contain .form_contain form div.input_form {
+  display: inline-block;
+}
+
+main.signup .main_contain .form_contain form div.error {
+  display: inline-block;
+  background-color: white;
+  max-width: 300px;
+  word-break: keep-all;
+  padding: 5px;
+  border-radius: 10px;
+  color: red;
+  margin-left: 20px;
+  display: none;
+}
+
+main.signup .main_contain .form_contain form div.error::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  position: relative;
+  left: -10px;
+  border-top: 8px solid transparent;
+  border-right: 8px solid white;
+  border-bottom: 8px solid transparent;
+  border-left: 0px solid transparent;
+}
+
+main.signup .main_contain div.sucess_box {
+  margin: 0 auto;
+  color: white;
+  margin-top: 72px;
+  margin-bottom: 182px;
+  font-size: 24px;
+}
+
+main.signup .main_contain div.sucess_box span {
+  font-size: 16px;
+  margin-top: 45px;
+  display: block;
+}
+
+main.signup .main_contain div.form_contain {
+  display: none;
+}
+
+main.signup .main_contain div.sucess_box {
+  display: none;
+}
+
+main.signup .main_contain div._on {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

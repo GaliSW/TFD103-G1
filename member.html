@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/login.css"> -->
+
+    <script src="vendor/js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
+
+</head>
+
+<body>
+
+    <main class="member">
+        <div class="main_contain">
+
+            <!-- 上方選單 -->
+            <div class="bar col-12">
+                <div class="col-4 trading">
+                    <div class="title">交易相關</div>
+                    <button class="apply_trade _on">
+                        <a href="./member.html">
+                            <i class="fas fa-list-alt"></i>申請中交易
+                        </a> </button>
+                    <button class="trade_list">
+                        <a href="./trading_list.html">
+                            <i class="fas fa-list-alt"></i>交易紀錄
+                        </a>
+                    </button>
+                </div>
+                <div class="col-4 points">
+                    <div class="title">點數相關</div>
+                    <button class="point_list">
+                        <a href="./points_list.html">
+                            <i class="fas fa-search-dollar"></i>點數紀錄查詢
+                        </a>
+                    </button>
+                </div>
+                <div class="col-4 information">
+                    <div class="title">會員資料</div>
+                    <button class="member_info">
+                        <a href="./member_info.html">
+                            <i class="fas fa-pencil-alt"></i>修改個人資料
+                        </a>
+                    </button>
+                </div>
+            </div>
+
+            <div id="app">
+                <!-- 頁籤 -->
+                <div class="button_bar " >
+                    <button class="buyer" :class="{'bookmark':active}" @click='marks()'>我是買方</button>
+                    <button class="saler" :class="{'bookmark':active == false }" @click='marks()'>我是賣方</button>
+                </div>
+                <div class="content col-12">
+                    <keep-alive>
+                        <component :is="content" />
+                    </keep-alive>
+                </div>
+                
+
+            </div>
+
+            
+        </div>
+
+
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
+    <script>
+        Vue.component(`buyer_contain`, {
+            template: `
+            <div class="buyer_contain">
+                    <div class="contain_bar">
+                        <span class="apply_date col-1">申請日期</span>
+                        <span class="my_role col-3">我的角色</span>
+                        <span class="product col-3">商品</span>
+                        <span class="status col-5">狀態</span>
+                    </div>
+                    <div class="contain_list">
+                        <span class="apply_date col-1">10-20</span>
+                        <div class="my_role col-3"><img src="./image/member/r1.jpg"></div>
+                        <div class="slaes_role col-3">
+                            <img src="./image/member/r2.jpg" alt="">
+                        </div>
+                        <span class="trade_status col-1">等待確認</span>
+                        <div class="trade_button col-4">
+                            <button class="confirm ">確認交易</button>
+                        </div>
+                    </div>
+                    <span>
+                        <hr>
+                    </span>
+                    <div class="contain_list _off">
+                        <span class="apply_date col-1">10-20</span>
+                        <div class="my_role col-3"><img src="./image/member/r1.jpg"></div>
+                        <div class="slaes_role col-3">
+                            <img src="./image/member/r2.jpg" alt="">
+                        </div>
+
+                        <span class="trade_status col-1">已完售</span>
+                        <div class="trade_button col-4">
+                            <button class="delete "><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+    `,
+        });
+        Vue.component(`saler_contain`, {
+                template: `
+            <div class="saler_contain">
+                    <div class="contain_bar">
+                        <span class="apply_date col-1">申請日期</span>
+                        <span class="my_role col-3">對方角色</span>
+                        <span class="product col-3">我的商品</span>
+                        <span class="status col-5">狀態</span>
+                    </div>
+                    <div class="contain_list">
+                        <span class="apply_date col-1">10-20</span>
+                        <div class="my_role col-3"><img src="./image/member/r1.jpg"></div>
+                        <div class="slaes_role col-3">
+                            <img src="./image/member/r2.jpg" alt="">
+                        </div>
+                        <span class="trade_status col-1">等待確認</span>
+                        <div class="trade_button col-4">
+                            <button class="confirm ">確認交易</button>
+                            <button class="reject ">拒絕交易</button>
+                        </div>
+                    </div>
+                    <span>
+                        <hr>
+                    </span>
+                    <div class="contain_list _off">
+                        <span class="apply_date col-1">10-20</span>
+                        <div class="my_role col-3"><img src="./image/member/r1.jpg"></div>
+                        <div class="slaes_role col-3">
+                            <img src="./image/member/r2.jpg" alt="">
+                        </div>
+
+                        <span class="trade_status col-1">已完售</span>
+                        <div class="trade_button col-4">
+                            <button class="delete "><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+    `,
+            });
+
+        let vm = new Vue({
+                el: '#app',
+                data: {
+                    content: 'buyer_contain',
+                    active: true,
+                },
+
+               methods: {
+                   marks: function () {
+                       if(this.active ==true){
+                           this.active = false
+                            this.content = 'saler_contain'
+                       }else{
+                           this.active =true
+                           this.content = 'buyer_contain'
+                       }    
+                   }
+               },
+                
+            });
+    </script>
+    
+
+
+</body>
+
+</html>

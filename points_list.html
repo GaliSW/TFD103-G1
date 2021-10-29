@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>points_list</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/login.css"> -->
+
+    <script src="vendor/js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
+
+</head>
+
+<body>
+
+    <main class="points_list">
+        <div class="main_contain">
+
+            <!-- 上方選單 -->
+            <div class="bar col-12">
+                <div class="col-4 trading">
+                    <div class="title">交易相關</div>
+                    <button class="apply_trade">
+                        <a href="./member.html">
+                            <i class="fas fa-list-alt"></i>申請中交易
+                        </a> </button>
+                    <button class="trade_list">
+                        <a href="./trading_list.html">
+                            <i class="fas fa-list-alt"></i>交易紀錄
+                        </a> 
+                    </button>
+                </div>
+                <div class="col-4 points">
+                    <div class="title">點數相關</div>
+                    <button class="point_list _on">
+                        <a href="./points_list.html">
+                            <i class="fas fa-search-dollar"></i>點數紀錄查詢
+                        </a>
+                    </button>
+                </div>
+                <div class="col-4 information">
+                    <div class="title">會員資料</div>
+                    <button class="member_info">
+                        <a href="./member_info.html">
+                            <i class="fas fa-pencil-alt"></i>修改個人資料
+                        </a>
+                    </button>
+                </div>
+            </div>
+
+            
+
+            <!-- 下方顯示 -->
+            <div class="content col-12">
+
+                
+                <div class="contain">
+                    <div class="contain_bar">
+                        <span class="apply_date col-3">交易日期</span>
+                        <span class="product col-2">來源</span>
+                        <span class="method col-3">點數e</span>
+                        <span class="price col-3">剩餘點數</span>
+                        <div class="dropdown col-1" id="app">
+                            <select>
+                                <option value="t3">近三個月</option>
+                                <option value="t6">近六個月</option>
+                                <option value="t9">近九個月</option>
+                                <option value="t12">近一年</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="contain_list">
+                        <span class="apply_date col-3">10-20</span>
+                        <span class="my_role col-2">
+                            儲值
+                        </span>
+                        <span class="method col-3">500</span>
+                        <span class="price col-3">300</span>
+                        <span class="block col-1"></span>
+                    </div>
+                    <span>
+                        <hr>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script>
+        let vm = new Vue({
+                el: '#app',
+                data: {
+                    
+
+                },
+            });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member_info</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/login.css"> -->
+
+    <script src="vendor/js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
+
+</head>
+
+<body>
+
+    <main class="member_info">
+        <div class="main_contain">
+
+            <!-- 上方選單 -->
+            <div class="bar col-12">
+                <div class="col-4 trading">
+                    <div class="title">交易相關</div>
+                    <button class="apply_trade">
+                        <a href="./member.html">
+                            <i class="fas fa-list-alt"></i>申請中交易
+                        </a> </button>
+                    <button class="trade_list">
+                        <a href="./trading_list.html">
+                            <i class="fas fa-list-alt"></i>交易紀錄
+                        </a>
+                    </button>
+                </div>
+                <div class="col-4 points">
+                    <div class="title">點數相關</div>
+                    <button class="point_list ">
+                        <a href="./points_list.html">
+                            <i class="fas fa-search-dollar"></i>點數紀錄查詢
+                        </a>
+                    </button>
+                </div>
+                <div class="col-4 information">
+                    <div class="title">會員資料</div>
+                    <button class="member_info _on">
+                        <a href="./member_info.html">
+                            <i class="fas fa-pencil-alt"></i>修改個人資料
+                        </a>
+                    </button>
+                </div>
+            </div>
+
+
+
+            <!-- 下方顯示 -->
+            <div class="content col-12">
+
+
+                <div class="contain">
+                    <div class="contain_bar">
+                        <span class="contain_title">修改個人資料</span>
+                    </div>
+
+                    <div class="contain_list col-8">
+                        <!-- 編輯頭像 -->
+                        <button class="member_img ">
+                            <div class="img_outside">
+                                <img src="./image/member/r1.jpg" alt="">
+
+                            </div>
+                            <div class="img_cover">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </button>
+
+                        <div class="edit" id="app">
+                            <span>會員資料:a12345</span>
+                            <div class="edit_detail">
+                                <button class="edit_btn" :class="{'black_btn': btn_on }" @click=editPassword()>編輯密碼</button>
+                                <form class="edit_password " :class="{'bookmark': edit_on }">
+                                    <input type="text" name="" id="" placeholder="請輸入新密碼">
+                                    <br>
+                                    <input type="text" name="" id="" placeholder="請確認新密碼">
+                                    <br>
+                                    <button>確認</button>
+                                </form>
+                            </div>
+                            
+                        </div>
+
+
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script>
+        let vm = new Vue({
+                el: '#app',
+                data: {
+                    edit_on: false,
+                    btn_on:false
+                },
+                methods: {
+                    editPassword: function () {
+                        if(vm.$data.edit_on == true){
+                            vm.$data.edit_on = false
+                            vm.$data.btn_on = false
+                        }else{
+                            vm.$data.edit_on = true
+                            vm.$data.btn_on = true
+                        }
+                        
+                    },
+                },
+            });
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
+
+
+
+</body>
+
+</html>
