@@ -15,8 +15,8 @@
 
 <body>
 
-    <main class="member_info">
-        <div class="main_contain">
+    <main class="member_info" id="box">
+        <div class="main_contain" id="app">
 
             <!-- 上方選單 -->
             <div class="bar col-12">
@@ -63,7 +63,7 @@
 
                     <div class="contain_list col-8">
                         <!-- 編輯頭像 -->
-                        <button class="member_img ">
+                        <button class="member_img" @click="clickShow">
                             <div class="img_outside">
                                 <img src="./image/member/r1.jpg" alt="">
 
@@ -72,11 +72,13 @@
                                 <i class="fas fa-camera"></i>
                             </div>
                         </button>
+                        <hidden v-if="isShow" @stop-show="close"></hidden>
 
-                        <div class="edit" id="app">
+                        <div class="edit" >
                             <span>會員資料:a12345</span>
                             <div class="edit_detail">
-                                <button class="edit_btn" :class="{'black_btn': btn_on }" @click=editPassword()>編輯密碼</button>
+                                <button class="edit_btn" :class="{'black_btn': btn_on }"
+                                    @click=editPassword()>編輯密碼</button>
                                 <form class="edit_password " :class="{'bookmark': edit_on }">
                                     <input type="text" name="" id="" placeholder="請輸入新密碼">
                                     <br>
@@ -85,43 +87,97 @@
                                     <button>確認</button>
                                 </form>
                             </div>
-                            
+
                         </div>
 
 
                     </div>
-                    
+
 
                 </div>
             </div>
+
+            <template id="=hiddenPopUps">
+            
+                <section class="maskLayer">
+                    <div class="popUpBox">
+                        <div @click="close" class="closeBtn">
+                            x
+                        </div>
+                        <div class="popContent">
+                            <div class="title ">
+                                <h3>更新大頭貼</h3>
+                                <div class="line"></div>
+                            </div>
+                            <div class="contain" id="fileBox">
+
+                                <div class="imgShow">
+                                    <div class="back">
+                                        <div class="circle">
+                                            <img :src="image">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="btn_area">
+                                    <button class="input_btn">
+                                        +上傳照片
+                                        <input type="file" @change="fileChange">
+                                    </button>
+                                    
+                                    <button>儲存</button> 
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+            
+            </template>
         </div>
 
-
+        
     </main>
+
+
 
     <script>
         let vm = new Vue({
-                el: '#app',
-                data: {
-                    edit_on: false,
-                    btn_on:false
+            el: '#app',
+            data: {
+                edit_on: false,
+                btn_on: false,
+                image: './image/member/r1.jpg',
+            },
+            methods: {
+                editPassword: function () {
+                    if (vm.$data.edit_on == true) {
+                        vm.$data.edit_on = false
+                        vm.$data.btn_on = false
+                    } else {
+                        vm.$data.edit_on = true
+                        vm.$data.btn_on = true
+                    }
+
                 },
-                methods: {
-                    editPassword: function () {
-                        if(vm.$data.edit_on == true){
-                            vm.$data.edit_on = false
-                            vm.$data.btn_on = false
-                        }else{
-                            vm.$data.edit_on = true
-                            vm.$data.btn_on = true
-                        }
-                        
-                    },
+                fileChange(e) {
+                    let file = e.target.files[0];
+                    readFile = new FileReader();
+                    readFile.readAsDataURL(file);
+                    readFile.addEventListener('load', this.loadImage);
                 },
-            });
+                loadImage(e) {
+                    this.image = readFile.result;
+                    // this.image = e.target.result;
+                },
+            },
+        });
+
 
     </script>
 
+    <!-- <script src="./js/pop.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
 
 

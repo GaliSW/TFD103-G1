@@ -84,7 +84,8 @@ main.member {
 
         }
 
-        button._on,button.bookmark {
+        button._on,
+        button.bookmark {
             background-color: $dark_blue;
             color: white;
             @include border(1, white)
@@ -282,7 +283,8 @@ main.trading_list {
 
         }
 
-        button._on,button.bookmark {
+        button._on,
+        button.bookmark {
             background-color: $dark_blue;
             color: white;
             @include border(1, white)
@@ -665,6 +667,91 @@ main.member_info {
             }
         }
 
+    }
 
+    div.popUpBox {
+        background-color: $dark_blue;
+        width: 75%;
+        z-index: 3;
+
+        div.popContent {
+            margin-top: 20px;
+        }
+
+        div.title {
+            width: 75%;
+            @include center;
+
+            h3 {
+                font-size: 24px;
+                color: white;
+            }
+
+            div.line {
+                margin-top: 15px;
+                margin-bottom: 35px;
+                width: 100%;
+                height: 0;
+                @include border(1, $tiffiny_green);
+                background-color: $tiffiny_green;
+            }
+        }
+
+        div.contain {
+            width: 75%;
+            // border: 1px solid black;
+            @include center;
+            display: flex;
+            flex-wrap: wrap;
+
+            div.back {
+                width: 250px;
+                height: 350px;
+                @include border(1, gray);
+                background-color: gray;
+
+                div.circle {
+                    @include border(1, $tiffiny_green);
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-top: 50px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            div.btn_area {
+                width: 300px;
+                margin-left: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                button {
+                    @include btn_blur(300px, 10px);
+                    position: relative;
+                }
+
+                button:hover {
+                    @include btn_on(300px, 10px);
+                    position: relative;
+                }
+                button.input_btn{
+                    margin-bottom: 20px;
+                }
+                input {
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                }
+            }
+        }
     }
 }
