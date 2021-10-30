@@ -366,6 +366,7 @@ main.deposit div.container div#app button {
   padding: 0;
   margin-bottom: 70px;
   border: 0;
+  cursor: pointer;
 }
 
 main.deposit div.container div#app button div.point {

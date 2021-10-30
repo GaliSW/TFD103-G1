@@ -13,57 +13,73 @@
     <main class="deposit">
         <div class="container">
             <div id="app" class="col-10">
-                <button v-for="value in valued" @click="test(value)">
+                <button v-for="card in cards" @click="test(card.value)">
                     <div class="point">
-                        <span>{{value}}點券</span>
+                        <span>{{card.value}}點券</span>
                     </div>
-                    <div class="photo">
-                        <img src="./image/deposit/b1.jpg" alt="">
-                        <span>以NT{{value}}購買</span>
+                    <div class="photo" >
+                        <img :src=card.imgUrl  alt="" >
+                        <span  >以NT{{card.value}}購買</span>
                     </div>
                 </button>
-            
+
             </div>
         </div>
-        
+
 
     </main>
 
-    
+
     <script>
 
-        
+
         let vm = new Vue({
-            el:'#app',
-            data:{
-                valued:[50,100,300,500,1000,2000,3000,5000],
-                // cardObject: {
-                //     b1: 50,
-                //     b2: 100,
-                //     b3: 300,
-                //     b4: 500,
-                //     b5: 1000,
-                //     b6: 2000,
-                //     b7: 3000,
-                //     b8: 5000,
-                // },
+            el: '#app',
+            data: {
+                
+                cards: [
+                    {
+                        value: 50,
+                        imgUrl: "./image/deposit/b1.jpg"
+                    },
+                    {
+                        value: 100,
+                        imgUrl: "./image/deposit/b2.jpg"
+                    },
+                    {
+                        value: 300,
+                        imgUrl: "./image/deposit/b3.jpg"
+                    },
+                    {
+                        value: 500,
+                        imgUrl: "./image/deposit/b4.jpg"
+                    },
+                    {
+                        value: 1000,
+                        imgUrl: "./image/deposit/b5.jpg"
+                    },
+                    {
+                        value: 2000,
+                        imgUrl: "./image/deposit/b6.jpg"
+                    },
+                    {
+                        value: 3000,
+                        imgUrl: "./image/deposit/b7.jpg"
+                    },
+                    {
+                        value: 5000,
+                        imgUrl: "./image/deposit/b8.jpg"
+                    },
+                ],
+                
 
             },
             methods: {
-                test(price){
-                    alert(this.$data.value);
-                }
-            },
-            components: {
-                'img-src': {
-                    template:
-                        `
-                        
-                    `
+                test(itemValue) {
+                    alert(itemValue);
                 },
-            }
-            
-            
+                
+            },
             
         })
     </script>
