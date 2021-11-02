@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    box-sizing: border-box;
 }
 
 main.login {
@@ -13,6 +12,7 @@ main.login {
     background-position: left bottom;
     margin: 0;
     box-sizing: border-box;
+    min-height: 100vh;
 
 
     div.contain {
@@ -30,7 +30,8 @@ main.login {
                 display: none;
 
             }
-            .rwd_box{
+
+            .rwd_box {
                 width: 100%;
             }
         }

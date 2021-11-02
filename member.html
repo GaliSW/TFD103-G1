@@ -53,8 +53,8 @@
             <div id="app">
                 <!-- 頁籤 -->
                 <div class="button_bar " >
-                    <button class="buyer" :class="{'bookmark':active}" @click='marks()'>我是買方</button>
-                    <button class="saler" :class="{'bookmark':active == false }" @click='marks()'>我是賣方</button>
+                    <button class="buyer" :class="{'bookmark':buyer}" @click='showBuyer()'>我是買方</button>
+                    <button class="saler" :class="{'bookmark':saler }" @click='showSaler()'>我是賣方</button>
                 </div>
                 <div class="content col-12">
                     <keep-alive>
@@ -185,19 +185,22 @@
                 el: '#app',
                 data: {
                     content: 'buyer_contain',
-                    active: true,
+                    buyer: true,
+                    saler: false,
                     pop: false,
                 },
 
                methods: {
-                   marks: function () {
-                       if(this.active ==true){
-                           this.active = false
-                            this.content = 'saler_contain'
-                       }else{
-                           this.active =true
-                           this.content = 'buyer_contain'
-                       }    
+                   showBuyer: function () {
+
+                       vm.$data.buyer = true
+                       vm.$data.saler = false
+
+
+                   },
+                   showSaler: function () {
+                       vm.$data.saler = true
+                       vm.$data.buyer = false
                    },
                    clickClose() {
                        vm.$data.pop = false

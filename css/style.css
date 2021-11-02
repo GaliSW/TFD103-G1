@@ -132,6 +132,9 @@ main.collection {
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
+  min-height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 main.collection .container {
@@ -766,8 +769,6 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 
 * {
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 main.login {
@@ -781,6 +782,7 @@ main.login {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  min-height: 100vh;
 }
 
 main.login div.contain {
@@ -987,13 +989,12 @@ main.member {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
-  box-sizing: border-box;
 }
 
 main.member .main_contain {
+  width: 95%;
   max-width: 1200px;
   margin: 0 auto;
-  max-width: 95%;
 }
 
 main.member .main_contain .col-1 {
@@ -1175,7 +1176,7 @@ main.member div.content img {
   margin: 0 auto;
 }
 
-@media (max-width: 577.98px) {
+@media (max-width: 767.98px) {
   main.member div.content img {
     width: 80px;
     height: 100px;
@@ -1379,6 +1380,7 @@ main.member section.maskLayer div.popUpBox {
   width: 50%;
   z-index: 3;
   height: 300px;
+  top: 10%;
 }
 
 main.member section.maskLayer div.popUpBox .col-1 {
@@ -1478,12 +1480,14 @@ main.trading_list {
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 main.trading_list .main_contain {
-  max-width: 1200px;
   margin: 0 auto;
-  max-width: 95%;
+  width: 95%;
+  max-width: 1200px;
 }
 
 main.trading_list .main_contain .col-1 {
@@ -1752,12 +1756,14 @@ main.points_list {
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 main.points_list .main_contain {
   max-width: 1200px;
   margin: 0 auto;
-  max-width: 95%;
+  width: 95%;
 }
 
 main.points_list .main_contain .col-1 {
@@ -1979,12 +1985,15 @@ main.member_info {
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
+  min-height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 main.member_info .main_contain {
   max-width: 1200px;
   margin: 0 auto;
-  max-width: 95%;
+  width: 95%;
 }
 
 main.member_info .main_contain .col-1 {
