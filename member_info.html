@@ -36,7 +36,7 @@
                     <div class="title">點數相關</div>
                     <button class="point_list ">
                         <a href="./points_list.html">
-                            <i class="fas fa-search-dollar"></i>點數紀錄查詢
+                            <i class="fas fa-search-dollar"></i>點數紀錄
                         </a>
                     </button>
                 </div>
@@ -63,7 +63,7 @@
 
                     <div class="contain_list col-8">
                         <!-- 編輯頭像 -->
-                        <button class="member_img" @click="clickShow">
+                        <button class="member_img" @click=clickPop()>
                             <div class="img_outside">
                                 <img src="./image/member/r1.jpg" alt="">
 
@@ -72,7 +72,7 @@
                                 <i class="fas fa-camera"></i>
                             </div>
                         </button>
-                        <hidden v-if="isShow" @stop-show="close"></hidden>
+                        
 
                         <div class="edit" >
                             <span>會員資料:a12345</span>
@@ -99,9 +99,9 @@
 
             <template id="=hiddenPopUps">
             
-                <section class="maskLayer">
+                <section class="maskLayer" :class="{'popShow':pop}">
                     <div class="popUpBox">
-                        <div @click="close" class="closeBtn">
+                        <div  class="closeBtn" @click=clickClose()>
                             x
                         </div>
                         <div class="popContent">
@@ -149,6 +149,7 @@
                 edit_on: false,
                 btn_on: false,
                 image: './image/member/r1.jpg',
+                pop:false,
             },
             methods: {
                 editPassword: function () {
@@ -171,13 +172,19 @@
                     this.image = readFile.result;
                     // this.image = e.target.result;
                 },
+                clickPop(){
+                    vm.$data.pop = true
+                },
+                clickClose(){
+                    vm.$data.pop = false
+                }
             },
         });
 
 
     </script>
 
-    <!-- <script src="./js/pop.js"></script> -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
 
 

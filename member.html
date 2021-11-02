@@ -36,7 +36,7 @@
                     <div class="title">點數相關</div>
                     <button class="point_list">
                         <a href="./points_list.html">
-                            <i class="fas fa-search-dollar"></i>點數紀錄查詢
+                            <i class="fas fa-search-dollar"></i>點數紀錄
                         </a>
                     </button>
                 </div>
@@ -62,7 +62,28 @@
                     </keep-alive>
                 </div>
                 
-
+                <template id="=hiddenPopUps">
+                
+                    <section class="maskLayer" :class="{'popShow':pop}">
+                        <div class="popUpBox">
+                            <div class="closeBtn" @click=clickClose()>
+                                x
+                            </div>
+                            <div class="popContent">
+                                <div class="title col-4">
+                                    <span>拒絕原因:</span>
+                                    <button>不喜歡角色</button>
+                                    <button>不喜歡角色能力</button>
+                                    <button>其他</button>
+                                    
+                                </div>
+                
+                            </div>
+                
+                        </div>
+                    </section>
+                
+                </template>
             </div>
 
             
@@ -84,13 +105,13 @@
                         <span class="status col-5">狀態</span>
                     </div>
                     <div class="contain_list">
-                        <span class="apply_date col-1">10-20</span>
+                        <span class="apply_date col-1">110-10-20</span>
                         <div class="my_role col-3"><img src="./image/member/r1.jpg"></div>
                         <div class="slaes_role col-3">
                             <img src="./image/member/r2.jpg" alt="">
                         </div>
                         <span class="trade_status col-1">等待確認</span>
-                        <div class="trade_button col-4">
+                        <div class="trade_button col-3">
                             <button class="confirm ">取消交易</button>
                         </div>
                     </div>
@@ -98,14 +119,14 @@
                         <hr>
                     </span>
                     <div class="contain_list _off">
-                        <span class="apply_date col-1">10-20</span>
+                        <span class="apply_date col-1">110-10-20</span>
                         <div class="my_role col-3"><img src="./image/member/r1.jpg"></div>
                         <div class="slaes_role col-3">
                             <img src="./image/member/r2.jpg" alt="">
                         </div>
 
                         <span class="trade_status col-1">已完售</span>
-                        <div class="trade_button col-4">
+                        <div class="trade_button col-3">
                             <button class="delete "><i class="fas fa-trash-alt"></i></button>
                         </div>
                     </div>
@@ -123,15 +144,15 @@
                         <span class="status col-5">狀態</span>
                     </div>
                     <div class="contain_list">
-                        <span class="apply_date col-1">10-20</span>
+                        <span class="apply_date col-1">110-10-20</span>
                         <div class="my_role col-3"><img src="./image/member/r1.jpg"></div>
                         <div class="slaes_role col-3">
                             <img src="./image/member/r2.jpg" alt="">
                         </div>
                         <span class="trade_status col-1">等待確認</span>
-                        <div class="trade_button col-4">
+                        <div class="trade_button col-3">
                             <button class="confirm ">確認交易</button>
-                            <button class="reject ">拒絕交易</button>
+                            <button class="reject " @click=clickPop()>拒絕交易</button>
                         </div>
                     </div>
                     <span>
@@ -145,13 +166,19 @@
                         </div>
 
                         <span class="trade_status col-1">已完售</span>
-                        <div class="trade_button col-4">
+                        <div class="trade_button col-3">
                             <button class="delete "><i class="fas fa-trash-alt"></i></button>
                         </div>
                     </div>
 
                 </div>
     `,
+    methods:{
+        clickPop() {
+            vm.$data.pop = true
+        },
+        
+    }
             });
 
         let vm = new Vue({
@@ -159,6 +186,7 @@
                 data: {
                     content: 'buyer_contain',
                     active: true,
+                    pop: false,
                 },
 
                methods: {
@@ -170,6 +198,9 @@
                            this.active =true
                            this.content = 'buyer_contain'
                        }    
+                   },
+                   clickClose() {
+                       vm.$data.pop = false
                    }
                },
                 

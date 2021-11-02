@@ -203,6 +203,39 @@ main.collection div.collect_contain img {
   vertical-align: middle;
 }
 
+@media (max-width: 767.98px) {
+  main.collection div.collect_contain img {
+    width: 80px;
+    height: 80px;
+    margin: 20px 0;
+  }
+}
+
+main.collection div.collect_contain div.ability {
+  height: 200px;
+  vertical-align: middle;
+  max-height: 100%;
+}
+
+main.collection div.collect_contain div.ability div.chart {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+main.collection div.collect_contain div.ability div.chart canvas {
+  height: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 767.98px) {
+  main.collection div.collect_contain div.ability {
+    display: none;
+  }
+}
+
 main.collection div.collect_contain div.contain_bar {
   background-color: #10c5b1;
   color: white;
@@ -211,6 +244,29 @@ main.collection div.collect_contain div.contain_bar {
   display: flex;
   height: 42px;
   line-height: 42px;
+}
+
+main.collection div.collect_contain div.contain_bar p.rwd_title {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  main.collection div.collect_contain div.contain_bar span.block {
+    width: 100%;
+    text-align: left;
+  }
+  main.collection div.collect_contain div.contain_bar span.block p.rwd_title {
+    display: block;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  main.collection div.collect_contain div.contain_bar span.role_name,
+  main.collection div.collect_contain div.contain_bar span.ability,
+  main.collection div.collect_contain div.contain_bar span.product,
+  main.collection div.collect_contain div.contain_bar span.status,
+  main.collection div.collect_contain div.contain_bar span.my_role {
+    display: none;
+  }
 }
 
 main.collection div.collect_contain div.contain_list {
@@ -227,6 +283,14 @@ main.collection div.collect_contain div.contain_list {
 main.collection div.collect_contain div.contain_list hr {
   width: 95%;
   margin: 0 auto;
+}
+
+main.collection div.collect_contain div.contain_list span.role_name {
+  min-width: 80px;
+}
+
+main.collection div.collect_contain div.contain_list p.rwd_price {
+  display: none;
 }
 
 main.collection div.collect_contain div.contain_list div.trade_button {
@@ -253,6 +317,7 @@ main.collection div.collect_contain div.contain_list div.trade_button button.cha
   text-align: center;
   display: block;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 main.collection div.collect_contain div.contain_list div.trade_button button.buy:hover,
@@ -263,14 +328,69 @@ main.collection div.collect_contain div.contain_list div.trade_button button.cha
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
+  cursor: pointer;
 }
 
-main.collection div.collect_contain div._off {
-  background-color: rgba(201, 200, 200, 0.8);
+@media (max-width: 767.98px) {
+  main.collection div.collect_contain div.contain_list div.trade_button button.buy,
+  main.collection div.collect_contain div.contain_list div.trade_button button.change {
+    width: 50px;
+  }
+  main.collection div.collect_contain div.contain_list div.trade_button button.buy:hover,
+  main.collection div.collect_contain div.contain_list div.trade_button button.change:hover {
+    width: 50px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  main.collection div.collect_contain div.contain_list div.trade_button {
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  main.collection div.collect_contain div.contain_list {
+    height: 100px;
+    line-height: 100px;
+    font-size: 16px;
+  }
+  main.collection div.collect_contain div.contain_list div.role,
+  main.collection div.collect_contain div.contain_list span.role_name,
+  main.collection div.collect_contain div.contain_list div.trade_button {
+    width: 25%;
+  }
+  main.collection div.collect_contain div.contain_list div.delete {
+    width: 16%;
+  }
+  main.collection div.collect_contain div.contain_list span.price {
+    display: none;
+  }
+  main.collection div.collect_contain div.contain_list span.role_name {
+    line-height: 50px;
+  }
+  main.collection div.collect_contain div.contain_list p.rwd_price {
+    display: inline-block;
+    width: 100%;
+  }
 }
 
 main.collection div.collect_contain div._off div.trade_button {
   color: red;
+}
+
+main.collection div.collect_contain div._off::before {
+  content: "";
+  height: 200px;
+  width: 94.9%;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(201, 200, 200, 0.5);
+}
+
+@media (max-width: 767.98px) {
+  main.collection div.collect_contain div._off::before {
+    height: 100px;
+  }
 }
 
 main.collection div.collect_contain button.delete_btn {
@@ -281,6 +401,9 @@ main.collection div.collect_contain button.delete_btn {
 main.collection div.collect_contain button.delete_btn .fa-trash-alt {
   color: red;
   font-size: 24px;
+  z-index: 2;
+  position: relative;
+  cursor: pointer;
 }
 
 main.deposit {
@@ -402,6 +525,22 @@ main.deposit div.container div#app button div.photo span {
   bottom: 50px;
 }
 
+@media (max-width: 577.98px) {
+  main.deposit div.container div#app button {
+    height: 125px;
+    width: 125px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  main.deposit div.container div#app button div.point {
+    height: 20px;
+    line-height: 20px;
+  }
+  main.deposit div.container div#app button div.photo span {
+    bottom: 40px;
+  }
+}
+
 main.deposit {
   background-size: cover;
   background-repeat: no-repeat;
@@ -494,6 +633,13 @@ main.deposit div.container div.deposit_pay div.title div.credit_img img {
   position: relative;
 }
 
+@media (max-width: 577.98px) {
+  main.deposit div.container div.deposit_pay div.title div.credit_img {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}
+
 main.deposit div.container div.deposit_pay div.title h3 {
   font-size: 24px;
   color: white;
@@ -533,6 +679,7 @@ main.deposit div.container div.deposit_pay form.credit button {
   border: 3px solid #60cd90;
   text-align: center;
   max-width: 300px;
+  cursor: pointer;
 }
 
 main.deposit div.container div.deposit_pay form.credit button:hover {
@@ -543,6 +690,25 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
   border: 3px solid #0e3461;
   text-align: center;
   max-width: 300px;
+  cursor: pointer;
+}
+
+@media (max-width: 577.98px) {
+  main.deposit div.container {
+    max-width: 100%;
+  }
+  main.deposit div.container form.credit {
+    width: 95%;
+    margin: 0 auto;
+  }
+  main.deposit div.container form.credit button {
+    display: block;
+    margin: 0 auto;
+  }
+  main.deposit div.container form.credit button:hover {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .js .slider-single > div:nth-child(1n+2) {
@@ -611,7 +777,7 @@ main.login {
   padding-top: 200px;
   padding-bottom: 100px;
   width: 100%;
-  background-position: right bottom;
+  background-position: left bottom;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -676,15 +842,38 @@ main.login div.contain .col-12 {
   width: 100%;
 }
 
+@media (max-width: 767.98px) {
+  main.login div.contain div.signup {
+    display: none;
+  }
+  main.login div.contain .rwd_box {
+    width: 100%;
+  }
+}
+
 main.login div.contain h1 {
   color: white;
   margin-bottom: 35px;
+  font-size: 32px;
 }
 
 main.login div.contain .login_contain,
 main.login div.contain .signup_contain {
   margin: 0 auto;
   width: 400px;
+}
+
+main.login div.contain .login_contain .rwd_signup,
+main.login div.contain .signup_contain .rwd_signup {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  main.login div.contain .login_contain .rwd_signup,
+  main.login div.contain .signup_contain .rwd_signup {
+    display: block;
+    margin-top: 10px;
+  }
 }
 
 main.login div.contain input {
@@ -705,6 +894,7 @@ main.login div.contain button.btn_signup {
   border: 3px solid #60cd90;
   text-align: center;
   max-width: 400px;
+  cursor: pointer;
 }
 
 main.login div.contain button.btn_login:hover,
@@ -717,6 +907,11 @@ main.login div.contain button.btn_signup:hover {
   border: 3px solid #0e3461;
   text-align: center;
   max-width: 400px;
+  cursor: pointer;
+}
+
+main.login div.contain .login_contain {
+  max-width: 100%;
 }
 
 main.login div.contain .login_contain #login_error {
@@ -734,6 +929,7 @@ main.login div.contain .login_contain button.forgot {
 main.login div.contain .signup_contain {
   color: white;
   font-size: 20px;
+  max-width: 100%;
 }
 
 main.login div.contain .signup_contain button {
@@ -755,6 +951,7 @@ main.login div.contain .forget_contain {
   margin: 0 auto;
   width: 400px;
   display: none;
+  max-width: 100%;
 }
 
 main.login div.contain .forget_contain .forget_error {
@@ -863,11 +1060,42 @@ main.member div.bar div.information {
   padding-bottom: 20px;
 }
 
+@media (max-width: 767.98px) {
+  main.member div.bar div.trading {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 0;
+    border: 0;
+  }
+  main.member div.bar div.points,
+  main.member div.bar div.information {
+    width: 25%;
+    padding: 0;
+    border: 0;
+  }
+  main.member div.bar .fa-list-alt,
+  main.member div.bar .fa-search-dollar,
+  main.member div.bar .fa-pencil-alt {
+    width: 100%;
+    font-size: 32px;
+  }
+}
+
 main.member div.bar div.title {
   width: 100%;
   background-color: #0e3461;
   color: white;
   font-size: 24px;
+}
+
+@media (max-width: 767.98px) {
+  main.member div.bar div.title {
+    display: none;
+  }
 }
 
 main.member div.bar button {
@@ -883,6 +1111,18 @@ main.member div.bar button {
 main.member div.bar button a {
   color: #0e3461;
   text-decoration: none;
+}
+
+@media (max-width: 767.98px) {
+  main.member div.bar button {
+    width: 100%;
+    height: 77px;
+    margin: 0;
+    border: 1px solid #0e3461;
+  }
+  main.member div.bar button a {
+    font-size: 16px;
+  }
 }
 
 main.member div.bar button._on {
@@ -908,6 +1148,14 @@ main.member div.button_bar button {
   border: 1px solid #0e3461;
 }
 
+@media (max-width: 577.98px) {
+  main.member div.button_bar button {
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
 main.member div.button_bar button._on,
 main.member div.button_bar button.bookmark {
   background-color: #0e3461;
@@ -927,6 +1175,20 @@ main.member div.content img {
   margin: 0 auto;
 }
 
+@media (max-width: 577.98px) {
+  main.member div.content img {
+    width: 80px;
+    height: 100px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  main.member div.content .apply_date {
+    display: none;
+  }
+}
+
 main.member div.content div.contain_bar {
   background-color: #0e3461;
   color: white;
@@ -944,9 +1206,29 @@ main.member div.content div.contain_bar .product {
   font-size: 20px;
 }
 
+main.member div.content div.contain_bar .apply_date {
+  min-width: 80px;
+}
+
 main.member div.content div.contain_bar .status {
   padding-left: 20px;
   font-size: 20px;
+}
+
+@media (max-width: 577.98px) {
+  main.member div.content div.contain_bar .status,
+  main.member div.content div.contain_bar .my_role,
+  main.member div.content div.contain_bar .product {
+    width: 25%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 577.98px) {
+  main.member div.content div.contain_bar {
+    height: 30px;
+    line-height: 30px;
+  }
 }
 
 main.member div.content div.contain_list {
@@ -960,6 +1242,10 @@ main.member div.content div.contain_list {
       flex-wrap: wrap;
 }
 
+main.member div.content div.contain_list .col-1 {
+  min-width: 80px;
+}
+
 main.member div.content div.contain_list button {
   color: #60cd90;
   width: 100;
@@ -967,6 +1253,7 @@ main.member div.content div.contain_list button {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+  cursor: pointer;
 }
 
 main.member div.content div.contain_list button:hover {
@@ -976,6 +1263,31 @@ main.member div.content div.contain_list button:hover {
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
+  cursor: pointer;
+}
+
+@media (max-width: 767.98px) {
+  main.member div.content div.contain_list div.trade_button {
+    margin: 0;
+    padding: 0;
+  }
+  main.member div.content div.contain_list button {
+    color: #60cd90;
+    width: 80;
+    padding: 5px;
+    background-color: #0e3461;
+    border: 3px solid #60cd90;
+    text-align: center;
+    margin: 0;
+  }
+  main.member div.content div.contain_list button:hover {
+    color: #0e3461;
+    width: 80;
+    padding: 5px;
+    background-color: #60cd90;
+    border: 3px solid #0e3461;
+    text-align: center;
+  }
 }
 
 main.member div.content div.contain_list button.delete {
@@ -986,19 +1298,53 @@ main.member div.content div.contain_list button.delete {
 main.member div.content div.contain_list button.delete .fa-trash-alt {
   color: red;
   font-size: 24px;
+  z-index: 2;
+  position: relative;
+  cursor: pointer;
+}
+
+main.member div.content div.contain_list span.trade_status {
+  min-width: 80px;
+}
+
+@media (max-width: 577.98px) {
+  main.member div.content div.contain_list .apply_date,
+  main.member div.content div.contain_list .my_role,
+  main.member div.content div.contain_list .product {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  main.member div.content div.contain_list {
+    height: 100px;
+    line-height: 100px;
+  }
 }
 
 main.member div.content hr {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
 }
 
-main.member div.content div._off {
-  background-color: rgba(201, 200, 200, 0.8);
+main.member div.content div._off::before {
+  content: "";
+  height: 150px;
+  width: 94.9%;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(201, 200, 200, 0.5);
+}
+
+@media (max-width: 767.98px) {
+  main.member div.content div._off::before {
+    height: 100px;
+  }
 }
 
 main.member div.content div._off span.trade_status {
   color: red;
+  min-width: 80px;
 }
 
 main.member div.content div.saler_contain div.trade_button button.confirm,
@@ -1010,6 +1356,118 @@ main.member div.content div.saler_contain div.trade_button button.reject {
 
 main.member div.content div.saler_contain div.trade_button button.confirm {
   margin-top: 30px;
+}
+
+@media (max-width: 767.98px) {
+  main.member div.content div.saler_contain div.trade_button div.trade_button {
+    margin: 0;
+    padding: 0;
+  }
+  main.member div.content div.saler_contain div.trade_button button.confirm {
+    margin-top: 10px;
+  }
+}
+
+main.member section.maskLayer {
+  left: 0;
+  height: 100vw;
+  display: none;
+  z-index: 2;
+}
+
+main.member section.maskLayer div.popUpBox {
+  width: 50%;
+  z-index: 3;
+  height: 300px;
+}
+
+main.member section.maskLayer div.popUpBox .col-1 {
+  width: 16.66667%;
+}
+
+main.member section.maskLayer div.popUpBox .col-2 {
+  width: 33.33333%;
+}
+
+main.member section.maskLayer div.popUpBox .col-3 {
+  width: 50%;
+}
+
+main.member section.maskLayer div.popUpBox .col-4 {
+  width: 66.66667%;
+}
+
+main.member section.maskLayer div.popUpBox .col-5 {
+  width: 83.33333%;
+}
+
+main.member section.maskLayer div.popUpBox .col-6 {
+  width: 100%;
+}
+
+main.member section.maskLayer div.popUpBox div.popContent {
+  margin-top: 10px;
+}
+
+main.member section.maskLayer div.popUpBox .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+main.member section.maskLayer div.popUpBox .title span {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+main.member section.maskLayer div.popUpBox .title button {
+  color: #60cd90;
+  width: 300px;
+  padding: 10px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+main.member section.maskLayer div.popUpBox .title button:hover {
+  color: #0e3461;
+  width: 300px;
+  padding: 10px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+main.member section.maskLayer div.popUpBox div.closeBtn {
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 767.98px) {
+  main.member section.maskLayer div.popUpBox {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 0;
+    border: 0;
+  }
+}
+
+main.member section.popShow {
+  display: block;
 }
 
 main.trading_list {
@@ -1092,11 +1550,42 @@ main.trading_list div.bar div.information {
   padding-bottom: 20px;
 }
 
+@media (max-width: 767.98px) {
+  main.trading_list div.bar div.trading {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 0;
+    border: 0;
+  }
+  main.trading_list div.bar div.points,
+  main.trading_list div.bar div.information {
+    width: 25%;
+    padding: 0;
+    border: 0;
+  }
+  main.trading_list div.bar .fa-list-alt,
+  main.trading_list div.bar .fa-search-dollar,
+  main.trading_list div.bar .fa-pencil-alt {
+    width: 100%;
+    font-size: 32px;
+  }
+}
+
 main.trading_list div.bar div.title {
   width: 100%;
   background-color: #0e3461;
   color: white;
   font-size: 24px;
+}
+
+@media (max-width: 767.98px) {
+  main.trading_list div.bar div.title {
+    display: none;
+  }
 }
 
 main.trading_list div.bar button {
@@ -1112,6 +1601,18 @@ main.trading_list div.bar button {
 main.trading_list div.bar button a {
   color: #0e3461;
   text-decoration: none;
+}
+
+@media (max-width: 767.98px) {
+  main.trading_list div.bar button {
+    width: 100%;
+    height: 77px;
+    margin: 0;
+    border: 1px solid #0e3461;
+  }
+  main.trading_list div.bar button a {
+    font-size: 16px;
+  }
 }
 
 main.trading_list div.bar button._on {
@@ -1135,6 +1636,14 @@ main.trading_list div.button_bar button {
   font-size: 20px;
   background-color: white;
   border: 1px solid #0e3461;
+}
+
+@media (max-width: 577.98px) {
+  main.trading_list div.button_bar button {
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+  }
 }
 
 main.trading_list div.button_bar button._on,
@@ -1169,6 +1678,14 @@ main.trading_list div.content img {
   margin: 0 auto;
 }
 
+@media (max-width: 767.98px) {
+  main.trading_list div.content img {
+    width: 80px;
+    height: 100px;
+    margin: 0;
+  }
+}
+
 main.trading_list div.content div.contain_bar {
   background-color: #0e3461;
   color: white;
@@ -1177,6 +1694,21 @@ main.trading_list div.content div.contain_bar {
   display: flex;
   height: 42px;
   line-height: 42px;
+}
+
+@media (max-width: 577.98px) {
+  main.trading_list div.content div.contain_bar {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+  main.trading_list div.content div.dropdown {
+    width: 100%;
+    display: block;
+  }
 }
 
 main.trading_list div.content div.contain_list {
@@ -1193,6 +1725,23 @@ main.trading_list div.content div.contain_list {
 main.trading_list div.content div.contain_list hr {
   width: 95%;
   margin: 0 auto;
+}
+
+@media (max-width: 767.98px) {
+  main.trading_list div.content div.contain_list {
+    height: 100px;
+    line-height: 100px;
+  }
+}
+
+@media (max-width: 577.98px) {
+  main.trading_list div.content .method,
+  main.trading_list div.content .price {
+    width: 25%;
+  }
+  main.trading_list div.content div.contain_list {
+    font-size: 16px;
+  }
 }
 
 main.points_list {
@@ -1275,11 +1824,42 @@ main.points_list div.bar div.information {
   padding-bottom: 20px;
 }
 
+@media (max-width: 767.98px) {
+  main.points_list div.bar div.trading {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 0;
+    border: 0;
+  }
+  main.points_list div.bar div.points,
+  main.points_list div.bar div.information {
+    width: 25%;
+    padding: 0;
+    border: 0;
+  }
+  main.points_list div.bar .fa-list-alt,
+  main.points_list div.bar .fa-search-dollar,
+  main.points_list div.bar .fa-pencil-alt {
+    width: 100%;
+    font-size: 32px;
+  }
+}
+
 main.points_list div.bar div.title {
   width: 100%;
   background-color: #0e3461;
   color: white;
   font-size: 24px;
+}
+
+@media (max-width: 767.98px) {
+  main.points_list div.bar div.title {
+    display: none;
+  }
 }
 
 main.points_list div.bar button {
@@ -1295,6 +1875,18 @@ main.points_list div.bar button {
 main.points_list div.bar button a {
   color: #0e3461;
   text-decoration: none;
+}
+
+@media (max-width: 767.98px) {
+  main.points_list div.bar button {
+    width: 100%;
+    height: 77px;
+    margin: 0;
+    border: 1px solid #0e3461;
+  }
+  main.points_list div.bar button a {
+    font-size: 16px;
+  }
 }
 
 main.points_list div.bar button._on {
@@ -1325,12 +1917,6 @@ main.points_list div.content div.dropdown select {
   text-decoration: underline;
 }
 
-main.points_list div.content img {
-  width: 130px;
-  height: 145px;
-  margin: 0 auto;
-}
-
 main.points_list div.content div.contain_bar {
   background-color: #0e3461;
   color: white;
@@ -1339,6 +1925,21 @@ main.points_list div.content div.contain_bar {
   display: flex;
   height: 42px;
   line-height: 42px;
+}
+
+@media (max-width: 577.98px) {
+  main.points_list div.content div.contain_bar {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  main.points_list div.content div.dropdown {
+    width: 100%;
+    display: block;
+  }
 }
 
 main.points_list div.content div.contain_list {
@@ -1355,6 +1956,19 @@ main.points_list div.content div.contain_list {
 main.points_list div.content div.contain_list hr {
   width: 95%;
   margin: 0 auto;
+}
+
+@media (max-width: 767.98px) {
+  main.points_list div.content div.contain_list {
+    height: 100px;
+    line-height: 100px;
+  }
+}
+
+@media (max-width: 577.98px) {
+  main.points_list div.content div.contain_list {
+    font-size: 16px;
+  }
 }
 
 main.member_info {
@@ -1437,11 +2051,42 @@ main.member_info div.bar div.information {
   padding-bottom: 20px;
 }
 
+@media (max-width: 767.98px) {
+  main.member_info div.bar div.trading {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 0;
+    border: 0;
+  }
+  main.member_info div.bar div.points,
+  main.member_info div.bar div.information {
+    width: 25%;
+    padding: 0;
+    border: 0;
+  }
+  main.member_info div.bar .fa-list-alt,
+  main.member_info div.bar .fa-search-dollar,
+  main.member_info div.bar .fa-pencil-alt {
+    width: 100%;
+    font-size: 32px;
+  }
+}
+
 main.member_info div.bar div.title {
   width: 100%;
   background-color: #0e3461;
   color: white;
   font-size: 24px;
+}
+
+@media (max-width: 767.98px) {
+  main.member_info div.bar div.title {
+    display: none;
+  }
 }
 
 main.member_info div.bar button {
@@ -1457,6 +2102,18 @@ main.member_info div.bar button {
 main.member_info div.bar button a {
   color: #0e3461;
   text-decoration: none;
+}
+
+@media (max-width: 767.98px) {
+  main.member_info div.bar button {
+    width: 100%;
+    height: 77px;
+    margin: 0;
+    border: 1px solid #0e3461;
+  }
+  main.member_info div.bar button a {
+    font-size: 16px;
+  }
 }
 
 main.member_info div.bar button._on {
@@ -1497,6 +2154,9 @@ main.member_info div.content div.contain_list {
   margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 100px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 main.member_info div.content div.contain_list button.member_img {
@@ -1538,11 +2198,16 @@ main.member_info div.content div.contain_list button.member_img div.img_cover .f
   top: 25%;
 }
 
+@media (max-width: 991.98px) {
+  main.member_info div.content div.contain_list button.member_img {
+    margin: 0 auto;
+  }
+}
+
 main.member_info div.content div.contain_list div.edit {
   margin-top: 25px;
   text-align: left;
-  width: 400px;
-  max-width: 95%;
+  width: 50%;
 }
 
 main.member_info div.content div.contain_list div.edit div.edit_detail {
@@ -1555,6 +2220,7 @@ main.member_info div.content div.contain_list div.edit div.edit_detail button.ed
   color: #60cd90;
   text-decoration: underline;
   padding: 0;
+  cursor: pointer;
 }
 
 main.member_info div.content div.contain_list div.edit div.edit_detail button.black_btn {
@@ -1570,8 +2236,14 @@ main.member_info div.content div.contain_list div.edit div.edit_detail form.edit
   margin-top: 10px;
   margin-bottom: 20px;
   width: 400px;
-  max-width: 95%;
   height: 35px;
+  max-width: 95%;
+}
+
+@media (max-width: 767.98px) {
+  main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password input {
+    width: 300px;
+  }
 }
 
 main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password button {
@@ -1581,7 +2253,30 @@ main.member_info div.content div.contain_list div.edit div.edit_detail form.edit
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
-  max-width: 400px;
+  width: 400px;
+  cursor: pointer;
+  max-width: 95%;
+}
+
+main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password button:hover {
+  color: #0e3461;
+  width: 100%;
+  padding: 10px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+  width: 400px;
+  cursor: pointer;
+  max-width: 95%;
+}
+
+@media (max-width: 767.98px) {
+  main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password button {
+    width: 300px;
+  }
+  main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password button:hover {
+    width: 300px;
+  }
 }
 
 main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password {
@@ -1592,9 +2287,25 @@ main.member_info div.content div.contain_list div.edit div.edit_detail form.book
   display: block;
 }
 
+@media (max-width: 767.98px) {
+  main.member_info div.content div.contain_list div.edit {
+    width: 96%;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 991.98px) {
+  main.member_info div.content div.contain_list {
+    width: 100%;
+  }
+}
+
 main.member_info section.maskLayer {
   left: 0;
   height: 100vw;
+  display: none;
 }
 
 main.member_info section.maskLayer div.popUpBox {
@@ -1602,6 +2313,11 @@ main.member_info section.maskLayer div.popUpBox {
   width: 75%;
   z-index: 3;
   height: 510px;
+}
+
+main.member_info section.maskLayer div.popUpBox div.closeBtn {
+  position: absolute;
+  right: 0;
 }
 
 main.member_info section.maskLayer div.popUpBox div.popContent {
@@ -1635,6 +2351,8 @@ main.member_info section.maskLayer div.popUpBox div.contain {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 main.member_info section.maskLayer div.popUpBox div.contain div.back {
@@ -1704,6 +2422,37 @@ main.member_info section.maskLayer div.popUpBox div.contain div.btn_area input {
   width: 100%;
   height: 100%;
   opacity: 0;
+}
+
+@media (max-width: 991.98px) {
+  main.member_info section.maskLayer div.popUpBox div.contain div.btn_area {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  main.member_info section.maskLayer div.popUpBox div.contain div.btn_area {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  main.member_info section.maskLayer div.popUpBox div.contain {
+    width: 100%;
+  }
+  main.member_info section.maskLayer div.popUpBox div.btn_area {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  main.member_info section.maskLayer div.popUpBox {
+    height: 650px;
+  }
+}
+
+main.member_info section.popShow {
+  display: block;
 }
 
 main.signup {
@@ -1843,6 +2592,21 @@ main.signup .main_contain .form_contain {
   margin-bottom: 35px;
 }
 
+@media (min-width: 992px) {
+  main.signup .main_contain .form_contain {
+    max-width: 1200px;
+    width: 83.33%;
+  }
+}
+
+main.signup .main_contain .form_contain form div.user,
+main.signup .main_contain .form_contain form div.userPassword,
+main.signup .main_contain .form_contain form div.confirmPassword,
+main.signup .main_contain .form_contain form div.userEmail {
+  max-width: 100%;
+  position: relative;
+}
+
 main.signup .main_contain .form_contain form label {
   color: white;
 }
@@ -1851,44 +2615,47 @@ main.signup .main_contain .form_contain form input {
   margin-top: 10px;
   margin-bottom: 20px;
   width: 400px;
-  max-width: 95%;
+  max-width: 100%;
   height: 35px;
 }
 
-main.signup .main_contain .form_contain form button {
+main.signup .main_contain .form_contain form .button {
   color: #60cd90;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
   max-width: 400px;
+  cursor: pointer;
+  font-size: 20px;
 }
 
-main.signup .main_contain .form_contain form button:hover {
+main.signup .main_contain .form_contain form .button:hover {
   color: #0e3461;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
   max-width: 400px;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 main.signup .main_contain .form_contain form div.input_form {
   display: inline-block;
+  max-width: 100%;
 }
 
 main.signup .main_contain .form_contain form div.error {
   display: inline-block;
   background-color: white;
   max-width: 300px;
-  word-break: keep-all;
+  word-break: break-all;
   padding: 5px;
   border-radius: 10px;
   color: red;
-  margin-left: 20px;
-  display: none;
 }
 
 main.signup .main_contain .form_contain form div.error::before {
@@ -1904,6 +2671,26 @@ main.signup .main_contain .form_contain form div.error::before {
   border-left: 0px solid transparent;
 }
 
+main.signup .main_contain .form_contain form div.error_on {
+  display: inline-block;
+}
+
+@media (max-width: 767.98px) {
+  main.signup .main_contain .form_contain form div.error {
+    max-width: 250px;
+    position: absolute;
+    z-index: 1;
+    top: -15px;
+    left: 100px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  main.signup .main_contain .form_contain {
+    width: 98%;
+  }
+}
+
 main.signup .main_contain div.sucess_box {
   margin: 0 auto;
   color: white;
@@ -1916,6 +2703,12 @@ main.signup .main_contain div.sucess_box span {
   font-size: 16px;
   margin-top: 45px;
   display: block;
+}
+
+@media (max-width: 577.98px) {
+  main.signup .main_contain div.sucess_box {
+    font-size: 20px;
+  }
 }
 
 main.signup .main_contain div.form_contain {

@@ -64,7 +64,32 @@ main.deposit {
                     }
                 }
             }
+
+            @media (max-width: 577.98px) {
+                button {
+                    height: 125px;
+                    width: 125px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+
+                    // margin-bottom: 40px;
+                    div.point {
+                        height: 20px;
+                        line-height: 20px;
+                    }
+
+                    div.photo {
+                        span {
+                            bottom: 40px;
+                        }
+                    }
+
+                }
+            }
         }
+
+
+
     }
 }
 
@@ -109,6 +134,13 @@ main.deposit {
                     }
                 }
 
+                @media (max-width: 577.98px) {
+                    div.credit_img {
+                        margin: 0;
+                        margin-bottom: 30px;
+                    }
+                }
+
                 h3 {
                     font-size: 24px;
                     color: white;
@@ -145,15 +177,39 @@ main.deposit {
                 button {
                     @include btn_blur(100%, 10px);
                     max-width: 300px;
+                    cursor: pointer;
                 }
 
                 button:hover {
                     @include btn_on(100%, 10px);
                     max-width: 300px;
+                    cursor: pointer;
                 }
             }
 
         }
 
     }
+
+    @media (max-width: 577.98px) {
+        div.container {
+            max-width: 100%;
+
+            form.credit {
+                width: 95%;
+                @include center;
+
+                button {
+                    display: block;
+                    @include center;
+                }
+
+                button:hover {
+                    display: block;
+                    @include center;
+                }
+            }
+        }
+    }
+
 }

@@ -12,21 +12,21 @@
 
 <body>
     <main class="signup">
-        <div class="main_contain">
+        <div class="main_contain" id="app">
             <div class="title col-12">
                 <h1 class="col-11">建立新帳號</h1>
                 <div class="bar">
-                    <div class="write _on">
+                    <div class="write" :class="{'_on': writing}">
                         <h4>填寫會員資料</h4>
                         <span class="triangle1 "></span>
                     </div>
-                    <div class="sucessBar ">
+                    <div class="sucessBar " :class="{'_on': success}">
                         <h4>註冊成功</h4>
                     </div>
                 </div>
             </div>
 
-            <div class="form_contain _on col-8">
+            <div class="form_contain  col-8" :class="{'_on': writing}">
                 <div class="signup_contain">
                     <form action="#" method="post">
                         <div class="user">
@@ -35,7 +35,7 @@
                                 <br>
                                 <input type="text" id="userid" placeholder="*請輸入帳號" name="userId">
                             </div>
-                            <div class="error ">
+                            <div  class="error" :class="{'error_on': idError}">
                                 <span>請輸入8-16位數，內含英文跟數字，英文區分大小寫!</span>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                                 <input type="text" id="password" placeholder="*請輸入密碼" name="password">
                             </div>
 
-                            <div class="error">
+                            <div class="error" :class="{'error_on': pwdError}">
                                 <span></span>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                                 <br>
                                 <input type="text" id="confirm" placeholder="*請確認密碼" name="confirm">
                             </div>
-                            <div class="error">
+                            <div class="error" :class="{'error_on': pwdTwoError}">
                                 <span>兩次密碼不一致</span>
                             </div>
                         </div>
@@ -71,12 +71,12 @@
                                 <input type="text" id="email" placeholder="*請輸入信箱" name="email">
                             </div>
 
-                            <div class="error">
+                            <div class="error" :class="{'error_on': emailError}">
                                 <span>信箱格式有誤</span>
                             </div>
                         </div>
 
-                        <button>立即註冊</button>
+                        <input class="button" type="button" @click=singUpSuccess() value="確認註冊">
                     </form>
                 </div>
 
@@ -84,7 +84,7 @@
 
 
             <!-- 加上class: _on 出現 -->
-            <div class="sucess_box  col-8">
+            <div class="sucess_box  col-8" :class="{'_on': success}">
                 *註冊成功，已開啟抽取角色功能
                 <br>
                 <span>
@@ -95,6 +95,34 @@
     </main>
 
     <script src="./vendor/js/vue.js"></script>
+
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                writing: true,
+                success: false,
+                idError: false,
+                pwdError:false,
+                emailError: false,
+                pwdTwoError: false,
+
+            },
+            methods: {
+                singUpSuccess: function () {
+
+                    vm.$data.writing = false
+                    vm.$data.success = true
+                },
+                
+            },
+
+
+
+
+        });
+
+    </script>
 </body>
 
 </html>

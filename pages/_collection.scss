@@ -34,12 +34,78 @@ main.collection {
             vertical-align: middle;
         }
 
+        @media (max-width: 767.98px) {
+            img {
+                width: 80px;
+                height: 80px;
+                margin: 20px 0;
+            }
+        }
+
+        div.ability {
+            // width: 200px;
+            height: 200px;
+            vertical-align: middle;
+            // min-width: 120px;
+            max-height: 100%;
+            
+
+            div.chart {
+                width: 100%;
+                height: 100%;
+                max-height: 100%;
+                max-width: 200px;
+                @include center;
+
+                canvas {
+                    height: 100%;
+                    @include center;
+                }
+            }
+        }
+
+
+        @media (max-width: 767.98px) {
+            div.ability {
+                display: none;
+            }
+        }
+
+
+
+
         div.contain_bar {
             background-color: $tiffiny_green;
             color: white;
             display: flex;
             height: 42px;
             line-height: 42px;
+
+            p.rwd_title {
+                display: none;
+            }
+
+            @media (max-width: 767.98px) {
+                span.block {
+                    width: 100%;
+                    text-align: left;
+
+                    p.rwd_title {
+                        display: block;
+                        margin-left: 10px;
+                        font-size: 16px;
+                    }
+                }
+
+                span.role_name,
+                span.ability,
+                span.product,
+                span.status,
+                span.my_role {
+                    display: none;
+                }
+
+            }
         }
 
         div.contain_list {
@@ -49,12 +115,18 @@ main.collection {
             line-height: 200px;
             flex-wrap: wrap;
 
-
             hr {
                 width: 95%;
                 @include center;
             }
 
+            span.role_name {
+                min-width: 80px;
+            }
+
+            p.rwd_price {
+                display: none;
+            }
 
             div.trade_button {
                 height: 100%;
@@ -69,20 +141,88 @@ main.collection {
                     @include btn_blur(100px, 5px);
                     display: block;
                     @include center;
+                    cursor: pointer;
                 }
 
                 button.buy:hover,
                 button.change:hover {
                     @include btn_on(100px, 5px);
+                    cursor: pointer;
+                }
+
+                @media (max-width: 767.98px) {
+
+                    button.buy,
+                    button.change {
+                        width: 50px;
+                    }
+
+                    button.buy:hover,
+                    button.change:hover {
+                        width: 50px;
+                    }
+                }
+            }
+
+            @media (max-width: 767.98px) {
+                div.trade_button {
+                    padding: 5px 0;
+                }
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            div.contain_list {
+                height: 100px;
+                line-height: 100px;
+                font-size: 16px;
+
+                div.role,
+                span.role_name,
+                div.trade_button,
+                    {
+                    width: 25%;
+                }
+
+                div.delete {
+                    width: 16%;
+                }
+
+                span.price {
+                    display: none;
+                }
+
+                span.role_name {
+                    line-height: 50px;
+                }
+
+                p.rwd_price {
+                    display: inline-block;
+                    width: 100%;
                 }
             }
         }
 
         div._off {
-            background-color: rgba(201, 200, 200, 0.8);
+            // background-color: rgba(201, 200, 200, 0.8);
 
             div.trade_button {
                 color: red;
+            }
+        }
+
+        div._off::before {
+            content: "";
+            height: 200px;
+            width: 94.9%;
+            position: absolute;
+            z-index: 1;
+            background-color: rgba(201, 200, 200, 0.5);
+        }
+
+        @media (max-width: 767.98px) {
+            div._off::before {
+                height: 100px;
             }
         }
 
@@ -93,6 +233,9 @@ main.collection {
             .fa-trash-alt {
                 color: red;
                 font-size: 24px;
+                z-index: 2;
+                position: relative;
+                cursor: pointer;
             }
         }
     }
