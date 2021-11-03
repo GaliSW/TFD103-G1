@@ -2,7 +2,7 @@ main.member {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../image/member/back.jpg);
-    padding-top: 100px;
+
     padding-bottom: 100px;
     width: 100%;
     background-position: left top;
@@ -16,6 +16,7 @@ main.member {
         max-width: 1200px;
         @include center;
         @include grids(12);
+        padding-top: 100px;
     }
 
 
@@ -426,7 +427,7 @@ main.trading_list {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../image/member/back.jpg);
-    padding-top: 100px;
+
     padding-bottom: 100px;
     width: 100%;
     background-position: left top;
@@ -438,6 +439,7 @@ main.trading_list {
         @include grids(12);
         width: 95%;
         max-width: 1200px;
+        padding-top: 100px;
     }
 
     //上方選單
@@ -667,7 +669,7 @@ main.points_list {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../image/member/back.jpg);
-    padding-top: 100px;
+
     padding-bottom: 100px;
     width: 100%;
     background-position: left top;
@@ -679,6 +681,7 @@ main.points_list {
         @include center;
         @include grids(12);
         width: 95%;
+        padding-top: 100px;
     }
 
     //上方選單
@@ -855,7 +858,7 @@ main.member_info {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../image/member/back.jpg);
-    padding-top: 100px;
+
     padding-bottom: 100px;
     width: 100%;
     background-position: left top;
@@ -867,6 +870,7 @@ main.member_info {
         @include center;
         @include grids(12);
         width: 95%;
+        padding-top: 100px;
     }
 
     //上方選單
@@ -1217,7 +1221,8 @@ main.member_info {
 
                 @media (max-width: 767.98px) {
                     div.back {
-                        height: 250px;;
+                        height: 250px;
+                        ;
                     }
                 }
 

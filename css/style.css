@@ -423,8 +423,6 @@ main.deposit {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../image/deposit/back.jpg);
-  padding-top: 100px;
-  padding-bottom: 100px;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -434,6 +432,7 @@ main.deposit div.container {
   width: 1200px;
   max-width: 95%;
   margin: 0 auto;
+  padding-top: 100px;
 }
 
 main.deposit div.container .col-1 {
@@ -544,6 +543,7 @@ main.deposit div.container div#app button div.photo span {
     width: 125px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 50px;
   }
   main.deposit div.container div#app button div.point {
     height: 20px;
@@ -558,7 +558,6 @@ main.deposit {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../image/deposit/back.jpg);
-  padding-top: 100px;
   padding-bottom: 100px;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -785,11 +784,8 @@ main.login {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../image/login/back.jpg);
-  padding-top: 200px;
-  padding-bottom: 100px;
   width: 100%;
   background-position: left bottom;
-  margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   min-height: 100vh;
@@ -804,6 +800,7 @@ main.login div.contain {
       flex-wrap: wrap;
   width: 1200px;
   max-width: 95%;
+  padding-top: 100px;
 }
 
 main.login div.contain .col-1 {
@@ -1001,7 +998,6 @@ main.member {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../image/member/back.jpg);
-  padding-top: 100px;
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -1015,6 +1011,7 @@ main.member .main_contain {
   width: 95%;
   max-width: 1200px;
   margin: 0 auto;
+  padding-top: 100px;
 }
 
 main.member .main_contain .col-1 {
@@ -1503,7 +1500,6 @@ main.trading_list {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../image/member/back.jpg);
-  padding-top: 100px;
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -1515,6 +1511,7 @@ main.trading_list .main_contain {
   margin: 0 auto;
   width: 95%;
   max-width: 1200px;
+  padding-top: 100px;
 }
 
 main.trading_list .main_contain .col-1 {
@@ -1779,7 +1776,6 @@ main.points_list {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../image/member/back.jpg);
-  padding-top: 100px;
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -1791,6 +1787,7 @@ main.points_list .main_contain {
   max-width: 1200px;
   margin: 0 auto;
   width: 95%;
+  padding-top: 100px;
 }
 
 main.points_list .main_contain .col-1 {
@@ -2008,7 +2005,6 @@ main.member_info {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../image/member/back.jpg);
-  padding-top: 100px;
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -2021,6 +2017,7 @@ main.member_info .main_contain {
   max-width: 1200px;
   margin: 0 auto;
   width: 95%;
+  padding-top: 100px;
 }
 
 main.member_info .main_contain .col-1 {
@@ -2511,11 +2508,14 @@ main.signup {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../image/signup/b1.png);
-  padding-top: 100px;
-  padding-bottom: 100px;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+main.signup .contain {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 main.signup .main_contain {
