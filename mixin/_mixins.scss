@@ -44,7 +44,7 @@
     }
 }
 
-@mixin pad_small {
+@mixin phone {
     @media (min-width:375px) and (max-width:413.98px) {
         @content;
     }
