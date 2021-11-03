@@ -231,6 +231,7 @@ main.collection div.collect_contain div.ability div.chartBox {
 main.collection div.collect_contain div.ability div.chartBox canvas {
   height: 100%;
   margin: 0 auto;
+  margin-top: 10px;
 }
 
 @media (max-width: 767.98px) {
@@ -272,7 +273,7 @@ main.collection div.collect_contain div.contain_bar p.rwd_title {
   }
 }
 
-@media (max-width: 577.98px) {
+@media (max-width: 767.98px) {
   main.collection div.collect_contain div.contain_bar {
     height: 30px;
     line-height: 30px;

@@ -61,6 +61,7 @@ main.collection {
                 canvas {
                     height: 100%;
                     @include center;
+                    margin-top: 10px;
                 }
             }
         }
@@ -109,7 +110,7 @@ main.collection {
             }
         }
 
-        @media (max-width: 577.98px) {
+        @media (max-width: 767.98px) {
             div.contain_bar {
                 height: 30px;
                 line-height: 30px;
