@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後台</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./vue.min.js"></script>
+</head>
+
+<body>
+    <header class="mgHeaderBlk">
+        <div class="logo">
+            <a href="#"></a>
+        </div>
+        <div class="title">
+            <h1>怪哩怪汽管理後台</h1>
+        </div>
+        <div class="logOut">
+            <button><a href="./ManagerLogin.html">帳號登出<i class="fas fa-sign-out-alt"></i></a></button>
+        </div>
+    </header>
+    <div class="mgContainer" id="manager">
+        <navbar :index='index'></navbar>
+        <!-- <div class="navBar col-3">
+            <ul>
+                <li :class="{'on': index === 0 }" @click="showAdmin">權限管理</li>
+                <li :class="{'on': index === 1 }" @click="showMember">
+                    會員資料</li>
+                <li :class="{'on': index === 2 }" @click="showRole">角色管理</li>
+                <li :class="{'on': index === 3 }" @click="showNews">公告管理</li>
+            </ul>
+        </div> -->
+        <div class="contentContainer col-9">
+            <keep-alive>
+                <component :is="content" id="blk" @my-click="toMemberPoints" @role-click="toRoleUp"
+                    @news-click="toNewsUp"></component>
+            </keep-alive>
+            <!-- *權限管理 -->
+            <!-- <div class="adminAuth" id="admin">
+                <div class="title">
+                    權限管理
+                    <button class="addAdminBtn">新增人員</button>
+                </div>
+                <div class="authContent">
+                    <table>
+                        <tr>
+                            <th>管理人員</th>
+                            <th>人員信箱</th>
+                            <th>管理權限</th>
+                        </tr>
+                        <tr>
+                            <td>Gary</td>
+                            <td>forTest@gmail.com</td>
+                            <td>
+                                小編
+                            </td>
+                            <td>
+                                <button>編輯權限</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gary</td>
+                            <td>forTest@gmail.com</td>
+                            <td>
+                                小編
+                            </td>
+                            <td>
+                                <button>編輯權限</button>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div> -->
+
+            <!-- *會員管理 -->
+            <!-- <div class="memberInfo" id="member">
+                <div class="title">
+                    會員資料
+                    <div class="memberSearch">
+                        <label for="searchMember"><i class="fas fa-search"></i></label>
+                        <input type="email" id="searchMember" name="searchMember" placeholder="Mail">
+                    </div>
+                </div>
+                <div class="memberContent">
+                    <table>
+                        <tr>
+                            <th>會員編號</th>
+                            <th>會員信箱</th>
+                            <th>管理遊戲ID</th>
+                            <th>帳號狀態</th>
+                        </tr>
+                        <tr>
+                            <td>Gary</td>
+                            <td>forTest@gmail.com</td>
+                            <td>
+                                taiwan藍波萬
+                            </td>
+                            <td>
+                                正常
+                                <i class="fas fa-edit memberEdit"></i>
+                            </td>
+                            <td>
+                                <a href="#">查詢儲值記錄</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gary</td>
+                            <td>forTest@gmail.com</td>
+                            <td>
+                                taiwan藍波萬
+                            </td>
+                            <td>
+                                停權
+                                <i class="fas fa-edit memberEdit"></i>
+                            </td>
+                            <td>
+                                <a href="#">查詢儲值記錄</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div> -->
+
+            <!-- *儲值查詢 -->
+            <!-- <div class="memberPoints" id="points">
+                <div class="title">
+                    <h1>Gary</h1>
+                    的儲值記錄
+                    <div class="memberFilter">
+                        <label for="pointFilter"><i class="fas fa-filter"></i></label>
+                        <select id="pointFilter">
+                            <option value="one">近一個月</option>
+                            <option value="three">近三個月</option>
+                            <option value="six">近六個月</option>
+                            <option value="year">近一年</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="memberPointContent">
+                    <table>
+                        <tr>
+                            <th>儲值日期</th>
+                            <th>儲值金額</th>
+                        </tr>
+                        <tr>
+                            <td>2021/11/02</td>
+                            <td>$3000</td>
+                        </tr>
+                    </table>
+                </div>
+            </div> -->
+
+            <!-- *角色管理 -->
+            <!-- <div class="roleMg" id="roleMg">
+                <div class="title">
+                    角色管理
+                    <button class="addAdminBtn">角色上架</button>
+                </div>
+                <div class="roleContent">
+                    <table>
+                        <tr>
+                            <th>角色圖片</th>
+                            <th>角色名稱</th>
+                            <th>角色編號</th>
+                            <th>角色狀態</th>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/gacha/role10.png"></td>
+                            <td>Duck不必</td>
+                            <td>A00001</td>
+                            <td>未抽取</td>
+                            <td>
+                                <button><i class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div> -->
+
+            <!-- *角色上架 -->
+            <!-- <div class="roleUp" id="roleUp">
+                <div class="title">
+                    角色上架
+                </div>
+                <div class="roleUpContent">
+                    <table>
+                        <tr>
+                            <th>角色圖片上傳</th>
+                            <th>角色名稱</th>
+                            <th>角色編號</th>
+                        </tr>
+                        <tr>
+                            <form action="">
+                                <td><input type="file" id="myFile" name="filename" style="border: none;"></td>
+                                <td><input type="text" placeholder="輸入名稱"></td>
+                                <td><input type="text" placeholder="輸入編號"></td>
+                                <td><button type="submit">確認上架</button></td>
+                            </form>
+                        </tr>
+                    </table>
+                </div>
+            </div> -->
+
+            <!-- *公告管理 -->
+            <!-- <div class="newsMg" id="newsMg">
+                <div class="title">
+                    文章管理
+                    <button class="addAdminBtn">文章上架</button>
+                </div>
+                <div class="newsContent">
+                    <table>
+                        <tr>
+                            <th>文章編號</th>
+                            <th>文章標題</th>
+                            <th>上傳標題</th>
+                        </tr>
+                        <tr>
+                            <td>abc123</td>
+                            <td style="color:  rgba(16, 197, 177, 1);">新版封測重磅消息</td>
+                            <td>2021/11/02</td>
+                            <td>
+                                <button>編輯</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div> -->
+
+            <!-- *文章上架 -->
+            <!-- <div class="newsUp" id="newsUp">
+                <form action="">
+                    <div class="title">
+                        文章管理
+                    </div>
+                    <div class="newsImgUp">
+                        <p>圖片上傳</p>
+                        <input type="file" id="myFile" name="filename" style="border: none;">
+                    </div>
+                    <div class="newsTitle">
+                        <p>文章標題</p>
+                        <input type="text" placeholder="輸入標題">
+                    </div>
+                    <div class="newsText">
+                        <p>文章內容</p>
+                        <textarea cols="30" rows="10" placeholder="輸入內容" style="resize : none;"></textarea>
+                        <br>
+                        <button type="submit">確認上傳</button>
+                        <button>取消</button>
+                    </div>
+                </form>
+            </div> -->
+
+        </div>
+    </div>
+    <script>
+        // 權限管理
+        Vue.component(`adminAuth`, {
+            template: `
+            <div class="adminAuth" id="admin">
+                <div class="title">
+                    權限管理
+                    <button class="addAdminBtn" >新增人員</button>
+                </div>
+                <div class="authContent">
+                    <table>
+                        <tr>
+                            <th>管理人員</th>
+                            <th>人員信箱</th>
+                            <th>管理權限</th>
+                        </tr>
+                        <tr>
+                            <td>Gary</td>
+                            <td>forTest@gmail.com</td>
+                            <td>
+                                小編
+                            </td>
+                            <td>
+                                <button>編輯權限</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gary</td>
+                            <td>forTest@gmail.com</td>
+                            <td>
+                                小編
+                            </td>
+                            <td>
+                                <button>編輯權限</button>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+    `,
+        });
+
+        // 會員管理
+        Vue.component(`memberInfo`, {
+            template: `
+            <div class="memberInfo" id="member">
+                <div class="title">
+                    會員資料
+                    <div class="memberSearch">
+                        <label for="searchMember"><i class="fas fa-search"></i></label>
+                        <input type="email" id="searchMember" name="searchMember" placeholder="Mail">
+                    </div>
+                </div>
+                <div class="memberContent">
+                    <table>
+                        <tr>
+                            <th>會員編號</th>
+                            <th>會員信箱</th>
+                            <th>管理遊戲ID</th>
+                            <th>帳號狀態</th>
+                        </tr>
+                        <tr>
+                            <td>Gary</td>
+                            <td>forTest@gmail.com</td>
+                            <td>
+                                taiwan藍波萬
+                            </td>
+                            <td>
+                                正常
+                                <i class="fas fa-edit memberEdit"></i>
+                            </td>
+                            <td>
+                                <p id="searchPoints" @click="linkToMemberPoints">查詢儲值記錄</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gary</td>
+                            <td>forTest@gmail.com</td>
+                            <td>
+                                taiwan藍波萬
+                            </td>
+                            <td>
+                                停權
+                                <i class="fas fa-edit memberEdit"></i>
+                            </td>
+                            <td>
+                                <p  id="searchPoints" @click="linkToMemberPoints">查詢儲值記錄</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    `,
+            methods: {
+                linkToMemberPoints() {
+                    this.$emit('my-click', 'memberPoints');
+                }
+            }
+        });
+
+        // 角色管理
+        Vue.component(`roleMg`, {
+            template: `
+            <div class="roleMg" id="roleMg">
+                <div class="title">
+                    角色管理
+                    <button class="addAdminBtn" @click="linkToRoleMg">角色上架</button>
+                </div>
+                <div class="roleContent">
+                    <table>
+                        <tr>
+                            <th>角色圖片</th>
+                            <th>角色名稱</th>
+                            <th>角色編號</th>
+                            <th>角色狀態</th>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/gacha/role10.png"></td>
+                            <td>Duck不必</td>
+                            <td>A00001</td>
+                            <td>未抽取</td>
+                            <td>
+                                <button><i class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div> 
+    `,
+            methods: {
+                linkToRoleMg() {
+                    this.$emit('role-click', 'rolesUp');
+                }
+            },
+        });
+
+        //角色上架
+        Vue.component(`rolesUp`, {
+            template: `
+            <div class="roleUp" id="roleUp">
+                <div class="title">
+                    角色上架
+                </div>
+                <div class="roleUpContent">
+                    <form action="">
+                    <table>
+                        <tr>
+                            <th>角色圖片上傳</th>
+                            <th>角色名稱</th>
+                            <th>角色編號</th>
+                        </tr>
+                        <tr>
+                            <td><input type="file" id="myFile" name="filename" style="border: none;"></td>
+                            <td><input type="text" placeholder="輸入名稱"></td>
+                            <td><input type="text" placeholder="輸入編號"></td>
+                            <td><button type="submit">確認上架</button></td>
+                        </tr>  
+                    </table>
+                    </form>
+                </div>
+            </div> 
+                `
+        })
+
+        // 公告管理
+        Vue.component(`newsMg`, {
+            template: `
+            <div class="newsMg" id="newsMg">
+                <div class="title">
+                    文章管理
+                    <button class="addAdminBtn" @click="linkToNewUp">文章上架</button>
+                </div>
+                <div class="newsContent">
+                    <table>
+                        <tr>
+                            <th>文章編號</th>
+                            <th>文章標題</th>
+                            <th>上傳標題</th>
+                        </tr>
+                        <tr>
+                            <td>abc123</td>
+                            <td style="color:  rgba(16, 197, 177, 1);">新版封測重磅消息</td>
+                            <td>2021/11/02</td>
+                            <td>
+                                <button>編輯</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    `,
+            methods: {
+                linkToNewUp() {
+                    this.$emit("news-click", "newsUp")
+                }
+            },
+        });
+
+        // 儲值查詢
+        Vue.component(`memberPoints`, {
+            template: `
+            <div class="memberPoints" id="points">
+                <div class="title">
+                    <h1>Gary</h1>
+                    的儲值記錄
+                    <div class="memberFilter">
+                        <label for="pointFilter"><i class="fas fa-filter"></i></label>
+                        <select id="pointFilter">
+                            <option value="one">近一個月</option>
+                            <option value="three">近三個月</option>
+                            <option value="six">近六個月</option>
+                            <option value="year">近一年</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="memberPointContent">
+                    <table>
+                        <tr>
+                            <th>儲值日期</th>
+                            <th>儲值金額</th>
+                        </tr>
+                        <tr>
+                            <td>2021/11/02</td>
+                            <td>$3000</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            `
+        });
+
+        // 文章上架
+        Vue.component(`newsUp`, {
+            template: `
+            <div class="newsUp" id="newsUp">
+                <form action="">
+                    <div class="title">
+                        文章管理
+                    </div>
+                    <div class="newsImgUp">
+                        <p>圖片上傳</p>
+                        <input type="file" id="myFile" name="filename" style="border: none;">
+                    </div>
+                    <div class="newsTitle">
+                        <p>文章標題</p>
+                        <input type="text" placeholder="輸入標題">
+                    </div>
+                    <div class="newsText">
+                        <p>文章內容</p>
+                        <textarea cols="30" rows="10" placeholder="輸入內容" style="resize : none;"></textarea>
+                        <br>
+                        <button type="submit">確認上傳</button>
+                        <button>取消</button>
+                    </div>
+                </form>
+            </div> 
+            `
+        });
+
+
+
+        let vm0 = new Vue({
+            el: '#manager',
+            data: {
+                content: 'adminAuth',
+                index: 0,
+            },
+            components: {
+                navbar: {
+                    props: ['index'],
+                    template: `
+                        <div class="navBar col-3">
+                            <ul>
+                                <li :class="{'on': index === 0 }" @click="showAdmin">權限管理</li>
+                                <li :class="{'on': index === 1 }" @click="showMember">
+                                會員資料</li>
+                                <li :class="{'on': index === 2 }" @click="showRole">角色管理</li>
+                                <li :class="{'on': index === 3 }" @click="showNews">公告管理</li>
+                            </ul>
+                        </div>
+                    `,
+                    methods: {
+                        showAdmin: function () {
+                            vm0.index = 0;
+                            vm0.content = 'adminAuth';
+
+                        },
+                        showMember: function () {
+                            vm0.index = 1;
+                            vm0.content = 'memberInfo';
+
+                        },
+                        showRole: function () {
+                            vm0.index = 2;
+                            vm0.content = 'roleMg';
+
+                        },
+                        showNews: function () {
+                            vm0.index = 3;
+                            vm0.content = 'newsMg';
+                        },
+                    },
+                },
+            },
+            methods: {
+                toMemberPoints: function (val) {
+                    this.index = 1;
+                    this.content = val;
+                },
+                toRoleUp: function (r) {
+                    this.index = 2;
+                    this.content = r;
+                },
+                toNewsUp: function (n) {
+                    this.index = 3;
+                    this.content = n;
+                }
+            },
+        });
+
+    </script>
+</body>
+
+</html>

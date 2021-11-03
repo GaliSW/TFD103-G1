@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trading_list</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/login.css"> -->
+
+    <script src="./vendor/js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
+
+</head>
+
+<body>
+
+    <main class="trading_list">
+        <div class="main_contain">
+
+            <!-- 上方選單 -->
+            <div class="bar col-12">
+                <div class="col-4 trading">
+                    <div class="title">交易相關</div>
+                    <button class="apply_trade">
+                        <a href="./member.html">
+                            <i class="fas fa-list-alt"></i>申請中交易
+                        </a> </button>
+                    <button class="trade_list _on">
+                        <a href="./trading_list.html">
+                            <i class="fas fa-list-alt"></i>交易紀錄
+                        </a>
+                    </button>
+                </div>
+                <div class="col-4 points">
+                    <div class="title">點數相關</div>
+                    <button class="point_list ">
+                        <a href="./points_list.html">
+                            <i class="fas fa-search-dollar"></i>點數紀錄
+                        </a>
+                    </button>
+                </div>
+                <div class="col-4 information">
+                    <div class="title">會員資料</div>
+                    <button class="member_info">
+                        <a href="./member_info.html">
+                            <i class="fas fa-pencil-alt"></i>修改個人資料
+                        </a>
+                    </button>
+                </div>
+            </div>
+
+            <div id="app0">
+                <!-- 頁籤 -->
+                <div class="button_bar ">
+                    <button class="buyer " :class="{'bookmark': b_contain }" @click= showBuyContain()>購買</button>
+                    <button class="buyer" :class="{'bookmark': b_change }" @click= showBuyChange()>交換(買)</button>
+                    <button class="saler " :class="{'bookmark': s_contain }" @click= showSalerContain()>販售</button>
+                    <button class="saler" :class="{'bookmark': s_change }" @click= showSalerChange()>交換(賣)</button>
+
+                </div>
+
+                <!-- 下方顯示 -->
+                <div class="content col-12">
+                    <keep-alive>
+                        <component :is="content" />
+                    </keep-alive>
+                </div>
+            </div>
+        
+        </div>
+
+
+    </main>
+
+    <script src="./js/member/trading_list.js">
+        
+    </script>
+
+    
+        
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
+
+</body>
+
+</html>
