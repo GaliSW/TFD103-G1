@@ -44,11 +44,17 @@
     }
 }
 
-@mixin pad_small {
+@mixin phone {
     @media (min-width:375px) and (max-width:413.98px) {
+        @content;
+    }    
+}
+@mixin phone_small {
+    @media (min-width:100px) and (max-width:374.98px){
         @content;
     }
 }
+
 
 @mixin btn_blur ($w, $p) {
     color: rgba(96, 205, 144, 1);

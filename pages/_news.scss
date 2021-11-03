@@ -1,0 +1,194 @@
+@import "../mixin/mixins";
+@import "../base/font";
+
+
+a{
+    text-decoration: none;
+    p {
+        font-size: $fontSize;
+        color:$tiffiny_green;
+    }
+    h3{
+        font-size:$fontSize_h3;
+        color:$tiffiny_green;
+    }
+    .p{
+        padding-left: 10px;
+        color:white;
+    }
+
+}
+
+.content {
+    @include center;
+    margin-top:50px;
+    display:flex;
+    border:1px solid #fff;
+    @include desktop{
+        width:100%;
+        display:flex;
+        flex-direction: row;
+      }
+      @include desktop_small{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+      }
+      @include pad{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+      }
+      @include pad_small{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+      }
+
+      @include phone{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+      }
+
+      @include phone_small{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+      }
+    }
+        
+
+    .fir1{
+        margin-left:auto;
+        width:500px;
+        @include desktop{
+            display:flex;
+            flex-direction: row;
+          }
+          @include desktop_small{
+            width:100%;
+            display:none;
+          }
+          @include pad{
+            width:100%;
+            display:none;
+          }
+          @include pad_small{
+            width:100%;
+            display:none;
+          }
+
+          @include phone{
+            width:100%;
+            display:none;
+          }
+
+          @include phone_small{
+            width:100%;
+            display:none;
+          }
+
+    }
+
+    .left{
+        @include center;
+        margin-top:70px;
+    }
+
+.char{
+    display:flex;
+    justify-content: space-between;
+    img{
+        width:150px;
+    }
+}
+
+
+.search-form{
+    margin-top:50px;
+    display:flex;
+    justify-content: center;
+    #search-input{
+        width:300px;
+        background-image: url("/images/intro/search.jpg");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 50px;
+    }
+    .search{
+        font-size:30px;
+    }
+}
+
+
+.wrap{
+    width:100%;
+    margin-top:50px;
+    display:flex;
+    justify-content: center;
+    opacity: 0.6;
+    @include desktop{
+        display:flex;
+        flex-direction: row;
+      }
+      @include desktop_small{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        opacity: 1;
+      }
+      @include pad{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        opacity: 1;
+      }
+      @include pad_small{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        opacity: 1;
+      }
+
+      @include phone{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        opacity: 1;
+      }
+
+      @include phone_small{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        opacity: 1;
+      }
+
+
+      
+    &:hover{
+        opacity:1;
+        transform: scale(1.02 , 1.02);
+        transition: .7s ease-in-out;
+    }
+
+    .sec{
+        margin-right:20px;
+        height:250px;
+    }
+    
+    .name{
+        text-align: center;
+        width:100%;
+    }
+    
+}
+
+
+
+
+
+
+
+
