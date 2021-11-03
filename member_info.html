@@ -72,9 +72,9 @@
                                 <i class="fas fa-camera"></i>
                             </div>
                         </button>
-                        
 
-                        <div class="edit" >
+
+                        <div class="edit">
                             <span>會員資料:a12345</span>
                             <div class="edit_detail">
                                 <button class="edit_btn" :class="{'black_btn': btn_on }"
@@ -98,10 +98,10 @@
             </div>
 
             <template id="=hiddenPopUps">
-            
+
                 <section class="maskLayer" :class="{'popShow':pop}">
                     <div class="popUpBox">
-                        <div  class="closeBtn" @click=clickClose()>
+                        <div class="closeBtn" @click=clickClose()>
                             x
                         </div>
                         <div class="popContent">
@@ -124,8 +124,8 @@
                                         +上傳照片
                                         <input type="file" @change="fileChange">
                                     </button>
-                                    
-                                    <button>儲存</button> 
+
+                                    <button>儲存</button>
                                 </div>
                             </div>
 
@@ -133,58 +133,19 @@
 
                     </div>
                 </section>
-            
+
             </template>
         </div>
 
-        
+
     </main>
 
 
 
-    <script>
-        let vm = new Vue({
-            el: '#app',
-            data: {
-                edit_on: false,
-                btn_on: false,
-                image: './image/member/r1.jpg',
-                pop:false,
-            },
-            methods: {
-                editPassword: function () {
-                    if (vm.$data.edit_on == true) {
-                        vm.$data.edit_on = false
-                        vm.$data.btn_on = false
-                    } else {
-                        vm.$data.edit_on = true
-                        vm.$data.btn_on = true
-                    }
-
-                },
-                fileChange(e) {
-                    let file = e.target.files[0];
-                    readFile = new FileReader();
-                    readFile.readAsDataURL(file);
-                    readFile.addEventListener('load', this.loadImage);
-                },
-                loadImage(e) {
-                    this.image = readFile.result;
-                    // this.image = e.target.result;
-                },
-                clickPop(){
-                    vm.$data.pop = true
-                },
-                clickClose(){
-                    vm.$data.pop = false
-                }
-            },
-        });
-
-
+    <script src="./js/member/member_info.js">
     </script>
 
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
 
 
