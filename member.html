@@ -79,8 +79,24 @@
                                 </div>
                 
                             </div>
-                
                         </div>
+                        <div class="popUpBox">
+                            <div class="closeBtn" @click=clickClose()>
+                                x
+                            </div>
+                            <div class="popContent">
+                                <div class="title col-4">
+                                    <span>拒絕原因:</span>
+                                    <button>不喜歡角色</button>
+                                    <button>不喜歡角色能力</button>
+                                    <button>其他</button>
+                                    
+                                </div>
+                
+                            </div>
+                        </div>
+
+
                     </section>
                 
                 </template>
@@ -152,7 +168,7 @@
                         <span class="trade_status col-1">等待確認</span>
                         <div class="trade_button col-3">
                             <button class="confirm ">確認交易</button>
-                            <button class="reject " @click=clickPop()>拒絕交易</button>
+                            <button class="reject " @click="clickPop">拒絕交易</button>
                         </div>
                     </div>
                     <span>
@@ -195,12 +211,13 @@
 
                        vm.$data.buyer = true
                        vm.$data.saler = false
-
-
+                       vm.$data.content = 'buyer_contain'
+                       
                    },
                    showSaler: function () {
                        vm.$data.saler = true
                        vm.$data.buyer = false
+                       vm.$data.content = 'saler_contain'
                    },
                    clickClose() {
                        vm.$data.pop = false

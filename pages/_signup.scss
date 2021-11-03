@@ -141,7 +141,7 @@ main.signup {
                     @include border_r(10);
                     color: red;
                     // margin-left: 20px;
-                    // display: none;
+                    display: none;
                 }
 
                 div.error::before {

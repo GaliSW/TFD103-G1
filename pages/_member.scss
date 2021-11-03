@@ -223,6 +223,7 @@ main.member {
             height: 150px;
             line-height: 150px;
             flex-wrap: wrap;
+            width: 100%;
 
             .col-1 {
                 min-width: 80px;
@@ -296,7 +297,8 @@ main.member {
         div._off::before {
             content: "";
             height: 150px;
-            width: 94.9%;
+            width: 1200px;
+            max-width: 94.9%;
             position: absolute;
             z-index: 1;
             background-color: rgba(201, 200, 200, 0.5);
@@ -319,6 +321,8 @@ main.member {
         }
 
         div.saler_contain {
+            width: 100%;
+
             div.trade_button {
 
                 button.confirm,
@@ -351,9 +355,10 @@ main.member {
 
     section.maskLayer {
         left: 0;
-        height: 100vw;
+        height: 100%;
         display: none;
         z-index: 2;
+        position: fixed;
 
         div.popUpBox {
             // background-color: $dark_blue;
@@ -1135,15 +1140,17 @@ main.member_info {
 
     section.maskLayer {
         left: 0;
-        height: 100vw;
+        height: 100%;
         display: none;
-
+        position: fixed;
+        z-index: 2;
 
         div.popUpBox {
             background-color: $dark_blue;
             width: 75%;
             z-index: 3;
             height: 510px;
+            top: 5%;
 
             div.closeBtn {
                 position: absolute;
@@ -1199,6 +1206,18 @@ main.member_info {
                             width: 100%;
                             height: 100%;
                         }
+                    }
+
+                    @media (max-width: 767.98px) {
+                        div.circle {
+                            margin-top: 0;
+                        }
+                    }
+                }
+
+                @media (max-width: 767.98px) {
+                    div.back {
+                        height: 250px;;
                     }
                 }
 
@@ -1260,7 +1279,8 @@ main.member_info {
 
         @media (max-width: 767.98px) {
             div.popUpBox {
-                height: 650px;
+                height: 500px;
+                top: 10px;
             }
         }
     }

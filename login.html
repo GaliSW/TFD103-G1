@@ -25,9 +25,9 @@
                         <br>
                         <input type="text" name="password" placeholder="*請輸入密碼">
                         <br>
-                        <span id="login_error">帳號密碼有誤</span>
-                        <br>
-                        <button type="submit" class="btn_login">登入</button>
+                        <span id="login_error"class="error" :class="{'bookmark': loginError }">帳號密碼有誤</span>
+                        
+                        <button type="submit" class="btn_login" @click=loginCheck($event)>登入</button>
                         
                     </form>
                     <a class="rwd_signup" href="./singup.html">
@@ -44,9 +44,9 @@
                         <h1>忘記密碼?</h1>
                         <input type="text" placeholder="請輸入註冊信箱">
                         <br>
-                        <span class="forget_error">*此信箱並未註冊</span>
-                        <br>
-                        <button class="btn_confirm" type="submit">確認</button>
+                        <span class="forget_error error" :class="{'bookmark': forgetError }">*此信箱並未註冊</span>
+                        
+                        <button class="btn_confirm" type="submit" @click=forgetCheck($event)>確認</button>
                         </form>
                         <button class="backToLogin" @click= showLogin()>
                             返回
@@ -93,20 +93,30 @@
                 data: {
                     login: true,
                     forget: false,
+                    loginError:false,
+                    forgetError: false
                 },
                 methods: {
                 showForget: function () {
                    
                         vm.$data.login = false
                         vm.$data.forget = true
-                    
-                    
+                        vm.$data.loginError = false
                 },
                 showLogin: function () {
                         vm.$data.login = true
                         vm.$data.forget = false
+                        vm.$data.forgetError = false
                     },
 
+                loginCheck: function(event){
+                    event.preventDefault()
+                    vm.$data.loginError = true
+                },
+                forgetCheck: function (event) {
+                        event.preventDefault()
+                        vm.$data.forgetError = true
+                    }
             },
             
 

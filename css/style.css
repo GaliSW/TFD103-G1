@@ -140,7 +140,7 @@ main.collection {
 main.collection .container {
   max-width: 1200px;
   margin: 0 auto;
-  max-width: 95%;
+  width: 95%;
 }
 
 main.collection .container .col-1 {
@@ -220,7 +220,7 @@ main.collection div.collect_contain div.ability {
   max-height: 100%;
 }
 
-main.collection div.collect_contain div.ability div.chart {
+main.collection div.collect_contain div.ability div.chartBox {
   width: 100%;
   height: 100%;
   max-height: 100%;
@@ -228,7 +228,7 @@ main.collection div.collect_contain div.ability div.chart {
   margin: 0 auto;
 }
 
-main.collection div.collect_contain div.ability div.chart canvas {
+main.collection div.collect_contain div.ability div.chartBox canvas {
   height: 100%;
   margin: 0 auto;
 }
@@ -272,6 +272,13 @@ main.collection div.collect_contain div.contain_bar p.rwd_title {
   }
 }
 
+@media (max-width: 577.98px) {
+  main.collection div.collect_contain div.contain_bar {
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
 main.collection div.collect_contain div.contain_list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -297,7 +304,7 @@ main.collection div.collect_contain div.contain_list p.rwd_price {
 }
 
 main.collection div.collect_contain div.contain_list div.trade_button {
-  height: 100%;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -307,7 +314,7 @@ main.collection div.collect_contain div.contain_list div.trade_button {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 35px 0;
+  padding: 30px 0;
 }
 
 main.collection div.collect_contain div.contain_list div.trade_button button.buy,
@@ -348,6 +355,7 @@ main.collection div.collect_contain div.contain_list div.trade_button button.cha
 @media (max-width: 767.98px) {
   main.collection div.collect_contain div.contain_list div.trade_button {
     padding: 5px 0;
+    height: 100px;
   }
 }
 
@@ -384,7 +392,8 @@ main.collection div.collect_contain div._off div.trade_button {
 main.collection div.collect_contain div._off::before {
   content: "";
   height: 200px;
-  width: 94.9%;
+  width: 1200px;
+  max-width: 94.9%;
   position: absolute;
   z-index: 1;
   background-color: rgba(201, 200, 200, 0.5);
@@ -973,6 +982,16 @@ main.login div.contain .login_contain {
   display: none;
 }
 
+main.login div.contain .forget_contain .error,
+main.login div.contain .login_contain .error {
+  display: none;
+}
+
+main.login div.contain .forget_contain .bookmark,
+main.login div.contain .login_contain .bookmark {
+  display: block;
+}
+
 main.login div.contain .bookmark {
   display: block;
 }
@@ -1241,6 +1260,7 @@ main.member div.content div.contain_list {
   line-height: 150px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 100%;
 }
 
 main.member div.content div.contain_list .col-1 {
@@ -1331,7 +1351,8 @@ main.member div.content hr {
 main.member div.content div._off::before {
   content: "";
   height: 150px;
-  width: 94.9%;
+  width: 1200px;
+  max-width: 94.9%;
   position: absolute;
   z-index: 1;
   background-color: rgba(201, 200, 200, 0.5);
@@ -1346,6 +1367,10 @@ main.member div.content div._off::before {
 main.member div.content div._off span.trade_status {
   color: red;
   min-width: 80px;
+}
+
+main.member div.content div.saler_contain {
+  width: 100%;
 }
 
 main.member div.content div.saler_contain div.trade_button button.confirm,
@@ -1371,9 +1396,10 @@ main.member div.content div.saler_contain div.trade_button button.confirm {
 
 main.member section.maskLayer {
   left: 0;
-  height: 100vw;
+  height: 100%;
   display: none;
   z-index: 2;
+  position: fixed;
 }
 
 main.member section.maskLayer div.popUpBox {
@@ -2313,8 +2339,10 @@ main.member_info div.content div.contain_list div.edit div.edit_detail form.book
 
 main.member_info section.maskLayer {
   left: 0;
-  height: 100vw;
+  height: 100%;
   display: none;
+  position: fixed;
+  z-index: 2;
 }
 
 main.member_info section.maskLayer div.popUpBox {
@@ -2322,6 +2350,7 @@ main.member_info section.maskLayer div.popUpBox {
   width: 75%;
   z-index: 3;
   height: 510px;
+  top: 5%;
 }
 
 main.member_info section.maskLayer div.popUpBox div.closeBtn {
@@ -2383,6 +2412,18 @@ main.member_info section.maskLayer div.popUpBox div.contain div.back div.circle 
 main.member_info section.maskLayer div.popUpBox div.contain div.back div.circle img {
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 767.98px) {
+  main.member_info section.maskLayer div.popUpBox div.contain div.back div.circle {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  main.member_info section.maskLayer div.popUpBox div.contain div.back {
+    height: 250px;
+  }
 }
 
 main.member_info section.maskLayer div.popUpBox div.contain div.btn_area {
@@ -2456,7 +2497,8 @@ main.member_info section.maskLayer div.popUpBox div.contain div.btn_area input {
 
 @media (max-width: 767.98px) {
   main.member_info section.maskLayer div.popUpBox {
-    height: 650px;
+    height: 500px;
+    top: 10px;
   }
 }
 
@@ -2665,6 +2707,7 @@ main.signup .main_contain .form_contain form div.error {
   padding: 5px;
   border-radius: 10px;
   color: red;
+  display: none;
 }
 
 main.signup .main_contain .form_contain form div.error::before {

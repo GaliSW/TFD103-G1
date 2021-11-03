@@ -1,6 +1,8 @@
+let chartLen = document.querySelectorAll('.myChart').length;
+let chartArr = [];
+for (let i = 0; i < chartLen; i++) {
+    let chart = document.querySelectorAll('.myChart')[i].getContext('2d');
 
-const ctx = document.getElementById('myChart').getContext('2d');
-console.log(ctx);
 const data = {
     labels: [
         '加速',
@@ -16,15 +18,15 @@ const data = {
         fillStyle: 'red',
         backgroundColor: ' rgba(16, 197, 177, .5)',
         borderColor: 'rgba(16, 197, 177, 1)',
-        pointRadius: 3,
+        pointRadius: 2,
         pointBackgroundColor: 'rgba(14, 52, 97, .8)',
         pointBorderColor: 'rgba(2, 79, 63, 1)',
-        pointHoverRadius: 3,
+        pointHoverRadius: 2,
         pointHoverBackgroundColor: 'rgba(16, 197, 177, .5)',
         pointHoverBorderColor: 'rgba(14, 52, 97, 1)',
     }]
 };
-const myChart = new Chart(ctx, {
+const myChart = new Chart(chart, {
     type: 'radar',
     data: data,
     options: {
@@ -50,8 +52,9 @@ const myChart = new Chart(ctx, {
         elements: {
 
             line: {
-                borderWidth: 3
+                borderWidth: 1
             }
         }
     },
 });
+}

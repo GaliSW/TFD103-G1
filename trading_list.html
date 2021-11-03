@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>_trading_list</title>
+    <title>trading_list</title>
     <link rel="stylesheet" href="./css/style.css">
     <!-- <link rel="stylesheet" href="./css/login.css"> -->
 
@@ -101,7 +101,7 @@
                     </div>
                 </div>
     `,
-        });
+    });
         Vue.component(`buyer_change`, {
             template: `
             <!-- 買家交換 -->
@@ -144,7 +144,7 @@
                         <span class="price col-2">販售金額</span>
                         <div class="dropdown col-2" id="app2">
                             <select>
-                                <option value="t3">近三個月</option>
+                                <option value="t3"> 近三個月</option>
                                 <option value="t6">近六個月</option>
                                 <option value="t9">近九個月</option>
                                 <option value="t12">近一年</option>
@@ -201,6 +201,7 @@
                 b_change: false,
                 s_contain: false,
                 s_change: false,
+                
             },
             methods: {
                 showBuyContain: function () {
