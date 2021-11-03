@@ -54,16 +54,50 @@ exports.cssCompress = minicss;
 const sass = require('gulp-sass')(require('sass'));
 
 function sassstyle() {
-    return src('./style.scss')
+    return src('./sass/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(dest('dist'))
+        .pipe(cleanCSS())
+        .pipe(dest('dist/css'))
 }
 
-exports.scss = sassstyle 
+exports.scss = sassstyle
+
+
+
+
+
+//**************** gulp sourcemap ****************** */
+
+const sourcemaps = require('gulp-sourcemaps');
+
+function styleSass() {
+    return src('./sass/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(dest('./dist/css'));
+}
+
+exports.sourcemaps = styleSass
+
+
+//**************** gulp fileinclude ****************** */
+
+const fileinclude = require('gulp-file-include');
+
+function includeHTML() {
+    return src('*.html')
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(dest('./dist'));
+}
 
 //**************** gulp watch ****************** */
 function watchFiles() {
-    watch('./style.scss')
+    watch(('./style.scss'), sassstyle)
+    watch(['*.html', '**/*.html'], includeHTML)
 }
 
 exports.watchSass = watchFiles //當檔案變更會自動執行重新編譯

@@ -1,0 +1,407 @@
+// 登入畫面
+.mgLoginBg {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, rgba(2, 79, 63, 1) 0%, rgb(184, 184, 184) 100%);
+}
+
+.mgLoginBlk {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    width: 800px;
+    height: 400px;
+    // @include center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    text-align: center;
+    font-size: $fontSize;
+    @include border_r(20);
+    @include shadow(10, 10, 30);
+    transition: .5s;
+
+    &:hover {
+        @include shadow(10, 10, 70);
+    }
+
+    div {
+        margin: 20px 0;
+    }
+
+    img {
+        width: 400px;
+    }
+
+    label {
+        color: #fff;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    input {
+        line-height: $fontSizeH3;
+        @include border_r(5);
+    }
+
+    button {
+        @include btn_blur(100px, 5px);
+        @include border_r(10);
+        transition: .3s;
+        cursor: pointer;
+        font-size: $fontSize;
+
+        &:hover {
+            @include btn_on(100px, 5px);
+        }
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        @include btn_blur(100px, 5px);
+        @include border_r(10);
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover {
+            @include btn_on(100px, 5px);
+        }
+    }
+}
+
+.mgHeaderBlk {
+    background: linear-gradient(180deg, rgba(2, 79, 63, 1) 0%, rgba(16, 197, 177, 1) 100%);
+    position: relative;
+    // @include border();
+    // max-width: 1200px;
+    height: 200px;
+    display: flex;
+    @include center;
+
+    .logo {
+
+        a {
+            background-image: url(../image/manager/logo.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            left: 30px;
+            position: absolute;
+            width: 400px;
+            height: 100%;
+            // @include border();
+        }
+    }
+
+    .title {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+
+        h1 {
+            position: relative;
+            margin: 0;
+            font-size: $fontSizeH1;
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+
+    .logOut {
+        position: absolute;
+        right: 30px;
+        bottom: 10px;
+        text-align: center;
+
+        button {
+            @include btn_blur(150px, 0px);
+            font-size: $fontSizeH4;
+            position: relative;
+            @include border_r(10);
+            transition: .3s;
+
+            &:hover {
+                @include btn_on(150px, 0px);
+            }
+
+            a {
+                // @include border();
+                text-decoration: none;
+                color: $light_green;
+                display: block;
+                width: 100%;
+
+
+                &:hover {
+                    color: $dark_blue;
+                }
+            }
+        }
+    }
+}
+
+.mgContainer {
+    margin-top: 50px;
+    display: flex;
+
+    .on {
+        @include border(3, $dark_blue);
+        color: $dark_blue;
+        background-color: $tiffiny_green;
+    }
+
+    ul {
+        // @include border();
+        padding: 0;
+
+        li {
+            list-style: none;
+            font-size: $fontSizeH4;
+            // @include border();
+            text-align: center;
+            @include btn_blur(100%, 50px);
+            @include border(3, $tiffiny_green);
+            color: $tiffiny_green;
+            @include border_r(10);
+            cursor: pointer;
+
+            &:hover {
+                @include border(3, $dark_blue);
+                color: $dark_blue;
+                background-color: $tiffiny_green;
+            }
+
+
+        }
+    }
+
+    .contentContainer {
+        @include border_r(10);
+        @include border(2, $dark_green);
+
+        .title {
+            position: relative;
+            text-align: center;
+            font-size: $fontSizeH2;
+            padding: 46px 0;
+            font-weight: bold;
+
+            h1 {
+                margin: 0;
+                font-size: $fontSizeH2;
+                color: $tiffiny_green;
+            }
+
+            .addAdminBtn {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                @include btn_blur(100px, 5px);
+                @include border_r(5);
+                cursor: pointer;
+                transition: .3s;
+
+                &:hover {
+                    @include btn_on(100px, 5px);
+                }
+            }
+
+            .memberSearch {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+
+                .fa-search {
+                    font-size: $fontSizeH4;
+                    cursor: pointer;
+                }
+
+                input {
+                    line-height: 20px;
+                }
+            }
+
+            .memberFilter {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+
+                .fa-filter {
+                    font-size: $fontSizeH4;
+                    cursor: pointer;
+                }
+
+                select {
+                    font-size: $fontSize;
+                }
+            }
+        }
+
+        th {
+            font-size: $fontSizeH4;
+            padding: 10px;
+            cursor: default;
+        }
+
+        td {
+            padding: 10px;
+            border-top: 1px dotted #ccc;
+            cursor: default;
+        }
+
+        .authContent {
+            table {
+                width: 100%;
+                @include border(1, #ccc);
+                text-align: center;
+            }
+        }
+
+        .memberContent {
+            table {
+                width: 100%;
+                @include border(1, #ccc);
+                text-align: center;
+
+                .memberEdit {
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $tiffiny_green;
+                    }
+                }
+
+                p {
+                    cursor: pointer;
+                    color: $tiffiny_green;
+                }
+            }
+        }
+
+        .memberPointContent {
+            table {
+                width: 100%;
+                @include border(1, #ccc);
+                text-align: center;
+
+                .memberEdit {
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $tiffiny_green;
+                    }
+                }
+
+                a {
+                    color: $tiffiny_green;
+                }
+            }
+        }
+
+        .roleContent {
+            table {
+                width: 100%;
+                @include border(1, #ccc);
+                text-align: center;
+
+                img {
+                    width: 150px;
+                }
+
+                button {
+                    font-size: $fontSize;
+                }
+            }
+        }
+
+        .roleUpContent {
+            table {
+                width: 100%;
+                @include border(1, #ccc);
+                text-align: center;
+            }
+
+            input {
+                @include border(2, $tiffiny_green);
+                line-height: $fontSizeH1;
+                @include border_r(5);
+            }
+
+            img {
+                width: 150px;
+            }
+
+            button {
+                @include btn_blur(100%, 10px);
+                font-size: $fontSize;
+                transition: .3s;
+                cursor: pointer;
+                @include border_r(10);
+
+                &:hover {
+                    @include btn_on(100%, 10px);
+                }
+            }
+
+        }
+
+        .newsContent {
+            table {
+                width: 100%;
+                @include border(1, #ccc);
+                text-align: center;
+
+                img {
+                    width: 150px;
+                }
+
+                button {
+                    font-size: $fontSize;
+                }
+            }
+        }
+
+        .newsUp {
+            text-align: center;
+
+            div {
+                @include border(1, #ccc);
+                padding: 10px 0;
+                font-size: $fontSizeH4;
+            }
+
+            input {
+                @include border(2, $tiffiny_green);
+                line-height: $fontSizeH1;
+                @include border_r(5);
+            }
+
+            .newsTitle input {
+                line-height: $fontSizeH3;
+                width: 500px;
+            }
+
+            .newsText textarea {
+                width: 500px;
+                font-size: $fontSize;
+                @include border(2, $tiffiny_green);
+                @include border_r(5);
+            }
+
+            button {
+                @include btn_blur(100px, 5px);
+                font-size: $fontSize;
+                transition: .3s;
+                cursor: pointer;
+                @include border_r(10);
+
+                &:hover {
+                    @include btn_on(100px, 5px);
+                }
+            }
+        }
+    }
+}
