@@ -1,0 +1,197 @@
+*{
+    box-sizing: border-box;
+  }
+
+body{
+    background-image: url("../image/trade/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0px 0px;
+}
+
+//角色資訊
+
+.sec1{
+
+     
+
+    .flexContainer{
+        display: flex;
+        width: 800px;
+        @include center;
+
+        .items.-left{
+            //@include border;
+            flex-basis: 300px;
+            flex-shrink: 0;
+            font-size: 0;
+            width: 100%;
+
+            .imgBlock{
+                width: 300px;
+                height: 300px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+
+        }
+
+        .items.-right{
+            //@include border;
+            flex-grow: 1;
+            font-size: 20px;
+            padding-left: 50px;
+            color: #fff;
+
+            .price, .buyForm{
+                display: inline-block;
+                //border: 1px solid red;
+                margin-bottom: 40px;
+            }
+
+            .price{
+                margin-left: 30px;
+            }
+
+            .buyForm{
+                .buyBtn{
+                    @include btn_blur (170px, 5px);
+                    &:hover {@include btn_on (170px, 5px)}
+                    margin-left: 40px;
+                    font-size: $fontSize_h3;
+                    &:hover {cursor: pointer}
+                }
+            }
+
+            .collectForm{
+                margin-left: 128px;
+                .collectBtn{
+                    @include btn_blur (70px, 5px);
+                    &:hover {@include btn_on (70px, 5px)}
+                    &:hover {cursor: pointer}
+                }
+
+                .changeBtn{
+                    @include btn_blur (70px, 5px);
+                    &:hover {@include btn_on (70px, 5px)}
+                    margin-left: 25px;
+                    &:hover {cursor: pointer}
+                }
+            }
+
+        }
+    }
+}
+
+//雷達圖
+
+
+.chart{
+    background-color: #fff;
+    //@include border;
+    margin: 100px auto;
+    width: 500px;
+    height: 500px;
+    padding: 15px;
+}
+
+//能力值
+
+.tableBlock{
+    color: #fff;
+    margin-bottom: 100px;
+table{
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    @include center;
+    width:600px;
+    height: 500px;
+
+
+    th,td{
+        border: 2px solid #fff;
+        text-align: center;
+        }
+    }
+
+    th{
+        font-size: $fontSizeH2;
+    }
+
+    td{
+        font-size: $fontSize_h4;
+    }
+}
+
+
+.maskBlock{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+    .popUpBox{
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(2, 79, 63, 1);
+        border: 2px solid rgba(16, 197, 177, 1);
+        width: 500px;
+        height: 250px;
+        border-radius: 5px;
+    
+        .popContent{
+            height: 100px;
+        }
+
+        .confirmBlk{
+            #confirmBtn3{
+                width: 150px;
+            }
+
+            #confirmBtn4{
+                width: 150px;
+            }
+        }
+    }
+}
+
+.closeBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.popUpBox .confirmBtn{
+    padding: 0;
+    height: 35px;
+    &:hover {@include btn_on (100px, 0px)}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
