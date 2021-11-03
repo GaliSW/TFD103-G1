@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <title>商品頁</title>
+</head>
+<body>
+ 
+    <section class="sec1">
+        <div class="flexContainer" >
+  
+          <div class="items -left">
+            <div class="imgBlock">
+              <img src="./image/product/role1.png">
+            </div>
+          </div>
+  
+          <div class="items -right">
+            <h1 class="title1">小烏龜</h1>
+            <p class="introduce">凡事簡單思考的個性和天生的樂天主義使他對速度沒有絲毫的恐懼感。</p>
+  
+            <p class="price">$250E</p>
+            
+
+            
+            
+
+                <form class="buyForm" action="#" method="post" >
+                    <button type="button" class="buyBtn" name="button" @click=clickPop()>購買</button>
+                </form>
+    
+    
+                <form class="collectForm" action="#" method="post">
+                    <div class="btnBlock1">
+                        <button type="button" class="collectBtn" name="button"><i class="fas fa-heart"></i> 收藏</button>
+                        <button type="button" class="changeBtn" name="button">交換</button>
+                    </div>
+                </form>
+    
+                
+            </div>
+  
+          </div>
+
+          
+
+
+
+        </div>
+    </section>
+
+<!-- 購買pop視窗 -->
+
+
+    <!-- <section class="maskBlock">
+        <div class="popUpBox">
+            <div @click="clickClose" class="closeBtn">
+                x
+            </div>
+            <div class="popContent">
+                <p>是否確認從帳戶扣除 $***點，交易 *****角色?</p>
+            </div>
+            <div class="confirmBlk">
+                <a href="#" class="confirmBtn">是</a>
+                <a href="#" class="confirmBtn">否</a>
+            </div>
+        </div>
+    </section> -->
+    
+    
+    <!-- <section class="maskBlock">
+        <div class="popUpBox">
+            <div @click="clickClose" class="closeBtn">
+                x
+            </div>
+            <div class="popContent">
+                <p>您已成功購買</p>
+            </div>
+            <div class="confirmBlk">
+                <a href="#" class="confirmBtn">確定</a>
+            </div>
+        </div>
+    </section> -->
+    
+    
+    <!-- <section class="maskBlock">
+        <div class="popUpBox">
+            <div @click="clickClose" class="closeBtn">
+                x
+            </div>
+            <div class="popContent">
+                <p>請先登入會員</p>
+            </div>
+            <div class="confirmBlk">
+                <a href="#" class="confirmBtn" id="confirmBtn3">前往登入畫面</a>
+            </div>
+        </div>
+    </section> -->
+    
+    
+    <!-- <section class="maskBlock">
+        <div class="popUpBox">
+            <div @click="clickClose" class="closeBtn">
+                x
+            </div>
+            <div class="popContent">
+                <p>您的點數餘額不足，請先儲值點數</p>
+            </div>
+            <div class="confirmBlk">
+                <a href="#" class="confirmBtn" id="confirmBtn4">前往儲值畫面</a>
+            </div>
+        </div>
+    </section> -->
+
+
+<!-- 交換pop視窗 -->
+
+    <!-- <section class="maskBlock">
+        <div class="popUpBox">
+            <div @click="clickClose" class="closeBtn">
+                x
+            </div>
+            <div class="popContent">
+                <p>選擇你要申請交換的角色</p>
+            </div>
+            <div class="">
+
+            </div>
+
+
+            <div class="confirmBlk">
+                <a href="#" class="confirmBtn">確定</a>
+            </div>
+        </div>
+    </section> -->
+
+
+
+
+
+
+<!-- 雷達圖 -->
+
+    <div class="chart"><canvas id="myChart"></canvas></div>
+
+<!-- 能力值     -->
+    <div class="tableBlock">
+        <table>
+            <tr>
+                <th>能力值</th>
+                <th>說明</th>
+            </tr>
+
+            <tr>
+                <th>加速</th>
+                <td>能力值越高可以越快到達最高速度。</td>
+            </tr>
+
+            <tr>
+                <th>抓地</th>
+                <td>能力值越高轉彎幅度就會越小。</td>
+            </tr>
+
+            <tr>
+                <th>碰撞</th>
+                <td>能力值越高在惡路上行駛時的減速就會越小。</td>
+            </tr>
+
+            <tr>
+                <th>迴避</th>
+                <td>能力值越高越不容易在與對手碰撞時彈飛。</td>
+            </tr>
+
+            <tr>
+                <th>道具</th>
+                <td>能力值越高越容易獲得道具。</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- 交易確認POP -->
+    <!-- <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                pop: false,
+                pop1: false,
+                pop2: false
+            },
+            methods: {
+
+                clickPop(){
+                    vm.$data.pop = true
+                },
+
+                clickClose(){
+                    vm.$data.pop = false
+                },
+               
+            },
+        });
+
+
+    </script>
+    -->
+   
+
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="./js/productChart.js"></script>
+    <!-- <script src="./js/successPop.js"></script> -->
+</body>
+</html>
