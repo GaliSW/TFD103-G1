@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/login.css"> -->
+
+    <script src="vendor/js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
+
+    <style>
+        .maskLayer{
+            display: none;
+        }
+        .popShow{
+            display: block;
+        }
+        .popUpBox{
+           display: none; 
+        }
+        .box{
+            display: block;
+            background-color:cadetblue ;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<main class="test" id="app">
+
+    <button  @click=clickPop()>click</button>
+
+    <template id="=hiddenPopUps">
+    
+        <section class="maskLayer" :class="{'popShow':pop}">
+    
+            <div class="popUpBox" :class="{'box':one}">
+                <div class="closeBtn" @click=clickClose()>
+                    x
+                </div>
+                <div class="popContent">
+                    1
+                    <button @click=toTwo()> to 2</button>
+                </div>
+    
+            </div>
+    
+            <div class="popUpBox" :class="{'box':two}">
+                <div class="closeBtn" @click=clickClose()>
+                    x
+                </div>
+                <div class="popContent">
+                    2
+                    <button @click=toThree()> to3</button>
+                </div>
+    
+            </div>
+    
+            <div class="popUpBox" :class="{'box':three}">
+                <div class="closeBtn" @click=clickClose()>
+                    x
+                </div>
+                <div class="popContent">
+                    3
+                </div>
+    
+            </div>
+        </section>
+    
+    </template>
+    </div>
+    
+    
+    </main>
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
+<script>
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            pop: false,
+            one:true,
+            two:false,
+            three:false,
+        },
+        methods: {
+            clickPop() {
+                vm.$data.pop = true;
+                vm.$data.one = true;
+                vm.$data.two = false;
+                vm.$data.three = false;
+            },
+            clickClose() {
+                vm.$data.pop = false;
+            },
+            toTwo(){
+                vm.$data.two = true;
+                vm.$data.one = false;
+                vm.$data.three = false;
+            },  
+            toThree() {
+                vm.$data.three = true;
+                vm.$data.one = false;
+                vm.$data.two = false;
+            }
+        },
+    });
+
+</script>
+
+
+
+</body>
+
+</html>

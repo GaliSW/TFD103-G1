@@ -95,9 +95,13 @@
     .left{
         @include center;
         margin-top:70px;
+        line-height: 50px;
+        .pp{
+          line-height: 50px;
+        }
     }
 
-.char{
+  .char{
     display:flex;
     justify-content: space-between;
     img{
@@ -115,7 +119,7 @@
         background-image: url("/images/intro/search.jpg");
         background-repeat: no-repeat;
         background-position: right;
-        background-size: 50px;
+        background-size: 20px;
     }
     .search{
         font-size:30px;
@@ -128,7 +132,9 @@
     margin-top:50px;
     display:flex;
     justify-content: center;
+    // align-items: center;
     opacity: 0.6;
+    line-height: 100px;
     @include desktop{
         display:flex;
         flex-direction: row;
@@ -170,8 +176,7 @@
       
     &:hover{
         opacity:1;
-        transform: scale(1.02 , 1.02);
-        transition: .7s ease-in-out;
+        transition: .3s ease-in-out;
     }
 
     .sec{
