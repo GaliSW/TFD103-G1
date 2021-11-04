@@ -20,7 +20,7 @@ let vm = new Vue({
 
     loginCheck: function (event) {
       event.preventDefault();
-      vm.$data.loginError = true;
+      // vm.$data.loginError = true;
     },
     forgetCheck: function (event) {
       event.preventDefault();

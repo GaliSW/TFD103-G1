@@ -18,7 +18,7 @@ Vue.component(`buyer_contain`, {
                     </div>
                     <div class="contain_list">
                         <span class="apply_date col-3">110-10-20</span>
-                        <div class="my_role col-3"><img src="./image/member/r1.jpg"></div>
+                        <div class="my_role col-3"><img src="../image/member/r1.jpg"></div>
                         <span class="method col-2">購買</span>
                         <span class="price col-2">100e</span>
                         <span class="block col-2"></span>
@@ -46,10 +46,10 @@ Vue.component(`buyer_change`, {
                     </div>
                     <div class="contain_list">
                         <span class="apply_date col-3">110-10-20</span>
-                        <div class="my_role col-3"><img src="./image/member/r1.jpg"></div>
+                        <div class="my_role col-3"><img src="../image/member/r1.jpg"></div>
                         <span class="method col-2">購買</span>
                         <div class="price col-2">
-                            <img src="./image/member/r2.jpg">
+                            <img src="../image/member/r2.jpg">
                         </div>
                         <span class="block col-2"></span>
                     </div>
@@ -77,7 +77,7 @@ Vue.component(`saler_contain`, {
                     </div>
                     <div class="contain_list">
                         <span class="apply_date col-3">110-10-20</span>
-                        <div class="my_role col-3"><img src="./image/member/r1.jpg"></div>
+                        <div class="my_role col-3"><img src="../image/member/r1.jpg"></div>
                         <span class="method col-2">販售</span>
                         <span class="price col-2">100e</span>
                         <span class="block col-2"></span>
@@ -105,10 +105,10 @@ Vue.component(`saler_change`, {
                     </div>
                     <div class="contain_list">
                         <span class="apply_date col-3">110-10-20</span>
-                        <div class="my_role col-3"><img src="./image/member/r1.jpg"></div>
+                        <div class="my_role col-3"><img src="../image/member/r1.jpg"></div>
                         <span class="method col-2">交換</span>
                         <div class="price col-2">
-                            <img src="./image/member/r2.jpg">
+                            <img src="../image/member/r2.jpg">
                         </div>
                         <span class="block col-2"></span>
                     </div>
