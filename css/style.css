@@ -155,20 +155,8 @@
 }
 
 #header .container {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
-=======
-<<<<<<< HEAD
-  display: -webkit-box;
-  display: -ms-flexbox;
-=======
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   display: flex;
   max-width: 1200px;
   height: 90px;
@@ -177,89 +165,33 @@
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   #header .container {
-<<<<<<< HEAD
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-=======
-<<<<<<< HEAD
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-=======
-    justify-content: space-between;
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
   #header .container {
-<<<<<<< HEAD
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-=======
-<<<<<<< HEAD
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-=======
-    justify-content: space-between;
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   #header .container {
-<<<<<<< HEAD
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-=======
-<<<<<<< HEAD
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-=======
-    justify-content: space-between;
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   #header .container {
-<<<<<<< HEAD
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-=======
-<<<<<<< HEAD
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-=======
-    justify-content: space-between;
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   }
 }
 
@@ -362,20 +294,8 @@
 }
 
 #header .navbar {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
-=======
-<<<<<<< HEAD
-  display: -webkit-box;
-  display: -ms-flexbox;
-=======
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -419,20 +339,8 @@
 }
 
 #header .navbar ul a li {
-<<<<<<< HEAD
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
-=======
-<<<<<<< HEAD
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-=======
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   display: inline-flex;
   margin-right: 50px;
   color: #fff;
@@ -444,21 +352,8 @@
 }
 
 #header .navbar ul a li:hover img {
-<<<<<<< HEAD
   -webkit-animation: move 1s infinite;
           animation: move 1s infinite;
-=======
-<<<<<<< HEAD
-  -webkit-animation: move 1s infinite;
-          animation: move 1s infinite;
-=======
-  animation: move 1s infinite;
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
 }
 
 #header .navbar ul a li img {
@@ -477,20 +372,8 @@
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   #header .hamburger {
-<<<<<<< HEAD
     display: -webkit-box;
     display: -ms-flexbox;
-=======
-<<<<<<< HEAD
-    display: -webkit-box;
-    display: -ms-flexbox;
-=======
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
     display: flex;
     margin: 32px;
   }
@@ -498,20 +381,8 @@
 
 @media (min-width: 578px) and (max-width: 767.98px) {
   #header .hamburger {
-<<<<<<< HEAD
     display: -webkit-box;
     display: -ms-flexbox;
-=======
-<<<<<<< HEAD
-    display: -webkit-box;
-    display: -ms-flexbox;
-=======
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
     display: flex;
     margin: 32px;
   }
@@ -519,20 +390,8 @@
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   #header .hamburger {
-<<<<<<< HEAD
     display: -webkit-box;
     display: -ms-flexbox;
-=======
-<<<<<<< HEAD
-    display: -webkit-box;
-    display: -ms-flexbox;
-=======
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
     display: flex;
     margin: 32px;
   }
@@ -540,40 +399,16 @@
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   #header .hamburger {
-<<<<<<< HEAD
     display: -webkit-box;
     display: -ms-flexbox;
-=======
-<<<<<<< HEAD
-    display: -webkit-box;
-    display: -ms-flexbox;
-=======
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
     display: flex;
     margin: 32px;
   }
 }
 
 #header #menuToggle {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
-=======
-<<<<<<< HEAD
-  display: -webkit-box;
-  display: -ms-flexbox;
-=======
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -625,7 +460,6 @@
   opacity: 0;
   -webkit-transform: rotate(0deg) scale(0.2, 0.2);
           transform: rotate(0deg) scale(0.2, 0.2);
-<<<<<<< HEAD
 }
 
 #header #menuToggle input:checked ~ span:nth-last-child(2) {
@@ -636,30 +470,6 @@
 #header #menuToggle input:checked ~ ul {
   -webkit-transform: none;
           transform: none;
-=======
-}
-
-#header #menuToggle input:checked ~ span:nth-last-child(2) {
-<<<<<<< HEAD
-  -webkit-transform: rotate(-45deg) translate(0, -1px);
-          transform: rotate(-45deg) translate(0, -1px);
-}
-
-#header #menuToggle input:checked ~ ul {
-  -webkit-transform: none;
-          transform: none;
-=======
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-#header #menuToggle input:checked ~ ul {
-  transform: none;
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
 }
 
 #header #menuToggle span {
@@ -680,7 +490,6 @@
 }
 
 #header #menuToggle span:first-child {
-<<<<<<< HEAD
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
 }
@@ -688,27 +497,6 @@
 #header #menuToggle span:nth-last-child(2) {
   -webkit-transform-origin: 0% 100%;
           transform-origin: 0% 100%;
-=======
-<<<<<<< HEAD
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
-}
-
-#header #menuToggle span:nth-last-child(2) {
-  -webkit-transform-origin: 0% 100%;
-          transform-origin: 0% 100%;
-=======
-  transform-origin: 0% 0%;
-}
-
-#header #menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
 }
 
 #header #menu {
@@ -747,21 +535,8 @@
 }
 
 #header #menu li:hover img {
-<<<<<<< HEAD
   -webkit-animation: move 1s infinite;
           animation: move 1s infinite;
-=======
-<<<<<<< HEAD
-  -webkit-animation: move 1s infinite;
-          animation: move 1s infinite;
-=======
-  animation: move 1s infinite;
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
 }
 
 #header #menu li img {
@@ -773,20 +548,8 @@
 }
 
 #header .icon {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
-=======
-<<<<<<< HEAD
-  display: -webkit-box;
-  display: -ms-flexbox;
-=======
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1140,11 +903,7 @@ main.collection div.collect_contain div.contain_list p.rwd_price {
 }
 
 main.collection div.collect_contain div.contain_list div.trade_button {
-<<<<<<< HEAD
-  height: 150px;
-=======
   height: 100%;
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1563,21 +1322,8 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 }
 
 * {
-<<<<<<< HEAD
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-=======
-<<<<<<< HEAD
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-=======
-  box-sizing: border-box;
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   margin: 0;
   padding: 0;
 }
@@ -1662,21 +1408,8 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 .entry .entrybg .contentBox .word {
   width: 400px;
   margin-left: 50%;
-<<<<<<< HEAD
   -webkit-transform: translateX(-60%);
           transform: translateX(-60%);
-=======
-<<<<<<< HEAD
-  -webkit-transform: translateX(-60%);
-          transform: translateX(-60%);
-=======
-  transform: translateX(-60%);
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   margin-top: -10%;
 }
 
@@ -1688,21 +1421,8 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 
 .entry .entrybg .contentBox .roleLeft {
   width: 500px;
-<<<<<<< HEAD
   -webkit-transform: rotate(5deg);
           transform: rotate(5deg);
-=======
-<<<<<<< HEAD
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
-=======
-  transform: rotate(5deg);
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   position: absolute;
   top: 480px;
 }
@@ -1712,21 +1432,8 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 }
 
 * {
-<<<<<<< HEAD
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-=======
-<<<<<<< HEAD
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-=======
-  box-sizing: border-box;
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -2017,18 +1724,6 @@ body {
 #gachaStart:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-<<<<<<< HEAD
-=======
-=======
-#gachaStart:hover {
-<<<<<<< HEAD
-  transform: scale(1.2);
->>>>>>> 0280d401d2845224e78e7372f275c206735ca334
-=======
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
->>>>>>> dev
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -3495,22 +3190,8 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-slide img {
-<<<<<<< HEAD
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-=======
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
->>>>>>> 0280d401d2845224e78e7372f275c206735ca334
-=======
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
->>>>>>> dev
 }
 
 .swiper-slide .slider-image .preview-icon {
@@ -4308,41 +3989,15 @@ body {
 
 @media (min-width: 578px) and (max-width: 767.98px) {
   .index .manyRole {
-<<<<<<< HEAD
     -ms-flex-pack: distribute;
         justify-content: space-around;
-=======
-<<<<<<< HEAD
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-=======
-    justify-content: space-around;
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   .index .manyRole {
-<<<<<<< HEAD
     -ms-flex-pack: distribute;
         justify-content: space-around;
-=======
-<<<<<<< HEAD
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-=======
-    justify-content: space-around;
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   }
 }
 
@@ -4601,21 +4256,8 @@ body {
 }
 
 .index .unlock .afterImage img {
-<<<<<<< HEAD
   -webkit-transform: translate(-100%, 0px);
           transform: translate(-100%, 0px);
-=======
-<<<<<<< HEAD
-  -webkit-transform: translate(-100%, 0px);
-          transform: translate(-100%, 0px);
-=======
-  transform: translate(-100%, 0px);
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
 }
 
 .index .unlock .unlockImage img {
@@ -4889,21 +4531,8 @@ body {
 .out .thumbnail:hover {
   -webkit-transition: .7s ease-in-out;
   transition: .7s ease-in-out;
-<<<<<<< HEAD
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-=======
-<<<<<<< HEAD
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-=======
-  transform: scale(1.05, 1.05);
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
 }
 
 .out .title {
@@ -5812,31 +5441,6 @@ main.member div.bar div.information {
   padding-bottom: 20px;
 }
 
-<<<<<<< HEAD
-@media (max-width: 767.98px) {
-  main.member div.bar div.trading {
-    width: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    padding: 0;
-    border: 0;
-  }
-  main.member div.bar div.points,
-  main.member div.bar div.information {
-    width: 25%;
-    padding: 0;
-    border: 0;
-  }
-  main.member div.bar .fa-list-alt,
-  main.member div.bar .fa-search-dollar,
-  main.member div.bar .fa-pencil-alt {
-    width: 100%;
-    font-size: 32px;
-  }
-=======
 main.member div.bar div.trading {
   width: 50%;
   display: -webkit-box;
@@ -5860,7 +5464,6 @@ main.member div.bar .fa-search-dollar,
 main.member div.bar .fa-pencil-alt {
   width: 100%;
   font-size: 32px;
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
 }
 
 main.member div.bar div.title {
@@ -6342,31 +5945,6 @@ main.trading_list div.bar div.information {
   padding-bottom: 20px;
 }
 
-<<<<<<< HEAD
-@media (max-width: 767.98px) {
-  main.trading_list div.bar div.trading {
-    width: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    padding: 0;
-    border: 0;
-  }
-  main.trading_list div.bar div.points,
-  main.trading_list div.bar div.information {
-    width: 25%;
-    padding: 0;
-    border: 0;
-  }
-  main.trading_list div.bar .fa-list-alt,
-  main.trading_list div.bar .fa-search-dollar,
-  main.trading_list div.bar .fa-pencil-alt {
-    width: 100%;
-    font-size: 32px;
-  }
-=======
 main.trading_list div.bar div.trading {
   width: 50%;
   display: -webkit-box;
@@ -6376,7 +5954,6 @@ main.trading_list div.bar div.trading {
       flex-wrap: nowrap;
   padding: 0;
   border: 0;
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
 }
 
 main.trading_list div.bar div.points,
@@ -6642,31 +6219,6 @@ main.points_list div.bar div.information {
   padding-bottom: 20px;
 }
 
-<<<<<<< HEAD
-@media (max-width: 767.98px) {
-  main.points_list div.bar div.trading {
-    width: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    padding: 0;
-    border: 0;
-  }
-  main.points_list div.bar div.points,
-  main.points_list div.bar div.information {
-    width: 25%;
-    padding: 0;
-    border: 0;
-  }
-  main.points_list div.bar .fa-list-alt,
-  main.points_list div.bar .fa-search-dollar,
-  main.points_list div.bar .fa-pencil-alt {
-    width: 100%;
-    font-size: 32px;
-  }
-=======
 main.points_list div.bar div.trading {
   width: 50%;
   display: -webkit-box;
@@ -6690,7 +6242,6 @@ main.points_list div.bar .fa-search-dollar,
 main.points_list div.bar .fa-pencil-alt {
   width: 100%;
   font-size: 32px;
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
 }
 
 main.points_list div.bar div.title {
@@ -6896,31 +6447,6 @@ main.member_info div.bar div.information {
   padding-bottom: 20px;
 }
 
-<<<<<<< HEAD
-@media (max-width: 767.98px) {
-  main.member_info div.bar div.trading {
-    width: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    padding: 0;
-    border: 0;
-  }
-  main.member_info div.bar div.points,
-  main.member_info div.bar div.information {
-    width: 25%;
-    padding: 0;
-    border: 0;
-  }
-  main.member_info div.bar .fa-list-alt,
-  main.member_info div.bar .fa-search-dollar,
-  main.member_info div.bar .fa-pencil-alt {
-    width: 100%;
-    font-size: 32px;
-  }
-=======
 main.member_info div.bar div.trading {
   width: 50%;
   display: -webkit-box;
@@ -6944,7 +6470,6 @@ main.member_info div.bar .fa-search-dollar,
 main.member_info div.bar .fa-pencil-alt {
   width: 100%;
   font-size: 32px;
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
 }
 
 main.member_info div.bar div.title {
@@ -7643,21 +7168,8 @@ main.member_info section.popShow {
 
 .out .wrap:hover {
   opacity: 1;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
-  -webkit-transform: scale(1.02, 1.02);
-          transform: scale(1.02, 1.02);
-  -webkit-transition: .7s ease-in-out;
-  transition: .7s ease-in-out;
-=======
+  -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
 }
 
 .out .wrap .sec {
@@ -7686,22 +7198,10 @@ main.member_info section.popShow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
-  margin-top: 50px;
+  margin: 50px 0;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-<<<<<<< HEAD
-=======
-=======
-  margin: 50px 0;
-  justify-content: space-evenly;
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
 }
 
 .out .ti .date {
@@ -7804,76 +7304,23 @@ main.member_info section.popShow {
   background-position: 0px 0px;
 }
 
-<<<<<<< HEAD
 .allBlock img {
   max-width: 100%;
 }
 
 .allBlock .sec1 .flexContainer {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-.sec1 .flexContainer {
->>>>>>> dev
   display: -webkit-box;
   display: -ms-flexbox;
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> Lillian
-.allBlock img {
-  max-width: 100%;
-}
-
-.allBlock .sec1 .flexContainer {
-<<<<<<< HEAD
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
-<<<<<<< HEAD
-  display: -webkit-box;
-  display: -ms-flexbox;
-=======
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   display: flex;
   width: 800px;
   margin: 0 auto;
 }
 
-<<<<<<< HEAD
 .allBlock .sec1 .flexContainer .items.-left {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-.sec1 .flexContainer .items.-left {
-<<<<<<< HEAD
-=======
-=======
-.allBlock .sec1 .flexContainer .items.-left {
-<<<<<<< HEAD
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
->>>>>>> dev
   -ms-flex-preferred-size: 300px;
       flex-basis: 300px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-.allBlock .sec1 .flexContainer .items.-left {
-  flex-basis: 300px;
-  flex-shrink: 0;
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
-  flex-basis: 300px;
-  flex-shrink: 0;
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   font-size: 0;
   width: 100%;
 }
@@ -7888,35 +7335,10 @@ main.member_info section.popShow {
   height: 100%;
 }
 
-<<<<<<< HEAD
 .allBlock .sec1 .flexContainer .items.-right {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-.sec1 .flexContainer .items.-right {
-<<<<<<< HEAD
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-=======
-=======
-.allBlock .sec1 .flexContainer .items.-right {
-<<<<<<< HEAD
->>>>>>> Lillian
->>>>>>> dev
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-=======
-<<<<<<< HEAD
-.allBlock .sec1 .flexContainer .items.-right {
-  flex-grow: 1;
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
-  flex-grow: 1;
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
   font-size: 20px;
   padding-left: 50px;
   color: #fff;
@@ -8072,7 +7494,6 @@ main.member_info section.popShow {
   cursor: pointer;
   position: absolute;
   top: 0;
-<<<<<<< HEAD
   right: 0;
 }
 
@@ -8277,271 +7698,12 @@ main.member_info section.popShow {
 }
 
 .allBlock .maskBlock13 .popUpBox13 .confirmBlk13 {
-=======
-  right: 0;
-}
-
-.allBlock .maskBlock .popUpBox .popContent {
-  text-align: center;
-  color: #60cd90;
-  margin-top: 80px;
-  height: 100px;
-}
-
-.allBlock .maskBlock .popUpBox .confirmBlk {
-<<<<<<< HEAD
->>>>>>> dev
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-<<<<<<< HEAD
-}
-
-.allBlock .maskBlock13 .popUpBox13 .confirmBlk13 .confirmBtn13 {
-  text-align: center;
-  line-height: 30px;
-  text-decoration: none;
-  border: 3px solid #10c5b1;
-  color: #10c5b1;
-  background-color: #0e3461;
-  width: 100px;
-  height: 35px;
-  border-radius: 3px;
-  padding: 0;
-=======
-=======
-  display: flex;
-  justify-content: space-evenly;
->>>>>>> origin/dev
-}
-
-.allBlock .maskBlock .popUpBox .confirmBlk .confirmBtn {
->>>>>>> dev
-  padding: 0;
-  height: 35px;
-}
-
-<<<<<<< HEAD
-.allBlock .maskBlock13 .popUpBox13 .confirmBlk13 .confirmBtn13:hover {
-=======
-.allBlock .maskBlock .popUpBox .confirmBlk .confirmBtn:hover {
->>>>>>> dev
-  color: #0e3461;
-  width: 100px;
-  padding: 0px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-<<<<<<< HEAD
-=======
-.allBlock .maskBlock .popUpBox .confirmBlk #confirmBtn3 {
-  width: 150px;
-}
-
-.allBlock .maskBlock .popUpBox .confirmBlk #confirmBtn4 {
-  width: 150px;
-}
-
-.allBlock .maskBlock12 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.allBlock .maskBlock12 .popUpBox12 {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-<<<<<<< HEAD
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-=======
-  transform: translateX(-50%);
->>>>>>> origin/dev
-  background-color: #024f3f;
-  border: 2px solid #10c5b1;
-  width: 1000px;
-  height: 480px;
-  border-radius: 5px;
-  overflow: auto;
-}
-
-.allBlock .maskBlock12 .popUpBox12 .closeBtn12 {
-  background-color: #10c5b1;
-  border-radius: 2px;
-  font-size: 28px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
-<<<<<<< HEAD
-  position: -webkit-sticky;
-=======
->>>>>>> origin/dev
-  position: sticky;
-  top: 0px;
-  float: right;
-}
-
-.allBlock .maskBlock12 .popUpBox12 .popContent12 {
-  text-align: center;
-  color: #60cd90;
-  margin-top: 20px;
-}
-
-.allBlock .maskBlock12 .popUpBox12 .roleBlock1Mark .roleList1Mark {
-  margin: 0 0 0 50px;
-  padding: 0;
-  list-style: none;
-<<<<<<< HEAD
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-=======
-  display: flex;
-  flex-wrap: wrap;
->>>>>>> origin/dev
-}
-
-.allBlock .maskBlock12 .popUpBox12 .roleBlock1Mark .roleList1Mark li {
-  width: calc((100% - 60px - 50px) / 4);
-  margin-right: 20px;
-  margin-bottom: 25px;
-}
-
-.allBlock .maskBlock12 .popUpBox12 .confirmBlk12 {
-  text-align: center;
-  margin-bottom: 30px;
-<<<<<<< HEAD
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-=======
-  display: flex;
-  justify-content: space-evenly;
->>>>>>> origin/dev
-}
-
-.allBlock .maskBlock12 .popUpBox12 .confirmBlk12 .confirmBtn12 {
-  text-align: center;
-  line-height: 30px;
-  text-decoration: none;
-  border: 3px solid #10c5b1;
-  color: #10c5b1;
-  background-color: #0e3461;
-  width: 100px;
-  height: 35px;
-  border-radius: 3px;
-  padding: 0;
-}
-
-.allBlock .maskBlock12 .popUpBox12 .confirmBlk12 .confirmBtn12:hover {
-  color: #0e3461;
-  width: 100px;
-  padding: 0px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.allBlock .maskBlock13 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.allBlock .maskBlock13 .popUpBox13 {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-<<<<<<< HEAD
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-=======
-  transform: translateX(-50%);
->>>>>>> origin/dev
-  background-color: #024f3f;
-  border: 2px solid #10c5b1;
-  width: 800px;
-  height: 480px;
-  border-radius: 5px;
-}
-
-.allBlock .maskBlock13 .popUpBox13 .myRoleBlock, .allBlock .maskBlock13 .popUpBox13 .doubleArrow, .allBlock .maskBlock13 .popUpBox13 .yourRoleBlock {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.allBlock .maskBlock13 .popUpBox13 .myRoleBlock .myRoleP {
-  margin-bottom: 20px;
-}
-
-.allBlock .maskBlock13 .popUpBox13 .doubleArrow {
-  width: 100px;
-  height: 100px;
-  font-size: 100px;
-  margin: 0 30px;
-}
-
-.allBlock .maskBlock13 .popUpBox13 .yourRoleBlock .yourRoleP {
-  margin-bottom: 20px;
-}
-
-.allBlock .maskBlock13 .popUpBox13 .closeBtn13 {
-  background-color: #10c5b1;
-  border-radius: 2px;
-  font-size: 28px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.allBlock .maskBlock13 .popUpBox13 .popContent13 {
-  text-align: center;
-  color: #60cd90;
-  margin-bottom: 10px;
-}
-
-.allBlock .maskBlock13 .popUpBox13 .popContent13 p {
-  margin-top: 30px;
-}
-
-.allBlock .maskBlock13 .popUpBox13 .confirmBlk13 {
-<<<<<<< HEAD
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-=======
-  display: flex;
-  justify-content: space-evenly;
->>>>>>> origin/dev
 }
 
 .allBlock .maskBlock13 .popUpBox13 .confirmBlk13 .confirmBtn13 {
@@ -8568,7 +7730,6 @@ main.member_info section.popShow {
   text-align: center;
 }
 
->>>>>>> dev
 .allBlock .maskBlock13 .popUpBox13 .confirmBlk13 .confirmBtn13:hover {
   color: #0e3461;
   width: 100px;
@@ -8591,17 +7752,8 @@ main.member_info section.popShow {
   position: absolute;
   top: 25%;
   left: 50%;
-<<<<<<< HEAD
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-=======
-<<<<<<< HEAD
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-=======
-  transform: translateX(-50%);
->>>>>>> origin/dev
->>>>>>> dev
   background-color: #024f3f;
   border: 2px solid #10c5b1;
   width: 500px;
@@ -8904,17 +8056,8 @@ main.signup .main_contain div._on {
 }
 
 * {
-<<<<<<< HEAD
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-=======
-<<<<<<< HEAD
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-=======
-  box-sizing: border-box;
->>>>>>> origin/dev
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
 }
 
 .allBlock1 {
@@ -9130,31 +8273,9 @@ main.signup .main_contain div._on {
   transition: all 0.8s;
 }
 
-<<<<<<< HEAD
 .allBlock1 .ymainy .yproductListy li:hover {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-.ymainy .yproductListy li:hover {
->>>>>>> dev
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
-<<<<<<< HEAD
-=======
-=======
-.allBlock1 .ymainy .yproductListy li:hover {
-  transform: scale(1.1, 1.1);
->>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
-=======
-.allBlock1 .ymainy .yproductListy li:hover {
-<<<<<<< HEAD
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-=======
-  transform: scale(1.1, 1.1);
->>>>>>> origin/dev
->>>>>>> Lillian
->>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
 }
 
 .allBlock1 .ymainy .yproductListy li a {
