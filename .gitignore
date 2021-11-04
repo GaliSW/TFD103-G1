@@ -2,5 +2,5 @@ dist
 node_modules
 css
 gulpfile
-layout
-package-lock
+package-lock.json
+webpack.config.js

@@ -1,5 +1,5 @@
 {
-  "name":"tfd103g1",
+  "name": "tfd103g1",
   "version": "1.0.0",
   "description": "",
   "main": "pop.js",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/GaliSW/TFD103-G1#readme",
   "devDependencies": {
     "browser-sync": "^2.27.5",
+    "css-loader": "^5.2.4",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
@@ -28,11 +29,15 @@
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
+    "html-webpack-plugin": "^4.5.0",
     "install": "^0.13.0",
-    "sass": "^1.43.2"
+    "sass": "^1.43.2",
+    "style-loader": "^2.0.0"
   },
   "dependencies": {
     "chart.js": "^3.6.0",
-    "vue-router": "^3.5.2"
+    "vue-router": "^3.5.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   }
 }
