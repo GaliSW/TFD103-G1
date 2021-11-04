@@ -58,9 +58,9 @@
                 <div id="app">
                     <!-- 頁籤 -->
                     <div class="button_bar ">
-                        <button @click="currView='box1'">扭蛋</button>
-                        <button @click="currView='box2'">我的角色</button>
-                        <button @click="currView='box3'">角色圖鑑</button>
+                        <button id="box1" class="-on">扭蛋</button>
+                        <button id="box2">我的角色</button>
+                        <button id="box3">角色圖鑑</button>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@
 
 
         <!-- 扭蛋 -->
-        <section class="gachaPage" id="box1">
+        <section class="gachaPage" id="boxOne">
             <div class="GaCha" id="gachaGamePage">
                 <div class="GaChaGame col-6">
                     <div>
@@ -85,8 +85,8 @@
                             <hidden v-if="isShow" @stop-show="close"></hidden>
                         </div>
                         <template id="PopUps0">
-                            <section class="maskLayer1">
-                                <div class="popUpBox1">
+                            <section class="gachaMaskLayer">
+                                <div class="gachaPopUpBox">
                                     <div @click="clickClose" class="closeBtn1">
                                         x
                                     </div>
@@ -164,7 +164,7 @@
         </section>
 
         <!-- 我的角色 -->
-        <!-- <section class="myRoleBlk">
+        <section class="myRoleBlk boxBlur" id="boxTwo">
 
             <table>
                 <tr>
@@ -225,39 +225,42 @@
             </table>
 
 
-        </section> -->
+        </section>
 
         <!-- 角色圖鑑 -->
-        <!-- <section class="rolesBlk">
-            <div class="col-3">
-                <img src="./image/gacha/role7.jpg" alt="">
-                <div class="roleInfo">查看角色資訊</div>
-            </div>
-            <div class="col-3">
-                <img src="./image/gacha/role7.jpg" alt="">
-                <div class="roleInfo">查看角色資訊</div>
-            </div>
-            <div class="col-3">
-                <img src="./image/gacha/role7.jpg" alt="">
-                <div class="roleInfo">查看角色資訊</div>
-            </div>
-            <div class="col-3">
-                <img src="./image/gacha/role7.jpg" alt="">
-                <div class="roleInfo">查看角色資訊</div>
-            </div>
-            <div class="col-3">
-                <img src="./image/gacha/role7.jpg" alt="">
-                <div class="roleInfo">查看角色資訊</div>
-            </div>
-            <div class="col-3">
-                <img src="./image/gacha/role7.jpg" alt="">
-                <div class="roleInfo">查看角色資訊</div>
-            </div>
-            <div class="col-3">
-                <img src="./image/gacha/role7.jpg" alt="">
-                <div class="roleInfo">查看角色資訊</div>
-            </div>
-        </section>
+        <div id="boxThree" class="boxBlur">
+            <section class="rolesBlk">
+                <div class="col-3">
+                    <img src="./image/gacha/role7.jpg" alt="">
+                    <div class="roleInfo">查看角色資訊</div>
+                </div>
+                <div class="col-3">
+                    <img src="./image/gacha/role7.jpg" alt="">
+                    <div class="roleInfo">查看角色資訊</div>
+                </div>
+                <div class="col-3">
+                    <img src="./image/gacha/role7.jpg" alt="">
+                    <div class="roleInfo">查看角色資訊</div>
+                </div>
+                <div class="col-3">
+                    <img src="./image/gacha/role7.jpg" alt="">
+                    <div class="roleInfo">查看角色資訊</div>
+                </div>
+                <div class="col-3">
+                    <img src="./image/gacha/role7.jpg" alt="">
+                    <div class="roleInfo">查看角色資訊</div>
+                </div>
+                <div class="col-3">
+                    <img src="./image/gacha/role7.jpg" alt="">
+                    <div class="roleInfo">查看角色資訊</div>
+                </div>
+                <div class="col-3">
+                    <img src="./image/gacha/role7.jpg" alt="">
+                    <div class="roleInfo">查看角色資訊</div>
+                </div>
+            </section>
+        </div>
+
         <section id="rolesPop" class="none">
             <div class="roleMaskLayer">
                 <div class="rolePopUpBox">
@@ -284,9 +287,9 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
-
+        <script src="./js/gacha/changeLabel.js"></script>
         <script src="./js/gacha/swiper.js"></script>
         <script src="./js/gacha/gachaGame.js"></script>
         <script src="./js/gacha/pintoo.js"></script>
@@ -297,7 +300,5 @@
         <script src="./js/gacha/roleInfoChart.js"></script>
         <script src="./js/gacha/rolePop.js"></script>
         <!-- <script src="./js/pagination.js"></script> -->
-
-</body>
 
 </html>
