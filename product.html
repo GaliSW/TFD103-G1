@@ -7,54 +7,40 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="./js/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <title>商品頁</title>
 </head>
 <body>
- 
-    <section class="sec1">
+<main class="allBlock">
+    <section class="sec1" >
         <div class="flexContainer" >
-  
           <div class="items -left">
             <div class="imgBlock">
               <img src="./image/product/role1.png">
             </div>
           </div>
-  
-          <div class="items -right">
+          <div class="items -right" >
             <h1 class="title1">小烏龜</h1>
             <p class="introduce">凡事簡單思考的個性和天生的樂天主義使他對速度沒有絲毫的恐懼感。</p>
-  
             <p class="price">$250E</p>
-            
-
-            
-            
-
-                <form class="buyForm" action="#" method="post" >
-                    <button type="button" class="buyBtn" name="button" @click=clickPop()>購買</button>
-                </form>
-    
-    
-                <form class="collectForm" action="#" method="post">
+                <div class="buyForm"  id="app">
+                    <button type="button" class="buyBtn" name="button" @click="clickPop">購買</button>
+                    <component :is="content" id="popUp" @nextacc="myClick" @click-2="myClick2"></component>
+                    
+                </div>
+                <div class="collectForm">
                     <div class="btnBlock1">
                         <button type="button" class="collectBtn" name="button"><i class="fas fa-heart"></i> 收藏</button>
                         <button type="button" class="changeBtn" name="button">交換</button>
                     </div>
-                </form>
-    
-                
+                </div>
             </div>
-  
-          </div>
-
           
-
-
-
         </div>
     </section>
 
+    
 <!-- 購買pop視窗 -->
 
 
@@ -121,24 +107,112 @@
 
 <!-- 交換pop視窗 -->
 
-    <!-- <section class="maskBlock">
-        <div class="popUpBox">
-            <div @click="clickClose" class="closeBtn">
+    <!-- <section class="maskBlock12">
+        <div class="popUpBox12">
+            <div class="closeBtn12">
                 x
             </div>
-            <div class="popContent">
+           
+            <div class="popContent12">
                 <p>選擇你要申請交換的角色</p>
             </div>
-            <div class="">
+           
+            <div class="roleBlock1Mark">
+                <ul class="roleList1Mark">
+                    <li>
+                        <div class="imgBlock1Mark">
+                            <img src="./image/product/change/change1.png">
+                        </div>
+                    </li>
 
+                    <li>
+                        <div class="imgBlock1Mark">
+                            <img src="./image/product/change/change2.png">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="imgBlock1Mark">
+                            <img src="./image/product/change/change3.png">
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="imgBlock1Mark">
+                            <img src="./image/product/change/change4.png">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="imgBlock1Mark">
+                            <img src="./image/product/change/change5.png">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="imgBlock1Mark">
+                            <img src="./image/product/change/change6.png">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="imgBlock1Mark">
+                            <img src="./image/product/change/change7.png">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="imgBlock1Mark">
+                            <img src="./image/product/change/change8.png">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="imgBlock1Mark">
+                            <img src="./image/product/change/change9.png">
+                        </div>
+                    </li>
+                </ul>
             </div>
 
-
-            <div class="confirmBlk">
-                <a href="#" class="confirmBtn">確定</a>
+            <div class="confirmBlk12">
+                <a href="#" class="confirmBtn12">確定</a>
             </div>
         </div>
     </section> -->
+
+    <section class="maskBlock">
+        <div class="popUpBox">
+            <div  class="closeBtn">
+                x
+            </div>
+            <div class="popContent">
+                <p>確認你想要交換的角色</p>
+            </div>
+
+            <div class="myRoleBlock">
+                <div class="myRoleP">
+                    <p>我的角色</p>
+                </div>
+
+                <div class="myRoleImg">
+                    <img src="./image/product/role1.png">
+                </div>
+
+                <div class="myRoleNameBlock">
+                    <p>小烏龜</p>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="confirmBlk">
+                <a href="#" class="confirmBtn" id="confirmBtn4">確定</a>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -186,6 +260,9 @@
 
     </div>
 
+</main>
+
+
     <!-- 交易確認POP -->
     <!-- <script>
         let vm = new Vue({
@@ -213,11 +290,85 @@
     -->
    
 
+    <script>
+        Vue.component(`maskBlock`,{
+            template:`
+            <section class="maskBlock" id="maskBlock">
+                <div class="popUpBox">
+                    <div class="closeBtn" @click="clickClose">
+                        x
+                    </div>
+                    <div class="popContent">
+                        <p>是否確認從帳戶扣除 $***點，交易 *****角色?</p>
+                    </div>
+                    <div class="confirmBlk">
+                        <a href="#" class="confirmBtn" @click="next">是</a>
+                        <a href="#" class="confirmBtn" @click="clickClose">否</a>
+                    </div>
+                </div>
+            </section>
+            `,
+            methods: {
+                clickClose(){
+                 vm.content = false;
+            },
+            next(){
+                this.$emit('nextacc','maskBlock2');
+            }
+            },
+            
+            
+        });
+    
+        Vue.component(`maskBlock2`,{
+            template:`
+                <section class="maskBlock">
+                    <div class="popUpBox">
+                        <div  class="closeBtn" @click="clickClose2">
+                            x
+                        </div>
+                        <div class="popContent">
+                            <p>您已成功購買</p>
+                        </div>
+                        <div class="confirmBlk" @click="clickClose2">
+                            <a href="#" class="confirmBtn">確定</a>
+                        </div>
+                    </div>
+            </section>
+            `,
+            methods:{
+                clickClose2(){
+                    this.$emit('click-2','false')
+                }
+            }
+        })
+        
+        let vm = new Vue({
+            el:'#app',
+            data:{
+                content:false,
+            },
+            methods: {
+                clickPop(){
+                    // console.log(e.target)
+                    this.content = 'maskBlock'
+                },
+                myClick(val){
+                    this.content = val;
+                },
+                myClick2(r){
+                    this.content = r;
+                },
+            },
 
+        })
+    
+    
+    </script>
 
 
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    
     <script src="./js/productChart.js"></script>
     <!-- <script src="./js/successPop.js"></script> -->
 </body>
