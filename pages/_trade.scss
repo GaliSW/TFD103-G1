@@ -2,48 +2,51 @@
     box-sizing: border-box;
   }
 
-  img{
-      max-width: 100%;
-  }
+  
 
-body{
+.allBlock1{
     background-image: url("../image/trade/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 0px 0px;
     margin: 0;
+    padding: 0;
+    img{
+        max-width: 100%;
+    }
     @include desktop{
-    border: 1px solid blue; 
+    //border: 1px solid blue; 
     margin: 0 auto;
      }
     @include desktop_small{
-        border: 1px solid red;
+        //border: 1px solid red;
         margin: 0 auto;
         width: 750px;
     }
-}
 
-//角色排行
+
+////////////////////////////////////////////////角色排行
 
 .roleRanksection{
 
     h1{
         color:#fff;
         text-align: center;
+        margin: 20px 0;
     }
     
     .rankBloCk{
-        border: 1px solid orange;
+        //border: 1px solid orange;
         width: 900px;
         @include center;
         @include desktop_small{
-            width:750px;
+        width:750px;
         }
 
 
 
         .roleBloCk1{
-            @include border;
+            //@include border;
             .imgBlock{
                 @include desktop_small{
                 width: 70%;
@@ -107,7 +110,7 @@ body{
 
 
 
-// 按鈕
+/////////////////////////////////////////////// 按鈕
 .btnBlockmy{
     //@include border;
     text-align: center;
@@ -134,7 +137,7 @@ body{
     }    
 }
 
-//側邊欄
+//////////////////////////////////////////////側邊欄
 
 .yasidey, .ymainy{
     display: inline-block;
@@ -163,7 +166,7 @@ body{
     .ysearchBtny{
         background-color:transparent;
         position: absolute;
-        top: 77px;
+        top: 87px;
         right: 42px;
         border: none;
         cursor: pointer;
@@ -182,10 +185,10 @@ body{
     }
 }
 
-//商品列表
+///////////////////////////////////////////////商品列表
 
 .ymainy{
-    border: 1px solid red;
+    //border: 1px solid red;
     width: calc(100% - 250px - 70px);
     margin-bottom: 50px;
 
@@ -199,7 +202,7 @@ body{
         flex-wrap: wrap;
         
         li{
-            @include border;
+            //@include border;
             margin-right: 50px;
             margin-bottom: 50px;
             width: 229px;
@@ -296,4 +299,4 @@ body{
     }
 }
 
-
+}
