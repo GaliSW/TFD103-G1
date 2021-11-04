@@ -7316,11 +7316,69 @@ main.member_info section.popShow {
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+.sec1 .flexContainer .items.-left {
+=======
+>>>>>>> 8c1011bc559e480d88b3dcf6271d60cb6d931ffd
 .allBlock .sec1 .flexContainer .items.-left {
   -ms-flex-preferred-size: 300px;
       flex-basis: 300px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 9b156a62db1255c99c6233d2a546036ef4328678
+.allBlock .sec1 .flexContainer .items.-left {
+  flex-basis: 300px;
+  flex-shrink: 0;
+>>>>>>> 73d2f0f62318f781c5104363d963cb205a9fa04a
+=======
+  flex-basis: 300px;
+  flex-shrink: 0;
+>>>>>>> origin/dev
+>>>>>>> Lillian
+>>>>>>> 8c1011bc559e480d88b3dcf6271d60cb6d931ffd
   font-size: 0;
   width: 100%;
 }
@@ -7434,6 +7492,18 @@ main.member_info section.popShow {
   padding: 15px;
 }
 
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .chart {
+    width: 100%;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .chart {
+    width: 100%;
+  }
+}
+
 .allBlock .tableBlock {
   color: #fff;
   margin-bottom: 100px;
@@ -7445,6 +7515,24 @@ main.member_info section.popShow {
   margin: 0 auto;
   width: 600px;
   height: 500px;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock .tableBlock table {
+    width: 100%;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .tableBlock table {
+    width: 100%;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .tableBlock table {
+    width: 100%;
+  }
 }
 
 .allBlock .tableBlock table th, .allBlock .tableBlock table td {
