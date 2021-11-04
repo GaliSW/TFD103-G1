@@ -7,7 +7,7 @@
       overflow-x: hidden;
       margin:0;
       @include center;
-      background-image: url("../images/intro/背景寬版1920.jpg");
+      background-image: url("../images/intro/bg.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -124,11 +124,10 @@
           font-size: $fontSizeH1;
         }
         .img{
-          z-index: -100;
           width: 300px;
           position: absolute;
-          margin-top: -150px;
-          margin-left: -300px;  
+          margin-top: -170px;
+          margin-left: -350px;  
         }
     }
 
