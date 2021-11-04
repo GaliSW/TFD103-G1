@@ -5,18 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>points_list</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- <link rel="stylesheet" href="./css/login.css"> -->
 
-    <script src="vendor/js/vue.js"></script>
+    <script src="../vendor/js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
 
 </head>
 
 <body>
-
-    @@include('./header.html')
-
+    <header></header>
     <main class="points_list">
         <div class="main_contain">
 
@@ -24,22 +22,11 @@
             <div class="bar col-12">
                 <div class="col-4 trading">
                     <div class="title">交易相關</div>
-<<<<<<< HEAD:points_list.html
                     <button class="apply_trade" onclick="location.href='./member.html'">
                         <i class="fas fa-list-alt"></i>申請中交易
                     </button>
                     <button class="trade_list" onclick="location.href='./trading_list.html'">
                         <i class="fas fa-list-alt"></i>交易紀錄
-=======
-                    <button class="apply_trade">
-                        <a href="./member.html">
-                            <i class="fas fa-list-alt"></i>申請中交易
-                        </a> </button>
-                    <button class="trade_list">
-                        <a href="./trading_list.html">
-                            <i class="fas fa-list-alt"></i>交易紀錄
-                        </a>
->>>>>>> origin/dev:src/points_list.html
                     </button>
                 </div>
                 <div class="col-4 points">
@@ -55,17 +42,12 @@
                     </button>
                 </div>
             </div>
-<<<<<<< HEAD:points_list.html
             
-=======
-
-
->>>>>>> origin/dev:src/points_list.html
 
             <!-- 下方顯示 -->
             <div class="content col-12">
 
-
+                
                 <div class="contain">
                     <div class="contain_bar">
                         <span class="apply_date col-3">交易日期</span>
@@ -98,12 +80,10 @@
             </div>
         </div>
     </main>
+    <footer></footer>
 
-    @@include('./footer.html')
-
-
-    <script src="./js/member/points_list.js">
-
+    <script src="../js/member/points_list.js">
+        
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>

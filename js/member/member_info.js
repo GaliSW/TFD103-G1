@@ -3,7 +3,7 @@ let vm = new Vue({
   data: {
     edit_on: true,
     btn_on: true,
-    image: "./image/member/r1.jpg",
+    image: "../image/member/r1.jpg",
     pop: false,
   },
   methods: {
