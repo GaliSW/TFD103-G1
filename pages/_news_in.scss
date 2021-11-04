@@ -1,0 +1,91 @@
+@import "../mixin/mixins";
+@import "../base/font";
+
+h1{
+    font-size: $fontSizeH1;
+}
+
+h3{
+    font-size: $fontSizeH3;
+}
+
+p{
+    font-size: $fontSize;
+}
+
+
+.ti{
+    display:flex;
+    margin-top:50px;  
+    justify-content: space-evenly;
+    .date{
+        margin:0 auto;
+    }
+
+}
+
+.con{
+    // width:600px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    @include center;
+    h1{
+        text-align: center;
+    }
+    .news_in1{
+        margin:20px 0;
+    } 
+    
+    .img_in{
+        width:100%;
+    }
+    li{
+        text-align: left;
+        color:white;
+    }
+    p{
+        font-size: $fontSize;
+        text-align: left;
+        line-height: $lineHeight20;
+        padding:20px ;
+        margin:0;
+    }
+}
+
+.h1_final{
+    text-align: center;
+    border-top:1px solid #FFF;
+    margin:40px 0;
+    padding-top:40px;
+    
+}
+
+.final{
+    display:flex;
+    justify-content:space-around;
+    text-align: right;
+    .img_gacha , .img_trade{
+        width:100%;
+    }
+    .line{
+        height:400px;
+        margin-right:40px;  
+        border-right:1px solid #FFF;
+    }
+    
+    .bt{
+        @include btn_on(50, 50);
+        @include border_r(100);
+        padding:15px;
+        font-size: 15px;
+        &:hover{
+            background-color: #000;
+            color:#fff;
+        }
+    }
+}
+
+
+
+

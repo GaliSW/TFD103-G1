@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/vue.min.js"></script>
+    <title>pop-3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8988cd1b75.js" crossorigin="anonymous"></script>
+    <style>
+.maskLayer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.maskLayer .popUpBox {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  border-radius: 5px;
+}
+
+
+
+.maskLayer .popUpBox .closeBtn {
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  margin-left:auto;
+}
+
+.maskLayer .popUpBox .popContent {
+  text-align: center;
+  color: #10c5b1;
+  height: 600px;
+}
+
+.maskLayer .popUpBox .confirmBlk {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.maskLayer .popUpBox .confirmBlk .confirmBtn {
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  border: 3px solid #10c5b1;
+  padding: 10px 25px;
+  color: #10c5b1;
+  background-color: #0e3461;
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+}
+
+h1{
+    border:1px solid gray;
+    padding:20px;
+}
+
+.ol{
+    border:1px solid gray;
+    border-bottom: 0;
+    display: block;
+    padding: 0px;
+    margin: 0px auto;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+ol{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+p{
+    padding: 10px;
+}
+
+.btbt{
+    color: rgba(14, 52, 97, 1);
+    width: 100px;
+    padding: 15px;
+    background-color: rgba(96, 205, 144, 1);
+    border: 3px solid rgba(14, 52, 97, 1);
+    text-align: center;
+}
+
+p , button{
+    color:#000;
+}
+
+/*# sourceMappingURL=pop.css.map */     
+
+    </style>
+</head>
+
+<body>
+    <section id="box">
+        <button @click="clickShow">click</button>
+        <hidden v-if="isShow" @stop-show="close"></hidden>
+    </section>
+
+    <template id="hiddenPopUps">
+        <section class="maskLayer">
+            <div class="popUpBox">
+                <div @click="clickClose" class="closeBtn">
+                    x
+                </div>
+                <div class="popContent">
+                    <h1>角色管理</h1>
+                    <div class="ol">
+                        <ol>
+                            <li>1.
+                                <img src="./images/intro/Group 18851.png" alt="" style="width:100px;">
+                                <p>綠色怪物</p>
+                                <p>$250E</p>
+                                <p>xxxxxxxxxxxxxx</p>
+                                <button class="btbt">下架</button>
+                            </li>
+                        </ol>    
+                    </div>
+
+                    <div class="ol">
+                        <ol>
+                            <li>2.
+                                <img src="./images/intro/Group 18851.png" alt="" style="width:100px;">
+                                <p>綠色怪物</p>
+                                <p>$250E</p>
+                                <p>xxxxxxxxxxxxxx</p>
+                                <button class="btbt">重新上架</button>
+                                <i class="fas fa-trash" style="position:absolute; right:0; padding-right:20px; font-size:20px; color:#000;"></i>
+                            </li>
+                        </ol>    
+                    </div>
+
+                    <div class="ol">
+                        <ol>
+                            <li>3
+                                <img src="./images/intro/Group 18851.png" alt="" style="width:100px;">
+                                <p>綠色怪物</p>
+                                <p>$250E</p>
+                                <p>xxxxxxxxxxxxxx</p>
+                                <button class="btbt">下架</button>
+                            </li>
+                        </ol>    
+                    </div>
+
+                    <div class="ol">
+                        <ol style="border-bottom: 1px solid gray;">
+                            <li>4
+                                <img src="./images/intro/Group 18851.png" alt="" style="width:100px;">
+                                <p>綠色怪物</p>
+                                <p>$250E</p>
+                                <p>xxxxxxxxxxxxxx</p>
+                                <button class="btbt">下架</button>
+                            </li>
+                        </ol>    
+                    </div>
+
+
+                </div>
+                <div class="confirmBlk">
+                    <a href="#" class="confirmBtn">yes</a>
+                    <a href="#" class="confirmBtn">no</a>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <script>
+window.onload = function () {
+
+}      
+
+//宣告子組件:hiddenPopUps 並綁定區塊
+let hiddenPopUps = {
+    template: '#hiddenPopUps',
+    //向上層傳遞事件
+    methods: {
+        clickClose() {
+            this.$emit('stop-show')
+        }
+    },
+}
+
+let vm = new Vue({
+    el: '#box',
+    data: {
+        isShow: false,
+    },
+    //在父層掛載子組件
+    components: {
+        hidden: hiddenPopUps
+    },
+    //綁定點擊事件
+    methods: {
+        clickShow() {
+            this.isShow = true
+        },
+        close() {
+            this.isShow = false
+        }
+    },
+})
+
+
+    </script>
+    </body>
+
+</html>
