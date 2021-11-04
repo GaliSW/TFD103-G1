@@ -2,7 +2,8 @@
 @import "../base/font";
 
 
-a{
+.out{
+  a{
     text-decoration: none;
     p {
         font-size: $fontSize;
@@ -183,12 +184,5 @@ a{
         width:100%;
     }
     
+  }
 }
-
-
-
-
-
-
-
-
