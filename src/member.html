@@ -14,7 +14,8 @@
 </head>
 
 <body>
-    <header></header>
+
+    @@include('./header.html')
     <main class="member">
         <div class="main_contain">
 
@@ -52,7 +53,7 @@
 
             <div id="app">
                 <!-- 頁籤 -->
-                <div class="button_bar " >
+                <div class="button_bar ">
                     <button class="buyer" :class="{'bookmark':buyer}" @click='showBuyer()'>我是買方</button>
                     <button class="saler" :class="{'bookmark':saler }" @click='showSaler()'>我是賣方</button>
                 </div>
@@ -61,9 +62,9 @@
                         <component :is="content" />
                     </keep-alive>
                 </div>
-                
+
                 <template id="=hiddenPopUps">
-                
+
                     <section class="maskLayer" :class="{'popShow':pop}">
                         <div class="popUpBox">
                             <div class="closeBtn" @click=clickClose()>
@@ -75,9 +76,9 @@
                                     <button>不喜歡角色</button>
                                     <button>不喜歡角色能力</button>
                                     <button>其他</button>
-                                    
+
                                 </div>
-                
+
                             </div>
                         </div>
                         <div class="popUpBox">
@@ -90,28 +91,29 @@
                                     <button>不喜歡角色</button>
                                     <button>不喜歡角色能力</button>
                                     <button>其他</button>
-                                    
+
                                 </div>
-                
+
                             </div>
                         </div>
 
 
                     </section>
-                
+
                 </template>
             </div>
 
-            
+
         </div>
     </main>
-    <footer></footer>
+
+    @@include('./footer.html')
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
     <script src="./js/member/member.js">
-        
+
     </script>
-    
+
 
 
 </body>

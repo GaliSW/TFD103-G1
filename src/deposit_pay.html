@@ -11,7 +11,7 @@
 
 <body>
 
-    <header></header>
+    @@include('./header.html')
     <main class="deposit">
         <div class="container">
             <div class="deposit_pay
@@ -28,12 +28,12 @@
                             <span class="credit_detail">儲值點數:</span>
                             <span class="points">50點券</span>
                         </div>
-                        
+
                         <div>
                             <span class="credit_detail">金額:</span>
                             <span class="price">50元</span>
                         </div>
-                        
+
                         <div>
                             <span class="credit_detail">信用卡號:</span>
                             <input type="text"> -
@@ -41,8 +41,8 @@
                             <input type="text"> -
                             <input type="text">
                         </div>
-                        
-                        
+
+
                         <div>
                             <span class="credit_date">信用卡有效截止日期</span>
                             <select name="月">
@@ -54,13 +54,13 @@
                             </select>
                             年
                         </div>
-                        
-                        
+
+
                         <div>
                             <span>信用卡背後末三碼:</span>
                             <input type="text">
                         </div>
-                        
+
                         <button class="">確認送出</button>
                     </form>
                 </div>
@@ -68,7 +68,7 @@
             </div>
         </div>
     </main>
-    <footer></footer>
+    @@include('./footer.html')
 
     <script src="./js/member/deposit_pay.js"> </script>
 </body>
