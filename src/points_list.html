@@ -14,7 +14,9 @@
 </head>
 
 <body>
-    <header></header>
+
+    @@include('./header.html')
+
     <main class="points_list">
         <div class="main_contain">
 
@@ -29,7 +31,7 @@
                     <button class="trade_list">
                         <a href="./trading_list.html">
                             <i class="fas fa-list-alt"></i>交易紀錄
-                        </a> 
+                        </a>
                     </button>
                 </div>
                 <div class="col-4 points">
@@ -50,12 +52,12 @@
                 </div>
             </div>
 
-            
+
 
             <!-- 下方顯示 -->
             <div class="content col-12">
 
-                
+
                 <div class="contain">
                     <div class="contain_bar">
                         <span class="apply_date col-3">交易日期</span>
@@ -88,10 +90,12 @@
             </div>
         </div>
     </main>
-    <footer></footer>
+
+    @@include('./footer.html')
+
 
     <script src="./js/member/points_list.js">
-        
+
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
