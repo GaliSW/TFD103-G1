@@ -6,87 +6,67 @@ const {
     watch
 } = require('gulp');
 
-exports.testgulp = function test(cb) {
-    console.log('gulp done');
-    cb();
-}
-
-function missionA(cb) {
-    console.log('missionA')
-    cb();
-}
-
-function missionB(cb) {
-    console.log('missionB')
-    cb();
-}
-
-exports.async = series(missionA, missionB); //依序進行
-
-exports.sync = parallel(missionA, missionB); //同時進行
-
-
-//將檔案搬家（全部的html）
-exports.file = function copy() {
-    return src('./*.html').pipe(dest('dist'))
-}
-
-
-//******************gulp套件********************
-
-const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
-
-function minicss() {
-    return src('./pop.css')
-        .pipe(cleanCSS({ compatibility: 'ie10' })) //壓縮css
-        .pipe(rename({
-            extname: 'pop.min.css'
-        }))
-        .pipe(dest('dist'))
-}
-
-exports.cssCompress = minicss;
-
-
-//**************** gulp sass編譯 ****************** */
-
-const sass = require('gulp-sass')(require('sass'));
-
-function sassstyle() {
-    return src('./sass/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(cleanCSS())
-        .pipe(dest('dist/css'))
-}
-
-exports.scss = sassstyle
-
-
-
-
-
-//**************** gulp sourcemap ****************** */
-
+const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
+const clean = require('gulp-clean');
 
-function styleSass() {
-    return src('./sass/*.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(sourcemaps.write())
-        .pipe(dest('./dist/css'));
+function clear() {
+    return src('dist', { read: false, allowEmpty: true })//不去讀檔案結構，增加刪除效率  / allowEmpty : 允許刪除空的檔案
+        .pipe(clean({ force: true })); //強制刪除檔案 
 }
 
-exports.sourcemaps = styleSass
+function sassonline() {
+    return src('./style.scss')
+        .pipe(sass().on('error', sass.logError)) //sass
+        .pipe(cleanCSS()) // minicss
+        .pipe(dest('dist/css'));
+}
+
+exports.sass = sassonline
 
 
-//**************** gulp fileinclude ****************** */
+const babel = require('gulp-babel');
 
+function babel5() {
+    return src('./js/**/*.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(dest('dist/js'));
+}
+exports.js = babel5
+
+const imagemin = require('gulp-imagemin');
+function min_images() {
+    return src('./image/**/*.*')
+        .pipe(imagemin([
+            imagemin.mozjpeg({ quality: 70, progressive: true }) // 壓縮品質      quality越低 -> 壓縮越大 -> 品質越差 
+        ]))
+        .pipe(dest('dist/images'))
+}
+
+exports.image = min_images;
+
+//清除舊檔案
+function clear() {
+    return src('dist', { read: false, allowEmpty: true })
+        //不去讀檔案結構，增加刪除效率  / allowEmpty : 允許刪除空的檔案
+        .pipe(clean({ force: true })); //強制刪除檔案 
+}
+
+
+// 清除舊檔案 -> html sass js ->壓縮圖片
+
+// exports.production = series(clear, parallel(sassonline, babel5), min_images)
+
+
+//打包用
+//html 樣板
 const fileinclude = require('gulp-file-include');
 
 function includeHTML() {
-    return src('*.html')
+    return src('./src/*.html')
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
@@ -94,10 +74,49 @@ function includeHTML() {
         .pipe(dest('./dist'));
 }
 
-//**************** gulp watch ****************** */
-function watchFiles() {
-    watch(('./style.scss'), sassstyle)
-    watch(['*.html', '**/*.html'], includeHTML)
+exports.html = includeHTML;
+
+
+// sass
+const sass = require('gulp-sass')(require('sass'));
+
+// 開發用
+function sassstyle() {
+    return src('./style.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError)) //sass
+        .pipe(sourcemaps.write())
+        .pipe(dest('dist/css'));
 }
 
-exports.watchSass = watchFiles //當檔案變更會自動執行重新編譯
+exports.sassstyle = sassstyle;
+
+// js copy
+function jsdev() {
+    return src('./js/*.js').pipe(dest('dist/js'));
+}
+
+
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+
+
+
+function browser(done) {
+    browserSync.init({
+        server: {
+            baseDir: "./dist",
+            index: "index.html"
+        },
+        port: 3000
+    });
+    watch('style.scss', sassstyle).on('change', reload);
+    watch('./src/*.html', includeHTML).on('change', reload);
+    watch('./src/js/**/*.js', jsdev).on('change', reload);
+    watch('image/**/*.*', min_images).on('change', reload);
+    done();
+}
+
+
+//開發用
+exports.dev = browser;
