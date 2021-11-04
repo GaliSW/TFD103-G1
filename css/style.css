@@ -6657,6 +6657,40 @@ main.member_info section.popShow {
   margin: 0 auto;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
 .allBlock .sec1 .flexContainer .items.-left {
   flex-basis: 300px;
   flex-shrink: 0;
@@ -6771,6 +6805,18 @@ main.member_info section.popShow {
   padding: 15px;
 }
 
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .chart {
+    width: 100%;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .chart {
+    width: 100%;
+  }
+}
+
 .allBlock .tableBlock {
   color: #fff;
   margin-bottom: 100px;
@@ -6782,6 +6828,24 @@ main.member_info section.popShow {
   margin: 0 auto;
   width: 600px;
   height: 500px;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock .tableBlock table {
+    width: 100%;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .tableBlock table {
+    width: 100%;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .tableBlock table {
+    width: 100%;
+  }
 }
 
 .allBlock .tableBlock table th, .allBlock .tableBlock table td {
