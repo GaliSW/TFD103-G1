@@ -3840,22 +3840,7 @@ p {
   }
 }
 
-h1 {
-  font-size: 32px;
-  color: white;
-}
-
-h3 {
-  font-size: 24px;
-  color: white;
-}
-
-p {
-  font-size: 16px;
-  color: white;
-}
-
-body {
+.out {
   overflow-x: hidden;
   margin: 0;
   margin: 0 auto;
@@ -3863,62 +3848,76 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 1200px;
   padding: 0;
 }
 
 @media (min-width: 992px) {
-  body {
+  .out {
     max-width: 1200px;
     width: 100%;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  body {
+  .out {
     width: 100%;
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
-  body {
+  .out {
     width: 100%;
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
-  body {
+  .out {
     width: 100%;
   }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
-  body {
+  .out {
     width: 100%;
   }
 }
 
 @media (min-width: 100px) and (max-width: 374.98px) {
-  body {
+  .out {
     width: 100%;
   }
 }
 
-body .header h1 {
+.out h1 {
+  font-size: 32px;
+  color: white;
+}
+
+.out h3 {
+  font-size: 24px;
+  color: white;
+}
+
+.out p {
+  font-size: 16px;
+  color: white;
+}
+
+.out .mama h1 {
   text-align: center;
   font-size: 32px;
 }
 
-body .header .p {
+.out .mama .p {
   font-size: 16px;
   color: #10c5b1;
 }
 
-body .header .ti-2 {
+.out .mama .ti-2 {
   text-align: right;
 }
 
-body .header button {
+.out .mama button {
   cursor: pointer;
   color: #0e3461;
   width: 50;
@@ -3932,53 +3931,53 @@ body .header button {
   margin-right: auto;
 }
 
-body .header button:hover {
+.out .mama button:hover {
   background-color: #000;
   color: #fff;
 }
 
-body .card {
+.out .card {
   margin-top: 50px;
   margin-bottom: 5px;
   overflow: hidden;
   cursor: grab;
 }
 
-body .thumbnail {
+.out .thumbnail {
   width: 100%;
   border: 1px solid #fff;
 }
 
-body .thumbnail:hover {
+.out .thumbnail:hover {
   transition: .7s ease-in-out;
   transform: scale(1.1, 1.1);
 }
 
-body .title {
+.out .title {
   text-align: center;
   border: 1px solid #fff;
 }
 
-body a {
+.out a {
   text-decoration: none;
   color: #10c5b1;
 }
 
-body h3 {
+.out h3 {
   font-size: 24px;
 }
 
-body p {
+.out p {
   font-size: 16px;
   line-height: 25px;
 }
 
-body section {
+.out section {
   text-align: center;
   position: relative;
 }
 
-body section .racing {
+.out section .racing {
   border-bottom-style: dashed;
   border-width: 40px;
   height: 50px;
@@ -3986,15 +3985,15 @@ body section .racing {
   margin-bottom: 50px;
 }
 
-body section .intr {
+.out section .intr {
   margin-top: 50px;
 }
 
-body section .h1 {
+.out section .h1 {
   font-size: 32px;
 }
 
-body section .img {
+.out section .img {
   z-index: -100;
   width: 300px;
   position: absolute;
@@ -4002,22 +4001,22 @@ body section .img {
   margin-left: -300px;
 }
 
-body .slick-next {
+.out .slick-next {
   right: -20px;
 }
 
-body .slick-prev {
+.out .slick-prev {
   z-index: 100;
   left: -20px;
 }
 
-body .total {
+.out .total {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-body .total .fs {
+.out .total .fs {
   z-index: 5;
   background: url("https://images5.alphacoders.com/342/thumb-1920-342293.jpg");
   background-size: cover;
@@ -4025,7 +4024,7 @@ body .total .fs {
   background-repeat: no-repeat;
 }
 
-body .total .sc {
+.out .total .sc {
   z-index: 4;
   background: url("https://picfiles.alphacoders.com/353/thumb-1920-353921.jpg");
   background-size: cover;
@@ -4033,7 +4032,7 @@ body .total .sc {
   background-repeat: no-repeat;
 }
 
-body .total .th {
+.out .total .th {
   z-index: 3;
   background: url("https://picfiles.alphacoders.com/353/thumb-1920-353957.jpg");
   background-size: cover;
@@ -4041,7 +4040,7 @@ body .total .th {
   background-repeat: no-repeat;
 }
 
-body .total .fr {
+.out .total .fr {
   z-index: 2;
   background: url("../images/intro/Web 1920 – 1@2x.jpg");
   background-size: cover;
@@ -4049,7 +4048,7 @@ body .total .fr {
   background-repeat: no-repeat;
 }
 
-body .total .fi {
+.out .total .fi {
   z-index: 1;
   background: url("https://images6.alphacoders.com/334/thumb-1920-334838.jpg");
   background-size: cover;
@@ -4057,7 +4056,7 @@ body .total .fi {
   background-repeat: no-repeat;
 }
 
-body .total .page {
+.out .total .page {
   height: 500px;
   position: sticky;
   bottom: 0;
@@ -4065,7 +4064,7 @@ body .total .page {
   box-shadow: 0 10px 15px #00000060;
 }
 
-body .total .page .con-2 {
+.out .total .page .con-2 {
   width: 480px;
   background-color: black;
   text-align: center;
@@ -4073,11 +4072,11 @@ body .total .page .con-2 {
   margin-top: 200px;
 }
 
-body .total .page h3 {
+.out .total .page h3 {
   font-size: 24px;
 }
 
-body .total .page p {
+.out .total .page p {
   text-align: left;
   font-size: 16px;
 }
@@ -6183,26 +6182,26 @@ main.member_info section.popShow {
   display: block;
 }
 
-a {
+.out a {
   text-decoration: none;
 }
 
-a p {
+.out a p {
   font-size: 16px;
   color: #10c5b1;
 }
 
-a h3 {
+.out a h3 {
   font-size: 24px;
   color: #10c5b1;
 }
 
-a .p {
+.out a .p {
   padding-left: 10px;
   color: white;
 }
 
-.content {
+.out .content {
   margin: 0 auto;
   margin-top: 50px;
   display: flex;
@@ -6210,7 +6209,7 @@ a .p {
 }
 
 @media (min-width: 992px) {
-  .content {
+  .out .content {
     max-width: 1200px;
     width: 100%;
     display: flex;
@@ -6219,7 +6218,7 @@ a .p {
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .content {
+  .out .content {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6227,7 +6226,7 @@ a .p {
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
-  .content {
+  .out .content {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6235,7 +6234,7 @@ a .p {
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
-  .content {
+  .out .content {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6243,7 +6242,7 @@ a .p {
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
-  .content {
+  .out .content {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6251,20 +6250,20 @@ a .p {
 }
 
 @media (min-width: 100px) and (max-width: 374.98px) {
-  .content {
+  .out .content {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
 }
 
-.fir1 {
+.out .fir1 {
   margin-left: auto;
   width: 500px;
 }
 
 @media (min-width: 992px) {
-  .fir1 {
+  .out .fir1 {
     max-width: 1200px;
     display: flex;
     flex-direction: row;
@@ -6272,61 +6271,61 @@ a .p {
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .fir1 {
+  .out .fir1 {
     width: 100%;
     display: none;
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
-  .fir1 {
+  .out .fir1 {
     width: 100%;
     display: none;
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
-  .fir1 {
+  .out .fir1 {
     width: 100%;
     display: none;
   }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
-  .fir1 {
+  .out .fir1 {
     width: 100%;
     display: none;
   }
 }
 
 @media (min-width: 100px) and (max-width: 374.98px) {
-  .fir1 {
+  .out .fir1 {
     width: 100%;
     display: none;
   }
 }
 
-.left {
+.out .left {
   margin: 0 auto;
   margin-top: 70px;
 }
 
-.char {
+.out .char {
   display: flex;
   justify-content: space-between;
 }
 
-.char img {
+.out .char img {
   width: 150px;
 }
 
-.search-form {
+.out .search-form {
   margin-top: 50px;
   display: flex;
   justify-content: center;
 }
 
-.search-form #search-input {
+.out .search-form #search-input {
   width: 300px;
   background-image: url("/images/intro/search.jpg");
   background-repeat: no-repeat;
@@ -6334,11 +6333,11 @@ a .p {
   background-size: 50px;
 }
 
-.search-form .search {
+.out .search-form .search {
   font-size: 30px;
 }
 
-.wrap {
+.out .wrap {
   width: 100%;
   margin-top: 50px;
   display: flex;
@@ -6347,7 +6346,7 @@ a .p {
 }
 
 @media (min-width: 992px) {
-  .wrap {
+  .out .wrap {
     max-width: 1200px;
     display: flex;
     flex-direction: row;
@@ -6355,7 +6354,7 @@ a .p {
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .wrap {
+  .out .wrap {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6364,7 +6363,7 @@ a .p {
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
-  .wrap {
+  .out .wrap {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6373,7 +6372,7 @@ a .p {
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
-  .wrap {
+  .out .wrap {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6382,7 +6381,7 @@ a .p {
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
-  .wrap {
+  .out .wrap {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6391,7 +6390,7 @@ a .p {
 }
 
 @media (min-width: 100px) and (max-width: 374.98px) {
-  .wrap {
+  .out .wrap {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6399,69 +6398,69 @@ a .p {
   }
 }
 
-.wrap:hover {
+.out .wrap:hover {
   opacity: 1;
   transform: scale(1.02, 1.02);
   transition: .7s ease-in-out;
 }
 
-.wrap .sec {
+.out .wrap .sec {
   margin-right: 20px;
   height: 250px;
 }
 
-.wrap .name {
+.out .wrap .name {
   text-align: center;
   width: 100%;
 }
 
-h1 {
+.out h1 {
   font-size: 32px;
 }
 
-h3 {
+.out h3 {
   font-size: 24px;
 }
 
-p {
+.out p {
   font-size: 16px;
 }
 
-.ti {
+.out .ti {
   display: flex;
   margin-top: 50px;
   justify-content: space-evenly;
 }
 
-.ti .date {
+.out .ti .date {
   margin: 0 auto;
 }
 
-.con {
+.out .con {
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
 }
 
-.con h1 {
+.out .con h1 {
   text-align: center;
 }
 
-.con .news_in1 {
+.out .con .news_in1 {
   margin: 20px 0;
 }
 
-.con .img_in {
+.out .con .img_in {
   width: 100%;
 }
 
-.con li {
+.out .con li {
   text-align: left;
   color: white;
 }
 
-.con p {
+.out .con p {
   font-size: 16px;
   text-align: left;
   line-height: 20px;
@@ -6469,30 +6468,30 @@ p {
   margin: 0;
 }
 
-.h1_final {
+.out .h1_final {
   text-align: center;
   border-top: 1px solid #FFF;
   margin: 40px 0;
   padding-top: 40px;
 }
 
-.final {
+.out .final {
   display: flex;
   justify-content: space-around;
   text-align: right;
 }
 
-.final .img_gacha, .final .img_trade {
+.out .final .img_gacha, .out .final .img_trade {
   width: 100%;
 }
 
-.final .line {
+.out .final .line {
   height: 400px;
   margin-right: 40px;
   border-right: 1px solid #FFF;
 }
 
-.final .bt {
+.out .final .bt {
   color: #0e3461;
   width: 50;
   padding: 50;
@@ -6504,7 +6503,7 @@ p {
   font-size: 15px;
 }
 
-.final .bt:hover {
+.out .final .bt:hover {
   background-color: #000;
   color: #fff;
 }
