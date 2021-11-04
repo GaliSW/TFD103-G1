@@ -20,6 +20,10 @@
     @include shadow(10, 10, 30);
     transition: .5s;
 
+    h1 {
+        border: none;
+    }
+
     &:hover {
         @include shadow(10, 10, 70);
     }

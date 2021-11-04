@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.entry{
+    overflow-y: hidden;
+    .entrybg{
+        // @include border(1, #0e1c3e);
+        width: 100%;
+        height: 100vh;
+        background-image: url(../image/index/entry.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        .contentBox{
+            // @include border;
+            max-width: 1400px;
+            width: 100%;
+            .logoTitle{
+                // @include border;
+                width: 250px;
+                margin-left: 10%;
+                img{
+                    width: 100%;
+                }
+            }
+            .frontSide{
+                // @include border;
+                width: 250px;
+                height: 160px;
+                margin-left: 1000px;
+                margin-top: -110px;
+                a{
+                    text-decoration: none;
+                    width: 600px;
+                    h1{
+                        font-size: 48px;
+                        font-weight: 400;
+                        color: #fff;
+                        background-color: $light_green;
+                        padding: 12% 22%;
+                        @include border_r(20);
+                        text-align: center;
+                        &:hover{
+                            background-color: $dark_blue
+                        }
+                    }
+                }
+            }
+            .backSide{
+                // @include border;
+                width: 250px;
+                height: 160px;
+                margin-left: 1000px;
+                a{
+                    text-decoration: none;
+                    width: 600px;
+                    h1{
+                        font-size: 48px;
+                        font-weight: 400;
+                        color: #fff;
+                        background-color: $light_green;
+                        padding: 12% 22%;
+                        @include border_r(20);
+                        text-align: center;
+                        &:hover{
+                            background-color: $dark_blue
+                        }
+                    }
+                }
+            }
+            .word{
+                // @include border;
+                width: 400px;
+                margin-left: 50%;
+                transform: translateX(-60%);
+                margin-top: -10%;
+                p{
+                    color: #302e81;
+                    font-size: $fontSizeH2;
+                    line-height: 30px;
+                }
+            }
+            .roleLeft{
+                // @include border;
+                width: 500px;
+                transform: rotate(5deg);
+                position: absolute;
+                top: 480px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+

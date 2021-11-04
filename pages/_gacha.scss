@@ -12,6 +12,11 @@ body {
     padding: 0;
 }
 
+
+.boxBlur {
+    display: none;
+}
+
 .gaChaBgBlk {
     background-image: url("../image/gacha/bg.jpg");
     width: 100%;
@@ -232,7 +237,7 @@ body {
 
 }
 
-#gahaStart {
+#gachaStart {
     position: absolute;
     // z-index: 1;
     width: 60px;
@@ -844,7 +849,6 @@ body {
     max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-around;
 
     div {
         display: flex;
@@ -1609,7 +1613,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-slide img {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .swiper-slide .slider-image .preview-icon {
