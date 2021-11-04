@@ -60,7 +60,7 @@
                     @include btn_blur (170px, 5px);
                     &:hover {@include btn_on (170px, 5px)}
                     margin-left: 40px;
-                    font-size: $fontSize_h3;
+                    font-size: $fontSizeH3;
                     &:hover {cursor: pointer}
                 }
             }
@@ -121,7 +121,7 @@ table{
     }
 
     td{
-        font-size: $fontSize_h4;
+        font-size: $fontSizeH4;
     }
 }
 
