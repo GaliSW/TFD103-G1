@@ -17,9 +17,9 @@ var swiper = new Swiper('.swiper-container.two', {
 
     grabCursor: true,
     coverflow: {
-        rotate: 90,
-        stretch: 40,
-        depth: 200,
+        rotate: 50,
+        stretch: 70,
+        depth: 150,
         modifier: 1.5,
         slideShadows: true,
     }

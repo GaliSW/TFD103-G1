@@ -1186,6 +1186,10 @@ body {
   padding: 0;
 }
 
+.boxBlur {
+  display: none;
+}
+
 .gaChaBgBlk {
   background-image: url("../image/gacha/bg.jpg");
   width: 100%;
@@ -1430,7 +1434,7 @@ body {
   transform: translate(-50%);
 }
 
-#gahaStart {
+#gachaStart {
   position: absolute;
   width: 60px;
   margin-top: 450px;
@@ -1439,12 +1443,12 @@ body {
   transition: .3s;
 }
 
-#gahaStart:hover {
+#gachaStart:hover {
   transform: scale(1.2);
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
-  #gahaStart {
+  #gachaStart {
     margin-top: 400px;
   }
 }
@@ -2778,7 +2782,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-slide img {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .swiper-slide .slider-image .preview-icon {
@@ -4315,6 +4319,10 @@ main.login div.contain .bookmark {
   border-radius: 20px;
   box-shadow: 10px 10px 30px;
   transition: .5s;
+}
+
+.mgLoginBlk h1 {
+  border: none;
 }
 
 .mgLoginBlk:hover {
