@@ -106,7 +106,7 @@ gsap.to('.rolesR', {
     keyframes: [
         { x: -20, duration: 1, delay: .5},
         { x: 500, duration: 1 },
-        { x: 20, duration: 1 }
+        { x: 10, duration: 1 }
     ]
 })
 gsap.to('.rolesL', {
@@ -117,7 +117,7 @@ gsap.to('.rolesL', {
     keyframes: [
         { x: 20, duration: 1, delay: .5, scale: 1.2},
         { x: -500, duration: 1 },
-        { x: -20, duration: 1, scale: 1}
+        { x: -10, duration: 1, scale: 1}
     ]
 })
 

@@ -1,5 +1,6 @@
 #header{
     // @include border();
+    // @include grids(12);
     width: 100%;
     height: 90px;
     z-index: 100;
@@ -42,24 +43,16 @@
         display: flex;
         align-items: center;
         @include desktop_small{
-            position: absolute;
-            margin: -28px 50%;
-            transform: translateX(-50%);
+            margin: 0 0 0 30px;
         }
         @include pad{
-            position: absolute;
-            margin: -35px 50%;
-            transform: translateX(-50%);
+            margin: 0 0 10px 30px;
         }
         @include pad_small{
-            position: absolute;
-            margin: -18px 50%;
-            transform: translateX(-50%);
+            margin: 0 0 10px 30px;
         }
         @include phone{
-            position: absolute;
-            margin: -18px 50%;
-            transform: translateX(-50%);
+            margin: 0 0 10px 30px;
         }
     }
     .logo img{
@@ -139,6 +132,7 @@
     // phone nav
     .hamburger{
         display: none;
+        order: -1;
         @include desktop_small{
             display: flex;
             margin: 32px;
