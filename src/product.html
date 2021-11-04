@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="./vue.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../vendor/js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <title>商品頁</title>
 </head>
+<header></header>
 
 <body>
-<<<<<<< HEAD:product.html
   <main class="allBlock" id="appp">
     <section class="sec1" >
         <div class="flexContainer" >
           <div class="items -left">
             <div class="imgBlock">
-              <img src="./image/product/role1.png">
+              <img src="../dist/images/product/role1.png">
             </div>
           </div>
           <div class="items -right" >
@@ -64,55 +63,55 @@
                             <ul class="roleList1Mark">
                                 <li>
                                     <div class="imgBlock1Mark">
-                                        <img src="./image/product/change/change1.png">
+                                        <img src="../dist/images/product/change/change1.png">
                                     </div>
                                 </li>
             
                                 <li>
                                     <div class="imgBlock1Mark">
-                                        <img src="./image/product/change/change2.png">
+                                        <img src="../dist/images/product/change/change2.png">
                                     </div>
                                 </li>
             
                                 <li>
                                     <div class="imgBlock1Mark">
-                                        <img src="./image/product/change/change3.png">
+                                        <img src="../dist/images/product/change/change3.png">
                                     </div>
                                 </li>
                                 
                                 <li>
                                     <div class="imgBlock1Mark">
-                                        <img src="./image/product/change/change4.png">
+                                        <img src="../dist/images/product/change/change4.png">
                                     </div>
                                 </li>
             
                                 <li>
                                     <div class="imgBlock1Mark">
-                                        <img src="./image/product/change/change5.png">
+                                        <img src="../dist/images/product/change/change5.png">
                                     </div>
                                 </li>
             
                                 <li>
                                     <div class="imgBlock1Mark">
-                                        <img src="./image/product/change/change6.png">
+                                        <img src="../dist/images/product/change/change6.png">
                                     </div>
                                 </li>
             
                                 <li>
                                     <div class="imgBlock1Mark">
-                                        <img src="./image/product/change/change7.png">
+                                        <img src="../dist/images/product/change/change7.png">
                                     </div>
                                 </li>
             
                                 <li>
                                     <div class="imgBlock1Mark">
-                                        <img src="./image/product/change/change8.png">
+                                        <img src="../dist/images/product/change/change8.png">
                                     </div>
                                 </li>
             
                                 <li>
                                     <div class="imgBlock1Mark">
-                                        <img src="./image/product/change/change9.png">
+                                        <img src="../dist/images/product/change/change9.png">
                                     </div>
                                 </li>
                             </ul>
@@ -139,7 +138,7 @@
                             </div>
             
                             <div class="myRoleImg">
-                                <img src="./image/product/change/change1.png">
+                                <img src="../dist/images/product/change/change1.png">
                             </div>
             
                             <div class="myRoleNameBlock">
@@ -155,7 +154,7 @@
                             </div>
             
                             <div class="yourRoleImg">
-                                <img src="./image/product/change/change2.png">
+                                <img src="../dist/images/product/change/change2.png">
                             </div>
             
                             <div class="yourRoleNameBlock">
@@ -191,44 +190,9 @@
     
     
 <!-- 購買pop視窗 -->
-=======
-
-    @@include('./header.html')
-    <main class="allBlock">
-        <section class="sec1">
-            <div class="flexContainer">
-                <div class="items -left">
-                    <div class="imgBlock">
-                        <img src="./image/product/role1.png">
-                    </div>
-                </div>
-                <div class="items -right">
-                    <h1 class="title1">小烏龜</h1>
-                    <p class="introduce">凡事簡單思考的個性和天生的樂天主義使他對速度沒有絲毫的恐懼感。</p>
-                    <p class="price">$250E</p>
-                    <div class="buyForm" id="app">
-                        <button type="button" class="buyBtn" name="button" @click="clickPop">購買</button>
-                        <component :is="content" id="popUp" @nextacc="myClick" @click-2="myClick2"></component>
-
-                    </div>
-                    <div class="collectForm">
-                        <div class="btnBlock1">
-                            <button type="button" class="collectBtn" name="button"><i class="fas fa-heart"></i>
-                                收藏</button>
-                            <button type="button" class="changeBtn" name="button">交換</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
 
 
-        <!-- 購買pop視窗 -->
->>>>>>> dev:src/product.html
-
-
-        <!-- <section class="maskBlock">
+    <!-- <section class="maskBlock">
         <div class="popUpBox">
             <div @click="clickClose" class="closeBtn">
                 x
@@ -242,9 +206,9 @@
             </div>
         </div>
     </section> -->
-
-
-        <!-- <section class="maskBlock">
+    
+    
+    <!-- <section class="maskBlock">
         <div class="popUpBox">
             <div @click="clickClose" class="closeBtn">
                 x
@@ -257,9 +221,9 @@
             </div>
         </div>
     </section> -->
-
-
-        <!-- <section class="maskBlock">
+    
+    
+    <!-- <section class="maskBlock">
         <div class="popUpBox">
             <div @click="clickClose" class="closeBtn">
                 x
@@ -272,9 +236,9 @@
             </div>
         </div>
     </section> -->
-
-
-        <!-- <section class="maskBlock">
+    
+    
+    <!-- <section class="maskBlock">
         <div class="popUpBox">
             <div @click="clickClose" class="closeBtn">
                 x
@@ -289,9 +253,9 @@
     </section> -->
 
 
-        <!-- 交換pop視窗-1 -->
+<!-- 交換pop視窗-1 -->
 
-        <!-- <section class="maskBlock12">
+    <!-- <section class="maskBlock12">
         <div class="popUpBox12">
             <div class="closeBtn12">
                 x
@@ -366,10 +330,10 @@
     </section> -->
 
 
-        <!-- 交換pop視窗-2 -->
+    <!-- 交換pop視窗-2 -->
 
 
-        <!-- <section class="maskBlock13">
+    <!-- <section class="maskBlock13">
         <div class="popUpBox13">
             <div  class="closeBtn13">
                 x
@@ -414,9 +378,9 @@
         </div>
     </section> -->
 
-        <!-- 交換pop視窗-3 -->
+    <!-- 交換pop視窗-3 -->
 
-        <!-- <section class="maskBlock14">
+    <!-- <section class="maskBlock14">
         <div class="popUpBox14">
             <div class="closeBtn14">
                 x
@@ -430,58 +394,56 @@
 
 
 
-        <!-- 雷達圖 -->
+<!-- 雷達圖 -->
 
-        <div class="chart"><canvas id="myChart"></canvas></div>
+    <div class="chart"><canvas id="myChart"></canvas></div>
 
-        <!-- 能力值     -->
-        <div class="tableBlock">
-            <table>
-                <tr>
-                    <th>能力值</th>
-                    <th>說明</th>
-                </tr>
+<!-- 能力值     -->
+    <div class="tableBlock">
+        <table>
+            <tr>
+                <th>能力值</th>
+                <th>說明</th>
+            </tr>
 
-                <tr>
-                    <th>加速</th>
-                    <td>能力值越高可以越快到達最高速度。</td>
-                </tr>
+            <tr>
+                <th>加速</th>
+                <td>能力值越高可以越快到達最高速度。</td>
+            </tr>
 
-                <tr>
-                    <th>抓地</th>
-                    <td>能力值越高轉彎幅度就會越小。</td>
-                </tr>
+            <tr>
+                <th>抓地</th>
+                <td>能力值越高轉彎幅度就會越小。</td>
+            </tr>
 
-                <tr>
-                    <th>碰撞</th>
-                    <td>能力值越高在惡路上行駛時的減速就會越小。</td>
-                </tr>
+            <tr>
+                <th>碰撞</th>
+                <td>能力值越高在惡路上行駛時的減速就會越小。</td>
+            </tr>
 
-                <tr>
-                    <th>迴避</th>
-                    <td>能力值越高越不容易在與對手碰撞時彈飛。</td>
-                </tr>
+            <tr>
+                <th>迴避</th>
+                <td>能力值越高越不容易在與對手碰撞時彈飛。</td>
+            </tr>
 
-                <tr>
-                    <th>道具</th>
-                    <td>能力值越高越容易獲得道具。</td>
-                </tr>
+            <tr>
+                <th>道具</th>
+                <td>能力值越高越容易獲得道具。</td>
+            </tr>
 
-            </table>
+        </table>
 
-        </div>
+    </div>
 
-    </main>
+</main>
 
-
-    @@include('./footer.html')
-
-
-
+    <footer></footer>
+   
+   
 
     <script>
-        Vue.component(`maskBlock`, {
-            template: `
+        Vue.component(`maskBlock`,{
+            template:`
             <section class="maskBlock" id="maskBlock">
                 <div class="popUpBox abc">
                     <div class="closeBtn" @click="clickClose">
@@ -498,28 +460,19 @@
             </section>
             `,
             methods: {
-<<<<<<< HEAD:product.html
                 clickClose(){
                  vmm.content = false;
             },
             next(){
                 this.$emit('nextacc','maskBlock2');
             }
-=======
-                clickClose() {
-                    vm.content = false;
-                },
-                next() {
-                    this.$emit('nextacc', 'maskBlock2');
-                }
->>>>>>> dev:src/product.html
             },
-
-
+            
+            
         });
-
-        Vue.component(`maskBlock2`, {
-            template: `
+    
+        Vue.component(`maskBlock2`,{
+            template:`
                 <section class="maskBlock">
                     <div class="popUpBox abc">
                         <div  class="closeBtn" @click="clickClose2">
@@ -534,12 +487,11 @@
                     </div>
             </section>
             `,
-            methods: {
-                clickClose2() {
-                    this.$emit('click-2', 'false')
+            methods:{
+                clickClose2(){
+                    this.$emit('click-2','false')
                 }
             }
-<<<<<<< HEAD:product.html
         });
         
         // let vm = new Vue({
@@ -596,43 +548,22 @@ let vmm = new Vue({
             vmm.$data.two = false;
         },
         clickPop(){
-=======
-        })
-
-        let vm = new Vue({
-            el: '#app',
-            data: {
-                content: false,
-            },
-            methods: {
-                clickPop() {
->>>>>>> dev:src/product.html
                     // console.log(e.target)
                     this.content = 'maskBlock'
                 },
-                myClick(val) {
+                myClick(val){
                     this.content = val;
                 },
-                myClick2(r) {
+                myClick2(r){
                     this.content = r;
                 },
-<<<<<<< HEAD:product.html
     },
 });
-=======
-            },
-
-        })
-
-
-    </script>
->>>>>>> dev:src/product.html
 
 </script>
 
-
-
-    <script src="./js/productChart.js"></script>
+    
+    
+    <script src="../dist/js/product/productChart.js"></script>
 </body>
-
 </html>
