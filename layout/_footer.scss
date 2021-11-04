@@ -1,0 +1,42 @@
+.footer{
+    background: url(../image/index/strbg.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 130px;
+    .iconLink{
+        display: flex;
+        justify-content: center;
+        span{
+            margin: 5px 10px;
+            .fa-2x{
+                color: #cacaca;
+            }
+        }
+    }
+    .notice{
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        p{
+            margin: 0 auto;
+            text-align: center;
+            font-size: 14px;
+            color: #477dbe;
+        }
+    }
+    .copyright{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        p{
+            margin: 0 auto;
+            text-align: center;
+            font-size: 14px;
+            color: #cacaca;
+        }
+    }
+}

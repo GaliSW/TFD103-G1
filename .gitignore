@@ -2,3 +2,6 @@ dist
 node_modules
 css
 image
+gulpfile
+layout
+package-lock
