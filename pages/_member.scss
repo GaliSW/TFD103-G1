@@ -2,7 +2,6 @@ main.member {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../image/member/back.jpg);
-
     padding-bottom: 100px;
     width: 100%;
     background-position: left top;
@@ -37,29 +36,29 @@ main.member {
             padding-bottom: 20px;
         }
 
-        @media (max-width: 767.98px) {
-            div.trading {
-                width: 50%;
-                display: flex;
-                flex-wrap: nowrap;
-                padding: 0;
-                border: 0;
-            }
 
-            div.points,
-            div.information {
-                width: 25%;
-                padding: 0;
-                border: 0;
-            }
-
-            .fa-list-alt,
-            .fa-search-dollar,
-            .fa-pencil-alt {
-                width: 100%;
-                font-size: 32px;
-            }
+        div.trading {
+            width: 50%;
+            display: flex;
+            flex-wrap: nowrap;
+            padding: 0;
+            border: 0;
         }
+
+        div.points,
+        div.information {
+            width: 25%;
+            padding: 0;
+            border: 0;
+        }
+
+        .fa-list-alt,
+        .fa-search-dollar,
+        .fa-pencil-alt {
+            width: 100%;
+            font-size: 32px;
+        }
+
 
         div.title {
             width: 100%;
@@ -68,11 +67,11 @@ main.member {
             font-size: $fontSizeH3;
         }
 
-        @media (max-width: 767.98px) {
-            div.title {
-                display: none;
-            }
+
+        div.title {
+            display: none;
         }
+
 
         button {
             background-color: transparent;
@@ -82,36 +81,38 @@ main.member {
             @include border(0);
             font-size: $fontSizeH4;
             margin-top: 20px;
+            cursor: pointer;
         }
 
-        button a {
+        button {
             color: $dark_blue;
             text-decoration: none;
         }
 
-        @media (max-width: 767.98px) {
-            button {
-                width: 100%;
-                height: 77px;
-                margin: 0;
-                @include border(1, $dark_blue);
 
-                a {
-                    font-size: 16px;
-                }
+        button {
+            width: 100%;
+            height: 77px;
+            margin: 0;
+            @include border(1, $dark_blue);
+
+            a {
+                font-size: 16px;
             }
         }
+
 
         button._on {
             background-color: $dark_blue;
         }
 
-        button._on a {
+        button._on {
             color: white;
         }
-
-
     }
+
+
+
 
     //頁籤
     div.button_bar {
@@ -235,10 +236,21 @@ main.member {
                 cursor: pointer;
             }
 
+            button.reject {
+                background-color: #024f3f;
+                border-color: #51AB82;
+                color: #51AB82;
+            }
+
             button:hover {
                 @include btn_on(100, 10px);
                 cursor: pointer;
             }
+
+
+
+
+
 
             @media (max-width: 767.98px) {
                 div.trade_button {
@@ -419,8 +431,9 @@ main.member {
     section.popShow {
         display: block;
     }
-}
 
+
+}
 
 //trading_list
 main.trading_list {
@@ -458,29 +471,29 @@ main.trading_list {
             padding-bottom: 20px;
         }
 
-        @media (max-width: 767.98px) {
-            div.trading {
-                width: 50%;
-                display: flex;
-                flex-wrap: nowrap;
-                padding: 0;
-                border: 0;
-            }
 
-            div.points,
-            div.information {
-                width: 25%;
-                padding: 0;
-                border: 0;
-            }
-
-            .fa-list-alt,
-            .fa-search-dollar,
-            .fa-pencil-alt {
-                width: 100%;
-                font-size: 32px;
-            }
+        div.trading {
+            width: 50%;
+            display: flex;
+            flex-wrap: nowrap;
+            padding: 0;
+            border: 0;
         }
+
+        div.points,
+        div.information {
+            width: 25%;
+            padding: 0;
+            border: 0;
+        }
+
+        .fa-list-alt,
+        .fa-search-dollar,
+        .fa-pencil-alt {
+            width: 100%;
+            font-size: 32px;
+        }
+
 
         div.title {
             width: 100%;
@@ -489,11 +502,11 @@ main.trading_list {
             font-size: $fontSizeH3;
         }
 
-        @media (max-width: 767.98px) {
-            div.title {
-                display: none;
-            }
+
+        div.title {
+            display: none;
         }
+
 
         button {
             background-color: transparent;
@@ -503,36 +516,36 @@ main.trading_list {
             @include border(0);
             font-size: $fontSizeH4;
             margin-top: 20px;
+            cursor: pointer;
         }
 
-        button a {
+        button {
             color: $dark_blue;
             text-decoration: none;
         }
 
-        @media (max-width: 767.98px) {
-            button {
-                width: 100%;
-                height: 77px;
-                margin: 0;
-                @include border(1, $dark_blue);
 
-                a {
-                    font-size: 16px;
-                }
+        button {
+            width: 100%;
+            height: 77px;
+            margin: 0;
+            @include border(1, $dark_blue);
+
+            a {
+                font-size: 16px;
             }
         }
+
 
         button._on {
             background-color: $dark_blue;
         }
 
-        button._on a {
+        button._on {
             color: white;
         }
-
-
     }
+
 
     //頁籤
     div.button_bar {
@@ -700,29 +713,29 @@ main.points_list {
             padding-bottom: 20px;
         }
 
-        @media (max-width: 767.98px) {
-            div.trading {
-                width: 50%;
-                display: flex;
-                flex-wrap: nowrap;
-                padding: 0;
-                border: 0;
-            }
 
-            div.points,
-            div.information {
-                width: 25%;
-                padding: 0;
-                border: 0;
-            }
-
-            .fa-list-alt,
-            .fa-search-dollar,
-            .fa-pencil-alt {
-                width: 100%;
-                font-size: 32px;
-            }
+        div.trading {
+            width: 50%;
+            display: flex;
+            flex-wrap: nowrap;
+            padding: 0;
+            border: 0;
         }
+
+        div.points,
+        div.information {
+            width: 25%;
+            padding: 0;
+            border: 0;
+        }
+
+        .fa-list-alt,
+        .fa-search-dollar,
+        .fa-pencil-alt {
+            width: 100%;
+            font-size: 32px;
+        }
+
 
         div.title {
             width: 100%;
@@ -731,11 +744,11 @@ main.points_list {
             font-size: $fontSizeH3;
         }
 
-        @media (max-width: 767.98px) {
-            div.title {
-                display: none;
-            }
+
+        div.title {
+            display: none;
         }
+
 
         button {
             background-color: transparent;
@@ -745,36 +758,36 @@ main.points_list {
             @include border(0);
             font-size: $fontSizeH4;
             margin-top: 20px;
+            cursor: pointer;
         }
 
-        button a {
+        button {
             color: $dark_blue;
             text-decoration: none;
         }
 
-        @media (max-width: 767.98px) {
-            button {
-                width: 100%;
-                height: 77px;
-                margin: 0;
-                @include border(1, $dark_blue);
 
-                a {
-                    font-size: 16px;
-                }
+        button {
+            width: 100%;
+            height: 77px;
+            margin: 0;
+            @include border(1, $dark_blue);
+
+            a {
+                font-size: 16px;
             }
         }
+
 
         button._on {
             background-color: $dark_blue;
         }
 
-        button._on a {
+        button._on {
             color: white;
         }
-
-
     }
+
 
     //下方顯示
     div.content {
@@ -889,29 +902,29 @@ main.member_info {
             padding-bottom: 20px;
         }
 
-        @media (max-width: 767.98px) {
-            div.trading {
-                width: 50%;
-                display: flex;
-                flex-wrap: nowrap;
-                padding: 0;
-                border: 0;
-            }
 
-            div.points,
-            div.information {
-                width: 25%;
-                padding: 0;
-                border: 0;
-            }
-
-            .fa-list-alt,
-            .fa-search-dollar,
-            .fa-pencil-alt {
-                width: 100%;
-                font-size: 32px;
-            }
+        div.trading {
+            width: 50%;
+            display: flex;
+            flex-wrap: nowrap;
+            padding: 0;
+            border: 0;
         }
+
+        div.points,
+        div.information {
+            width: 25%;
+            padding: 0;
+            border: 0;
+        }
+
+        .fa-list-alt,
+        .fa-search-dollar,
+        .fa-pencil-alt {
+            width: 100%;
+            font-size: 32px;
+        }
+
 
         div.title {
             width: 100%;
@@ -920,11 +933,11 @@ main.member_info {
             font-size: $fontSizeH3;
         }
 
-        @media (max-width: 767.98px) {
-            div.title {
-                display: none;
-            }
+
+        div.title {
+            display: none;
         }
+
 
         button {
             background-color: transparent;
@@ -934,35 +947,34 @@ main.member_info {
             @include border(0);
             font-size: $fontSizeH4;
             margin-top: 20px;
+            cursor: pointer;
         }
 
-        button a {
+        button {
             color: $dark_blue;
             text-decoration: none;
         }
 
-        @media (max-width: 767.98px) {
-            button {
-                width: 100%;
-                height: 77px;
-                margin: 0;
-                @include border(1, $dark_blue);
 
-                a {
-                    font-size: 16px;
-                }
+        button {
+            width: 100%;
+            height: 77px;
+            margin: 0;
+            @include border(1, $dark_blue);
+
+            a {
+                font-size: 16px;
             }
         }
+
 
         button._on {
             background-color: $dark_blue;
         }
 
-        button._on a {
+        button._on {
             color: white;
         }
-
-
     }
 
 

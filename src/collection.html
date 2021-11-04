@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>collection</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./vendor/js/vue.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../vendor/js/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
 </head>
 
 <body>
-    @@include('./header.html')
+    <header></header>
     <main class="collection">
         <div class="container">
+            
             <div class="collect_contain col-12">
                 <div class="contain_bar">
                     <span class="block col-2">
@@ -26,7 +27,7 @@
                     <span class="status col-1">刪除</span>
                 </div>
                 <div class="contain_list">
-                    <div class="role col-2"><img src="./image/member/r1.jpg"></div>
+                    <div class="role col-2"><img src="../image/member/r1.jpg"></div>
                     <span class="role_name col-2">
                         角色名稱
                         <p class="rwd_price">250e</p>
@@ -49,7 +50,7 @@
                     <hr>
                 </span>
                 <div class="contain_list _off">
-                    <div class="role col-2"><img src="./image/member/r1.jpg"></div>
+                    <div class="role col-2"><img src="../image/member/r1.jpg"></div>
                     <span class="role_name col-2">角色名稱
                         <p class="rwd_price">250e</p>
                     </span>
@@ -66,13 +67,14 @@
                         <button class="delete_btn "><i class="fas fa-trash-alt"></i></button>
                     </div>
                 </div>
-
+            
             </div>
         </div>
     </main>
-    @@include('./footer.html')
+    <footer></footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
-    <script src="./js/member/collection.js"></script>
+    <script src="../js/member/collection.js"></script>
 </body>
 
 </html>

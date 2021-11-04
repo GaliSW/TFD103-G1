@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- <link rel="stylesheet" href="./css/login.css"> -->
 
-    <script src="vendor/js/vue.js"></script>
+    <script src="../vendor/js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
 
 </head>
 
 <body>
-    @@include('./header.html')
+    <header></header>
     <main class="login">
         <div class="contain">
             <div class="block"></div>
@@ -29,7 +29,9 @@
                         <br>
                         <span id="login_error" class="error" :class="{'bookmark': loginError }">帳號密碼有誤</span>
 
-                        <button type="submit" class="btn_login" @click=loginCheck($event)>登入</button>
+                        <button type="submit" class="btn_login" onclick="location.href='./member.html'" @click=loginCheck($event)>
+                            登入
+                        </button>
 
                     </form>
                     <a class="rwd_signup" href="./singup.html">
@@ -87,11 +89,10 @@
         </div>
 
     </main>
+    <footer></footer>
 
-    @@include('./footer.html')
 
-
-    <script src="./js/member/login.js">
+    <script src="../js/member/login.js">
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>

@@ -9,9 +9,9 @@ Vue.component(`buyer_contain`, {
                     </div>
                     <div class="contain_list">
                         <span class="apply_date col-1">110-10-20</span>
-                        <div class="my_role col-3"><img src="./image/member/r1.jpg"></div>
+                        <div class="my_role col-3"><img src="../image/member/r1.jpg"></div>
                         <div class="slaes_role col-3">
-                            <img src="./image/member/r2.jpg" alt="">
+                            <img src="../image/member/r2.jpg" alt="">
                         </div>
                         <span class="trade_status col-1">等待確認</span>
                         <div class="trade_button col-3">
@@ -23,9 +23,9 @@ Vue.component(`buyer_contain`, {
                     </span>
                     <div class="contain_list _off">
                         <span class="apply_date col-1">110-10-20</span>
-                        <div class="my_role col-3"><img src="./image/member/r1.jpg"></div>
+                        <div class="my_role col-3"><img src="../image/member/r1.jpg"></div>
                         <div class="slaes_role col-3">
-                            <img src="./image/member/r2.jpg" alt="">
+                            <img src="../image/member/r2.jpg" alt="">
                         </div>
 
                         <span class="trade_status col-1">已完售</span>
@@ -48,9 +48,9 @@ Vue.component(`saler_contain`, {
                     </div>
                     <div class="contain_list">
                         <span class="apply_date col-1">110-10-20</span>
-                        <div class="my_role col-3"><img src="./image/member/r1.jpg"></div>
+                        <div class="my_role col-3"><img src="../image/member/r1.jpg"></div>
                         <div class="slaes_role col-3">
-                            <img src="./image/member/r2.jpg" alt="">
+                            <img src="../image/member/r2.jpg" alt="">
                         </div>
                         <span class="trade_status col-1">等待確認</span>
                         <div class="trade_button col-3">
@@ -63,9 +63,9 @@ Vue.component(`saler_contain`, {
                     </span>
                     <div class="contain_list _off">
                         <span class="apply_date col-1">10-20</span>
-                        <div class="my_role col-3"><img src="./image/member/r1.jpg"></div>
+                        <div class="my_role col-3"><img src="../image/member/r1.jpg"></div>
                         <div class="slaes_role col-3">
-                            <img src="./image/member/r2.jpg" alt="">
+                            <img src="../image/member/r2.jpg" alt="">
                         </div>
 
                         <span class="trade_status col-1">已完售</span>
