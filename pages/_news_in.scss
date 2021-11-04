@@ -18,7 +18,7 @@
     
     .ti{
         display:flex;
-        margin-top:50px;  
+        margin:50px 0;  
         justify-content: space-evenly;
         .date{
             margin:0 auto;
@@ -40,6 +40,7 @@
         } 
         
         .img_in{
+            margin-top:40px;
             width:100%;
         }
         li{
@@ -50,7 +51,7 @@
             font-size: $fontSize;
             text-align: left;
             line-height: $lineHeight20;
-            padding:20px ;
+            padding:20px 0;
             margin:0;
         }
     }
@@ -84,6 +85,7 @@
             &:hover{
                 background-color: #000;
                 color:#fff;
+                cursor: pointer;
             }
         }
     }

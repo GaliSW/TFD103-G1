@@ -1,6 +1,4 @@
-dist
 node_modules
-css
 gulpfile
 package-lock.json
-webpack.config.js
+css
