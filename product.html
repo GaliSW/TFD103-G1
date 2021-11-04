@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="./js/vue.min.js"></script>
+    <script src="./vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <title>商品頁</title>
 </head>
+<header></header>
+
 <body>
-<main class="allBlock">
+    <main class="allBlock">
     <section class="sec1" >
         <div class="flexContainer" >
           <div class="items -left">
@@ -105,7 +107,7 @@
     </section> -->
 
 
-<!-- 交換pop視窗 -->
+<!-- 交換pop視窗-1 -->
 
     <!-- <section class="maskBlock12">
         <div class="popUpBox12">
@@ -181,12 +183,16 @@
         </div>
     </section> -->
 
-    <section class="maskBlock">
-        <div class="popUpBox">
-            <div  class="closeBtn">
+
+    <!-- 交換pop視窗-2 -->
+
+
+    <!-- <section class="maskBlock13">
+        <div class="popUpBox13">
+            <div  class="closeBtn13">
                 x
             </div>
-            <div class="popContent">
+            <div class="popContent13">
                 <p>確認你想要交換的角色</p>
             </div>
 
@@ -196,7 +202,7 @@
                 </div>
 
                 <div class="myRoleImg">
-                    <img src="./image/product/role1.png">
+                    <img src="./image/product/change/change1.png">
                 </div>
 
                 <div class="myRoleNameBlock">
@@ -204,17 +210,40 @@
                 </div>
             </div>
 
+            <div class="doubleArrow"><i class="fas fa-arrows-alt-h"></i></div>
 
+            <div class="yourRoleBlock">
+                <div class="yourRoleP">
+                    <p>對方角色</p>
+                </div>
 
+                <div class="yourRoleImg">
+                    <img src="./image/product/change/change2.png">
+                </div>
 
+                <div class="yourRoleNameBlock">
+                    <p>羊咩咩</p>
+                </div>
+            </div>
 
-            <div class="confirmBlk">
-                <a href="#" class="confirmBtn" id="confirmBtn4">確定</a>
+            <div class="confirmBlk13">
+                <a href="#" class="confirmBtn13" >確定</a>
             </div>
         </div>
-    </section>
+    </section> -->
 
+    <!-- 交換pop視窗-3 -->
 
+    <!-- <section class="maskBlock14">
+        <div class="popUpBox14">
+            <div class="closeBtn14">
+                x
+            </div>  
+            <div class="popContent14">
+                <p>以送出交換申請，請靜候佳音！</p>
+            </div>
+        </div>
+    </section> -->
 
 
 
@@ -262,32 +291,8 @@
 
 </main>
 
-
-    <!-- 交易確認POP -->
-    <!-- <script>
-        let vm = new Vue({
-            el: '#app',
-            data: {
-                pop: false,
-                pop1: false,
-                pop2: false
-            },
-            methods: {
-
-                clickPop(){
-                    vm.$data.pop = true
-                },
-
-                clickClose(){
-                    vm.$data.pop = false
-                },
-               
-            },
-        });
-
-
-    </script>
-    -->
+    <footer></footer>
+   
    
 
     <script>
@@ -370,6 +375,5 @@
     
     
     <script src="./js/productChart.js"></script>
-    <!-- <script src="./js/successPop.js"></script> -->
 </body>
 </html>
