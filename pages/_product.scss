@@ -307,6 +307,11 @@ table{
                 display: flex;
                 flex-wrap: wrap;
 
+                    li {
+                        //border: 1px solid yellow;
+                        width: calc((100% - 60px - 50px) / 4);
+                        margin-right: 20px;
+                        margin-bottom: 25px;
 
                 li{
                     //border: 1px solid yellow;
@@ -315,9 +320,7 @@ table{
                     margin-bottom: 25px;
 
                 }
-
             }
-        }
 
         .confirmBlk12{
 
@@ -344,7 +347,9 @@ table{
         }
     }
 }
+    }
 
+}
 }
 ////////////交換確認視窗-2
 
