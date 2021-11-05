@@ -155,11 +155,8 @@
 }
 
 #header .container {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
-=======
->>>>>>> origin/dev
   display: flex;
   max-width: 1200px;
   height: 90px;
@@ -168,49 +165,33 @@
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   #header .container {
-<<<<<<< HEAD
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-=======
-    justify-content: space-between;
->>>>>>> origin/dev
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
   #header .container {
-<<<<<<< HEAD
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-=======
-    justify-content: space-between;
->>>>>>> origin/dev
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   #header .container {
-<<<<<<< HEAD
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-=======
-    justify-content: space-between;
->>>>>>> origin/dev
   }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   #header .container {
-<<<<<<< HEAD
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-=======
-    justify-content: space-between;
->>>>>>> origin/dev
   }
 }
 
@@ -325,11 +306,8 @@
 }
 
 #header .navbar {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
-=======
->>>>>>> origin/dev
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -373,11 +351,8 @@
 }
 
 #header .navbar ul a li {
-<<<<<<< HEAD
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
-=======
->>>>>>> origin/dev
   display: inline-flex;
   margin-right: 50px;
   color: #fff;
@@ -389,12 +364,8 @@
 }
 
 #header .navbar ul a li:hover img {
-<<<<<<< HEAD
   -webkit-animation: move 1s infinite;
           animation: move 1s infinite;
-=======
-  animation: move 1s infinite;
->>>>>>> origin/dev
 }
 
 #header .navbar ul a li img {
@@ -410,11 +381,8 @@
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   #header .hamburger {
-<<<<<<< HEAD
     display: -webkit-box;
     display: -ms-flexbox;
-=======
->>>>>>> origin/dev
     display: flex;
     margin: 32px;
   }
@@ -422,11 +390,8 @@
 
 @media (min-width: 578px) and (max-width: 767.98px) {
   #header .hamburger {
-<<<<<<< HEAD
     display: -webkit-box;
     display: -ms-flexbox;
-=======
->>>>>>> origin/dev
     display: flex;
     margin: 32px;
   }
@@ -434,11 +399,8 @@
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   #header .hamburger {
-<<<<<<< HEAD
     display: -webkit-box;
     display: -ms-flexbox;
-=======
->>>>>>> origin/dev
     display: flex;
     margin: 32px;
   }
@@ -446,22 +408,16 @@
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   #header .hamburger {
-<<<<<<< HEAD
     display: -webkit-box;
     display: -ms-flexbox;
-=======
->>>>>>> origin/dev
     display: flex;
     margin: 32px;
   }
 }
 
 #header #menuToggle {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
-=======
->>>>>>> origin/dev
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -516,7 +472,6 @@
 }
 
 #header #menuToggle input:checked ~ span:nth-last-child(2) {
-<<<<<<< HEAD
   -webkit-transform: rotate(-45deg) translate(0, -1px);
           transform: rotate(-45deg) translate(0, -1px);
 }
@@ -524,13 +479,6 @@
 #header #menuToggle input:checked ~ ul {
   -webkit-transform: none;
           transform: none;
-=======
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-#header #menuToggle input:checked ~ ul {
-  transform: none;
->>>>>>> origin/dev
 }
 
 #header #menuToggle span {
@@ -551,7 +499,6 @@
 }
 
 #header #menuToggle span:first-child {
-<<<<<<< HEAD
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
 }
@@ -559,13 +506,6 @@
 #header #menuToggle span:nth-last-child(2) {
   -webkit-transform-origin: 0% 100%;
           transform-origin: 0% 100%;
-=======
-  transform-origin: 0% 0%;
-}
-
-#header #menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
->>>>>>> origin/dev
 }
 
 #header #menu {
@@ -604,12 +544,8 @@
 }
 
 #header #menu li:hover img {
-<<<<<<< HEAD
   -webkit-animation: move 1s infinite;
           animation: move 1s infinite;
-=======
-  animation: move 1s infinite;
->>>>>>> origin/dev
 }
 
 #header #menu li img {
@@ -621,11 +557,8 @@
 }
 
 #header .icon {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
-=======
->>>>>>> origin/dev
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1398,12 +1331,8 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 }
 
 * {
-<<<<<<< HEAD
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-=======
-  box-sizing: border-box;
->>>>>>> origin/dev
   margin: 0;
   padding: 0;
 }
@@ -1488,12 +1417,8 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 .entry .entrybg .contentBox .word {
   width: 400px;
   margin-left: 50%;
-<<<<<<< HEAD
   -webkit-transform: translateX(-60%);
           transform: translateX(-60%);
-=======
-  transform: translateX(-60%);
->>>>>>> origin/dev
   margin-top: -10%;
 }
 
@@ -1505,12 +1430,8 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 
 .entry .entrybg .contentBox .roleLeft {
   width: 500px;
-<<<<<<< HEAD
   -webkit-transform: rotate(5deg);
           transform: rotate(5deg);
-=======
-  transform: rotate(5deg);
->>>>>>> origin/dev
   position: absolute;
   top: 480px;
 }
@@ -1520,12 +1441,8 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 }
 
 * {
-<<<<<<< HEAD
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-=======
-  box-sizing: border-box;
->>>>>>> origin/dev
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -3960,23 +3877,15 @@ body {
 
 @media (min-width: 578px) and (max-width: 767.98px) {
   .index .manyRole {
-<<<<<<< HEAD
     -ms-flex-pack: distribute;
         justify-content: space-around;
-=======
-    justify-content: space-around;
->>>>>>> origin/dev
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   .index .manyRole {
-<<<<<<< HEAD
     -ms-flex-pack: distribute;
         justify-content: space-around;
-=======
-    justify-content: space-around;
->>>>>>> origin/dev
   }
 }
 
@@ -4230,12 +4139,8 @@ body {
 }
 
 .index .unlock .afterImage img {
-<<<<<<< HEAD
   -webkit-transform: translate(-100%, 0px);
           transform: translate(-100%, 0px);
-=======
-  transform: translate(-100%, 0px);
->>>>>>> origin/dev
 }
 
 .index .unlock .unlockImage img {
@@ -4509,12 +4414,8 @@ body {
 .out .thumbnail:hover {
   -webkit-transition: .7s ease-in-out;
   transition: .7s ease-in-out;
-<<<<<<< HEAD
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-=======
-  transform: scale(1.05, 1.05);
->>>>>>> origin/dev
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
 }
 
 .out .title {
@@ -5550,6 +5451,15 @@ main.member div.content img {
   }
 }
 
+main.member div.content .buyer_contain,
+main.member div.content .saler_contain {
+  display: none;
+}
+
+main.member div.content .bookmark {
+  display: block;
+}
+
 main.member div.content div.contain_bar {
   background-color: #0e3461;
   color: white;
@@ -5616,12 +5526,6 @@ main.member div.content div.contain_list button {
   border: 3px solid #60cd90;
   text-align: center;
   cursor: pointer;
-}
-
-main.member div.content div.contain_list button.reject {
-  background-color: #024f3f;
-  border-color: #51AB82;
-  color: #51AB82;
 }
 
 main.member div.content div.contain_list button:hover {
@@ -5709,6 +5613,12 @@ main.member div.content div._off::before {
   main.member div.content div._off::before {
     height: 100px;
   }
+}
+
+main.member div.content .saler_contain button.reject {
+  background-color: #024F7B;
+  border-color: #51AB82;
+  color: #51AB82;
 }
 
 main.member div.content div._off span.trade_status {
@@ -7150,14 +7060,8 @@ main.member_info section.popShow {
 
 .out .wrap:hover {
   opacity: 1;
-<<<<<<< HEAD
-  -webkit-transform: scale(1.02, 1.02);
-          transform: scale(1.02, 1.02);
-  -webkit-transition: .7s ease-in-out;
-  transition: .7s ease-in-out;
-=======
+  -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
->>>>>>> origin/dev
 }
 
 .out .wrap .sec {
@@ -7186,15 +7090,10 @@ main.member_info section.popShow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
-  margin-top: 50px;
+  margin: 50px 0;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-=======
-  margin: 50px 0;
-  justify-content: space-evenly;
->>>>>>> origin/dev
 }
 
 .out .ti .date {
@@ -7302,26 +7201,18 @@ main.member_info section.popShow {
 }
 
 .allBlock .sec1 .flexContainer {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
-=======
->>>>>>> origin/dev
   display: flex;
   width: 800px;
   margin: 0 auto;
 }
 
 .allBlock .sec1 .flexContainer .items.-left {
-<<<<<<< HEAD
   -ms-flex-preferred-size: 300px;
       flex-basis: 300px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-=======
-  flex-basis: 300px;
-  flex-shrink: 0;
->>>>>>> origin/dev
   font-size: 0;
   width: 100%;
 }
@@ -7337,13 +7228,9 @@ main.member_info section.popShow {
 }
 
 .allBlock .sec1 .flexContainer .items.-right {
-<<<<<<< HEAD
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-=======
-  flex-grow: 1;
->>>>>>> origin/dev
   font-size: 20px;
   padding-left: 50px;
   color: #fff;
@@ -7510,17 +7397,12 @@ main.member_info section.popShow {
 }
 
 .allBlock .maskBlock .popUpBox .confirmBlk {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-=======
-  display: flex;
-  justify-content: space-evenly;
->>>>>>> origin/dev
 }
 
 .allBlock .maskBlock .popUpBox .confirmBlk .confirmBtn {
@@ -7558,12 +7440,8 @@ main.member_info section.popShow {
   position: absolute;
   top: 5%;
   left: 50%;
-<<<<<<< HEAD
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-=======
-  transform: translateX(-50%);
->>>>>>> origin/dev
   background-color: #024f3f;
   border: 2px solid #10c5b1;
   width: 1000px;
@@ -7582,10 +7460,7 @@ main.member_info section.popShow {
   line-height: 30px;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
-<<<<<<< HEAD
   position: -webkit-sticky;
-=======
->>>>>>> origin/dev
   position: sticky;
   top: 0px;
   float: right;
@@ -7601,16 +7476,11 @@ main.member_info section.popShow {
   margin: 0 0 0 50px;
   padding: 0;
   list-style: none;
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-=======
-  display: flex;
-  flex-wrap: wrap;
->>>>>>> origin/dev
 }
 
 .allBlock .maskBlock12 .popUpBox12 .roleBlock1Mark .roleList1Mark li {
@@ -7622,17 +7492,12 @@ main.member_info section.popShow {
 .allBlock .maskBlock12 .popUpBox12 .confirmBlk12 {
   text-align: center;
   margin-bottom: 30px;
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-=======
-  display: flex;
-  justify-content: space-evenly;
->>>>>>> origin/dev
 }
 
 .allBlock .maskBlock12 .popUpBox12 .confirmBlk12 .confirmBtn12 {
@@ -7670,12 +7535,8 @@ main.member_info section.popShow {
   position: absolute;
   top: 5%;
   left: 50%;
-<<<<<<< HEAD
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-=======
-  transform: translateX(-50%);
->>>>>>> origin/dev
   background-color: #024f3f;
   border: 2px solid #10c5b1;
   width: 800px;
@@ -7729,17 +7590,12 @@ main.member_info section.popShow {
 }
 
 .allBlock .maskBlock13 .popUpBox13 .confirmBlk13 {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-=======
-  display: flex;
-  justify-content: space-evenly;
->>>>>>> origin/dev
 }
 
 .allBlock .maskBlock13 .popUpBox13 .confirmBlk13 .confirmBtn13 {
@@ -7788,12 +7644,8 @@ main.member_info section.popShow {
   position: absolute;
   top: 25%;
   left: 50%;
-<<<<<<< HEAD
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-=======
-  transform: translateX(-50%);
->>>>>>> origin/dev
   background-color: #024f3f;
   border: 2px solid #10c5b1;
   width: 500px;
@@ -8096,12 +7948,8 @@ main.signup .main_contain div._on {
 }
 
 * {
-<<<<<<< HEAD
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-=======
-  box-sizing: border-box;
->>>>>>> origin/dev
 }
 
 .allBlock1 {
@@ -8318,12 +8166,8 @@ main.signup .main_contain div._on {
 }
 
 .allBlock1 .ymainy .yproductListy li:hover {
-<<<<<<< HEAD
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
-=======
-  transform: scale(1.1, 1.1);
->>>>>>> origin/dev
 }
 
 .allBlock1 .ymainy .yproductListy li a {
