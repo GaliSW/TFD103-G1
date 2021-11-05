@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit_pay</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../vendor/js/vue.js"></script>
+</head>
+
+<body>
+
+    <header></header>
+    <main class="deposit">
+        <div class="container">
+            <div class="deposit_pay
+            col_12 ">
+                <div class="title col-12">
+                    <div class="credit_img">
+                        <img src="../dist/images/deposit/credit.jpg" alt="">
+                    </div>
+                    <h3>請輸入信用卡資訊</h3>
+                </div>
+                <div id="app1">
+                    <form action="" class="credit col-10">
+                        <div>
+                            <span class="credit_detail">儲值點數:</span>
+                            <span class="points">50點券</span>
+                        </div>
+                        
+                        <div>
+                            <span class="credit_detail">金額:</span>
+                            <span class="price">50元</span>
+                        </div>
+                        
+                        <div>
+                            <span class="credit_detail">信用卡號:</span>
+                            <input type="text"> -
+                            <input type="text"> -
+                            <input type="text"> -
+                            <input type="text">
+                        </div>
+                        
+                        
+                        <div>
+                            <span class="credit_date">信用卡有效截止日期</span>
+                            <select name="月">
+                                <option v-for="month in 12">{{month}}</option>
+                            </select>
+                            月
+                            <select name="年">
+                                <option v-for="year in years">{{year}}</option>
+                            </select>
+                            年
+                        </div>
+                        
+                        
+                        <div>
+                            <span>信用卡背後末三碼:</span>
+                            <input type="text">
+                        </div>
+                        
+                        <button class="">確認送出</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script src="../js/member/deposit_pay.js"> </script>
+</body>
+
+</html>

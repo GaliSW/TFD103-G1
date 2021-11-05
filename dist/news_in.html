@@ -22,7 +22,76 @@
     <div class="otot"></div>
 
     <div class="out">
-        @@include('./header.html')
+        <!-- 首頁nav -->
+<header id="header">
+    <div class="container">
+        <a class="logo" href="index.html">
+            <img src="../dist/image/index/logo.png" alt="logoImg">
+        </a>
+        <nav class="navbar">
+            <ul>
+                <a href="#">
+                    <li>
+                        <img src="../dist/image/index/pic.png">
+                        消息/介紹
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <img src="../dist/image/index/role01.png">
+                        角色交易
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <img src="../dist/image/index/pokemon.png">
+                        角色抽取
+                    </li>
+                </a>
+            </ul>
+        </nav>
+
+        <!-- phone nav-->
+        <nav class="hamburger">
+            <div id="menuToggle">
+                <input type="checkbox" />
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <a href="#"><img src="../dist/image/index/logo.png"></a>
+                    <a href="#">
+                        <li><img src="../dist/image/index/pic.png">消息/介紹</li>
+                    </a>
+                    <a href="#">
+                        <li><img src="../dist/image/index/role01.png">角色交易</li>
+                    </a>
+                    <a href="#">
+                        <li><img src="../dist/image/index/pokemon.png">角色抽取</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+        <!-- phone nav end -->
+
+        <div class="icon">
+            <div class="button">
+                <a href="#"><i class="fas fa-coins fa-2x"></i></a>
+                <div class="show">儲值</div>
+            </div>
+            <div class="button">
+                <a href="#"><i class="fab fa-gratipay fa-2x"></i></a>
+                <div class="show">收藏</div>
+            </div>
+            <div class="button">
+                <a href="#"><i class="fas fa-user-circle fa-2x"></i></a>
+                <div class="show">會員</div>
+            </div>
+        </div>
+    </div>
+</header>
         <main class="mama">
             <h1>Header</h1>
             <p class="p">首頁>消息/介紹>消息內頁</p>
@@ -95,7 +164,29 @@
 
             </section>
         </div>
-        @@include('./footer.html')
+        <!-- footer -->
+<footer class="footer">
+    <div class="iconLink">
+      <span>
+        <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+      </span>
+      <span>
+        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+      </span>
+      <span>
+        <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+      </span>
+    </div>
+    <div class="notice">
+        <p>
+            本網站為緯育TibaMe前端設計工程師班第70期第一組學員專題成果作品，本平台僅供學習、展示之用。<br>
+            參考資源： 馬力歐賽車、NFT。若有侵權疑慮，您可以私訊 [ 緯育TibaMe ]，後續會由專人協助處理
+        </p>
+    </div>
+    <div class="copyright">
+        <p><i class="far fa-copyright"></i> 2021 怪哩怪汽 All Rights Reserved</p>
+    </div>
+</footer>
 
 
 

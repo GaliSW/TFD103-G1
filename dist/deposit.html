@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../vendor/js/vue.js"></script>
+</head>
+
+<body>
+
+    <header></header>
+    <main class="deposit">
+        <div class="container">
+            <div id="app" class="col-10">
+                <button v-for="card in cards" @click="test(card.value)">
+                    <a href="./deposit_pay.html">
+                        <div class="point">
+                            <span>{{card.value}}點券</span>
+                        </div>
+                        <div class="photo">
+                            <img :src=card.imgUrl alt="">
+                            <span>以NT{{card.value}}購買</span>
+                        </div>
+                    </a>
+                    
+                </button>
+
+            </div>
+        </div>
+
+
+    </main>
+    <footer></footer>
+
+    <script src="../js/member/dsposit.js">
+    </script>
+</body>
+
+</html>

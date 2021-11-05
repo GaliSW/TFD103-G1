@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="./css/login.css"> -->
+
+    <script src="../vendor/js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
+
+</head>
+
+<body>
+    <header></header>
+    <main class="member">
+        <div class="main_contain">
+
+            <!-- 上方選單 -->
+            <div class="bar col-12">
+                <div class="col-4 trading">
+                    <div class="title">交易相關</div>
+                    <button class="apply_trade _on" onclick="location.href='./member.html'">
+                        <i class="fas fa-list-alt"></i>申請中交易
+                    </button>
+                    <button class="trade_list" onclick="location.href='./trading_list.html'">
+                        <i class="fas fa-list-alt"></i>交易紀錄
+                    </button>
+                </div>
+                <div class="col-4 points">
+                    <div class="title">點數相關</div>
+                    <button class="point_list " onclick="location.href='./points_list.html'">
+                        <i class="fas fa-search-dollar"></i>點數紀錄
+                    </button>
+                </div>
+                <div class="col-4 information">
+                    <div class="title">會員資料</div>
+                    <button class="member_info" onclick="location.href='./member_info.html'">
+                        <i class="fas fa-pencil-alt"></i>修改個人資料
+                    </button>
+                </div>
+            </div>
+
+            <div id="app">
+                <!-- 頁籤 -->
+                <div class="button_bar " >
+                    <button class="buyer" :class="{'bookmark':buyer}" @click='showBuyer()'>我是買方</button>
+                    <button class="saler" :class="{'bookmark':saler }" @click='showSaler()'>我是賣方</button>
+                </div>
+                <div class="content col-12">
+                    <!-- <keep-alive>
+                                        <component :is="content" />
+                                    </keep-alive> -->
+                    <!-- 買方 -->
+                    <div class="buyer_contain" :class="{'bookmark':buyer}">
+                        <div class="contain_bar">
+                            <span class="apply_date col-1">申請日期</span>
+                            <span class="my_role col-3">我的角色</span>
+                            <span class="product col-3">商品</span>
+                            <span class="status col-5">狀態</span>
+                        </div>
+                        <div class="contain_list">
+                            <span class="apply_date col-1">110-10-20</span>
+                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                            <div class="slaes_role col-3">
+                                <img src="../dist/images/member/r2.jpg" alt="">
+                            </div>
+                            <span class="trade_status col-1">等待確認</span>
+                            <div class="trade_button col-3">
+                                <button class="confirm ">取消交易</button>
+                            </div>
+                        </div>
+                        <span>
+                            <hr>
+                        </span>
+                        <div class="contain_list _off">
+                            <span class="apply_date col-1">110-10-20</span>
+                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                            <div class="slaes_role col-3">
+                                <img src="../dist/images/member/r2.jpg" alt="">
+                            </div>
+                    
+                            <span class="trade_status col-1">已完售</span>
+                            <div class="trade_button col-3">
+                                <button class="delete "><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+                    <!-- 賣方 -->
+                    <div class="saler_contain" :class="{'bookmark':saler }">
+                        <div class="contain_bar">
+                            <span class="apply_date col-1">申請日期</span>
+                            <span class="my_role col-3">對方角色</span>
+                            <span class="product col-3">我的商品</span>
+                            <span class="status col-5">狀態</span>
+                        </div>
+                        <div class="contain_list">
+                            <span class="apply_date col-1">110-10-20</span>
+                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                            <div class="slaes_role col-3">
+                                <img src="../dist/images/member/r2.jpg" alt="">
+                            </div>
+                            <span class="trade_status col-1">等待確認</span>
+                            <div class="trade_button col-3">
+                                <button class="confirm ">確認交易</button>
+                                <button class="reject " @click="clickPop">拒絕交易</button>
+                            </div>
+                        </div>
+                        <span>
+                            <hr>
+                        </span>
+                        <div class="contain_list _off">
+                            <span class="apply_date col-1">110-10-20</span>
+                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                            <div class="slaes_role col-3">
+                                <img src="../dist/images/member/r2.jpg" alt="">
+                            </div>
+                    
+                            <span class="trade_status col-1">已完售</span>
+                            <div class="trade_button col-3">
+                                <button class="delete "><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+                
+                </div>
+                
+                <template id="=hiddenPopUps">
+                
+                    <section class="maskLayer" :class="{'popShow':pop}">
+                        <div class="popUpBox">
+                            <div class="closeBtn" @click=clickClose()>
+                                x
+                            </div>
+                            <div class="popContent">
+                                <div class="title col-4">
+                                    <span>拒絕原因:</span>
+                                    <button>不喜歡角色</button>
+                                    <button>不喜歡角色能力</button>
+                                    <button>其他</button>
+                
+                                </div>
+                
+                            </div>
+                        </div>
+                        <div class="popUpBox">
+                            <div class="closeBtn" @click=clickClose()>
+                                x
+                            </div>
+                            <div class="popContent">
+                                <div class="title col-4">
+                                    <span>拒絕原因:</span>
+                                    <button>不喜歡角色</button>
+                                    <button>不喜歡角色能力</button>
+                                    <button>其他</button>
+                
+                                </div>
+                
+                            </div>
+                        </div>
+                
+                
+                    </section>
+                
+                </template>
+                </div>
+                
+                
+                </div>
+                </main>
+    <footer></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
+    <script src="../js/member/member.js">
+        
+    </script>
+    
+
+
+</body>
+
+</html>

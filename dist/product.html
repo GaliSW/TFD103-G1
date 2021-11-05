@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../vendor/js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <title>商品頁</title>
+</head>
+<header></header>
+
+<body>
+  <main class="allBlock" id="appp">
+    <section class="sec1" >
+        <div class="flexContainer" >
+          <div class="items -left">
+            <div class="imgBlock">
+              <img src="../dist/images/product/role1.png">
+            </div>
+          </div>
+          <div class="items -right" >
+                <h1 class="title1">小烏龜</h1>
+                <p class="introduce">凡事簡單思考的個性和天生的樂天主義使他對速度沒有絲毫的恐懼感。</p>
+                <p class="price">$250E</p>
+
+                <div class="collectForm">
+                    <div class="btnBlock1">
+                        <button type="button" class="collectBtn" name="button"><i class="fas fa-heart"></i> 收藏</button>
+                        <button type="button" class="changeBtn" name="button" @click=clickPopp()>交換</button>
+                    </div>
+                </div>
+            
+                <div class="buyForm"  id="app">
+                    <button type="button" class="buyBtn" name="button" @click=clickPop()>購買</button>
+                    <component :is="content" id="popUp" @nextacc="myClick" @click-2="myClick2"></component>
+                    
+                </div>
+                
+            </div>
+          
+        </div>
+
+        <main class="test" >
+
+        
+            <template id="=hiddenPopUps">
+            
+                <section class="maskLayer" :class="{'popShow':pop}">
+            
+                    <div class="popUpBox one" :class="{'box':one}">
+                        <div class="closeBtn" @click=clickClose()>
+                            x
+                        </div>
+                        <div class="popContent12">
+                            <p>選擇你要申請交換的角色</p>
+                        </div>
+                       
+                        <div class="roleBlock1Mark">
+                            <ul class="roleList1Mark">
+                                <li>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change1.png">
+                                    </div>
+                                </li>
+            
+                                <li>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change2.png">
+                                    </div>
+                                </li>
+            
+                                <li>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change3.png">
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change4.png">
+                                    </div>
+                                </li>
+            
+                                <li>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change5.png">
+                                    </div>
+                                </li>
+            
+                                <li>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change6.png">
+                                    </div>
+                                </li>
+            
+                                <li>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change7.png">
+                                    </div>
+                                </li>
+            
+                                <li>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change8.png">
+                                    </div>
+                                </li>
+            
+                                <li>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change9.png">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+            
+                        <div class="confirmBlk12">
+                            <a href="#" class="confirmBtn12" @click=toTwo()>確定</a>
+                        </div>
+            
+                    </div>
+            
+
+                    <div class="popUpBox" :class="{'box':two}">
+                        <div class="closeBtn" @click=clickClose()>
+                            x
+                        </div>
+                        <div class="popContent13">
+                            <p>確認你想要交換的角色</p>
+                        </div>
+            
+                        <div class="myRoleBlock">
+                            <div class="myRoleP">
+                                <p>我的角色</p>
+                            </div>
+            
+                            <div class="myRoleImg">
+                                <img src="../dist/images/product/change/change1.png">
+                            </div>
+            
+                            <div class="myRoleNameBlock">
+                                <p>小烏龜</p>
+                            </div>
+                        </div>
+            
+                        <div class="doubleArrow"><i class="fas fa-arrows-alt-h"></i></div>
+            
+                        <div class="yourRoleBlock">
+                            <div class="yourRoleP">
+                                <p>對方角色</p>
+                            </div>
+            
+                            <div class="yourRoleImg">
+                                <img src="../dist/images/product/change/change2.png">
+                            </div>
+            
+                            <div class="yourRoleNameBlock">
+                                <p>羊咩咩</p>
+                            </div>
+                        </div>
+            
+                        <div class="confirmBlk13">
+                            <a href="#" class="confirmBtn13" @click=toThree()>確定</a>
+                        </div>
+            
+                    </div>
+            
+                    <div class="popUpBox" :class="{'box':three}">
+                        <div class="closeBtn" @click=clickClose()>
+                            x
+                        </div>
+                        <div class="popContent14">
+                            <p>已送出交換申請，請靜候佳音！</p>
+                        </div>
+            
+                    </div>
+                </section>
+            
+            </template>
+            
+            
+            
+    </main>
+    </section>
+    
+
+    
+    
+
+
+
+<!-- 雷達圖 -->
+
+    <div class="chart"><canvas id="myChart"></canvas></div>
+
+<!-- 能力值     -->
+    <div class="tableBlock">
+        <table>
+            <tr>
+                <th>能力值</th>
+                <th>說明</th>
+            </tr>
+
+            <tr>
+                <th>加速</th>
+                <td>能力值越高可以越快到達最高速度。</td>
+            </tr>
+
+            <tr>
+                <th>抓地</th>
+                <td>能力值越高轉彎幅度就會越小。</td>
+            </tr>
+
+            <tr>
+                <th>碰撞</th>
+                <td>能力值越高在惡路上行駛時的減速就會越小。</td>
+            </tr>
+
+            <tr>
+                <th>迴避</th>
+                <td>能力值越高越不容易在與對手碰撞時彈飛。</td>
+            </tr>
+
+            <tr>
+                <th>道具</th>
+                <td>能力值越高越容易獲得道具。</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</main>
+
+    <footer></footer>
+   
+   
+
+    <script>
+        Vue.component(`maskBlock`,{
+            template:`
+            <section class="maskBlockM" id="maskBlock">
+                <div class="popUpBox abc">
+                    <div class="closeBtn" @click="clickClose">
+                        x
+                    </div>
+                    <div class="popContent">
+                        <p>是否確認從帳戶扣除 $***點，交易 *****角色?</p>
+                    </div>
+                    <div class="confirmBlk">
+                        <a href="#" class="confirmBtn" @click="next">是</a>
+                        <a href="#" class="confirmBtn" @click="clickClose">否</a>
+                    </div>
+                </div>
+            </section>
+            `,
+            methods: {
+                clickClose(){
+                 vmm.content = false;
+            },
+            next(){
+                this.$emit('nextacc','maskBlock2');
+            }
+            },
+            
+            
+        });
+    
+        Vue.component(`maskBlock2`,{
+            template:`
+                <section class="maskBlockM">
+                    <div class="popUpBox abc">
+                        <div  class="closeBtn" @click="clickClose2">
+                            x
+                        </div>
+                        <div class="popContent">
+                            <p>您已成功購買</p>
+                        </div>
+                        <div class="confirmBlk" @click="clickClose2">
+                            <a href="#" class="confirmBtn">確定</a>
+                        </div>
+                    </div>
+            </section>
+            `,
+            methods:{
+                clickClose2(){
+                    this.$emit('click-2','false')
+                }
+            }
+        });
+        
+        
+    
+    
+    </script>
+
+<script>
+let vmm = new Vue({
+    el: "#appp",
+    data: {
+        pop: false,
+        one:true,
+        two:false,
+        three:false,
+        content:false,
+    },
+    methods: {
+        clickPopp() {
+            vmm.$data.pop = true;
+            vmm.$data.one = true;
+            vmm.$data.two = false;
+            vmm.$data.three = false;
+        },
+        clickClose() {
+            vmm.$data.pop = false;
+        },
+        toTwo(){
+            vmm.$data.two = true;
+            vmm.$data.one = false;
+            vmm.$data.three = false;
+        },  
+        toThree() {
+            vmm.$data.three = true;
+            vmm.$data.one = false;
+            vmm.$data.two = false;
+        },
+        clickPop(){
+                    // console.log(e.target)
+                    this.content = 'maskBlock'
+                },
+                myClick(val){
+                    this.content = val;
+                },
+                myClick2(r){
+                    this.content = r;
+                },
+    },
+});
+
+</script>
+
+    
+    
+    <script src="../dist/js/product/productChart.js"></script>
+</body>
+</html>
