@@ -6947,8 +6947,6 @@ main.member_info section.popShow {
   .allBlock .sec1 .flexContainer {
     width: 100%;
     flex-direction: column;
-<<<<<<< HEAD
-=======
   }
   .allBlock .sec1 .flexContainer .items.-right {
     flex-grow: 1;
@@ -6967,7 +6965,6 @@ main.member_info section.popShow {
   .allBlock .sec1 .flexContainer .items.-right .buyForm {
     display: inline-block;
     margin-bottom: 30px;
->>>>>>> origin/Gary
   }
 }
 
@@ -6984,10 +6981,6 @@ main.member_info section.popShow {
     flex-shrink: 0;
     font-size: 0;
     width: 100%;
-<<<<<<< HEAD
-    flex-direction: column;
-=======
->>>>>>> origin/Gary
   }
   .allBlock .sec1 .flexContainer .items.-right .items.-left .imgBlock {
     width: 300px;
@@ -6995,146 +6988,6 @@ main.member_info section.popShow {
   }
   .allBlock .sec1 .flexContainer .items.-right .items.-left .imgBlock img {
     width: 100%;
-<<<<<<< HEAD
-    flex-direction: column;
-  }
-}
-
-.allBlock .sec1 .flexContainer .items.-left {
-  flex-basis: 300px;
-  flex-shrink: 0;
-  font-size: 0;
-  width: 100%;
-}
-
-.allBlock .sec1 .flexContainer .items.-left .imgBlock {
-  width: 300px;
-  height: 300px;
-}
-
-.allBlock .sec1 .flexContainer .items.-left .imgBlock img {
-  width: 100%;
-  height: 100%;
-}
-
-.allBlock .sec1 .flexContainer .items.-right {
-  flex-grow: 1;
-  font-size: 20px;
-  padding-left: 50px;
-  color: #fff;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .title1 {
-  margin-top: 15px;
-  margin-bottom: 30px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .introduce {
-  margin-bottom: 30px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .price, .allBlock .sec1 .flexContainer .items.-right .buyForm {
-  display: inline-block;
-  margin-bottom: 30px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .price {
-  margin-bottom: 30px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .price, .allBlock .sec1 .flexContainer .items.-right .collectForm {
-  display: inline-block;
-  margin-bottom: 35px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .price {
-  margin-left: 50px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm {
-  margin-left: 70px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn {
-  color: #60cd90;
-  width: 70px;
-  padding: 5px;
-  background-color: #0e3461;
-  border: 3px solid #60cd90;
-  text-align: center;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn:hover {
-  color: #0e3461;
-  width: 70px;
-  padding: 5px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn:hover {
-  cursor: pointer;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .changeBtn {
-  color: #60cd90;
-  width: 70px;
-  padding: 5px;
-  background-color: #0e3461;
-  border: 3px solid #60cd90;
-  text-align: center;
-  margin-left: 25px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .changeBtn:hover {
-  color: #0e3461;
-  width: 70px;
-  padding: 5px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .changeBtn:hover {
-  cursor: pointer;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn {
-  color: #60cd90;
-  width: 170px;
-  padding: 5px;
-  background-color: #0e3461;
-  border: 3px solid #60cd90;
-  text-align: center;
-  margin-left: 0px;
-  font-size: 24px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn:hover {
-  color: #0e3461;
-  width: 170px;
-  padding: 5px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn:hover {
-  cursor: pointer;
-}
-
-.allBlock .chart {
-  background-color: #fff;
-  margin: 100px auto;
-  width: 500px;
-  height: 500px;
-  padding: 15px;
-}
-
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .allBlock .chart {
-=======
     height: 100%;
   }
   .allBlock .sec1 .flexContainer .items.-right .items.-right {
@@ -7199,7 +7052,6 @@ main.member_info section.popShow {
 
 @media (min-width: 578px) and (max-width: 767.98px) and (min-width: 414px) and (max-width: 577.98px) {
   .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table {
->>>>>>> origin/Gary
     width: 100%;
   }
 }
@@ -7210,8 +7062,24 @@ main.member_info section.popShow {
   }
 }
 
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table .charts {
+    background-color: #fff;
+    margin: 100px auto;
+    width: 500px;
+    height: 500px;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table .charts {
+    width: 100%;
+  }
+}
+
 @media (min-width: 578px) and (max-width: 767.98px) and (min-width: 100px) and (max-width: 374.98px) {
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table {
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table .charts {
     width: 100%;
   }
 }
@@ -7276,67 +7144,6 @@ main.member_info section.popShow {
   }
 }
 
-<<<<<<< HEAD
-.allBlock .tableBlock table th, .allBlock .tableBlock table td {
-  border: 2px solid #fff;
-  text-align: center;
-}
-
-.allBlock .tableBlock th {
-  font-size: 28px;
-}
-
-.allBlock .tableBlock td {
-  font-size: 20px;
-}
-
-.allBlock .maskBlockM {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.allBlock .maskBlockM .popUpBox {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #024f3f;
-  border: 2px solid #10c5b1;
-  width: 500px;
-  height: 250px;
-  border-radius: 5px;
-}
-
-.allBlock .maskBlockM .popUpBox .closeBtn {
-  background-color: #10c5b1;
-  border-radius: 2px;
-  font-size: 28px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.allBlock .maskBlockM .popUpBox .popContent {
-  text-align: center;
-  color: #60cd90;
-  margin-top: 80px;
-  height: 100px;
-}
-
-.allBlock .maskBlockM .popUpBox .confirmBlk {
-  display: flex;
-  justify-content: space-evenly;
-=======
 @media (min-width: 578px) and (max-width: 767.98px) and (min-width: 100px) and (max-width: 374.98px) {
   .allBlock .sec1 .flexContainer .maskBlockM .popUpBox {
     width: 100%;
@@ -7355,7 +7162,6 @@ main.member_info section.popShow {
     width: 600px;
     height: 500px;
   }
->>>>>>> origin/Gary
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) and (min-width: 414px) and (max-width: 577.98px) {
@@ -7482,11 +7288,7 @@ main.member_info section.popShow {
   }
 }
 
-<<<<<<< HEAD
-.allBlock .test .maskLayery {
-=======
-.maskLayer {
->>>>>>> origin/Gary
+.test .maskLayer {
   position: absolute;
   top: 0;
   left: 0;
@@ -7495,11 +7297,7 @@ main.member_info section.popShow {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox {
-=======
-.maskLayer .popUpBox {
->>>>>>> origin/Gary
+.test .maskLayer .popUpBox {
   position: absolute;
   top: 5%;
   left: 50%;
@@ -7512,11 +7310,7 @@ main.member_info section.popShow {
   overflow: auto;
 }
 
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox .closeBtn {
-=======
-.maskLayer .popUpBox .closeBtn {
->>>>>>> origin/Gary
+.test .maskLayer .popUpBox .closeBtn {
   background-color: #10c5b1;
   border-radius: 2px;
   font-size: 28px;
@@ -7531,22 +7325,14 @@ main.member_info section.popShow {
   float: right;
 }
 
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox .popContent12 {
-=======
-.maskLayer .popUpBox .popContent12 {
->>>>>>> origin/Gary
+.test .maskLayer .popUpBox .popContent12 {
   text-align: center;
   color: #60cd90;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox .roleBlock1Mark .roleList1Mark {
-=======
-.maskLayer .popUpBox .roleBlock1Mark .roleList1Mark {
->>>>>>> origin/Gary
+.test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark {
   margin: 0 0 0 50px;
   padding: 0;
   list-style: none;
@@ -7554,32 +7340,20 @@ main.member_info section.popShow {
   flex-wrap: wrap;
 }
 
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox .roleBlock1Mark .roleList1Mark li {
-=======
-.maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li {
->>>>>>> origin/Gary
+.test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li {
   width: calc((100% - 60px - 50px) / 4);
   margin-right: 20px;
   margin-bottom: 25px;
 }
 
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox .confirmBlk12 {
-=======
-.maskLayer .popUpBox .confirmBlk12 {
->>>>>>> origin/Gary
+.test .maskLayer .popUpBox .confirmBlk12 {
   text-align: center;
   margin-bottom: 30px;
   display: flex;
   justify-content: space-evenly;
 }
 
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox .confirmBlk12 .confirmBtn12 {
-=======
-.maskLayer .popUpBox .confirmBlk12 .confirmBtn12 {
->>>>>>> origin/Gary
+.test .maskLayer .popUpBox .confirmBlk12 .confirmBtn12 {
   text-align: center;
   line-height: 30px;
   text-decoration: none;
@@ -7592,11 +7366,7 @@ main.member_info section.popShow {
   padding: 0;
 }
 
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox .confirmBlk12 .confirmBtn12:hover {
-=======
-.maskLayer .popUpBox .confirmBlk12 .confirmBtn12:hover {
->>>>>>> origin/Gary
+.test .maskLayer .popUpBox .confirmBlk12 .confirmBtn12:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
@@ -7680,11 +7450,7 @@ main.member_info section.popShow {
   margin-top: 30px;
 }
 
-<<<<<<< HEAD
-.allBlock .test .popUpBox .confirmBlk13 {
-=======
 .test .popUpBox .myRoleBlock .confirmBlk13 {
->>>>>>> origin/Gary
   display: flex;
   justify-content: space-evenly;
 }

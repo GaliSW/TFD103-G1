@@ -148,9 +148,20 @@
                                         width: 100%;
                                     }
 
-                                    @include phone_small {
-                                        width: 100%;
-                                    }
+.charts{
+    background-color: #fff;
+    //@include border;
+    margin: 100px auto;
+    width: 500px;
+    height: 500px;
+    padding: 15px;
+    @include phone{
+        width:100%;
+    }
+    @include phone_small{
+        width:100%;
+    }
+}
 
                                     &:hover {
                                         @include btn_on (70px, 5px)
@@ -423,13 +434,8 @@
 }
 
 ///////////////交換pop視窗-1
-<<<<<<< HEAD
 .test{
-.maskLayery{
-=======
-
-.maskLayer {
->>>>>>> origin/Gary
+.maskLayer{
     position: absolute;
     top: 0;
     left: 0;
@@ -521,6 +527,7 @@
 
         }
     }
+}
 }
 
 ////////////交換確認視窗-2
