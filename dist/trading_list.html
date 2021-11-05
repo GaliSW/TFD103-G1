@@ -18,25 +18,25 @@
 <header id="header">
     <div class="container">
         <a class="logo" href="index.html">
-            <img src="./image/index/logo.png" alt="logoImg">
+            <img src="../dist/image/index/logo.png" alt="logoImg">
         </a>
         <nav class="navbar">
             <ul>
                 <a href="#">
                     <li>
-                        <img src="./image/index/pic.png">
+                        <img src="../dist/image/index/pic.png">
                         消息/介紹
                     </li>
                 </a>
                 <a href="#">
                     <li>
-                        <img src="./image/index/role01.png">
+                        <img src="../dist/image/index/role01.png">
                         角色交易
                     </li>
                 </a>
                 <a href="#">
                     <li>
-                        <img src="./image/index/pokemon.png">
+                        <img src="../dist/image/index/pokemon.png">
                         角色抽取
                     </li>
                 </a>
@@ -53,15 +53,15 @@
                 <span></span>
 
                 <ul id="menu">
-                    <a href="#"><img src="./image/index/logo.png"></a>
+                    <a href="#"><img src="../dist/image/index/logo.png"></a>
                     <a href="#">
-                        <li><img src="./image/index/pic.png">消息/介紹</li>
+                        <li><img src="../dist/image/index/pic.png">消息/介紹</li>
                     </a>
                     <a href="#">
-                        <li><img src="./image/index/role01.png">角色交易</li>
+                        <li><img src="../dist/image/index/role01.png">角色交易</li>
                     </a>
                     <a href="#">
-                        <li><img src="./image/index/pokemon.png">角色抽取</li>
+                        <li><img src="../dist/image/index/pokemon.png">角色抽取</li>
                     </a>
                 </ul>
             </div>
@@ -124,9 +124,115 @@
 
                 <!-- 下方顯示 -->
                 <div class="content col-12">
-                    <keep-alive>
+                    <!-- <keep-alive>
                         <component :is="content" />
-                    </keep-alive>
+                    </keep-alive> -->
+                    <!-- 買家 -->
+                    <div class="buyer_contain" :class="{'bookmark': b_contain }">
+                        <div class="contain_bar">
+                            <span class="apply_date col-3">交易日期</span>
+                            <span class="product col-3">交易商品</span>
+                            <span class="method col-2">交易方式</span>
+                            <span class="price col-2">購買金額</span>
+                            <div class="dropdown col-2" id="app">
+                                <select>
+                                    <option value="t3">近三個月</option>
+                                    <option value="t6">近六個月</option>
+                                    <option value="t9">近九個月</option>
+                                    <option value="t12">近一年</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="contain_list">
+                            <span class="apply_date col-3">110-10-20</span>
+                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                            <span class="method col-2">購買</span>
+                            <span class="price col-2">100e</span>
+                            <span class="block col-2"></span>
+                        </div>
+                    </div>
+
+                    <!-- 買家交換 -->
+                    <div class="buyer_change" :class="{'bookmark': b_change }">
+                        <div class="contain_bar">
+                            <span class="apply_date col-3">交易日期</span>
+                            <span class="product col-3">交易商品</span>
+                            <span class="method col-2">交易方式</span>
+                            <span class="price col-2">我的角色</span>
+                            <div class="dropdown col-2" id="app1">
+                                <select>
+                                    <option value="t3">近三個月</option>
+                                    <option value="t6">近六個月</option>
+                                    <option value="t9">近九個月</option>
+                                    <option value="t12">近一年</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="contain_list">
+                            <span class="apply_date col-3">110-10-20</span>
+                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                            <span class="method col-2">購買</span>
+                            <div class="price col-2">
+                                <img src="../dist/images/member/r2.jpg">
+                            </div>
+                            <span class="block col-2"></span>
+                        </div>
+                    
+                    </div>
+
+                    <!-- 賣家 -->
+                    <div class="saler_contain" :class="{'bookmark': s_contain }">
+                        <div class="contain_bar">
+                            <span class="apply_date col-3">交易日期</span>
+                            <span class="product col-3">我的商品</span>
+                            <span class="method col-2">交易方式</span>
+                            <span class="price col-2">販售金額</span>
+                            <div class="dropdown col-2" id="app2">
+                                <select>
+                                    <option value="t3"> 近三個月</option>
+                                    <option value="t6">近六個月</option>
+                                    <option value="t9">近九個月</option>
+                                    <option value="t12">近一年</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="contain_list">
+                            <span class="apply_date col-3">110-10-20</span>
+                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                            <span class="method col-2">販售</span>
+                            <span class="price col-2">100e</span>
+                            <span class="block col-2"></span>
+                        </div>
+                    </div>
+
+                    <!-- 賣家交換 -->
+                    <div class="saler_change" :class="{'bookmark': s_change }">
+                        <div class="contain_bar">
+                            <span class="apply_date col-3">交易日期</span>
+                            <span class="product col-3">我的商品</span>
+                            <span class="method col-2">交易方式</span>
+                            <span class="price col-2">交換角色</span>
+                            <div class="dropdown col-2" id="app3">
+                                <select>
+                                    <option value="t3">近三個月</option>
+                                    <option value="t6">近六個月</option>
+                                    <option value="t9">近九個月</option>
+                                    <option value="t12">近一年</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="contain_list">
+                            <span class="apply_date col-3">110-10-20</span>
+                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                            <span class="method col-2">交換</span>
+                            <div class="price col-2">
+                                <img src="../dist/images/member/r2.jpg">
+                            </div>
+                            <span class="block col-2"></span>
+                        </div>
+                    
+                    </div>
+
                 </div>
             </div>
 

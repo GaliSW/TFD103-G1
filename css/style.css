@@ -489,7 +489,7 @@
 }
 
 .footer {
-  background: url(../image/index/strbg.jpg);
+  background: url(../dist/images/index/strbg.jpg);
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
@@ -589,7 +589,7 @@
 main.collection {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/member/back.jpg);
+  background-image: url(../dist/images/member/back.jpg);
   padding-top: 100px;
   padding-bottom: 100px;
   width: 100%;
@@ -872,7 +872,7 @@ main.collection div.collect_contain button.delete_btn .fa-trash-alt {
 main.deposit {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/deposit/back.jpg);
+  background-image: url(../dist/images/deposit/back.jpg);
   margin: 0;
   box-sizing: border-box;
 }
@@ -950,7 +950,7 @@ main.deposit div.container div#app button {
 }
 
 main.deposit div.container div#app button div.point {
-  background-image: url(../image/deposit/point.jpg);
+  background-image: url(../dist/images/deposit/point.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1002,7 +1002,7 @@ main.deposit div.container div#app button div.photo span {
 main.deposit {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/deposit/back.jpg);
+  background-image: url(../dist/images/deposit/back.jpg);
   padding-bottom: 100px;
   margin: 0;
   box-sizing: border-box;
@@ -1178,7 +1178,7 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 .entry .entrybg {
   width: 100%;
   height: 100vh;
-  background-image: url(../image/index/entry.jpg);
+  background-image: url(../dist/images/index/entry.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1250,7 +1250,7 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 
 .entry .entrybg .contentBox .word {
   width: 400px;
-  margin-left: 50%;
+  margin-left: 57%;
   transform: translateX(-60%);
   margin-top: -10%;
 }
@@ -3021,7 +3021,7 @@ body {
 .index .indexOne {
   margin: 0 auto;
   font-size: 0;
-  background-image: url(../image/index/bg2.jpg);
+  background-image: url(../dist/images/index/bg2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -3115,6 +3115,7 @@ body {
     background-color: rgba(95, 141, 179, 0.5);
     font-size: 16px;
     padding: 20px 0 20px 20px;
+    margin-top: 5px;
   }
 }
 
@@ -3163,12 +3164,16 @@ body {
 @media (min-width: 375px) and (max-width: 413.98px) {
   .index .indexOne .banner .roleCar {
     right: -80px;
-    margin-top: -80px;
+    margin-top: 20px;
+  }
+  .index .indexOne .banner .roleCar img {
+    max-width: 90%;
+    width: 300px;
   }
 }
 
 .index .indexTwo {
-  background: url(../image/index/bluebg.jpeg) 0 0 fixed;
+  background: url(../dist/images/index/bluebg.jpeg) 0 0 fixed;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -3627,6 +3632,24 @@ body {
   position: relative;
 }
 
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .blockBox .bgColor {
+    height: 70%;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .blockBox .bgColor {
+    height: 70%;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .blockBox .bgColor {
+    height: 70%;
+  }
+}
+
 .index .blockBox .bgColor img {
   background-size: cover;
   position: absolute;
@@ -3660,6 +3683,24 @@ body {
   display: inline-block;
 }
 
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .blockBox .bgColor .machineBox {
+    display: none;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .blockBox .bgColor .machineBox {
+    display: none;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .blockBox .bgColor .machineBox {
+    display: none;
+  }
+}
+
 .index .blockBox .bgColor .machineBox img {
   width: 100%;
   position: absolute;
@@ -3669,26 +3710,27 @@ body {
 .index .blockBox .bgColor .machineBox .pokemon {
   width: 40px;
   position: absolute;
-  right: 5%;
-  bottom: 35%;
+  right: 60px;
+  bottom: 160px;
 }
 
-.index .blockBox .bgColor .machineBox .pokemon img {
+.index .blockBox .bgColor .machineBox .pokemon .images img {
   width: 100%;
 }
 
-.index .blockBox .bgColor .machineBox .pokemon img:nth-child(1) {
-  margin-right: 75px;
+.index .blockBox .bgColor .machineBox .pokemon .pkm1 img {
+  right: 100px;
   margin-bottom: 30px;
 }
 
-.index .blockBox .bgColor .machineBox .pokemon img:nth-child(2) {
-  margin-right: 130px;
+.index .blockBox .bgColor .machineBox .pokemon .pkm2 img {
+  right: 43px;
+  margin-bottom: 60px;
 }
 
-.index .blockBox .bgColor .machineBox .pokemon img:nth-child(3) {
-  margin-right: 23px;
-  margin-bottom: 90px;
+.index .blockBox .bgColor .machineBox .pokemon .pkm3 img {
+  right: 150px;
+  margin-bottom: 80px;
 }
 
 .index .manyRole {
@@ -3766,7 +3808,6 @@ body {
   border-radius: 18px;
   background-color: #fff;
   width: 220px;
-  height: 260px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -3853,7 +3894,7 @@ body {
 }
 
 .index .indexThree {
-  background: url(../image/index/strbg.jpg) 0 0 fixed;
+  background: url(../dist/images/index/strbg.jpg) 0 0 fixed;
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
@@ -4155,7 +4196,7 @@ body {
 }
 
 .otot {
-  background-image: url("../images/intro/bg.jpg");
+  background-image: url("../dist/images/intro/bg.jpg");
   width: 100%;
   height: 100%;
   position: fixed;
@@ -4408,7 +4449,7 @@ body {
 main.login {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/login/back.jpg);
+  background-image: url(../dist/images/login/back.jpg);
   width: 100%;
   background-position: left bottom;
   box-sizing: border-box;
@@ -5068,7 +5109,7 @@ main.login div.contain .bookmark {
 main.member {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/member/back.jpg);
+  background-image: url(../dist/images/member/back.jpg);
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -5268,6 +5309,15 @@ main.member div.content img {
   }
 }
 
+main.member div.content .buyer_contain,
+main.member div.content .saler_contain {
+  display: none;
+}
+
+main.member div.content .bookmark {
+  display: block;
+}
+
 main.member div.content div.contain_bar {
   background-color: #0e3461;
   color: white;
@@ -5329,12 +5379,6 @@ main.member div.content div.contain_list button {
   border: 3px solid #60cd90;
   text-align: center;
   cursor: pointer;
-}
-
-main.member div.content div.contain_list button.reject {
-  background-color: #024f3f;
-  border-color: #51AB82;
-  color: #51AB82;
 }
 
 main.member div.content div.contain_list button:hover {
@@ -5422,6 +5466,12 @@ main.member div.content div._off::before {
   main.member div.content div._off::before {
     height: 100px;
   }
+}
+
+main.member div.content .saler_contain button.reject {
+  background-color: #024F7B;
+  border-color: #51AB82;
+  color: #51AB82;
 }
 
 main.member div.content div._off span.trade_status {
@@ -5555,7 +5605,7 @@ main.member section.popShow {
 main.trading_list {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/member/back.jpg);
+  background-image: url(../dist/images/member/back.jpg);
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -5735,6 +5785,17 @@ main.trading_list div.content {
   font-size: 20px;
 }
 
+main.trading_list div.content .buyer_contain,
+main.trading_list div.content .saler_contain,
+main.trading_list div.content .buyer_change,
+main.trading_list div.content .saler_change {
+  display: none;
+}
+
+main.trading_list div.content .bookmark {
+  display: block;
+}
+
 main.trading_list div.content div.dropdown {
   text-align: right;
 }
@@ -5815,7 +5876,7 @@ main.trading_list div.content div.contain_list hr {
 main.points_list {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/member/back.jpg);
+  background-image: url(../dist/images/member/back.jpg);
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -6030,7 +6091,7 @@ main.points_list div.content div.contain_list hr {
 main.member_info {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/member/back.jpg);
+  background-image: url(../dist/images/member/back.jpg);
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -6504,6 +6565,15 @@ main.member_info section.popShow {
   display: block;
 }
 
+.otot {
+  background-image: url("../dist/images/intro/bg.jpg");
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
 .out a {
   text-decoration: none;
 }
@@ -6654,7 +6724,7 @@ main.member_info section.popShow {
 
 .out .search-form #search-input {
   width: 300px;
-  background-image: url("/images/intro/search.jpg");
+  background-image: url("/dist/images/intro/search.jpg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: 20px;
@@ -6739,6 +6809,15 @@ main.member_info section.popShow {
 .out .wrap .name {
   text-align: center;
   width: 100%;
+}
+
+.otot {
+  background-image: url("../dist/images/intro/bg.jpg");
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -1;
 }
 
 .out h1 {
@@ -6842,7 +6921,7 @@ main.member_info section.popShow {
 }
 
 .allBlock {
-  background-image: url("../image/trade/background.png");
+  background-image: url("../dist/images/trade/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 0px 0px;
@@ -6869,215 +6948,331 @@ main.member_info section.popShow {
     width: 100%;
     flex-direction: column;
   }
+  .allBlock .sec1 .flexContainer .items.-right {
+    flex-grow: 1;
+    font-size: 20px;
+    padding-left: 50px;
+    color: #fff;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .title1 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .introduce {
+    margin-bottom: 30px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .price,
+  .allBlock .sec1 .flexContainer .items.-right .buyForm {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
 }
 
-@media (min-width: 414px) and (max-width: 577.98px) {
-  .allBlock .sec1 .flexContainer {
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .sec1 .flexContainer .items.-right {
     width: 100%;
     flex-direction: column;
   }
 }
 
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .allBlock .sec1 .flexContainer {
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock .sec1 .flexContainer .items.-right .items.-left {
+    flex-basis: 300px;
+    flex-shrink: 0;
+    font-size: 0;
     width: 100%;
-    flex-direction: column;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-left .imgBlock {
+    width: 300px;
+    height: 300px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-left .imgBlock img {
+    width: 100%;
+    height: 100%;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right {
+    flex-grow: 1;
+    font-size: 20px;
+    padding-left: 50px;
+    color: #fff;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right h1 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .introduce {
+    margin-bottom: 30px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .price {
+    margin-bottom: 30px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .price,
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm {
+    display: inline-block;
+    margin-bottom: 35px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .price {
+    margin-left: 50px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm {
+    margin-left: 70px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .collectBtn {
+    color: #60cd90;
+    width: 70px;
+    padding: 5px;
+    background-color: #0e3461;
+    border: 3px solid #60cd90;
+    text-align: center;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .collectBtn:hover {
+    color: #0e3461;
+    width: 70px;
+    padding: 5px;
+    background-color: #60cd90;
+    border: 3px solid #0e3461;
+    text-align: center;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .collectBtn:hover {
+    cursor: pointer;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock {
+    color: #fff;
+    padding-bottom: 100px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 600px;
+    height: 500px;
+    margin-left: 25px;
   }
 }
 
-@media (min-width: 100px) and (max-width: 374.98px) {
-  .allBlock .sec1 .flexContainer {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-.allBlock .sec1 .flexContainer .items.-left {
-  flex-basis: 300px;
-  flex-shrink: 0;
-  font-size: 0;
-  width: 100%;
-}
-
-.allBlock .sec1 .flexContainer .items.-left .imgBlock {
-  width: 300px;
-  height: 300px;
-}
-
-.allBlock .sec1 .flexContainer .items.-left .imgBlock img {
-  width: 100%;
-  height: 100%;
-}
-
-.allBlock .sec1 .flexContainer .items.-right {
-  flex-grow: 1;
-  font-size: 20px;
-  padding-left: 50px;
-  color: #fff;
-}
-
-.allBlock .sec1 .flexContainer .items.-right h1 {
-  margin-top: 15px;
-  margin-bottom: 30px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .introduce {
-  margin-bottom: 30px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .price {
-  margin-bottom: 30px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .price,
-.allBlock .sec1 .flexContainer .items.-right .collectForm {
-  display: inline-block;
-  margin-bottom: 35px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .price {
-  margin-left: 50px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm {
-  margin-left: 70px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn {
-  color: #60cd90;
-  width: 70px;
-  padding: 5px;
-  background-color: #0e3461;
-  border: 3px solid #60cd90;
-  text-align: center;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn:hover {
-  color: #0e3461;
-  width: 70px;
-  padding: 5px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn:hover {
-  cursor: pointer;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .changeBtn {
-  color: #60cd90;
-  width: 70px;
-  padding: 5px;
-  background-color: #0e3461;
-  border: 3px solid #60cd90;
-  text-align: center;
-  margin-left: 25px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .changeBtn:hover {
-  color: #0e3461;
-  width: 70px;
-  padding: 5px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .changeBtn:hover {
-  cursor: pointer;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn {
-  color: #60cd90;
-  width: 170px;
-  padding: 5px;
-  background-color: #0e3461;
-  border: 3px solid #60cd90;
-  text-align: center;
-  margin-left: 0px;
-  font-size: 24px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn:hover {
-  color: #0e3461;
-  width: 170px;
-  padding: 5px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn:hover {
-  cursor: pointer;
-}
-
-.allBlock .chart {
-  background-color: #fff;
-  margin: 100px auto;
-  width: 500px;
-  height: 500px;
-  padding: 15px;
-}
-
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .allBlock .chart {
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table {
     width: 100%;
   }
 }
 
-@media (min-width: 100px) and (max-width: 374.98px) {
-  .allBlock .chart {
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table {
     width: 100%;
   }
 }
 
-.allBlock .tableBlock {
-  color: #fff;
-  padding-bottom: 100px;
-}
-
-.allBlock .tableBlock table {
-  border: 1px solid #fff;
-  border-collapse: collapse;
-  margin: 0 auto;
-  width: 600px;
-  height: 500px;
-}
-
-@media (min-width: 414px) and (max-width: 577.98px) {
-  .allBlock .tableBlock table {
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table {
     width: 100%;
   }
 }
 
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .allBlock .tableBlock table {
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table:hover {
+    color: #0e3461;
+    width: 70px;
+    padding: 5px;
+    background-color: #60cd90;
+    border: 3px solid #0e3461;
+    text-align: center;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table:hover {
+    cursor: pointer;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .buyForm .buyBtn {
+    color: #60cd90;
+    width: 170px;
+    padding: 5px;
+    background-color: #0e3461;
+    border: 3px solid #60cd90;
+    text-align: center;
+    margin-left: 0px;
+    font-size: 24px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .buyForm .buyBtn:hover {
+    color: #0e3461;
+    width: 170px;
+    padding: 5px;
+    background-color: #60cd90;
+    border: 3px solid #0e3461;
+    text-align: center;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .buyForm .buyBtn:hover {
+    cursor: pointer;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .popUpBox {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #024f3f;
+    border: 2px solid #10c5b1;
+    width: 500px;
+    height: 500px;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .sec1 .flexContainer .maskBlockM .popUpBox {
     width: 100%;
   }
 }
 
-@media (min-width: 100px) and (max-width: 374.98px) {
-  .allBlock .tableBlock table {
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .sec1 .flexContainer .maskBlockM .popUpBox {
     width: 100%;
   }
 }
 
-.allBlock .tableBlock table th,
-.allBlock .tableBlock table td {
-  border: 2px solid #fff;
-  text-align: center;
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock {
+    color: #fff;
+    padding-bottom: 100px;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 600px;
+    height: 500px;
+  }
 }
 
-.allBlock .tableBlock th {
-  font-size: 28px;
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table {
+    width: 100%;
+  }
 }
 
-.allBlock .tableBlock td {
-  font-size: 20px;
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table {
+    width: 100%;
+  }
 }
 
-.allBlock .maskBlock {
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table {
+    width: 100%;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table th,
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table td {
+    border: 2px solid #fff;
+    text-align: center;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .test .maskLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .test .maskLayer .popUpBox {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #024f3f;
+    border: 2px solid #10c5b1;
+    width: 1000px;
+    height: 480px;
+    border-radius: 5px;
+    overflow: auto;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .test .maskLayer .popUpBox .closeBtn {
+    background-color: #10c5b1;
+    border-radius: 2px;
+    font-size: 28px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    position: sticky;
+    top: 0px;
+    float: right;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .test .maskLayer .popUpBox td {
+    font-size: 20px;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #024f3f;
+    border: 2px solid #10c5b1;
+    width: 500px;
+    height: 250px;
+    border-radius: 5px;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .closeBtn {
+    background-color: #10c5b1;
+    border-radius: 2px;
+    font-size: 28px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .popContent {
+    text-align: center;
+    color: #60cd90;
+    margin-top: 80px;
+    height: 100px;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .confirmBlk {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .confirmBlk .confirmBtn {
+    padding: 0;
+    height: 35px;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .confirmBlk .confirmBtn:hover {
+    color: #0e3461;
+    width: 100px;
+    padding: 0px;
+    background-color: #60cd90;
+    border: 3px solid #0e3461;
+    text-align: center;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .confirmBlk #confirmBtn3 {
+    width: 150px;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .confirmBlk #confirmBtn4 {
+    width: 150px;
+  }
+}
+
+.maskLayer {
   position: absolute;
   top: 0;
   left: 0;
@@ -7086,77 +7281,7 @@ main.member_info section.popShow {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.allBlock .maskBlock .popUpBox {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #024f3f;
-  border: 2px solid #10c5b1;
-  width: 500px;
-  height: 250px;
-  border-radius: 5px;
-}
-
-.allBlock .maskBlock .popUpBox .closeBtn {
-  background-color: #10c5b1;
-  border-radius: 2px;
-  font-size: 28px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.allBlock .maskBlock .popUpBox .popContent {
-  text-align: center;
-  color: #60cd90;
-  margin-top: 80px;
-  height: 100px;
-}
-
-.allBlock .maskBlock .popUpBox .confirmBlk {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.allBlock .maskBlock .popUpBox .confirmBlk .confirmBtn {
-  padding: 0;
-  height: 35px;
-}
-
-.allBlock .maskBlock .popUpBox .confirmBlk .confirmBtn:hover {
-  color: #0e3461;
-  width: 100px;
-  padding: 0px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.allBlock .maskBlock .popUpBox .confirmBlk #confirmBtn3 {
-  width: 150px;
-}
-
-.allBlock .maskBlock .popUpBox .confirmBlk #confirmBtn4 {
-  width: 150px;
-}
-
-.allBlock .maskLayer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.allBlock .maskLayer .popUpBox {
+.maskLayer .popUpBox {
   position: absolute;
   top: 5%;
   left: 50%;
@@ -7169,7 +7294,7 @@ main.member_info section.popShow {
   overflow: auto;
 }
 
-.allBlock .maskLayer .popUpBox .closeBtn {
+.maskLayer .popUpBox .closeBtn {
   background-color: #10c5b1;
   border-radius: 2px;
   font-size: 28px;
@@ -7184,14 +7309,14 @@ main.member_info section.popShow {
   float: right;
 }
 
-.allBlock .maskLayer .popUpBox .popContent12 {
+.maskLayer .popUpBox .popContent12 {
   text-align: center;
   color: #60cd90;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.allBlock .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark {
+.maskLayer .popUpBox .roleBlock1Mark .roleList1Mark {
   margin: 0 0 0 50px;
   padding: 0;
   list-style: none;
@@ -7199,20 +7324,20 @@ main.member_info section.popShow {
   flex-wrap: wrap;
 }
 
-.allBlock .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li {
+.maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li {
   width: calc((100% - 60px - 50px) / 4);
   margin-right: 20px;
   margin-bottom: 25px;
 }
 
-.allBlock .maskLayer .popUpBox .confirmBlk12 {
+.maskLayer .popUpBox .confirmBlk12 {
   text-align: center;
   margin-bottom: 30px;
   display: flex;
   justify-content: space-evenly;
 }
 
-.allBlock .maskLayer .popUpBox .confirmBlk12 .confirmBtn12 {
+.maskLayer .popUpBox .confirmBlk12 .confirmBtn12 {
   text-align: center;
   line-height: 30px;
   text-decoration: none;
@@ -7225,7 +7350,7 @@ main.member_info section.popShow {
   padding: 0;
 }
 
-.allBlock .maskLayer .popUpBox .confirmBlk12 .confirmBtn12:hover {
+.maskLayer .popUpBox .confirmBlk12 .confirmBtn12:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
@@ -7234,7 +7359,7 @@ main.member_info section.popShow {
   text-align: center;
 }
 
-.allBlock .popUpBox {
+.test .popUpBox {
   position: absolute;
   top: 5%;
   left: 50%;
@@ -7246,29 +7371,45 @@ main.member_info section.popShow {
   border-radius: 5px;
 }
 
-.allBlock .popUpBox .myRoleBlock,
-.allBlock .popUpBox .doubleArrow,
-.allBlock .popUpBox .yourRoleBlock {
+.test .popUpBox .myRoleBlock,
+.test .popUpBox .doubleArrow,
+.test .popUpBox .yourRoleBlock {
   display: inline-block;
   vertical-align: middle;
 }
 
-.allBlock .popUpBox .myRoleBlock .myRoleP {
-  margin-bottom: 20px;
+.test .popUpBox .myRoleBlock .myRoleBlock {
+  margin-left: 185px;
 }
 
-.allBlock .popUpBox .doubleArrow {
+.test .popUpBox .myRoleBlock .myRoleBlock .myRoleP {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.test .popUpBox .myRoleBlock .myRoleBlock .myRoleNameBlock {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.test .popUpBox .myRoleBlock .doubleArrow {
   width: 100px;
   height: 100px;
   font-size: 100px;
   margin: 0 30px;
 }
 
-.allBlock .popUpBox .yourRoleBlock .yourRoleP {
+.test .popUpBox .myRoleBlock .yourRoleBlock .yourRoleP {
   margin-bottom: 20px;
+  text-align: center;
 }
 
-.allBlock .popUpBox .closeBtn13 {
+.test .popUpBox .myRoleBlock .yourRoleBlock .yourRoleNameBlock {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.test .popUpBox .myRoleBlock .closeBtn13 {
   background-color: #10c5b1;
   border-radius: 2px;
   font-size: 28px;
@@ -7283,22 +7424,22 @@ main.member_info section.popShow {
   right: 0;
 }
 
-.allBlock .popUpBox .popContent13 {
+.test .popUpBox .myRoleBlock .popContent13 {
   text-align: center;
   color: #60cd90;
   margin-bottom: 10px;
 }
 
-.allBlock .popUpBox .popContent13 p {
+.test .popUpBox .myRoleBlock .popContent13 p {
   margin-top: 30px;
 }
 
-.allBlock .popUpBox .confirmBlk13 {
+.test .popUpBox .myRoleBlock .confirmBlk13 {
   display: flex;
   justify-content: space-evenly;
 }
 
-.allBlock .popUpBox .confirmBlk13 .confirmBtn13 {
+.test .popUpBox .myRoleBlock .confirmBlk13 .confirmBtn13 {
   text-align: center;
   line-height: 30px;
   text-decoration: none;
@@ -7313,7 +7454,7 @@ main.member_info section.popShow {
   height: 35px;
 }
 
-.allBlock .popUpBox .confirmBlk13 .confirmBtn13:hover {
+.test .popUpBox .myRoleBlock .confirmBlk13 .confirmBtn13:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
@@ -7322,7 +7463,7 @@ main.member_info section.popShow {
   text-align: center;
 }
 
-.allBlock .popUpBox .confirmBlk13 .confirmBtn13:hover {
+.test .popUpBox .myRoleBlock .confirmBlk13 .confirmBtn13:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
@@ -7331,28 +7472,19 @@ main.member_info section.popShow {
   text-align: center;
 }
 
-.maskBlock14 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.maskBlock14 .popUpBox14 {
+.allBlock .popUpBox {
   position: absolute;
   top: 25%;
   left: 50%;
   transform: translateX(-50%);
   background-color: #024f3f;
   border: 2px solid #10c5b1;
-  width: 500px;
+  width: 300px;
   height: 250px;
   border-radius: 5px;
 }
 
-.maskBlock14 .popUpBox14 .closeBtn14 {
+.allBlock .popUpBox .closeBtn14 {
   background-color: #10c5b1;
   border-radius: 2px;
   font-size: 28px;
@@ -7367,42 +7499,43 @@ main.member_info section.popShow {
   right: 0;
 }
 
-.maskBlock14 .popUpBox14 .popContent14 {
+.allBlock .popUpBox .popContent14 {
   text-align: center;
   color: #60cd90;
-  margin-top: 80px;
+  margin-top: 150px;
   height: 100px;
+  font-size: 32px;
 }
 
-.maskLayer {
+.allBlock .maskLayer {
   display: none;
 }
 
-.maskLayer .popShow {
+.allBlock .popShow {
   display: block;
 }
 
-.maskLayer .popUpBox {
+.allBlock .popUpBox {
   display: none;
 }
 
-.maskLayer .box {
+.allBlock .box {
   display: block;
   background-color: burlywood;
 }
 
-.maskLayer .one {
+.allBlock .one {
   background-color: aquamarine;
 }
 
-.maskLayer .abc {
+.allBlock .abc {
   display: block;
 }
 
 main.signup {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/signup/b1.png);
+  background-image: url(../dist/images/signup/b1.png);
   margin: 0;
   box-sizing: border-box;
 }
@@ -7668,7 +7801,7 @@ main.signup .main_contain div._on {
 }
 
 .allBlock1 {
-  background-image: url("../image/trade/background.png");
+  background-image: url("../dist/images/trade/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 0px 0px;
@@ -7772,7 +7905,7 @@ main.signup .main_contain div._on {
 .allBlock1 .btnBlockmy .btn111 {
   color: #60cd90;
   width: 150px;
-  padding: 5px;
+  padding: 10px;
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
@@ -7782,7 +7915,7 @@ main.signup .main_contain div._on {
 .allBlock1 .btnBlockmy .btn222 {
   color: #60cd90;
   width: 150px;
-  padding: 5px;
+  padding: 10px;
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
@@ -7791,7 +7924,7 @@ main.signup .main_contain div._on {
 .allBlock1 .btnBlockmy .btn111:hover {
   color: #0e3461;
   width: 150px;
-  padding: 5px;
+  padding: 10px;
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
@@ -7801,7 +7934,7 @@ main.signup .main_contain div._on {
 .allBlock1 .btnBlockmy .btn222:hover {
   color: #0e3461;
   width: 150px;
-  padding: 5px;
+  padding: 10px;
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
@@ -7816,8 +7949,8 @@ main.signup .main_contain div._on {
 .allBlock1 .yasidey {
   width: 250px;
   background-color: #9BCFB7;
-  position: relative;
   margin-right: 60px;
+  position: relative;
 }
 
 .allBlock1 .yasidey h2 {
@@ -7828,13 +7961,14 @@ main.signup .main_contain div._on {
   display: block;
   margin: 0 auto;
   padding: 5px;
+  position: relative;
 }
 
 .allBlock1 .yasidey .ysearchBtny {
   background-color: transparent;
   position: absolute;
-  top: 40px;
-  right: 42px;
+  top: 39px;
+  right: 11px;
   border: none;
   cursor: pointer;
 }

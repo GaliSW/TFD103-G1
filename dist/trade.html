@@ -14,25 +14,25 @@
 <header id="header">
     <div class="container">
         <a class="logo" href="index.html">
-            <img src="./image/index/logo.png" alt="logoImg">
+            <img src="../dist/image/index/logo.png" alt="logoImg">
         </a>
         <nav class="navbar">
             <ul>
                 <a href="#">
                     <li>
-                        <img src="./image/index/pic.png">
+                        <img src="../dist/image/index/pic.png">
                         消息/介紹
                     </li>
                 </a>
                 <a href="#">
                     <li>
-                        <img src="./image/index/role01.png">
+                        <img src="../dist/image/index/role01.png">
                         角色交易
                     </li>
                 </a>
                 <a href="#">
                     <li>
-                        <img src="./image/index/pokemon.png">
+                        <img src="../dist/image/index/pokemon.png">
                         角色抽取
                     </li>
                 </a>
@@ -49,15 +49,15 @@
                 <span></span>
 
                 <ul id="menu">
-                    <a href="#"><img src="./image/index/logo.png"></a>
+                    <a href="#"><img src="../dist/image/index/logo.png"></a>
                     <a href="#">
-                        <li><img src="./image/index/pic.png">消息/介紹</li>
+                        <li><img src="../dist/image/index/pic.png">消息/介紹</li>
                     </a>
                     <a href="#">
-                        <li><img src="./image/index/role01.png">角色交易</li>
+                        <li><img src="../dist/image/index/role01.png">角色交易</li>
                     </a>
                     <a href="#">
-                        <li><img src="./image/index/pokemon.png">角色抽取</li>
+                        <li><img src="../dist/image/index/pokemon.png">角色抽取</li>
                     </a>
                 </ul>
             </div>
@@ -126,10 +126,15 @@
 
     <!-- 按鈕 -->
 
-    <div class="btnBlockmy">
-      <button type="button" class="btn111">角色上架</button>
+    <div class="btnBlockmy" id="box">
+      <button type="button" class="btn111" @click="clickShow">角色上架</button>
+      <hidden v-if="isShow" @stop-show="close"></hidden>
       <button type="button" class="btn222">我的角色管理</button>
     </div>
+
+
+
+
 
     <!-- 側邊欄 -->
 

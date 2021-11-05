@@ -57,10 +57,15 @@
 
     <!-- 按鈕 -->
 
-    <div class="btnBlockmy">
-      <button type="button" class="btn111">角色上架</button>
+    <div class="btnBlockmy" id="box">
+      <button type="button" class="btn111" @click="clickShow">角色上架</button>
+      <hidden v-if="isShow" @stop-show="close"></hidden>
       <button type="button" class="btn222">我的角色管理</button>
     </div>
+
+
+
+
 
     <!-- 側邊欄 -->
 
