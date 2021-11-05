@@ -169,33 +169,25 @@
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   #header .logo {
-    position: absolute;
-    margin: -28px 50%;
-    transform: translateX(-50%);
+    margin: 0 0 0 30px;
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
   #header .logo {
-    position: absolute;
-    margin: -35px 50%;
-    transform: translateX(-50%);
+    margin: 0 0 10px 30px;
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   #header .logo {
-    position: absolute;
-    margin: -18px 50%;
-    transform: translateX(-50%);
+    margin: 0 0 10px 30px;
   }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   #header .logo {
-    position: absolute;
-    margin: -18px 50%;
-    transform: translateX(-50%);
+    margin: 0 0 10px 30px;
   }
 }
 
@@ -298,6 +290,7 @@
 
 #header .hamburger {
   display: none;
+  order: -1;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -768,7 +761,7 @@ main.collection div.collect_contain div.contain_list p.rwd_price {
 }
 
 main.collection div.collect_contain div.contain_list div.trade_button {
-  height: 150px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -3005,35 +2998,31 @@ body {
 
 .index .indexOne .banner .text {
   position: absolute;
-  bottom: 20%;
+  margin-top: 100px;
+  margin-left: 100px;
   font-size: 20px;
   color: white;
   opacity: 0;
-  padding-left: 80px;
   z-index: 1;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .index .indexOne .banner .text {
-    bottom: 35%;
+    margin-top: -90px;
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
   .index .indexOne .banner .text {
     font-size: 16px;
-    bottom: 40%;
-    padding-left: 100px;
-    position: absolute;
+    margin-top: 20px;
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   .index .indexOne .banner .text {
     font-size: 16px;
-    bottom: 40%;
-    padding-left: 100px;
-    position: absolute;
+    margin-top: 20px;
   }
 }
 
@@ -3041,16 +3030,14 @@ body {
   .index .indexOne .banner .text {
     background-color: rgba(95, 141, 179, 0.5);
     font-size: 16px;
-    bottom: 45%;
     padding: 20px 0 20px 20px;
-    position: absolute;
   }
 }
 
 .index .indexOne .banner .roleCar {
   position: absolute;
   right: 0;
-  bottom: -5%;
+  margin-top: -160px;
   opacity: 0;
 }
 
@@ -3071,9 +3058,28 @@ body {
   }
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .index .indexOne .banner .roleCar {
+    margin-top: -90px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .indexOne .banner .roleCar {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .indexOne .banner .roleCar {
+    margin-top: 70px;
+  }
+}
+
 @media (min-width: 375px) and (max-width: 413.98px) {
   .index .indexOne .banner .roleCar {
     right: -80px;
+    margin-top: -80px;
   }
 }
 
@@ -3248,6 +3254,12 @@ body {
   transform: rotate(7.5deg);
 }
 
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .content .txtStyle {
+    padding-left: 40%;
+  }
+}
+
 .index .content .txtStyle img {
   width: 100%;
 }
@@ -3274,7 +3286,7 @@ body {
 @media (min-width: 414px) and (max-width: 577.98px) {
   .index .content .picRole {
     width: 130px;
-    margin: 28% 0 0 68%;
+    margin: 18% 0 0 68%;
   }
 }
 
@@ -3289,31 +3301,120 @@ body {
   width: 100%;
 }
 
+.index .content .pointLogin {
+  padding-left: 10%;
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .content .pointLogin {
+    padding-left: 72%;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .content .pointLogin {
+    padding-left: 64%;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .content .pointLogin {
+    padding-left: 56%;
+  }
+}
+
+.index .content .pointLogin a {
+  text-decoration: none;
+}
+
+.index .content .pointLogin a .btn {
+  border-radius: 10px;
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .content .pointLogin a .btn {
+    color: #60cd90;
+    width: 120px;
+    padding: 10px;
+    background-color: #0e3461;
+    border: 3px solid #60cd90;
+    text-align: center;
+  }
+  .index .content .pointLogin a .btn:hover {
+    color: #0e3461;
+    width: 120px;
+    padding: 10px;
+    background-color: #60cd90;
+    border: 3px solid #0e3461;
+    text-align: center;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .content .pointLogin a .btn {
+    color: #60cd90;
+    width: 100px;
+    padding: 8px;
+    background-color: #0e3461;
+    border: 3px solid #60cd90;
+    text-align: center;
+    font-size: 12px;
+  }
+  .index .content .pointLogin a .btn:hover {
+    color: #0e3461;
+    width: 100px;
+    padding: 8px;
+    background-color: #60cd90;
+    border: 3px solid #0e3461;
+    text-align: center;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .content .pointLogin a .btn {
+    color: #60cd90;
+    width: 100px;
+    padding: 8px;
+    background-color: #0e3461;
+    border: 3px solid #60cd90;
+    text-align: center;
+    font-size: 12px;
+  }
+  .index .content .pointLogin a .btn:hover {
+    color: #0e3461;
+    width: 100px;
+    padding: 8px;
+    background-color: #60cd90;
+    border: 3px solid #0e3461;
+    text-align: center;
+  }
+}
+
 .index .content .dialogclude {
   position: relative;
   width: 180px;
   transform: rotate(-20deg);
-  margin: 0 0 0 70%;
+  margin: -8% 0 0 70%;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .index .content .dialogclude {
     width: 180px;
-    margin: 0 0 0 60%;
+    margin: -10% 0 0 64%;
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
   .index .content .dialogclude {
     width: 150px;
-    margin: 10% 0 0 58%;
+    margin: 8% 0 0 50%;
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   .index .content .dialogclude {
     width: 100px;
-    margin: 10% 0 0 60%;
+    margin: 0 0 0 50%;
   }
 }
 
@@ -3439,17 +3540,23 @@ body {
   max-width: 1200px;
   width: 100%;
   height: 100%;
-  background-image: url(../image/index/bg05.png);
-  background-size: cover;
   position: relative;
+}
+
+.index .blockBox .bgColor img {
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
 }
 
 .index .blockBox .bgColor .intro {
   height: 450px;
+  width: 620px;
+  display: inline-block;
 }
 
 .index .blockBox .bgColor .intro h1 {
-  margin: 15% 0 0 10%;
+  margin: 25% 0 0 10%;
   font-size: 32px;
   color: #fff;
 }
@@ -3461,34 +3568,41 @@ body {
   color: #fff;
 }
 
-.index .blockBox .bgColor .intro img {
-  width: 280px;
+.index .blockBox .bgColor .machineBox {
   position: absolute;
-  right: 50px;
+  right: 30px;
+  width: 300px;
+  height: 450px;
+  display: inline-block;
+}
+
+.index .blockBox .bgColor .machineBox img {
+  width: 100%;
+  position: absolute;
   bottom: 10px;
 }
 
-.index .blockBox .bgColor .intro .pokemon {
+.index .blockBox .bgColor .machineBox .pokemon {
   width: 40px;
   position: absolute;
   right: 5%;
   bottom: 35%;
 }
 
-.index .blockBox .bgColor .intro .pokemon img {
+.index .blockBox .bgColor .machineBox .pokemon img {
   width: 100%;
 }
 
-.index .blockBox .bgColor .intro .pokemon img:nth-child(1) {
+.index .blockBox .bgColor .machineBox .pokemon img:nth-child(1) {
   margin-right: 75px;
   margin-bottom: 30px;
 }
 
-.index .blockBox .bgColor .intro .pokemon img:nth-child(2) {
+.index .blockBox .bgColor .machineBox .pokemon img:nth-child(2) {
   margin-right: 130px;
 }
 
-.index .blockBox .bgColor .intro .pokemon img:nth-child(3) {
+.index .blockBox .bgColor .machineBox .pokemon img:nth-child(3) {
   margin-right: 23px;
   margin-bottom: 90px;
 }
@@ -3591,13 +3705,13 @@ body {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .index .manyRole .col-2 {
-    width: 35%;
+    width: 26%;
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
   .index .manyRole .col-2 {
-    width: 40%;
+    width: 30%;
   }
 }
 
@@ -3628,7 +3742,12 @@ body {
   }
 }
 
-.index .btn {
+.index a {
+  text-decoration: none;
+}
+
+.index a .btn {
+  border-radius: 10px;
   color: #60cd90;
   width: 130px;
   padding: 10px;
@@ -3636,11 +3755,11 @@ body {
   border: 3px solid #60cd90;
   text-align: center;
   margin: 0 auto;
-  margin-top: 6%;
+  margin-top: 2%;
   cursor: pointer;
 }
 
-.index .btn:hover {
+.index a .btn:hover {
   color: #0e3461;
   width: 130px;
   padding: 10px;
@@ -3951,14 +4070,19 @@ body {
   }
 }
 
+.otot {
+  background-image: url("../images/intro/bg.jpg");
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
 .out {
   overflow-x: hidden;
   margin: 0;
   margin: 0 auto;
-  background-image: url("../images/intro/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   padding: 0;
 }
 
@@ -4061,11 +4185,13 @@ body {
 
 .out .thumbnail:hover {
   transition: .7s ease-in-out;
-  transform: scale(1.1, 1.1);
+  transform: scale(1.05, 1.05);
 }
 
 .out .title {
   text-align: center;
+  line-height: 50px;
+  padding-top: 20px;
   border: 1px solid #fff;
 }
 
@@ -4090,7 +4216,7 @@ body {
 
 .out section .racing {
   border-bottom-style: dashed;
-  border-width: 40px;
+  border-width: 20px;
   height: 50px;
   color: gray;
   margin-bottom: 50px;
@@ -4105,19 +4231,19 @@ body {
 }
 
 .out section .img {
-  width: 300px;
+  width: 250px;
   position: absolute;
-  margin-top: -170px;
-  margin-left: -350px;
+  margin-top: -140px;
+  margin-left: -290px;
 }
 
 .out .slick-next {
-  right: -20px;
+  right: 0px;
 }
 
 .out .slick-prev {
   z-index: 100;
-  left: -20px;
+  left: 0px;
 }
 
 .out .total {
@@ -4936,26 +5062,26 @@ main.member div.bar div.information {
   padding-bottom: 20px;
 }
 
-@media (max-width: 767.98px) {
-  main.member div.bar div.trading {
-    width: 50%;
-    display: flex;
-    flex-wrap: nowrap;
-    padding: 0;
-    border: 0;
-  }
-  main.member div.bar div.points,
-  main.member div.bar div.information {
-    width: 25%;
-    padding: 0;
-    border: 0;
-  }
-  main.member div.bar .fa-list-alt,
-  main.member div.bar .fa-search-dollar,
-  main.member div.bar .fa-pencil-alt {
-    width: 100%;
-    font-size: 32px;
-  }
+main.member div.bar div.trading {
+  width: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+  border: 0;
+}
+
+main.member div.bar div.points,
+main.member div.bar div.information {
+  width: 25%;
+  padding: 0;
+  border: 0;
+}
+
+main.member div.bar .fa-list-alt,
+main.member div.bar .fa-search-dollar,
+main.member div.bar .fa-pencil-alt {
+  width: 100%;
+  font-size: 32px;
 }
 
 main.member div.bar div.title {
@@ -4965,10 +5091,8 @@ main.member div.bar div.title {
   font-size: 24px;
 }
 
-@media (max-width: 767.98px) {
-  main.member div.bar div.title {
-    display: none;
-  }
+main.member div.bar div.title {
+  display: none;
 }
 
 main.member div.bar button {
@@ -4979,30 +5103,30 @@ main.member div.bar button {
   border: 0px solid red;
   font-size: 20px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
-main.member div.bar button a {
+main.member div.bar button {
   color: #0e3461;
   text-decoration: none;
 }
 
-@media (max-width: 767.98px) {
-  main.member div.bar button {
-    width: 100%;
-    height: 77px;
-    margin: 0;
-    border: 1px solid #0e3461;
-  }
-  main.member div.bar button a {
-    font-size: 16px;
-  }
+main.member div.bar button {
+  width: 100%;
+  height: 77px;
+  margin: 0;
+  border: 1px solid #0e3461;
+}
+
+main.member div.bar button a {
+  font-size: 16px;
 }
 
 main.member div.bar button._on {
   background-color: #0e3461;
 }
 
-main.member div.bar button._on a {
+main.member div.bar button._on {
   color: white;
 }
 
@@ -5121,6 +5245,12 @@ main.member div.content div.contain_list button {
   border: 3px solid #60cd90;
   text-align: center;
   cursor: pointer;
+}
+
+main.member div.content div.contain_list button.reject {
+  background-color: #024f3f;
+  border-color: #51AB82;
+  color: #51AB82;
 }
 
 main.member div.content div.contain_list button:hover {
@@ -5417,26 +5547,26 @@ main.trading_list div.bar div.information {
   padding-bottom: 20px;
 }
 
-@media (max-width: 767.98px) {
-  main.trading_list div.bar div.trading {
-    width: 50%;
-    display: flex;
-    flex-wrap: nowrap;
-    padding: 0;
-    border: 0;
-  }
-  main.trading_list div.bar div.points,
-  main.trading_list div.bar div.information {
-    width: 25%;
-    padding: 0;
-    border: 0;
-  }
-  main.trading_list div.bar .fa-list-alt,
-  main.trading_list div.bar .fa-search-dollar,
-  main.trading_list div.bar .fa-pencil-alt {
-    width: 100%;
-    font-size: 32px;
-  }
+main.trading_list div.bar div.trading {
+  width: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+  border: 0;
+}
+
+main.trading_list div.bar div.points,
+main.trading_list div.bar div.information {
+  width: 25%;
+  padding: 0;
+  border: 0;
+}
+
+main.trading_list div.bar .fa-list-alt,
+main.trading_list div.bar .fa-search-dollar,
+main.trading_list div.bar .fa-pencil-alt {
+  width: 100%;
+  font-size: 32px;
 }
 
 main.trading_list div.bar div.title {
@@ -5446,10 +5576,8 @@ main.trading_list div.bar div.title {
   font-size: 24px;
 }
 
-@media (max-width: 767.98px) {
-  main.trading_list div.bar div.title {
-    display: none;
-  }
+main.trading_list div.bar div.title {
+  display: none;
 }
 
 main.trading_list div.bar button {
@@ -5460,30 +5588,30 @@ main.trading_list div.bar button {
   border: 0px solid red;
   font-size: 20px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
-main.trading_list div.bar button a {
+main.trading_list div.bar button {
   color: #0e3461;
   text-decoration: none;
 }
 
-@media (max-width: 767.98px) {
-  main.trading_list div.bar button {
-    width: 100%;
-    height: 77px;
-    margin: 0;
-    border: 1px solid #0e3461;
-  }
-  main.trading_list div.bar button a {
-    font-size: 16px;
-  }
+main.trading_list div.bar button {
+  width: 100%;
+  height: 77px;
+  margin: 0;
+  border: 1px solid #0e3461;
+}
+
+main.trading_list div.bar button a {
+  font-size: 16px;
 }
 
 main.trading_list div.bar button._on {
   background-color: #0e3461;
 }
 
-main.trading_list div.bar button._on a {
+main.trading_list div.bar button._on {
   color: white;
 }
 
@@ -5679,26 +5807,26 @@ main.points_list div.bar div.information {
   padding-bottom: 20px;
 }
 
-@media (max-width: 767.98px) {
-  main.points_list div.bar div.trading {
-    width: 50%;
-    display: flex;
-    flex-wrap: nowrap;
-    padding: 0;
-    border: 0;
-  }
-  main.points_list div.bar div.points,
-  main.points_list div.bar div.information {
-    width: 25%;
-    padding: 0;
-    border: 0;
-  }
-  main.points_list div.bar .fa-list-alt,
-  main.points_list div.bar .fa-search-dollar,
-  main.points_list div.bar .fa-pencil-alt {
-    width: 100%;
-    font-size: 32px;
-  }
+main.points_list div.bar div.trading {
+  width: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+  border: 0;
+}
+
+main.points_list div.bar div.points,
+main.points_list div.bar div.information {
+  width: 25%;
+  padding: 0;
+  border: 0;
+}
+
+main.points_list div.bar .fa-list-alt,
+main.points_list div.bar .fa-search-dollar,
+main.points_list div.bar .fa-pencil-alt {
+  width: 100%;
+  font-size: 32px;
 }
 
 main.points_list div.bar div.title {
@@ -5708,10 +5836,8 @@ main.points_list div.bar div.title {
   font-size: 24px;
 }
 
-@media (max-width: 767.98px) {
-  main.points_list div.bar div.title {
-    display: none;
-  }
+main.points_list div.bar div.title {
+  display: none;
 }
 
 main.points_list div.bar button {
@@ -5722,30 +5848,30 @@ main.points_list div.bar button {
   border: 0px solid red;
   font-size: 20px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
-main.points_list div.bar button a {
+main.points_list div.bar button {
   color: #0e3461;
   text-decoration: none;
 }
 
-@media (max-width: 767.98px) {
-  main.points_list div.bar button {
-    width: 100%;
-    height: 77px;
-    margin: 0;
-    border: 1px solid #0e3461;
-  }
-  main.points_list div.bar button a {
-    font-size: 16px;
-  }
+main.points_list div.bar button {
+  width: 100%;
+  height: 77px;
+  margin: 0;
+  border: 1px solid #0e3461;
+}
+
+main.points_list div.bar button a {
+  font-size: 16px;
 }
 
 main.points_list div.bar button._on {
   background-color: #0e3461;
 }
 
-main.points_list div.bar button._on a {
+main.points_list div.bar button._on {
   color: white;
 }
 
@@ -5897,26 +6023,26 @@ main.member_info div.bar div.information {
   padding-bottom: 20px;
 }
 
-@media (max-width: 767.98px) {
-  main.member_info div.bar div.trading {
-    width: 50%;
-    display: flex;
-    flex-wrap: nowrap;
-    padding: 0;
-    border: 0;
-  }
-  main.member_info div.bar div.points,
-  main.member_info div.bar div.information {
-    width: 25%;
-    padding: 0;
-    border: 0;
-  }
-  main.member_info div.bar .fa-list-alt,
-  main.member_info div.bar .fa-search-dollar,
-  main.member_info div.bar .fa-pencil-alt {
-    width: 100%;
-    font-size: 32px;
-  }
+main.member_info div.bar div.trading {
+  width: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+  border: 0;
+}
+
+main.member_info div.bar div.points,
+main.member_info div.bar div.information {
+  width: 25%;
+  padding: 0;
+  border: 0;
+}
+
+main.member_info div.bar .fa-list-alt,
+main.member_info div.bar .fa-search-dollar,
+main.member_info div.bar .fa-pencil-alt {
+  width: 100%;
+  font-size: 32px;
 }
 
 main.member_info div.bar div.title {
@@ -5926,10 +6052,8 @@ main.member_info div.bar div.title {
   font-size: 24px;
 }
 
-@media (max-width: 767.98px) {
-  main.member_info div.bar div.title {
-    display: none;
-  }
+main.member_info div.bar div.title {
+  display: none;
 }
 
 main.member_info div.bar button {
@@ -5940,30 +6064,30 @@ main.member_info div.bar button {
   border: 0px solid red;
   font-size: 20px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
-main.member_info div.bar button a {
+main.member_info div.bar button {
   color: #0e3461;
   text-decoration: none;
 }
 
-@media (max-width: 767.98px) {
-  main.member_info div.bar button {
-    width: 100%;
-    height: 77px;
-    margin: 0;
-    border: 1px solid #0e3461;
-  }
-  main.member_info div.bar button a {
-    font-size: 16px;
-  }
+main.member_info div.bar button {
+  width: 100%;
+  height: 77px;
+  margin: 0;
+  border: 1px solid #0e3461;
+}
+
+main.member_info div.bar button a {
+  font-size: 16px;
 }
 
 main.member_info div.bar button._on {
   background-color: #0e3461;
 }
 
-main.member_info div.bar button._on a {
+main.member_info div.bar button._on {
   color: white;
 }
 
@@ -6422,6 +6546,11 @@ main.member_info section.popShow {
 .out .left {
   margin: 0 auto;
   margin-top: 70px;
+  line-height: 50px;
+}
+
+.out .left .pp {
+  line-height: 50px;
 }
 
 .out .char {
@@ -6444,7 +6573,7 @@ main.member_info section.popShow {
   background-image: url("/images/intro/search.jpg");
   background-repeat: no-repeat;
   background-position: right;
-  background-size: 50px;
+  background-size: 20px;
 }
 
 .out .search-form .search {
@@ -6457,6 +6586,7 @@ main.member_info section.popShow {
   display: flex;
   justify-content: center;
   opacity: 0.6;
+  line-height: 100px;
 }
 
 @media (min-width: 992px) {
@@ -6514,8 +6644,7 @@ main.member_info section.popShow {
 
 .out .wrap:hover {
   opacity: 1;
-  transform: scale(1.02, 1.02);
-  transition: .7s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .out .wrap .sec {
@@ -6542,7 +6671,7 @@ main.member_info section.popShow {
 
 .out .ti {
   display: flex;
-  margin-top: 50px;
+  margin: 50px 0;
   justify-content: space-evenly;
 }
 
@@ -6566,6 +6695,7 @@ main.member_info section.popShow {
 }
 
 .out .con .img_in {
+  margin-top: 40px;
   width: 100%;
 }
 
@@ -6578,7 +6708,7 @@ main.member_info section.popShow {
   font-size: 16px;
   text-align: left;
   line-height: 20px;
-  padding: 20px;
+  padding: 20px 0;
   margin: 0;
 }
 
@@ -6620,6 +6750,7 @@ main.member_info section.popShow {
 .out .final .bt:hover {
   background-color: #000;
   color: #fff;
+  cursor: pointer;
 }
 
 * {
@@ -6627,7 +6758,7 @@ main.member_info section.popShow {
 }
 
 .allBlock {
-  background-image: url("../image/trade/background.png");
+  background-image: url("../dist/images/trade/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 0px 0px;
@@ -6641,6 +6772,40 @@ main.member_info section.popShow {
   display: flex;
   width: 800px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 
 .allBlock .sec1 .flexContainer .items.-left {
@@ -6667,12 +6832,17 @@ main.member_info section.popShow {
   color: #fff;
 }
 
-.allBlock .sec1 .flexContainer .items.-right h1 {
+.allBlock .sec1 .flexContainer .items.-right .title1 {
   margin-top: 15px;
   margin-bottom: 30px;
 }
 
 .allBlock .sec1 .flexContainer .items.-right .introduce {
+  margin-bottom: 30px;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .price, .allBlock .sec1 .flexContainer .items.-right .buyForm {
+  display: inline-block;
   margin-bottom: 30px;
 }
 
@@ -6770,6 +6940,18 @@ main.member_info section.popShow {
   padding: 15px;
 }
 
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .chart {
+    width: 100%;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .chart {
+    width: 100%;
+  }
+}
+
 .allBlock .tableBlock {
   color: #fff;
   padding-bottom: 100px;
@@ -6781,6 +6963,24 @@ main.member_info section.popShow {
   margin: 0 auto;
   width: 600px;
   height: 500px;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock .tableBlock table {
+    width: 100%;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .tableBlock table {
+    width: 100%;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .tableBlock table {
+    width: 100%;
+  }
 }
 
 .allBlock .tableBlock table th, .allBlock .tableBlock table td {
@@ -6796,7 +6996,7 @@ main.member_info section.popShow {
   font-size: 20px;
 }
 
-.allBlock .maskBlock {
+.allBlock .maskBlockM {
   position: absolute;
   top: 0;
   left: 0;
@@ -6805,7 +7005,7 @@ main.member_info section.popShow {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.allBlock .maskBlock .popUpBox {
+.allBlock .maskBlockM .popUpBox {
   position: absolute;
   top: 25%;
   left: 50%;
@@ -6817,7 +7017,7 @@ main.member_info section.popShow {
   border-radius: 5px;
 }
 
-.allBlock .maskBlock .popUpBox .closeBtn {
+.allBlock .maskBlockM .popUpBox .closeBtn {
   background-color: #10c5b1;
   border-radius: 2px;
   font-size: 28px;
@@ -6832,24 +7032,24 @@ main.member_info section.popShow {
   right: 0;
 }
 
-.allBlock .maskBlock .popUpBox .popContent {
+.allBlock .maskBlockM .popUpBox .popContent {
   text-align: center;
   color: #60cd90;
   margin-top: 80px;
   height: 100px;
 }
 
-.allBlock .maskBlock .popUpBox .confirmBlk {
+.allBlock .maskBlockM .popUpBox .confirmBlk {
   display: flex;
   justify-content: space-evenly;
 }
 
-.allBlock .maskBlock .popUpBox .confirmBlk .confirmBtn {
+.allBlock .maskBlockM .popUpBox .confirmBlk .confirmBtn {
   padding: 0;
   height: 35px;
 }
 
-.allBlock .maskBlock .popUpBox .confirmBlk .confirmBtn:hover {
+.allBlock .maskBlockM .popUpBox .confirmBlk .confirmBtn:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
@@ -6858,15 +7058,15 @@ main.member_info section.popShow {
   text-align: center;
 }
 
-.allBlock .maskBlock .popUpBox .confirmBlk #confirmBtn3 {
+.allBlock .maskBlockM .popUpBox .confirmBlk #confirmBtn3 {
   width: 150px;
 }
 
-.allBlock .maskBlock .popUpBox .confirmBlk #confirmBtn4 {
+.allBlock .maskBlockM .popUpBox .confirmBlk #confirmBtn4 {
   width: 150px;
 }
 
-.allBlock .maskLayer {
+.allBlock .test .maskLayer {
   position: absolute;
   top: 0;
   left: 0;
@@ -6875,7 +7075,7 @@ main.member_info section.popShow {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.allBlock .maskLayer .popUpBox {
+.allBlock .test .maskLayer .popUpBox {
   position: absolute;
   top: 5%;
   left: 50%;
@@ -6888,7 +7088,7 @@ main.member_info section.popShow {
   overflow: auto;
 }
 
-.allBlock .maskLayer .popUpBox .closeBtn {
+.allBlock .test .maskLayer .popUpBox .closeBtn {
   background-color: #10c5b1;
   border-radius: 2px;
   font-size: 28px;
@@ -6903,14 +7103,14 @@ main.member_info section.popShow {
   float: right;
 }
 
-.allBlock .maskLayer .popUpBox .popContent12 {
+.allBlock .test .maskLayer .popUpBox .popContent12 {
   text-align: center;
   color: #60cd90;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.allBlock .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark {
+.allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark {
   margin: 0 0 0 50px;
   padding: 0;
   list-style: none;
@@ -6918,20 +7118,20 @@ main.member_info section.popShow {
   flex-wrap: wrap;
 }
 
-.allBlock .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li {
+.allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li {
   width: calc((100% - 60px - 50px) / 4);
   margin-right: 20px;
   margin-bottom: 25px;
 }
 
-.allBlock .maskLayer .popUpBox .confirmBlk12 {
+.allBlock .test .maskLayer .popUpBox .confirmBlk12 {
   text-align: center;
   margin-bottom: 30px;
   display: flex;
   justify-content: space-evenly;
 }
 
-.allBlock .maskLayer .popUpBox .confirmBlk12 .confirmBtn12 {
+.allBlock .test .maskLayer .popUpBox .confirmBlk12 .confirmBtn12 {
   text-align: center;
   line-height: 30px;
   text-decoration: none;
@@ -6944,7 +7144,7 @@ main.member_info section.popShow {
   padding: 0;
 }
 
-.allBlock .maskLayer .popUpBox .confirmBlk12 .confirmBtn12:hover {
+.allBlock .test .maskLayer .popUpBox .confirmBlk12 .confirmBtn12:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
@@ -6953,16 +7153,7 @@ main.member_info section.popShow {
   text-align: center;
 }
 
-.allBlock .maskBlock13 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.allBlock .maskBlock13 .popUpBox13 {
+.allBlock .test .popUpBox {
   position: absolute;
   top: 5%;
   left: 50%;
@@ -6974,27 +7165,43 @@ main.member_info section.popShow {
   border-radius: 5px;
 }
 
-.allBlock .maskBlock13 .popUpBox13 .myRoleBlock, .allBlock .maskBlock13 .popUpBox13 .doubleArrow, .allBlock .maskBlock13 .popUpBox13 .yourRoleBlock {
+.allBlock .test .popUpBox .myRoleBlock, .allBlock .test .popUpBox .doubleArrow, .allBlock .test .popUpBox .yourRoleBlock {
   display: inline-block;
   vertical-align: middle;
 }
 
-.allBlock .maskBlock13 .popUpBox13 .myRoleBlock .myRoleP {
-  margin-bottom: 20px;
+.allBlock .test .popUpBox .myRoleBlock {
+  margin-left: 185px;
 }
 
-.allBlock .maskBlock13 .popUpBox13 .doubleArrow {
+.allBlock .test .popUpBox .myRoleBlock .myRoleP {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.allBlock .test .popUpBox .myRoleBlock .myRoleNameBlock {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.allBlock .test .popUpBox .doubleArrow {
   width: 100px;
   height: 100px;
   font-size: 100px;
   margin: 0 30px;
 }
 
-.allBlock .maskBlock13 .popUpBox13 .yourRoleBlock .yourRoleP {
+.allBlock .test .popUpBox .yourRoleBlock .yourRoleP {
   margin-bottom: 20px;
+  text-align: center;
 }
 
-.allBlock .maskBlock13 .popUpBox13 .closeBtn13 {
+.allBlock .test .popUpBox .yourRoleBlock .yourRoleNameBlock {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.allBlock .test .popUpBox .closeBtn13 {
   background-color: #10c5b1;
   border-radius: 2px;
   font-size: 28px;
@@ -7009,22 +7216,22 @@ main.member_info section.popShow {
   right: 0;
 }
 
-.allBlock .maskBlock13 .popUpBox13 .popContent13 {
+.allBlock .test .popUpBox .popContent13 {
   text-align: center;
   color: #60cd90;
   margin-bottom: 10px;
 }
 
-.allBlock .maskBlock13 .popUpBox13 .popContent13 p {
+.allBlock .test .popUpBox .popContent13 p {
   margin-top: 30px;
 }
 
-.allBlock .maskBlock13 .popUpBox13 .confirmBlk13 {
+.allBlock .test .popUpBox .confirmBlk13 {
   display: flex;
   justify-content: space-evenly;
 }
 
-.allBlock .maskBlock13 .popUpBox13 .confirmBlk13 .confirmBtn13 {
+.allBlock .test .popUpBox .confirmBlk13 .confirmBtn13 {
   text-align: center;
   line-height: 30px;
   text-decoration: none;
@@ -7039,7 +7246,7 @@ main.member_info section.popShow {
   height: 35px;
 }
 
-.allBlock .maskBlock13 .popUpBox13 .confirmBlk13 .confirmBtn13:hover {
+.allBlock .test .popUpBox .confirmBlk13 .confirmBtn13:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
@@ -7048,7 +7255,7 @@ main.member_info section.popShow {
   text-align: center;
 }
 
-.allBlock .maskBlock13 .popUpBox13 .confirmBlk13 .confirmBtn13:hover {
+.allBlock .test .popUpBox .confirmBlk13 .confirmBtn13:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
@@ -7057,28 +7264,19 @@ main.member_info section.popShow {
   text-align: center;
 }
 
-.allBlock .maskBlock14 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.allBlock .maskBlock14 .popUpBox14 {
+.allBlock .popUpBox {
   position: absolute;
   top: 25%;
   left: 50%;
   transform: translateX(-50%);
   background-color: #024f3f;
   border: 2px solid #10c5b1;
-  width: 500px;
+  width: 300px;
   height: 250px;
   border-radius: 5px;
 }
 
-.allBlock .maskBlock14 .popUpBox14 .closeBtn14 {
+.allBlock .popUpBox .closeBtn14 {
   background-color: #10c5b1;
   border-radius: 2px;
   font-size: 28px;
@@ -7093,35 +7291,36 @@ main.member_info section.popShow {
   right: 0;
 }
 
-.allBlock .maskBlock14 .popUpBox14 .popContent14 {
+.allBlock .popUpBox .popContent14 {
   text-align: center;
   color: #60cd90;
-  margin-top: 80px;
+  margin-top: 150px;
   height: 100px;
+  font-size: 32px;
 }
 
-.maskLayer {
+.allBlock .maskLayer {
   display: none;
 }
 
-.popShow {
+.allBlock .popShow {
   display: block;
 }
 
-.popUpBox {
+.allBlock .popUpBox {
   display: none;
 }
 
-.box {
+.allBlock .box {
   display: block;
   background-color: burlywood;
 }
 
-.one {
+.allBlock .one {
   background-color: aquamarine;
 }
 
-.abc {
+.allBlock .abc {
   display: block;
 }
 
@@ -7394,7 +7593,7 @@ main.signup .main_contain div._on {
 }
 
 .allBlock1 {
-  background-image: url("../image/trade/background.png");
+  background-image: url("../dist/images/trade/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 0px 0px;
@@ -7498,7 +7697,7 @@ main.signup .main_contain div._on {
 .allBlock1 .btnBlockmy .btn111 {
   color: #60cd90;
   width: 150px;
-  padding: 5px;
+  padding: 10px;
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
@@ -7508,7 +7707,7 @@ main.signup .main_contain div._on {
 .allBlock1 .btnBlockmy .btn222 {
   color: #60cd90;
   width: 150px;
-  padding: 5px;
+  padding: 10px;
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
@@ -7517,7 +7716,7 @@ main.signup .main_contain div._on {
 .allBlock1 .btnBlockmy .btn111:hover {
   color: #0e3461;
   width: 150px;
-  padding: 5px;
+  padding: 10px;
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
@@ -7527,7 +7726,7 @@ main.signup .main_contain div._on {
 .allBlock1 .btnBlockmy .btn222:hover {
   color: #0e3461;
   width: 150px;
-  padding: 5px;
+  padding: 10px;
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
@@ -7542,8 +7741,8 @@ main.signup .main_contain div._on {
 .allBlock1 .yasidey {
   width: 250px;
   background-color: #9BCFB7;
-  position: relative;
   margin-right: 60px;
+  position: relative;
 }
 
 .allBlock1 .yasidey h2 {
@@ -7554,13 +7753,14 @@ main.signup .main_contain div._on {
   display: block;
   margin: 0 auto;
   padding: 5px;
+  position: relative;
 }
 
 .allBlock1 .yasidey .ysearchBtny {
   background-color: transparent;
   position: absolute;
-  top: 40px;
-  right: 42px;
+  top: 39px;
+  right: 11px;
   border: none;
   cursor: pointer;
 }
