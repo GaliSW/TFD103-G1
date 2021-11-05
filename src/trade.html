@@ -281,6 +281,7 @@
               <img src="../dist/images/trade/product7.png">
             </div>
 
+<<<<<<< HEAD
             <h2 class="yproductNamey">小烏龜</h2>
 
             <div class="yproductPricey">
@@ -400,5 +401,99 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 </body>
+=======
+<section id="box">
+  <button @click="clickShow">click</button>
+  <hidden v-if="isShow" @stop-show="close"></hidden>
+</section>
+
+<template id="hiddenPopUps">
+  <section class="maskLayer">
+      <div class="popUpBox">
+          <div @click="clickClose" class="closeBtn">
+              x
+          </div>
+          <div class="popContent">
+              <h1>角色上架</h1>
+              <div class="input">
+                <div class="">
+                  <h3>選擇角色</h3>
+                  <div style="width:210px; border:3px solid gray; background-color: #fff; padding:10px;">
+                    <img src="./images/intro/Group 21019.png" alt="" style="width:100px;">
+                    <img src="./images/intro/Group 18851.png" alt="" style="width:100px;">
+                    <img src="./images/intro/Group 18851.png" alt="" style="width:100px;">
+                    <img src="./images/intro/Group 18851.png" alt="" style="width:100px;">
+                    <img src="./images/intro/Group 18851.png" alt="" style="width:100px;">
+                    <img src="./images/intro/Group 18851.png" alt="" style="width:100px;">
+                    <img src="./images/intro/Group 18851.png" alt="" style="width:100px;">
+                    <img src="./images/intro/Group 18851.png" alt="" style="width:100px;">
+                  </div>
+                </div>
+                <img src="./images/intro/Group 21019.png" alt="" style="width:230px; height:230px; margin-top:60px;">
+                <form action="">
+                  <h3 style="text-align: left;">咩咩咩</h3>
+                  賣家帳號:<input type="text" >
+                  <br>
+                  販售價格:<input type="text" placeholder="請輸入價格"><br>
+                  開啟交換:<label>
+                    <input type="radio" name="choice" checked>
+                    開啟
+                  </label>
+                  
+                  <label class="test2">
+                    <input type="radio" name="choice">
+                    關閉
+                  </label><br>
+                  <button type="submit" class="btbt">確定</button>
+                </form>
+              </div>
+          </div>
+          <div class="confirmBlk">
+              <a href="#" class="confirmBtn">yes</a>
+              <a href="#" class="confirmBtn">no</a>
+          </div>
+      </div>
+  </section>
+</template>
+
+<script>
+window.onload = function () {
+
+}      
+
+//宣告子組件:hiddenPopUps 並綁定區塊
+let hiddenPopUps = {
+template: '#hiddenPopUps',
+//向上層傳遞事件
+methods: {
+  clickClose() {
+      this.$emit('stop-show')
+  }
+},
+}
+
+let vm = new Vue({
+el: '#box',
+data: {
+  isShow: false,
+},
+//在父層掛載子組件
+components: {
+  hidden: hiddenPopUps
+},
+//綁定點擊事件
+methods: {
+  clickShow() {
+      this.isShow = true
+  },
+  close() {
+      this.isShow = false
+  }
+},
+})
+
+
+</script>
+>>>>>>> dev
 
 </html>
