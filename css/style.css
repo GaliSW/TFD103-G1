@@ -6932,7 +6932,7 @@ main.member_info section.popShow {
   cursor: pointer;
 }
 
-.allBlock .chart {
+.allBlock .charts {
   background-color: #fff;
   margin: 100px auto;
   width: 500px;
@@ -6941,13 +6941,13 @@ main.member_info section.popShow {
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
-  .allBlock .chart {
+  .allBlock .charts {
     width: 100%;
   }
 }
 
 @media (min-width: 100px) and (max-width: 374.98px) {
-  .allBlock .chart {
+  .allBlock .charts {
     width: 100%;
   }
 }
