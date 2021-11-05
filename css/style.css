@@ -6947,66 +6947,26 @@ main.member_info section.popShow {
   .allBlock .sec1 .flexContainer {
     width: 100%;
     flex-direction: column;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
-  }
-  .allBlock .sec1 .flexContainer .items.-right {
-    flex-grow: 1;
-    font-size: 20px;
-    padding-left: 50px;
-    color: #fff;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .title1 {
-    margin-top: 15px;
-    margin-bottom: 30px;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .introduce {
-    margin-bottom: 30px;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .price,
-  .allBlock .sec1 .flexContainer .items.-right .buyForm {
-    display: inline-block;
-    margin-bottom: 30px;
-<<<<<<< HEAD
-=======
->>>>>>> Gary
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
   }
 }
 
-@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 100px) and (max-width: 374.98px) {
-  .allBlock .sec1 .flexContainer .items.-right {
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock .sec1 .flexContainer {
     width: 100%;
     flex-direction: column;
   }
 }
 
-@media (min-width: 578px) and (max-width: 767.98px) {
-  .allBlock .sec1 .flexContainer .items.-right .items.-left {
-    flex-basis: 300px;
-    flex-shrink: 0;
-    font-size: 0;
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .sec1 .flexContainer {
     width: 100%;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     flex-direction: column;
-=======
->>>>>>> Gary
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
   }
-  .allBlock .sec1 .flexContainer .items.-right .items.-left .imgBlock {
-    width: 300px;
-    height: 300px;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-left .imgBlock img {
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .sec1 .flexContainer {
     width: 100%;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     flex-direction: column;
   }
 }
@@ -7145,171 +7105,47 @@ main.member_info section.popShow {
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   .allBlock .chart {
-=======
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
-    height: 100%;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right {
-    flex-grow: 1;
-    font-size: 20px;
-    padding-left: 50px;
-    color: #fff;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right h1 {
-    margin-top: 15px;
-    margin-bottom: 30px;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .introduce {
-    margin-bottom: 30px;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .price {
-    margin-bottom: 30px;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .price,
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm {
-    display: inline-block;
-    margin-bottom: 35px;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .price {
-    margin-left: 50px;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm {
-    margin-left: 70px;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .collectBtn {
-    color: #60cd90;
-    width: 70px;
-    padding: 5px;
-    background-color: #0e3461;
-    border: 3px solid #60cd90;
-    text-align: center;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .collectBtn:hover {
-    color: #0e3461;
-    width: 70px;
-    padding: 5px;
-    background-color: #60cd90;
-    border: 3px solid #0e3461;
-    text-align: center;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .collectBtn:hover {
-    cursor: pointer;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock {
-    color: #fff;
-    padding-bottom: 100px;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table {
-    border: 1px solid #fff;
-    border-collapse: collapse;
-    margin: 0 auto;
-    width: 600px;
-    height: 500px;
-    margin-left: 25px;
-  }
-}
-
-@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 414px) and (max-width: 577.98px) {
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table {
-<<<<<<< HEAD
-=======
->>>>>>> Gary
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
     width: 100%;
   }
 }
 
-@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 375px) and (max-width: 413.98px) {
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table {
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .chart {
     width: 100%;
   }
 }
 
-@media (min-width: 578px) and (max-width: 767.98px) {
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table .charts {
-    background-color: #fff;
-    margin: 100px auto;
-    width: 500px;
-    height: 500px;
-    padding: 15px;
-  }
+.allBlock .tableBlock {
+  color: #fff;
+  padding-bottom: 100px;
 }
 
-@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 375px) and (max-width: 413.98px) {
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table .charts {
+.allBlock .tableBlock table {
+  border: 1px solid #fff;
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 600px;
+  height: 500px;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock .tableBlock table {
     width: 100%;
   }
 }
 
-@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 100px) and (max-width: 374.98px) {
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table .charts {
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .tableBlock table {
     width: 100%;
   }
 }
 
-@media (min-width: 578px) and (max-width: 767.98px) {
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table:hover {
-    color: #0e3461;
-    width: 70px;
-    padding: 5px;
-    background-color: #60cd90;
-    border: 3px solid #0e3461;
-    text-align: center;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table:hover {
-    cursor: pointer;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .buyForm .buyBtn {
-    color: #60cd90;
-    width: 170px;
-    padding: 5px;
-    background-color: #0e3461;
-    border: 3px solid #60cd90;
-    text-align: center;
-    margin-left: 0px;
-    font-size: 24px;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .buyForm .buyBtn:hover {
-    color: #0e3461;
-    width: 170px;
-    padding: 5px;
-    background-color: #60cd90;
-    border: 3px solid #0e3461;
-    text-align: center;
-  }
-  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .buyForm .buyBtn:hover {
-    cursor: pointer;
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM .popUpBox {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #024f3f;
-    border: 2px solid #10c5b1;
-    width: 500px;
-    height: 500px;
-    padding: 15px;
-  }
-}
-
-@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 375px) and (max-width: 413.98px) {
-  .allBlock .sec1 .flexContainer .maskBlockM .popUpBox {
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .tableBlock table {
     width: 100%;
   }
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 .allBlock .tableBlock table th, .allBlock .tableBlock table td {
   border: 2px solid #fff;
   text-align: center;
@@ -7369,165 +7205,31 @@ main.member_info section.popShow {
 .allBlock .maskBlockM .popUpBox .confirmBlk {
   display: flex;
   justify-content: space-evenly;
-=======
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
-@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 100px) and (max-width: 374.98px) {
-  .allBlock .sec1 .flexContainer .maskBlockM .popUpBox {
-    width: 100%;
-  }
 }
 
-@media (min-width: 578px) and (max-width: 767.98px) {
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock {
-    color: #fff;
-    padding-bottom: 100px;
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table {
-    border: 1px solid #fff;
-    border-collapse: collapse;
-    margin: 0 auto;
-    width: 600px;
-    height: 500px;
-  }
-<<<<<<< HEAD
-=======
->>>>>>> Gary
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
+.allBlock .maskBlockM .popUpBox .confirmBlk .confirmBtn {
+  padding: 0;
+  height: 35px;
 }
 
-@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 414px) and (max-width: 577.98px) {
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table {
-    width: 100%;
-  }
+.allBlock .maskBlockM .popUpBox .confirmBlk .confirmBtn:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 0px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
 }
 
-@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 375px) and (max-width: 413.98px) {
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table {
-    width: 100%;
-  }
+.allBlock .maskBlockM .popUpBox .confirmBlk #confirmBtn3 {
+  width: 150px;
 }
 
-@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 100px) and (max-width: 374.98px) {
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table {
-    width: 100%;
-  }
+.allBlock .maskBlockM .popUpBox .confirmBlk #confirmBtn4 {
+  width: 150px;
 }
 
-@media (min-width: 578px) and (max-width: 767.98px) {
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table th,
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table td {
-    border: 2px solid #fff;
-    text-align: center;
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .test .maskLayer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .test .maskLayer .popUpBox {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #024f3f;
-    border: 2px solid #10c5b1;
-    width: 1000px;
-    height: 480px;
-    border-radius: 5px;
-    overflow: auto;
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .test .maskLayer .popUpBox .closeBtn {
-    background-color: #10c5b1;
-    border-radius: 2px;
-    font-size: 28px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    cursor: pointer;
-    position: sticky;
-    top: 0px;
-    float: right;
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .test .maskLayer .popUpBox td {
-    font-size: 20px;
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #024f3f;
-    border: 2px solid #10c5b1;
-    width: 500px;
-    height: 250px;
-    border-radius: 5px;
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .closeBtn {
-    background-color: #10c5b1;
-    border-radius: 2px;
-    font-size: 28px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .popContent {
-    text-align: center;
-    color: #60cd90;
-    margin-top: 80px;
-    height: 100px;
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .confirmBlk {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .confirmBlk .confirmBtn {
-    padding: 0;
-    height: 35px;
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .confirmBlk .confirmBtn:hover {
-    color: #0e3461;
-    width: 100px;
-    padding: 0px;
-    background-color: #60cd90;
-    border: 3px solid #0e3461;
-    text-align: center;
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .confirmBlk #confirmBtn3 {
-    width: 150px;
-  }
-  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .confirmBlk #confirmBtn4 {
-    width: 150px;
-  }
-}
-
-<<<<<<< HEAD
-.test .maskLayer {
-=======
-<<<<<<< HEAD
-.allBlock .test .maskLayery {
-=======
-.maskLayer {
->>>>>>> Gary
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
+.allBlock .test .maskLayer {
   position: absolute;
   top: 0;
   left: 0;
@@ -7536,15 +7238,7 @@ main.member_info section.popShow {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-<<<<<<< HEAD
-.test .maskLayer .popUpBox {
-=======
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox {
-=======
-.maskLayer .popUpBox {
->>>>>>> Gary
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
+.allBlock .test .maskLayer .popUpBox {
   position: absolute;
   top: 5%;
   left: 50%;
@@ -7557,15 +7251,7 @@ main.member_info section.popShow {
   overflow: auto;
 }
 
-<<<<<<< HEAD
-.test .maskLayer .popUpBox .closeBtn {
-=======
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox .closeBtn {
-=======
-.maskLayer .popUpBox .closeBtn {
->>>>>>> Gary
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
+.allBlock .test .maskLayer .popUpBox .closeBtn {
   background-color: #10c5b1;
   border-radius: 2px;
   font-size: 28px;
@@ -7580,30 +7266,14 @@ main.member_info section.popShow {
   float: right;
 }
 
-<<<<<<< HEAD
-.test .maskLayer .popUpBox .popContent12 {
-=======
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox .popContent12 {
-=======
-.maskLayer .popUpBox .popContent12 {
->>>>>>> Gary
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
+.allBlock .test .maskLayer .popUpBox .popContent12 {
   text-align: center;
   color: #60cd90;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
-.test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark {
-=======
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox .roleBlock1Mark .roleList1Mark {
-=======
-.maskLayer .popUpBox .roleBlock1Mark .roleList1Mark {
->>>>>>> Gary
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
+.allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark {
   margin: 0 0 0 50px;
   padding: 0;
   list-style: none;
@@ -7611,44 +7281,20 @@ main.member_info section.popShow {
   flex-wrap: wrap;
 }
 
-<<<<<<< HEAD
-.test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li {
-=======
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox .roleBlock1Mark .roleList1Mark li {
-=======
-.maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li {
->>>>>>> Gary
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
+.allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li {
   width: calc((100% - 60px - 50px) / 4);
   margin-right: 20px;
   margin-bottom: 25px;
 }
 
-<<<<<<< HEAD
-.test .maskLayer .popUpBox .confirmBlk12 {
-=======
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox .confirmBlk12 {
-=======
-.maskLayer .popUpBox .confirmBlk12 {
->>>>>>> Gary
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
+.allBlock .test .maskLayer .popUpBox .confirmBlk12 {
   text-align: center;
   margin-bottom: 30px;
   display: flex;
   justify-content: space-evenly;
 }
 
-<<<<<<< HEAD
-.test .maskLayer .popUpBox .confirmBlk12 .confirmBtn12 {
-=======
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox .confirmBlk12 .confirmBtn12 {
-=======
-.maskLayer .popUpBox .confirmBlk12 .confirmBtn12 {
->>>>>>> Gary
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
+.allBlock .test .maskLayer .popUpBox .confirmBlk12 .confirmBtn12 {
   text-align: center;
   line-height: 30px;
   text-decoration: none;
@@ -7661,15 +7307,7 @@ main.member_info section.popShow {
   padding: 0;
 }
 
-<<<<<<< HEAD
-.test .maskLayer .popUpBox .confirmBlk12 .confirmBtn12:hover {
-=======
-<<<<<<< HEAD
-.allBlock .test .maskLayery .popUpBox .confirmBlk12 .confirmBtn12:hover {
-=======
-.maskLayer .popUpBox .confirmBlk12 .confirmBtn12:hover {
->>>>>>> Gary
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
+.allBlock .test .maskLayer .popUpBox .confirmBlk12 .confirmBtn12:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
@@ -7678,7 +7316,7 @@ main.member_info section.popShow {
   text-align: center;
 }
 
-.test .popUpBox {
+.allBlock .test .popUpBox {
   position: absolute;
   top: 5%;
   left: 50%;
@@ -7690,45 +7328,43 @@ main.member_info section.popShow {
   border-radius: 5px;
 }
 
-.test .popUpBox .myRoleBlock,
-.test .popUpBox .doubleArrow,
-.test .popUpBox .yourRoleBlock {
+.allBlock .test .popUpBox .myRoleBlock, .allBlock .test .popUpBox .doubleArrow, .allBlock .test .popUpBox .yourRoleBlock {
   display: inline-block;
   vertical-align: middle;
 }
 
-.test .popUpBox .myRoleBlock .myRoleBlock {
+.allBlock .test .popUpBox .myRoleBlock {
   margin-left: 185px;
 }
 
-.test .popUpBox .myRoleBlock .myRoleBlock .myRoleP {
+.allBlock .test .popUpBox .myRoleBlock .myRoleP {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.test .popUpBox .myRoleBlock .myRoleBlock .myRoleNameBlock {
+.allBlock .test .popUpBox .myRoleBlock .myRoleNameBlock {
   text-align: center;
   margin-top: 20px;
 }
 
-.test .popUpBox .myRoleBlock .doubleArrow {
+.allBlock .test .popUpBox .doubleArrow {
   width: 100px;
   height: 100px;
   font-size: 100px;
   margin: 0 30px;
 }
 
-.test .popUpBox .myRoleBlock .yourRoleBlock .yourRoleP {
+.allBlock .test .popUpBox .yourRoleBlock .yourRoleP {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.test .popUpBox .myRoleBlock .yourRoleBlock .yourRoleNameBlock {
+.allBlock .test .popUpBox .yourRoleBlock .yourRoleNameBlock {
   text-align: center;
   margin-top: 20px;
 }
 
-.test .popUpBox .myRoleBlock .closeBtn13 {
+.allBlock .test .popUpBox .closeBtn13 {
   background-color: #10c5b1;
   border-radius: 2px;
   font-size: 28px;
@@ -7743,30 +7379,22 @@ main.member_info section.popShow {
   right: 0;
 }
 
-.test .popUpBox .myRoleBlock .popContent13 {
+.allBlock .test .popUpBox .popContent13 {
   text-align: center;
   color: #60cd90;
   margin-bottom: 10px;
 }
 
-.test .popUpBox .myRoleBlock .popContent13 p {
+.allBlock .test .popUpBox .popContent13 p {
   margin-top: 30px;
 }
 
-<<<<<<< HEAD
-.test .popUpBox .myRoleBlock .confirmBlk13 {
-=======
-<<<<<<< HEAD
 .allBlock .test .popUpBox .confirmBlk13 {
-=======
-.test .popUpBox .myRoleBlock .confirmBlk13 {
->>>>>>> Gary
->>>>>>> ae0f55ea47d67078fd4765d61c14a90e2be0577b
   display: flex;
   justify-content: space-evenly;
 }
 
-.test .popUpBox .myRoleBlock .confirmBlk13 .confirmBtn13 {
+.allBlock .test .popUpBox .confirmBlk13 .confirmBtn13 {
   text-align: center;
   line-height: 30px;
   text-decoration: none;
@@ -7781,7 +7409,7 @@ main.member_info section.popShow {
   height: 35px;
 }
 
-.test .popUpBox .myRoleBlock .confirmBlk13 .confirmBtn13:hover {
+.allBlock .test .popUpBox .confirmBlk13 .confirmBtn13:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
@@ -7790,7 +7418,7 @@ main.member_info section.popShow {
   text-align: center;
 }
 
-.test .popUpBox .myRoleBlock .confirmBlk13 .confirmBtn13:hover {
+.allBlock .test .popUpBox .confirmBlk13 .confirmBtn13:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
