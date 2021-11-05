@@ -5946,6 +5946,17 @@ main.trading_list div.content {
   font-size: 20px;
 }
 
+main.trading_list div.content .buyer_contain,
+main.trading_list div.content .saler_contain,
+main.trading_list div.content .buyer_change,
+main.trading_list div.content .saler_change {
+  display: none;
+}
+
+main.trading_list div.content .bookmark {
+  display: block;
+}
+
 main.trading_list div.content div.dropdown {
   text-align: right;
 }

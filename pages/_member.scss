@@ -597,6 +597,17 @@ main.trading_list {
         text-align: center;
         font-size: 20px;
 
+        .buyer_contain,
+        .saler_contain,
+        .buyer_change,
+        .saler_change {
+            display: none;
+        }
+
+        .bookmark {
+            display: block;
+        }
+
         div.dropdown {
             text-align: right;
 
