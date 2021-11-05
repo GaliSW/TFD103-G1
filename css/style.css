@@ -4021,19 +4021,14 @@ body {
   }
 }
 
-.otot {
-  background-image: url("../images/intro/bg.jpg");
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  z-index: -1;
-}
-
 .out {
   overflow-x: hidden;
   margin: 0;
   margin: 0 auto;
+  background-image: url("../images/intro/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 0;
 }
 
@@ -4136,13 +4131,11 @@ body {
 
 .out .thumbnail:hover {
   transition: .7s ease-in-out;
-  transform: scale(1.05, 1.05);
+  transform: scale(1.1, 1.1);
 }
 
 .out .title {
   text-align: center;
-  line-height: 50px;
-  padding-top: 20px;
   border: 1px solid #fff;
 }
 
@@ -4167,7 +4160,7 @@ body {
 
 .out section .racing {
   border-bottom-style: dashed;
-  border-width: 20px;
+  border-width: 40px;
   height: 50px;
   color: gray;
   margin-bottom: 50px;
@@ -4182,19 +4175,19 @@ body {
 }
 
 .out section .img {
-  width: 250px;
+  width: 300px;
   position: absolute;
-  margin-top: -140px;
-  margin-left: -290px;
+  margin-top: -170px;
+  margin-left: -350px;
 }
 
 .out .slick-next {
-  right: 0px;
+  right: -20px;
 }
 
 .out .slick-prev {
   z-index: 100;
-  left: 0px;
+  left: -20px;
 }
 
 .out .total {
@@ -6499,11 +6492,6 @@ main.member_info section.popShow {
 .out .left {
   margin: 0 auto;
   margin-top: 70px;
-  line-height: 50px;
-}
-
-.out .left .pp {
-  line-height: 50px;
 }
 
 .out .char {
@@ -6526,7 +6514,7 @@ main.member_info section.popShow {
   background-image: url("/images/intro/search.jpg");
   background-repeat: no-repeat;
   background-position: right;
-  background-size: 20px;
+  background-size: 50px;
 }
 
 .out .search-form .search {
@@ -6539,7 +6527,6 @@ main.member_info section.popShow {
   display: flex;
   justify-content: center;
   opacity: 0.6;
-  line-height: 100px;
 }
 
 @media (min-width: 992px) {
@@ -6597,7 +6584,8 @@ main.member_info section.popShow {
 
 .out .wrap:hover {
   opacity: 1;
-  transition: .3s ease-in-out;
+  transform: scale(1.02, 1.02);
+  transition: .7s ease-in-out;
 }
 
 .out .wrap .sec {
@@ -6624,7 +6612,7 @@ main.member_info section.popShow {
 
 .out .ti {
   display: flex;
-  margin: 50px 0;
+  margin-top: 50px;
   justify-content: space-evenly;
 }
 
@@ -6648,7 +6636,6 @@ main.member_info section.popShow {
 }
 
 .out .con .img_in {
-  margin-top: 40px;
   width: 100%;
 }
 
@@ -6661,7 +6648,7 @@ main.member_info section.popShow {
   font-size: 16px;
   text-align: left;
   line-height: 20px;
-  padding: 20px 0;
+  padding: 20px;
   margin: 0;
 }
 
@@ -6703,7 +6690,6 @@ main.member_info section.popShow {
 .out .final .bt:hover {
   background-color: #000;
   color: #fff;
-  cursor: pointer;
 }
 
 * {
@@ -6717,8 +6703,8 @@ main.member_info section.popShow {
   background-position: 0px 0px;
 }
 
-.allBlock img {
-  max-width: 100%;
+.allBlock .sec1 {
+  padding-top: 100px;
 }
 
 .allBlock .sec1 .flexContainer {
@@ -6751,41 +6737,30 @@ main.member_info section.popShow {
   color: #fff;
 }
 
-.allBlock .sec1 .flexContainer .items.-right .price, .allBlock .sec1 .flexContainer .items.-right .buyForm {
-  display: inline-block;
-  margin-bottom: 40px;
+.allBlock .sec1 .flexContainer .items.-right h1 {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .introduce {
+  margin-bottom: 30px;
 }
 
 .allBlock .sec1 .flexContainer .items.-right .price {
-  margin-left: 30px;
+  margin-bottom: 30px;
 }
 
-.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn {
-  color: #60cd90;
-  width: 170px;
-  padding: 5px;
-  background-color: #0e3461;
-  border: 3px solid #60cd90;
-  text-align: center;
-  margin-left: 40px;
-  font-size: 24px;
+.allBlock .sec1 .flexContainer .items.-right .price, .allBlock .sec1 .flexContainer .items.-right .collectForm {
+  display: inline-block;
+  margin-bottom: 35px;
 }
 
-.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn:hover {
-  color: #0e3461;
-  width: 170px;
-  padding: 5px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn:hover {
-  cursor: pointer;
+.allBlock .sec1 .flexContainer .items.-right .price {
+  margin-left: 50px;
 }
 
 .allBlock .sec1 .flexContainer .items.-right .collectForm {
-  margin-left: 128px;
+  margin-left: 70px;
 }
 
 .allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn {
@@ -6833,6 +6808,30 @@ main.member_info section.popShow {
   cursor: pointer;
 }
 
+.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn {
+  color: #60cd90;
+  width: 170px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  margin-left: 0px;
+  font-size: 24px;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn:hover {
+  color: #0e3461;
+  width: 170px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn:hover {
+  cursor: pointer;
+}
+
 .allBlock .chart {
   background-color: #fff;
   margin: 100px auto;
@@ -6843,7 +6842,7 @@ main.member_info section.popShow {
 
 .allBlock .tableBlock {
   color: #fff;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .allBlock .tableBlock table {
@@ -6937,7 +6936,7 @@ main.member_info section.popShow {
   width: 150px;
 }
 
-.allBlock .maskBlock12 {
+.allBlock .maskLayer {
   position: absolute;
   top: 0;
   left: 0;
@@ -6946,7 +6945,7 @@ main.member_info section.popShow {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.allBlock .maskBlock12 .popUpBox12 {
+.allBlock .maskLayer .popUpBox {
   position: absolute;
   top: 5%;
   left: 50%;
@@ -6959,7 +6958,7 @@ main.member_info section.popShow {
   overflow: auto;
 }
 
-.allBlock .maskBlock12 .popUpBox12 .closeBtn12 {
+.allBlock .maskLayer .popUpBox .closeBtn {
   background-color: #10c5b1;
   border-radius: 2px;
   font-size: 28px;
@@ -6974,13 +6973,14 @@ main.member_info section.popShow {
   float: right;
 }
 
-.allBlock .maskBlock12 .popUpBox12 .popContent12 {
+.allBlock .maskLayer .popUpBox .popContent12 {
   text-align: center;
   color: #60cd90;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.allBlock .maskBlock12 .popUpBox12 .roleBlock1Mark .roleList1Mark {
+.allBlock .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark {
   margin: 0 0 0 50px;
   padding: 0;
   list-style: none;
@@ -6988,20 +6988,20 @@ main.member_info section.popShow {
   flex-wrap: wrap;
 }
 
-.allBlock .maskBlock12 .popUpBox12 .roleBlock1Mark .roleList1Mark li {
+.allBlock .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li {
   width: calc((100% - 60px - 50px) / 4);
   margin-right: 20px;
   margin-bottom: 25px;
 }
 
-.allBlock .maskBlock12 .popUpBox12 .confirmBlk12 {
+.allBlock .maskLayer .popUpBox .confirmBlk12 {
   text-align: center;
   margin-bottom: 30px;
   display: flex;
   justify-content: space-evenly;
 }
 
-.allBlock .maskBlock12 .popUpBox12 .confirmBlk12 .confirmBtn12 {
+.allBlock .maskLayer .popUpBox .confirmBlk12 .confirmBtn12 {
   text-align: center;
   line-height: 30px;
   text-decoration: none;
@@ -7014,7 +7014,7 @@ main.member_info section.popShow {
   padding: 0;
 }
 
-.allBlock .maskBlock12 .popUpBox12 .confirmBlk12 .confirmBtn12:hover {
+.allBlock .maskLayer .popUpBox .confirmBlk12 .confirmBtn12:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
@@ -7168,6 +7168,31 @@ main.member_info section.popShow {
   color: #60cd90;
   margin-top: 80px;
   height: 100px;
+}
+
+.maskLayer {
+  display: none;
+}
+
+.popShow {
+  display: block;
+}
+
+.popUpBox {
+  display: none;
+}
+
+.box {
+  display: block;
+  background-color: burlywood;
+}
+
+.one {
+  background-color: aquamarine;
+}
+
+.abc {
+  display: block;
 }
 
 main.signup {
@@ -7447,28 +7472,10 @@ main.signup .main_contain div._on {
   padding: 0;
 }
 
-.allBlock1 img {
-  max-width: 100%;
-}
-
-@media (min-width: 992px) {
-  .allBlock1 {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .allBlock1 {
-    margin: 0 auto;
-    width: 750px;
-  }
-}
-
 .allBlock1 .roleRanksection h1 {
   color: #fff;
   text-align: center;
-  margin: 20px 0;
+  padding: 30px 0;
 }
 
 .allBlock1 .roleRanksection .rankBloCk {
@@ -7496,6 +7503,10 @@ main.signup .main_contain div._on {
   text-align: center;
 }
 
+.allBlock1 .roleRanksection .rankBloCk .roleBloCk1 .name p {
+  margin: 20px 0;
+}
+
 .allBlock1 .roleRanksection .rankBloCk .roleBloCk1 .price {
   color: #fff;
   text-align: center;
@@ -7518,6 +7529,10 @@ main.signup .main_contain div._on {
   text-align: center;
 }
 
+.allBlock1 .roleRanksection .rankBloCk .roleBloCk2 .name p {
+  margin: 20px 0;
+}
+
 .allBlock1 .roleRanksection .rankBloCk .roleBloCk2 .price {
   color: #fff;
   text-align: center;
@@ -7534,6 +7549,10 @@ main.signup .main_contain div._on {
 .allBlock1 .roleRanksection .rankBloCk .roleBloCk3 .name {
   color: #fff;
   text-align: center;
+}
+
+.allBlock1 .roleRanksection .rankBloCk .roleBloCk3 .name p {
+  margin: 20px 0;
 }
 
 .allBlock1 .roleRanksection .rankBloCk .roleBloCk3 .price {
@@ -7610,7 +7629,7 @@ main.signup .main_contain div._on {
 .allBlock1 .yasidey .ysearchBtny {
   background-color: transparent;
   position: absolute;
-  top: 87px;
+  top: 40px;
   right: 42px;
   border: none;
   cursor: pointer;
