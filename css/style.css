@@ -7287,20 +7287,14 @@ main.member_info section.popShow {
   margin-bottom: 25px;
 }
 
-.allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li li {
-  width: calc((100% - 60px - 50px) / 4);
-  margin-right: 20px;
-  margin-bottom: 25px;
-}
-
-.allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark .confirmBlk12 {
+.allBlock .test .maskLayer .popUpBox .confirmBlk12 {
   text-align: center;
   margin-bottom: 30px;
   display: flex;
   justify-content: space-evenly;
 }
 
-.allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark .confirmBlk12 .confirmBtn12 {
+.allBlock .test .maskLayer .popUpBox .confirmBlk12 .confirmBtn12 {
   text-align: center;
   line-height: 30px;
   text-decoration: none;
@@ -7313,7 +7307,7 @@ main.member_info section.popShow {
   padding: 0;
 }
 
-.allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark .confirmBlk12 .confirmBtn12:hover {
+.allBlock .test .maskLayer .popUpBox .confirmBlk12 .confirmBtn12:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
@@ -7322,7 +7316,7 @@ main.member_info section.popShow {
   text-align: center;
 }
 
-.allBlock .test .popUpBox {
+.test .popUpBox {
   position: absolute;
   top: 5%;
   left: 50%;
@@ -7334,43 +7328,43 @@ main.member_info section.popShow {
   border-radius: 5px;
 }
 
-.allBlock .test .popUpBox .myRoleBlock, .allBlock .test .popUpBox .doubleArrow, .allBlock .test .popUpBox .yourRoleBlock {
+.test .popUpBox .myRoleBlock, .test .popUpBox .doubleArrow, .test .popUpBox .yourRoleBlock {
   display: inline-block;
   vertical-align: middle;
 }
 
-.allBlock .test .popUpBox .myRoleBlock {
+.test .popUpBox .myRoleBlock {
   margin-left: 185px;
 }
 
-.allBlock .test .popUpBox .myRoleBlock .myRoleP {
+.test .popUpBox .myRoleBlock .myRoleP {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.allBlock .test .popUpBox .myRoleBlock .myRoleNameBlock {
+.test .popUpBox .myRoleBlock .myRoleNameBlock {
   text-align: center;
   margin-top: 20px;
 }
 
-.allBlock .test .popUpBox .doubleArrow {
+.test .popUpBox .doubleArrow {
   width: 100px;
   height: 100px;
   font-size: 100px;
   margin: 0 30px;
 }
 
-.allBlock .test .popUpBox .yourRoleBlock .yourRoleP {
+.test .popUpBox .yourRoleBlock .yourRoleP {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.allBlock .test .popUpBox .yourRoleBlock .yourRoleNameBlock {
+.test .popUpBox .yourRoleBlock .yourRoleNameBlock {
   text-align: center;
   margin-top: 20px;
 }
 
-.allBlock .test .popUpBox .closeBtn13 {
+.test .popUpBox .closeBtn13 {
   background-color: #10c5b1;
   border-radius: 2px;
   font-size: 28px;
@@ -7385,22 +7379,22 @@ main.member_info section.popShow {
   right: 0;
 }
 
-.allBlock .test .popUpBox .popContent13 {
+.test .popUpBox .popContent13 {
   text-align: center;
   color: #60cd90;
   margin-bottom: 10px;
 }
 
-.allBlock .test .popUpBox .popContent13 p {
+.test .popUpBox .popContent13 p {
   margin-top: 30px;
 }
 
-.allBlock .test .popUpBox .confirmBlk13 {
+.test .popUpBox .confirmBlk13 {
   display: flex;
   justify-content: space-evenly;
 }
 
-.allBlock .test .popUpBox .confirmBlk13 .confirmBtn13 {
+.test .popUpBox .confirmBlk13 .confirmBtn13 {
   text-align: center;
   line-height: 30px;
   text-decoration: none;
@@ -7415,7 +7409,7 @@ main.member_info section.popShow {
   height: 35px;
 }
 
-.allBlock .test .popUpBox .confirmBlk13 .confirmBtn13:hover {
+.test .popUpBox .confirmBlk13 .confirmBtn13:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
@@ -7424,7 +7418,7 @@ main.member_info section.popShow {
   text-align: center;
 }
 
-.allBlock .test .popUpBox .confirmBlk13 .confirmBtn13:hover {
+.test .popUpBox .confirmBlk13 .confirmBtn13:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
