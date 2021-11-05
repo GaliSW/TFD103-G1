@@ -14,7 +14,7 @@ body{
         // @include border;
         @include center;
         font-size: 0;
-        background-image: url(../image/index/bg2.jpg);
+        background-image: url(../dist/image/index/bg2.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom right;
@@ -67,40 +67,38 @@ body{
             .text{
                 // @include border;
                 position: absolute;
-                bottom: 20%;
+                // bottom: 20%;
+                // top: 500px;
+                // left: 100px;
+                margin-top: 100px;
+                margin-left: 100px;
                 font-size: $fontSizeH4;
                 color: rgb(255, 255, 255);
                 opacity: 0;
-                padding-left: 80px;
                 z-index: 1;
                 @include desktop_small{
-                    bottom: 35%;
+                    margin-top: -90px;
                 }
                 @include pad{
                     font-size: $fontSize;
-                    bottom: 40%;
-                    padding-left: 100px;
-                    position: absolute;
+                    margin-top: 20px;
                 }
                 @include pad_small{
                     font-size: $fontSize;
-                    bottom: 40%;
-                    padding-left: 100px;
-                    position: absolute;
+                    margin-top: 20px;
                 }
                 @include phone{
                     background-color: rgba(95, 141, 179, .5);
                     font-size: $fontSize;
-                    bottom: 45%;
                     padding: 20px 0 20px 20px;
-                    position: absolute;
+                    margin-top: 5px;
                 }
             }
             .roleCar{
                 // @include border;
                 position: absolute;
                 right: 0;
-                bottom: -5%;
+                margin-top: -160px;
                 opacity: 0;
                 img{
                     width: 500px;
@@ -114,8 +112,22 @@ body{
                         width: 400px;
                     }
                 }
+                @include desktop_small{
+                    margin-top: -90px;
+                }
+                @include pad{
+                    margin-top: 70px;
+                }
+                @include pad_small{
+                    margin-top: 70px;
+                }
                 @include phone{
                     right: -80px;
+                    margin-top: 20px;
+                    img{
+                        max-width: 90%;
+                        width: 300px;
+                    }
                 }
             }
         }
@@ -123,7 +135,7 @@ body{
     
     // 首頁第二屏
     .indexTwo{
-        background: url(../image/index/bluebg.jpeg)0 0 fixed;
+        background: url(../dist/image/index/bluebg.jpeg)0 0 fixed;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
@@ -250,6 +262,15 @@ body{
             padding-left: 45%;
             padding-top: 30%;
             transform: rotate(7.5deg);
+            @include pad{
+                padding-left: 40%;
+            }
+            @include pad_small{
+                
+            }
+            @include phone{
+                
+            }
             img{
                 width: 100%;
             }
@@ -268,7 +289,7 @@ body{
             }
             @include pad_small{
                 width: 130px;
-                margin: 28% 0 0 68%;
+                margin: 18% 0 0 68%;
             }
             @include phone{
                 width: 150px;
@@ -278,23 +299,61 @@ body{
                 width: 100%;
             }
         }
+        .pointLogin{
+            padding-left: 10%;
+            @include pad{
+                padding-left: 72%;
+            }
+            @include pad_small{
+                padding-left: 64%;
+            }
+            @include phone{
+                padding-left: 56%;
+            }
+            a{
+                text-decoration: none;
+                .btn{
+                    @include border_r(10);
+                    @include pad{
+                        @include btn_blur(120px, 10px);
+                        &:hover{
+                            @include btn_on(120px, 10px);
+                        }
+                    }
+                    @include pad_small{
+                        @include btn_blur(100px, 8px);
+                        font-size: $fontSizeMin;
+                        &:hover{
+                            @include btn_on(100px, 8px);
+                        }
+                    }
+                    @include phone{
+                        @include btn_blur(100px, 8px);
+                        font-size: $fontSizeMin;
+                        &:hover{
+                            @include btn_on(100px, 8px);
+                        }
+                    }
+                }
+            }
+        }
         .dialogclude{
             // @include border;
             position: relative;
             width: 180px;
             transform: rotate(-20deg);
-            margin: 0 0 0 70%;
+            margin: -8% 0 0 70%;
             @include desktop_small{
                 width: 180px;
-                margin: 0 0 0 60%;
+                margin: -10% 0 0 64%;
             }
             @include pad{
                 width: 150px;
-                margin: 10% 0 0 58%;
+                margin: 8% 0 0 50%;
             }
             @include pad_small{
                 width: 100px;
-                margin: 10% 0 0 60%;
+                margin: 0 0 0 50%;
             }
             @include phone{
                 width: 100px;
@@ -381,22 +440,35 @@ body{
         margin-top: 2%;
         margin-bottom: 10%;
         .bgColor{
-            // @include border(3,rgb(209, 184, 102));
             @include border(3,rgb(124, 147, 190));
             @include border_r(10);
             @include center;
             max-width: 1200px;
             width: 100%;
             height: 100%;
-            // background-color: rgb(66, 114, 103);
-            background-image: url(../image/index/bg05.png);
-            background-size: cover;
+            @include pad{
+                height: 70%;
+            }
+            @include pad_small{
+                height: 70%;
+            }
+            @include phone{
+                height: 70%;
+            }
+            img{
+                background-size: cover;
+                position: absolute;
+                z-index: -1;
+            }
             position: relative;
             .intro{
                 // @include border;
+                // position: absolute;
                 height: 450px;
+                width: 620px;
+                display: inline-block;
                 h1{
-                    margin: 15% 0 0 10%;
+                    margin: 25% 0 0 10%;
                     font-size: $fontSizeH1;
                     color: #fff;
                 }
@@ -406,30 +478,55 @@ body{
                     font-weight: 400;
                     color: #fff;
                 }
+            }
+            .machineBox{
+                position: absolute;
+                right: 30px;
+                // @include border;
+                width: 300px;
+                height: 450px;
+                display: inline-block;
+                @include pad{
+                    display: none;
+                }
+                @include pad_small{
+                    display: none;
+                }
+                @include phone{
+                    display: none;
+                }
                 img{
-                    width: 280px;
+                    width: 100%;
                     position: absolute;
-                    right: 50px;
                     bottom: 10px;
                 }
                 // 球
                 .pokemon{
                     width: 40px;
                     position: absolute;
-                    right: 5%;
-                    bottom: 35%;
-                    img{
-                        width: 100%;
-                        &:nth-child(1){
-                            margin-right: 75px;
+                    right: 60px;
+                    bottom: 160px;
+                    .images{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .pkm1{
+                        img{
+                            right: 100px;
                             margin-bottom: 30px;
                         }
-                        &:nth-child(2){
-                            margin-right: 130px;
+                    }
+                    .pkm2{
+                        img{
+                            right: 43px;
+                            margin-bottom: 60px;
                         }
-                        &:nth-child(3){
-                            margin-right: 23px;
-                            margin-bottom: 90px;
+                    }
+                    .pkm3{
+                        img{
+                            right: 150px;
+                            margin-bottom: 80px;
                         }
                     }
                 }
@@ -458,7 +555,6 @@ body{
             @include border_r(18);
             background-color: #fff;
             width: 220px;
-            height: 260px;
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -475,10 +571,10 @@ body{
         .col-2{
             margin-bottom: 5%;
             @include desktop_small{
-                width: 35%;
+                width: 26%;
             }
             @include pad{
-                width: 40%;
+                width: 30%;
             }
             @include pad_small{
                 width: 42%;
@@ -501,20 +597,23 @@ body{
             }
         }
     }
-    
-    .btn {
-        @include btn_blur(130px, 10px);
-        @include center;
-        margin-top: 6%;
-        cursor: pointer;
-        &:hover{
-            @include btn_on(130px, 10px);
+    a{
+        text-decoration: none;
+        .btn {
+            @include border_r(10);
+            @include btn_blur(130px, 10px);
+            @include center;
+            margin-top: 2%;
+            cursor: pointer;
+            &:hover{
+                @include btn_on(130px, 10px);
+            }
         }
     }
     
     // 首頁第三屏
     .indexThree {
-        background: url(../image/index/strbg.jpg)0 0 fixed;
+        background: url(../dist/image/index/strbg.jpg)0 0 fixed;
         background-repeat: no-repeat;
         position: relative;
         width: 100%;
