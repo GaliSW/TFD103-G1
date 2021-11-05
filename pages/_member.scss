@@ -1,7 +1,7 @@
 main.member {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../image/member/back.jpg);
+    background-image: url(../dist/images/member/back.jpg);
     padding-bottom: 100px;
     width: 100%;
     background-position: left top;
@@ -177,6 +177,15 @@ main.member {
 
         }
 
+        .buyer_contain,
+        .saler_contain {
+            display: none;
+        }
+
+        .bookmark {
+            display: block;
+        }
+
         div.contain_bar {
             background-color: $dark_blue;
             color: white;
@@ -236,21 +245,11 @@ main.member {
                 cursor: pointer;
             }
 
-            button.reject {
-                background-color: #024f3f;
-                border-color: #51AB82;
-                color: #51AB82;
-            }
 
             button:hover {
                 @include btn_on(100, 10px);
                 cursor: pointer;
             }
-
-
-
-
-
 
             @media (max-width: 767.98px) {
                 div.trade_button {
@@ -267,6 +266,7 @@ main.member {
                     @include btn_on(80, 5px);
                 }
             }
+
 
             button.delete {
                 background-color: transparent;
@@ -321,6 +321,14 @@ main.member {
             div._off::before {
                 height: 100px;
 
+            }
+        }
+
+        .saler_contain {
+            button.reject {
+                background-color: #024F7B;
+                border-color: #51AB82;
+                color: #51AB82;
             }
         }
 
@@ -439,7 +447,7 @@ main.member {
 main.trading_list {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../image/member/back.jpg);
+    background-image: url(../dist/images/member/back.jpg);
 
     padding-bottom: 100px;
     width: 100%;
@@ -589,6 +597,17 @@ main.trading_list {
         text-align: center;
         font-size: 20px;
 
+        .buyer_contain,
+        .saler_contain,
+        .buyer_change,
+        .saler_change {
+            display: none;
+        }
+
+        .bookmark {
+            display: block;
+        }
+
         div.dropdown {
             text-align: right;
 
@@ -681,7 +700,7 @@ main.trading_list {
 main.points_list {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../image/member/back.jpg);
+    background-image: url(../dist/images/member/back.jpg);
 
     padding-bottom: 100px;
     width: 100%;
@@ -870,7 +889,7 @@ main.points_list {
 main.member_info {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../image/member/back.jpg);
+    background-image: url(../dist/images/member/back.jpg);
 
     padding-bottom: 100px;
     width: 100%;

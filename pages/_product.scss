@@ -3,19 +3,17 @@
   }
 
 .allBlock{
-    background-image: url("../image/trade/background.png");
+    background-image: url("../dist/images/trade/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 0px 0px;
-    img{
-        max-width: 100%;
-    }
-
+    
 
 //角色資訊
 
 .sec1{
 
+    padding-top: 100px;
     .flexContainer{
         display: flex;
         width: 800px;
@@ -68,28 +66,41 @@
             font-size: 20px;
             padding-left: 50px;
             color: #fff;
+
+            .title1{
+               margin-top: 15px;
+               margin-bottom: 30px;
+            }    
+
+            .introduce{
+                margin-bottom: 30px;
+            }
+
             .price, .buyForm{
                 display: inline-block;
                 //border: 1px solid red;
-                margin-bottom: 40px;
+                margin-bottom: 30px;
             }
 
             .price{
-                margin-left: 30px;
+                //border: 1px solid red;
+                margin-bottom: 30px;
             }
 
-            .buyForm{
-                .buyBtn{
-                    @include btn_blur (170px, 5px);
-                    &:hover {@include btn_on (170px, 5px)}
-                    margin-left: 40px;
-                    font-size: $fontSizeH3;
-                    &:hover {cursor: pointer}
-                }
+            
+
+            .price, .collectForm{
+                display: inline-block;
+                //border: 1px solid blue;
+                margin-bottom: 35px;
+            }
+
+            .price{
+                margin-left: 50px;
             }
 
             .collectForm{
-                margin-left: 128px;
+                margin-left: 70px;
                 .collectBtn{
                     @include btn_blur (70px, 5px);
                     &:hover {@include btn_on (70px, 5px)}
@@ -103,6 +114,19 @@
                     &:hover {cursor: pointer}
                 }
             }
+
+
+            .buyForm{
+                .buyBtn{
+                    @include btn_blur (170px, 5px);
+                    &:hover {@include btn_on (170px, 5px)}
+                    margin-left: 0px;
+                    font-size: $fontSizeH3;
+                    &:hover {cursor: pointer}
+                }
+            }
+
+            
 
         }
     }
@@ -130,8 +154,7 @@
 
 .tableBlock{
     color: #fff;
-    margin-bottom: 100px;
-    
+    padding-bottom: 100px;
 table{
     border: 1px solid #fff;
     border-collapse: collapse;
@@ -165,7 +188,7 @@ table{
 
 ////////購買視窗
 
-.maskBlock{
+.maskBlockM{
     position: absolute;
     top: 0;
     left: 0;
@@ -229,13 +252,9 @@ table{
 }
 
 
-
-
-
-
 ///////////////交換pop視窗-1
-
-.maskBlock12{
+.test{
+.maskLayer{
     position: absolute;
     top: 0;
     left: 0;
@@ -243,7 +262,7 @@ table{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     
-    .popUpBox12{
+    .popUpBox{
         position: absolute;
         top: 5%;
         left: 50%;
@@ -256,7 +275,7 @@ table{
         overflow: auto;
        
     
-        .closeBtn12{
+        .closeBtn{
             background-color: rgba(16, 197, 177, 1);
             border-radius: 2px;
             font-size: 28px;
@@ -275,6 +294,7 @@ table{
             text-align: center;
             color: rgba(96, 205, 144, 1);
             margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         .roleBlock1Mark{
@@ -325,19 +345,12 @@ table{
     }
 }
 
-
+}
 ////////////交換確認視窗-2
 
 
-.maskBlock13{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    
-    .popUpBox13{
+.test{
+    .popUpBox{
         position: absolute;
         top: 5%;
         left: 50%;
@@ -354,10 +367,17 @@ table{
         }     
 
         .myRoleBlock{
-            
+            margin-left: 185px;
+
             .myRoleP{
                 margin-bottom: 20px;
+                text-align: center;
             } 
+
+            .myRoleNameBlock{
+                text-align: center;
+                margin-top: 20px;
+            }
         }
 
         .doubleArrow{
@@ -372,7 +392,14 @@ table{
             
             .yourRoleP{
                 margin-bottom: 20px;
-            } 
+                text-align: center;
+            }
+            
+            .yourRoleNameBlock{
+                text-align: center;
+                margin-top: 20px;
+            }
+
         }
 
 
@@ -431,24 +458,19 @@ table{
     }
 }
 
+}
 ///////////////交換pop視窗-3
 
-.maskBlock14{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    
-    .popUpBox14{
+
+.allBlock{    
+    .popUpBox{
         position: absolute;
         top: 25%;
         left: 50%;
         transform: translateX(-50%);
         background-color: rgba(2, 79, 63, 1);
         border: 2px solid rgba(16, 197, 177, 1);
-        width: 500px;
+        width: 300px;
         height: 250px;
         border-radius: 5px;
     
@@ -470,28 +492,44 @@ table{
         .popContent14{
             text-align: center;
             color: rgba(96, 205, 144, 1);
-            margin-top: 80px;
+            margin-top: 150px;
             height: 100px;
+            font-size: 32px;
         }
 
         
            
         }
-    }
+
 }
 
 
 
 
+/////////////////////pop視窗
+.allBlock{
+    .maskLayer{
+        display: none;
+    }
+    .popShow{
+        display: block;
+    }
+    .popUpBox{
+    display: none; 
+    }
+    .box{
+        display: block;
+        background-color:burlywood;
+    }
+    .one{
+        background-color: aquamarine;
+    }
+    .abc{
+        display:block
+    }
 
 
-
-
-
-
-
-
-
+}
 
 
 
