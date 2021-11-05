@@ -4,7 +4,7 @@
 
 
 .allBlock1{
-    background-image: url("../image/trade/background.png");
+    background-image: url("../dist/images/trade/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 0px 0px;
@@ -119,22 +119,22 @@
     margin: 100px 0px;
     
     .btn111{
-        @include btn_blur (150px, 5px);
+        @include btn_blur (150px, 10px);
         margin-right: 100px;
     }
     
     .btn222{
-        @include btn_blur (150px, 5px){
+        @include btn_blur (150px, 10px){
         };
     }
 
     .btn111:hover{
-        @include btn_on (150px, 5px);
+        @include btn_on (150px, 10px);
         cursor: pointer;
     }    
 
     .btn222:hover{
-        @include btn_on (150px, 5px);
+        @include btn_on (150px, 10px);
         cursor: pointer;    
     }    
 }
@@ -151,8 +151,8 @@
     //border: 1px solid red;
     width: 250px;
     background-color: #9BCFB7;
-    position: relative;
     margin-right: 60px;
+    position: relative;
 
     h2{
         text-align: center;
@@ -163,17 +163,21 @@
         @include center;
         //border: 1px solid red;
         padding: 5px;
+        position: relative;
     }    
 
     .ysearchBtny{
         background-color:transparent;
         position: absolute;
-        top: 40px;
-        right: 42px;
+        top: 39px;
+        right: 11px;
         border: none;
         cursor: pointer;
     }
     
+    
+
+
     .ycheckboxy{
         //border: 1px solid blue;
        
@@ -302,4 +306,5 @@
 }
 
 }
+
 
