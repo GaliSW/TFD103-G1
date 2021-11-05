@@ -2,7 +2,6 @@
     box-sizing: border-box;
   }
 
-  
 
 .allBlock1{
     background-image: url("../image/trade/background.png");
@@ -11,18 +10,8 @@
     background-position: 0px 0px;
     margin: 0;
     padding: 0;
-    img{
-        max-width: 100%;
-    }
-    @include desktop{
-    //border: 1px solid blue; 
-    margin: 0 auto;
-     }
-    @include desktop_small{
-        //border: 1px solid red;
-        margin: 0 auto;
-        width: 750px;
-    }
+   
+   
 
 
 ////////////////////////////////////////////////角色排行
@@ -32,7 +21,8 @@
     h1{
         color:#fff;
         text-align: center;
-        margin: 20px 0;
+        //@include border;
+        padding: 30px 0;
     }
     
     .rankBloCk{
@@ -57,6 +47,10 @@
             .name{
                 color:#fff;
                 text-align: center;
+
+                p{
+                    margin: 20px 0;
+                }
             }
 
             .price{
@@ -78,6 +72,10 @@
             .name{
                 color:#fff;
                 text-align: center;
+                
+                p{
+                    margin: 20px 0;
+                }
             }
 
             .price{
@@ -97,6 +95,10 @@
             .name{
                 color:#fff;
                 text-align: center;
+
+                p{
+                    margin: 20px 0;
+                }
             }
 
             .price{
@@ -166,7 +168,7 @@
     .ysearchBtny{
         background-color:transparent;
         position: absolute;
-        top: 87px;
+        top: 40px;
         right: 42px;
         border: none;
         cursor: pointer;
@@ -300,3 +302,4 @@
 }
 
 }
+

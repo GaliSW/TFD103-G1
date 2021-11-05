@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>扭蛋趣</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./vue.min.js"></script>
+    <script src="../vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
@@ -16,7 +15,7 @@
 </head>
 
 <body>
-    @@include('./header.html')
+    <!-- @@include('./header.html') -->
     <div class="gaChaBgBlk"></div>
     <div class="carouselTitle">
         <h1>扭蛋池角色</h1>
@@ -26,27 +25,27 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="slider-image">
-                    <img src="./image/gacha/role1.jpg" alt="slide 1">
+                    <img src="../dist/images/gacha/role1.jpg" alt="slide 1">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slider-image">
-                    <img src="./image/gacha/role2.jpg" alt="slide 2">
+                    <img src="../dist/images/gacha/role2.jpg" alt="slide 2">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slider-image">
-                    <img src="./image/gacha/role3.jpg" alt="slide 3">
+                    <img src="../dist/images/gacha/role3.jpg" alt="slide 3">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slider-image">
-                    <img src="./image/gacha/role4.jpg" alt="slide 4">
+                    <img src="../dist/images/gacha/role4.jpg" alt="slide 4">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slider-image">
-                    <img src="./image/gacha/role5.jpg" alt="slide 5">
+                    <img src="../dist/images/gacha/role5.jpg" alt="slide 5">
                 </div>
             </div>
             <!-- Add Pagination -->
@@ -75,11 +74,11 @@
                         <span id="message">GaCha!!!</span>
                         <div class="lotterybg">
                             <canvas id="myCanvas" width="285px" height="170px"></canvas>
-                            <img src="./image/gachaGame/lighting.png" class="lighting" />
+                            <img src="../dist/images/gachaGame/lighting.png" class="lighting" />
                         </div>
                     </div>
                     <div id="box0">
-                        <img src="./image/gachaGame/—Pngtree—round button_576652.png" id="gachaStart"
+                        <img src="../dist/images/gachaGame/—Pngtree—round button_576652.png" id="gachaStart"
                             @click="clickShow" />
                         <hidden v-if="isShow" @stop-show="close"></hidden>
                     </div>
@@ -101,10 +100,10 @@
                     </template>
                     <div class="award"><span id="awardBall"></span></div>
                 </div>
-                <img src="./image/gachaGame/Pokemon.png" id="ball1" class="gachaImgSrc">
-                <img src="./image/gachaGame/Pokemon.png" id="ball2" class="gachaImgSrc">
-                <img src="./image/gachaGame/Pokemon.png" id="ball3" class="gachaImgSrc">
-                <img src="./image/gachaGame/Pokemon.png" id="ball4" class="gachaImgSrc">
+                <img src="../dist/images/gachaGame/Pokemon.png" id="ball1" class="gachaImgSrc">
+                <img src="../dist/images/gachaGame/Pokemon.png" id="ball2" class="gachaImgSrc">
+                <img src="../dist/images/gachaGame/Pokemon.png" id="ball3" class="gachaImgSrc">
+                <img src="../dist/images/gachaGame/Pokemon.png" id="ball4" class="gachaImgSrc">
             </div>
             <div class="GaChaInfo col-6">
                 <h1>扭蛋介紹</h1>
@@ -147,11 +146,11 @@
                             </div>
                         </section>
                     </template>
-                    <a href="">點數不夠？</a>
                 </div>
+                <a href="">點數不夠？</a>
             </div>
         </div>
-        <section class="pintooBlk">
+        <section class="pintooBlk" id="pintooBlk">
             <div class="miniGameTitle">怪哩怪氣的小遊戲</div>
             <div class="pin">
                 <div class="pintooMask" id="pintooMask">
@@ -173,7 +172,7 @@
                 <th col-3>角色能力值</th>
             </tr>
             <tr>
-                <td><img src="./image/gacha/role9.png" alt="#"></td>
+                <td><img src="../dist/images/gacha/role9.png" alt="#"></td>
                 <td>米奇林貓</td>
                 <td>ani3450395</td>
                 <td class="chart">
@@ -192,7 +191,7 @@
                 <th>角色能力值</th>
             </tr>
             <tr>
-                <td><img src="./image/gacha/role10.png" alt="#"></td>
+                <td><img src="../dist/images/gacha/role10.png" alt="#"></td>
                 <td>Duck不必</td>
                 <td>ani3450395</td>
                 <td class="chart">
@@ -211,7 +210,7 @@
                 <th>角色能力值</th>
             </tr>
             <tr>
-                <td><img src="./image/gacha/role9.png" alt="#"></td>
+                <td><img src="../dist/images/gacha/role9.png" alt="#"></td>
                 <td>米奇林貓</td>
                 <td>ani3450395</td>
                 <td class="chart">
@@ -230,34 +229,34 @@
     <div id="boxThree" class="boxBlur">
         <section class="rolesBlk">
             <div class="col-3">
-                <img src="./image/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role7.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="./image/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role7.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="./image/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role7.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="./image/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role7.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="./image/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role7.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="./image/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role7.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="./image/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role7.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
-        </section>
+    </div>
     </div>
 
     <section id="rolesPop" class="none">
@@ -268,7 +267,7 @@
                 </div>
                 <div id="rolePopContent">
                     <div class="roleImg">
-                        <img src="./image/gacha/role6.jpg" alt="">
+                        <img src="../dist/images/gacha/role6.jpg" alt="">
                     </div>
                     <div class="roleInfoPara">
                         <div class="para">
@@ -288,19 +287,19 @@
         </div>
     </section>
 
-    @@include('./footer.html')
+    <!-- @@include('./footer.html') -->
 </body>
 
-<script src="./js/gacha/changeLabel.js"></script>
-<script src="./js/gacha/swiper.js"></script>
-<script src="./js/gacha/gachaGame.js"></script>
-<script src="./js/gacha/pintoo.js"></script>
-<script src="./js/gacha/chart.js"></script>
-<script src="./js/gacha/gachaConfirmPop.js"></script>
-<script src="./js/gacha/toGacha.js"></script>
-<script src="./js/gacha/pop.js"></script>
-<script src="./js/gacha/roleInfoChart.js"></script>
-<script src="./js/gacha/rolePop.js"></script>
+<script src="../dist/js/gacha/changeLabel.js"></script>
+<script src="../dist/js/gacha/swiper.js"></script>
+<script src="../dist/js/gacha/gachaGame.js"></script>
+<script src="../dist/js/gacha/pintoo.js"></script>
+<script src="../dist/js/gacha/chart.js"></script>
+<script src="../dist/js/gacha/gachaConfirmPop.js"></script>
+<script src="../dist/js/gacha/toGacha.js"></script>
+<script src="../dist/js/gacha/pop.js"></script>
+<script src="../dist/js/gacha/roleInfoChart.js"></script>
+<script src="../dist/js/gacha/rolePop.js"></script>
 <!-- <script src="./js/pagination.js"></script> -->
 
 </html>

@@ -159,6 +159,12 @@ function play() {
 
       point.value -= 300;
       mask.classList.add('none');
+      let element = document.getElementById('pintooBlk');
+
+      function scrollToTop() {
+        element.scrollIntoView(false);
+      }
+      scrollToTop();
     }, 1100);
   }
 }
