@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header></header>
+    @@include('./header.html')
     <main class="trading_list">
         <div class="main_contain">
 
@@ -46,10 +46,10 @@
             <div id="app0">
                 <!-- 頁籤 -->
                 <div class="button_bar ">
-                    <button class="buyer " :class="{'bookmark': b_contain }" @click= showBuyContain()>購買</button>
-                    <button class="buyer" :class="{'bookmark': b_change }" @click= showBuyChange()>交換(買)</button>
-                    <button class="saler " :class="{'bookmark': s_contain }" @click= showSalerContain()>販售</button>
-                    <button class="saler" :class="{'bookmark': s_change }" @click= showSalerChange()>交換(賣)</button>
+                    <button class="buyer " :class="{'bookmark': b_contain }" @click=showBuyContain()>購買</button>
+                    <button class="buyer" :class="{'bookmark': b_change }" @click=showBuyChange()>交換(買)</button>
+                    <button class="saler " :class="{'bookmark': s_contain }" @click=showSalerContain()>販售</button>
+                    <button class="saler" :class="{'bookmark': s_change }" @click=showSalerChange()>交換(賣)</button>
 
                 </div>
 
@@ -60,18 +60,18 @@
                     </keep-alive>
                 </div>
             </div>
-        
+
         </div>
 
     </main>
 
-    <footer></footer>
+    @@include('./footer.html')
     <script src="../js/member/trading_list.js">
-        
+
     </script>
 
-    
-        
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
 

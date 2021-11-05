@@ -168,7 +168,7 @@ Ping.prototype.local = function () {
         arr2.push(arr1[i]);
     }
     arr2.sort(function (a, b) {
-        // return Math.random() - 0.5;
+        return Math.random() - 0.5;
     });
     arr2.push(arr1[this.len - 1]);
     // console.log(arr2);
