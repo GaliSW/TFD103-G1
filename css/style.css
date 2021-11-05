@@ -1335,6 +1335,7 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
+  margin-top: 50px;
 }
 
 .gaChaLabelBtn .gachaPageLable button {
@@ -1348,6 +1349,13 @@ body {
   border-radius: 10px;
   transition: .5s;
   cursor: pointer;
+  margin: 0 30px;
+}
+
+@media (max-width: 800px) {
+  .gaChaLabelBtn .gachaPageLable button {
+    margin: 0;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1404,7 +1412,6 @@ body {
 .gachaPage {
   margin: 0 auto;
   max-width: 1200px;
-  margin-top: 100px;
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
@@ -1420,7 +1427,7 @@ body {
 }
 
 .gachaPage .GaCha {
-  margin-top: 100px;
+  margin-top: 30px;
   display: flex;
 }
 
@@ -1545,9 +1552,11 @@ body {
   position: absolute;
   width: 60px;
   margin-top: 450px;
-  margin-left: 60%;
+  margin-left: 61%;
   cursor: pointer;
   transition: .3s;
+  animation: btn 2s ease-out;
+  animation-iteration-count: infinite;
 }
 
 #gachaStart:hover {
@@ -1557,6 +1566,18 @@ body {
 @media (min-width: 375px) and (max-width: 413.98px) {
   #gachaStart {
     margin-top: 400px;
+  }
+}
+
+@keyframes btn {
+  0% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.7);
   }
 }
 
@@ -1576,7 +1597,7 @@ body {
   background: url(../image/gachaGame/Pokemon.png) no-repeat;
   background-size: contain;
   animation: drop 1s ease-out forwards;
-  -webkit-animation: drop 1s ease-out forwards;
+  -webkit-animation: drop 3s ease-out forwards;
 }
 
 .dropBall2 {
@@ -1589,7 +1610,7 @@ body {
   display: block;
   background: url(../image/gachaGame/Pokemon.png) no-repeat;
   background-size: contain;
-  animation: drop 1s ease-out forwards;
+  animation: drop 3s ease-out forwards;
   -webkit-animation: drop 1s ease-out forwards;
 }
 
@@ -1603,7 +1624,7 @@ body {
   display: block;
   background: url(../image/gachaGame/Pokemon.png) no-repeat;
   background-size: contain;
-  animation: drop 1s ease-out forwards;
+  animation: drop 3s ease-out forwards;
   -webkit-animation: drop 1s ease-out forwards;
 }
 
@@ -1618,7 +1639,7 @@ body {
   display: block;
   background: url(../image/gachaGame/Pokemon.png) no-repeat;
   background-size: contain;
-  animation: drop 1s ease-out forwards;
+  animation: drop 3s ease-out forwards;
   -webkit-animation: drop 1s ease-out forwards;
 }
 
@@ -1627,7 +1648,7 @@ body {
     transform: scale(0.7);
   }
   50% {
-    transform: scale(1);
+    transform: scale(1.5);
   }
   51% {
     transform: translateY(0px);
@@ -1728,9 +1749,11 @@ body {
 }
 
 .GaChaInfo h4 {
+  margin-top: 30px;
+  margin-bottom: 10px;
   text-align: center;
   color: #fff;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1739,48 +1762,81 @@ body {
   }
 }
 
+.GaChaInfo h4 .fa-coins {
+  color: #ffffa3;
+}
+
 .GaChaInfo label {
   color: #fff;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .GaChaInfo input {
+  border: 3px solid #60cd90;
+  border-radius: 3px;
   cursor: not-allowed;
-  line-height: 16px;
-  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
 }
 
 .GaChaInfo .goBtnBlk {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #0e3461;
+  margin: 0 auto;
+  border-radius: 100px;
+  border: 3px solid #60cd90;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 10px 10px 1px;
 }
 
 .GaChaInfo .goBtnBlk .goBtn {
+  animation: btnGo 3s linear;
+  animation-iteration-count: infinite;
   font-size: 24px;
   color: #60cd90;
-  width: 300px;
-  padding: 20px;
+  width: 150px;
+  padding: 10px;
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  border-radius: 50px;
   cursor: pointer;
   transition: .5s;
 }
 
 .GaChaInfo .goBtnBlk .goBtn:hover {
   color: #0e3461;
-  width: 300px;
-  padding: 20px;
+  width: 150px;
+  padding: 10px;
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
 }
 
-.GaChaInfo .goBtnBlk a {
+.GaChaInfo a {
   color: #10c5b1;
+}
+
+@keyframes btnGo {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(50deg);
+  }
+  75% {
+    transform: rotateZ(-50deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
 }
 
 .gachaMaskLayer {
@@ -2034,6 +2090,7 @@ body {
   padding: 20px 0;
   font-size: 28px;
   text-align: center;
+  border-bottom: 1px dotted #fff;
 }
 
 @media (max-width: 991.98px) {
@@ -2140,7 +2197,7 @@ body {
 }
 
 .myRoleBlk table img {
-  width: 300px;
+  width: 250px;
 }
 
 @media (max-width: 575.98px) {
@@ -2176,6 +2233,19 @@ body {
   flex-direction: column;
   margin: 0 0px 30px 0px;
   align-items: center;
+  margin-top: 80px;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .rolesBlk div {
+    width: 33%;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .rolesBlk div {
+    width: 50%;
+  }
 }
 
 .rolesBlk img {

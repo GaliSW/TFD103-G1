@@ -51,13 +51,21 @@ body {
         @include center;
         display: flex;
         justify-content: space-evenly;
+        margin-top: 50px;
+
 
         button {
+
             text-decoration: none;
             @include btn_blur(200px, 20px);
             @include border_r(10);
             transition: .5s;
             cursor: pointer;
+            margin: 0 30px;
+
+            @media (max-width:800px) {
+                margin: 0;
+            }
 
             @media (max-width:600px) {
                 @include btn_blur(100px, 20px);
@@ -89,7 +97,6 @@ body {
     // @include border();
     @include center;
     max-width: 1200px;
-    margin-top: 100px;
 
     @include pad {
         margin-top: 50px;
@@ -101,7 +108,7 @@ body {
 
     .GaCha {
         // @include border();
-        margin-top: 100px;
+        margin-top: 30px;
         display: flex;
 
         @media (max-width:991.98px) {
@@ -242,21 +249,32 @@ body {
     // z-index: 1;
     width: 60px;
     margin-top: 450px;
-    margin-left: 60%;
+    margin-left: 61%;
     cursor: pointer;
     transition: .3s;
+    animation: btn 2s ease-out;
+    animation-iteration-count: infinite;
 
-    // -webkit-transform: translate(-50%);
-    // -moz-transform: translate(-50%);
-    // -ms-transform: translate(-50%);
-    // -o-transform: translate(-50%);
-    // transform: translate(-50%);
     &:hover {
         transform: scale(1.2);
     }
 
     @include phone {
         margin-top: 400px;
+    }
+}
+
+@keyframes btn {
+    0% {
+        transform: scale(0.7);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(0.7);
     }
 }
 
@@ -276,7 +294,7 @@ body {
     background: url(../image/gachaGame/Pokemon.png) no-repeat;
     background-size: contain;
     animation: drop 1s ease-out forwards;
-    -webkit-animation: drop 1s ease-out forwards;
+    -webkit-animation: drop 3s ease-out forwards;
 }
 
 .dropBall2 {
@@ -290,7 +308,7 @@ body {
     display: block;
     background: url(../image/gachaGame/Pokemon.png) no-repeat;
     background-size: contain;
-    animation: drop 1s ease-out forwards;
+    animation: drop 3s ease-out forwards;
     -webkit-animation: drop 1s ease-out forwards;
 }
 
@@ -304,7 +322,7 @@ body {
     display: block;
     background: url(../image/gachaGame/Pokemon.png) no-repeat;
     background-size: contain;
-    animation: drop 1s ease-out forwards;
+    animation: drop 3s ease-out forwards;
     -webkit-animation: drop 1s ease-out forwards;
 }
 
@@ -319,7 +337,7 @@ body {
     display: block;
     background: url(../image/gachaGame/Pokemon.png) no-repeat;
     background-size: contain;
-    animation: drop 1s ease-out forwards;
+    animation: drop 3s ease-out forwards;
     -webkit-animation: drop 1s ease-out forwards;
 }
 
@@ -329,7 +347,7 @@ body {
     }
 
     50% {
-        transform: scale(1);
+        transform: scale(1.5);
     }
 
     51% {
@@ -445,24 +463,33 @@ body {
     }
 
     h4 {
+        margin-top: 30px;
+        margin-bottom: 10px;
         text-align: center;
         color: #fff;
-        font-size: $fontSize;
+        font-size: $fontSizeH4;
 
         @include desktop_small {
             font-size: $fontSize;
+        }
+
+        .fa-coins {
+            color: rgb(255, 255, 163);
         }
     }
 
     label {
         color: #fff;
-        font-size: $fontSize;
+        font-size: $fontSizeH4;
     }
 
     input {
+        @include border(3, $light_green);
+        @include border_r(3);
         cursor: not-allowed;
-        line-height: $fontSize;
-        margin-bottom: 10px;
+        font-size: $fontSize;
+        line-height: $fontSizeH3;
+        margin-bottom: 20px;
     }
 
     .goBtnBlk {
@@ -470,23 +497,58 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-color: $dark_blue;
+        @include center;
+        @include border_r(100);
+        @include border(3, $light_green);
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        @include shadow(10, 10, 1);
+
 
         .goBtn {
+            animation: btnGo 3s linear;
+            animation-iteration-count: infinite;
             font-size: $fontSizeH3;
-            @include btn_blur(300px, 20px);
-            @include border_r(10);
-            margin-bottom: 20px;
+            @include btn_blur(150px, 10px);
+            @include border_r(50);
+            // @include shadow(1, -1, 1);
+
             cursor: pointer;
             transition: .5s;
 
             &:hover {
-                @include btn_on(300px, 20px);
+                @include btn_on(150px, 10px);
             }
         }
 
-        a {
-            color: $tiffiny_green;
-        }
+
+    }
+
+    a {
+        color: $tiffiny_green;
+    }
+}
+
+
+@keyframes btnGo {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    25% {
+        transform: rotateZ(50deg);
+    }
+
+    75% {
+        transform: rotateZ(-50deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
     }
 }
 
@@ -743,6 +805,7 @@ body {
             padding: 20px 0;
             font-size: $fontSizeH2;
             text-align: center;
+            border-bottom: 1px dotted #fff;
 
             @media (max-width:991.98px) {
                 font-size: $fontSizeH3;
@@ -818,7 +881,7 @@ body {
         }
 
         img {
-            width: 300px;
+            width: 250px;
 
             @media (max-width:575.98px) {
                 width: 150px;
@@ -855,19 +918,31 @@ body {
         flex-direction: column;
         margin: 0 0px 30px 0px;
         align-items: center;
+        margin-top: 80px;
 
+        @include pad_small {
+            width: 33%;
+        }
+
+        @include phone {
+            width: 50%;
+        }
     }
 
     img {
         width: 80%;
         @include border(3, $dark_green);
+
     }
+
+
 
     .roleInfo {
         @include btn_blur(80%, 10px);
         text-align: center;
         transition: .5s;
         margin: 0;
+
 
         @include pad_small {
             font-size: $fontSizeSmall;
