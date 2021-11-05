@@ -734,7 +734,7 @@
 main.collection {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/member/back.jpg);
+  background-image: url(../dist/images/member/back.jpg);
   padding-top: 100px;
   padding-bottom: 100px;
   width: 100%;
@@ -1029,7 +1029,7 @@ main.collection div.collect_contain button.delete_btn .fa-trash-alt {
 main.deposit {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/deposit/back.jpg);
+  background-image: url(../dist/images/deposit/back.jpg);
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1112,7 +1112,7 @@ main.deposit div.container div#app button {
 }
 
 main.deposit div.container div#app button div.point {
-  background-image: url(../image/deposit/point.jpg);
+  background-image: url(../dist/images/deposit/point.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1164,7 +1164,7 @@ main.deposit div.container div#app button div.photo span {
 main.deposit {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/deposit/back.jpg);
+  background-image: url(../dist/images/deposit/back.jpg);
   padding-bottom: 100px;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -4563,7 +4563,7 @@ body {
 main.login {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/login/back.jpg);
+  background-image: url(../dist/images/login/back.jpg);
   width: 100%;
   background-position: left bottom;
   -webkit-box-sizing: border-box;
@@ -5243,7 +5243,7 @@ main.login div.contain .bookmark {
 main.member {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/member/back.jpg);
+  background-image: url(../dist/images/member/back.jpg);
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -5758,7 +5758,7 @@ main.member section.popShow {
 main.trading_list {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/member/back.jpg);
+  background-image: url(../dist/images/member/back.jpg);
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -6043,7 +6043,7 @@ main.trading_list div.content div.contain_list hr {
 main.points_list {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/member/back.jpg);
+  background-image: url(../dist/images/member/back.jpg);
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -6270,7 +6270,7 @@ main.points_list div.content div.contain_list hr {
 main.member_info {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/member/back.jpg);
+  background-image: url(../dist/images/member/back.jpg);
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -7689,7 +7689,7 @@ main.member_info section.popShow {
 main.signup {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../image/signup/b1.png);
+  background-image: url(../dist/images/signup/b1.png);
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

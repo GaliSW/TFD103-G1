@@ -3,11 +3,10 @@ let vm = new Vue({
   data: {
     edit_on: true,
     btn_on: true,
-    image: "../image/member/r1.jpg",
+    image: "../dist/images/member/r1.jpg",
     pop: false,
   },
   methods: {
-    
     fileChange(e) {
       let file = e.target.files[0];
       readFile = new FileReader();
