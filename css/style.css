@@ -1290,8 +1290,16 @@ body {
   display: none;
 }
 
+.breadcrumb {
+  padding-left: 10px;
+  font-size: 16px;
+  color: #10c5b1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .gaChaBgBlk {
-  background-image: url("../image/gacha/bg.jpg");
+  background-image: url("../dist/images/gacha/bg.jpg");
   width: 100%;
   height: 100%;
   position: fixed;
@@ -2005,7 +2013,7 @@ body {
   width: 200px;
   height: 200px;
   background-color: pink;
-  background: url(../image/gacha/role1.jpg);
+  background: url(../dist/images/gacha/role9.png);
   /* background-color: pink; */
   float: left;
   list-style: none;
@@ -2213,9 +2221,13 @@ body {
   }
 }
 
+.myRoleBlk .pagination {
+  margin-top: 50px;
+}
+
 .rolesBlk {
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 0px;
   max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
@@ -2357,7 +2369,7 @@ body {
   margin-top: 30px;
   padding: 0;
   display: flex;
-  border-top: 2px dotted red;
+  border-top: 2px dotted white;
   padding-top: 20px;
 }
 
@@ -2369,10 +2381,12 @@ body {
 }
 
 #rolePopContent .roleInfoPara .para {
-  margin: 30px 0 30px 20px;
+  margin: 30px 0 30px 50px;
+  line-height: 32px;
 }
 
 #rolePopContent .roleInfoPara .para h1 {
+  margin-top: 20px;
   font-size: 20px;
   color: #60cd90;
 }
@@ -6933,26 +6947,55 @@ main.member_info section.popShow {
   .allBlock .sec1 .flexContainer {
     width: 100%;
     flex-direction: column;
+<<<<<<< HEAD
+=======
+  }
+  .allBlock .sec1 .flexContainer .items.-right {
+    flex-grow: 1;
+    font-size: 20px;
+    padding-left: 50px;
+    color: #fff;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .title1 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .introduce {
+    margin-bottom: 30px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .price,
+  .allBlock .sec1 .flexContainer .items.-right .buyForm {
+    display: inline-block;
+    margin-bottom: 30px;
+>>>>>>> origin/Gary
   }
 }
 
-@media (min-width: 414px) and (max-width: 577.98px) {
-  .allBlock .sec1 .flexContainer {
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .sec1 .flexContainer .items.-right {
     width: 100%;
     flex-direction: column;
   }
 }
 
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .allBlock .sec1 .flexContainer {
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock .sec1 .flexContainer .items.-right .items.-left {
+    flex-basis: 300px;
+    flex-shrink: 0;
+    font-size: 0;
     width: 100%;
+<<<<<<< HEAD
     flex-direction: column;
+=======
+>>>>>>> origin/Gary
   }
-}
-
-@media (min-width: 100px) and (max-width: 374.98px) {
-  .allBlock .sec1 .flexContainer {
+  .allBlock .sec1 .flexContainer .items.-right .items.-left .imgBlock {
+    width: 300px;
+    height: 300px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-left .imgBlock img {
     width: 100%;
+<<<<<<< HEAD
     flex-direction: column;
   }
 }
@@ -7091,47 +7134,149 @@ main.member_info section.popShow {
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   .allBlock .chart {
+=======
+    height: 100%;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right {
+    flex-grow: 1;
+    font-size: 20px;
+    padding-left: 50px;
+    color: #fff;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right h1 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .introduce {
+    margin-bottom: 30px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .price {
+    margin-bottom: 30px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .price,
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm {
+    display: inline-block;
+    margin-bottom: 35px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .price {
+    margin-left: 50px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm {
+    margin-left: 70px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .collectBtn {
+    color: #60cd90;
+    width: 70px;
+    padding: 5px;
+    background-color: #0e3461;
+    border: 3px solid #60cd90;
+    text-align: center;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .collectBtn:hover {
+    color: #0e3461;
+    width: 70px;
+    padding: 5px;
+    background-color: #60cd90;
+    border: 3px solid #0e3461;
+    text-align: center;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .collectBtn:hover {
+    cursor: pointer;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock {
+    color: #fff;
+    padding-bottom: 100px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 600px;
+    height: 500px;
+    margin-left: 25px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table {
+>>>>>>> origin/Gary
     width: 100%;
   }
 }
 
-@media (min-width: 100px) and (max-width: 374.98px) {
-  .allBlock .chart {
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table {
     width: 100%;
   }
 }
 
-.allBlock .tableBlock {
-  color: #fff;
-  padding-bottom: 100px;
-}
-
-.allBlock .tableBlock table {
-  border: 1px solid #fff;
-  border-collapse: collapse;
-  margin: 0 auto;
-  width: 600px;
-  height: 500px;
-}
-
-@media (min-width: 414px) and (max-width: 577.98px) {
-  .allBlock .tableBlock table {
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table {
     width: 100%;
   }
 }
 
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .allBlock .tableBlock table {
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table:hover {
+    color: #0e3461;
+    width: 70px;
+    padding: 5px;
+    background-color: #60cd90;
+    border: 3px solid #0e3461;
+    text-align: center;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .tableBlock table:hover {
+    cursor: pointer;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .buyForm .buyBtn {
+    color: #60cd90;
+    width: 170px;
+    padding: 5px;
+    background-color: #0e3461;
+    border: 3px solid #60cd90;
+    text-align: center;
+    margin-left: 0px;
+    font-size: 24px;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .buyForm .buyBtn:hover {
+    color: #0e3461;
+    width: 170px;
+    padding: 5px;
+    background-color: #60cd90;
+    border: 3px solid #0e3461;
+    text-align: center;
+  }
+  .allBlock .sec1 .flexContainer .items.-right .items.-right .collectForm .buyForm .buyBtn:hover {
+    cursor: pointer;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .popUpBox {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #024f3f;
+    border: 2px solid #10c5b1;
+    width: 500px;
+    height: 500px;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .sec1 .flexContainer .maskBlockM .popUpBox {
     width: 100%;
   }
 }
 
-@media (min-width: 100px) and (max-width: 374.98px) {
-  .allBlock .tableBlock table {
-    width: 100%;
-  }
-}
-
+<<<<<<< HEAD
 .allBlock .tableBlock table th, .allBlock .tableBlock table td {
   border: 2px solid #fff;
   text-align: center;
@@ -7191,31 +7336,157 @@ main.member_info section.popShow {
 .allBlock .maskBlockM .popUpBox .confirmBlk {
   display: flex;
   justify-content: space-evenly;
+=======
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .sec1 .flexContainer .maskBlockM .popUpBox {
+    width: 100%;
+  }
 }
 
-.allBlock .maskBlockM .popUpBox .confirmBlk .confirmBtn {
-  padding: 0;
-  height: 35px;
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock {
+    color: #fff;
+    padding-bottom: 100px;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 600px;
+    height: 500px;
+  }
+>>>>>>> origin/Gary
 }
 
-.allBlock .maskBlockM .popUpBox .confirmBlk .confirmBtn:hover {
-  color: #0e3461;
-  width: 100px;
-  padding: 0px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table {
+    width: 100%;
+  }
 }
 
-.allBlock .maskBlockM .popUpBox .confirmBlk #confirmBtn3 {
-  width: 150px;
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table {
+    width: 100%;
+  }
 }
 
-.allBlock .maskBlockM .popUpBox .confirmBlk #confirmBtn4 {
-  width: 150px;
+@media (min-width: 578px) and (max-width: 767.98px) and (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table {
+    width: 100%;
+  }
 }
 
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table th,
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock table td {
+    border: 2px solid #fff;
+    text-align: center;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .test .maskLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .test .maskLayer .popUpBox {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #024f3f;
+    border: 2px solid #10c5b1;
+    width: 1000px;
+    height: 480px;
+    border-radius: 5px;
+    overflow: auto;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .test .maskLayer .popUpBox .closeBtn {
+    background-color: #10c5b1;
+    border-radius: 2px;
+    font-size: 28px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    position: sticky;
+    top: 0px;
+    float: right;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .test .maskLayer .popUpBox td {
+    font-size: 20px;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #024f3f;
+    border: 2px solid #10c5b1;
+    width: 500px;
+    height: 250px;
+    border-radius: 5px;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .closeBtn {
+    background-color: #10c5b1;
+    border-radius: 2px;
+    font-size: 28px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .popContent {
+    text-align: center;
+    color: #60cd90;
+    margin-top: 80px;
+    height: 100px;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .confirmBlk {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .confirmBlk .confirmBtn {
+    padding: 0;
+    height: 35px;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .confirmBlk .confirmBtn:hover {
+    color: #0e3461;
+    width: 100px;
+    padding: 0px;
+    background-color: #60cd90;
+    border: 3px solid #0e3461;
+    text-align: center;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .confirmBlk #confirmBtn3 {
+    width: 150px;
+  }
+  .allBlock .sec1 .flexContainer .maskBlockM .tableBlock .maskBlock .popUpBox .confirmBlk #confirmBtn4 {
+    width: 150px;
+  }
+}
+
+<<<<<<< HEAD
 .allBlock .test .maskLayery {
+=======
+.maskLayer {
+>>>>>>> origin/Gary
   position: absolute;
   top: 0;
   left: 0;
@@ -7224,7 +7495,11 @@ main.member_info section.popShow {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+<<<<<<< HEAD
 .allBlock .test .maskLayery .popUpBox {
+=======
+.maskLayer .popUpBox {
+>>>>>>> origin/Gary
   position: absolute;
   top: 5%;
   left: 50%;
@@ -7237,7 +7512,11 @@ main.member_info section.popShow {
   overflow: auto;
 }
 
+<<<<<<< HEAD
 .allBlock .test .maskLayery .popUpBox .closeBtn {
+=======
+.maskLayer .popUpBox .closeBtn {
+>>>>>>> origin/Gary
   background-color: #10c5b1;
   border-radius: 2px;
   font-size: 28px;
@@ -7252,14 +7531,22 @@ main.member_info section.popShow {
   float: right;
 }
 
+<<<<<<< HEAD
 .allBlock .test .maskLayery .popUpBox .popContent12 {
+=======
+.maskLayer .popUpBox .popContent12 {
+>>>>>>> origin/Gary
   text-align: center;
   color: #60cd90;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
 .allBlock .test .maskLayery .popUpBox .roleBlock1Mark .roleList1Mark {
+=======
+.maskLayer .popUpBox .roleBlock1Mark .roleList1Mark {
+>>>>>>> origin/Gary
   margin: 0 0 0 50px;
   padding: 0;
   list-style: none;
@@ -7267,20 +7554,32 @@ main.member_info section.popShow {
   flex-wrap: wrap;
 }
 
+<<<<<<< HEAD
 .allBlock .test .maskLayery .popUpBox .roleBlock1Mark .roleList1Mark li {
+=======
+.maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li {
+>>>>>>> origin/Gary
   width: calc((100% - 60px - 50px) / 4);
   margin-right: 20px;
   margin-bottom: 25px;
 }
 
+<<<<<<< HEAD
 .allBlock .test .maskLayery .popUpBox .confirmBlk12 {
+=======
+.maskLayer .popUpBox .confirmBlk12 {
+>>>>>>> origin/Gary
   text-align: center;
   margin-bottom: 30px;
   display: flex;
   justify-content: space-evenly;
 }
 
+<<<<<<< HEAD
 .allBlock .test .maskLayery .popUpBox .confirmBlk12 .confirmBtn12 {
+=======
+.maskLayer .popUpBox .confirmBlk12 .confirmBtn12 {
+>>>>>>> origin/Gary
   text-align: center;
   line-height: 30px;
   text-decoration: none;
@@ -7293,7 +7592,11 @@ main.member_info section.popShow {
   padding: 0;
 }
 
+<<<<<<< HEAD
 .allBlock .test .maskLayery .popUpBox .confirmBlk12 .confirmBtn12:hover {
+=======
+.maskLayer .popUpBox .confirmBlk12 .confirmBtn12:hover {
+>>>>>>> origin/Gary
   color: #0e3461;
   width: 100px;
   padding: 0px;
@@ -7302,7 +7605,7 @@ main.member_info section.popShow {
   text-align: center;
 }
 
-.allBlock .test .popUpBox {
+.test .popUpBox {
   position: absolute;
   top: 5%;
   left: 50%;
@@ -7314,43 +7617,45 @@ main.member_info section.popShow {
   border-radius: 5px;
 }
 
-.allBlock .test .popUpBox .myRoleBlock, .allBlock .test .popUpBox .doubleArrow, .allBlock .test .popUpBox .yourRoleBlock {
+.test .popUpBox .myRoleBlock,
+.test .popUpBox .doubleArrow,
+.test .popUpBox .yourRoleBlock {
   display: inline-block;
   vertical-align: middle;
 }
 
-.allBlock .test .popUpBox .myRoleBlock {
+.test .popUpBox .myRoleBlock .myRoleBlock {
   margin-left: 185px;
 }
 
-.allBlock .test .popUpBox .myRoleBlock .myRoleP {
+.test .popUpBox .myRoleBlock .myRoleBlock .myRoleP {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.allBlock .test .popUpBox .myRoleBlock .myRoleNameBlock {
+.test .popUpBox .myRoleBlock .myRoleBlock .myRoleNameBlock {
   text-align: center;
   margin-top: 20px;
 }
 
-.allBlock .test .popUpBox .doubleArrow {
+.test .popUpBox .myRoleBlock .doubleArrow {
   width: 100px;
   height: 100px;
   font-size: 100px;
   margin: 0 30px;
 }
 
-.allBlock .test .popUpBox .yourRoleBlock .yourRoleP {
+.test .popUpBox .myRoleBlock .yourRoleBlock .yourRoleP {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.allBlock .test .popUpBox .yourRoleBlock .yourRoleNameBlock {
+.test .popUpBox .myRoleBlock .yourRoleBlock .yourRoleNameBlock {
   text-align: center;
   margin-top: 20px;
 }
 
-.allBlock .test .popUpBox .closeBtn13 {
+.test .popUpBox .myRoleBlock .closeBtn13 {
   background-color: #10c5b1;
   border-radius: 2px;
   font-size: 28px;
@@ -7365,22 +7670,26 @@ main.member_info section.popShow {
   right: 0;
 }
 
-.allBlock .test .popUpBox .popContent13 {
+.test .popUpBox .myRoleBlock .popContent13 {
   text-align: center;
   color: #60cd90;
   margin-bottom: 10px;
 }
 
-.allBlock .test .popUpBox .popContent13 p {
+.test .popUpBox .myRoleBlock .popContent13 p {
   margin-top: 30px;
 }
 
+<<<<<<< HEAD
 .allBlock .test .popUpBox .confirmBlk13 {
+=======
+.test .popUpBox .myRoleBlock .confirmBlk13 {
+>>>>>>> origin/Gary
   display: flex;
   justify-content: space-evenly;
 }
 
-.allBlock .test .popUpBox .confirmBlk13 .confirmBtn13 {
+.test .popUpBox .myRoleBlock .confirmBlk13 .confirmBtn13 {
   text-align: center;
   line-height: 30px;
   text-decoration: none;
@@ -7395,7 +7704,7 @@ main.member_info section.popShow {
   height: 35px;
 }
 
-.allBlock .test .popUpBox .confirmBlk13 .confirmBtn13:hover {
+.test .popUpBox .myRoleBlock .confirmBlk13 .confirmBtn13:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;
@@ -7404,7 +7713,7 @@ main.member_info section.popShow {
   text-align: center;
 }
 
-.allBlock .test .popUpBox .confirmBlk13 .confirmBtn13:hover {
+.test .popUpBox .myRoleBlock .confirmBlk13 .confirmBtn13:hover {
   color: #0e3461;
   width: 100px;
   padding: 0px;

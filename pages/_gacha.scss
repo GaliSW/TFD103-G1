@@ -17,13 +17,23 @@ body {
     display: none;
 }
 
+
+.breadcrumb {
+    padding-left: 10px;
+    font-size: $fontSize;
+    color: $tiffiny_green;
+    max-width: 1200px;
+    @include center;
+}
+
 .gaChaBgBlk {
-    background-image: url("../image/gacha/bg.jpg");
+    background-image: url("../dist/images/gacha/bg.jpg");
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     z-index: -1;
+
 }
 
 .carouselTitle {
@@ -727,7 +737,7 @@ body {
             width: 200px;
             height: 200px;
             background-color: pink;
-            background: url(../image/gacha/role1.jpg);
+            background: url(../dist/images/gacha/role9.png);
             /* background-color: pink; */
             float: left;
             list-style: none;
@@ -901,6 +911,10 @@ body {
             }
         }
     }
+
+    .pagination {
+        margin-top: 50px;
+    }
 }
 
 
@@ -908,7 +922,7 @@ body {
 .rolesBlk {
     // position: relative;
     @include center;
-    margin-top: 80px;
+    margin-top: 0px;
     max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
@@ -1036,7 +1050,7 @@ body {
         margin-top: 30px;
         padding: 0;
         display: flex;
-        border-top: 2px dotted red;
+        border-top: 2px dotted rgb(255, 255, 255);
         padding-top: 20px;
 
         @media (max-width:767.98px) {
@@ -1045,9 +1059,11 @@ body {
         }
 
         .para {
-            margin: 30px 0 30px 20px;
+            margin: 30px 0 30px 50px;
+            line-height: $fontSizeH1;
 
             h1 {
+                margin-top: 20px;
                 font-size: $fontSizeH4;
                 color: $light_green;
 

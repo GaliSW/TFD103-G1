@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="../vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
@@ -15,7 +16,9 @@
 </head>
 
 <body>
+    @@include('./header.html')
     <!-- @@include('./header.html') -->
+    <p class="breadcrumb">首頁>角色抽取</p>
     <div class="gaChaBgBlk"></div>
     <div class="carouselTitle">
         <h1>扭蛋池角色</h1>
@@ -147,7 +150,7 @@
                         </section>
                     </template>
                 </div>
-                <a href="">點數不夠？</a>
+                <a href="./points_list.html">點數不夠？</a>
             </div>
         </div>
         <section class="pintooBlk" id="pintooBlk">
@@ -222,7 +225,17 @@
             </tr>
         </table>
 
-
+        <div class="pagination">
+            <ul class="pagination_list">
+                <li class="prev">&lt;</li>
+                <li class="pageNumber one focus">1</li>
+                <li class="pageNumber two">2</li>
+                <li class="pageNumber three">3</li>
+                <li class="pageNumber four">4</li>
+                <li class="pageNumber five">5</li>
+                <li class="next">&gt;</li>
+            </ul>
+        </div>
     </section>
 
     <!-- 角色圖鑑 -->
@@ -233,28 +246,39 @@
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="../dist/images/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role6.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="../dist/images/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role5.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="../dist/images/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role4.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="../dist/images/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role3.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="../dist/images/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role2.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="../dist/images/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role8.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
+            </div>
+            <div class="pagination">
+                <ul class="pagination_list">
+                    <li class="prev">&lt;</li>
+                    <li class="pageNumber one focus">1</li>
+                    <li class="pageNumber two">2</li>
+                    <li class="pageNumber three">3</li>
+                    <li class="pageNumber four">4</li>
+                    <li class="pageNumber five">5</li>
+                    <li class="next">&gt;</li>
+                </ul>
             </div>
     </div>
     </div>
@@ -287,19 +311,20 @@
         </div>
     </section>
 
-    <!-- @@include('./footer.html') -->
+
+    @@include('./footer.html')
 </body>
 
-<script src="../dist/js/gacha/changeLabel.js"></script>
-<script src="../dist/js/gacha/swiper.js"></script>
-<script src="../dist/js/gacha/gachaGame.js"></script>
-<script src="../dist/js/gacha/pintoo.js"></script>
-<script src="../dist/js/gacha/chart.js"></script>
-<script src="../dist/js/gacha/gachaConfirmPop.js"></script>
-<script src="../dist/js/gacha/toGacha.js"></script>
-<script src="../dist/js/gacha/pop.js"></script>
-<script src="../dist/js/gacha/roleInfoChart.js"></script>
-<script src="../dist/js/gacha/rolePop.js"></script>
-<!-- <script src="./js/pagination.js"></script> -->
+<script src="../js/gacha/changeLabel.js"></script>
+<script src="../js/gacha/swiper.js"></script>
+<script src="../js/gacha/gachaGame.js"></script>
+<script src="../js/gacha/pintoo.js"></script>
+<script src="../js/gacha/chart.js"></script>
+<script src="../js/gacha/gachaConfirmPop.js"></script>
+<script src="../js/gacha/toGacha.js"></script>
+<script src="../js/gacha/pop.js"></script>
+<script src="../js/gacha/roleInfoChart.js"></script>
+<script src="../js/gacha/rolePop.js"></script>
+<script src="../js/gacha/pagination.js"></script>
 
 </html>

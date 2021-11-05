@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="../vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
@@ -15,7 +16,78 @@
 </head>
 
 <body>
+    <!-- 首頁nav -->
+<header id="header">
+    <div class="container">
+        <a class="logo" href="index.html">
+            <img src="../dist/image/index/logo.png" alt="logoImg">
+        </a>
+        <nav class="navbar">
+            <ul>
+                <a href="#">
+                    <li>
+                        <img src="../dist/image/index/pic.png">
+                        消息/介紹
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <img src="../dist/image/index/role01.png">
+                        角色交易
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <img src="../dist/image/index/pokemon.png">
+                        角色抽取
+                    </li>
+                </a>
+            </ul>
+        </nav>
+
+        <!-- phone nav-->
+        <nav class="hamburger">
+            <div id="menuToggle">
+                <input type="checkbox" />
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <a href="#"><img src="../dist/image/index/logo.png"></a>
+                    <a href="#">
+                        <li><img src="../dist/image/index/pic.png">消息/介紹</li>
+                    </a>
+                    <a href="#">
+                        <li><img src="../dist/image/index/role01.png">角色交易</li>
+                    </a>
+                    <a href="#">
+                        <li><img src="../dist/image/index/pokemon.png">角色抽取</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+        <!-- phone nav end -->
+
+        <div class="icon">
+            <div class="button">
+                <a href="#"><i class="fas fa-coins fa-2x"></i></a>
+                <div class="show">儲值</div>
+            </div>
+            <div class="button">
+                <a href="#"><i class="fab fa-gratipay fa-2x"></i></a>
+                <div class="show">收藏</div>
+            </div>
+            <div class="button">
+                <a href="#"><i class="fas fa-user-circle fa-2x"></i></a>
+                <div class="show">會員</div>
+            </div>
+        </div>
+    </div>
+</header>
     
+    <p class="breadcrumb">首頁>角色抽取</p>
     <div class="gaChaBgBlk"></div>
     <div class="carouselTitle">
         <h1>扭蛋池角色</h1>
@@ -147,7 +219,7 @@
                         </section>
                     </template>
                 </div>
-                <a href="">點數不夠？</a>
+                <a href="./points_list.html">點數不夠？</a>
             </div>
         </div>
         <section class="pintooBlk" id="pintooBlk">
@@ -222,7 +294,17 @@
             </tr>
         </table>
 
-
+        <div class="pagination">
+            <ul class="pagination_list">
+                <li class="prev">&lt;</li>
+                <li class="pageNumber one focus">1</li>
+                <li class="pageNumber two">2</li>
+                <li class="pageNumber three">3</li>
+                <li class="pageNumber four">4</li>
+                <li class="pageNumber five">5</li>
+                <li class="next">&gt;</li>
+            </ul>
+        </div>
     </section>
 
     <!-- 角色圖鑑 -->
@@ -233,28 +315,39 @@
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="../dist/images/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role6.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="../dist/images/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role5.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="../dist/images/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role4.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="../dist/images/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role3.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="../dist/images/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role2.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
             </div>
             <div class="col-3">
-                <img src="../dist/images/gacha/role7.jpg" alt="">
+                <img src="../dist/images/gacha/role8.jpg" alt="">
                 <div class="roleInfo">查看角色資訊</div>
+            </div>
+            <div class="pagination">
+                <ul class="pagination_list">
+                    <li class="prev">&lt;</li>
+                    <li class="pageNumber one focus">1</li>
+                    <li class="pageNumber two">2</li>
+                    <li class="pageNumber three">3</li>
+                    <li class="pageNumber four">4</li>
+                    <li class="pageNumber five">5</li>
+                    <li class="next">&gt;</li>
+                </ul>
             </div>
     </div>
     </div>
@@ -287,19 +380,42 @@
         </div>
     </section>
 
-    
+
+    <!-- footer -->
+<footer class="footer">
+    <div class="iconLink">
+      <span>
+        <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+      </span>
+      <span>
+        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+      </span>
+      <span>
+        <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+      </span>
+    </div>
+    <div class="notice">
+        <p>
+            本網站為緯育TibaMe前端設計工程師班第70期第一組學員專題成果作品，本平台僅供學習、展示之用。<br>
+            參考資源： 馬力歐賽車、NFT。若有侵權疑慮，您可以私訊 [ 緯育TibaMe ]，後續會由專人協助處理
+        </p>
+    </div>
+    <div class="copyright">
+        <p><i class="far fa-copyright"></i> 2021 怪哩怪汽 All Rights Reserved</p>
+    </div>
+</footer>
 </body>
 
-<script src="../dist/js/gacha/changeLabel.js"></script>
-<script src="../dist/js/gacha/swiper.js"></script>
-<script src="../dist/js/gacha/gachaGame.js"></script>
-<script src="../dist/js/gacha/pintoo.js"></script>
-<script src="../dist/js/gacha/chart.js"></script>
-<script src="../dist/js/gacha/gachaConfirmPop.js"></script>
-<script src="../dist/js/gacha/toGacha.js"></script>
-<script src="../dist/js/gacha/pop.js"></script>
-<script src="../dist/js/gacha/roleInfoChart.js"></script>
-<script src="../dist/js/gacha/rolePop.js"></script>
-<!-- <script src="./js/pagination.js"></script> -->
+<script src="../js/gacha/changeLabel.js"></script>
+<script src="../js/gacha/swiper.js"></script>
+<script src="../js/gacha/gachaGame.js"></script>
+<script src="../js/gacha/pintoo.js"></script>
+<script src="../js/gacha/chart.js"></script>
+<script src="../js/gacha/gachaConfirmPop.js"></script>
+<script src="../js/gacha/toGacha.js"></script>
+<script src="../js/gacha/pop.js"></script>
+<script src="../js/gacha/roleInfoChart.js"></script>
+<script src="../js/gacha/rolePop.js"></script>
+<script src="../js/gacha/pagination.js"></script>
 
 </html>
