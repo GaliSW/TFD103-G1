@@ -1185,7 +1185,7 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 .entry .entrybg {
   width: 100%;
   height: 100vh;
-  background-image: url(../image/index/entry.jpg);
+  background-image: url(../dist/image/index/entry.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -3014,7 +3014,7 @@ body {
 .index .indexOne {
   margin: 0 auto;
   font-size: 0;
-  background-image: url(../image/index/bg2.jpg);
+  background-image: url(../dist/image/index/bg2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -3113,7 +3113,11 @@ body {
     font-size: 16px;
     bottom: 45%;
     padding: 20px 0 20px 20px;
+<<<<<<< HEAD
     position: absolute;
+=======
+    margin-top: 5px;
+>>>>>>> Calista
   }
 }
 
@@ -3144,11 +3148,19 @@ body {
 @media (min-width: 375px) and (max-width: 413.98px) {
   .index .indexOne .banner .roleCar {
     right: -80px;
+<<<<<<< HEAD
+=======
+    margin-top: 20px;
+  }
+  .index .indexOne .banner .roleCar img {
+    max-width: 90%;
+    width: 300px;
+>>>>>>> Calista
   }
 }
 
 .index .indexTwo {
-  background: url(../image/index/bluebg.jpeg) 0 0 fixed;
+  background: url(../dist/image/index/bluebg.jpeg) 0 0 fixed;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -3509,7 +3521,32 @@ body {
   max-width: 1200px;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   background-image: url(../image/index/bg05.png);
+=======
+  position: relative;
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .blockBox .bgColor {
+    height: 70%;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .blockBox .bgColor {
+    height: 70%;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .blockBox .bgColor {
+    height: 70%;
+  }
+}
+
+.index .blockBox .bgColor img {
+>>>>>>> Calista
   background-size: cover;
   position: relative;
 }
@@ -3531,8 +3568,39 @@ body {
   color: #fff;
 }
 
+<<<<<<< HEAD
 .index .blockBox .bgColor .intro img {
   width: 280px;
+=======
+.index .blockBox .bgColor .machineBox {
+  position: absolute;
+  right: 30px;
+  width: 300px;
+  height: 450px;
+  display: inline-block;
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .blockBox .bgColor .machineBox {
+    display: none;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .blockBox .bgColor .machineBox {
+    display: none;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .blockBox .bgColor .machineBox {
+    display: none;
+  }
+}
+
+.index .blockBox .bgColor .machineBox img {
+  width: 100%;
+>>>>>>> Calista
   position: absolute;
   right: 50px;
   bottom: 10px;
@@ -3541,10 +3609,11 @@ body {
 .index .blockBox .bgColor .intro .pokemon {
   width: 40px;
   position: absolute;
-  right: 5%;
-  bottom: 35%;
+  right: 60px;
+  bottom: 160px;
 }
 
+<<<<<<< HEAD
 .index .blockBox .bgColor .intro .pokemon img {
   width: 100%;
 }
@@ -3561,6 +3630,25 @@ body {
 .index .blockBox .bgColor .intro .pokemon img:nth-child(3) {
   margin-right: 23px;
   margin-bottom: 90px;
+=======
+.index .blockBox .bgColor .machineBox .pokemon .images img {
+  width: 100%;
+}
+
+.index .blockBox .bgColor .machineBox .pokemon .pkm1 img {
+  right: 100px;
+  margin-bottom: 30px;
+}
+
+.index .blockBox .bgColor .machineBox .pokemon .pkm2 img {
+  right: 43px;
+  margin-bottom: 60px;
+}
+
+.index .blockBox .bgColor .machineBox .pokemon .pkm3 img {
+  right: 150px;
+  margin-bottom: 80px;
+>>>>>>> Calista
 }
 
 .index .manyRole {
@@ -3638,7 +3726,12 @@ body {
   border-radius: 18px;
   background-color: #fff;
   width: 220px;
+<<<<<<< HEAD
   height: 260px;
+=======
+  display: -webkit-box;
+  display: -ms-flexbox;
+>>>>>>> Calista
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -3720,7 +3813,7 @@ body {
 }
 
 .index .indexThree {
-  background: url(../image/index/strbg.jpg) 0 0 fixed;
+  background: url(../dist/image/index/strbg.jpg) 0 0 fixed;
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
@@ -6713,9 +6806,63 @@ main.member_info section.popShow {
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
 .allBlock .sec1 .flexContainer .items.-left {
   flex-basis: 300px;
   flex-shrink: 0;
+=======
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.allBlock .sec1 .flexContainer .items.-left {
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+>>>>>>> Calista
   font-size: 0;
   width: 100%;
 }

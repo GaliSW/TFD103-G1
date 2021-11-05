@@ -14,7 +14,7 @@ body{
         // @include border;
         @include center;
         font-size: 0;
-        background-image: url(../image/index/bg2.jpg);
+        background-image: url(../dist/image/index/bg2.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom right;
@@ -91,6 +91,7 @@ body{
                     background-color: rgba(95, 141, 179, .5);
                     font-size: $fontSize;
                     padding: 20px 0 20px 20px;
+                    margin-top: 5px;
                 }
             }
             .roleCar{
@@ -122,7 +123,11 @@ body{
                 }
                 @include phone{
                     right: -80px;
-                    margin-top: -80px;
+                    margin-top: 20px;
+                    img{
+                        max-width: 90%;
+                        width: 300px;
+                    }
                 }
             }
         }
@@ -130,7 +135,7 @@ body{
     
     // 首頁第二屏
     .indexTwo{
-        background: url(../image/index/bluebg.jpeg)0 0 fixed;
+        background: url(../dist/image/index/bluebg.jpeg)0 0 fixed;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
@@ -441,6 +446,15 @@ body{
             max-width: 1200px;
             width: 100%;
             height: 100%;
+            @include pad{
+                height: 70%;
+            }
+            @include pad_small{
+                height: 70%;
+            }
+            @include phone{
+                height: 70%;
+            }
             img{
                 background-size: cover;
                 position: absolute;
@@ -453,18 +467,6 @@ body{
                 height: 450px;
                 width: 620px;
                 display: inline-block;
-                // @include desktop_small{
-                    
-                // }
-                // @include pad{
-                //     min-height: ;
-                // }
-                // @include pad_small{
-                    
-                // }
-                // @include phone{
-                    
-                // }
                 h1{
                     margin: 25% 0 0 10%;
                     font-size: $fontSizeH1;
@@ -484,6 +486,15 @@ body{
                 width: 300px;
                 height: 450px;
                 display: inline-block;
+                @include pad{
+                    display: none;
+                }
+                @include pad_small{
+                    display: none;
+                }
+                @include phone{
+                    display: none;
+                }
                 img{
                     width: 100%;
                     position: absolute;
@@ -493,20 +504,29 @@ body{
                 .pokemon{
                     width: 40px;
                     position: absolute;
-                    right: 5%;
-                    bottom: 35%;
-                    img{
-                        width: 100%;
-                        &:nth-child(1){
-                            margin-right: 75px;
+                    right: 60px;
+                    bottom: 160px;
+                    .images{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .pkm1{
+                        img{
+                            right: 100px;
                             margin-bottom: 30px;
                         }
-                        &:nth-child(2){
-                            margin-right: 130px;
+                    }
+                    .pkm2{
+                        img{
+                            right: 43px;
+                            margin-bottom: 60px;
                         }
-                        &:nth-child(3){
-                            margin-right: 23px;
-                            margin-bottom: 90px;
+                    }
+                    .pkm3{
+                        img{
+                            right: 150px;
+                            margin-bottom: 80px;
                         }
                     }
                 }
@@ -535,7 +555,6 @@ body{
             @include border_r(18);
             background-color: #fff;
             width: 220px;
-            height: 260px;
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -594,7 +613,7 @@ body{
     
     // 首頁第三屏
     .indexThree {
-        background: url(../image/index/strbg.jpg)0 0 fixed;
+        background: url(../dist/image/index/strbg.jpg)0 0 fixed;
         background-repeat: no-repeat;
         position: relative;
         width: 100%;
