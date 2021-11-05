@@ -4389,7 +4389,7 @@ body {
 
 .out .total .fr {
   z-index: 2;
-  background: url("../images/intro/Web 1920 – 1@2x.jpg");
+  background: url("../dist/images/intro/Web 1920 – 1@2x.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
