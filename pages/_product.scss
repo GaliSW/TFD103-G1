@@ -3,7 +3,7 @@
   }
 
 .allBlock{
-    background-image: url("../image/trade/background.png");
+    background-image: url("../dist/images/trade/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 0px 0px;
@@ -66,18 +66,18 @@
             font-size: 20px;
             padding-left: 50px;
             color: #fff;
-<<<<<<< HEAD
 
-            h1{
-                margin-top: 15px;
+            .title1{
+               margin-top: 15px;
+               margin-bottom: 30px;
+            }    
+
+            .introduce{
                 margin-bottom: 30px;
             }
 
-            .introduce{
-=======
             .price, .buyForm{
                 display: inline-block;
->>>>>>> dev
                 //border: 1px solid red;
                 margin-bottom: 30px;
             }
@@ -154,12 +154,7 @@
 
 .tableBlock{
     color: #fff;
-<<<<<<< HEAD
     padding-bottom: 100px;
-=======
-    margin-bottom: 100px;
-    
->>>>>>> dev
 table{
     border: 1px solid #fff;
     border-collapse: collapse;
@@ -193,7 +188,7 @@ table{
 
 ////////購買視窗
 
-.maskBlock{
+.maskBlockM{
     position: absolute;
     top: 0;
     left: 0;
@@ -256,60 +251,9 @@ table{
     }
 }
 
-////////////////////////////////////////////////
-
-// .test{
-//     .maskLayer{
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         width: 100%;
-//         height: 100%;
-//         background-color: rgba(0, 0, 0, 0.7);
-//     }
-
-//     .popUpBox{
-//         border: 1px solid red;
-//         position: absolute;
-//         top: 5%;
-//         left: 50%;
-//         transform: translateX(-50%);
-//         background-color: rgba(2, 79, 63, 1);
-//         border: 2px solid rgba(16, 197, 177, 1);
-//         width: 1000px;
-//         height: 480px;
-//         border-radius: 5px;
-//         overflow: auto;
-
-//         .closeBtn{
-//             background-color: rgba(16, 197, 177, 1);
-//             border-radius: 2px;
-//             font-size: 28px;
-//             width: 30px;
-//             height: 30px;
-//             text-align: center;
-//             line-height: 30px;
-//             font-family: Arial, Helvetica, sans-serif;
-//             cursor: pointer;
-//             position: sticky; 
-//             top: 0px;
-//             float: right;
-//         }
-
-//         .popContent12{
-//             text-align: center;
-//             color: rgba(96, 205, 144, 1);
-//             margin-top: 20px;
-//         }
-
-
-
-//     }
-// }
-
 
 ///////////////交換pop視窗-1
-
+.test{
 .maskLayer{
     position: absolute;
     top: 0;
@@ -401,11 +345,11 @@ table{
     }
 }
 
-
+}
 ////////////交換確認視窗-2
 
 
-
+.test{
     .popUpBox{
         position: absolute;
         top: 5%;
@@ -423,10 +367,17 @@ table{
         }     
 
         .myRoleBlock{
-            
+            margin-left: 185px;
+
             .myRoleP{
                 margin-bottom: 20px;
+                text-align: center;
             } 
+
+            .myRoleNameBlock{
+                text-align: center;
+                margin-top: 20px;
+            }
         }
 
         .doubleArrow{
@@ -441,7 +392,14 @@ table{
             
             .yourRoleP{
                 margin-bottom: 20px;
-            } 
+                text-align: center;
+            }
+            
+            .yourRoleNameBlock{
+                text-align: center;
+                margin-top: 20px;
+            }
+
         }
 
 
@@ -500,24 +458,19 @@ table{
     }
 }
 
+}
 ///////////////交換pop視窗-3
 
-.maskBlock14{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    
-    .popUpBox14{
+
+.allBlock{    
+    .popUpBox{
         position: absolute;
         top: 25%;
         left: 50%;
         transform: translateX(-50%);
         background-color: rgba(2, 79, 63, 1);
         border: 2px solid rgba(16, 197, 177, 1);
-        width: 500px;
+        width: 300px;
         height: 250px;
         border-radius: 5px;
     
@@ -539,21 +492,22 @@ table{
         .popContent14{
             text-align: center;
             color: rgba(96, 205, 144, 1);
-            margin-top: 80px;
+            margin-top: 150px;
             height: 100px;
+            font-size: 32px;
         }
 
         
            
         }
-    }
+
 }
 
 
 
 
 /////////////////////pop視窗
-
+.allBlock{
     .maskLayer{
         display: none;
     }
@@ -575,7 +529,7 @@ table{
     }
 
 
-
+}
 
 
 

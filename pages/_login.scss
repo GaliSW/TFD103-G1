@@ -5,7 +5,7 @@
 main.login {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../image/login/back.jpg);
+    background-image: url(../dist/images/login/back.jpg);
     // padding-top: 100px;
     // padding-bottom: 100px;
     width: 100%;
@@ -91,8 +91,8 @@ main.login {
             cursor: pointer;
         }
 
-        
-         .login_contain {
+
+        .login_contain {
             // display: none;
             max-width: 100%;
 

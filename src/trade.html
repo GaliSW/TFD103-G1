@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../vendor/js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
     <title>角色交易</title>
 </head>
 <body>
@@ -54,10 +56,15 @@
 
 <!-- 按鈕 -->
 
-    <div class="btnBlockmy">
-        <button type="button" class="btn111">角色上架</button>
+    <div class="btnBlockmy" id="box">
+        <button type="button" class="btn111" @click="clickShow">角色上架</button>
+        <hidden v-if="isShow" @stop-show="close"></hidden>
         <button type="button" class="btn222">我的角色管理</button>
     </div>
+
+
+
+
 
 <!-- 側邊欄 -->
 
@@ -379,7 +386,7 @@
           </ul>
         </div>
       </section>
-</main>
+    </main>
 
 
 
@@ -389,6 +396,14 @@
 
 
 
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
