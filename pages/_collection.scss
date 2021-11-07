@@ -2,19 +2,19 @@ main.collection {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../dist/images/member/back.jpg);
-    padding-top: 100px;
     padding-bottom: 100px;
     width: 100%;
     background-position: left top;
-    min-height: 100vh;
+    // min-height: 100vh;
     box-sizing: border-box;
-
+    margin-top: 90px;
 
     .container {
         max-width: 1200px;
         @include center;
         @include grids(12);
         width: 95%;
+        padding-top: 100px;
     }
 
 
@@ -249,4 +249,293 @@ main.collection {
             }
         }
     }
+
+    section.maskLayer {
+        display: none;
+        z-index: 200;
+        height: 100%;
+        position: fixed;
+
+        div.closeBtn {
+            float: right;
+        }
+
+        div.popUpBox {
+            display: none;
+        }
+
+        div.popBox {
+            display: block;
+        }
+
+        div.box {
+            display: block;
+        }
+    }
+
+    //購買
+    .maskBlockM {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(2, 79, 63, 1);
+        border: 2px solid rgba(16, 197, 177, 1);
+        width: 500px;
+        height: 250px;
+        border-radius: 5px;
+
+        .closeBtn {
+            background-color: rgba(16, 197, 177, 1);
+            border-radius: 2px;
+            font-size: 28px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .popContent {
+            text-align: center;
+            color: rgba(96, 205, 144, 1);
+            margin-top: 80px;
+            height: 100px;
+        }
+
+        .confirmBlk {
+
+            display: flex;
+            justify-content: space-evenly;
+
+            .confirmBtn {
+                padding: 0;
+                height: 35px;
+
+                &:hover {
+                    @include btn_on (100px, 0px)
+                }
+            }
+
+            #confirmBtn3 {
+                width: 150px;
+            }
+
+            #confirmBtn4 {
+                width: 150px;
+            }
+        
+    }
+}
+
+//交換視窗
+.test {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(2, 79, 63, 1);
+    border: 2px solid rgba(16, 197, 177, 1);
+    width: 1000px;
+    height: 480px;
+    border-radius: 5px;
+    overflow: auto;
+
+    .popContent12 {
+        text-align: center;
+        color: rgba(96, 205, 144, 1);
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .roleBlock1Mark {
+
+        .roleList1Mark {
+            //border: 1px solid red;
+            margin: 0 0 0 50px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                //border: 1px solid yellow;
+                width: calc((100% - 60px - 50px) / 4);
+                margin-right: 20px;
+                margin-bottom: 25px;
+
+                li {
+                    //border: 1px solid yellow;
+                    width: calc((100% - 60px - 50px) / 4);
+                    margin-right: 20px;
+                    margin-bottom: 25px;
+
+                }
+            }
+
+            .confirmBlk12 {
+
+                text-align: center;
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: space-evenly;
+
+                .confirmBtn12 {
+                    text-align: center;
+                    line-height: 30px;
+                    text-decoration: none;
+                    border: 3px solid rgba(16, 197, 177, 1);
+                    color: rgba(16, 197, 177, 1);
+                    background-color: rgba(14, 52, 97, 1);
+                    width: 100px;
+                    height: 35px;
+                    border-radius: 3px;
+                    padding: 0;
+
+                    &:hover {
+                        @include btn_on (100px, 0px)
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    //交換確認
+    .myRoleBlock,
+    .doubleArrow,
+    .yourRoleBlock {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .myRoleBlock {
+        margin-left: 185px;
+
+        .myRoleP {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .myRoleNameBlock {
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+
+    .doubleArrow {
+        width: 100px;
+        height: 100px;
+        font-size: 100px;
+        margin: 0 30px;
+    }
+
+
+    .yourRoleBlock {
+
+        .yourRoleP {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .yourRoleNameBlock {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    }
+
+
+
+    .closeBtn13 {
+        background-color: rgba(16, 197, 177, 1);
+        border-radius: 2px;
+        font-size: 28px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .popContent13 {
+        text-align: center;
+        color: rgba(96, 205, 144, 1);
+        margin-bottom: 10px;
+
+        p {
+            margin-top: 30px;
+        }
+
+
+    }
+
+    .confirmBlk13 {
+
+        display: flex;
+        justify-content: space-evenly;
+
+        .confirmBtn13 {
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+            border: 3px solid rgba(16, 197, 177, 1);
+            color: rgba(16, 197, 177, 1);
+            background-color: rgba(14, 52, 97, 1);
+            width: 100px;
+            height: 35px;
+            border-radius: 3px;
+            padding: 0;
+
+            &:hover {
+                @include btn_on (100px, 0px)
+            }
+
+            padding: 0;
+            height: 35px;
+
+            &:hover {
+                @include btn_on (100px, 0px)
+            }
+        }
+    }
+
+    //交換完成
+    .closeBtn14 {
+        background-color: rgba(16, 197, 177, 1);
+        border-radius: 2px;
+        font-size: 28px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .popContent14 {
+        text-align: center;
+        color: rgba(96, 205, 144, 1);
+        margin-top: 150px;
+        height: 100px;
+        font-size: 32px;
+    }
+}
+
+section.popShow {
+    display: block;
+}
+
 }

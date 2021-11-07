@@ -15,6 +15,9 @@
 
 <body>
     @@include('./header.html')
+    
+    
+
     <main class="member">
         <div class="main_contain">
 
@@ -69,7 +72,7 @@
                             </div>
                             <span class="trade_status col-1">等待確認</span>
                             <div class="trade_button col-3">
-                                <button class="confirm ">取消交易</button>
+                                <button class="confirm" @click=clickBuyCancel()>取消交易</button>
                             </div>
                         </div>
                         <span>
@@ -106,8 +109,8 @@
                             </div>
                             <span class="trade_status col-1">等待確認</span>
                             <div class="trade_button col-3">
-                                <button class="confirm ">確認交易</button>
-                                <button class="reject " @click="clickPop">拒絕交易</button>
+                                <button class="confirm" @click=clickSaleCheck()>確認交易</button>
+                                <button class="reject " @click=clickSaleReject()>拒絕交易</button>
                             </div>
                         </div>
                         <span>
@@ -131,39 +134,59 @@
 
                 </div>
 
+
+                <!-- 彈窗 -->
                 <template id="=hiddenPopUps">
 
                     <section class="maskLayer" :class="{'popShow':pop}">
-                        <div class="popUpBox">
+
+                        <!-- 買方取消 -->
+                        <div class="popUpBox maskBlockM" :class="{'popBox':buyCancel}">
+                            <div class="closeBtn" @click=clickClose()>
+                                x
+                            </div>
+                            <div class="popContent">
+                                <div class="popContent">
+                                    <p>取消此筆交易?</p>
+                                </div>
+                                <div class="confirmBlk">
+                                    <button class="confirmBtn">是</button>
+                                    <button class="confirmBtn" @click=clickClose()>否</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 賣家確認 -->
+                        <div class="popUpBox maskBlockM" :class="{'popBox':saleCheck}">
+                            <div class="closeBtn" @click=clickClose()>
+                                x
+                            </div>
+                            <div class="popContent">
+                                <div class="popContent">
+                                    <p>確認此筆交易?</p>
+                                </div>
+                                <div class="confirmBlk">
+                                    <button class="confirmBtn">是</button>
+                                    <button class="confirmBtn" @click=clickClose()>否</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 賣家拒絕 -->
+                        <div class="popUpBox" :class="{'popBox':saleReject}">
                             <div class="closeBtn" @click=clickClose()>
                                 x
                             </div>
                             <div class="popContent">
                                 <div class="title col-4">
                                     <span>拒絕原因:</span>
-                                    <button>不喜歡角色</button>
-                                    <button>不喜歡角色能力</button>
-                                    <button>其他</button>
+                                    <button @click= clickClose()>不喜歡角色</button>
+                                    <button @click= clickClose()>不喜歡角色能力</button>
+                                    <button @click= clickClose()>其他</button>
                                 </div>
 
                             </div>
                         </div>
-                        <div class="popUpBox">
-                            <div class="closeBtn" @click=clickClose()>
-                                x
-                            </div>
-                            <div class="popContent">
-                                <div class="title col-4">
-                                    <span>拒絕原因:</span>
-                                    <button>不喜歡角色</button>
-                                    <button>不喜歡角色能力</button>
-                                    <button>其他</button>
-                                </div>
-
-                            </div>
-                        </div>
-
-
                     </section>
 
                 </template>
@@ -173,6 +196,7 @@
         </div>
     </main>
     @@include('./footer.html')
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
     <script src="../js/member/member.js">

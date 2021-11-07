@@ -1,3 +1,55 @@
+
+let vm = new Vue({
+  el: "#app",
+  data: {
+    // content: "buyer_contain",
+    buyer: true,
+    saler: false,
+    pop: false,
+    buyCancel: false,
+    saleCheck: false,
+    saleReject: false,
+  },
+
+  methods: {
+    showBuyer: function () {
+      vm.$data.buyer = true;
+      vm.$data.saler = false;
+      // vm.$data.content = "buyer_contain";
+    },
+    showSaler: function () {
+      vm.$data.saler = true;
+      vm.$data.buyer = false;
+      // vm.$data.content = "saler_contain";
+    },
+    clickClose() {
+      vm.$data.pop = false;
+    },
+    clickPop() {
+      vm.$data.pop = true;
+    },
+    clickBuyCancel() {
+      vm.$data.pop = true;
+      vm.$data.buyCancel = true;
+      vm.$data.saleCheck = false;
+      vm.$data.saleReject = false;
+    },
+    clickSaleCheck() {
+      vm.$data.pop = true;
+      vm.$data.buyCancel = false;
+      vm.$data.saleCheck = true;
+      vm.$data.saleReject = false;
+    },
+    clickSaleReject() {
+      vm.$data.pop = true;
+      vm.$data.buyCancel = false;
+      vm.$data.saleCheck = false;
+      vm.$data.saleReject = true;
+    },
+  },
+});
+
+
 // Vue.component(`buyer_contain`, {
 //   template: `
 //             <div class="buyer_contain">
@@ -82,32 +134,3 @@
 //     },
 //   },
 // });
-
-let vm = new Vue({
-  el: "#app",
-  data: {
-    // content: "buyer_contain",
-    buyer: true,
-    saler: false,
-    pop: false,
-  },
-
-  methods: {
-    showBuyer: function () {
-      vm.$data.buyer = true;
-      vm.$data.saler = false;
-      // vm.$data.content = "buyer_contain";
-    },
-    showSaler: function () {
-      vm.$data.saler = true;
-      vm.$data.buyer = false;
-      // vm.$data.content = "saler_contain";
-    },
-    clickClose() {
-      vm.$data.pop = false;
-    },
-    clickPop() {
-      vm.$data.pop = true;
-    },
-  },
-});
