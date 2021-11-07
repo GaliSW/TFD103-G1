@@ -46,6 +46,14 @@ let vm = new Vue({
       vm.$data.saleCheck = false;
       vm.$data.saleReject = true;
     },
+    // 取消交易確認
+    clickYes() {
+      vm.$data.pop = false;
+    },
+    // 賣家確認交易
+    clickConfirm() {
+      vm.$data.pop = false;
+    },
   },
 });
 

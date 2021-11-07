@@ -1048,7 +1048,7 @@ main.collection .maskBlockM {
           transform: translateX(-50%);
   background-color: #024f3f;
   border: 2px solid #10c5b1;
-  width: 500px;
+  width: 50%;
   height: 250px;
   border-radius: 5px;
 }
@@ -1106,6 +1106,19 @@ main.collection .maskBlockM .confirmBlk #confirmBtn4 {
   width: 150px;
 }
 
+@media (max-width: 767.98px) {
+  main.collection div.maskBlockM {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 0;
+    display: none;
+  }
+}
+
 main.collection .test {
   position: absolute;
   top: 5%;
@@ -1114,7 +1127,7 @@ main.collection .test {
           transform: translateX(-50%);
   background-color: #024f3f;
   border: 2px solid #10c5b1;
-  width: 1000px;
+  width: 83%;
   height: 480px;
   border-radius: 5px;
   overflow: auto;
@@ -1309,6 +1322,19 @@ main.collection .test .popContent14 {
   margin-top: 150px;
   height: 100px;
   font-size: 32px;
+}
+
+@media (max-width: 767.98px) {
+  main.collection .test {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 0;
+    display: none;
+  }
 }
 
 main.collection section.popShow {
@@ -6260,8 +6286,8 @@ main.member section.maskLayer {
 main.member section.maskLayer div.popUpBox {
   width: 50%;
   z-index: 3;
-  height: 300px;
-  top: 10%;
+  height: 250px;
+  top: 25%;
   border: 2px solid #10c5b1;
   display: none;
 }

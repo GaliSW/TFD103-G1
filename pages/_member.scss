@@ -388,9 +388,9 @@ main.member {
             // background-color: $dark_blue;
             width: 50%;
             z-index: 3;
-            height: 300px;
+            height: 250px;
             @include grids(6);
-            top: 10%;
+            top: 25%;
             border: 2px solid rgba(16, 197, 177, 1);
             display: none;
 
