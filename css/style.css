@@ -726,19 +726,25 @@ main.collection {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../dist/images/member/back.jpg);
-  padding-top: 100px;
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
+<<<<<<< HEAD
   min-height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+=======
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 90px;
+>>>>>>> Lillian
 }
 
 main.collection .container {
   max-width: 1200px;
   margin: 0 auto;
   width: 95%;
+  padding-top: 100px;
 }
 
 main.collection .container .col-1 {
@@ -1017,6 +1023,330 @@ main.collection div.collect_contain button.delete_btn .fa-trash-alt {
   cursor: pointer;
 }
 
+main.collection section.maskLayer {
+  display: none;
+  z-index: 200;
+  height: 100%;
+  position: fixed;
+}
+
+main.collection section.maskLayer div.closeBtn {
+  float: right;
+}
+
+main.collection section.maskLayer div.popUpBox {
+  display: none;
+}
+
+main.collection section.maskLayer div.popBox {
+  display: block;
+}
+
+main.collection section.maskLayer div.box {
+  display: block;
+}
+
+main.collection .maskBlockM {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 50%;
+  height: 250px;
+  border-radius: 5px;
+}
+
+main.collection .maskBlockM .closeBtn {
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+main.collection .maskBlockM .popContent {
+  text-align: center;
+  color: #60cd90;
+  margin-top: 80px;
+  height: 100px;
+}
+
+main.collection .maskBlockM .confirmBlk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main.collection .maskBlockM .confirmBlk .confirmBtn {
+  padding: 0;
+  height: 35px;
+}
+
+main.collection .maskBlockM .confirmBlk .confirmBtn:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 0px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+main.collection .maskBlockM .confirmBlk #confirmBtn3 {
+  width: 150px;
+}
+
+main.collection .maskBlockM .confirmBlk #confirmBtn4 {
+  width: 150px;
+}
+
+@media (max-width: 767.98px) {
+  main.collection div.maskBlockM {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 0;
+    display: none;
+  }
+}
+
+main.collection .test {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 83%;
+  height: 480px;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+main.collection .test .popContent12 {
+  text-align: center;
+  color: #60cd90;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+main.collection .test .roleBlock1Mark .roleList1Mark {
+  margin: 0 0 0 50px;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main.collection .test .roleBlock1Mark .roleList1Mark li {
+  width: calc((100% - 60px - 50px) / 4);
+  margin-right: 20px;
+  margin-bottom: 25px;
+}
+
+main.collection .test .roleBlock1Mark .roleList1Mark li li {
+  width: calc((100% - 60px - 50px) / 4);
+  margin-right: 20px;
+  margin-bottom: 25px;
+}
+
+main.collection .test .roleBlock1Mark .roleList1Mark .confirmBlk12 {
+  text-align: center;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main.collection .test .roleBlock1Mark .roleList1Mark .confirmBlk12 .confirmBtn12 {
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  border: 3px solid #10c5b1;
+  color: #10c5b1;
+  background-color: #0e3461;
+  width: 100px;
+  height: 35px;
+  border-radius: 3px;
+  padding: 0;
+}
+
+main.collection .test .roleBlock1Mark .roleList1Mark .confirmBlk12 .confirmBtn12:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 0px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+main.collection .test .myRoleBlock,
+main.collection .test .doubleArrow,
+main.collection .test .yourRoleBlock {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+main.collection .test .myRoleBlock {
+  margin-left: 185px;
+}
+
+main.collection .test .myRoleBlock .myRoleP {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+main.collection .test .myRoleBlock .myRoleNameBlock {
+  text-align: center;
+  margin-top: 20px;
+}
+
+main.collection .test .doubleArrow {
+  width: 100px;
+  height: 100px;
+  font-size: 100px;
+  margin: 0 30px;
+}
+
+main.collection .test .yourRoleBlock .yourRoleP {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+main.collection .test .yourRoleBlock .yourRoleNameBlock {
+  text-align: center;
+  margin-top: 20px;
+}
+
+main.collection .test .closeBtn13 {
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+main.collection .test .popContent13 {
+  text-align: center;
+  color: #60cd90;
+  margin-bottom: 10px;
+}
+
+main.collection .test .popContent13 p {
+  margin-top: 30px;
+}
+
+main.collection .test .confirmBlk13 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main.collection .test .confirmBlk13 .confirmBtn13 {
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  border: 3px solid #10c5b1;
+  color: #10c5b1;
+  background-color: #0e3461;
+  width: 100px;
+  height: 35px;
+  border-radius: 3px;
+  padding: 0;
+  padding: 0;
+  height: 35px;
+}
+
+main.collection .test .confirmBlk13 .confirmBtn13:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 0px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+main.collection .test .confirmBlk13 .confirmBtn13:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 0px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+main.collection .test .closeBtn14 {
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+main.collection .test .popContent14 {
+  text-align: center;
+  color: #60cd90;
+  margin-top: 150px;
+  height: 100px;
+  font-size: 32px;
+}
+
+@media (max-width: 767.98px) {
+  main.collection .test {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 0;
+    display: none;
+  }
+}
+
+main.collection section.popShow {
+  display: block;
+}
+
 main.deposit {
   background-size: cover;
   background-repeat: no-repeat;
@@ -1024,6 +1354,10 @@ main.deposit {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+<<<<<<< HEAD
+=======
+  margin-top: 90px;
+>>>>>>> Lillian
 }
 
 main.deposit div.container {
@@ -1160,6 +1494,14 @@ main.deposit {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+<<<<<<< HEAD
+=======
+  margin-top: 90px;
+}
+
+main.deposit a {
+  text-decoration: none;
+>>>>>>> Lillian
 }
 
 main.deposit div.container {
@@ -4876,6 +5218,7 @@ main.login {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   min-height: 100vh;
+  margin-top: 90px;
 }
 
 main.login div.contain {
@@ -5558,6 +5901,7 @@ main.member {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
+  margin-top: 90px;
 }
 
 main.member .main_contain {
@@ -5690,16 +6034,18 @@ main.member div.bar button {
   border: 1px solid #0e3461;
 }
 
-main.member div.bar button a {
-  font-size: 16px;
-}
-
 main.member div.bar button._on {
   background-color: #0e3461;
 }
 
 main.member div.bar button._on {
   color: white;
+}
+
+@media (max-width: 577.98px) {
+  main.member div.bar button {
+    font-size: 14px;
+  }
 }
 
 main.member div.button_bar {
@@ -5962,15 +6308,17 @@ main.member section.maskLayer {
   left: 0;
   height: 100%;
   display: none;
-  z-index: 2;
+  z-index: 200;
   position: fixed;
 }
 
 main.member section.maskLayer div.popUpBox {
   width: 50%;
   z-index: 3;
-  height: 300px;
-  top: 10%;
+  height: 250px;
+  top: 25%;
+  border: 2px solid #10c5b1;
+  display: none;
 }
 
 main.member section.maskLayer div.popUpBox .col-1 {
@@ -6054,8 +6402,63 @@ main.member section.maskLayer div.popUpBox div.closeBtn {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     padding: 0;
-    border: 0;
+    display: none;
   }
+}
+
+main.member section.maskLayer div.popBox {
+  display: block;
+}
+
+main.member section.maskLayer div.maskBlockM {
+  top: 25%;
+}
+
+main.member section.maskLayer div.maskBlockM div.closeBtn {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+main.member section.maskLayer div.maskBlockM div.popContent {
+  text-align: center;
+  color: #60cd90;
+  margin-top: 80px;
+  height: 100px;
+}
+
+main.member section.maskLayer div.maskBlockM .confirmBlk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main.member section.maskLayer div.maskBlockM .confirmBlk .confirmBtn {
+  padding: 0;
+  height: 35px;
+}
+
+main.member section.maskLayer div.maskBlockM .confirmBlk .confirmBtn:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 0px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+main.member section.maskLayer div.maskBlockM .confirmBlk #confirmBtn3 {
+  width: 150px;
+}
+
+main.member section.maskLayer div.maskBlockM .confirmBlk #confirmBtn4 {
+  width: 150px;
 }
 
 main.member section.popShow {
@@ -6071,6 +6474,10 @@ main.trading_list {
   background-position: left top;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+<<<<<<< HEAD
+=======
+  margin-top: 90px;
+>>>>>>> Lillian
 }
 
 main.trading_list .main_contain {
@@ -6215,6 +6622,12 @@ main.trading_list div.bar button._on {
   color: white;
 }
 
+@media (max-width: 577.98px) {
+  main.trading_list div.bar button {
+    font-size: 14px;
+  }
+}
+
 main.trading_list div.button_bar {
   margin-top: 50px;
   display: -webkit-box;
@@ -6356,6 +6769,10 @@ main.points_list {
   background-position: left top;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+<<<<<<< HEAD
+=======
+  margin-top: 90px;
+>>>>>>> Lillian
 }
 
 main.points_list .main_contain {
@@ -6500,6 +6917,12 @@ main.points_list div.bar button._on {
   color: white;
 }
 
+@media (max-width: 577.98px) {
+  main.points_list div.bar button {
+    font-size: 14px;
+  }
+}
+
 main.points_list div.content {
   border: 1px solid #0e3461;
   background-color: white;
@@ -6537,11 +6960,24 @@ main.points_list div.content div.contain_bar {
     font-size: 16px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+<<<<<<< HEAD
     margin-bottom: 20px;
+=======
+    margin-bottom: 25px;
+>>>>>>> Lillian
   }
-  main.points_list div.content div.dropdown {
+  main.points_list div.content div.contain_bar div.dropdown {
     width: 100%;
     display: block;
+  }
+  main.points_list div.content div.contain_bar .apply_date,
+  main.points_list div.content div.contain_bar .price,
+  main.points_list div.content div.contain_bar .product,
+  main.points_list div.content div.contain_bar .method {
+    line-height: 30px;
+    height: 30px;
+    width: 25%;
+    font-size: 16px;
   }
 }
 
@@ -6572,6 +7008,15 @@ main.points_list div.content div.contain_list hr {
   main.points_list div.content div.contain_list {
     font-size: 16px;
   }
+  main.points_list div.content .apply_date,
+  main.points_list div.content .price,
+  main.points_list div.content .my_role,
+  main.points_list div.content .method {
+    width: 25%;
+  }
+  main.points_list div.content .block {
+    display: none;
+  }
 }
 
 main.member_info {
@@ -6584,6 +7029,10 @@ main.member_info {
   min-height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+<<<<<<< HEAD
+=======
+  margin-top: 90px;
+>>>>>>> Lillian
 }
 
 main.member_info .main_contain {
@@ -6728,6 +7177,12 @@ main.member_info div.bar button._on {
   color: white;
 }
 
+@media (max-width: 577.98px) {
+  main.member_info div.bar button {
+    font-size: 14px;
+  }
+}
+
 main.member_info div.content {
   border: 1px solid #0e3461;
   background-color: white;
@@ -6746,6 +7201,14 @@ main.member_info div.content div.contain_bar {
   height: 42px;
   line-height: 42px;
   padding-left: 10px;
+}
+
+@media (max-width: 577.98px) {
+  main.member_info div.content div.contain_bar {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+  }
 }
 
 main.member_info div.content div.contain_list {
@@ -6911,7 +7374,7 @@ main.member_info section.maskLayer {
   height: 100%;
   display: none;
   position: fixed;
-  z-index: 2;
+  z-index: 200;
 }
 
 main.member_info section.maskLayer div.popUpBox {
@@ -7008,6 +7471,10 @@ main.member_info section.maskLayer div.popUpBox div.contain div.btn_area {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+<<<<<<< HEAD
+=======
+  max-width: 95%;
+>>>>>>> Lillian
 }
 
 main.member_info section.maskLayer div.popUpBox div.contain div.btn_area button {
@@ -7018,6 +7485,8 @@ main.member_info section.maskLayer div.popUpBox div.contain div.btn_area button 
   border: 3px solid #60cd90;
   text-align: center;
   position: relative;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 main.member_info section.maskLayer div.popUpBox div.contain div.btn_area button:hover {
@@ -7028,6 +7497,7 @@ main.member_info section.maskLayer div.popUpBox div.contain div.btn_area button:
   border: 3px solid #0e3461;
   text-align: center;
   position: relative;
+  max-width: 100%;
 }
 
 main.member_info section.maskLayer div.popUpBox div.contain div.btn_area button.input_btn {
@@ -7051,6 +7521,7 @@ main.member_info section.maskLayer div.popUpBox div.contain div.btn_area input {
 
 @media (max-width: 767.98px) {
   main.member_info section.maskLayer div.popUpBox div.contain div.btn_area {
+    margin: 0 auto;
     margin-top: 20px;
   }
 }
@@ -7067,7 +7538,7 @@ main.member_info section.maskLayer div.popUpBox div.contain div.btn_area input {
 @media (max-width: 767.98px) {
   main.member_info section.maskLayer div.popUpBox {
     height: 500px;
-    top: 10px;
+    top: 50px;
   }
 }
 
@@ -7115,7 +7586,14 @@ main.member_info section.popShow {
           align-items: center;
   margin: 0 auto;
   margin-top: 50px;
+<<<<<<< HEAD
   border: 1px solid white;
+=======
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #fff;
+>>>>>>> Lillian
 }
 
 @media (min-width: 992px) {
@@ -7273,6 +7751,7 @@ main.member_info section.popShow {
 }
 
 .out .search-form {
+<<<<<<< HEAD
   margin-top: 110px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7280,6 +7759,15 @@ main.member_info section.popShow {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+=======
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+>>>>>>> Lillian
 }
 
 .out .search-form #search-input {
@@ -7398,9 +7886,12 @@ main.member_info section.popShow {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+<<<<<<< HEAD
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+=======
+>>>>>>> Lillian
     opacity: 1;
   }
 }
@@ -7415,9 +7906,12 @@ main.member_info section.popShow {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+<<<<<<< HEAD
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+=======
+>>>>>>> Lillian
     opacity: 1;
   }
 }
@@ -7432,9 +7926,12 @@ main.member_info section.popShow {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+<<<<<<< HEAD
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+=======
+>>>>>>> Lillian
     opacity: 1;
   }
 }
@@ -7449,9 +7946,12 @@ main.member_info section.popShow {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+<<<<<<< HEAD
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+=======
+>>>>>>> Lillian
     opacity: 1;
   }
 }
@@ -7466,9 +7966,12 @@ main.member_info section.popShow {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+<<<<<<< HEAD
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+=======
+>>>>>>> Lillian
     opacity: 1;
   }
 }
@@ -7735,9 +8238,14 @@ main.member_info section.popShow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+=======
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+>>>>>>> Lillian
   text-align: right;
 }
 
@@ -8406,6 +8914,10 @@ main.signup {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+<<<<<<< HEAD
+=======
+  margin-top: 90px;
+>>>>>>> Lillian
 }
 
 main.signup .contain {

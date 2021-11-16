@@ -7,11 +7,14 @@
     <title>signUp</title>
     <link rel="stylesheet" href="../css/style.css">
 
-
+    
+    
 </head>
 
 <body>
     @@include('./header.html')
+   
+
     <main class="signup">
         <div class="contain">
             <div class="main_contain" id="app">
@@ -30,13 +33,13 @@
 
                 <div class="form_contain  col-8" :class="{'_on': writing}">
                     <div class="signup_contain">
-                        <form action="#" method="post">
+                        <form action="../Project_test/join.php" method="post">
                             <div class="user">
                                 <div class="input_form">
                                     <label for="userid">帳號:</label>
                                     <br>
-                                    <input type="text" id="userid" placeholder="*請輸入帳號" name="userId"
-                                        @blur=showIdError()>
+                                    <input type="text" id="userId" placeholder="*請輸入帳號" name="userId"
+                                        @blur=showIdError() v-model="id">
                                 </div>
                                 <div class="error" :class="{'error_on': idError}">
                                     <span>請輸入8-16位數，內含英文跟數字，英文區分大小寫!</span>
@@ -49,7 +52,7 @@
                                     <label for="password">密碼:</label>
                                     <br>
                                     <input type="text" id="password" placeholder="*請輸入密碼" name="password"
-                                        @blur=showPwdError()>
+                                        @blur=showPwdError() v-model="newPassword">
                                 </div>
 
                                 <div class="error" :class="{'error_on': pwdError}">
@@ -62,7 +65,7 @@
                                     <label for="confirm">再次確認密碼:</label>
                                     <br>
                                     <input type="text" id="confirm" placeholder="*請確認密碼" name="confirm"
-                                        @blur=showPwdTwoError()>
+                                        @blur=showPwdTwoError() v-model="twicePassword">
                                 </div>
                                 <div class="error" :class="{'error_on': pwdTwoError}">
                                     <span>兩次密碼不一致</span>
@@ -74,7 +77,7 @@
                                     <label for="email">E-MAIL:</label>
                                     <br>
                                     <input type="text" id="email" placeholder="*請輸入信箱" name="email"
-                                        @blur=showEmailError()>
+                                        @blur=showEmailError() v-model="mail">
                                 </div>
 
                                 <div class="error" :class="{'error_on': emailError}">
@@ -82,7 +85,9 @@
                                 </div>
                             </div>
 
-                            <input class="button" type="button" @click=singUpSuccess() value="確認註冊">
+                            <input class="button" type="button" @click=doThis() value="確認註冊">
+                            
+                            <!-- <input class="button" type="button"  value="確認註冊" @click=doThis()> -->
                         </form>
                     </div>
 
@@ -102,13 +107,13 @@
 
     </main>
     @@include('./footer.html')
+    
 
+    
     <script src="../vendor/js/vue.js"></script>
-
-    <script src="../js/member/sign_up.js">
-
-
-    </script>
+    <script src="../js/member/sign_up.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 
 </html>
