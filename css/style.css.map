@@ -35,6 +35,7 @@
         "../src/sass/mixin/_mixins.scss",
         "../src/sass/base/_font.scss",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "../src/sass/base/_color.scss",
         "../src/sass/pages/_news_in.scss",
         "../src/sass/mixin/_mixins.scss",
@@ -45,6 +46,11 @@
         "../src/sass/mixin/_mixins.scss",
         "../src/sass/base/_font.scss",
 >>>>>>> bd684ee43c53ec13336387e3cb9aee26afe055b5
+=======
+        "../src/sass/pages/_news_in.scss",
+        "../src/sass/mixin/_mixins.scss",
+        "../src/sass/base/_font.scss",
+>>>>>>> MARK
         "../src/sass/pages/_product.scss",
         "../src/sass/pages/_role.scss",
         "../src/sass/pages/_signup.scss",
