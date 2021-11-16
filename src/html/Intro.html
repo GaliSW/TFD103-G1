@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>intro</title>
-  <link rel="stylesheet" type="text/css" href="../vendor/slick-1.8.1/slick/slick-theme.css" />
-  <link rel="stylesheet" type="text/css" href="../vendor/slick-1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="../js/vendor/slick-1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="../js/vendor/slick-1.8.1/slick/slick.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
     integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
@@ -19,78 +19,10 @@
 </head>
 
 <body>
-  @@include('./header.html')
   <div class="otot"></div>
 
-  <header id="header">
-    <div class="container">
-      <a class="logo" href="index.html">
-        <img src="../dist/images/index/logo.png" alt="logoImg">
-      </a>
-      <nav class="navbar">
-        <ul>
-          <a href="./Intro.html">
-            <li>
-              <img src="../dist/images/index/pic.png">
-              消息/介紹
-            </li>
-          </a>
-          <a href="./trade.html">
-            <li>
-              <img src="../dist/images/index/role01.png">
-              角色交易
-            </li>
-          </a>
-          <a href="./Gacha.html">
-            <li>
-              <img src="../dist/images/index/pokemon.png">
-              角色抽取
-            </li>
-          </a>
-        </ul>
-      </nav>
+  @@include('./header.html')
 
-      <!-- phone nav-->
-      <nav class="hamburger">
-        <div id="menuToggle">
-          <input type="checkbox" />
-
-          <span></span>
-          <span></span>
-          <span></span>
-
-          <ul id="menu">
-            <a href="./index.html"><img src="../dist/images/index/logo.png"></a>
-            <a href="./Intro.html">
-              <li><img src="../dist/images/index/pic.png">消息/介紹</li>
-            </a>
-            <a href="./trade.html">
-              <li><img src="../dist/images/index/role01.png">角色交易</li>
-            </a>
-            <a href="./Gacha.html">
-              <li><img src="../dist/images/index/pokemon.png">角色抽取</li>
-            </a>
-          </ul>
-        </div>
-      </nav>
-      <!-- phone nav end -->
-
-      <div class="icon">
-        <div class="button">
-          <a href="./deposit.html"><i class="fas fa-coins fa-2x"></i></a>
-          <div class="show">儲值</div>
-        </div>
-        <div class="button">
-          <a href="./collection.html"><i class="fab fa-gratipay fa-2x"></i></a>
-          <div class="show">收藏</div>
-        </div>
-        <div class="button">
-          <a href="./member.html"><i class="fas fa-user-circle fa-2x"></i></a>
-          <div class="show">會員</div>
-        </div>
-      </div>
-    </div>
-  </header>
 
   <div class="out">
     <main class="mama">
@@ -103,7 +35,7 @@
 
     <div class="responsive">
       <div class="card">
-        <img src="../dist/images/intro/newsin_trade.jpg" class="thumbnail" alt="slide1">
+        <img src="../image/intro/newsin_trade.jpg" class="thumbnail" alt="slide1">
         <div class="title">
           <p>2021年12月5號</p>
           <h3>社群創作比賽</h3>
@@ -111,7 +43,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="../dist/images/intro/newsin_char.jpg" class="thumbnail" alt="slide1">
+        <img src="../image/intro/newsin_char.jpg" class="thumbnail" alt="slide1">
         <div class="title">
           <p>2021年12月21號</p>
           <h3>怪哩怪汽未來發展</h3>
@@ -119,7 +51,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="../dist/images/intro/uu.jpg" class="thumbnail" alt="slide1">
+        <img src="../image/intro/uu.jpg" class="thumbnail" alt="slide1">
         <div class="title">
           <p>2021年12月21號</p>
           <h3>季節限定</h3>
@@ -127,7 +59,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="../dist/images/intro/圖-23.jpg" class="thumbnail" alt="slide1" style="height:247px;">
+        <img src="../image/intro/圖-23.jpg" class="thumbnail" alt="slide1" style="height:247px;">
         <div class="title">
           <p>2021年12月21號</p>
           <h3>怪哩怪氣誕生日</h3>
@@ -138,8 +70,8 @@
 
     <section>
       <p class="racing"></p>
-      <img src="../dist/images/intro/red.png" class="img" alt="">
-      <img src="../dist/images/intro/le.png" class="img2" alt="">
+      <img src="../image/intro/red.png" class="img" alt="">
+      <img src="../image/intro/le.png" class="img2" alt="">
       <h1 class="intr">遊戲介紹</h1>
     </section>
 
@@ -194,9 +126,10 @@
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js"></script>
   <script>AOS.init();</script>
-  <script src="../vendor/slick-1.8.1/slick/slick.min.js"></script>
-  <script src="../vendor/slick-1.8.1/slick/slick.js"></script>
-  <script src="../dist/js/news/intro.js"></script>
+  <script src="../js/vendor/slick-1.8.1/slick/slick.min.js"></script>
+  <script src="../js/vendor/slick-1.8.1/slick/slick.js"></script>
+  <script src="../js/news/intro.js"></script>
+
 </body>
 
 </html>
