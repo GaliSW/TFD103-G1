@@ -1,4 +1,3 @@
-
 let vm = new Vue({
   el: "#app",
   data: {
@@ -21,124 +20,173 @@ let vm = new Vue({
       vm.$data.saler = true;
       vm.$data.buyer = false;
       // vm.$data.content = "saler_contain";
+      displaySale();
     },
     clickClose() {
       vm.$data.pop = false;
     },
     clickPop() {
       vm.$data.pop = true;
-    },
-    clickBuyCancel() {
-      vm.$data.pop = true;
-      vm.$data.buyCancel = true;
-      vm.$data.saleCheck = false;
-      vm.$data.saleReject = false;
-    },
-    clickSaleCheck() {
-      vm.$data.pop = true;
-      vm.$data.buyCancel = false;
-      vm.$data.saleCheck = true;
-      vm.$data.saleReject = false;
-    },
-    clickSaleReject() {
-      vm.$data.pop = true;
-      vm.$data.buyCancel = false;
-      vm.$data.saleCheck = false;
-      vm.$data.saleReject = true;
-    },
-    // 取消交易確認
-    clickYes() {
-      vm.$data.pop = false;
-    },
-    // 賣家確認交易
-    clickConfirm() {
-      vm.$data.pop = false;
-    },
+    }, 
+    
   },
-});
+  
+  },
+);
 
+function clickBuyCancel() 
+{
+vm.$data.pop = true;
+vm.$data.buyCancel = true;
+vm.$data.saleCheck = false;
+vm.$data.saleReject = false;
+}
 
-// Vue.component(`buyer_contain`, {
-//   template: `
-//             <div class="buyer_contain">
-//                     <div class="contain_bar">
-//                         <span class="apply_date col-1">申請日期</span>
-//                         <span class="my_role col-3">我的角色</span>
-//                         <span class="product col-3">商品</span>
-//                         <span class="status col-5">狀態</span>
-//                     </div>
-//                     <div class="contain_list">
-//                         <span class="apply_date col-1">110-10-20</span>
-//                         <div class="my_role col-3"><img src="../image/member/r1.jpg"></div>
-//                         <div class="slaes_role col-3">
-//                             <img src="../image/member/r2.jpg" alt="">
-//                         </div>
-//                         <span class="trade_status col-1">等待確認</span>
-//                         <div class="trade_button col-3">
-//                             <button class="confirm ">取消交易</button>
-//                         </div>
-//                     </div>
-//                     <span>
-//                         <hr>
-//                     </span>
-//                     <div class="contain_list _off">
-//                         <span class="apply_date col-1">110-10-20</span>
-//                         <div class="my_role col-3"><img src="../image/member/r1.jpg"></div>
-//                         <div class="slaes_role col-3">
-//                             <img src="../image/member/r2.jpg" alt="">
-//                         </div>
+function displayBuy() {
+  $.ajax({
+    url: "../php/member/apply_buy.php",
+    data: {},
+    dataType: "json",
+    success: function (response) {
+      $("#result_buy").html("");
+      //更新html內容(透過jQuery跑迴圈取值)
+      $.each(response, function (indexA, rowA) {
+        let status = "";
+        switch (rowA.CHECKVALUE) {
+          case "0":
+            status = "已完售";
+            break;
+          case "1":
+            status = "不喜歡角色";
+            break;
+          case "2":
+            status = "不喜歡能力";
+            break;
+          case "3":
+            status = "其他";
+            break;
+        }
 
-//                         <span class="trade_status col-1">已完售</span>
-//                         <div class="trade_button col-3">
-//                             <button class="delete "><i class="fas fa-trash-alt"></i></button>
-//                         </div>
-//                     </div>
+        if (rowA.CONFIRM == 0 && rowA.AMOUNT == 1) {
+          $("#result_buy").append(
+            `
+                      <div class="contain_list">
+                        <span class="apply_date col-1">${rowA.CHANGEDATE}</span>
+                        <div class="my_role col-3"><img src=""></div>
+                        <div class="slaes_role col-3">
+                          <img src="" alt="">
+                        </div>
+                        <span class="trade_status col-1">等待確認</span>
+                        <div class="trade_button col-3">
+                          <button class="confirm" onclick=clickBuyCancel()>取消交易</button>
+                        </div>
+                      </div>
+                      <span>
+                      <hr>
+                      </span>
+                      `
+          );
+        }
+        if (
+          (rowA.CONFIRM == 0 && rowA.AMOUNT == 0) ||
+          (rowA.CONFIRM == 0 && rowA.SHOW == 0)
+        ) {
+          $("#result_buy_off").append(
+            `
+       <div class="contain_list _off">
+                            <span class="apply_date col-1">${rowA.CHANGEDATE}</span>
+                            <div class="my_role col-3"><img src=""></div>
+                            <div class="slaes_role col-3">
+                                <img src="" alt="">
+                            </div>
 
-//                 </div>
-//     `,
-// });
-// Vue.component(`saler_contain`, {
-//   template: `
-//             <div class="saler_contain">
-//                     <div class="contain_bar">
-//                         <span class="apply_date col-1">申請日期</span>
-//                         <span class="my_role col-3">對方角色</span>
-//                         <span class="product col-3">我的商品</span>
-//                         <span class="status col-5">狀態</span>
-//                     </div>
-//                     <div class="contain_list">
-//                         <span class="apply_date col-1">110-10-20</span>
-//                         <div class="my_role col-3"><img src="../image/member/r1.jpg"></div>
-//                         <div class="slaes_role col-3">
-//                             <img src="../image/member/r2.jpg" alt="">
-//                         </div>
-//                         <span class="trade_status col-1">等待確認</span>
-//                         <div class="trade_button col-3">
-//                             <button class="confirm ">確認交易</button>
-//                             <button class="reject " @click="clickPop">拒絕交易</button>
-//                         </div>
-//                     </div>
-//                     <span>
-//                         <hr>
-//                     </span>
-//                     <div class="contain_list _off">
-//                         <span class="apply_date col-1">10-20</span>
-//                         <div class="my_role col-3"><img src="../image/member/r1.jpg"></div>
-//                         <div class="slaes_role col-3">
-//                             <img src="../image/member/r2.jpg" alt="">
-//                         </div>
+                            <span class="trade_status col-1">${status}</span>
+                            <div class="trade_button col-3">
+                                <button class="delete "><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                                `
+          );
+        }
+      });
+    },
+    error: function (exception) {
+      alert("發生錯誤: " + exception.status);
+    },
+  });
+}
 
-//                         <span class="trade_status col-1">已完售</span>
-//                         <div class="trade_button col-3">
-//                             <button class="delete "><i class="fas fa-trash-alt"></i></button>
-//                         </div>
-//                     </div>
+window,onload = displayBuy();
 
-//                 </div>
-//     `,
-//   methods: {
-//     clickPop() {
-//       vm.$data.pop = true;
-//     },
-//   },
-// });
+// 賣家確認交易
+function clickSaleCheck() {
+  vm.$data.pop = true;
+  vm.$data.buyCancel = false;
+  vm.$data.saleCheck = true;
+  vm.$data.saleReject = false;
+}
+
+// 賣家拒絕交易
+function clickSaleReject() {
+  vm.$data.pop = true;
+  vm.$data.buyCancel = false;
+  vm.$data.saleCheck = false;
+  vm.$data.saleReject = true;
+}
+
+function displaySale() {
+  $.ajax({
+    url: "../php/member/apply_sale.php",
+    data: {},
+    dataType: "json",
+    success: function (response) {
+      $("#result_sale").html("");
+      $("#result_sale_off").html("");
+      //更新html內容(透過jQuery跑迴圈取值)
+      $.each(response, function (index, row) {
+        if (row.CONFIRM == 0 && row.AMOUNT == 1) {
+          $("#result_sale").append(
+            `
+                  <div class="contain_list">
+                      <span class="apply_date col-1">${row.CHANGEDATE}</span>
+                      <div class="my_role col-3"><img src=""></div>
+                      <div class="slaes_role col-3">
+                          <img src="" alt="">
+                      </div>
+                      <span class="trade_status col-1">等待確認</span>
+                      <div class="trade_button col-3">
+                          <button class="confirm" onclick=clickSaleCheck()>確認交易</button>
+                          <button class="reject" onclick=clickSaleReject()>拒絕交易</button>
+                      </div>
+                  </div>    
+                  <span>
+                      <hr>
+                  </span>
+                                `
+          );
+        }
+        if (row.CONFIRM == 4 && row.AMOUNT !== 0 && row.SHOW !== 0) {
+          $("#result_sale_off").append(
+            `
+       <div class="contain_list _off">
+                            <span class="apply_date col-1">${row.CHANGEDATE}</span>
+                            <div class="my_role col-3"><img src=""></div>
+                            <div class="slaes_role col-3">
+                                <img src="" alt="">
+                            </div>
+
+                            <span class="trade_status col-1">已被取消</span>
+                            <div class="trade_button col-3">
+                                <button class="delete "><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                                `
+          );
+        }
+      });
+    },
+    error: function (exception) {
+      alert("發生錯誤: " + exception.status);
+    },
+  });
+}

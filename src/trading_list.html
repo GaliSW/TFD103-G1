@@ -10,6 +10,7 @@
 
     <script src="../vendor/js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 
@@ -76,13 +77,20 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="contain_list">
-                            <span class="apply_date col-3">110-10-20</span>
-                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
-                            <span class="method col-2">購買</span>
-                            <span class="price col-2">100e</span>
-                            <span class="block col-2"></span>
+
+                        <!-- 買家回傳到這 -->
+                        <div id="result_buy">
+                            
+                            <!-- <div class="contain_list">
+                                <span class="apply_date col-3">110-10-20</span>
+                                <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                                <span class="method col-2">購買</span>
+                                <span class="price col-2">100e</span>
+                                <span class="block col-2"></span>
+                            </div> -->
+
                         </div>
+                        
                     </div>
 
                     <!-- 買家交換 -->
@@ -101,15 +109,20 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="contain_list">
-                            <span class="apply_date col-3">110-10-20</span>
-                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
-                            <span class="method col-2">購買</span>
-                            <div class="price col-2">
-                                <img src="../dist/images/member/r2.jpg">
+
+                        <!-- php回傳 -->
+                        <div id="result_buy_change">
+                            <div class="contain_list">
+                                <span class="apply_date col-3">110-10-20</span>
+                                <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                                <span class="method col-2">購買</span>
+                                <div class="price col-2">
+                                    <img src="../dist/images/member/r2.jpg">
+                                </div>
+                                <span class="block col-2"></span>
                             </div>
-                            <span class="block col-2"></span>
                         </div>
+                        
                     
                     </div>
 
@@ -129,13 +142,18 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="contain_list">
-                            <span class="apply_date col-3">110-10-20</span>
-                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
-                            <span class="method col-2">販售</span>
-                            <span class="price col-2">100e</span>
-                            <span class="block col-2"></span>
+
+                        <!-- php回傳 -->
+                        <div id="result_sale">
+                            <!-- <div class="contain_list">
+                                <span class="apply_date col-3">110-10-20</span>
+                                <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                                <span class="method col-2">販售</span>
+                                <span class="price col-2">100e</span>
+                                <span class="block col-2"></span>
+                            </div> -->
                         </div>
+                        
                     </div>
 
                     <!-- 賣家交換 -->

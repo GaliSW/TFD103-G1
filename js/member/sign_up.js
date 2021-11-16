@@ -68,10 +68,10 @@ let vm = new Vue({
       ) {
         $.ajax({
           method: "POST",
-          url: "../php/member/join.php",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
+          url: "../php/member/signup.php",
+          // headers: {
+          //   "Content-Type": "application/x-www-form-urlencoded",
+          // },
 
           data: {
             userId: $("#userId").val(),

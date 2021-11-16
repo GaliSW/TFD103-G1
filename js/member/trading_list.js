@@ -1,3 +1,117 @@
+let vm0 = new Vue({
+  el: "#app0",
+  data: {
+    // content: "buyer_contain",
+    b_contain: true,
+    b_change: false,
+    s_contain: false,
+    s_change: false,
+    imgPhp:"",
+    imgUrlSale: '../../../../dist/images/member/' + this.imgPhp,
+  },
+  methods: {
+    displaySale: function () {
+      $.ajax({
+        url: "../php/member/trading_list_sale.php",
+        data: {
+          // account: new URL(location.href).searchParams.get("POINTS_ID"),
+        },
+        dataType: "json",
+        success: function (response) {
+          $("#result_sale").html("");
+          //更新html內容(透過jQuery跑迴圈取值)
+          $.each(response, function (index, row) {
+            let imgUrl = "../dist/images/member/" + row.ROLE_IMG;
+            let srcName = "購買";
+            imgPhp = row.ROLE_IMG
+            $("#result_sale").append(
+              `
+               <div class="contain_list">
+                                <span class="apply_date col-3">${row.BUYDATE}</span>
+                                <div class="my_role col-3"><img src=""></div>
+                                <span class="method col-2">販售</span>
+                                <span class="price col-2">${row.PRICE}e</span>
+                                <span class="block col-2"></span>
+                            </div>
+                            <span><hr></span>
+                                `
+            );
+          });
+        },
+        error: function (exception) {
+          alert("發生錯誤: " + exception.status);
+        },
+      });
+    },
+    showBuyContain: function () {
+      vm0.$data.b_contain = true;
+      vm0.$data.b_change = false;
+      vm0.$data.s_contain = false;
+      vm0.$data.s_change = false;
+      //   this.content = "buyer_contain";
+    },
+    showBuyChange: function () {
+      vm0.$data.b_contain = false;
+      vm0.$data.b_change = true;
+      vm0.$data.s_contain = false;
+      vm0.$data.s_change = false;
+      // (this.content = "buyer_change");
+    },
+    showSalerContain: function () {
+      vm0.$data.b_contain = false;
+      vm0.$data.b_change = false;
+      vm0.$data.s_contain = true;
+      vm0.$data.s_change = false;
+      this.displaySale();
+      //   this.content = "saler_contain";
+    },
+    showSalerChange: function () {
+      vm0.$data.b_contain = false;
+      vm0.$data.b_change = false;
+      vm0.$data.s_contain = false;
+      vm0.$data.s_change = true;
+      //   this.content = "saler_change";
+    },
+    
+  },
+});
+
+function displayBuy(){
+        $.ajax({
+          url: "../php/member/trading_list_buy.php",
+        data: {
+          // account: new URL(location.href).searchParams.get("POINTS_ID"),
+        },
+        dataType: "json",
+        success: function (response) {
+          $("#result_buy").html("");
+          //更新html內容(透過jQuery跑迴圈取值)
+          $.each(response, function (index, row) {
+            // let imgUrl = "../dist/images/member/" + row.ROLE_IMG;
+      
+            $("#result_buy").append(
+              `
+               <div class="contain_list">
+                                <span class="apply_date col-3">${row.BUYDATE}</span>
+                                <div class="my_role col-3"><img :src=$imgUrl></div>
+                                <span class="method col-2">購買</span>
+                                <span class="price col-2">${row.PRICE}e</span>
+                                <span class="block col-2"></span>
+                            </div>
+                            <span><hr></span>
+                                `
+            );
+          });
+          },
+          error: function (exception) {
+            alert("發生錯誤: " + exception.status);
+          },
+        });
+  };
+
+  window.onload =  displayBuy() ;
+  
+
 // Vue.component(`buyer_contain`, {
 //   template: `
 //             <!-- 買家 -->
@@ -116,44 +230,3 @@
 //                 </div>
 //     `,
 // });
-
-let vm0 = new Vue({
-  el: "#app0",
-  data: {
-    // content: "buyer_contain",
-    b_contain: true,
-    b_change: false,
-    s_contain: false,
-    s_change: false,
-  },
-  methods: {
-    showBuyContain: function () {
-      vm0.$data.b_contain = true;
-      vm0.$data.b_change = false;
-      vm0.$data.s_contain = false;
-      vm0.$data.s_change = false;
-    //   this.content = "buyer_contain";
-    },
-    showBuyChange: function () {
-      vm0.$data.b_contain = false
-        vm0.$data.b_change = true
-        vm0.$data.s_contain = false
-        vm0.$data.s_change = false
-        // (this.content = "buyer_change");
-    },
-    showSalerContain: function () {
-      vm0.$data.b_contain = false;
-      vm0.$data.b_change = false;
-      vm0.$data.s_contain = true;
-      vm0.$data.s_change = false;
-    //   this.content = "saler_contain";
-    },
-    showSalerChange: function () {
-      vm0.$data.b_contain = false;
-      vm0.$data.b_change = false;
-      vm0.$data.s_contain = false;
-      vm0.$data.s_change = true;
-    //   this.content = "saler_change";
-    },
-  },
-});

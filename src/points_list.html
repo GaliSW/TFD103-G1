@@ -10,14 +10,15 @@
 
     <script src="../vendor/js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 
-<body>
+<body >
     @@include('./header.html')
     
 
-    <main class="points_list">
+    <main class="points_list" >
         <div class="main_contain">
 
             <!-- 上方選單 -->
@@ -47,7 +48,7 @@
 
 
             <!-- 下方顯示 -->
-            <div class="content col-12">
+            <div class="content col-12" id="app">
 
 
                 <div class="contain">
@@ -56,7 +57,7 @@
                         <span class="product col-2">來源</span>
                         <span class="method col-3">點數e</span>
                         <span class="price col-2">剩餘點數</span>
-                        <div class="dropdown col-2" id="app">
+                        <div class="dropdown col-2" >
                             <select>
                                 <option value="t3">近三個月</option>
                                 <option value="t6">近六個月</option>
@@ -65,18 +66,23 @@
                             </select>
                         </div>
                     </div>
-                    <div class="contain_list">
-                        <span class="apply_date col-3">110-10-20</span>
-                        <span class="my_role col-2">
-                            儲值
-                        </span>
-                        <span class="method col-3">500</span>
-                        <span class="price col-2">300</span>
-                        <span class="block col-2"></span>
+
+                    <!-- 回傳到這 -->
+                    <div id="result">
+                        <!-- <div class="contain_list">
+                            <span class="apply_date col-3">110-10-20</span>
+                            <span class="my_role col-2">
+                                儲值
+                            </span>
+                            <span class="method col-3">500</span>
+                            <span class="price col-2">300</span>
+                            <span class="block col-2"></span>
+                        </div> -->
+                        <!-- <span>
+                            <hr>
+                        </span> -->
                     </div>
-                    <span>
-                        <hr>
-                    </span>
+                    
 
                 </div>
             </div>
@@ -84,10 +90,8 @@
     </main>
     @@include('./footer.html')
     
-
-    <script src="../js/member/points_list.js">
-
-    </script>
+    
+    <script src="../js/member/points_list.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
 
