@@ -23,6 +23,13 @@ gsap.to('.roleCar', {
     opacity: 1
 })
 
+gsap.to('.point', {
+    y: 60, 
+    duration: 2, 
+    repeat: -1,
+    opacity: 1,
+})
+
 gsap.to('.meteor',{
     x: -500,
     y: 300,
@@ -82,14 +89,6 @@ gsap.fromTo('.car05', {
     repeat: -1
 });
 
-gsap.to('.textBox', {
-    delay: 5,
-    duration: 2, 
-    ease: "bounce", 
-    repeat: -1,
-    scale: 1.5
-})
-
 gsap.to('.effect', {
     rotation: 360,
     duration: 50,
@@ -104,9 +103,9 @@ gsap.to('.rolesR', {
         toggleActions: 'restart pause reverse pause'
     },
     keyframes: [
-        { x: -20, duration: 1, delay: .5},
+        { x: 0, duration: 1, delay: .5},
         { x: 500, duration: 1 },
-        { x: 10, duration: 1 }
+        { x: 0, duration: 1 }
     ]
 })
 gsap.to('.rolesL', {
@@ -115,53 +114,65 @@ gsap.to('.rolesL', {
         toggleActions: 'restart pause reverse pause'
     },
     keyframes: [
-        { x: 20, duration: 1, delay: .5, scale: 1.2},
+        { x: 0, duration: 1, delay: .5, scale: 1.2},
         { x: -500, duration: 1 },
-        { x: -10, duration: 1, scale: 1}
+        { x: 0, duration: 1, scale: 1}
     ]
 })
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.to('.roleDance', {
+gsap.to('.picRole', {
     scrollTrigger: {
         trigger: '.roleDance',
         toggleActions: 'restart pause reverse pause'
     },
-    x: -90,
-    rotation: -20,
+    x: 30,
+    rotation: 20,
+    duration: 1.5
+})
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('.roleDance01', {
+    scrollTrigger: {
+        trigger: '.roleDance01',
+        toggleActions: 'restart pause reverse pause'
+    },
+    scale: 1.3,
+    delay: 1.5,
     duration: 1
 })
 
-gsap.utils.toArray(".unlock").forEach(section => {
-    let tl = gsap.timeline({
-        scrollTrigger: {
-        trigger: section,
-        start: "center center",
-        end: () => "+=" + section.offsetWidth, 
-        scrub: true,
-        pin: true,
-        anticipatePin: 1
-        },
-        defaults: {ease: "none"}
-    });
-    tl.fromTo(section.querySelector(".afterImage"), { 
-        xPercent: 100, 
-        x: 0
-    }, {
-        xPercent: 0
-    })
-    .fromTo(section.querySelector(".afterImage img"), {
-        xPercent: -100,
-        x: 0
-    }, {
-        xPercent: 0
-    }, 0);
-});
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('.roleDance02', {
+    scrollTrigger: {
+        trigger: '.roleDance02',
+        toggleActions: 'restart pause reverse pause'
+    },
+    x: 90,
+    rotation: 20,
+    scale: 1.2,
+    delay: 1,
+    duration: 1
+})
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('.roleDance03', {
+    scrollTrigger: {
+        trigger: '.roleDance03',
+        toggleActions: 'restart pause reverse pause'
+    },
+    x: -90,
+    rotation: -20,
+    scale: 1.2,
+    delay: .5,
+    duration: 1
+})
 
 gsap.to('.mark', {
-    rotation: 360,
-    duration: 2,
-    scale: 1.5,
+    // rotation: 360,
+    duration: 5,
+    scale: .5,
+    ease: "bounce", 
     repeat: -1
 })
 
@@ -186,20 +197,6 @@ window.onload = function () {
 
             context.strokeText('to', 100, 350);
             context.stroke();
-        }else if(width < 768){
-            context.clearRect(0,0,canvas.width,canvas.height);
-            context.font='bold 80px Tahoma';
-            context.strokeStyle='#fff';
-            context.shadowColor='#9dff00';
-            context.shadowOffsetX=5;
-            context.shadowOffsetY=5;
-            context.shadowBlur=10;
-
-            context.strokeText('Welcome', 100, 200);
-            context.stroke();
-
-            context.strokeText('to', 100, 350);
-            context.stroke();
         }else{
             context.clearRect(0,0,canvas.width,canvas.height);
             context.font='bold 80px Tahoma';
@@ -209,13 +206,77 @@ window.onload = function () {
             context.shadowOffsetY=5;
             context.shadowBlur=10;
 
-            context.strokeText('Welcome', 100, 200);
+            context.strokeText('Welcome', 50, 200);
             context.stroke();
 
-            context.strokeText('to', 100, 350);
+            context.strokeText('to', 50, 350);
             context.stroke();
         }
     }
     resize();
     window.addEventListener('resize', resize, false);
 }
+
+
+//輪播
+$(function (){
+    let divWidth = $('#sliderBoard').width();
+    let imgCount = $('#content li').length;
+
+    for (let i=0; i < imgCount; i++){
+        $('#contentButton').append(`<li></li>`);
+    }
+    $('#contentButton li:nth-child(1)').addClass('clickMe');
+
+    
+    //設定target畫面切換
+    function clickAnimate(target){
+            let index = target.index();
+    
+            $('#content').animate({
+                left: divWidth *index * -1,
+            });
+    
+            target.addClass('clickMe');
+            $('#contentButton li').not(target).removeClass('clickMe')
+    ;}
+    
+    //設定自動撥放
+    function autoPlay(){
+        if( $("#contentButton li.clickMe").index() !== $("#contentButton li").length - 1){
+        clickAnimate($("#contentButton li.clickMe").next());  
+        }else{
+        clickAnimate( $("#contentButton li:first"));
+    }};
+            
+    let time;
+    time = setInterval(function(){
+        autoPlay();
+    }, 8000);  
+    
+    
+    //按下按鈕更換畫面，且重新啟動time
+    $('#contentButton li').click(function(){
+        clickAnimate($(this));
+        clearInterval(time);
+        
+        time = setInterval(function(){
+            autoPlay();
+        }, 8000);    
+    }); 
+   
+    //設定resize
+    function resizeWindow(){    
+        divWidth = $('#sliderBoard').width();
+        $('#content li').width(divWidth);
+        $('#content').width(divWidth * imgCount);
+
+        let index = $("#contentButton li.clickMe").index();
+        $("#content").css("left", (divWidth * index * -1));
+    }
+    resizeWindow();
+
+    $(window).on('resize',function(){
+        resizeWindow();
+    });
+})

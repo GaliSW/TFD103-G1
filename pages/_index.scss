@@ -49,6 +49,26 @@ body{
                     display: none;
                 }
             }
+            .welcome{
+                display: none;
+                width: 450px;
+                position: absolute;
+                top: 22%;
+                left: 12%;
+                @include pad_small{
+                    width: 400px;
+                    left: 6%;
+                }
+                @include phone{
+                    width: 400px;
+                    left: 0;
+                }
+            }
+            @media(max-width: 991.98px){
+                .welcome{
+                    display: block;
+                }
+            }
             .logoImg{
                 position: absolute;
                 padding: 0 0 0 260px;
@@ -67,9 +87,6 @@ body{
             .text{
                 // @include border;
                 position: absolute;
-                // bottom: 20%;
-                // top: 500px;
-                // left: 100px;
                 margin-top: 100px;
                 margin-left: 100px;
                 font-size: $fontSizeH4;
@@ -90,15 +107,16 @@ body{
                 @include phone{
                     background-color: rgba(95, 141, 179, .5);
                     font-size: $fontSize;
-                    padding: 20px 0 20px 20px;
+                    padding: 20px;
                     margin-top: 5px;
+                    margin-left: 50px;
                 }
             }
             .roleCar{
                 // @include border;
                 position: absolute;
                 right: 0;
-                margin-top: -160px;
+                margin-top: -100px;
                 opacity: 0;
                 img{
                     width: 500px;
@@ -116,17 +134,40 @@ body{
                     margin-top: -90px;
                 }
                 @include pad{
-                    margin-top: 70px;
+                    margin-top: 80px;
                 }
                 @include pad_small{
-                    margin-top: 70px;
+                    right: -15%;
+                    margin-top: 15%;
                 }
                 @include phone{
-                    right: -80px;
-                    margin-top: 20px;
+                    right: -15%;
+                    margin-top: 40%;
                     img{
                         max-width: 90%;
                         width: 300px;
+                    }
+                }
+            }
+            .point{
+                // @include border;
+                color: #a9f6cc;
+                margin-left: 20px;
+                margin-top: 180px;
+                opacity: 0;
+                @include pad{
+                    margin-top: 280px;
+                }
+                @include pad_small{
+                    margin-top: 280px;
+                }
+                @include phone{
+                    margin-top: 65%;
+                }
+                .fa-angle-double-down{
+                    font-size: 50px;
+                    @include phone{
+                        font-size: 30px;
                     }
                 }
             }
@@ -140,15 +181,9 @@ body{
         background-size: cover;
         position: relative;
         width: 100%;
-        height: 2400px;
+        // height: 2400px;
         top: 100px;
         z-index: 2;
-        @include pad_small{
-            height: 2000px;
-        }
-        @include phone{
-            height: 1900px;
-        }
         .imgBlock{
             width: 100%;
         }
@@ -165,14 +200,14 @@ body{
         height: 150px;
         top: -150px;
         @include phone{
-            top: -130px;
+            top: -110px;
         }
         .carId{
             // @include border;
             position: absolute;
             width: 200px;
             @include phone{
-                width: 180px;
+                width: 150px;
             }
             img{
                 width: 100%;
@@ -185,6 +220,7 @@ body{
         position: absolute;
         width: 100%;
         height: 320px;
+        animation: marquee 10s infinite linear;
         .raceTrack{
             // @include border;
             width: 25%;
@@ -223,7 +259,7 @@ body{
             }
             @include phone{
                 width: 220px;
-                top: 20px;
+                top: 10px;
                 left: -60px;
             }
             img{
@@ -233,25 +269,25 @@ body{
         .textBox{
             // @include border;
             position: absolute;
-            width: 200px;
-            left: 46%;
-            top: 28%;
+            width: 215px;
+            left: 40%;
+            top: 24%;
             transform: rotate(-10deg);
             @include desktop_small{
-                width: 150px;
+                width: 180px;
                 top: 20%;
             }
             @include pad{
-                width: 120px;
+                width: 170px;
                 top: 18%;
             }
             @include pad_small{
-                width: 100px;
+                width: 140px;
                 top: 16%;
             }
             @include phone{
-                width: 80px;
-                top: 14%;
+                width: 118px;
+                top: 10%;
             }
             img{
                 width: 100%;
@@ -262,14 +298,11 @@ body{
             padding-left: 45%;
             padding-top: 30%;
             transform: rotate(7.5deg);
-            @include pad{
-                padding-left: 40%;
-            }
-            @include pad_small{
-                
-            }
             @include phone{
-                
+                width: 380px;
+                padding-top: 50%;
+                padding-left: 0;
+                transform: rotate(0deg);
             }
             img{
                 width: 100%;
@@ -279,150 +312,226 @@ body{
             // @include border;
             position: absolute;
             width: 200px;
-            margin: 6% 0 0 83%;
-            overflow: hidden;
+            right: 15%;
+            bottom: -15%;
             @include desktop_small{
-                margin: 6% 0 0 78%;
+                width: 160px;
+                right: 5%;
+                bottom: -12%;
             }
             @include pad{
-                margin: 22% 0 0 70%;
+                width: 160px;
+                right: 0%;
+                bottom: -16%;
             }
             @include pad_small{
-                width: 130px;
-                margin: 18% 0 0 68%;
+                width: 160px;
+                right: -5%;
+                bottom: -18%;
             }
             @include phone{
-                width: 150px;
-                margin: 20% 0 0 60%;
+                width: 120px;
+                right: 0%;
+                bottom: -18%;
             }
             img{
                 width: 100%;
             }
         }
         .pointLogin{
-            padding-left: 10%;
-            @include pad{
-                padding-left: 72%;
-            }
-            @include pad_small{
-                padding-left: 64%;
-            }
-            @include phone{
-                padding-left: 56%;
-            }
-            a{
-                text-decoration: none;
-                .btn{
-                    @include border_r(10);
-                    @include pad{
-                        @include btn_blur(120px, 10px);
-                        &:hover{
-                            @include btn_on(120px, 10px);
-                        }
-                    }
-                    @include pad_small{
-                        @include btn_blur(100px, 8px);
-                        font-size: $fontSizeMin;
-                        &:hover{
-                            @include btn_on(100px, 8px);
-                        }
-                    }
-                    @include phone{
-                        @include btn_blur(100px, 8px);
-                        font-size: $fontSizeMin;
-                        &:hover{
-                            @include btn_on(100px, 8px);
-                        }
-                    }
-                }
-            }
-        }
-        .dialogclude{
-            // @include border;
+            // padding: 23px;
+            font-weight: 400;
             position: relative;
-            width: 180px;
-            transform: rotate(-20deg);
-            margin: -8% 0 0 70%;
+            padding-left: 65%;
+            padding-top: 4%;
+            transform: rotate(-10deg);
             @include desktop_small{
-                width: 180px;
-                margin: -10% 0 0 64%;
-            }
-            @include pad{
-                width: 150px;
-                margin: 8% 0 0 50%;
-            }
-            @include pad_small{
-                width: 100px;
-                margin: 0 0 0 50%;
+                padding-top: 3%;
             }
             @include phone{
-                width: 100px;
-                margin: 8% 0 0 40%;
+                padding-left: 50%;
+                margin-bottom: 2%;
+                margin-top: -10%;
             }
             img{
-                width: 100%;
-            }
-            p{
-                color: black;
-                font-size: $fontSizeH4;
-                margin: 0;
-                position: absolute;
-                bottom: 90px;
-                left: 35px;
+                width: 230px;
+                @include desktop_small{
+                    width: 200px;
+                }
                 @include pad{
-                    font-size: $fontSize;
-                    bottom: 80px;
+                    width: 200px;
                 }
                 @include pad_small{
-                    font-size: $fontSizeMin;
-                    bottom: 55px;
-                    left: 20px;
+                    width: 160px;
                 }
                 @include phone{
-                    font-size: $fontSizeMin;
-                    bottom: 55px;
-                    left: 20px;
+                    width: 140px;
+                }
+            }
+            p{
+                text-align: start;
+                color: rgb(0, 0, 0);
+                position: absolute;
+                top: -70%;
+                
+                @include desktop_small{
+                    top: -65%;
+                }
+                @include pad{
+                    top: -65%;
+                    font-size: $fontSize;
+                }
+                @include pad_small{
+                    top: -65%;
+                    font-size: $fontSizeSmall;
+                }
+                @include phone{
+                    top: -65%;
+                    font-size: $fontSizeSmall;
+                    left: 10px;
+                }
+            }
+            a{
+                display: block;
+                text-decoration: none;
+                color: #3c8ceb;
+                position: absolute;
+                padding: 3px;
+                top: 52%;
+                left: 69%;
+                @include border_r(12);
+                @include desktop_small{
+                    top: 49%;
+                }
+                @include pad{
+                    top: 50%;
+                }
+                @include pad_small{
+                    top: 48%;
+                    left: 70%;
+                    font-size: $fontSizeSmall;
+                }
+                @include phone{
+                    top: 44%;
+                    left: 55%;
+                    font-size: $fontSizeSmall;
+                }
+                &:hover{
+                    color: $light_green;
                 }
             }
         }
     }
     
     // 扭蛋區介紹
-    h2{
-        // @include border;
-        font-size: 42px;
-        color: #fff;
-        margin: 10% auto 0;
-        text-align: center;
-        z-index: 15;
-        @include pad{
-            font-size: 32px;
-            margin: 25% auto 0;
-        }
-        @include pad_small{
-            font-size: 28px;
-            margin: 25% auto 0;
-        }
+    .h2Games{
+        width: 300px;
+        height: 100px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        margin-top: -6%;
         @include phone{
-            font-size: 20px;
-            margin: 25% auto 0;
+            width: 250px;
+            height: 80px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        h2{
+            // @include border;
+            font-size: 36px;
+            color: #fff;
+            text-align: center;
+            margin: -25% 0 20px 0;
+            @include phone{
+                font-size: $fontSizeH1;
+                margin: -26% 0 20px 0;
+            }
         }
     }
     p{
-        font-size: $fontSizeH1;
+        font-size: $fontSize;
         text-align: center;
         color: #fff;
-        margin-top: 6%;
         @include pad{
-            font-size: $fontSizeH3;
-        }
-        @include pad_small{
-            font-size: $fontSizeH4;
-        }
-        @include phone{
             font-size: $fontSize;
         }
+        @include pad_small{
+            font-size: $fontSize;
+        }
+        @include phone{
+            font-size: $fontSizeSmall;
+        }
     }
+    // 輪播
+    .image{
+        width: 100%;
+        height: 400px;
+    }
+    #sliderBoard{
+        @include border(2, $light_green);
+        @include border_r(5);
+        width: 70%;
+        height: 400px;
+        margin: 30px auto 20px;
+        overflow: hidden;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        @include phone{
+            margin: 40px auto 20px;
+        }
+        #content{
+            position: relative;
+            z-index: 20;
+            li{
+                float: left;
+                position: relative;
+                h1{
+                    position: absolute;
+                    top: 160px;
+                    left: 10%;
+                    color: #fff;
+                    font-weight: 400;
+                    font-size: 34px;
+                }
+                h4{
+                    position: absolute;
+                    top: 210px;
+                    left: 10%;
+                    color: #fff;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    #contentButton{
+        // @include border;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        @include phone{
+            height: 20px;
+        }
+    }
+    #contentButton li{
+        width: 15px;
+        height: 10px;
+        border-radius: 20%;
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        cursor: pointer;
+    }
+    #contentButton li.clickMe{
+        background: $light_green;
+    }
+
+
+
+
     .effect{
         // @include border;
         width: 600px;
@@ -430,22 +539,26 @@ body{
         left: -4%;
         top: 28%;
         z-index: -1;
+        @include phone{
+            width: 390px;
+        }
         img{
             width: 100%;
         }
     }
     .blockBox{
         // @include border;
-        height: 450px;
+        height: 400px;
         margin-top: 2%;
-        margin-bottom: 10%;
+        z-index: 10;
         .bgColor{
             @include border(3,rgb(124, 147, 190));
             @include border_r(10);
             @include center;
-            max-width: 1200px;
+            max-width: 1000px;
             width: 100%;
             height: 100%;
+            z-index: 10;
             @include pad{
                 height: 70%;
             }
@@ -456,9 +569,10 @@ body{
                 height: 70%;
             }
             img{
-                background-size: cover;
                 position: absolute;
                 z-index: -1;
+                width: 100%;
+                height: 100%;
             }
             position: relative;
             .intro{
@@ -498,7 +612,6 @@ body{
                 img{
                     width: 100%;
                     position: absolute;
-                    bottom: 10px;
                 }
                 // 球
                 .pokemon{
@@ -532,6 +645,56 @@ body{
                 }
             }
         }
+    }
+    .manyRC{
+        display: inline-flex;
+        align-items: center;
+        margin: 20px 0 0 15%;
+        @include pad_small{
+            margin-left: 50px;
+        }
+        @include phone{
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+        h2{
+            font-size: $fontSizeH4;
+            margin: 0;
+            color: #fff;
+        }
+        h4{
+            font-size: $fontSizeH4;
+            margin-left: 20px;
+        }
+        .gamesIntro{
+            @include pad_small{
+                margin-left: 0;
+            }
+            @include phone{
+                
+            }
+            a{
+                color: $light_green;
+                @include center;
+                border-bottom: 1px solid transparent;
+                @include pad_small{
+                    margin-left: 10px;
+                }
+                @include phone{
+                    
+                }
+                &:hover{
+                    border-bottom: 1px solid $light_green;
+                }
+            }
+        }
+    }
+    h2{
+        font-size: 32px;
+        color: #59c0e7;
+        margin: 8% auto 2%;
+        text-align: center;
     }
     .manyRole{
         @include grids(12);
@@ -610,142 +773,113 @@ body{
             }
         }
     }
-    
-    // 首頁第三屏
-    .indexThree {
-        background: url(../dist/images/index/strbg.jpg)0 0 fixed;
-        background-repeat: no-repeat;
-        position: relative;
-        width: 100%;
-        height: 2000px;
-        .strtxtbg{
-            img{
-                width: 500px;
-                height: 120px;
-                position: absolute;
-                top: -3%;
-                left: 50%;
-                transform: translate(-50%);
-                z-index: 5;
-                @include desktop_small{
-                    top: -1%;
-                }
-                @include pad{
-                    width: 400px;
-                    height: 100px;
-                    top: 0;
-                }
-                @include pad_small{
-                    width: 320px;
-                    height: 80px;
-                    top: 1%;
-                }
-                @include phone{
-                    width: 240px;
-                    height: 60px;
-                    top: 2%;
-                }
-            }
-            p{
-                margin-top: 0;
-                // @include border(1,#fff);
-                padding: 5px;
-                position: absolute;
-                top: -1%;
-                left: 50%;
-                transform: translate(-50%);
-                z-index: 6;
-                @include desktop_small{
-                    top: 1%;
-                }
-                @include pad{
-                    top: 1.8%;
-                }
-                @include pad_small{
-                    top: 2.5%;
-                }
-                @include phone{
-                    top: 2.5%;
-                }
-            }
+
+    // 扭蛋解鎖小遊戲
+    .picGames{
+        width: 560px;
+        height: 100px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        margin-top: 10%;
+        @include phone{
+            width: 510px;
+            height: 80px;
         }
-    }
-    .roleDance{
-        // @include border;
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        top: 26%;
-        left: 22%;
         img{
             width: 100%;
-        }
-    }
-    .games{
-        // @include border(1,rgb(122, 218, 162));
-        background-color: rgb(53, 92, 69);
-        box-shadow: rgb(122, 218, 162) 0 0 30px 20px;
-        width: 480px;
-        height: 400px;
-        position: absolute;
-        margin-top: 50%;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%);
-        @include pad{
-            width: 450px;
-            height: 370px;
-        }
-        @include pad_small{
-            width: 420px;
-            height: 340px;
-        }
-        @include phone{
-            width: 450px;
-            height: 370px;
-        }
-    }
-    .unlock {
-        // position: absolute;
-        // padding-bottom: 20%; 
-        @include center;
-        .unlockImage {
-            width: 100%;
             height: 100%;
-            .mark{
-                width: 50%;
-                height: 60%;
-                top: 20%;
-                transform: translateX(50%);
+        }
+        h2{
+            // @include border;
+            font-size: 36px;
+            color: #fff;
+            text-align: center;
+            margin: -14% 0 0 0;
+            @include phone{
+                font-size: $fontSizeH1;
+                margin: -13% 0 0 0;
             }
         }
-        .afterImage {
-            position: absolute;
-            overflow: hidden;
-            top: 0;
-            transform: translate(100%, 0px);
-        }
-        .afterImage img {
-            transform: translate(-100%, 0px);
-        }
-        .unlockImage img {
+    }
+    
+    .unlock{
+        @include border(1, #bcb177);
+        margin: 30px auto;
+        background-color: rgb(53, 92, 69);
+        box-shadow: rgb(122, 218, 162) 0 0 70px 20px;
+        width: 500px;
+        height: 450px;
+        display: table;
+        position: relative;
+        @include phone{
+            max-width: 500px;
             width: 100%;
-            height: 100%;
+            height: 400px;
+        }
+    } 
+    .roleD{
+        .roleDance01{
+            // @include border;
             position: absolute;
-            top: 0;
-            overflow-x: hidden;
+            width: 300px;
+            top: 26%;
+            left: 22%;
+            z-index: 1;
+            img{
+                width: 100%;
+            }
+        }
+        .roleDance02{
+            // @include border;
+            position: absolute;
+            width: 300px;
+            top: 8%;
+            right: 0;
+            img{
+                width: 100%;
+            }
+        }
+        .roleDance03{
+            // @include border;
+            position: absolute;
+            width: 300px;
+            top: 8%;
+            left: 0;
+            img{
+                width: 100%;
+            }
         }
     }
+    
     // 角色交換
     .change{
         // @include border;
-        // opacity: .8;
-        position: relative;
-        top: 65%;
+        padding-bottom: 10%;
         .txt{
-            // @include border;
-            p{
-                font-size: $fontSizeH2;
+            width: 380px;
+            height: 100px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            margin-top: 10%;
+            @include phone{
+                height: 80px;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            h2{
+                // @include border;
+                font-size: 36px;
+                color: #fff;
+                text-align: center;
+                margin: -20% 0 20px 0;
+                @include phone{
+                    font-size: $fontSizeH1;
+                    margin: -17% 0 20px 0;
+                }
             }
         }
         .changeRole{
@@ -761,11 +895,14 @@ body{
             .myRole{
                 width: 350px;
                 display: block;
-                @include pad{
+                @include desktop_small{
                     width: 300px;
                 }
+                @include pad{
+                    width: 260px;
+                }
                 @include pad_small{
-                    width: 250px;
+                    width: 200px;
                 }
                 @include phone{
                     width: 150px;
@@ -782,6 +919,7 @@ body{
                 .rolesR{
                     @include border(10,#fff);
                     background-color: $light_green;
+                    margin-bottom: 40%;
                     img{
                         width: 100%;
                     }
@@ -801,11 +939,14 @@ body{
             .otherRole{
                 width: 350px;
                 display: block;
-                @include pad{
+                @include desktop_small{
                     width: 300px;
                 }
+                @include pad{
+                    width: 260px;
+                }
                 @include pad_small{
-                    width: 250px;
+                    width: 200px;
                 }
                 @include phone{
                     width: 150px;
@@ -822,6 +963,7 @@ body{
                 .rolesL{
                     @include border(10,#fff);
                     background-color: $light_green;
+                    margin-bottom: 40%;
                     img{
                         width: 100%;
                     }
