@@ -7,6 +7,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 0px 0px;
+    margin: 90px 0 0 0;
     
 
 //角色資訊
@@ -135,7 +136,7 @@
 //雷達圖
 
 
-.charts{
+.chart{
     background-color: #fff;
     //@include border;
     margin: 100px auto;
@@ -193,12 +194,13 @@ table{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 200vh;
     background-color: rgba(0, 0, 0, 0.7);
+    
     
     .popUpBox{
         position: absolute;
-        top: 25%;
+        top: 10%;
         left: 50%;
         transform: translateX(-50%);
         background-color: rgba(2, 79, 63, 1);
@@ -259,7 +261,7 @@ table{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 200vh;
     background-color: rgba(0, 0, 0, 0.7);
     
     .popUpBox{
@@ -295,6 +297,10 @@ table{
             color: rgba(96, 205, 144, 1);
             margin-top: 20px;
             margin-bottom: 20px;
+
+            p{
+                font-size: 24px;
+            }
         }
 
         .roleBlock1Mark{
@@ -319,29 +325,7 @@ table{
             }
         }
 
-        .confirmBlk12{
-
-            text-align: center;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-evenly;
-            
-            .confirmBtn12{
-                text-align: center;
-                line-height: 30px;
-                text-decoration: none;
-                border: 3px solid rgba(16, 197, 177, 1);
-                color: rgba(16, 197, 177, 1);
-                background-color: rgba(14, 52, 97, 1);
-                width: 100px;
-                height: 35px;
-                border-radius: 3px;
-                padding: 0;
-                &:hover {@include btn_on (100px, 0px)}
-            }
-
-            
-        }
+        
     }
 }
 
@@ -372,11 +356,16 @@ table{
             .myRoleP{
                 margin-bottom: 20px;
                 text-align: center;
+                color: #fff;
             } 
 
             .myRoleNameBlock{
                 text-align: center;
                 margin-top: 20px;
+
+                p{
+                    color: #fff;
+                }
             }
         }
 
@@ -393,11 +382,19 @@ table{
             .yourRoleP{
                 margin-bottom: 20px;
                 text-align: center;
+
+                p{
+                    color: #fff;
+                }
             }
             
             .yourRoleNameBlock{
                 text-align: center;
                 margin-top: 20px;
+
+                p{
+                    color: #fff;
+                }
             }
 
         }
@@ -426,6 +423,7 @@ table{
             
             p{
                 margin-top: 30px;
+                font-size: 24px;
             }
 
 
@@ -434,7 +432,25 @@ table{
         .confirmBlk13{
 
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
+            margin-top: 20px;
+
+
+            .confirmBtnBack13{
+                text-align: center;
+                line-height: 30px;
+                text-decoration: none;
+                border: 3px solid rgba(16, 197, 177, 1);
+                color: rgba(16, 197, 177, 1);
+                background-color: rgba(14, 52, 97, 1);
+                width: 100px;
+                height: 35px;
+                border-radius: 3px;
+                padding: 0;
+                margin-right: 30px;
+                &:hover {@include btn_on (100px, 0px)}
+            }
+
 
             .confirmBtn13{
                 text-align: center;
@@ -448,12 +464,8 @@ table{
                 border-radius: 3px;
                 padding: 0;
                 &:hover {@include btn_on (100px, 0px)}
-                padding: 0;
-                height: 35px;
-                &:hover {@include btn_on (100px, 0px)}
             }
 
-            
         }
     }
 }

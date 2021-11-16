@@ -14,6 +14,7 @@
 <header></header>
 
 <body>
+    
   <main class="allBlock" id="appp">
     <section class="sec1" >
         <div class="flexContainer" >
@@ -41,7 +42,7 @@
                 </div>
                 
             </div>
-          
+        
         </div>
 
         <main class="test" >
@@ -58,58 +59,58 @@
                         <div class="popContent12">
                             <p>選擇你要申請交換的角色</p>
                         </div>
-                       
+                    
                         <div class="roleBlock1Mark">
                             <ul class="roleList1Mark">
-                                <li>
+                                <li @click=toTwo()>
                                     <div class="imgBlock1Mark">
                                         <img src="../dist/images/product/change/change1.png">
                                     </div>
                                 </li>
             
-                                <li>
+                                <li @click=toTwo()>
                                     <div class="imgBlock1Mark">
                                         <img src="../dist/images/product/change/change2.png">
                                     </div>
                                 </li>
             
-                                <li>
+                                <li @click=toTwo()>
                                     <div class="imgBlock1Mark">
                                         <img src="../dist/images/product/change/change3.png">
                                     </div>
                                 </li>
                                 
-                                <li>
+                                <li @click=toTwo()>
                                     <div class="imgBlock1Mark">
                                         <img src="../dist/images/product/change/change4.png">
                                     </div>
                                 </li>
             
-                                <li>
+                                <li @click=toTwo()>
                                     <div class="imgBlock1Mark">
                                         <img src="../dist/images/product/change/change5.png">
                                     </div>
                                 </li>
             
-                                <li>
+                                <li @click=toTwo()>
                                     <div class="imgBlock1Mark">
                                         <img src="../dist/images/product/change/change6.png">
                                     </div>
                                 </li>
             
-                                <li>
+                                <li @click=toTwo()>
                                     <div class="imgBlock1Mark">
                                         <img src="../dist/images/product/change/change7.png">
                                     </div>
                                 </li>
             
-                                <li>
+                                <li @click=toTwo()>
                                     <div class="imgBlock1Mark">
                                         <img src="../dist/images/product/change/change8.png">
                                     </div>
                                 </li>
             
-                                <li>
+                                <li @click=toTwo()>
                                     <div class="imgBlock1Mark">
                                         <img src="../dist/images/product/change/change9.png">
                                     </div>
@@ -117,9 +118,7 @@
                             </ul>
                         </div>
             
-                        <div class="confirmBlk12">
-                            <a href="#" class="confirmBtn12" @click=toTwo()>確定</a>
-                        </div>
+                        
             
                     </div>
             
@@ -163,7 +162,8 @@
                         </div>
             
                         <div class="confirmBlk13">
-                            <a href="#" class="confirmBtn13" @click=toThree()>確定</a>
+                            <button href="#" class="confirmBtnBack13" @click=toBack()>返回</button>
+                            <button href="#" class="confirmBtn13" @click=toThree()>確定</button>
                         </div>
             
                     </div>
@@ -235,7 +235,7 @@
 
 </main>
 
-    <footer></footer>
+       
    
    
 
@@ -291,54 +291,57 @@
                 }
             }
         });
-        
-        
-    
     
     </script>
 
 <script>
-let vmm = new Vue({
-    el: "#appp",
-    data: {
-        pop: false,
-        one:true,
-        two:false,
-        three:false,
-        content:false,
-    },
-    methods: {
-        clickPopp() {
-            vmm.$data.pop = true;
-            vmm.$data.one = true;
-            vmm.$data.two = false;
-            vmm.$data.three = false;
+    let vmm = new Vue({
+        el: "#appp",
+        data: {
+            pop: false,
+            one:true,
+            two:false,
+            three:false,
+            content:false,
         },
-        clickClose() {
-            vmm.$data.pop = false;
+        methods: {
+            clickPopp() {
+                vmm.$data.pop = true;
+                vmm.$data.one = true;
+                vmm.$data.two = false;
+                vmm.$data.three = false;
+            },
+            clickClose() {
+                vmm.$data.pop = false;
+            },
+            toTwo(){
+                vmm.$data.two = true;
+                vmm.$data.one = false;
+                vmm.$data.three = false;
+            },  
+            toThree() {
+                vmm.$data.three = true;
+                vmm.$data.one = false;
+                vmm.$data.two = false;
+            },
+            toBack() {
+                vmm.$data.pop = true;
+                vmm.$data.one = true;
+                vmm.$data.two = false;
+                vmm.$data.three = false;
+            },
+            clickPop(){
+                        // console.log(e.target)
+                        this.content = 'maskBlock'
+                    },
+                    myClick(val){
+                        this.content = val;
+                    },
+                    myClick2(r){
+                        this.content = r;
+                    },
         },
-        toTwo(){
-            vmm.$data.two = true;
-            vmm.$data.one = false;
-            vmm.$data.three = false;
-        },  
-        toThree() {
-            vmm.$data.three = true;
-            vmm.$data.one = false;
-            vmm.$data.two = false;
-        },
-        clickPop(){
-                    // console.log(e.target)
-                    this.content = 'maskBlock'
-                },
-                myClick(val){
-                    this.content = val;
-                },
-                myClick2(r){
-                    this.content = r;
-                },
-    },
-});
+    });
 
 </script>
 
