@@ -250,8 +250,6 @@ body {
         -o-transform: translate(-50%);
         transform: translate(-50%);
     }
-
-
 }
 
 #gachaStart {
@@ -758,7 +756,7 @@ body {
 
 .pintooMask {
     // top: 20px;
-    z-index: 900;
+    z-index: 50;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
@@ -800,117 +798,129 @@ body {
     margin-top: 80px;
     margin-bottom: 30px;
 
-    table {
-        background-color: $dark_blue;
-        @include center;
-        width: 100%;
-        max-width: 1200px;
-        @include border(3, $light_green);
-        padding: 0;
-
-
-
-        th {
-            color: #fff;
-            padding: 20px 0;
-            font-size: $fontSizeH2;
-            text-align: center;
-            border-bottom: 1px dotted #fff;
-
-            @media (max-width:991.98px) {
-                font-size: $fontSizeH3;
-            }
-
-            &:nth-child(2),
-            &:nth-child(3),
-            &:nth-child(4) {
-                @media (max-width:991.98px) {
-                    display: none;
-                }
-            }
-        }
-
-        td {
-            color: #fff;
-            font-size: $fontSizeH3;
-            text-align: center;
-            // @include border();
-
-            @media (max-width:991.98px) {
-                display: flex;
-                justify-content: center;
-            }
-
-            @include desktop_small {
-                font-size: $fontSizeH4;
-            }
-
-            .roleInfo {
-                @include btn_on(200px, 10px);
-                text-align: center;
-                transition: .5s;
-
-                &:hover {
-                    color: rgba(96, 205, 144, 1);
-                    background-color: rgba(14, 52, 97, 1);
-                    border: 3px solid rgba(96, 205, 144, 1);
-                }
-
-
-                @include desktop {
-                    display: none;
-                }
-
-                @include desktop_small {
-                    // @include border();
-                    display: block;
-                }
-
-                @include pad {
-                    font-size: $fontSize;
-                    @include btn_on(150px, 10px);
-                }
-
-                @include pad_small {
-                    font-size: $fontSizeSmall;
-                    @include btn_on(150px, 10px);
-                }
-
-                @include phone {
-                    font-size: $fontSizeSmall;
-                    @include btn_on(120px, 10px);
-                }
-            }
-
-            &:nth-child(2),
-            &:nth-child(3) {
-                @media (max-width:991.98px) {
-                    display: none;
-                }
-            }
-        }
-
-        img {
-            width: 250px;
-
-            @media (max-width:575.98px) {
-                width: 150px;
-            }
-        }
-
-        .chart {
-            @include border(2, $dark_green);
-            @include border(3, orange);
-            @include border_r(10);
-            // color: rgba(250, 224, 141, .5);
-            background-color: rgba(255, 255, 255, 1);
-            width: 300px;
-
-            @media (max-width:991.98px) {
-                display: none;
-            }
-        }
+    .myRoleContent {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
     }
+
+    .RoleContent {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+
+    // table {
+    //     background-color: $dark_blue;
+    //     @include center;
+    //     width: 100%;
+    //     max-width: 1200px;
+    //     @include border(3, $light_green);
+    //     padding: 0;
+
+
+
+    //     th {
+    //         color: #fff;
+    //         padding: 20px 0;
+    //         font-size: $fontSizeH2;
+    //         text-align: center;
+    //         border-bottom: 1px dotted #fff;
+
+    //         @media (max-width:991.98px) {
+    //             font-size: $fontSizeH3;
+    //         }
+
+    //         &:nth-child(2),
+    //         &:nth-child(3),
+    //         &:nth-child(4) {
+    //             @media (max-width:991.98px) {
+    //                 display: none;
+    //             }
+    //         }
+    //     }
+
+    //     td {
+    //         color: #fff;
+    //         font-size: $fontSizeH3;
+    //         text-align: center;
+    //         // @include border();
+
+    //         @media (max-width:991.98px) {
+    //             display: flex;
+    //             justify-content: center;
+    //         }
+
+    //         @include desktop_small {
+    //             font-size: $fontSizeH4;
+    //         }
+
+    //         .roleInfo {
+    //             @include btn_on(200px, 10px);
+    //             text-align: center;
+    //             transition: .5s;
+
+    //             &:hover {
+    //                 color: rgba(96, 205, 144, 1);
+    //                 background-color: rgba(14, 52, 97, 1);
+    //                 border: 3px solid rgba(96, 205, 144, 1);
+    //             }
+
+
+    //             @include desktop {
+    //                 display: none;
+    //             }
+
+    //             @include desktop_small {
+    //                 // @include border();
+    //                 display: block;
+    //             }
+
+    //             @include pad {
+    //                 font-size: $fontSize;
+    //                 @include btn_on(150px, 10px);
+    //             }
+
+    //             @include pad_small {
+    //                 font-size: $fontSizeSmall;
+    //                 @include btn_on(150px, 10px);
+    //             }
+
+    //             @include phone {
+    //                 font-size: $fontSizeSmall;
+    //                 @include btn_on(120px, 10px);
+    //             }
+    //         }
+
+    //         &:nth-child(2),
+    //         &:nth-child(3) {
+    //             @media (max-width:991.98px) {
+    //                 display: none;
+    //             }
+    //         }
+    //     }
+
+    //     img {
+    //         width: 250px;
+
+    //         @media (max-width:575.98px) {
+    //             width: 150px;
+    //         }
+    //     }
+
+    //     .chart {
+    //         @include border(2, $dark_green);
+    //         @include border(3, orange);
+    //         @include border_r(10);
+    //         // color: rgba(250, 224, 141, .5);
+    //         background-color: rgba(255, 255, 255, 1);
+    //         width: 300px;
+
+    //         @media (max-width:991.98px) {
+    //             display: none;
+    //         }
+    //     }
+    // }
 
     .pagination {
         margin-top: 50px;
@@ -921,58 +931,238 @@ body {
 // ****************roleBlk 角色圖鑑**************** 
 .rolesBlk {
     // position: relative;
+    // @include border();
     @include center;
     margin-top: 0px;
     max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
 
-    div {
+    .container {
+        // margin: 0 100px;
+        width: 300px;
+        justify-content: center;
+        align-items: center;
         display: flex;
         flex-direction: column;
-        margin: 0 0px 30px 0px;
+        @include border(1, $light_green);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+        @media (max-width:1200px) {
+            width: 200px;
+        }
+
+        @media (max-width:800px) {
+            width: 150px;
+        }
+    }
+
+    .container:hover .lower {
+        transform: translateY(-300%);
+        background: $light_green;
+    }
+
+    .container:hover .features-list {
+        opacity: 1;
+    }
+
+    .container:hover span {
+        transform: translateY(35%);
+    }
+
+    .container:hover .content h2 {
+        opacity: 0;
+    }
+
+    .container:hover .cardImg {
+        width: 65%;
+    }
+
+    .container:hover .cta {
+        background: $light_green;
+        color: #151414;
+    }
+
+    .inner {
+        width: 100%;
+        height: 400px;
+        background-color: $dark_blue;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+
+        @media (max-width:1200px) {
+            height: 266px;
+        }
+
+        @media (max-width:800px) {
+            height: 200px;
+        }
+    }
+
+    .inner img {
+        width: 100%;
+    }
+
+    .content {
+        // @include border();
+        width: 100%;
+        display: flex;
+        justify-content: center;
         align-items: center;
-        margin-top: 80px;
+        flex-direction: column;
+        /* margin-top: 50%; */
+        color: #fff;
+    }
 
-        @include pad_small {
-            width: 33%;
+    .content h1 {
+        font-size: $fontSizeH1;
+        transition: all .5s ease;
+
+        @media (max-width:1200px) {
+            font-size: $fontSizeH3;
         }
 
-        @include phone {
-            width: 50%;
+        @media (max-width:800px) {
+            font-size: $fontSize;
         }
     }
 
-    img {
-        width: 80%;
-        @include border(3, $dark_green);
-
+    .content h2 {
+        transition: all .5s ease;
     }
 
+    .content span {
+        font-size: $fontSizeH3;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        transition: all .5s ease;
+    }
 
+    .cardImg {
+        width: 85%;
+        object-fit: contain;
+        position: absolute;
+        transition: all .5s ease;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(-60%);
+    }
 
-    .roleInfo {
-        @include btn_blur(80%, 10px);
+    .lower {
+
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        flex-direction: column;
+        background: transparent;
+        position: relative;
+        transform: translateY(40%);
+        transition: all 1s ease;
+        width: 100%;
+        height: 33%;
+    }
+
+    .features-list {
         text-align: center;
-        transition: .5s;
-        margin: 0;
+        // padding: 35px;
+        list-style: none;
+        opacity: 0;
+        width: 100%;
+        transition: all .2s ease;
+    }
 
+    .features-list h1 {
+        font-size: $fontSizeH3;
 
-        @include pad_small {
+        @media (max-width:1200px) {
             font-size: $fontSizeSmall;
         }
 
-        @include phone {
+        @media (max-width:800px) {
             font-size: $fontSizeMin;
-            padding: 10px 0px;
-        }
-
-        &:hover {
-            color: rgba(14, 52, 97, 1);
-            background-color: rgba(96, 205, 144, 1);
-            border: 3px solid rgba(14, 52, 97, 1);
         }
     }
+
+    .features-list h2 {
+        font-size: $fontSizeH4;
+
+        @media (max-width:1200px) {
+            font-size: $fontSize;
+        }
+
+        @media (max-width:800px) {
+            font-size: $fontSizeMin;
+        }
+    }
+
+    .cta {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 20px;
+        font-size: $fontSizeH3;
+        color: #000;
+        font-weight: 100;
+        cursor: pointer;
+        transition: all .3s ease;
+
+        @media (max-width:1200px) {
+            font-size: $fontSize;
+        }
+
+        @media (max-width:800px) {
+            font-size: $fontSizeSmall;
+        }
+    }
+
+    // div {
+    //     display: flex;
+    //     flex-direction: column;
+    //     margin: 0 0px 30px 0px;
+    //     align-items: center;
+    //     margin-top: 80px;
+
+    //     @include pad_small {
+    //         width: 33%;
+    //     }
+
+    //     @include phone {
+    //         width: 50%;
+    //     }
+    // }
+
+    // img {
+    //     width: 80%;
+    //     @include border(3, $dark_green);
+
+    // }
+
+
+
+    // .roleInfo {
+    //     @include btn_blur(80%, 10px);
+    //     text-align: center;
+    //     transition: .5s;
+    //     margin: 0;
+
+
+    //     @include pad_small {
+    //         font-size: $fontSizeSmall;
+    //     }
+
+    //     @include phone {
+    //         font-size: $fontSizeMin;
+    //         padding: 10px 0px;
+    //     }
+
+    //     &:hover {
+    //         color: rgba(14, 52, 97, 1);
+    //         background-color: rgba(96, 205, 144, 1);
+    //         border: 3px solid rgba(14, 52, 97, 1);
+    //     }
+    // }
 }
 
 // ********** rolePop************

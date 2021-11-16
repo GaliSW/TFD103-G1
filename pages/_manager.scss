@@ -5,6 +5,10 @@
     background: linear-gradient(45deg, rgba(2, 79, 63, 1) 0%, rgb(184, 184, 184) 100%);
 }
 
+#error {
+    color: red;
+}
+
 .mgLoginBlk {
     background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
@@ -19,6 +23,7 @@
     @include border_r(20);
     @include shadow(10, 10, 30);
     transition: .5s;
+
 
     h1 {
         border: none;
@@ -71,6 +76,15 @@
             @include btn_on(100px, 5px);
         }
     }
+}
+
+
+.mgBg {
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    z-index: -999;
 }
 
 .mgHeaderBlk {
@@ -282,10 +296,20 @@
                     cursor: pointer;
                     color: $tiffiny_green;
                 }
+
+                td {
+                    padding: 10px;
+                    border-top: 1px dotted #ccc;
+                    cursor: default;
+                }
             }
         }
 
         .memberPointContent {
+
+            text-align: center;
+
+
             table {
                 width: 100%;
                 @include border(1, #ccc);
@@ -297,6 +321,11 @@
                     &:hover {
                         color: $tiffiny_green;
                     }
+                }
+
+                .h2test {
+                    @include border();
+                    text-align: center;
                 }
 
                 a {
@@ -319,6 +348,13 @@
                     font-size: $fontSize;
                 }
             }
+        }
+
+        .roleText textarea {
+            // width: 500px;
+            font-size: $fontSize;
+            @include border(2, $tiffiny_green);
+            @include border_r(5);
         }
 
         .roleUpContent {
@@ -349,7 +385,6 @@
                     @include btn_on(100%, 10px);
                 }
             }
-
         }
 
         .newsContent {
@@ -406,6 +441,58 @@
                     @include btn_on(100px, 5px);
                 }
             }
+        }
+    }
+}
+
+.newAdmin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // transform: translate(-50%, -50%);
+    @include border(3, $dark_blue);
+    background-color: #fff;
+    @include border_r(5);
+    width: 400px;
+    @include center;
+
+    .maskLayer {
+        z-index: -2;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100vw;
+        height: 100vh;
+    }
+
+
+    .container {
+        z-index: 999;
+        // @include border();
+        // padding: 10px;
+        background-color: #fff;
+        width: 220px;
+        @include center;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        .selectAth {
+            text-align: center;
+        }
+
+        div {
+            margin: 10px 0;
+        }
+
+        input {
+            line-height: $fontSize
+        }
+
+        .btn {
+            // @include border();
+            text-align: center;
         }
     }
 }

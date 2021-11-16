@@ -1,13 +1,11 @@
-window.onload = function () {
-    // console.log('1');
-    function resize() {
-        let p1 = new Ping();
-        p1.init("ul", 3);
-
-    }
-    resize();
-    window.addEventListener('resize', resize, false);
-}
+// window.onload = function () {
+//     function resize() {
+//         let p1 = new Ping();
+//         p1.init("#ul", 3);
+//     }
+//     resize();
+//     window.addEventListener('resize', resize, false);
+// }
 
 
 function Ping() {
@@ -23,6 +21,7 @@ Ping.prototype.init = function (id, num) {
     this.oUl = document.querySelector(id);
     this.oUl.innerHTML = this.pics(num);
     this.aLi = this.oUl.querySelectorAll("li");
+    // console.log(this.aLi);
     this.len = this.aLi.length;
     this.oLi = this.aLi[this.len - 1];//最後一個li
     this.num = num;

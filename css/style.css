@@ -257,32 +257,32 @@
   }
 }
 
-#header .navbar ul {
+#header .navbar #ul2 {
   list-style: none;
   margin-left: 40px;
   padding-top: 2%;
 }
 
-#header .navbar ul a {
+#header .navbar #ul2 a {
   text-decoration: none;
 }
 
-#header .navbar ul a li {
+#header .navbar #ul2 a li {
   display: inline-flex;
   margin-right: 50px;
   color: #fff;
 }
 
-#header .navbar ul a li:hover {
+#header .navbar #ul2 a li:hover {
   color: #9dfdc8;
   text-shadow: 2px 1px #106d36;
 }
 
-#header .navbar ul a li:hover img {
+#header .navbar #ul2 a li:hover img {
   animation: move 1s infinite;
 }
 
-#header .navbar ul a li img {
+#header .navbar #ul2 a li img {
   width: 25px;
   margin-right: 10px;
   animation-play-state: paused;
@@ -2033,7 +2033,7 @@ body {
 }
 
 .pintooMask {
-  z-index: 900;
+  z-index: 50;
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
@@ -2077,148 +2077,16 @@ body {
   margin-bottom: 30px;
 }
 
-.myRoleBlk table {
-  background-color: #0e3461;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
-  border: 3px solid #60cd90;
-  padding: 0;
+.myRoleBlk .myRoleContent {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
-.myRoleBlk table th {
-  color: #fff;
-  padding: 20px 0;
-  font-size: 28px;
-  text-align: center;
-  border-bottom: 1px dotted #fff;
-}
-
-@media (max-width: 991.98px) {
-  .myRoleBlk table th {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .myRoleBlk table th:nth-child(2), .myRoleBlk table th:nth-child(3), .myRoleBlk table th:nth-child(4) {
-    display: none;
-  }
-}
-
-.myRoleBlk table td {
-  color: #fff;
-  font-size: 24px;
-  text-align: center;
-}
-
-@media (max-width: 991.98px) {
-  .myRoleBlk table td {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .myRoleBlk table td {
-    font-size: 20px;
-  }
-}
-
-.myRoleBlk table td .roleInfo {
-  color: #0e3461;
-  width: 200px;
-  padding: 10px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-  text-align: center;
-  transition: .5s;
-}
-
-.myRoleBlk table td .roleInfo:hover {
-  color: #60cd90;
-  background-color: #0e3461;
-  border: 3px solid #60cd90;
-}
-
-@media (min-width: 992px) {
-  .myRoleBlk table td .roleInfo {
-    max-width: 1200px;
-    display: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .myRoleBlk table td .roleInfo {
-    display: block;
-  }
-}
-
-@media (min-width: 578px) and (max-width: 767.98px) {
-  .myRoleBlk table td .roleInfo {
-    font-size: 16px;
-    color: #0e3461;
-    width: 150px;
-    padding: 10px;
-    background-color: #60cd90;
-    border: 3px solid #0e3461;
-    text-align: center;
-  }
-}
-
-@media (min-width: 414px) and (max-width: 577.98px) {
-  .myRoleBlk table td .roleInfo {
-    font-size: 14px;
-    color: #0e3461;
-    width: 150px;
-    padding: 10px;
-    background-color: #60cd90;
-    border: 3px solid #0e3461;
-    text-align: center;
-  }
-}
-
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .myRoleBlk table td .roleInfo {
-    font-size: 14px;
-    color: #0e3461;
-    width: 120px;
-    padding: 10px;
-    background-color: #60cd90;
-    border: 3px solid #0e3461;
-    text-align: center;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .myRoleBlk table td:nth-child(2), .myRoleBlk table td:nth-child(3) {
-    display: none;
-  }
-}
-
-.myRoleBlk table img {
-  width: 250px;
-}
-
-@media (max-width: 575.98px) {
-  .myRoleBlk table img {
-    width: 150px;
-  }
-}
-
-.myRoleBlk table .chart {
-  border: 2px solid #024f3f;
-  border: 3px solid orange;
-  border-radius: 10px;
-  background-color: white;
-  width: 300px;
-}
-
-@media (max-width: 991.98px) {
-  .myRoleBlk table .chart {
-    display: none;
-  }
+.myRoleBlk .RoleContent {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .myRoleBlk .pagination {
@@ -2233,60 +2101,203 @@ body {
   flex-wrap: wrap;
 }
 
-.rolesBlk div {
+.rolesBlk .container {
+  width: 300px;
+  justify-content: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 0 0px 30px 0px;
-  align-items: center;
-  margin-top: 80px;
+  border: 1px solid #60cd90;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-@media (min-width: 414px) and (max-width: 577.98px) {
-  .rolesBlk div {
-    width: 33%;
+@media (max-width: 1200px) {
+  .rolesBlk .container {
+    width: 200px;
   }
 }
 
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .rolesBlk div {
-    width: 50%;
+@media (max-width: 800px) {
+  .rolesBlk .container {
+    width: 150px;
   }
 }
 
-.rolesBlk img {
-  width: 80%;
-  border: 3px solid #024f3f;
+.rolesBlk .container:hover .lower {
+  transform: translateY(-300%);
+  background: #60cd90;
 }
 
-.rolesBlk .roleInfo {
-  color: #60cd90;
-  width: 80%;
-  padding: 10px;
+.rolesBlk .container:hover .features-list {
+  opacity: 1;
+}
+
+.rolesBlk .container:hover span {
+  transform: translateY(35%);
+}
+
+.rolesBlk .container:hover .content h2 {
+  opacity: 0;
+}
+
+.rolesBlk .container:hover .cardImg {
+  width: 65%;
+}
+
+.rolesBlk .container:hover .cta {
+  background: #60cd90;
+  color: #151414;
+}
+
+.rolesBlk .inner {
+  width: 100%;
+  height: 400px;
   background-color: #0e3461;
-  border: 3px solid #60cd90;
-  text-align: center;
-  text-align: center;
-  transition: .5s;
-  margin: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-@media (min-width: 414px) and (max-width: 577.98px) {
-  .rolesBlk .roleInfo {
+@media (max-width: 1200px) {
+  .rolesBlk .inner {
+    height: 266px;
+  }
+}
+
+@media (max-width: 800px) {
+  .rolesBlk .inner {
+    height: 200px;
+  }
+}
+
+.rolesBlk .inner img {
+  width: 100%;
+}
+
+.rolesBlk .content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* margin-top: 50%; */
+  color: #fff;
+}
+
+.rolesBlk .content h1 {
+  font-size: 32px;
+  transition: all .5s ease;
+}
+
+@media (max-width: 1200px) {
+  .rolesBlk .content h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .rolesBlk .content h1 {
+    font-size: 16px;
+  }
+}
+
+.rolesBlk .content h2 {
+  transition: all .5s ease;
+}
+
+.rolesBlk .content span {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  transition: all .5s ease;
+}
+
+.rolesBlk .cardImg {
+  width: 85%;
+  object-fit: contain;
+  position: absolute;
+  transition: all .5s ease;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-60%);
+}
+
+.rolesBlk .lower {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  flex-direction: column;
+  background: transparent;
+  position: relative;
+  transform: translateY(40%);
+  transition: all 1s ease;
+  width: 100%;
+  height: 33%;
+}
+
+.rolesBlk .features-list {
+  text-align: center;
+  list-style: none;
+  opacity: 0;
+  width: 100%;
+  transition: all .2s ease;
+}
+
+.rolesBlk .features-list h1 {
+  font-size: 24px;
+}
+
+@media (max-width: 1200px) {
+  .rolesBlk .features-list h1 {
     font-size: 14px;
   }
 }
 
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .rolesBlk .roleInfo {
+@media (max-width: 800px) {
+  .rolesBlk .features-list h1 {
     font-size: 12px;
-    padding: 10px 0px;
   }
 }
 
-.rolesBlk .roleInfo:hover {
-  color: #0e3461;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
+.rolesBlk .features-list h2 {
+  font-size: 20px;
+}
+
+@media (max-width: 1200px) {
+  .rolesBlk .features-list h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  .rolesBlk .features-list h2 {
+    font-size: 12px;
+  }
+}
+
+.rolesBlk .cta {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 24px;
+  color: #000;
+  font-weight: 100;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+@media (max-width: 1200px) {
+  .rolesBlk .cta {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  .rolesBlk .cta {
+    font-size: 14px;
+  }
 }
 
 .roleMaskLayer {
@@ -4662,6 +4673,10 @@ main.login div.contain .bookmark {
   background: linear-gradient(45deg, #024f3f 0%, #b8b8b8 100%);
 }
 
+#error {
+  color: red;
+}
+
 .mgLoginBlk {
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
@@ -4747,6 +4762,14 @@ main.login div.contain .bookmark {
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
+}
+
+.mgBg {
+  background-color: white;
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  z-index: -999;
 }
 
 .mgHeaderBlk {
@@ -4972,6 +4995,16 @@ main.login div.contain .bookmark {
   color: #10c5b1;
 }
 
+.mgContainer .contentContainer .memberContent table td {
+  padding: 10px;
+  border-top: 1px dotted #ccc;
+  cursor: default;
+}
+
+.mgContainer .contentContainer .memberPointContent {
+  text-align: center;
+}
+
 .mgContainer .contentContainer .memberPointContent table {
   width: 100%;
   border: 1px solid #ccc;
@@ -4984,6 +5017,11 @@ main.login div.contain .bookmark {
 
 .mgContainer .contentContainer .memberPointContent table .memberEdit:hover {
   color: #10c5b1;
+}
+
+.mgContainer .contentContainer .memberPointContent table .h2test {
+  border: 1px solid red;
+  text-align: center;
 }
 
 .mgContainer .contentContainer .memberPointContent table a {
@@ -5002,6 +5040,12 @@ main.login div.contain .bookmark {
 
 .mgContainer .contentContainer .roleContent table button {
   font-size: 16px;
+}
+
+.mgContainer .contentContainer .roleText textarea {
+  font-size: 16px;
+  border: 2px solid #10c5b1;
+  border-radius: 5px;
 }
 
 .mgContainer .contentContainer .roleUpContent table {
@@ -5103,6 +5147,53 @@ main.login div.contain .bookmark {
   padding: 5px;
   background-color: #60cd90;
   border: 3px solid #0e3461;
+  text-align: center;
+}
+
+.newAdmin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 3px solid #0e3461;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.newAdmin .maskLayer {
+  z-index: -2;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+}
+
+.newAdmin .container {
+  z-index: 999;
+  background-color: #fff;
+  width: 220px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.newAdmin .container .selectAth {
+  text-align: center;
+}
+
+.newAdmin .container div {
+  margin: 10px 0;
+}
+
+.newAdmin .container input {
+  line-height: 16px;
+}
+
+.newAdmin .container .btn {
   text-align: center;
 }
 

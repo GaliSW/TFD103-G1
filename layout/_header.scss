@@ -1,4 +1,4 @@
-#header{
+#header {
     // @include border();
     // @include grids(12);
     width: 100%;
@@ -8,118 +8,149 @@
     top: 0;
 
     box-shadow: 0px 5px 5px 0px #3bb6d2;
-    background: linear-gradient( 181deg, rgb(12, 26, 50) 0%, rgb(29, 102, 114) 35%, rgb(35, 143, 211) 70%,rgb(24, 239, 232) 100%);
-    @include pad{
+    background: linear-gradient(181deg, rgb(12, 26, 50) 0%, rgb(29, 102, 114) 35%, rgb(35, 143, 211) 70%, rgb(24, 239, 232) 100%);
+
+    @include pad {
         height: 70px;
     }
-    @include pad_small{
+
+    @include pad_small {
         height: 70px;
     }
-    @include phone{
+
+    @include phone {
         height: 70px;
     }
-    .container{
+
+    .container {
         // @include border();
         display: flex;
         max-width: 1200px;
         height: 90px;
         margin: 0 auto;
-        @include desktop_small{
+
+        @include desktop_small {
             justify-content: space-between;
         }
-        @include pad{
+
+        @include pad {
             justify-content: space-between;
         }
-        @include pad_small{
+
+        @include pad_small {
             justify-content: space-between;
         }
-        @include phone{
+
+        @include phone {
             justify-content: space-between;
         }
     }
-    .logo{
+
+    .logo {
         // @include border();
         margin: 0 16px;
         display: flex;
         align-items: center;
-        @include desktop_small{
+
+        @include desktop_small {
             margin: 0 0 0 30px;
         }
-        @include pad{
+
+        @include pad {
             margin: 0 0 10px 30px;
         }
-        @include pad_small{
+
+        @include pad_small {
             margin: 0 0 10px 30px;
         }
-        @include phone{
+
+        @include phone {
             margin: 0 0 10px 30px;
         }
     }
-    .logo img{
+
+    .logo img {
         width: 150px;
         transform: rotate(7deg);
-        @include pad_small{
+
+        @include pad_small {
             width: 120px;
         }
-        @include phone{
+
+        @include phone {
             width: 120px;
         }
     }
-    
+
     //keyframes
-    @keyframes move{
+    @keyframes move {
         0% {
             transform: translate(0, 0);
         }
+
         25% {
             transform: translate(0, -20px);
         }
+
         50% {
             transform: translate(0, 0);
         }
+
         75% {
             transform: translate(0, -20px);
         }
+
         100% {
             transform: translate(0, 0);
         }
     }
-    .navbar{
+
+    .navbar {
         // @include border();
         display: flex;
         align-items: center;
         font-size: 18px;
         margin: 0 auto;
-        @include desktop_small{
+
+        @include desktop_small {
             display: none;
         }
-        @include pad{
+
+        @include pad {
             display: none;
         }
-        @include pad_small{
+
+        @include pad_small {
             display: none;
         }
-        @include phone{
+
+        @include phone {
             display: none;
         }
-        ul{
-            list-style: none;   
-            margin-left: 40px; 
+
+        #ul2 {
+            list-style: none;
+            margin-left: 40px;
             padding-top: 2%;
-            a{
+
+            a {
                 text-decoration: none;
-                li{
+
+                li {
                     display: inline-flex;
                     margin-right: 50px;
                     color: #fff;
-                    &:hover{
+
+                    &:hover {
                         color: #9dfdc8;
-                        text-shadow:2px 1px rgb(16, 109, 54);
+                        text-shadow: 2px 1px rgb(16, 109, 54);
                     }
-                    &:hover img{
+
+                    &:hover img {
                         animation: move 1s infinite;
                     }
-                    img{
+
+                    img {
                         width: 25px;
                         margin-right: 10px;
                         animation-play-state: paused;
@@ -128,29 +159,34 @@
             }
         }
     }
-    
+
     // phone nav
-    .hamburger{
+    .hamburger {
         display: none;
         order: -1;
-        @include desktop_small{
+
+        @include desktop_small {
             display: flex;
             margin: 32px;
         }
-        @include pad{
+
+        @include pad {
             display: flex;
             margin: 32px;
         }
-        @include pad_small{
+
+        @include pad_small {
             display: flex;
             margin: 32px;
         }
-        @include phone{
+
+        @include phone {
             display: flex;
             margin: 32px;
         }
     }
-    #menuToggle{
+
+    #menuToggle {
         display: flex;
         flex-direction: column;
         position: relative;
@@ -158,15 +194,18 @@
         left: 0px;
         z-index: 1;
         user-select: none;
-        a{
+
+        a {
             text-decoration: none;
             color: #232323;
             transition: color 0.3s ease;
-            &:hover{
+
+            &:hover {
                 color: #9dfdc8;
             }
         }
-        input{
+
+        input {
             display: block;
             width: 40px;
             height: 32px;
@@ -174,45 +213,55 @@
             top: -7px;
             left: -5px;
             cursor: pointer;
-            opacity: 0; /* hide this */
-            z-index: 2; /* and place it over the hamburger */
-            &:checked ~ span{
+            opacity: 0;
+            /* hide this */
+            z-index: 2;
+
+            /* and place it over the hamburger */
+            &:checked~span {
                 opacity: 1;
                 transform: rotate(45deg) translate(-2px, -1px);
                 background: $dark_blue;
-                &:nth-last-child(3){
+
+                &:nth-last-child(3) {
                     opacity: 0;
                     transform: rotate(0deg) scale(0.2, 0.2);
                 }
-                &:nth-last-child(2){
+
+                &:nth-last-child(2) {
                     transform: rotate(-45deg) translate(0, -1px);
                 }
             }
-            &:checked ~ ul{
+
+            &:checked~ul {
                 transform: none;
             }
         }
-        span{
+
+        span {
             display: block;
             width: 33px;
             height: 4px;
             margin-bottom: 5px;
-            position: relative;  
+            position: relative;
             background: #a2d6d2;
             border-radius: 3px;
             z-index: 1;
             transform-origin: 4px 0px;
-            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                        opacity 0.55s ease;
-            &:first-child{
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                opacity 0.55s ease;
+
+            &:first-child {
                 transform-origin: 0% 0%;
             }
-            &:nth-last-child(2){
+
+            &:nth-last-child(2) {
                 transform-origin: 0% 100%;
             }
         }
     }
-    #menu{
+
+    #menu {
         position: absolute;
         width: 100vw;
         border: solid;
@@ -221,24 +270,29 @@
         list-style-type: none;
         transform-origin: 0% 0%;
         transform: translate(-100%, 0);
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-        a > img{
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+        a>img {
             width: 100px;
             margin-left: 50%;
             transform: translate(-50%);
         }
-        li{
+
+        li {
             padding: 15px 0;
             font-size: 18px;
             text-align: center;
             border-top: 1px solid #0E3461;
-            &:hover{
+
+            &:hover {
                 background: #0E3461;
             }
-            &:hover img{
+
+            &:hover img {
                 animation: move 1s infinite;
             }
-            img{
+
+            img {
                 width: 30px;
                 margin-right: 10px;
                 vertical-align: bottom;
@@ -246,40 +300,48 @@
             }
         }
     }
+
     // phone nav end
-    
-    .icon{
+
+    .icon {
         display: flex;
         align-items: center;
         margin: auto;
         margin: 0 28px;
-        @include pad_small{
+
+        @include pad_small {
             margin: 0 10px;
         }
-        @include phone{
+
+        @include phone {
             margin: 0 8px;
         }
-        .button{
+
+        .button {
             // width:100px;
             text-align: center;
-            color:#fff;
+            color: #fff;
             font-size: 12px;
-            &:hover .show{
-                display:block;
+
+            &:hover .show {
+                display: block;
             }
-            a{
+
+            a {
                 margin: 8px;
                 color: #a2d6d2;
                 border: 1px solid #19ADD2;
                 border-radius: 50%;
-                &:hover{
+
+                &:hover {
                     color: #9dfdc8;
                     border: 1px solid #0E3461;
                     border-radius: 50%;
                 }
             }
-            .show{
-                @include border(1,#a2d6d2);
+
+            .show {
+                @include border(1, #a2d6d2);
                 background: #0E3461;
                 @include border_r(5);
                 padding: 2px 4px;
