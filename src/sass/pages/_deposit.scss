@@ -1,7 +1,7 @@
 main.deposit {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../dist/images/deposit/back.jpg);
+    background-image: url(../src/image/deposit/back.jpg);
     // padding-bottom: 100px;
     margin: 0;
     box-sizing: border-box;
@@ -99,13 +99,13 @@ main.deposit {
 main.deposit {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../dist/images/deposit/back.jpg);
+    background-image: url(../src/image/deposit/back.jpg);
     padding-bottom: 100px;
     margin: 0;
     box-sizing: border-box;
     margin-top: 90px;
 
-    a{
+    a {
         text-decoration: none;
     }
 

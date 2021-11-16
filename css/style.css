@@ -338,7 +338,11 @@
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 #header .navbar ul a li {
+=======
+#header .navbar #ul2 a li {
+>>>>>>> 7cd3b115cb3c3d81cb99c53bb6df0ab4fd45d152
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -351,7 +355,11 @@
   text-shadow: 2px 1px #106d36;
 }
 
+<<<<<<< HEAD
 #header .navbar ul a li:hover img {
+=======
+#header .navbar #ul2 a li:hover img {
+>>>>>>> 7cd3b115cb3c3d81cb99c53bb6df0ab4fd45d152
   -webkit-animation: move 1s infinite;
           animation: move 1s infinite;
 }
@@ -767,7 +775,7 @@
 main.collection {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../dist/images/member/back.jpg);
+  background-image: url(../src/image/member/back.jpg);
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -1386,7 +1394,7 @@ main.collection section.popShow {
 main.deposit {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../dist/images/deposit/back.jpg);
+  background-image: url(../src/image/deposit/back.jpg);
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1522,7 +1530,7 @@ main.deposit div.container div#app button div.photo span {
 main.deposit {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../dist/images/deposit/back.jpg);
+  background-image: url(../src/image/deposit/back.jpg);
   padding-bottom: 100px;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -1792,8 +1800,13 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
   width: 500px;
   -webkit-transform: rotate(5deg);
           transform: rotate(5deg);
+<<<<<<< HEAD
   position: relative;
   top: 0;
+=======
+  position: absolute;
+  top: 480px;
+>>>>>>> 7cd3b115cb3c3d81cb99c53bb6df0ab4fd45d152
 }
 
 .entry .entrybg .contentBox .roleLeft img {
@@ -2217,6 +2230,9 @@ body {
   0% {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
   }
   50% {
     -webkit-transform: scale(1.5);
@@ -2244,6 +2260,39 @@ body {
   }
   100% {
     -webkit-transform: translateY(100px);
+=======
+>>>>>>> 7cd3b115cb3c3d81cb99c53bb6df0ab4fd45d152
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  51% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+@-webkit-keyframes drop {
+  0% {
+    -webkit-transform: scale(0.7);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+  51% {
+    -webkit-transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+<<<<<<< HEAD
+=======
+>>>>>>> bd684ee43c53ec13336387e3cb9aee26afe055b5
+>>>>>>> 7cd3b115cb3c3d81cb99c53bb6df0ab4fd45d152
   }
 }
 
@@ -5162,7 +5211,7 @@ body {
 }
 
 .otot {
-  background-image: url("../dist/images/intro/bg.jpg");
+  background-image: url("../src/image/intro/bg.jpg");
   width: 100%;
   height: 100%;
   position: fixed;
@@ -5372,7 +5421,7 @@ body {
 
 .out .total .fs {
   z-index: 5;
-  background: url("../dist/images/intro/圖-12.jpg");
+  background: url("/src/image/intro/圖-12.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5380,7 +5429,7 @@ body {
 
 .out .total .sc {
   z-index: 4;
-  background: url("../dist/images/intro/圖-26.jpg");
+  background: url("/src/image/intro/圖-26.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5388,7 +5437,7 @@ body {
 
 .out .total .th {
   z-index: 3;
-  background: url("../dist/images/intro/圖-21.jpg");
+  background: url("/src/image/intro/圖-21.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5396,7 +5445,7 @@ body {
 
 .out .total .fr {
   z-index: 2;
-  background: url("../dist/images/intro/圖-25.jpg");
+  background: url("/src/image/intro/圖-25.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5404,7 +5453,7 @@ body {
 
 .out .total .fi {
   z-index: 1;
-  background: url("../dist/images/intro/圖-30.jpg");
+  background: url("/src/image/intro/圖-30.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5444,7 +5493,7 @@ body {
 main.login {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../dist/images/login/back.jpg);
+  background-image: url(../src/image/login/back.jpg);
   width: 100%;
   background-position: left bottom;
   -webkit-box-sizing: border-box;
@@ -6210,7 +6259,7 @@ main.login div.contain .bookmark {
 main.member {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../dist/images/member/back.jpg);
+  background-image: url(../src/image/member/back.jpg);
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -6785,7 +6834,7 @@ main.member section.popShow {
 main.trading_list {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../dist/images/member/back.jpg);
+  background-image: url(../src/image/member/back.jpg);
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -7077,7 +7126,7 @@ main.trading_list div.content div.contain_list hr {
 main.points_list {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../dist/images/member/back.jpg);
+  background-image: url(../src/image/member/back.jpg);
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -7329,7 +7378,7 @@ main.points_list div.content div.contain_list hr {
 main.member_info {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../dist/images/member/back.jpg);
+  background-image: url(../src/image/member/back.jpg);
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -7845,15 +7894,6 @@ main.member_info section.maskLayer div.popUpBox div.contain div.btn_area input {
 
 main.member_info section.popShow {
   display: block;
-}
-
-.otot {
-  background-image: url("../dist/images/intro/bg.jpg");
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  z-index: -1;
 }
 
 .out a {
@@ -8415,15 +8455,6 @@ main.member_info section.popShow {
 .wrap78 .name {
   text-align: center;
   width: 100%;
-}
-
-.otot {
-  background-image: url("../dist/images/intro/bg.jpg");
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  z-index: -1;
 }
 
 .out {
@@ -9172,7 +9203,7 @@ main.member_info section.popShow {
 main.signup {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../dist/images/signup/b1.png);
+  background-image: url(../src/image/signup/b1.png);
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
