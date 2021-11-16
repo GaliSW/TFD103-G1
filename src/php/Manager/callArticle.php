@@ -1,6 +1,6 @@
 <?php
     // $Name = $_POST["Name"];
-    include "connection.php";
+    include "../connection.php";
 
     // $sql = "SELECT TOTAL,PDATE from STORE where CLASS = 0 & ";
     $sql = "SELECT * from ARTICLE ";

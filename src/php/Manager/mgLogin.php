@@ -1,7 +1,7 @@
 <?php
     $Name = $_POST["Name"];
     $Pass = $_POST["Pass"];
-    include "connection.php";
+    include "../connection.php";
 
     $sql = "SELECT MNAME from MANAGER where MACCOUNT = ? && MPASS = ?";
     // $statement = $pdo->query($sql);
@@ -17,7 +17,7 @@
 
     if(count($data) > 0){
 
-        include "Manager.php";
+        include "../Manager.php";
         
 
         //將登入資訊寫入session

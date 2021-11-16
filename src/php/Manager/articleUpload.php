@@ -1,5 +1,5 @@
 <?php    
-    include "connection.php";
+    include "../connection.php";
     echo "Y";
     //先判斷圖片是否上傳成功?
     if($_FILES["file"]["error"] > 0){

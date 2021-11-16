@@ -1,7 +1,7 @@
 <?php
     $Name = $_POST["Name"];
     $adminBool = $_POST["adminBool"];
-    include "connection.php";
+    include "../connection.php";
 
     // $sql = "SELECT TOTAL,PDATE from STORE where CLASS = 0 & ";
     $sql = "UPDATE MANAGER SET MAUTH = ? WHERE MNAME = ?";

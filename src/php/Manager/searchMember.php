@@ -1,6 +1,6 @@
 <?php
     $search = $_POST["search"];
-    include "connection.php";
+    include "../connection.php";
 
     $sql = "SELECT * from MEMBER WHERE EMAIL LIKE ?";
 

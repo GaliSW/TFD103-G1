@@ -1,6 +1,6 @@
 <?php
     // $Name = $_POST["Name"];
-    include "connection.php";
+    include "../connection.php";
 
     $sql = "SELECT ROLE_ID,RNAME,ABILITY,AMOUNT from ROLE";
 

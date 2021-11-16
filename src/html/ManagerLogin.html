@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>後台登入</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="mgLoginBg"></div>
     <div class="mgLoginBlk">
-        <img src="../dist/images/manager/logo.png" alt="">
+        <img src="../image/manager/logo.png" alt="">
         <form action="">
             <div>
                 <label for="mgAccount">帳號:</label>
@@ -50,7 +50,7 @@
                     let error = document.getElementById('error');
                     if (response == 1) {
                         console.log(response)
-                        document.location.href = "http://localhost/TFD103-G1/src/Manager.html";
+                        document.location.href = "./Manager.html";
                     } else {
                         error.classList.remove('none');
                     }

@@ -1,5 +1,5 @@
 <?php
-    include "connection.php";
+    include "../connection.php";
     //建立SQL語法
     $sql = "SELECT * FROM ROLE";
 
