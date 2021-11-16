@@ -4,12 +4,13 @@
     padding: 0;
 }
 .entry{
-    overflow-y: hidden;
+    
     .entrybg{
+        overflow-y: hidden;
         // @include border(1, #0e1c3e);
         width: 100%;
         height: 100vh;
-        background-image: url(../dist/images/index/entry.jpg);
+        background-image: url(../src/image/index/entry.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         .contentBox{
@@ -85,8 +86,8 @@
                 // @include border;
                 width: 500px;
                 transform: rotate(5deg);
-                position: absolute;
-                top: 480px;
+                position: relative;
+                top: 0;
                 img{
                     width: 100%;
                 }
