@@ -1,6 +1,6 @@
 <?php
-    include "Manager.php";
-    include "connection.php";
+    include "../Manager.php";
+    include "../connection.php";
 
     //清空session
     clearSession();

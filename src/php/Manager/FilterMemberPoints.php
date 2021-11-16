@@ -1,7 +1,7 @@
 <?php
     $Name = $_POST["Name"];
     $Filter = $_POST["Filter"];
-    include "connection.php";
+    include "../connection.php";
 
     if($Filter == "one"){
         $sql = "SELECT TOTAL,PDATE from STORE where FK_USERNAME in (select USERNAME from MEMBER where USERNAME = ?) && PDATE BETWEEN (now() - interval 30 DAY) AND now() ORDER BY PDATE DESC";

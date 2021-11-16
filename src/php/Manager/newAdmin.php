@@ -3,7 +3,7 @@
     $Mail = $_POST["Mail"];
     $Pass = $_POST["Pass"];
     $Auth = $_POST["Auth"];
-    include "connection.php";
+    include "../connection.php";
 
     // $sql = "SELECT TOTAL,PDATE from STORE where CLASS = 0 & ";
     $sql = "INSERT INTO MANAGER(MNAME, MACCOUNT, MPASS, MAUTH) VALUES (?, ? , ?,?)";

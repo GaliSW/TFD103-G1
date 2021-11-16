@@ -1,6 +1,6 @@
 <?php
     $Name = $_POST["Name"];
-    include "connection.php";
+    include "../connection.php";
 
     $sql = "SELECT * from ARTICLE where ARTICLEID = ?";
 

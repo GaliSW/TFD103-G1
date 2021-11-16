@@ -1,6 +1,6 @@
 <?php
-    include "Manager.php";
-    include "connection.php";
+    include "../Manager.php";
+    include "../connection.php";
 
     $sql = "SELECT MAUTH from MANAGER where MACCOUNT = ? ";
     $statement = $pdo->prepare($sql);
