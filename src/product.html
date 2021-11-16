@@ -15,6 +15,7 @@
 <header></header>
 
 <body>
+<<<<<<< HEAD
     @@include('./header.html')
 
     <main class="allBlock" id="appp">
@@ -24,6 +25,26 @@
                 <div class="items -left">
                     <div class="imgBlock">
                         <img src="../dist/images/product/role1.png">
+=======
+    
+  <main class="allBlock" id="appp">
+    <section class="sec1" >
+        <div class="flexContainer" >
+          <div class="items -left">
+            <div class="imgBlock">
+              <img src="../dist/images/product/role1.png">
+            </div>
+          </div>
+          <div class="items -right" >
+                <h1 class="title1">小烏龜</h1>
+                <p class="introduce">凡事簡單思考的個性和天生的樂天主義使他對速度沒有絲毫的恐懼感。</p>
+                <p class="price">$250E</p>
+
+                <div class="collectForm">
+                    <div class="btnBlock1">
+                        <button type="button" class="collectBtn" name="button"><i class="fas fa-heart"></i> 收藏</button>
+                        <button type="button" class="changeBtn" name="button" @click=clickPopp()>交換</button>
+>>>>>>> MARK
                     </div>
                 </div>
                 <div class="items -right">
@@ -48,9 +69,92 @@
                 </div>
 
             </div>
+<<<<<<< HEAD
+=======
+        
+        </div>
+>>>>>>> MARK
 
             <main class="test">
 
+<<<<<<< HEAD
+=======
+        
+            <template id="=hiddenPopUps">
+            
+                <section class="maskLayer" :class="{'popShow':pop}">
+            
+                    <div class="popUpBox one" :class="{'box':one}">
+                        <div class="closeBtn" @click=clickClose()>
+                            x
+                        </div>
+                        <div class="popContent12">
+                            <p>選擇你要申請交換的角色</p>
+                        </div>
+                    
+                        <div class="roleBlock1Mark">
+                            <ul class="roleList1Mark">
+                                <li @click=toTwo()>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change1.png">
+                                    </div>
+                                </li>
+            
+                                <li @click=toTwo()>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change2.png">
+                                    </div>
+                                </li>
+            
+                                <li @click=toTwo()>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change3.png">
+                                    </div>
+                                </li>
+                                
+                                <li @click=toTwo()>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change4.png">
+                                    </div>
+                                </li>
+            
+                                <li @click=toTwo()>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change5.png">
+                                    </div>
+                                </li>
+            
+                                <li @click=toTwo()>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change6.png">
+                                    </div>
+                                </li>
+            
+                                <li @click=toTwo()>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change7.png">
+                                    </div>
+                                </li>
+            
+                                <li @click=toTwo()>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change8.png">
+                                    </div>
+                                </li>
+            
+                                <li @click=toTwo()>
+                                    <div class="imgBlock1Mark">
+                                        <img src="../dist/images/product/change/change9.png">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+            
+                        
+            
+                    </div>
+            
+>>>>>>> MARK
 
                 <template id="=hiddenPopUps">
 
@@ -172,6 +276,7 @@
                             </div>
 
                         </div>
+<<<<<<< HEAD
 
                         <div class="popUpBox" :class="{'box':three}">
                             <div class="closeBtn" @click=clickClose()>
@@ -181,6 +286,12 @@
                                 <p>以送出交換申請，請靜候佳音！</p>
                             </div>
 
+=======
+            
+                        <div class="confirmBlk13">
+                            <button href="#" class="confirmBtnBack13" @click=toBack()>返回</button>
+                            <button href="#" class="confirmBtn13" @click=toThree()>確定</button>
+>>>>>>> MARK
                         </div>
                     </section>
 
@@ -431,6 +542,7 @@
                     <td>能力值越高越不容易在與對手碰撞時彈飛。</td>
                 </tr>
 
+<<<<<<< HEAD
                 <tr>
                     <th>道具</th>
                     <td>能力值越高越容易獲得道具。</td>
@@ -443,6 +555,11 @@
     </main>
 
     @@include('./footer.html')
+=======
+       
+   
+   
+>>>>>>> MARK
 
     <script>
         Vue.component(`maskBlock`, {
@@ -496,6 +613,7 @@
                 }
             }
         });
+<<<<<<< HEAD
 
         // let vm = new Vue({
         //     el:'#app',
@@ -565,6 +683,59 @@
 
     </script>
 
+=======
+    
+    </script>
+
+<script>
+    let vmm = new Vue({
+        el: "#appp",
+        data: {
+            pop: false,
+            one:true,
+            two:false,
+            three:false,
+            content:false,
+        },
+        methods: {
+            clickPopp() {
+                vmm.$data.pop = true;
+                vmm.$data.one = true;
+                vmm.$data.two = false;
+                vmm.$data.three = false;
+            },
+            clickClose() {
+                vmm.$data.pop = false;
+            },
+            toTwo(){
+                vmm.$data.two = true;
+                vmm.$data.one = false;
+                vmm.$data.three = false;
+            },  
+            toThree() {
+                vmm.$data.three = true;
+                vmm.$data.one = false;
+                vmm.$data.two = false;
+            },
+            toBack() {
+                vmm.$data.pop = true;
+                vmm.$data.one = true;
+                vmm.$data.two = false;
+                vmm.$data.three = false;
+            },
+            clickPop(){
+                        // console.log(e.target)
+                        this.content = 'maskBlock'
+                    },
+                    myClick(val){
+                        this.content = val;
+                    },
+                    myClick2(r){
+                        this.content = r;
+                    },
+        },
+    });
+>>>>>>> MARK
 
 
     <script src="../dist/js/product/productChart.js"></script>
