@@ -4,35 +4,35 @@ let vm = new Vue({
     cards: [
       {
         value: 50,
-        imgUrl: "../dist/images/deposit/b1.jpg",
+        imgUrl: "../image/deposit/b1.jpg",
       },
       {
         value: 100,
-        imgUrl: "../dist/images/deposit/b2.jpg",
+        imgUrl: "../image/deposit/b2.jpg",
       },
       {
         value: 300,
-        imgUrl: "../dist/images/deposit/b3.jpg",
+        imgUrl: "../image/deposit/b3.jpg",
       },
       {
         value: 500,
-        imgUrl: "../dist/images/deposit/b4.jpg",
+        imgUrl: "../image/deposit/b4.jpg",
       },
       {
         value: 1000,
-        imgUrl: "../dist/images/deposit/b5.jpg",
+        imgUrl: "../image/deposit/b5.jpg",
       },
       {
         value: 2000,
-        imgUrl: "../dist/images/deposit/b6.jpg",
+        imgUrl: "../image/deposit/b6.jpg",
       },
       {
         value: 3000,
-        imgUrl: "../dist/images/deposit/b7.jpg",
+        imgUrl: "../image/deposit/b7.jpg",
       },
       {
         value: 5000,
-        imgUrl: "../dist/images/deposit/b8.jpg",
+        imgUrl: "../image/deposit/b8.jpg",
       },
     ],
   },

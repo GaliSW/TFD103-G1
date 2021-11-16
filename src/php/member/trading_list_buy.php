@@ -1,5 +1,5 @@
 <?php
-       include("connection.php");
+       include("../connection.php");
 
 //---------------------------------------------------
 // 查詢購買，篩選會員id為1class為0
