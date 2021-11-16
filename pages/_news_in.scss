@@ -14,6 +14,7 @@
 
 
 .out{
+    margin-bottom: 50px;
     h1{
         font-size: $fontSizeH1;
     }
@@ -77,32 +78,30 @@
     
     .final{
         display:flex;
-        justify-content:space-around;
+        justify-content:space-between;
         text-align: right;
         .img_gacha , .img_trade{
             width:100%;
         }
         .line{
+            margin:0 40px;
             height:400px;
-            margin-right:40px;  
             border-right:1px solid #FFF;
         }
         
         .bt{
-            @include btn_on(50, 50);
-            @include border_r(100);
+            @include btn_blur(20, 20);
+            @include border_r(15);
             padding:15px;
-            font-size: 15px;
+            font-size: 18px;
+            cursor: pointer;
             &:hover{
-                background-color: #000;
-                color:#fff;
-                cursor: pointer;
+                @include btn_on(20,20);
+                .btnbtn{
+                    @include btn_on(20,20);
+                    border:0px solid ;
+                }
             }
         }
     }
-    
-    
-    
-    
-    
 }

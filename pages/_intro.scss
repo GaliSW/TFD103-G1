@@ -15,6 +15,7 @@
 
     .out{
       overflow-x: hidden;
+      overflow-y: hidden;
       margin:0;
       @include center;
       padding: 0;
@@ -53,6 +54,7 @@
       }
       
       .mama{
+        margin-top:150px;
         h1{
             text-align: center;
             font-size: $fontSizeH1;
@@ -64,17 +66,16 @@
         .ti-2{
           text-align: right;
         }
-        button{
-            cursor: pointer;
-            @include btn_on(50, 50);
-            @include border_r(100);
-            padding:15px;
-            font-size:15px;
-            margin-right:auto;
-            &:hover{
-              background-color: #000;
-              color:#fff;
-            }
+        .btnbtn{
+          cursor: pointer;
+          @include btn_blur(20, 20);
+          @include border_r(15);
+          padding:15px;
+          font-size:18px;
+          margin-right:auto;
+          &:hover{
+            @include btn_on(20,20);
+          }
         }
     }
 
@@ -84,10 +85,11 @@
       margin-bottom:5px;
       overflow:hidden;
       cursor:grab;
+      border: 1.5px solid #fff;
+
     }
     .thumbnail{
       width:100%;
-      border: 1px solid #fff;
     }
     .thumbnail:hover{
       transition: .7s ease-in-out;
@@ -97,7 +99,6 @@
       text-align:center;
       line-height: 50px;
       padding-top:20px;
-      border: 1px solid #fff;
     }    
         a{
           text-decoration: none;
@@ -117,12 +118,14 @@
         text-align: center;
         position: relative;
         .racing{
-          border-bottom-style: dashed;
-          border-width: 20px;
-          height:50px;
-          color:gray;
+          border-width: 1px;
+          height:5px;
           margin-bottom: 50px;
-        }
+          margin-top: 90px;
+          background: linear-gradient(45deg, rgba(91, 165, 108, 1)35%, rgba(245, 140, 235, 0.9)69%);
+          background: -moz-linear-gradient(45deg, rgba(91, 165, 108, 1)35%, rgba(245, 140, 235, 0.9)69%);
+          background: -webkit-linear-gradient(45deg, rgba(91, 165, 108, 1)35%, rgba(245, 140, 235, 0.9)69%);
+          background: -o-linear-gradient(45deg, rgba(91, 165, 108, 1)35%, rgba(245, 140, 235, 0.9)69%);        }
         .intr{
           margin-top: 50px;
         }
@@ -135,6 +138,14 @@
           margin-top: -140px;
           margin-left: -290px;  
         }
+        .img2{
+          z-index:-1;
+          width: 250px;
+          position: absolute;
+          margin-top: -235px;
+          margin-left: 50px;  
+        }
+
     }
 
     .slick-next{
@@ -156,35 +167,35 @@
 
       .fs {
         z-index: 5;
-        background: url('https://images5.alphacoders.com/342/thumb-1920-342293.jpg');
+        background: url('../dist/images/intro/圖-12.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat; 
       }
       .sc {
         z-index: 4;
-        background: url("https://picfiles.alphacoders.com/353/thumb-1920-353921.jpg");
+        background: url('../dist/images/intro/圖-26.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
       }
       .th {
         z-index: 3;
-        background: url("https://picfiles.alphacoders.com/353/thumb-1920-353957.jpg");
+        background: url('../dist/images/intro/圖-21.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
       }
       .fr {
         z-index: 2;
-        background: url("../dist/images/intro/Web\ 1920\ –\ 1@2x.jpg");
+        background: url('../dist/images/intro/圖-25.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
       }
       .fi {
         z-index: 1;
-        background: url("https://images6.alphacoders.com/334/thumb-1920-334838.jpg");
+        background: url('../dist/images/intro/圖-30.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
