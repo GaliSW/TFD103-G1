@@ -8,3 +8,9 @@ $("#search-input").bind("change paste keyup", function(){
   }; 
   mSearch.html('.wrap:not([data-index*="' + value.toLowerCase() + '"]) {display: none;}');
 });
+
+
+
+    
+
+

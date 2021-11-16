@@ -5,6 +5,7 @@ main.deposit {
     // padding-bottom: 100px;
     margin: 0;
     box-sizing: border-box;
+    margin-top: 90px;
 
     div.container {
         width: 1200px;
@@ -102,6 +103,11 @@ main.deposit {
     padding-bottom: 100px;
     margin: 0;
     box-sizing: border-box;
+    margin-top: 90px;
+
+    a{
+        text-decoration: none;
+    }
 
     div.container {
         width: 1200px;

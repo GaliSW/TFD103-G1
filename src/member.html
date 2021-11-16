@@ -10,11 +10,14 @@
 
     <script src="../vendor/js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
     @@include('./header.html')
+
+
+
     <main class="member">
         <div class="main_contain">
 
@@ -61,32 +64,39 @@
                             <span class="product col-3">商品</span>
                             <span class="status col-5">狀態</span>
                         </div>
-                        <div class="contain_list">
-                            <span class="apply_date col-1">110-10-20</span>
-                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
-                            <div class="slaes_role col-3">
-                                <img src="../dist/images/member/r2.jpg" alt="">
+                        <div id="result_buy">
+                            <!-- 等賣方確認 -->
+                            <!-- <div class="contain_list">
+                                <span class="apply_date col-1">110-10-20</span>
+                                <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                                <div class="slaes_role col-3">
+                                    <img src="../dist/images/member/r2.jpg" alt="">
+                                </div>
+                                <span class="trade_status col-1">等待確認</span>
+                                <div class="trade_button col-3">
+                                    <button class="confirm" @click=clickBuyCancel()>取消交易</button>
+                                </div>
                             </div>
-                            <span class="trade_status col-1">等待確認</span>
-                            <div class="trade_button col-3">
-                                <button class="confirm ">取消交易</button>
-                            </div>
+                            <span>
+                                <hr>
+                            </span> -->
                         </div>
-                        <span>
-                            <hr>
-                        </span>
-                        <div class="contain_list _off">
-                            <span class="apply_date col-1">110-10-20</span>
-                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
-                            <div class="slaes_role col-3">
-                                <img src="../dist/images/member/r2.jpg" alt="">
-                            </div>
 
-                            <span class="trade_status col-1">已完售</span>
-                            <div class="trade_button col-3">
-                                <button class="delete "><i class="fas fa-trash-alt"></i></button>
-                            </div>
+                        <div id='result_buy_off'>
+                            <!-- <div class="contain_list _off">
+                                <span class="apply_date col-1">110-10-20</span>
+                                <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                                <div class="slaes_role col-3">
+                                    <img src="../dist/images/member/r2.jpg" alt="">
+                                </div>
+                            
+                                <span class="trade_status col-1">已完售</span>
+                                <div class="trade_button col-3">
+                                    <button class="delete "><i class="fas fa-trash-alt"></i></button>
+                                </div>
+                            </div> -->
                         </div>
+                        
 
                     </div>
 
@@ -98,72 +108,99 @@
                             <span class="product col-3">我的商品</span>
                             <span class="status col-5">狀態</span>
                         </div>
-                        <div class="contain_list">
-                            <span class="apply_date col-1">110-10-20</span>
-                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
-                            <div class="slaes_role col-3">
-                                <img src="../dist/images/member/r2.jpg" alt="">
-                            </div>
-                            <span class="trade_status col-1">等待確認</span>
-                            <div class="trade_button col-3">
-                                <button class="confirm ">確認交易</button>
-                                <button class="reject " @click="clickPop">拒絕交易</button>
-                            </div>
-                        </div>
-                        <span>
-                            <hr>
-                        </span>
-                        <div class="contain_list _off">
-                            <span class="apply_date col-1">110-10-20</span>
-                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
-                            <div class="slaes_role col-3">
-                                <img src="../dist/images/member/r2.jpg" alt="">
-                            </div>
 
-                            <span class="trade_status col-1">已完售</span>
-                            <div class="trade_button col-3">
-                                <button class="delete "><i class="fas fa-trash-alt"></i></button>
+                        <div id="result_sale">
+                            <!-- <div class="contain_list">
+                                <span class="apply_date col-1">110-10-20</span>
+                                <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                                <div class="slaes_role col-3">
+                                    <img src="../dist/images/member/r2.jpg" alt="">
+                                </div>
+                                <span class="trade_status col-1">等待確認</span>
+                                <div class="trade_button col-3">
+                                    <button class="confirm" @click=clickSaleCheck()>確認交易</button>
+                                    <button class="reject " @click=clickSaleReject()>拒絕交易</button>
+                                </div>
                             </div>
+                            <span>
+                                <hr>
+                            </span> -->
                         </div>
+                        
+                        <div id="result_sale_off">
+                            <!-- <div class="contain_list _off">
+                                <span class="apply_date col-1">110-10-20</span>
+                                <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                                <div class="slaes_role col-3">
+                                    <img src="../dist/images/member/r2.jpg" alt="">
+                                </div>
+                            
+                                <span class="trade_status col-1">已完售</span>
+                                <div class="trade_button col-3">
+                                    <button class="delete "><i class="fas fa-trash-alt"></i></button>
+                                </div>
+                            </div> -->
+                        </div>
+                        
 
                     </div>
 
 
                 </div>
 
+
+                <!-- 彈窗 -->
                 <template id="=hiddenPopUps">
 
                     <section class="maskLayer" :class="{'popShow':pop}">
-                        <div class="popUpBox">
+
+                        <!-- 買方取消 -->
+                        <div class="popUpBox maskBlockM" :class="{'popBox':buyCancel}">
+                            <div class="closeBtn" @click=clickClose()>
+                                x
+                            </div>
+                            <div class="popContent">
+                                <div class="popContent">
+                                    <p>取消此筆交易?</p>
+                                </div>
+                                <div class="confirmBlk">
+                                    <button class="confirmBtn" @click=clickYes()>是</button>
+                                    <button class="confirmBtn" @click=clickClose()>否</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 賣家確認 -->
+                        <div class="popUpBox maskBlockM" :class="{'popBox':saleCheck}">
+                            <div class="closeBtn" @click=clickClose()>
+                                x
+                            </div>
+                            <div class="popContent">
+                                <div class="popContent">
+                                    <p>確認此筆交易?</p>
+                                </div>
+                                <div class="confirmBlk">
+                                    <button class="confirmBtn" @click=clickConfirm()>是</button>
+                                    <button class="confirmBtn" @click=clickClose()>否</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 賣家拒絕 -->
+                        <div class="popUpBox" :class="{'popBox':saleReject}">
                             <div class="closeBtn" @click=clickClose()>
                                 x
                             </div>
                             <div class="popContent">
                                 <div class="title col-4">
                                     <span>拒絕原因:</span>
-                                    <button>不喜歡角色</button>
-                                    <button>不喜歡角色能力</button>
-                                    <button>其他</button>
+                                    <button @click=clickClose()>不喜歡角色</button>
+                                    <button @click=clickClose()>不喜歡角色能力</button>
+                                    <button @click=clickClose()>其他</button>
                                 </div>
 
                             </div>
                         </div>
-                        <div class="popUpBox">
-                            <div class="closeBtn" @click=clickClose()>
-                                x
-                            </div>
-                            <div class="popContent">
-                                <div class="title col-4">
-                                    <span>拒絕原因:</span>
-                                    <button>不喜歡角色</button>
-                                    <button>不喜歡角色能力</button>
-                                    <button>其他</button>
-                                </div>
-
-                            </div>
-                        </div>
-
-
                     </section>
 
                 </template>
@@ -173,6 +210,7 @@
         </div>
     </main>
     @@include('./footer.html')
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
     <script src="../js/member/member.js">

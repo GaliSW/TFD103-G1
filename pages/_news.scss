@@ -32,10 +32,12 @@
 }
 
 .content {
+    display:flex;
+    justify-content: center;
+    align-items: center;
     @include center;
     margin-top:50px;
-    display:flex;
-    border:1px solid #fff;
+    border:1px solid white;
     @include desktop{
         width:100%;
         display:flex;
@@ -73,7 +75,7 @@
 
     .fir1{
         margin-left:auto;
-        width:500px;
+        width:600px;
         @include desktop{
             display:flex;
             flex-direction: row;
@@ -105,7 +107,6 @@
 
     .left{
         @include center;
-        margin-top:70px;
         line-height: 50px;
         .pp{
           line-height: 50px;
@@ -122,19 +123,66 @@
 
 
 .search-form{
-    margin-top:50px;
+    margin-top:110px;
     display:flex;
-    justify-content: center;
+    justify-content: flex-end;
     #search-input{
-        width:300px;
+        font-size:20px;
         background-image: url("/dist/images/intro/search.jpg");
         background-repeat: no-repeat;
         background-position: right;
-        background-size: 20px;
+        background-size: 30px;
     }
     .search{
         font-size:30px;
     }
+}
+
+
+
+.buttons{
+  display:flex;
+  justify-content: center;
+  margin-top:-40px;
+  margin-bottom:80px;
+  @include desktop_small{
+    margin-top:40px;
+  }
+  @include pad{
+    margin-top:40px;
+
+  }
+  @include pad_small{
+    margin-top:40px;
+
+  }
+
+  @include phone{
+    margin-top:40px;
+
+  }
+
+  @include phone_small{
+    margin-top:40px;
+
+  }
+
+  button.bbbn{
+    cursor: pointer;
+    @include btn_blur(20, 20);
+    @include border_r(15);
+    padding:15px;
+    font-size:18px;
+  }
+  button.bbbn2{
+    display:none;
+    cursor: pointer;
+    @include btn_blur(20, 20);
+    @include border_r(15);
+    padding:15px;
+    font-size:18px;
+  }
+
 }
 
 
@@ -143,7 +191,6 @@
     margin-top:50px;
     display:flex;
     justify-content: center;
-    // align-items: center;
     opacity: 0.6;
     line-height: 100px;
     @include desktop{
@@ -154,18 +201,21 @@
         width:100%;
         display:flex;
         flex-direction: column;
+        align-items: center;
         opacity: 1;
       }
       @include pad{
         width:100%;
         display:flex;
         flex-direction: column;
+        align-items: center;
         opacity: 1;
       }
       @include pad_small{
         width:100%;
         display:flex;
         flex-direction: column;
+        align-items: center;
         opacity: 1;
       }
 
@@ -173,6 +223,7 @@
         width:100%;
         display:flex;
         flex-direction: column;
+        align-items: center;
         opacity: 1;
       }
 
@@ -180,6 +231,7 @@
         width:100%;
         display:flex;
         flex-direction: column;
+        align-items: center;
         opacity: 1;
       }
 
@@ -202,3 +254,100 @@
     
   }
 }
+
+#bnbn{
+  cursor: pointer;
+  @include btn_blur(20, 20);
+  @include border_r(15);
+  padding:15px;
+  font-size:18px;
+  margin-top:50px;
+  &:hover{
+    @include btn_on(20,20);
+    }
+  }
+
+.noContent {
+  pointer-events: none;
+}
+
+  .upup {
+    cursor:pointer;
+    display:flex;
+    justify-content: flex-end;
+    margin: 50px 50px 0 0;  
+    font-size: 3rem;
+    color:#fff;
+    &:hover{
+      transform: translateY(-20px);
+      transition: all .5s ease-in-out;
+    }
+  }  
+
+
+
+
+
+.wrap78{
+  display:flex ; 
+  width:100%;
+  margin-top:50px;
+  opacity: 0.6;
+  line-height: 100px;
+  @include desktop{
+    display:flex ; 
+    flex-direction: row;
+    }
+    @include desktop_small{
+      width:100%;
+      display:flex;
+      flex-direction: column;
+      opacity: 1;
+    }
+    @include pad{
+      width:100%;
+      display:flex;
+      flex-direction: column;
+      opacity: 1;
+    }
+    @include pad_small{
+      width:100%;
+      display:flex;
+      flex-direction: column;
+      opacity: 1;
+    }
+
+    @include phone{
+      width:100%;
+      display:flex;
+      flex-direction: column;
+      opacity: 1;
+    }
+
+    @include phone_small{
+      width:100%;
+      display:flex;
+      flex-direction: column;
+      opacity: 1;
+    }
+
+
+    
+  &:hover{
+      opacity:1;
+      transition: .3s ease-in-out;
+  }
+
+  .sec{
+      margin-right:20px;
+      height:250px;
+  }
+  
+  .name{
+      text-align: center;
+      width:100%;
+  }
+  
+}
+
+

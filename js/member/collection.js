@@ -1,3 +1,53 @@
+// 彈跳視窗
+let vmm = new Vue({
+  el: "#vmm",
+  data: {
+    pop: false,
+    buy: true,
+    success: false,
+    one: true,
+    two: false,
+    three: false,
+  },
+  methods: {
+    clickPop() {
+      vmm.$data.pop = true;
+      vmm.$data.buy = true;
+      vmm.$data.success = false;
+      vmm.$data.one = false;
+      vmm.$data.two = false;
+      vmm.$data.three = false;
+    },
+    clickClose() {
+      vmm.$data.pop = false;
+    },
+    clickChange() {
+      vmm.$data.pop = true;
+      vmm.$data.buy = false;
+      vmm.$data.success = false;
+      vmm.$data.one = true;
+      vmm.$data.two = false;
+      vmm.$data.three = false;
+    },
+    toSuccess() {
+      vmm.$data.success = true;
+      vmm.$data.buy = false;
+    },
+    toTwo() {
+      vmm.$data.two = true;
+      vmm.$data.one = false;
+      vmm.$data.three = false;
+    },
+    toThree() {
+      vmm.$data.three = true;
+      vmm.$data.one = false;
+      vmm.$data.two = false;
+    },
+  },
+});
+
+
+// 能力圖迴圈
 let chartLen = document.querySelectorAll(".myChart").length;
 let chartArr = [];
 for (let i = 0; i < chartLen; i++) {

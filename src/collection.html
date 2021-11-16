@@ -12,7 +12,9 @@
 
 <body>
     @@include('./header.html')
-    <main class="collection">
+
+
+    <main class="collection" id="vmm">
         <div class="container">
 
             <div class="collect_contain col-12">
@@ -39,13 +41,14 @@
                     </div>
                     <span class="price col-2">250</span>
                     <div class="trade_button col-2">
-                        <button class="buy ">購買</button>
-                        <button class="change ">交換</button>
+                        <button class="buy" @click=clickPop()>購買</button>
+                        <button class="change " @click = clickChange()>交換</button>
                     </div>
                     <div class="delete col-1">
                         <button class="delete_btn "><i class="fas fa-trash-alt"></i></button>
                     </div>
                 </div>
+                
                 <span>
                     <hr>
                 </span>
@@ -70,8 +73,178 @@
 
             </div>
         </div>
+
+        <!-- 彈跳視窗 -->
+        <template id="=hiddenPopUps">
+
+            <section class="maskLayer" :class="{'popShow':pop}">
+
+                <!-- 購買 -->
+                <div class="popUpBox maskBlockM" :class="{'popBox':buy}">
+                    <div class="closeBtn" @click=clickClose()>
+                        x
+                    </div>
+                    <div class="popContent">
+                        <div class="popContent">
+                            <p>是否確認從帳戶扣除 $***點，交易 *****角色?</p>
+                        </div>
+                        <div class="confirmBlk">
+                            <button class="confirmBtn" @click= toSuccess()>是</button>
+                            <button class="confirmBtn" @click=clickClose()>否</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 購買成功 -->
+
+                <div class="popUpBox maskBlockM" :class="{'popBox':success}">
+                    <div class="closeBtn" @click= clickClose()>
+                        x
+                    </div>
+                    <div class="popContent">
+                        <p>您已成功購買</p>
+                    </div>
+                    <div class="confirmBlk" >
+                        <button class="confirmBtn" @click= clickClose()>確定</button>
+                    </div>
+                </div>
+
+                <!-- 交換 -->
+                <div class="popUpBox test" :class="{'box':one}">
+                    <div class="closeBtn" @click=clickClose()>
+                        x
+                    </div>
+                    <div class="popContent12">
+                        <p>選擇你要申請交換的角色</p>
+                    </div>
+                
+                    <div class="roleBlock1Mark">
+                        <ul class="roleList1Mark">
+                            <li>
+                                <div class="imgBlock1Mark">
+                                    <img src="../dist/images/product/change/change1.png">
+                                </div>
+                            </li>
+                
+                            <li>
+                                <div class="imgBlock1Mark">
+                                    <img src="../dist/images/product/change/change2.png">
+                                </div>
+                            </li>
+                
+                            <li>
+                                <div class="imgBlock1Mark">
+                                    <img src="../dist/images/product/change/change3.png">
+                                </div>
+                            </li>
+                
+                            <li>
+                                <div class="imgBlock1Mark">
+                                    <img src="../dist/images/product/change/change4.png">
+                                </div>
+                            </li>
+                
+                            <li>
+                                <div class="imgBlock1Mark">
+                                    <img src="../dist/images/product/change/change5.png">
+                                </div>
+                            </li>
+                
+                            <li>
+                                <div class="imgBlock1Mark">
+                                    <img src="../dist/images/product/change/change6.png">
+                                </div>
+                            </li>
+                
+                            <li>
+                                <div class="imgBlock1Mark">
+                                    <img src="../dist/images/product/change/change7.png">
+                                </div>
+                            </li>
+                
+                            <li>
+                                <div class="imgBlock1Mark">
+                                    <img src="../dist/images/product/change/change8.png">
+                                </div>
+                            </li>
+                
+                            <li>
+                                <div class="imgBlock1Mark">
+                                    <img src="../dist/images/product/change/change9.png">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <div class="confirmBlk12">
+                        <a href="#" class="confirmBtn12" @click=toTwo()>確定</a>
+                    </div>
+                
+                </div>
+                
+                
+                <div class="popUpBox test" :class="{'box':two}">
+                    <div class="closeBtn" @click=clickClose()>
+                        x
+                    </div>
+                    <div class="popContent13">
+                        <p>確認你想要交換的角色</p>
+                    </div>
+                
+                    <div class="myRoleBlock">
+                        <div class="myRoleP">
+                            <p>我的角色</p>
+                        </div>
+                
+                        <div class="myRoleImg">
+                            <img src="../dist/images/product/change/change1.png">
+                        </div>
+                
+                        <div class="myRoleNameBlock">
+                            <p>小烏龜</p>
+                        </div>
+                    </div>
+                
+                    <div class="doubleArrow"><i class="fas fa-arrows-alt-h"></i></div>
+                
+                    <div class="yourRoleBlock">
+                        <div class="yourRoleP">
+                            <p>對方角色</p>
+                        </div>
+                
+                        <div class="yourRoleImg">
+                            <img src="../dist/images/product/change/change2.png">
+                        </div>
+                
+                        <div class="yourRoleNameBlock">
+                            <p>羊咩咩</p>
+                        </div>
+                    </div>
+                
+                    <div class="confirmBlk13">
+                        <a href="#" class="confirmBtn13" @click=toThree()>確定</a>
+                    </div>
+                
+                </div>
+
+                <!-- 交換完成 -->
+                <div class="popUpBox test" :class="{'box':three}">
+                    <div class="closeBtn" @click=clickClose()>
+                        x
+                    </div>
+                    <div class="popContent14">
+                        <p>以送出交換申請，請靜候佳音！</p>
+                    </div>
+                
+                </div>
+
+            </section>
+
+        </template>
     </main>
     @@include('./footer.html')
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
     <script src="../js/member/collection.js"></script>
