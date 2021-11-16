@@ -72,7 +72,13 @@
         }
     }
 }
-
+.mgbg{
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -999;
+}
 .mgHeaderBlk {
     background: linear-gradient(180deg, rgba(2, 79, 63, 1) 0%, rgba(16, 197, 177, 1) 100%);
     position: relative;

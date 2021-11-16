@@ -501,7 +501,8 @@
 
 #header #menu {
   position: absolute;
-  width: 100vw;
+  width: 300px;
+  height: 100vh;
   border: solid;
   margin: -33px 0 0 -32px;
   background: #c7e3f0;
@@ -545,6 +546,22 @@
   vertical-align: bottom;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
+<<<<<<< HEAD
+=======
+}
+
+#header #menu .btn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  color: cornflowerblue;
+}
+
+#header #menu .btn:hover {
+  background-color: cornflowerblue;
+  color: #fff;
+>>>>>>> Calista
 }
 
 #header .icon {
@@ -604,12 +621,21 @@
   margin-left: 6px;
 }
 
+#header .icon .disappear {
+  display: none;
+}
+
+#header .-on {
+  display: block;
+}
+
 .footer {
   background: url(../dist/images/index/strbg.jpg);
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
-  height: 130px;
+  margin-top: 7%;
+  z-index: 10;
 }
 
 .footer .iconLink {
@@ -619,6 +645,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+<<<<<<< HEAD
+=======
+  padding-top: 5px;
+>>>>>>> Calista
 }
 
 .footer .iconLink span {
@@ -627,6 +657,16 @@
 
 .footer .iconLink span .fa-2x {
   color: #cacaca;
+}
+
+.footer .iconLink span .fa-2x:hover {
+  color: #477dbe;
+  -webkit-transform: scale(1.25, 1.25);
+          transform: scale(1.25, 1.25);
+  -webkit-transition: -webkit-transform 0.25s ease;
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
 }
 
 .footer .notice {
@@ -647,6 +687,10 @@
   margin: 0 auto;
   text-align: center;
   font-size: 14px;
+  color: #cacaca;
+}
+
+.footer .notice p:hover {
   color: #477dbe;
 }
 
@@ -672,6 +716,10 @@
   text-align: center;
   font-size: 14px;
   color: #cacaca;
+}
+
+.footer .copyright p:hover {
+  color: #477dbe;
 }
 
 .col-1 {
@@ -733,11 +781,14 @@ main.collection {
   min-height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+<<<<<<< HEAD
 =======
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-top: 90px;
 >>>>>>> Lillian
+=======
+>>>>>>> Calista
 }
 
 main.collection .container {
@@ -1023,11 +1074,32 @@ main.collection div.collect_contain button.delete_btn .fa-trash-alt {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 main.collection section.maskLayer {
   display: none;
   z-index: 200;
   height: 100%;
   position: fixed;
+=======
+main.deposit {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../dist/images/deposit/back.jpg);
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main.deposit div.container {
+  width: 1200px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+main.deposit div.container .col-1 {
+  width: 8.33333%;
+>>>>>>> Calista
 }
 
 main.collection section.maskLayer div.closeBtn {
@@ -1108,8 +1180,20 @@ main.collection .maskBlockM .confirmBlk #confirmBtn3 {
   width: 150px;
 }
 
+<<<<<<< HEAD
 main.collection .maskBlockM .confirmBlk #confirmBtn4 {
   width: 150px;
+=======
+main.deposit div.container div#app {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+>>>>>>> Calista
 }
 
 @media (max-width: 767.98px) {
@@ -1169,6 +1253,7 @@ main.collection .test .roleBlock1Mark .roleList1Mark li li {
   margin-bottom: 25px;
 }
 
+<<<<<<< HEAD
 main.collection .test .roleBlock1Mark .roleList1Mark .confirmBlk12 {
   text-align: center;
   margin-bottom: 30px;
@@ -1178,6 +1263,16 @@ main.collection .test .roleBlock1Mark .roleList1Mark .confirmBlk12 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+=======
+main.deposit {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../dist/images/deposit/back.jpg);
+  padding-bottom: 100px;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+>>>>>>> Calista
 }
 
 main.collection .test .roleBlock1Mark .roleList1Mark .confirmBlk12 .confirmBtn12 {
@@ -1289,6 +1384,7 @@ main.collection .test .confirmBlk13 .confirmBtn13 {
   height: 35px;
 }
 
+<<<<<<< HEAD
 main.collection .test .confirmBlk13 .confirmBtn13:hover {
   color: #0e3461;
   width: 100px;
@@ -1296,6 +1392,14 @@ main.collection .test .confirmBlk13 .confirmBtn13:hover {
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
+=======
+main.deposit div.container div.deposit_pay div.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 10px;
+>>>>>>> Calista
 }
 
 main.collection .test .confirmBlk13 .confirmBtn13:hover {
@@ -1391,8 +1495,16 @@ main.deposit div.container .col-6 {
   width: 50%;
 }
 
+<<<<<<< HEAD
 main.deposit div.container .col-7 {
   width: 58.33333%;
+=======
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+>>>>>>> Calista
 }
 
 main.deposit div.container .col-8 {
@@ -1486,6 +1598,7 @@ main.deposit div.container div#app button div.photo span {
   }
 }
 
+<<<<<<< HEAD
 main.deposit {
   background-size: cover;
   background-repeat: no-repeat;
@@ -1502,6 +1615,28 @@ main.deposit {
 main.deposit a {
   text-decoration: none;
 >>>>>>> Lillian
+=======
+.entry .entrybg .contentBox .word {
+  width: 400px;
+  margin-left: 57%;
+  -webkit-transform: translateX(-60%);
+          transform: translateX(-60%);
+  margin-top: -10%;
+}
+
+.entry .entrybg .contentBox .word p {
+  color: #302e81;
+  font-size: 28px;
+  line-height: 30px;
+}
+
+.entry .entrybg .contentBox .roleLeft {
+  width: 500px;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  position: absolute;
+  top: 480px;
+>>>>>>> Calista
 }
 
 main.deposit div.container {
@@ -1510,8 +1645,15 @@ main.deposit div.container {
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
 main.deposit div.container .col-1 {
   width: 8.33333%;
+=======
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+>>>>>>> Calista
 }
 
 main.deposit div.container .col-2 {
@@ -1546,12 +1688,39 @@ main.deposit div.container .col-9 {
   width: 75%;
 }
 
+<<<<<<< HEAD
 main.deposit div.container .col-10 {
   width: 83.33333%;
 }
 
 main.deposit div.container .col-11 {
   width: 91.66667%;
+=======
+.gaChaLabelBtn .gachaPageLable {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.gaChaLabelBtn .gachaPageLable button {
+  text-decoration: none;
+  color: #60cd90;
+  width: 200px;
+  padding: 20px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  cursor: pointer;
+  margin: 0 30px;
+>>>>>>> Calista
 }
 
 main.deposit div.container .col-12 {
@@ -1607,6 +1776,7 @@ main.deposit div.container div.deposit_pay form.credit div {
   margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
 main.deposit div.container div.deposit_pay form.credit div span.credit_detail {
   width: 72px;
   text-align: justify;
@@ -1617,6 +1787,25 @@ main.deposit div.container div.deposit_pay form.credit div span.credit_detail {
 main.deposit div.container div.deposit_pay form.credit div input {
   width: 50px;
   height: 25px;
+=======
+.gachaPage .GaCha {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 991.98px) {
+  .gachaPage .GaCha {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+>>>>>>> Calista
 }
 
 main.deposit div.container div.deposit_pay form.credit div select {
@@ -2522,6 +2711,7 @@ body {
 
 .gachaPopUpBox .confirmBlk {
   position: absolute;
+<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2529,6 +2719,20 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   bottom: 10px;
+=======
+  width: 400px;
+  height: 100%;
+  margin-top: 50px;
+  margin-left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .gachaBg {
+    width: 350px;
+  }
+>>>>>>> Calista
 }
 
 .gachaPopUpBox .confirmBlk button {
@@ -2539,6 +2743,7 @@ body {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+<<<<<<< HEAD
   border-radius: 5px;
   cursor: pointer;
   -webkit-transition: .3s;
@@ -2560,6 +2765,37 @@ body {
   color: #fff;
   margin-bottom: 80px;
   margin-top: 80px;
+=======
+  height: 25px;
+  font-size: 22px;
+  margin-top: 110px;
+  margin-left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+}
+
+.gachaBg .lotterybg {
+  background-size: 100%;
+  overflow: visible;
+  width: 70%;
+  height: 100%;
+  margin-top: 180px;
+  margin-left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+}
+
+.gachaBg .lotterybg #myCanvas {
+  /* border: 1px solid red; */
+  position: absolute;
+  border: none;
+  width: 280px;
+  height: 170px;
+  margin-top: 15px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+>>>>>>> Calista
 }
 
 @media (min-width: 992px) {
@@ -2569,6 +2805,7 @@ body {
   }
 }
 
+<<<<<<< HEAD
 @media (min-width: 768px) and (max-width: 991.98px) {
   .miniGameTitle {
     font-size: 42px;
@@ -2591,6 +2828,36 @@ body {
     margin-top: 30px;
     font-size: 28px;
   }
+=======
+.gachaBg .award {
+  position: absolute;
+  border: none;
+  width: 60px;
+  height: 200px;
+  top: 470px;
+  margin-left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+}
+
+#gachaStart {
+  position: absolute;
+  width: 60px;
+  margin-top: 450px;
+  margin-left: 61%;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-animation: btn 2s ease-out;
+          animation: btn 2s ease-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+#gachaStart:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+>>>>>>> Calista
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -2601,6 +2868,7 @@ body {
   }
 }
 
+<<<<<<< HEAD
 .pin ul {
   margin: 0;
   padding: 0;
@@ -2636,6 +2904,35 @@ body {
   .pintooBlk #ul li {
     width: 100px;
     height: 100px;
+=======
+@-webkit-keyframes btn {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
+@keyframes btn {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+>>>>>>> Calista
   }
 }
 
@@ -2675,6 +2972,7 @@ body {
   transition: .3s;
 }
 
+<<<<<<< HEAD
 .pintooMask h1:hover {
   background-color: #60cd90;
   border: 3px solid #0e3461;
@@ -2697,6 +2995,56 @@ body {
   max-width: 1200px;
   border: 3px solid #60cd90;
   padding: 0;
+=======
+.dropBall4 {
+  content: "";
+  position: absolute;
+  left: 45%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  top: 77%;
+  width: 50px;
+  height: 50px;
+  display: block;
+  background: url(../image/gachaGame/Pokemon.png) no-repeat;
+  background-size: contain;
+  animation: drop 3s ease-out forwards;
+  -webkit-animation: drop 1s ease-out forwards;
+}
+
+@keyframes drop {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  51% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+@-webkit-keyframes drop {
+  0% {
+    -webkit-transform: scale(0.7);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+  51% {
+    -webkit-transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+  }
+>>>>>>> Calista
 }
 
 .myRoleBlk table th {
@@ -2875,6 +3223,7 @@ body {
   }
 }
 
+<<<<<<< HEAD
 @media (min-width: 375px) and (max-width: 413.98px) {
   .rolesBlk div {
     width: 50%;
@@ -2887,13 +3236,52 @@ body {
 }
 
 .rolesBlk .roleInfo {
+=======
+.GaChaInfo .goBtnBlk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0e3461;
+  margin: 0 auto;
+  border-radius: 100px;
+  border: 3px solid #60cd90;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 10px 10px 1px;
+          box-shadow: 10px 10px 1px;
+}
+
+.GaChaInfo .goBtnBlk .goBtn {
+  -webkit-animation: btnGo 3s linear;
+          animation: btnGo 3s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  font-size: 24px;
+>>>>>>> Calista
   color: #60cd90;
   width: 80%;
   padding: 10px;
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+<<<<<<< HEAD
   text-align: center;
+=======
+  border-radius: 50px;
+  cursor: pointer;
+>>>>>>> Calista
   -webkit-transition: .5s;
   transition: .5s;
   margin: 0;
@@ -2912,10 +3300,49 @@ body {
   }
 }
 
+<<<<<<< HEAD
 .rolesBlk .roleInfo:hover {
   color: #0e3461;
   background-color: #60cd90;
   border: 3px solid #0e3461;
+=======
+@-webkit-keyframes btnGo {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  25% {
+    -webkit-transform: rotateZ(50deg);
+            transform: rotateZ(50deg);
+  }
+  75% {
+    -webkit-transform: rotateZ(-50deg);
+            transform: rotateZ(-50deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
+@keyframes btnGo {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  25% {
+    -webkit-transform: rotateZ(50deg);
+            transform: rotateZ(50deg);
+  }
+  75% {
+    -webkit-transform: rotateZ(-50deg);
+            transform: rotateZ(-50deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+>>>>>>> Calista
 }
 
 .roleMaskLayer {
@@ -2963,7 +3390,12 @@ body {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 #rolePopContent {
+=======
+.gachaPopUpBox .popContent1 {
+  position: relative;
+>>>>>>> Calista
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2976,6 +3408,14 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   color: #60cd90;
+<<<<<<< HEAD
+=======
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+>>>>>>> Calista
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -3002,6 +3442,7 @@ body {
   }
 }
 
+<<<<<<< HEAD
 #rolePopContent .roleInfoPara {
   margin-top: 30px;
   padding: 0;
@@ -3017,6 +3458,31 @@ body {
     margin-top: 0px;
     padding-top: 10px;
   }
+=======
+.gachaPopUpBox .confirmBlk {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.gachaPopUpBox .confirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+>>>>>>> Calista
 }
 
 #rolePopContent .roleInfoPara .para {
@@ -3234,11 +3700,25 @@ video {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
 }
 
+<<<<<<< HEAD
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
   right: 10px;
   left: auto;
+=======
+.pintooBlk #ul li {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+  background: url(../image/gacha/role1.jpg);
+  /* background-color: pink; */
+  float: left;
+  list-style: none;
+  margin: 0 0 2px 2px;
+  -webkit-transition: .5s;
+  transition: .5s;
+>>>>>>> Calista
 }
 
 .swiper-button-next.swiper-button-black,
@@ -3251,7 +3731,15 @@ video {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
 }
 
+<<<<<<< HEAD
 .swiper-pagination {
+=======
+.pintooMask {
+  z-index: 900;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+>>>>>>> Calista
   position: absolute;
   text-align: center;
   -webkit-transition: .3s;
@@ -3296,6 +3784,11 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer;
+<<<<<<< HEAD
+=======
+  -webkit-transition: .3s;
+  transition: .3s;
+>>>>>>> Calista
 }
 
 .swiper-pagination-white .swiper-pagination-bullet {
@@ -3336,6 +3829,7 @@ button.swiper-pagination-bullet {
   position: absolute;
 }
 
+<<<<<<< HEAD
 .swiper-pagination-progress .swiper-pagination-progressbar {
   background: #007aff;
   position: absolute;
@@ -3347,6 +3841,17 @@ button.swiper-pagination-bullet {
   transform: scale(0);
   -webkit-transform-origin: left top;
   transform-origin: left top;
+=======
+@media (max-width: 991.98px) {
+  .myRoleBlk table td {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+>>>>>>> Calista
 }
 
 .swiper-container-rtl .swiper-pagination-progress .swiper-pagination-progressbar {
@@ -3354,11 +3859,24 @@ button.swiper-pagination-bullet {
   transform-origin: right top;
 }
 
+<<<<<<< HEAD
 .swiper-container-horizontal > .swiper-pagination-progress {
   width: 100%;
   height: 4px;
   left: 0;
   top: 0;
+=======
+.myRoleBlk table td .roleInfo {
+  color: #0e3461;
+  width: 200px;
+  padding: 10px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+  text-align: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+>>>>>>> Calista
 }
 
 .swiper-container-vertical > .swiper-pagination-progress {
@@ -3435,6 +3953,7 @@ button.swiper-pagination-bullet {
   -ms-perspective: 1200px;
 }
 
+<<<<<<< HEAD
 .swiper-container-cube,
 .swiper-container-flip {
   overflow: visible;
@@ -3446,6 +3965,32 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 1;
+=======
+.rolesBlk {
+  margin: 0 auto;
+  margin-top: 80px;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.rolesBlk div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 0px 30px 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 80px;
+>>>>>>> Calista
 }
 
 .swiper-container-cube .swiper-slide .swiper-slide,
@@ -3473,12 +4018,26 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden;
 }
 
+<<<<<<< HEAD
 .swiper-container-cube .swiper-slide {
   visibility: hidden;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   width: 100%;
   height: 100%;
+=======
+.rolesBlk .roleInfo {
+  color: #60cd90;
+  width: 80%;
+  padding: 10px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  text-align: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin: 0;
+>>>>>>> Calista
 }
 
 .swiper-container-cube.swiper-container-rtl .swiper-slide {
@@ -3512,10 +4071,24 @@ button.swiper-pagination-bullet {
   transition-timing-function: ease-out;
 }
 
+<<<<<<< HEAD
 .swiper-container-fade .swiper-slide {
   pointer-events: none;
   -webkit-transition-property: opacity;
   transition-property: opacity;
+=======
+.rolePopUpBox {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 600px;
+  height: 600px;
+  border-radius: 5px;
+>>>>>>> Calista
 }
 
 .swiper-container-fade .swiper-slide .swiper-slide {
@@ -3527,6 +4100,7 @@ button.swiper-pagination-bullet {
   pointer-events: auto;
 }
 
+<<<<<<< HEAD
 .swiper-zoom-container {
   width: 100%;
   height: 100%;
@@ -3540,6 +4114,21 @@ button.swiper-pagination-bullet {
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
+=======
+#rolePopContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #60cd90;
+>>>>>>> Calista
 }
 
 .swiper-zoom-container > canvas,
@@ -3576,6 +4165,7 @@ button.swiper-pagination-bullet {
   height: 98%;
 }
 
+<<<<<<< HEAD
 .swiper-scrollbar-drag {
   height: 100%;
   width: 100%;
@@ -3584,6 +4174,16 @@ button.swiper-pagination-bullet {
   border-radius: 10px;
   left: 0;
   top: 0;
+=======
+#rolePopContent .roleInfoPara {
+  margin-top: 30px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 2px dotted red;
+  padding-top: 20px;
+>>>>>>> Calista
 }
 
 .swiper-scrollbar-cursor-drag {
@@ -3685,6 +4285,7 @@ button.swiper-pagination-bullet {
   bottom: 0;
 }
 
+<<<<<<< HEAD
 .swiper-pagination-bullet {
   background: transparent none repeat scroll 0 0;
   border: 1px solid #60cd90;
@@ -3721,6 +4322,46 @@ body {
 }
 
 .index .indexOne {
+=======
+.swiper-container-vertical > .swiper-wrapper {
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.swiper-container-android .swiper-slide,
+.swiper-wrapper {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.swiper-container-multirow > .swiper-wrapper {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.swiper-container-free-mode > .swiper-wrapper {
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+>>>>>>> Calista
   margin: 0 auto;
   font-size: 0;
   background-image: url(../dist/images/index/bg2.jpg);
@@ -3730,9 +4371,17 @@ body {
   width: 100%;
 }
 
+<<<<<<< HEAD
 .index .indexOne .banner {
   margin: 0 auto;
   max-width: 1200px;
+=======
+.swiper-slide {
+  -webkit-flex-shrink: 0;
+  -ms-flex: 0 0 auto;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+>>>>>>> Calista
   width: 100%;
   height: 100vh;
   position: relative;
@@ -3746,15 +4395,28 @@ body {
   opacity: .5;
 }
 
+<<<<<<< HEAD
 @media (max-width: 767.98px) {
   .index .indexOne .banner .box {
     width: 300px;
     height: 300px;
   }
+=======
+.swiper-container-autoheight .swiper-wrapper {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-transition-property: -webkit-transform, height;
+  -webkit-transition-property: height, -webkit-transform;
+  transition-property: height, -webkit-transform;
+  transition-property: transform, height;
+  transition-property: transform, height, -webkit-transform;
+>>>>>>> Calista
 }
 
 .index .indexOne .banner #canvas {
   position: absolute;
+<<<<<<< HEAD
   top: 5%;
 }
 
@@ -3762,6 +4424,23 @@ body {
   .index .indexOne .banner #canvas {
     display: none;
   }
+=======
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1000;
+}
+
+.swiper-wp8-horizontal {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+
+.swiper-wp8-vertical {
+  -ms-touch-action: pan-x;
+  touch-action: pan-x;
+>>>>>>> Calista
 }
 
 .index .indexOne .banner .logoImg {
@@ -3799,11 +4478,22 @@ body {
   }
 }
 
+<<<<<<< HEAD
 @media (min-width: 578px) and (max-width: 767.98px) {
   .index .indexOne .banner .text {
     font-size: 16px;
     margin-top: 20px;
   }
+=======
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+>>>>>>> Calista
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
@@ -3829,8 +4519,21 @@ body {
   opacity: 0;
 }
 
+<<<<<<< HEAD
 .index .indexOne .banner .roleCar img {
   width: 500px;
+=======
+button.swiper-pagination-bullet {
+  border: none;
+  margin: 0;
+  padding: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+>>>>>>> Calista
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -3864,6 +4567,7 @@ body {
   }
 }
 
+<<<<<<< HEAD
 @media (min-width: 375px) and (max-width: 413.98px) {
   .index .indexOne .banner .roleCar {
     right: -80px;
@@ -3873,6 +4577,13 @@ body {
     max-width: 90%;
     width: 300px;
   }
+=======
+.swiper-container-vertical > .swiper-pagination-bullets {
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+>>>>>>> Calista
 }
 
 .index .indexTwo {
@@ -3900,10 +4611,23 @@ body {
 
 .index .indexTwo .imgBlock {
   width: 100%;
+<<<<<<< HEAD
 }
 
 .index .angle {
   position: absolute;
+=======
+  height: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+}
+
+.swiper-container-rtl .swiper-pagination-progress .swiper-pagination-progressbar {
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+>>>>>>> Calista
 }
 
 .index .sportsCar {
@@ -3935,6 +4659,7 @@ body {
   vertical-align: bottom;
 }
 
+<<<<<<< HEAD
 .index .imgLine {
   position: absolute;
   width: 100%;
@@ -3945,11 +4670,29 @@ body {
   width: 25%;
   float: left;
   position: relative;
+=======
+.swiper-container-3d {
+  -webkit-perspective: 1200px;
+  -o-perspective: 1200px;
+  perspective: 1200px;
+}
+
+.swiper-container-3d .swiper-cube-shadow,
+.swiper-container-3d .swiper-slide,
+.swiper-container-3d .swiper-slide-shadow-bottom,
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right,
+.swiper-container-3d .swiper-slide-shadow-top,
+.swiper-container-3d .swiper-wrapper {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+>>>>>>> Calista
 }
 
 .index .imgLine .raceTrack img {
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
 }
 
 .index .content {
@@ -3972,6 +4715,30 @@ body {
     width: 450px;
     top: 50px;
   }
+=======
+  pointer-events: none;
+  z-index: 10;
+}
+
+.swiper-container-3d .swiper-slide-shadow-left {
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.swiper-container-3d .swiper-slide-shadow-right {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.swiper-container-3d .swiper-slide-shadow-top {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.swiper-container-3d .swiper-slide-shadow-bottom {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+>>>>>>> Calista
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
@@ -3988,12 +4755,21 @@ body {
   }
 }
 
+<<<<<<< HEAD
 @media (min-width: 375px) and (max-width: 413.98px) {
   .index .content .rcbig {
     width: 220px;
     top: 20px;
     left: -60px;
   }
+=======
+.swiper-container-cube .swiper-slide,
+.swiper-container-flip .swiper-slide {
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 1;
+>>>>>>> Calista
 }
 
 .index .content .rcbig img {
@@ -4009,6 +4785,7 @@ body {
           transform: rotate(-10deg);
 }
 
+<<<<<<< HEAD
 @media (min-width: 768px) and (max-width: 991.98px) {
   .index .content .textBox {
     width: 150px;
@@ -4028,6 +4805,32 @@ body {
     width: 100px;
     top: 16%;
   }
+=======
+.swiper-container-cube .swiper-slide-shadow-bottom,
+.swiper-container-cube .swiper-slide-shadow-left,
+.swiper-container-cube .swiper-slide-shadow-right,
+.swiper-container-cube .swiper-slide-shadow-top,
+.swiper-container-flip .swiper-slide-shadow-bottom,
+.swiper-container-flip .swiper-slide-shadow-left,
+.swiper-container-flip .swiper-slide-shadow-right,
+.swiper-container-flip .swiper-slide-shadow-top {
+  z-index: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.swiper-container-cube .swiper-slide {
+  visibility: hidden;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-container-cube.swiper-container-rtl .swiper-slide {
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+>>>>>>> Calista
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -4039,6 +4842,7 @@ body {
 
 .index .content .textBox img {
   width: 100%;
+<<<<<<< HEAD
 }
 
 .index .content .txtStyle {
@@ -4052,6 +4856,25 @@ body {
   .index .content .txtStyle {
     padding-left: 40%;
   }
+=======
+  height: 100%;
+  background: #000;
+  opacity: .6;
+  -webkit-filter: blur(50px);
+  filter: blur(50px);
+  z-index: 0;
+}
+
+.swiper-container-fade.swiper-container-free-mode .swiper-slide {
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.swiper-container-fade .swiper-slide {
+  pointer-events: none;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+>>>>>>> Calista
 }
 
 .index .content .txtStyle img {
@@ -4065,6 +4888,7 @@ body {
   overflow: hidden;
 }
 
+<<<<<<< HEAD
 @media (min-width: 768px) and (max-width: 991.98px) {
   .index .content .picRole {
     margin: 6% 0 0 78%;
@@ -4075,6 +4899,30 @@ body {
   .index .content .picRole {
     margin: 22% 0 0 70%;
   }
+=======
+.swiper-zoom-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.swiper-zoom-container > canvas,
+.swiper-zoom-container > img,
+.swiper-zoom-container > svg {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+>>>>>>> Calista
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
@@ -4105,10 +4953,26 @@ body {
   }
 }
 
+<<<<<<< HEAD
 @media (min-width: 414px) and (max-width: 577.98px) {
   .index .content .pointLogin {
     padding-left: 64%;
   }
+=======
+.swiper-lazy-preloader {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -21px;
+  margin-top: -21px;
+  z-index: 10;
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-animation: swiper-preloader-spin 1s steps(12, end) infinite;
+  animation: swiper-preloader-spin 1s steps(12, end) infinite;
+>>>>>>> Calista
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -4121,6 +4985,7 @@ body {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 .index .content .pointLogin a .btn {
   border-radius: 10px;
 }
@@ -4141,6 +5006,18 @@ body {
     background-color: #60cd90;
     border: 3px solid #0e3461;
     text-align: center;
+=======
+@-webkit-keyframes swiper-preloader-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes swiper-preloader-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+>>>>>>> Calista
   }
 }
 
@@ -4213,11 +5090,17 @@ body {
   }
 }
 
+<<<<<<< HEAD
 @media (min-width: 375px) and (max-width: 413.98px) {
   .index .content .dialogclude {
     width: 100px;
     margin: 8% 0 0 40%;
   }
+=======
+.swiper-slide img {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+>>>>>>> Calista
 }
 
 .index .content .dialogclude img {
@@ -4240,6 +5123,7 @@ body {
   }
 }
 
+<<<<<<< HEAD
 @media (min-width: 414px) and (max-width: 577.98px) {
   .index .content .dialogclude p {
     font-size: 12px;
@@ -4262,6 +5146,36 @@ body {
   margin: 10% auto 0;
   text-align: center;
   z-index: 15;
+=======
+.swiper-pagination-bullet {
+  background: transparent none repeat scroll 0 0;
+  border: 1px solid #60cd90;
+  border-radius: 10px;
+  display: inline-block;
+  height: 10px;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  width: 26px;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.swiper-pagination-bullet-active {
+  background: rgba(0, 0, 0, 0) -webkit-gradient(linear, left top, right top, from(#60cd90), to(#0e3461)) repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #60cd90 0%, #0e3461 100%) repeat scroll 0 0;
+  border: medium none;
+  height: 12px;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  width: 12px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+>>>>>>> Calista
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
@@ -4310,12 +5224,54 @@ body {
   }
 }
 
+<<<<<<< HEAD
 .index .effect {
   width: 600px;
   position: absolute;
   left: -4%;
   top: 28%;
   z-index: -1;
+=======
+.index .indexOne .banner .welcome {
+  display: none;
+  width: 450px;
+  position: absolute;
+  top: 22%;
+  left: 12%;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .indexOne .banner .welcome {
+    width: 400px;
+    left: 6%;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .indexOne .banner .welcome {
+    width: 400px;
+    left: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .index .indexOne .banner .welcome {
+    display: block;
+  }
+}
+
+.index .indexOne .banner .logoImg {
+  position: absolute;
+  padding: 0 0 0 260px;
+  margin: -250px 0;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  opacity: 0;
+}
+
+.index .indexOne .banner .logoImg img {
+  width: 400px;
+>>>>>>> Calista
 }
 
 .index .effect img {
@@ -4351,15 +5307,47 @@ body {
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
+<<<<<<< HEAD
   .index .blockBox .bgColor {
     height: 70%;
+=======
+  .index .indexOne .banner .text {
+    background-color: rgba(95, 141, 179, 0.5);
+    font-size: 16px;
+    padding: 20px;
+    margin-top: 5px;
+    margin-left: 50px;
+>>>>>>> Calista
   }
 }
 
 .index .blockBox .bgColor img {
   background-size: cover;
   position: absolute;
+<<<<<<< HEAD
   z-index: -1;
+=======
+  right: 0;
+  margin-top: -100px;
+  opacity: 0;
+}
+
+.index .indexOne .banner .roleCar img {
+  width: 500px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .index .indexOne .banner .roleCar img {
+    width: 450px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .index .indexOne .banner .roleCar img {
+    max-width: 90%;
+    width: 400px;
+  }
+>>>>>>> Calista
 }
 
 .index .blockBox .bgColor .intro {
@@ -4368,6 +5356,7 @@ body {
   display: inline-block;
 }
 
+<<<<<<< HEAD
 .index .blockBox .bgColor .intro h1 {
   margin: 25% 0 0 10%;
   font-size: 32px;
@@ -4392,22 +5381,92 @@ body {
 @media (min-width: 578px) and (max-width: 767.98px) {
   .index .blockBox .bgColor .machineBox {
     display: none;
+=======
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .indexOne .banner .roleCar {
+    margin-top: 80px;
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
-  .index .blockBox .bgColor .machineBox {
-    display: none;
+  .index .indexOne .banner .roleCar {
+    right: -15%;
+    margin-top: 15%;
   }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
+  .index .indexOne .banner .roleCar {
+    right: -15%;
+    margin-top: 40%;
+  }
+  .index .indexOne .banner .roleCar img {
+    max-width: 90%;
+    width: 300px;
+  }
+}
+
+.index .indexOne .banner .point {
+  color: #a9f6cc;
+  margin-left: 20px;
+  margin-top: 180px;
+  opacity: 0;
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .indexOne .banner .point {
+    margin-top: 280px;
+>>>>>>> Calista
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+<<<<<<< HEAD
+  .index .blockBox .bgColor .machineBox {
+    display: none;
+=======
+  .index .indexOne .banner .point {
+    margin-top: 280px;
+>>>>>>> Calista
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+<<<<<<< HEAD
   .index .blockBox .bgColor .machineBox {
     display: none;
   }
 }
 
 .index .blockBox .bgColor .machineBox img {
+=======
+  .index .indexOne .banner .point {
+    margin-top: 65%;
+  }
+}
+
+.index .indexOne .banner .point .fa-angle-double-down {
+  font-size: 50px;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .indexOne .banner .point .fa-angle-double-down {
+    font-size: 30px;
+  }
+}
+
+.index .indexTwo {
+  background: url(../dist/images/index/bluebg.jpeg) 0 0 fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  top: 100px;
+  z-index: 2;
+}
+
+.index .indexTwo .imgBlock {
+>>>>>>> Calista
   width: 100%;
   position: absolute;
   bottom: 10px;
@@ -4424,9 +5483,16 @@ body {
   width: 100%;
 }
 
+<<<<<<< HEAD
 .index .blockBox .bgColor .machineBox .pokemon .pkm1 img {
   right: 100px;
   margin-bottom: 30px;
+=======
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .sportsCar {
+    top: -110px;
+  }
+>>>>>>> Calista
 }
 
 .index .blockBox .bgColor .machineBox .pokemon .pkm2 img {
@@ -4434,9 +5500,16 @@ body {
   margin-bottom: 60px;
 }
 
+<<<<<<< HEAD
 .index .blockBox .bgColor .machineBox .pokemon .pkm3 img {
   right: 150px;
   margin-bottom: 80px;
+=======
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .sportsCar .carId {
+    width: 150px;
+  }
+>>>>>>> Calista
 }
 
 .index .manyRole {
@@ -4455,8 +5528,17 @@ body {
   margin-top: 6%;
 }
 
+<<<<<<< HEAD
 .index .manyRole .col-1 {
   width: 8.33333%;
+=======
+.index .imgLine {
+  position: absolute;
+  width: 100%;
+  height: 320px;
+  -webkit-animation: marquee 10s infinite linear;
+          animation: marquee 10s infinite linear;
+>>>>>>> Calista
 }
 
 .index .manyRole .col-2 {
@@ -4487,14 +5569,24 @@ body {
   width: 66.66667%;
 }
 
+<<<<<<< HEAD
 .index .manyRole .col-9 {
   width: 75%;
+=======
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .content .rcbig {
+    width: 220px;
+    top: 10px;
+    left: -60px;
+  }
+>>>>>>> Calista
 }
 
 .index .manyRole .col-10 {
   width: 83.33333%;
 }
 
+<<<<<<< HEAD
 .index .manyRole .col-11 {
   width: 91.66667%;
 }
@@ -4507,10 +5599,33 @@ body {
   .index .manyRole {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+=======
+.index .content .textBox {
+  position: absolute;
+  width: 215px;
+  left: 40%;
+  top: 24%;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .index .content .textBox {
+    width: 180px;
+    top: 20%;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .content .textBox {
+    width: 170px;
+    top: 18%;
+>>>>>>> Calista
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
+<<<<<<< HEAD
   .index .manyRole {
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -4529,6 +5644,19 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
+=======
+  .index .content .textBox {
+    width: 140px;
+    top: 16%;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .content .textBox {
+    width: 118px;
+    top: 10%;
+  }
+>>>>>>> Calista
 }
 
 .index .manyRole .roleCard:hover img {
@@ -4541,6 +5669,7 @@ body {
   transition: all 1s;
 }
 
+<<<<<<< HEAD
 .index .manyRole .roleCard img {
   width: 100%;
 }
@@ -4552,22 +5681,72 @@ body {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .index .manyRole .col-2 {
     width: 26%;
+=======
+.index .content .txtStyle {
+  padding-left: 45%;
+  padding-top: 30%;
+  -webkit-transform: rotate(7.5deg);
+          transform: rotate(7.5deg);
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .content .txtStyle {
+    width: 380px;
+    padding-top: 50%;
+    padding-left: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+.index .content .txtStyle img {
+  width: 100%;
+}
+
+.index .content .picRole {
+  position: absolute;
+  width: 200px;
+  right: 15%;
+  bottom: -15%;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .index .content .picRole {
+    width: 160px;
+    right: 5%;
+    bottom: -12%;
+>>>>>>> Calista
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
+<<<<<<< HEAD
   .index .manyRole .col-2 {
     width: 30%;
+=======
+  .index .content .picRole {
+    width: 160px;
+    right: 0%;
+    bottom: -16%;
+>>>>>>> Calista
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
+<<<<<<< HEAD
   .index .manyRole .col-2 {
     width: 42%;
+=======
+  .index .content .picRole {
+    width: 160px;
+    right: -5%;
+    bottom: -18%;
+>>>>>>> Calista
   }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
+<<<<<<< HEAD
   .index .manyRole .col-2 {
     width: 45%;
   }
@@ -4636,26 +5815,152 @@ body {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .index .indexThree .strtxtbg img {
     top: -1%;
+=======
+  .index .content .picRole {
+    width: 120px;
+    right: 0%;
+    bottom: -18%;
   }
 }
 
-@media (min-width: 578px) and (max-width: 767.98px) {
-  .index .indexThree .strtxtbg img {
-    width: 400px;
-    height: 100px;
-    top: 0;
-  }
+.index .content .picRole img {
+  width: 100%;
 }
 
-@media (min-width: 414px) and (max-width: 577.98px) {
-  .index .indexThree .strtxtbg img {
-    width: 320px;
-    height: 80px;
-    top: 1%;
+.index .content .pointLogin {
+  font-weight: 400;
+  position: relative;
+  padding-left: 65%;
+  padding-top: 4%;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .index .content .pointLogin {
+    padding-top: 3%;
   }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
+  .index .content .pointLogin {
+    padding-left: 50%;
+    margin-bottom: 2%;
+    margin-top: -10%;
+  }
+}
+
+.index .content .pointLogin img {
+  width: 230px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .index .content .pointLogin img {
+    width: 200px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .content .pointLogin img {
+    width: 200px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .content .pointLogin img {
+    width: 160px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .content .pointLogin img {
+    width: 140px;
+  }
+}
+
+.index .content .pointLogin p {
+  text-align: start;
+  color: black;
+  position: absolute;
+  top: -70%;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .index .content .pointLogin p {
+    top: -65%;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .content .pointLogin p {
+    top: -65%;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .content .pointLogin p {
+    top: -65%;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .content .pointLogin p {
+    top: -65%;
+    font-size: 14px;
+    left: 10px;
+  }
+}
+
+.index .content .pointLogin a {
+  display: block;
+  text-decoration: none;
+  color: #3c8ceb;
+  position: absolute;
+  padding: 3px;
+  top: 52%;
+  left: 69%;
+  border-radius: 12px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .index .content .pointLogin a {
+    top: 49%;
+>>>>>>> Calista
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+<<<<<<< HEAD
+  .index .indexThree .strtxtbg img {
+    width: 400px;
+    height: 100px;
+    top: 0;
+=======
+  .index .content .pointLogin a {
+    top: 50%;
+>>>>>>> Calista
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+<<<<<<< HEAD
+  .index .indexThree .strtxtbg img {
+    width: 320px;
+    height: 80px;
+    top: 1%;
+=======
+  .index .content .pointLogin a {
+    top: 48%;
+    left: 70%;
+    font-size: 14px;
+>>>>>>> Calista
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+<<<<<<< HEAD
   .index .indexThree .strtxtbg img {
     width: 240px;
     height: 60px;
@@ -4689,10 +5994,101 @@ body {
 @media (min-width: 414px) and (max-width: 577.98px) {
   .index .indexThree .strtxtbg p {
     top: 2.5%;
+=======
+  .index .content .pointLogin a {
+    top: 44%;
+    left: 55%;
+    font-size: 14px;
+  }
+}
+
+.index .content .pointLogin a:hover {
+  color: #60cd90;
+}
+
+.index .h2Games {
+  width: 300px;
+  height: 100px;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+  margin-top: -6%;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .h2Games {
+    width: 250px;
+    height: 80px;
+  }
+}
+
+.index .h2Games img {
+  width: 100%;
+  height: 100%;
+}
+
+.index .h2Games h2 {
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  margin: -25% 0 20px 0;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .h2Games h2 {
+    font-size: 32px;
+    margin: -26% 0 20px 0;
+  }
+}
+
+.index p {
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index p {
+    font-size: 16px;
   }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
+  .index p {
+    font-size: 14px;
+  }
+}
+
+.index .image {
+  width: 100%;
+  height: 400px;
+}
+
+.index #sliderBoard {
+  border: 2px solid #60cd90;
+  border-radius: 5px;
+  width: 70%;
+  height: 400px;
+  margin: 30px auto 20px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .index #sliderBoard {
+    width: 100%;
+>>>>>>> Calista
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+<<<<<<< HEAD
   .index .indexThree .strtxtbg p {
     top: 2.5%;
   }
@@ -4768,6 +6164,64 @@ body {
   top: 0;
   -webkit-transform: translate(100%, 0px);
           transform: translate(100%, 0px);
+=======
+  .index #sliderBoard {
+    margin: 40px auto 20px;
+  }
+}
+
+.index #sliderBoard #content {
+  position: relative;
+  z-index: 20;
+}
+
+.index #sliderBoard #content li {
+  float: left;
+  position: relative;
+}
+
+.index #sliderBoard #content li h1 {
+  position: absolute;
+  top: 160px;
+  left: 10%;
+  color: #fff;
+  font-weight: 400;
+  font-size: 34px;
+}
+
+.index #sliderBoard #content li h4 {
+  position: absolute;
+  top: 210px;
+  left: 10%;
+  color: #fff;
+  font-weight: 300;
+}
+
+.index #contentButton {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index #contentButton {
+    height: 20px;
+  }
+}
+
+.index #contentButton li {
+  width: 15px;
+  height: 10px;
+  border-radius: 20%;
+  background-color: black;
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.index #contentButton li.clickMe {
+  background: #60cd90;
+>>>>>>> Calista
 }
 
 .index .unlock .afterImage img {
@@ -4775,7 +6229,17 @@ body {
           transform: translate(-100%, 0px);
 }
 
+<<<<<<< HEAD
 .index .unlock .unlockImage img {
+=======
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .effect {
+    width: 390px;
+  }
+}
+
+.index .effect img {
+>>>>>>> Calista
   width: 100%;
   height: 100%;
   position: absolute;
@@ -4788,14 +6252,22 @@ body {
   top: 65%;
 }
 
+<<<<<<< HEAD
 .index .change .txt p {
   font-size: 28px;
+=======
+.index .blockBox {
+  height: 400px;
+  margin-top: 2%;
+  z-index: 10;
+>>>>>>> Calista
 }
 
 .index .change .changeRole {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
+<<<<<<< HEAD
   margin-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4811,6 +6283,11 @@ body {
 .index .change .changeRole .myRole {
   width: 350px;
   display: block;
+=======
+  height: 100%;
+  z-index: 10;
+  position: relative;
+>>>>>>> Calista
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
@@ -4831,10 +6308,18 @@ body {
   }
 }
 
+<<<<<<< HEAD
 .index .change .changeRole .myRole p {
   font-size: 28px;
   margin: 0 auto 20px;
   color: white;
+=======
+.index .blockBox .bgColor img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+>>>>>>> Calista
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -4891,10 +6376,16 @@ body {
   }
 }
 
+<<<<<<< HEAD
 .index .change .changeRole .otherRole p {
   font-size: 28px;
   margin: 0 auto 20px;
   color: white;
+=======
+.index .blockBox .bgColor .machineBox img {
+  width: 100%;
+  position: absolute;
+>>>>>>> Calista
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -4929,6 +6420,7 @@ body {
   }
 }
 
+<<<<<<< HEAD
 .otot {
   background-image: url("../dist/images/intro/bg.jpg");
   width: 100%;
@@ -4944,6 +6436,91 @@ body {
   margin: 0;
   margin: 0 auto;
   padding: 0;
+=======
+.index .manyRC {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0 0 15%;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .manyRC {
+    margin-left: 50px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .manyRC {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 20px 0;
+  }
+}
+
+.index .manyRC h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #fff;
+}
+
+.index .manyRC h4 {
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .manyRC .gamesIntro {
+    margin-left: 0;
+  }
+}
+
+.index .manyRC .gamesIntro a {
+  color: #60cd90;
+  margin: 0 auto;
+  border-bottom: 1px solid transparent;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .manyRC .gamesIntro a {
+    margin-left: 10px;
+  }
+}
+
+.index .manyRC .gamesIntro a:hover {
+  border-bottom: 1px solid #60cd90;
+}
+
+.index h2 {
+  font-size: 32px;
+  color: #59c0e7;
+  margin: 8% auto 2%;
+  text-align: center;
+}
+
+.index .manyRole {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 95%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 6%;
+>>>>>>> Calista
 }
 
 @media (min-width: 992px) {
@@ -5012,6 +6589,7 @@ body {
   color: #10c5b1;
 }
 
+<<<<<<< HEAD
 .out .mama .ti-2 {
   text-align: right;
 }
@@ -5042,6 +6620,33 @@ body {
 .out .card {
   margin-top: 50px;
   margin-bottom: 5px;
+=======
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .manyRole {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .manyRole {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.index .manyRole .roleCard {
+  border-radius: 18px;
+  background-color: #fff;
+  width: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+>>>>>>> Calista
   overflow: hidden;
   cursor: -webkit-grab;
   cursor: grab;
@@ -5050,6 +6655,15 @@ body {
 
 .out .thumbnail {
   width: 100%;
+<<<<<<< HEAD
+=======
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+>>>>>>> Calista
 }
 
 .out .thumbnail:hover {
@@ -5116,6 +6730,7 @@ body {
   margin-left: 50px;
 }
 
+<<<<<<< HEAD
 .out .slick-next {
   right: 0px;
 }
@@ -5213,6 +6828,73 @@ main.login {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../dist/images/login/back.jpg);
+=======
+.index .picGames {
+  width: 560px;
+  height: 100px;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+  margin-top: 10%;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .picGames {
+    width: 510px;
+    height: 80px;
+  }
+}
+
+.index .picGames img {
+  width: 100%;
+  height: 100%;
+}
+
+.index .picGames h2 {
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  margin: -14% 0 0 0;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .picGames h2 {
+    font-size: 32px;
+    margin: -13% 0 0 0;
+  }
+}
+
+.index .unlock {
+  border: 1px solid #bcb177;
+  margin: 30px auto;
+  background-color: #355c45;
+  -webkit-box-shadow: #7adaa2 0 0 70px 20px;
+          box-shadow: #7adaa2 0 0 70px 20px;
+  width: 500px;
+  height: 450px;
+  display: table;
+  position: relative;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .unlock {
+    max-width: 500px;
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.index .roleD .roleDance01 {
+  position: absolute;
+  width: 300px;
+  top: 26%;
+  left: 22%;
+  z-index: 1;
+}
+
+.index .roleD .roleDance01 img {
+>>>>>>> Calista
   width: 100%;
   background-position: left bottom;
   -webkit-box-sizing: border-box;
@@ -5221,6 +6903,7 @@ main.login {
   margin-top: 90px;
 }
 
+<<<<<<< HEAD
 main.login div.contain {
   margin: 0 auto;
   display: -webkit-box;
@@ -5275,10 +6958,72 @@ main.login div.contain .col-10 {
 
 main.login div.contain .col-11 {
   width: 91.66667%;
+=======
+.index .roleD .roleDance02 {
+  position: absolute;
+  width: 300px;
+  top: 8%;
+  right: 0;
+}
+
+.index .roleD .roleDance02 img {
+  width: 100%;
+}
+
+.index .roleD .roleDance03 {
+  position: absolute;
+  width: 300px;
+  top: 8%;
+  left: 0;
+}
+
+.index .roleD .roleDance03 img {
+  width: 100%;
+}
+
+.index .change {
+  padding-bottom: 10%;
+}
+
+.index .change .txt {
+  width: 380px;
+  height: 100px;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+  margin-top: 10%;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .change .txt {
+    height: 80px;
+  }
+}
+
+.index .change .txt img {
+  width: 100%;
+  height: 100%;
+}
+
+.index .change .txt h2 {
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  margin: -20% 0 20px 0;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .change .txt h2 {
+    font-size: 32px;
+    margin: -17% 0 20px 0;
+  }
+>>>>>>> Calista
 }
 
 main.login div.contain .col-12 {
   width: 100%;
+<<<<<<< HEAD
 }
 
 @media (max-width: 767.98px) {
@@ -5294,6 +7039,41 @@ main.login div.contain h1 {
   color: white;
   margin-bottom: 35px;
   font-size: 32px;
+=======
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.index .change .changeRole .myRole {
+  width: 350px;
+  display: block;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .index .change .changeRole .myRole {
+    width: 300px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .change .changeRole .myRole {
+    width: 260px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .change .changeRole .myRole {
+    width: 200px;
+  }
+>>>>>>> Calista
 }
 
 main.login div.contain .login_contain,
@@ -5315,12 +7095,19 @@ main.login div.contain .signup_contain .rwd_signup {
   }
 }
 
+<<<<<<< HEAD
 main.login div.contain input {
   margin-top: 10px;
   margin-bottom: 20px;
   width: 400px;
   max-width: 95%;
   height: 35px;
+=======
+.index .change .changeRole .myRole .rolesR {
+  border: 10px solid #fff;
+  background-color: #60cd90;
+  margin-bottom: 40%;
+>>>>>>> Calista
 }
 
 main.login div.contain button.btn_login,
@@ -5357,6 +7144,7 @@ main.login div.contain .login_contain #login_error {
   color: red;
 }
 
+<<<<<<< HEAD
 main.login div.contain .login_contain button.forgot {
   color: gray;
   text-decoration: underline;
@@ -5369,6 +7157,24 @@ main.login div.contain .signup_contain {
   color: white;
   font-size: 20px;
   max-width: 100%;
+=======
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .index .change .changeRole .otherRole {
+    width: 300px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .index .change .changeRole .otherRole {
+    width: 260px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .change .changeRole .otherRole {
+    width: 200px;
+  }
+>>>>>>> Calista
 }
 
 main.login div.contain .signup_contain button {
@@ -5386,11 +7192,18 @@ main.login div.contain .signup_contain div.content .fa-check {
   margin-right: 10px;
 }
 
+<<<<<<< HEAD
 main.login div.contain .forget_contain {
   margin: 0 auto;
   width: 400px;
   display: none;
   max-width: 100%;
+=======
+.index .change .changeRole .otherRole .rolesL {
+  border: 10px solid #fff;
+  background-color: #60cd90;
+  margin-bottom: 40%;
+>>>>>>> Calista
 }
 
 main.login div.contain .forget_contain .forget_error {
@@ -5534,6 +7347,7 @@ main.login div.contain .bookmark {
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
 .mgHeaderBlk .logo a {
   background-image: url(../image/manager/logo.png);
   background-size: contain;
@@ -5543,6 +7357,14 @@ main.login div.contain .bookmark {
   position: absolute;
   width: 400px;
   height: 100%;
+=======
+.out .card {
+  margin-top: 50px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  cursor: -webkit-grab;
+  cursor: grab;
+>>>>>>> Calista
 }
 
 .mgHeaderBlk .title {
@@ -5555,12 +7377,20 @@ main.login div.contain .bookmark {
   top: 50%;
 }
 
+<<<<<<< HEAD
 .mgHeaderBlk .title h1 {
   position: relative;
   margin: 0;
   font-size: 32px;
   color: #fff;
   font-weight: bold;
+=======
+.out .thumbnail:hover {
+  -webkit-transition: .7s ease-in-out;
+  transition: .7s ease-in-out;
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+>>>>>>> Calista
 }
 
 .mgHeaderBlk .logOut {
@@ -5693,9 +7523,23 @@ main.login div.contain .bookmark {
   bottom: 0;
 }
 
+<<<<<<< HEAD
 .mgContainer .contentContainer .title .memberSearch .fa-search {
   font-size: 20px;
   cursor: pointer;
+=======
+.out .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+>>>>>>> Calista
 }
 
 .mgContainer .contentContainer .title .memberSearch input {
@@ -5723,10 +7567,21 @@ main.login div.contain .bookmark {
   cursor: default;
 }
 
+<<<<<<< HEAD
 .mgContainer .contentContainer td {
   padding: 10px;
   border-top: 1px dotted #ccc;
   cursor: default;
+=======
+.out .total .page {
+  height: 500px;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 0 10px 15px #00000060;
+          box-shadow: 0 10px 15px #00000060;
+>>>>>>> Calista
 }
 
 .mgContainer .contentContainer .authContent table {
@@ -5749,6 +7604,7 @@ main.login div.contain .bookmark {
   color: #10c5b1;
 }
 
+<<<<<<< HEAD
 .mgContainer .contentContainer .memberContent table p {
   cursor: pointer;
   color: #10c5b1;
@@ -5758,6 +7614,29 @@ main.login div.contain .bookmark {
   width: 100%;
   border: 1px solid #ccc;
   text-align: center;
+=======
+main.login {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../dist/images/login/back.jpg);
+  width: 100%;
+  background-position: left bottom;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100vh;
+}
+
+main.login div.contain {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1200px;
+  max-width: 95%;
+  padding-top: 100px;
+>>>>>>> Calista
 }
 
 .mgContainer .contentContainer .memberPointContent table .memberEdit {
@@ -5986,11 +7865,30 @@ main.member div.bar div.trading {
   border: 0;
 }
 
+<<<<<<< HEAD
 main.member div.bar div.points,
 main.member div.bar div.information {
   width: 25%;
   padding: 0;
   border: 0;
+=======
+.mgLoginBlk {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  width: 800px;
+  height: 400px;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 10px 30px;
+          box-shadow: 10px 10px 30px;
+  -webkit-transition: .5s;
+  transition: .5s;
+>>>>>>> Calista
 }
 
 main.member div.bar .fa-list-alt,
@@ -6000,11 +7898,17 @@ main.member div.bar .fa-pencil-alt {
   font-size: 32px;
 }
 
+<<<<<<< HEAD
 main.member div.bar div.title {
   width: 100%;
   background-color: #0e3461;
   color: white;
   font-size: 24px;
+=======
+.mgLoginBlk:hover {
+  -webkit-box-shadow: 10px 10px 70px;
+          box-shadow: 10px 10px 70px;
+>>>>>>> Calista
 }
 
 main.member div.bar div.title {
@@ -6036,16 +7940,42 @@ main.member div.bar button {
 
 main.member div.bar button._on {
   background-color: #0e3461;
+<<<<<<< HEAD
+=======
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  font-size: 16px;
+>>>>>>> Calista
 }
 
 main.member div.bar button._on {
   color: white;
 }
 
+<<<<<<< HEAD
 @media (max-width: 577.98px) {
   main.member div.bar button {
     font-size: 14px;
   }
+=======
+.mgLoginBlk a {
+  display: inline-block;
+  text-decoration: none;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+>>>>>>> Calista
 }
 
 main.member div.button_bar {
@@ -6055,12 +7985,32 @@ main.member div.button_bar {
   display: flex;
 }
 
+<<<<<<< HEAD
 main.member div.button_bar button {
   width: 150px;
   height: 50px;
   font-size: 20px;
   background-color: white;
   border: 1px solid #0e3461;
+=======
+.mgbg {
+  background-color: white;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -999;
+}
+
+.mgHeaderBlk {
+  background: -webkit-gradient(linear, left top, left bottom, from(#024f3f), to(#10c5b1));
+  background: linear-gradient(180deg, #024f3f 0%, #10c5b1 100%);
+  position: relative;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+>>>>>>> Calista
 }
 
 @media (max-width: 577.98px) {
@@ -6071,11 +8021,22 @@ main.member div.button_bar button {
   }
 }
 
+<<<<<<< HEAD
 main.member div.button_bar button._on,
 main.member div.button_bar button.bookmark {
   background-color: #0e3461;
   color: white;
   border: 1px solid white;
+=======
+.mgHeaderBlk .title {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+>>>>>>> Calista
 }
 
 main.member div.content {
@@ -6098,10 +8059,25 @@ main.member div.content img {
   }
 }
 
+<<<<<<< HEAD
 @media (max-width: 767.98px) {
   main.member div.content .apply_date {
     display: none;
   }
+=======
+.mgHeaderBlk .logOut button {
+  color: #60cd90;
+  width: 150px;
+  padding: 0px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  border-radius: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+>>>>>>> Calista
 }
 
 main.member div.content .buyer_contain,
@@ -6113,9 +8089,14 @@ main.member div.content .bookmark {
   display: block;
 }
 
+<<<<<<< HEAD
 main.member div.content div.contain_bar {
   background-color: #0e3461;
   color: white;
+=======
+.mgContainer {
+  margin-top: 50px;
+>>>>>>> Calista
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6179,6 +8160,11 @@ main.member div.content div.contain_list button {
   border: 3px solid #60cd90;
   text-align: center;
   cursor: pointer;
+<<<<<<< HEAD
+=======
+  -webkit-transition: .3s;
+  transition: .3s;
+>>>>>>> Calista
 }
 
 main.member div.content div.contain_list button:hover {
@@ -6371,6 +8357,12 @@ main.member section.maskLayer div.popUpBox .title button {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+<<<<<<< HEAD
+=======
+  font-size: 16px;
+  -webkit-transition: .3s;
+  transition: .3s;
+>>>>>>> Calista
   cursor: pointer;
   margin: 0 auto;
   margin-bottom: 15px;
@@ -6439,9 +8431,24 @@ main.member section.maskLayer div.maskBlockM .confirmBlk {
           justify-content: space-evenly;
 }
 
+<<<<<<< HEAD
 main.member section.maskLayer div.maskBlockM .confirmBlk .confirmBtn {
   padding: 0;
   height: 35px;
+=======
+.mgContainer .contentContainer .newsUp button {
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  font-size: 16px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  border-radius: 10px;
+>>>>>>> Calista
 }
 
 main.member section.maskLayer div.maskBlockM .confirmBlk .confirmBtn:hover {
@@ -6472,12 +8479,19 @@ main.trading_list {
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
+<<<<<<< HEAD
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 <<<<<<< HEAD
 =======
   margin-top: 90px;
 >>>>>>> Lillian
+=======
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+>>>>>>> Calista
 }
 
 main.trading_list .main_contain {
@@ -6775,11 +8789,24 @@ main.points_list {
 >>>>>>> Lillian
 }
 
+<<<<<<< HEAD
 main.points_list .main_contain {
   max-width: 1200px;
   margin: 0 auto;
   width: 95%;
   padding-top: 100px;
+=======
+main.member div.content div.contain_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  height: 150px;
+  line-height: 150px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+>>>>>>> Calista
 }
 
 main.points_list .main_contain .col-1 {
@@ -6943,6 +8970,7 @@ main.points_list div.content div.dropdown select {
   text-decoration: underline;
 }
 
+<<<<<<< HEAD
 main.points_list div.content div.contain_bar {
   background-color: #0e3461;
   color: white;
@@ -6951,6 +8979,15 @@ main.points_list div.content div.contain_bar {
   display: flex;
   height: 42px;
   line-height: 42px;
+=======
+main.member section.maskLayer div.popUpBox .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+>>>>>>> Calista
 }
 
 @media (max-width: 577.98px) {
@@ -6998,9 +9035,21 @@ main.points_list div.content div.contain_list hr {
 }
 
 @media (max-width: 767.98px) {
+<<<<<<< HEAD
   main.points_list div.content div.contain_list {
     height: 100px;
     line-height: 100px;
+=======
+  main.member section.maskLayer div.popUpBox {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 0;
+    border: 0;
+>>>>>>> Calista
   }
 }
 
@@ -7026,6 +9075,7 @@ main.member_info {
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
+<<<<<<< HEAD
   min-height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7033,6 +9083,10 @@ main.member_info {
 =======
   margin-top: 90px;
 >>>>>>> Lillian
+=======
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+>>>>>>> Calista
 }
 
 main.member_info .main_contain {
@@ -7153,9 +9207,79 @@ main.member_info div.bar button {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 main.member_info div.bar button {
   color: #0e3461;
   text-decoration: none;
+=======
+main.trading_list div.bar button {
+  color: #0e3461;
+  text-decoration: none;
+}
+
+main.trading_list div.bar button {
+  width: 100%;
+  height: 77px;
+  margin: 0;
+  border: 1px solid #0e3461;
+}
+
+main.trading_list div.bar button a {
+  font-size: 16px;
+}
+
+main.trading_list div.bar button._on {
+  background-color: #0e3461;
+}
+
+main.trading_list div.bar button._on {
+  color: white;
+}
+
+main.trading_list div.button_bar {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.trading_list div.button_bar button {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  background-color: white;
+  border: 1px solid #0e3461;
+}
+
+@media (max-width: 577.98px) {
+  main.trading_list div.button_bar button {
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+main.trading_list div.button_bar button._on,
+main.trading_list div.button_bar button.bookmark {
+  background-color: #0e3461;
+  color: white;
+  border: 1px solid white;
+}
+
+main.trading_list div.content {
+  border: 1px solid #0e3461;
+  background-color: white;
+  padding: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+main.trading_list div.content .buyer_contain,
+main.trading_list div.content .saler_contain,
+main.trading_list div.content .buyer_change,
+main.trading_list div.content .saler_change {
+  display: none;
+>>>>>>> Calista
 }
 
 main.member_info div.bar button {
@@ -7208,14 +9332,29 @@ main.member_info div.content div.contain_bar {
     height: 30px;
     line-height: 30px;
     font-size: 16px;
+<<<<<<< HEAD
   }
 }
 
 main.member_info div.content div.contain_list {
+=======
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+  main.trading_list div.content div.dropdown {
+    width: 100%;
+    display: block;
+  }
+}
+
+main.trading_list div.content div.contain_list {
+>>>>>>> Calista
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
+<<<<<<< HEAD
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 auto;
@@ -7224,6 +9363,12 @@ main.member_info div.content div.contain_list {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+=======
+  height: 150px;
+  line-height: 150px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+>>>>>>> Calista
 }
 
 main.member_info div.content div.contain_list button.member_img {
@@ -7271,10 +9416,22 @@ main.member_info div.content div.contain_list button.member_img div.img_cover .f
   }
 }
 
+<<<<<<< HEAD
 main.member_info div.content div.contain_list div.edit {
   margin-top: 25px;
   text-align: left;
   width: 50%;
+=======
+main.points_list {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../dist/images/member/back.jpg);
+  padding-bottom: 100px;
+  width: 100%;
+  background-position: left top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+>>>>>>> Calista
 }
 
 main.member_info div.content div.contain_list div.edit div.edit_detail {
@@ -7369,12 +9526,20 @@ main.member_info div.content div.contain_list div.edit div.edit_detail form.book
   }
 }
 
+<<<<<<< HEAD
 main.member_info section.maskLayer {
   left: 0;
   height: 100%;
   display: none;
   position: fixed;
   z-index: 200;
+=======
+main.points_list div.bar {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+>>>>>>> Calista
 }
 
 main.member_info section.maskLayer div.popUpBox {
@@ -7385,9 +9550,21 @@ main.member_info section.maskLayer div.popUpBox {
   top: 5%;
 }
 
+<<<<<<< HEAD
 main.member_info section.maskLayer div.popUpBox div.closeBtn {
   position: absolute;
   right: 0;
+=======
+main.points_list div.bar div.trading {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 0;
+  border: 0;
+>>>>>>> Calista
 }
 
 main.member_info section.maskLayer div.popUpBox div.popContent {
@@ -7504,6 +9681,7 @@ main.member_info section.maskLayer div.popUpBox div.contain div.btn_area button.
   margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
 main.member_info section.maskLayer div.popUpBox div.contain div.btn_area input {
   position: absolute;
   top: 0;
@@ -7524,6 +9702,42 @@ main.member_info section.maskLayer div.popUpBox div.contain div.btn_area input {
     margin: 0 auto;
     margin-top: 20px;
   }
+=======
+main.points_list div.content div.contain_bar {
+  background-color: #0e3461;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 42px;
+  line-height: 42px;
+}
+
+@media (max-width: 577.98px) {
+  main.points_list div.content div.contain_bar {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  main.points_list div.content div.dropdown {
+    width: 100%;
+    display: block;
+  }
+}
+
+main.points_list div.content div.contain_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  height: 150px;
+  line-height: 150px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+>>>>>>> Calista
 }
 
 @media (max-width: 1200px) {
@@ -7549,10 +9763,17 @@ main.member_info section.popShow {
 .otot {
   background-image: url("../dist/images/intro/bg.jpg");
   width: 100%;
+<<<<<<< HEAD
   height: 100%;
   position: fixed;
   top: 0;
   z-index: -1;
+=======
+  background-position: left top;
+  min-height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+>>>>>>> Calista
 }
 
 .out a {
@@ -7730,13 +9951,20 @@ main.member_info section.popShow {
 
 .out .left {
   margin: 0 auto;
+<<<<<<< HEAD
   line-height: 50px;
+=======
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+>>>>>>> Calista
 }
 
 .out .left .pp {
   line-height: 50px;
 }
 
+<<<<<<< HEAD
 .out .char {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7744,6 +9972,31 @@ main.member_info section.popShow {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+=======
+main.member_info div.bar div.trading {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 0;
+  border: 0;
+}
+
+main.member_info div.bar div.points,
+main.member_info div.bar div.information {
+  width: 25%;
+  padding: 0;
+  border: 0;
+}
+
+main.member_info div.bar .fa-list-alt,
+main.member_info div.bar .fa-search-dollar,
+main.member_info div.bar .fa-pencil-alt {
+  width: 100%;
+  font-size: 32px;
+>>>>>>> Calista
 }
 
 .out .char img {
@@ -7817,6 +10070,7 @@ main.member_info section.popShow {
   }
 }
 
+<<<<<<< HEAD
 @media (min-width: 100px) and (max-width: 374.98px) {
   .out .buttons {
     margin-top: 40px;
@@ -7834,6 +10088,32 @@ main.member_info section.popShow {
   border-radius: 15px;
   padding: 15px;
   font-size: 18px;
+=======
+main.member_info div.content div.contain_bar {
+  background-color: #0e3461;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 42px;
+  line-height: 42px;
+  padding-left: 10px;
+}
+
+main.member_info div.content div.contain_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+>>>>>>> Calista
 }
 
 .out .buttons button.bbbn2 {
@@ -8157,8 +10437,21 @@ main.member_info section.popShow {
   z-index: -1;
 }
 
+<<<<<<< HEAD
 .out {
   margin-bottom: 50px;
+=======
+main.member_info section.maskLayer div.popUpBox div.contain {
+  width: 75%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+>>>>>>> Calista
 }
 
 .out h1 {
@@ -8187,6 +10480,7 @@ main.member_info section.popShow {
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
 .out .con {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8194,11 +10488,25 @@ main.member_info section.popShow {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+=======
+main.member_info section.maskLayer div.popUpBox div.contain div.btn_area {
+  width: 300px;
+  margin-left: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+>>>>>>> Calista
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
   margin: 0 auto;
+=======
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+>>>>>>> Calista
 }
 
 .out .con h1 {
@@ -8308,6 +10616,696 @@ main.member_info section.popShow {
   padding-top: 100px;
 }
 
+<<<<<<< HEAD
+.allBlock .sec1 .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+=======
+.out .content {
+  margin: 0 auto;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #fff;
+}
+
+@media (min-width: 992px) {
+  .out .content {
+    max-width: 1200px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+>>>>>>> Calista
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+<<<<<<< HEAD
+=======
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+>>>>>>> Calista
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+<<<<<<< HEAD
+=======
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+>>>>>>> Calista
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+<<<<<<< HEAD
+=======
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+>>>>>>> Calista
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+<<<<<<< HEAD
+=======
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+>>>>>>> Calista
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .sec1 .flexContainer {
+    width: 100%;
+<<<<<<< HEAD
+=======
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+>>>>>>> Calista
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.allBlock .sec1 .flexContainer .items.-left {
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-size: 0;
+  width: 100%;
+}
+
+<<<<<<< HEAD
+.allBlock .sec1 .flexContainer .items.-left .imgBlock {
+  width: 300px;
+  height: 300px;
+=======
+@media (min-width: 992px) {
+  .out .fir1 {
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+>>>>>>> Calista
+}
+
+.allBlock .sec1 .flexContainer .items.-left .imgBlock img {
+  width: 100%;
+  height: 100%;
+}
+
+.allBlock .sec1 .flexContainer .items.-right {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 20px;
+  padding-left: 50px;
+  color: #fff;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .title1 {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .introduce {
+  margin-bottom: 30px;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .price, .allBlock .sec1 .flexContainer .items.-right .buyForm {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .price {
+  margin-bottom: 30px;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .price, .allBlock .sec1 .flexContainer .items.-right .collectForm {
+  display: inline-block;
+  margin-bottom: 35px;
+}
+
+<<<<<<< HEAD
+.allBlock .sec1 .flexContainer .items.-right .price {
+  margin-left: 50px;
+=======
+.out .char {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+>>>>>>> Calista
+}
+
+.allBlock .sec1 .flexContainer .items.-right .collectForm {
+  margin-left: 70px;
+}
+
+<<<<<<< HEAD
+.allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn {
+  color: #60cd90;
+  width: 70px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+=======
+.out .search-form {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+>>>>>>> Calista
+}
+
+.allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn:hover {
+  color: #0e3461;
+  width: 70px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn:hover {
+  cursor: pointer;
+}
+
+<<<<<<< HEAD
+.allBlock .sec1 .flexContainer .items.-right .collectForm .changeBtn {
+  color: #60cd90;
+  width: 70px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  margin-left: 25px;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .collectForm .changeBtn:hover {
+  color: #0e3461;
+  width: 70px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .collectForm .changeBtn:hover {
+  cursor: pointer;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn {
+  color: #60cd90;
+  width: 170px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  margin-left: 0px;
+  font-size: 24px;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn:hover {
+  color: #0e3461;
+  width: 170px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn:hover {
+  cursor: pointer;
+}
+
+.allBlock .chart {
+  background-color: #fff;
+  margin: 100px auto;
+  width: 500px;
+  height: 500px;
+  padding: 15px;
+=======
+.out .wrap {
+  width: 100%;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0.6;
+  line-height: 100px;
+}
+
+@media (min-width: 992px) {
+  .out .wrap {
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+>>>>>>> Calista
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .chart {
+    width: 100%;
+<<<<<<< HEAD
+=======
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    opacity: 1;
+>>>>>>> Calista
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .chart {
+    width: 100%;
+<<<<<<< HEAD
+=======
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    opacity: 1;
+>>>>>>> Calista
+  }
+}
+
+.allBlock .tableBlock {
+  color: #fff;
+  padding-bottom: 100px;
+}
+
+.allBlock .tableBlock table {
+  border: 1px solid #fff;
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 600px;
+  height: 500px;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock .tableBlock table {
+    width: 100%;
+<<<<<<< HEAD
+=======
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    opacity: 1;
+>>>>>>> Calista
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock .tableBlock table {
+    width: 100%;
+<<<<<<< HEAD
+=======
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    opacity: 1;
+>>>>>>> Calista
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .allBlock .tableBlock table {
+    width: 100%;
+<<<<<<< HEAD
+  }
+}
+
+.allBlock .tableBlock table th, .allBlock .tableBlock table td {
+  border: 2px solid #fff;
+  text-align: center;
+=======
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    opacity: 1;
+  }
+}
+
+.out .wrap:hover {
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+>>>>>>> Calista
+}
+
+.allBlock .tableBlock th {
+  font-size: 28px;
+}
+
+.allBlock .tableBlock td {
+  font-size: 20px;
+}
+
+.allBlock .maskBlockM {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.allBlock .maskBlockM .popUpBox {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 500px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.allBlock .maskBlockM .popUpBox .closeBtn {
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.allBlock .maskBlockM .popUpBox .popContent {
+  text-align: center;
+  color: #60cd90;
+  margin-top: 80px;
+  height: 100px;
+}
+
+<<<<<<< HEAD
+.allBlock .maskBlockM .popUpBox .confirmBlk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+=======
+.out .ti {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px 0;
+>>>>>>> Calista
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.allBlock .maskBlockM .popUpBox .confirmBlk .confirmBtn {
+  padding: 0;
+  height: 35px;
+}
+
+<<<<<<< HEAD
+.allBlock .maskBlockM .popUpBox .confirmBlk .confirmBtn:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 0px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+=======
+.out .con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+>>>>>>> Calista
+}
+
+.allBlock .maskBlockM .popUpBox .confirmBlk #confirmBtn3 {
+  width: 150px;
+}
+
+.allBlock .maskBlockM .popUpBox .confirmBlk #confirmBtn4 {
+  width: 150px;
+}
+
+.allBlock .test .maskLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.allBlock .test .maskLayer .popUpBox {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 1000px;
+  height: 480px;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.allBlock .test .maskLayer .popUpBox .closeBtn {
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  float: right;
+}
+
+.allBlock .test .maskLayer .popUpBox .popContent12 {
+  text-align: center;
+  color: #60cd90;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+<<<<<<< HEAD
+.allBlock .test .maskLayer .popUpBox .popContent12 p {
+  font-size: 24px;
+=======
+.out .final {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: right;
+>>>>>>> Calista
+}
+
+.allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark {
+  margin: 0 0 0 50px;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li {
+  width: calc((100% - 60px - 50px) / 4);
+  margin-right: 20px;
+  margin-bottom: 25px;
+}
+
+<<<<<<< HEAD
+.allBlock .test .maskLayer .popUpBox .confirmBlk12 {
+  text-align: center;
+<<<<<<< HEAD
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+=======
+  border-radius: 100px;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.out .final .bt:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+>>>>>>> Calista
+}
+
+.allBlock .test .maskLayer .popUpBox .confirmBlk12 .confirmBtn12 {
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  border: 3px solid #10c5b1;
+  color: #10c5b1;
+  background-color: #0e3461;
+  width: 100px;
+  height: 35px;
+  border-radius: 3px;
+  padding: 0;
+}
+
+.allBlock .test .maskLayer .popUpBox .confirmBlk12 .confirmBtn12:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 0px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+<<<<<<< HEAD
+.test .popUpBox {
+=======
+.allBlock .test .popUpBox {
+>>>>>>> MARK
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 800px;
+  height: 480px;
+  border-radius: 5px;
+}
+
+.test .popUpBox .myRoleBlock, .test .popUpBox .doubleArrow, .test .popUpBox .yourRoleBlock {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.test .popUpBox .myRoleBlock {
+  margin-left: 185px;
+}
+
+.test .popUpBox .myRoleBlock .myRoleP {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.test .popUpBox .myRoleBlock .myRoleNameBlock {
+  text-align: center;
+  margin-top: 20px;
+=======
 .allBlock .sec1 .flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8369,401 +11367,7 @@ main.member_info section.popShow {
       flex-shrink: 0;
   font-size: 0;
   width: 100%;
-}
-
-.allBlock .sec1 .flexContainer .items.-left .imgBlock {
-  width: 300px;
-  height: 300px;
-}
-
-.allBlock .sec1 .flexContainer .items.-left .imgBlock img {
-  width: 100%;
-  height: 100%;
-}
-
-.allBlock .sec1 .flexContainer .items.-right {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  font-size: 20px;
-  padding-left: 50px;
-  color: #fff;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .title1 {
-  margin-top: 15px;
-  margin-bottom: 30px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .introduce {
-  margin-bottom: 30px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .price, .allBlock .sec1 .flexContainer .items.-right .buyForm {
-  display: inline-block;
-  margin-bottom: 30px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .price {
-  margin-bottom: 30px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .price, .allBlock .sec1 .flexContainer .items.-right .collectForm {
-  display: inline-block;
-  margin-bottom: 35px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .price {
-  margin-left: 50px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm {
-  margin-left: 70px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn {
-  color: #60cd90;
-  width: 70px;
-  padding: 5px;
-  background-color: #0e3461;
-  border: 3px solid #60cd90;
-  text-align: center;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn:hover {
-  color: #0e3461;
-  width: 70px;
-  padding: 5px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn:hover {
-  cursor: pointer;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .changeBtn {
-  color: #60cd90;
-  width: 70px;
-  padding: 5px;
-  background-color: #0e3461;
-  border: 3px solid #60cd90;
-  text-align: center;
-  margin-left: 25px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .changeBtn:hover {
-  color: #0e3461;
-  width: 70px;
-  padding: 5px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .collectForm .changeBtn:hover {
-  cursor: pointer;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn {
-  color: #60cd90;
-  width: 170px;
-  padding: 5px;
-  background-color: #0e3461;
-  border: 3px solid #60cd90;
-  text-align: center;
-  margin-left: 0px;
-  font-size: 24px;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn:hover {
-  color: #0e3461;
-  width: 170px;
-  padding: 5px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.allBlock .sec1 .flexContainer .items.-right .buyForm .buyBtn:hover {
-  cursor: pointer;
-}
-
-.allBlock .chart {
-  background-color: #fff;
-  margin: 100px auto;
-  width: 500px;
-  height: 500px;
-  padding: 15px;
-}
-
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .allBlock .chart {
-    width: 100%;
-  }
-}
-
-@media (min-width: 100px) and (max-width: 374.98px) {
-  .allBlock .chart {
-    width: 100%;
-  }
-}
-
-.allBlock .tableBlock {
-  color: #fff;
-  padding-bottom: 100px;
-}
-
-.allBlock .tableBlock table {
-  border: 1px solid #fff;
-  border-collapse: collapse;
-  margin: 0 auto;
-  width: 600px;
-  height: 500px;
-}
-
-@media (min-width: 414px) and (max-width: 577.98px) {
-  .allBlock .tableBlock table {
-    width: 100%;
-  }
-}
-
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .allBlock .tableBlock table {
-    width: 100%;
-  }
-}
-
-@media (min-width: 100px) and (max-width: 374.98px) {
-  .allBlock .tableBlock table {
-    width: 100%;
-  }
-}
-
-.allBlock .tableBlock table th, .allBlock .tableBlock table td {
-  border: 2px solid #fff;
-  text-align: center;
-}
-
-.allBlock .tableBlock th {
-  font-size: 28px;
-}
-
-.allBlock .tableBlock td {
-  font-size: 20px;
-}
-
-.allBlock .maskBlockM {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200vh;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.allBlock .maskBlockM .popUpBox {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: #024f3f;
-  border: 2px solid #10c5b1;
-  width: 500px;
-  height: 250px;
-  border-radius: 5px;
-}
-
-.allBlock .maskBlockM .popUpBox .closeBtn {
-  background-color: #10c5b1;
-  border-radius: 2px;
-  font-size: 28px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.allBlock .maskBlockM .popUpBox .popContent {
-  text-align: center;
-  color: #60cd90;
-  margin-top: 80px;
-  height: 100px;
-}
-
-.allBlock .maskBlockM .popUpBox .confirmBlk {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.allBlock .maskBlockM .popUpBox .confirmBlk .confirmBtn {
-  padding: 0;
-  height: 35px;
-}
-
-.allBlock .maskBlockM .popUpBox .confirmBlk .confirmBtn:hover {
-  color: #0e3461;
-  width: 100px;
-  padding: 0px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.allBlock .maskBlockM .popUpBox .confirmBlk #confirmBtn3 {
-  width: 150px;
-}
-
-.allBlock .maskBlockM .popUpBox .confirmBlk #confirmBtn4 {
-  width: 150px;
-}
-
-.allBlock .test .maskLayer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200vh;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.allBlock .test .maskLayer .popUpBox {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: #024f3f;
-  border: 2px solid #10c5b1;
-  width: 1000px;
-  height: 480px;
-  border-radius: 5px;
-  overflow: auto;
-}
-
-.allBlock .test .maskLayer .popUpBox .closeBtn {
-  background-color: #10c5b1;
-  border-radius: 2px;
-  font-size: 28px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  float: right;
-}
-
-.allBlock .test .maskLayer .popUpBox .popContent12 {
-  text-align: center;
-  color: #60cd90;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.allBlock .test .maskLayer .popUpBox .popContent12 p {
-  font-size: 24px;
-}
-
-.allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark {
-  margin: 0 0 0 50px;
-  padding: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li {
-  width: calc((100% - 60px - 50px) / 4);
-  margin-right: 20px;
-  margin-bottom: 25px;
-}
-
-<<<<<<< HEAD
-.allBlock .test .maskLayer .popUpBox .confirmBlk12 {
-  text-align: center;
-  margin-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.allBlock .test .maskLayer .popUpBox .confirmBlk12 .confirmBtn12 {
-  text-align: center;
-  line-height: 30px;
-  text-decoration: none;
-  border: 3px solid #10c5b1;
-  color: #10c5b1;
-  background-color: #0e3461;
-  width: 100px;
-  height: 35px;
-  border-radius: 3px;
-  padding: 0;
-}
-
-.allBlock .test .maskLayer .popUpBox .confirmBlk12 .confirmBtn12:hover {
-  color: #0e3461;
-  width: 100px;
-  padding: 0px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.test .popUpBox {
-=======
-.allBlock .test .popUpBox {
->>>>>>> MARK
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: #024f3f;
-  border: 2px solid #10c5b1;
-  width: 800px;
-  height: 480px;
-  border-radius: 5px;
-}
-
-.test .popUpBox .myRoleBlock, .test .popUpBox .doubleArrow, .test .popUpBox .yourRoleBlock {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.test .popUpBox .myRoleBlock {
-  margin-left: 185px;
-}
-
-.test .popUpBox .myRoleBlock .myRoleP {
-  margin-bottom: 20px;
-  text-align: center;
-  color: #fff;
-}
-
-.test .popUpBox .myRoleBlock .myRoleNameBlock {
-  text-align: center;
-  margin-top: 20px;
+>>>>>>> Calista
 }
 
 <<<<<<< HEAD
@@ -8781,6 +11385,7 @@ main.member_info section.popShow {
   margin: 0 30px;
 }
 
+<<<<<<< HEAD
 .test .popUpBox .yourRoleBlock .yourRoleP {
   margin-bottom: 20px;
   text-align: center;
@@ -8790,6 +11395,14 @@ main.member_info section.popShow {
 .test .popUpBox .yourRoleBlock .yourRoleNameBlock {
 =======
 .allBlock .test .popUpBox .yourRoleBlock .yourRoleP p {
+=======
+.allBlock .sec1 .flexContainer .items.-right {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 20px;
+  padding-left: 50px;
+>>>>>>> Calista
   color: #fff;
 }
 
@@ -9010,8 +11623,22 @@ main.signup .main_contain .col-4 {
   width: 33.33333%;
 }
 
+<<<<<<< HEAD
 main.signup .main_contain .col-5 {
   width: 41.66667%;
+=======
+.allBlock .maskBlockM .popUpBox {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 500px;
+  height: 250px;
+  border-radius: 5px;
+>>>>>>> Calista
 }
 
 main.signup .main_contain .col-6 {
@@ -9022,8 +11649,18 @@ main.signup .main_contain .col-7 {
   width: 58.33333%;
 }
 
+<<<<<<< HEAD
 main.signup .main_contain .col-8 {
   width: 66.66667%;
+=======
+.allBlock .maskBlockM .popUpBox .confirmBlk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+>>>>>>> Calista
 }
 
 main.signup .main_contain .col-9 {
@@ -9047,10 +11684,25 @@ main.signup .main_contain .title {
   margin-bottom: 40px;
 }
 
+<<<<<<< HEAD
 main.signup .main_contain .title h1 {
   color: white;
   float: right;
   margin-bottom: 20px;
+=======
+.allBlock .test .maskLayer .popUpBox {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 1000px;
+  height: 480px;
+  border-radius: 5px;
+  overflow: auto;
+>>>>>>> Calista
 }
 
 main.signup .main_contain .title .bar {
@@ -9069,6 +11721,7 @@ main.signup .main_contain .title .bar .write {
   background-color: white;
   font-size: 20px;
   line-height: 30px;
+<<<<<<< HEAD
   color: #60cd90;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
@@ -9078,6 +11731,13 @@ main.signup .main_contain .title .bar .write .triangle1 {
   position: relative;
   top: -30px;
   right: -15px;
+=======
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+>>>>>>> Calista
   float: right;
   border-left: 15px solid white;
   border-right: 0px solid red;
@@ -9098,18 +11758,42 @@ main.signup .main_contain .title .bar .sucessBar {
   color: #60cd90;
 }
 
+<<<<<<< HEAD
 main.signup .main_contain .title .bar ._on {
   background-color: #60cd90;
   color: white;
+=======
+.allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark {
+  margin: 0 0 0 50px;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+>>>>>>> Calista
 }
 
 main.signup .main_contain .title .bar ._on .triangle1 {
   border-left: 15px solid #60cd90;
 }
 
+<<<<<<< HEAD
 main.signup .main_contain .form_contain {
   margin: 0 auto;
   margin-bottom: 35px;
+=======
+.allBlock .test .maskLayer .popUpBox .confirmBlk12 {
+  text-align: center;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+>>>>>>> Calista
 }
 
 @media (min-width: 992px) {
@@ -9163,6 +11847,7 @@ main.signup .main_contain .form_contain form .button:hover {
   font-size: 20px;
 }
 
+<<<<<<< HEAD
 main.signup .main_contain .form_contain form div.input_form {
   display: inline-block;
   max-width: 100%;
@@ -9190,6 +11875,19 @@ main.signup .main_contain .form_contain form div.error::before {
   border-right: 8px solid white;
   border-bottom: 8px solid transparent;
   border-left: 0px solid transparent;
+=======
+.allBlock .test .popUpBox {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 800px;
+  height: 480px;
+  border-radius: 5px;
+>>>>>>> Calista
 }
 
 main.signup .main_contain .form_contain form div.error_on {
@@ -9244,9 +11942,19 @@ main.signup .main_contain div._on {
   display: block;
 }
 
+<<<<<<< HEAD
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+=======
+.allBlock .test .popUpBox .confirmBlk13 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+>>>>>>> Calista
 }
 
 .allBlock1 {
@@ -9272,10 +11980,24 @@ main.signup .main_contain div._on {
   display: flex;
 }
 
+<<<<<<< HEAD
 @media (min-width: 768px) and (max-width: 991.98px) {
   .allBlock1 .roleRanksection .rankBloCk {
     width: 750px;
   }
+=======
+.allBlock .popUpBox {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 250px;
+  border-radius: 5px;
+>>>>>>> Calista
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -9300,8 +12022,18 @@ main.signup .main_contain div._on {
   text-align: center;
 }
 
+<<<<<<< HEAD
 .allBlock1 .roleRanksection .rankBloCk .roleBloCk2 {
   margin: 0 auto;
+=======
+main.signup {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../dist/images/signup/b1.png);
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+>>>>>>> Calista
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -9409,6 +12141,7 @@ main.signup .main_contain div._on {
   padding: 6px;
 }
 
+<<<<<<< HEAD
 .allBlock1 .searchFlex .searchFlexleft .ysearchBtny {
   background-color: transparent;
   border: none;
@@ -9422,6 +12155,27 @@ main.signup .main_contain div._on {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+=======
+main.signup .main_contain .title .bar {
+  width: 100%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.signup .main_contain .title .bar .write {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  background-color: white;
+  font-size: 20px;
+  line-height: 30px;
+  color: #60cd90;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+>>>>>>> Calista
 }
 
 .allBlock1 .searchFlex .searchFlexRight .openBtn:hover {
@@ -9434,8 +12188,20 @@ main.signup .main_contain div._on {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .allBlock1 .searchFlex .searchFlexRight .none {
   display: none;
+=======
+main.signup .main_contain .title .bar .sucessBar {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  background-color: white;
+  font-size: 20px;
+  line-height: 30px;
+  color: #60cd90;
+>>>>>>> Calista
 }
 
 .allBlock1 .searchFlex .searchFlexRight .foo {
@@ -9572,8 +12338,14 @@ main.signup .main_contain div._on {
   text-align: left;
 }
 
+<<<<<<< HEAD
 .roleUpPop .popUpBox .input .informationBlock .aBtnBlock {
   margin-top: 10px;
+=======
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+>>>>>>> Calista
 }
 
 .roleUpPop .popUpBox .input .informationBlock .aBtnBlock .aBtn {
@@ -9599,8 +12371,17 @@ main.signup .main_contain div._on {
   text-align: center;
 }
 
+<<<<<<< HEAD
 .roleUpPop .bBlock {
   text-align: center;
+=======
+.allBlock1 .roleRanksection .rankBloCk {
+  width: 900px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+>>>>>>> Calista
 }
 
 .roleUpPop .bBlock .b {
@@ -9817,6 +12598,7 @@ main.signup .main_contain div._on {
   opacity: 1;
 }
 
+<<<<<<< HEAD
 .ymainy .container:hover span {
   transform: translateY(25%);
 }
@@ -9827,6 +12609,33 @@ main.signup .main_contain div._on {
 
 .ymainy .container:hover .cardImg {
   width: 65%;
+=======
+.allBlock1 .ymainy .yproductListy {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.allBlock1 .ymainy .yproductListy li {
+  margin-right: 50px;
+  margin-bottom: 50px;
+  width: 229px;
+  background-color: #fff;
+  border-radius: 33px;
+  overflow: hidden;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.allBlock1 .ymainy .yproductListy li:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+>>>>>>> Calista
 }
 
 .ymainy .container:hover .cta {

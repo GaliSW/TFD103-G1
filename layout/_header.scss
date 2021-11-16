@@ -214,7 +214,8 @@
     }
     #menu{
         position: absolute;
-        width: 100vw;
+        width: 300px;
+        height: 100vh;
         border: solid;
         margin: -33px 0 0 -32px;
         background: rgb(199, 227, 240);
@@ -243,6 +244,17 @@
                 margin-right: 10px;
                 vertical-align: bottom;
                 animation-play-state: paused;
+            }
+        }
+        .btn{
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            cursor: pointer;
+            color: cornflowerblue;
+            &:hover{
+                background-color: cornflowerblue;
+                color: #fff;
             }
         }
     }
@@ -289,5 +301,11 @@
                 margin-left: 6px;
             }
         }
+        .disappear{
+            display: none;
+        }
+    }
+    .-on{
+        display: block;
     }
 }

@@ -10,6 +10,7 @@
 
     <script src="../vendor/js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
 
@@ -24,14 +25,18 @@
                 <div class="login_contain" :class="{'bookmark': login} ">
                     <form action="#" method="post">
                         <h1>登入帳號</h1>
-                        <input type="text" name="userId" placeholder="*請輸入帳號">
+                        <input type="text" name="userId" id='userId' placeholder="*請輸入帳號">
                         <br>
-                        <input type="text" name="password" placeholder="*請輸入密碼">
+                        <input type="text" name="password" id='password' placeholder="*請輸入密碼">
                         <br>
                         <span id="login_error" class="error" :class="{'bookmark': loginError }">帳號密碼有誤</span>
 
+<<<<<<< HEAD
                         <button type="submit" class="btn_login" onclick="location.href='./member.html'"
                             @click=loginCheck($event)>
+=======
+                        <button type="button" class="btn_login" @click=loginCheck($event)>
+>>>>>>> Calista
                             登入
                         </button>
 

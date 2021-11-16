@@ -3,14 +3,21 @@
     background-repeat: no-repeat;
     position: relative;
     width: 100%;
-    height: 130px;
+    margin-top: 7%;
+    z-index: 10;
     .iconLink{
         display: flex;
         justify-content: center;
+        padding-top: 5px;
         span{
             margin: 5px 10px;
             .fa-2x{
                 color: #cacaca;
+                &:hover{
+                    color: #477dbe;
+                    transform:scale(1.25,1.25);
+                    transition:transform 0.25s ease;
+                }
             }
         }
     }
@@ -23,7 +30,10 @@
             margin: 0 auto;
             text-align: center;
             font-size: 14px;
-            color: #477dbe;
+            color: #cacaca;
+            &:hover{
+                color: #477dbe;
+            }
         }
     }
     .copyright{
@@ -37,6 +47,9 @@
             text-align: center;
             font-size: 14px;
             color: #cacaca;
+            &:hover{
+                color: #477dbe;
+            }
         }
     }
 }
