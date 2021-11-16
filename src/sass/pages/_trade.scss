@@ -1,0 +1,681 @@
+*{
+    box-sizing: border-box;
+  }
+
+
+.allBlock1{
+    background-image: url("../dist/images/trade/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0px 0px;
+    margin: 90px 0 0 0;
+    padding: 0;
+
+
+
+///////////////////////////////////////////////////////////////////角色排行
+
+.roleRanksection{
+
+    h1{
+        color:#fff;
+        text-align: center;
+        //@include border;
+        padding: 30px 0;
+    }
+    
+    .rankBloCk{
+        //border: 1px solid orange;
+        width: 900px;
+        @include center;
+        @include desktop_small{
+        width:750px;
+        }
+
+
+
+        .roleBloCk1{
+            //@include border;
+            .imgBlock{
+                @include desktop_small{
+                width: 70%;
+                height: 70%;
+                @include center
+                }
+            }
+            .name{
+                color:#fff;
+                text-align: center;
+
+                p{
+                    margin: 20px 0;
+                }
+            }
+
+            .price{
+                color:#fff;
+                text-align: center;
+            }
+        }
+        .roleBloCk2{
+            //@include border;
+            @include center;
+
+            .imgBlock{
+                @include desktop_small{
+                width: 70%;
+                height: 70%;
+                @include center
+                }
+            }
+            .name{
+                color:#fff;
+                text-align: center;
+                
+                p{
+                    margin: 20px 0;
+                }
+            }
+
+            .price{
+                color:#fff;
+                text-align: center;
+            }
+        }
+        .roleBloCk3{
+            //@include border;
+            .imgBlock{
+                @include desktop_small{
+                width: 70%;
+                height: 70%;
+                @include center
+                }
+            }
+            .name{
+                color:#fff;
+                text-align: center;
+
+                p{
+                    margin: 20px 0;
+                }
+            }
+
+            .price{
+                color:#fff;
+                text-align: center;
+            }
+        }
+        display: flex;
+    }
+}
+
+
+
+///////////////////////////////////////////////////////////////// 按鈕
+.btnBlockmy{
+    //@include border;
+    text-align: center;
+    margin: 100px 0px;
+    
+    .btn111{
+        @include btn_blur (200px, 20px);
+        margin-right: 100px;
+    }
+    
+    .btn222{
+        @include btn_blur (200px, 20px){
+        };
+    }
+
+    .btn111:hover{
+        @include btn_on (200px, 20px);
+        cursor: pointer;
+    }    
+
+    .btn222:hover{
+        @include btn_on (200px, 20px);
+        cursor: pointer;    
+    }    
+}
+//////////////////////////////////////////////////////////////////////搜尋列
+
+.searchFlex{
+    display: flex;
+    justify-content: center;
+    background-color: #9bcfb7;
+    margin-bottom: 100px;
+    padding: 10px 0;
+    position: relative;
+
+    .searchFlexleft{
+        margin-right: 50px;
+        #ysearchy{
+            padding: 6px;
+        }
+
+        .ysearchBtny{
+            background-color:transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .searchFlexRight{
+
+        .openBtn{
+            @include btn_blur (100px, 6px){
+            };
+        }
+    
+        .openBtn:hover{
+            @include btn_on (100px, 6px);
+            cursor: pointer;
+        }    
+
+        .none{
+            display: none;
+        }
+
+        .foo{
+            display: block;
+            position: absolute;
+            top: 54px;
+            background-color: #9bcfb7;
+            transition: 1s;
+            padding: 10px;
+            
+        }
+
+        .foo div:nth-child(n) {
+            margin-bottom: 10px;
+        }
+
+    }
+
+}
+
+
+
+////////////////////////////////////////////////////////////////////商品列表
+
+// 
+
+
+///////////////////////////////////////////////////////////////////////////page
+
+.ypagey {
+
+    padding-bottom: 80px;
+    li{
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+}
+
+////////////////////////////////////////////////////////////////////角色上架POP視窗
+
+
+.roleUpPop{
+    z-index: 2;
+    position: relative;
+    
+    .maskLayer{
+        position: absolute;
+        top: -960%;
+        width: 100%;
+        height: 250vh;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+        
+
+    .popUpBox{
+
+        width: 80%;
+        height:480px;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(2, 79, 63, 1);
+        border: 2px solid rgba(16, 197, 177, 1);
+        border-radius: 5px;
+        overflow: auto;
+        
+        .popContent2{
+            text-align: center;
+            color: rgba(96, 205, 144, 1);
+            margin-top: 150px;
+            height: 100px;
+            font-size: 32px;
+        }
+
+        .closeBtn{
+            background-color: rgba(16, 197, 177, 1);
+            border-radius: 2px;
+            font-size: 28px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            position: sticky;
+            top: 0;
+            float: right;
+        }
+
+        h1{
+            margin-top: -60px;
+        }
+
+        .input{
+            display: flex;
+            //border: 1px solid red;
+            align-items: flex-start;
+            display: -webkit-flex;
+            display: -moz-flex;
+            width: 90%;
+            @include center;
+
+            .chooseRoleBlockk{
+                border:3px solid gray;
+                background-color: #fff;
+                padding:10px;
+                flex: 1;
+                overflow-y:auto;
+                height: 360px;
+                text-align: left;
+
+
+                .chooseRoleBlock{
+                    padding-left: 15px;
+                    
+                        
+                    h3{
+                        margin-bottom: 10px;
+                        text-align: center;
+                    }
+                    
+                    img{
+                        text-align: left;
+                    }
+                }
+            }
+
+            .showImgBlock{
+                //border: 1px solid blue;
+                margin-top: 20px;
+                flex: 1;
+            }
+
+            .informationBlock{
+                //border: 1px solid orange;
+                flex:1;
+                margin-top: 30px;
+
+                h3{
+                    text-align: left;
+                    margin-bottom: 15px;
+                }
+
+                .sellerAccountt{
+                    display: block;
+                    //margin-bottom: 15px;
+                    text-align: left;
+                }
+
+                .pricee{
+                    display: block;
+                    //margin-bottom: 15px;
+                    text-align: left;
+                }
+
+                .openChange{
+                    text-align: left;
+                }
+
+                
+                .aBtnBlock{
+
+                    margin-top: 10px;
+
+                    .aBtn{
+                        text-align: center;
+                        line-height: 30px;
+                        text-decoration: none;
+                        border: 3px solid rgba(16, 197, 177, 1);
+                        color: rgba(16, 197, 177, 1);
+                        background-color: rgba(14, 52, 97, 1);
+                        width: 100px;
+                        height: 35px;
+                        border-radius: 3px;
+                        padding: 0;
+                        margin-right: 30px;
+                        &:hover {@include btn_on (100px, 0px)}
+                    }
+                }     
+            }
+        }
+
+    }
+
+    .bBlock{
+        text-align: center;
+
+        .b{
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+            border: 3px solid rgba(16, 197, 177, 1);
+            color: rgba(16, 197, 177, 1);
+            background-color: rgba(14, 52, 97, 1);
+            width: 100px;
+            height: 35px;
+            border-radius: 3px;
+            padding: 0;
+            @include center;
+            &:hover {@include btn_on (100px, 0px)}
+        }
+    }
+
+    .popContent3{
+        text-align: center;
+        color: rgba(96, 205, 144, 1);
+        margin-top: 150px;
+        height: 100px;
+        font-size: 32px;
+
+        h1{
+            margin-top: -130px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(16, 197, 177, 1);
+            font-size: 32px;
+        }
+
+
+        .manageList{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            //border: 2px solid rgba(16, 197, 177, 1);
+
+            
+
+            .itemFlex{
+                display: flex;
+                border: 1px solid rgba(16, 197, 177, 1);
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 0;
+
+                p{
+                    font-size: 24px;
+                }
+
+                .leftBlock{
+                    width: 100px;
+                    flex-shrink: 0;
+
+                    .imgBlockRole{
+                        font-size: 0;
+                        margin-left: 20px;
+                    }
+                }
+
+                .middleBlock{
+
+                    .detailInfo{
+                        display: flex;
+                        align-items: center;
+                        color: #fff;
+
+                        .rolePrice{
+                            margin: 0 50px;
+                        }
+                    }    
+                }
+
+                .rightBlock{
+                    .btnBlock{
+                        display: flex;
+                        text-align: center;
+                        
+                        .downBt{
+                            text-align: center;
+                            line-height: 30px;
+                            text-decoration: none;
+                            border: 3px solid rgba(16, 197, 177, 1);
+                            color: rgba(16, 197, 177, 1);
+                            background-color: rgba(14, 52, 97, 1);
+                            width: 100px;
+                            height: 35px;
+                            border-radius: 3px;
+                            padding: 0;
+                            @include center;
+                            &:hover {@include btn_on (100px, 0px)}
+                        }
+
+                        .upBt{
+                            text-align: center;
+                            line-height: 30px;
+                            text-decoration: none;
+                            border: 3px solid rgba(16, 197, 177, 1);
+                            color: rgba(16, 197, 177, 1);
+                            background-color: rgba(14, 52, 97, 1);
+                            width: 100px;
+                            height: 35px;
+                            border-radius: 3px;
+                            padding: 0;
+                            @include center;
+                            &:hover {@include btn_on (100px, 0px)}
+                        }
+
+                        .deleteBt{
+                            text-align: center;
+                            line-height: 30px;
+                            text-decoration: none;
+                            border: 3px solid rgba(16, 197, 177, 1);
+                            color: rgba(16, 197, 177, 1);
+                            background-color: rgba(14, 52, 97, 1);
+                            width: 100px;
+                            height: 35px;
+                            border-radius: 3px;
+                            padding: 0;
+                            @include center;
+                            &:hover {@include btn_on (100px, 0px)}
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+
+.ymainy{
+
+    width: calc(100% - 70px);
+    margin-bottom: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+.containerFlex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container {
+    margin-right: 50px;
+    margin-bottom: 50px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+    a{
+        display: inline-block;
+        text-decoration: none;
+        width: 100%;
+        color: black;
+    }
+
+}
+
+
+
+.container:hover .lower {
+    transform: translateY(-18%);
+    background: white;
+}
+
+.container:hover .features-list {
+    opacity: 1;
+}
+
+.container:hover span {
+    transform: translateY(25%);
+}
+
+.container:hover .content h2 {
+    opacity: 0;
+}
+
+.container:hover .cardImg {
+    width: 65%;
+}
+
+.container:hover .cta {
+    background: wheat;
+    color: #151414;
+}
+
+.inner {
+    width: 100%;
+    height: 400px;
+    background-color: pink;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* overflow: hidden; */
+}
+
+.inner img {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    //margin-top: 40px;
+    color: white;
+}
+
+.content h2 {
+    font-size: 2rem;
+    transition: all .5s ease;
+}
+
+.content span {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+
+
+.lower {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    flex-direction: column;
+    background: transparent;
+    position: relative;
+    transform: translateY(60%);
+    transition: all .5s ease;
+    // min-height: 40%;
+    // height: 100px;
+
+    .ysellerImgy, .ysellerInfoy{
+        display: inline-block;
+        text-align: center;
+        margin: 0 auto;
+        vertical-align: middle;
+    }
+
+
+    .ysellerImgy{
+        border: 2px solid $tiffiny_green;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $dark_blue;
+
+        img{
+            //border: 1px solid black;
+            width: 73%;
+            height: 73%;
+            display: block;
+            margin: 4px auto; 
+        }
+
+    }
+}
+
+.features-list {
+    padding: 10px;
+    list-style: none;
+    opacity: 0;
+    transition: all .2s ease;
+    text-align: center;
+}
+
+
+
+
+
+.features-list li {
+    position: relative;
+    font-weight: 100;
+    line-height: 150%;
+    font-size: 1.1em;
+    /* text-align: left; */
+}
+
+.features-list li::before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 10px;
+    /* border-top: 3px solid red;
+border-left: 3px solid red;
+left: -15px;
+top: 5px; */
+    transform: rotate(-130deg);
+}
+
+.cta {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1.3rem;
+    color: #000;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+}

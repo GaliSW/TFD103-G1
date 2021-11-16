@@ -1,0 +1,225 @@
+main.signup {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../dist/images/signup/b1.png);
+
+    // padding-bottom: 100px;
+    margin: 0;
+    box-sizing: border-box;
+    margin-top: 90px;
+
+    .contain {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .main_contain {
+        border: 1px solid $dark_green;
+        background-color: $dark_green;
+        @include center;
+        @include grids(12);
+        width: 1200px;
+        max-width: 95%;
+        // padding-top: 100px;
+        // margin-top: 100px;
+
+        //標題
+        .title {
+            // border: 1px solid black;
+            margin-top: 75px;
+            margin-bottom: 40px;
+
+            h1 {
+                color: white;
+                float: right;
+                margin-bottom: 20px;
+            }
+
+            .bar {
+                // border: 1px solid black;
+                width: 100%;
+                height: 30px;
+                display: flex;
+
+                .write {
+                    flex-grow: 1;
+                    text-align: center;
+                    background-color: white;
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: $light_green;
+                    flex-wrap: nowrap;
+
+                    .triangle1 {
+                        position: relative;
+                        top: -30px;
+                        right: -15px;
+                        float: right;
+                        border-left: 15px solid white;
+                        border-right: 0px solid red;
+                        border-top: 15px solid transparent;
+                        border-bottom: 15px solid transparent;
+                        width: 0px;
+                        height: 0px;
+                    }
+                }
+
+                .sucessBar {
+                    flex-grow: 1;
+                    text-align: center;
+                    background-color: white;
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: $light_green;
+
+
+                }
+
+                ._on {
+                    background-color: $light_green;
+                    color: white;
+
+                    .triangle1 {
+                        border-left: 15px solid $light_green;
+                    }
+                }
+            }
+        }
+
+        //表單
+        .form_contain {
+            @include center;
+            margin-bottom: 35px;
+
+            @include desktop {
+                width: 83.33%;
+            }
+
+            form {
+
+                div.user,
+                div.userPassword,
+                div.confirmPassword,
+                div.userEmail {
+                    max-width: 100%;
+                    position: relative;
+                }
+
+                label {
+                    color: white;
+
+                }
+
+                input {
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    width: 400px;
+                    max-width: 100%;
+                    height: 35px;
+
+                }
+
+                .button {
+                    @include btn_blur(100%, 5px);
+                    max-width: 400px;
+                    cursor: pointer;
+                    font-size: 20px;
+
+                }
+
+                .button:hover {
+                    @include btn_on(100%, 5px);
+                    max-width: 400px;
+                    cursor: pointer;
+                    font-size: 20px;
+                }
+
+                div.input_form {
+                    display: inline-block;
+                    max-width: 100%;
+                }
+
+                div.error {
+                    display: inline-block;
+                    // @include border(1, black);
+                    background-color: white;
+                    max-width: 300px;
+                    word-break: break-all;
+                    padding: 5px;
+                    @include border_r(10);
+                    color: red;
+                    // margin-left: 20px;
+                    display: none;
+                }
+
+                div.error::before {
+                    content: "";
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    position: relative;
+                    left: -10px;
+                    border-top: 8px solid transparent;
+                    border-right: 8px solid white;
+                    border-bottom: 8px solid transparent;
+                    border-left: 0px solid transparent;
+                }
+
+                div.error_on {
+                    display: inline-block;
+                }
+
+                @media (max-width: 767.98px) {
+                    div.error {
+                        max-width: 250px;
+                        position: absolute;
+                        z-index: 1;
+                        top: -15px;
+                        left: 100px;
+                    }
+                }
+            }
+
+        }
+
+        @media (max-width: 991.98px) {
+            .form_contain {
+                width: 98%;
+            }
+        }
+
+        div.sucess_box {
+            @include center;
+            color: white;
+            margin-top: 72px;
+            margin-bottom: 182px;
+            font-size: 24px;
+
+            span {
+                font-size: 16px;
+                margin-top: 45px;
+                display: block;
+            }
+        }
+
+        @media (max-width: 577.98px) {
+            div.sucess_box {
+                font-size: 20px;
+            }
+        }
+
+
+        div.form_contain {
+            display: none;
+        }
+
+        div.sucess_box {
+            display: none;
+        }
+
+        div._on {
+            display: block;
+        }
+
+    }
+}

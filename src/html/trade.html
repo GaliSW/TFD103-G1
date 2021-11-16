@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../vendor/js/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>角色交易</title>
+
+  <style>
+    .maskLayer {
+      display: none;
+    }
+
+    .popShow {
+      display: block;
+    }
+
+    .popUpBox {
+      display: none;
+    }
+
+    .box1 {
+      display: block;
+    }
+  </style>
+
+</head>
+
+<body>
+  @@include('./header.html')
+  <main class="allBlock1">
+
+
+
+    <!-- 角色排行 -->
+
+    <body>
+      <header id="header">
+        <div class="container">
+          <a class="logo" href="index.html">
+            <img src="../dist/images/index/logo.png" alt="logoImg">
+          </a>
+          <nav class="navbar">
+            <ul>
+              <a href="./Intro.html">
+                <li>
+                  <img src="../dist/images/index/pic.png">
+                  消息/介紹
+                </li>
+              </a>
+              <a href="./trade.html">
+                <li>
+                  <img src="../dist/images/index/role01.png">
+                  角色交易
+                </li>
+              </a>
+              <a href="./Gacha.html">
+                <li>
+                  <img src="../dist/images/index/pokemon.png">
+                  角色抽取
+                </li>
+              </a>
+            </ul>
+          </nav>
+
+          <!-- phone nav-->
+          <nav class="hamburger">
+            <div id="menuToggle">
+              <input type="checkbox" />
+
+              <span></span>
+              <span></span>
+              <span></span>
+
+              <ul id="menu">
+                <a href="./index.html"><img src="../dist/images/index/logo.png"></a>
+                <a href="./Intro.html">
+                  <li><img src="../dist/images/index/pic.png">消息/介紹</li>
+                </a>
+                <a href="./trade.html">
+                  <li><img src="../dist/images/index/role01.png">角色交易</li>
+                </a>
+                <a href="./Gacha.html">
+                  <li><img src="../dist/images/index/pokemon.png">角色抽取</li>
+                </a>
+              </ul>
+            </div>
+          </nav>
+          <!-- phone nav end -->
+
+          <div class="icon">
+            <div class="button">
+              <a href="./deposit.html"><i class="fas fa-coins fa-2x"></i></a>
+              <div class="show">儲值</div>
+            </div>
+            <div class="button">
+              <a href="./collection.html"><i class="fab fa-gratipay fa-2x"></i></a>
+              <div class="show">收藏</div>
+            </div>
+            <div class="button">
+              <a href="./member.html"><i class="fas fa-user-circle fa-2x"></i></a>
+              <div class="show">會員</div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="allBlock1">
+        <!-- 角色排行 -->
+
+        <section class="roleRanksection">
+          <h1>角色排行</h1>
+          <div class="rankBloCk">
+            <div class="roleBloCk1">
+              <div class="imgBlock">
+                <img src="../dist/images/trade/rank1.png">
+              </div>
+
+              <div class="name">
+                <p>微笑虎</p>
+              </div>
+
+              <div class="price">$2660E</div>
+            </div>
+
+            <div class="roleBloCk2">
+              <div class="imgBlock">
+                <img src="../dist/images/trade/rank2.png">
+              </div>
+
+              <div class="name">
+                <p>呆呆貓咪</p>
+              </div>
+
+              <div class="price">$3750E</div>
+            </div>
+
+            <div class="roleBloCk3">
+              <div class="imgBlock">
+                <img src="../dist/images/trade/rank3.png">
+              </div>
+
+              <div class="name">
+                <p>貓頭鷹</p>
+              </div>
+
+              <div class="price">$2510E</div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- 角色上架pop -->
+
+
+        <main class="roleUpPop" id="app">
+
+          <div class="btnBlockmy" id="box">
+            <button type="button" class="btn111" @click=clickPop()>角色上架</button>
+            <button type="button" class="btn222" @click=toThree()>我的角色管理</button>
+          </div>
+
+
+          <template id="=hiddenPopUps">
+
+            <section class="maskLayer" :class="{'popShow':pop}">
+
+
+              <!-- 角色上架pop-1 -->
+
+
+              <div class="popUpBox" :class="{'box1':one}">
+                <div class="closeBtn" @click=clickClose()>
+                  x
+                </div>
+                <div class="popContent">
+                  <h1>角色上架</h1>
+                  <div class="input">
+
+
+                    <div class="chooseRoleBlock" id="chooseRole">
+                      <!-- <h3>選擇角色</h3> -->
+
+                      <!-- <img src="../dist/images/trade/product1.png"  style="width:120px;" id="roleImg1">
+                        <img src="../dist/images/trade/product2.png"  style="width:120px;" id="roleImg2">
+                        <img src="../dist/images/trade/product3.png"  style="width:120px;" id="roleImg3">
+                        <img src="../dist/images/trade/product4.png"  style="width:120px;" id="roleImg4">
+                        <img src="../dist/images/trade/product5.png"  style="width:120px;" id="roleImg5">
+                        <img src="../dist/images/trade/product6.png"  style="width:100px;" id="roleImg6">
+                        <img src="../dist/images/trade/product7.png"  style="width:100px;" id="roleImg7">
+                        <img src="../dist/images/trade/product8.png"  style="width:100px;" id="roleImg8"> -->
+
+                    </div>
+
+
+                    <div class="showImgBlock" id="showImgBlock">
+                      <img src="" id="showImg" name="">
+                    </div>
+
+                    <div class="informationBlock" action="" method="post">
+                      <h3 id="roleName"></h3>
+
+                      <label class="sellerAccountt" id="sellerAccount">賣家帳號: <span
+                          id="innerAccount">xxxxxxxxxxxx</span></label>
+
+                      <br>
+
+                      <label class="pricee">販售價格: <input type="text" id="price" placeholder="請輸入價格"
+                          name="sellprice"></label>
+
+                      <br>
+
+                      <div class="openChange">
+                        <label id="openChange">開啟交換:
+                          <input type="radio" name="choice" value="1" checked>
+                          開啟
+                          <input id="choice" type="radio" name="choice">
+                          關閉
+                        </label>
+                      </div>
+
+                      <br>
+
+                      <div class="aBtnBlock">
+                        <button class="aBtn" type="submit" @click=toTwo()>確定</button>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- 角色上架pop-2   -->
+
+              <div class="popUpBox" :class="{'box1':two}">
+                <div class="closeBtn" @click=clickClose()>
+                  x
+                </div>
+                <div class="popContent2" id="completeWord">
+                  您已完成角色上架
+                </div>
+                <div class="bBlock">
+                  <button class="b" @click=clickClose1()>確定</button>
+                </div>
+              </div>
+
+              <!-- 角色管理pop -->
+
+              <div class="popUpBox" :class="{'box1':three}">
+                <div class="closeBtn" @click=clickClose()>
+                  x
+                </div>
+                <div class="popContent3">
+                  <h1>角色管理</h1>
+                  <div class="manageFlex">
+                    <ol class="manageList">
+
+                      <li>
+                        <div class="itemFlex">
+                          <div class="leftBlock">
+                            <div class="imgBlockRole">
+                              <img src="../dist/images/trade/product1.png">
+                            </div>
+                          </div>
+
+                          <div class="middleBlock">
+                            <div class="detailInfo">
+                              <p class="roleName">綠色怪物</p>
+                              <p class="rolePrice">$250E</p>
+                              <p class="roleNumber">abc153</p>
+                            </div>
+                          </div>
+
+                          <div class="rightBlock">
+                            <div class="btnBlock">
+                              <button class="downBt">下架</button>
+                              <button class="upBt">重新上架</button>
+                              <button class="deleteBt"><i class="fas fa-trash"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="itemFlex">
+                          <div class="leftBlock">
+                            <div class="imgBlockRole">
+                              <img src="../dist/images/trade/product2.png">
+                            </div>
+                          </div>
+
+                          <div class="middleBlock">
+                            <div class="detailInfo">
+                              <p class="roleName">綠色怪物</p>
+                              <p class="rolePrice">$250E</p>
+                              <p class="roleNumber">abc153</p>
+                            </div>
+                          </div>
+
+                          <div class="rightBlock">
+                            <div class="btnBlock">
+                              <button class="downBt">下架</button>
+                              <button class="upBt">重新上架</button>
+                              <button class="deleteBt"><i class="fas fa-trash"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="itemFlex">
+                          <div class="leftBlock">
+                            <div class="imgBlockRole">
+                              <img src="../dist/images/trade/product3.png">
+                            </div>
+                          </div>
+
+                          <div class="middleBlock">
+                            <div class="detailInfo">
+                              <p class="roleName">綠色怪物</p>
+                              <p class="rolePrice">$250E</p>
+                              <p class="roleNumber">abc153</p>
+                            </div>
+                          </div>
+
+                          <div class="rightBlock">
+                            <div class="btnBlock">
+                              <button class="downBt">下架</button>
+                              <button class="upBt">重新上架</button>
+                              <button class="deleteBt"><i class="fas fa-trash"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="itemFlex">
+                          <div class="leftBlock">
+                            <div class="imgBlockRole">
+                              <img src="../dist/images/trade/product4.png">
+                            </div>
+                          </div>
+
+                          <div class="middleBlock">
+                            <div class="detailInfo">
+                              <p class="roleName">綠色怪物</p>
+                              <p class="rolePrice">$250E</p>
+                              <p class="roleNumber">abc153</p>
+                            </div>
+                          </div>
+
+                          <div class="rightBlock">
+                            <div class="btnBlock">
+                              <button class="downBt">下架</button>
+                              <button class="upBt">重新上架</button>
+                              <button class="deleteBt"><i class="fas fa-trash"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ol>
+
+
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </template>
+
+
+        </main>
+
+
+        <!-- 搜尋列 -->
+
+
+        <section class="searchFlex">
+          <div class="searchFlexleft">
+            <input type="text" name="search" id="ysearchy" placeholder="請輸入角色名稱">
+            <button class="ysearchBtny" type="submit"><i class="fas fa-search"></i></button>
+          </div>
+
+          <div class="searchFlexRight">
+            <button class="openBtn" data-toggle-class="foo" data-target="#bar" type="button">搜尋分類+</button>
+            <div id="bar" class="none">
+              <div>
+                <input type="checkbox" id="1">
+                <label for="1">$3000E以上</label>
+              </div>
+              <div>
+                <input type="checkbox" id="2">
+                <label for="2">$2000E~$3000E</label>
+              </div>
+              <div>
+                <input type="checkbox" id="3">
+                <label for="3">$1000E~$2000E</label>
+              </div>
+              <div>
+                <input type="checkbox" id="4">
+                <label for="4">$1000E以下</label>
+              </div>
+              <div>
+                <input type="checkbox" id="5">
+                <label for="5">可交換</label>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+
+        <!-- 商品列表 -->
+
+        <main class="ymainy">
+          <div class="containerFlex">
+            <div class="container">
+              <a href="./product.html">
+                <div class="inner">
+                  <div class="content">
+
+                    <span><img src="../dist/images/trade/product1.png"></span>
+                    <h2>小烏龜</h2>
+                    <h3>$250E</h3>
+                  </div>
+                  <div class="lower">
+                    <ul class="features-list">
+                      <li>可交換</li>
+                      <div class="ysellerImgy">
+                        <img src="../dist/images/trade/sellerimg1.png" alt="">
+                      </div>
+                      <li>Slapaye</li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="cta">查看資訊</button>
+              </a>
+            </div>
+
+            <div class="container">
+              <a href="./product.html">
+                <div class="inner">
+                  <div class="content">
+
+                    <span><img src="../dist/images/trade/product1.png"></span>
+                    <h2>小烏龜</h2>
+                    <h3>$250E</h3>
+                  </div>
+                  <div class="lower">
+                    <ul class="features-list">
+                      <li>可交換</li>
+                      <div class="ysellerImgy">
+                        <img src="../dist/images/trade/sellerimg1.png" alt="">
+                      </div>
+                      <li>Slapaye</li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="cta">查看資訊</button>
+              </a>
+            </div>
+
+            <div class="container">
+              <a href="./product.html">
+                <div class="inner">
+                  <div class="content">
+
+                    <span><img src="../dist/images/trade/product1.png"></span>
+                    <h2>小烏龜</h2>
+                    <h3>$250E</h3>
+                  </div>
+                  <div class="lower">
+                    <ul class="features-list">
+                      <li>可交換</li>
+                      <div class="ysellerImgy">
+                        <img src="../dist/images/trade/sellerimg1.png" alt="">
+                      </div>
+                      <li>Slapaye</li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="cta">查看資訊</button>
+              </a>
+            </div>
+
+            <div class="container">
+              <a href="./product.html">
+                <div class="inner">
+                  <div class="content">
+
+                    <span><img src="../dist/images/trade/product1.png"></span>
+                    <h2>小烏龜</h2>
+                    <h3>$250E</h3>
+                  </div>
+                  <div class="lower">
+                    <ul class="features-list">
+                      <li>可交換</li>
+                      <div class="ysellerImgy">
+                        <img src="../dist/images/trade/sellerimg1.png" alt="">
+                      </div>
+                      <li>Slapaye</li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="cta">查看資訊</button>
+              </a>
+            </div>
+
+            <div class="container">
+              <a href="./product.html">
+                <div class="inner">
+                  <div class="content">
+
+                    <span><img src="../dist/images/trade/product1.png"></span>
+                    <h2>小烏龜</h2>
+                    <h3>$250E</h3>
+                  </div>
+                  <div class="lower">
+                    <ul class="features-list">
+                      <li>可交換</li>
+                      <div class="ysellerImgy">
+                        <img src="../dist/images/trade/sellerimg1.png" alt="">
+                      </div>
+                      <li>Slapaye</li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="cta">查看資訊</button>
+              </a>
+            </div>
+
+            <div class="container">
+              <a href="./product.html">
+                <div class="inner">
+                  <div class="content">
+
+                    <span><img src="../dist/images/trade/product1.png"></span>
+                    <h2>小烏龜</h2>
+                    <h3>$250E</h3>
+                  </div>
+                  <div class="lower">
+                    <ul class="features-list">
+                      <li>可交換</li>
+                      <div class="ysellerImgy">
+                        <img src="../dist/images/trade/sellerimg1.png" alt="">
+                      </div>
+                      <li>Slapaye</li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="cta">查看資訊</button>
+              </a>
+            </div>
+
+            <div class="container">
+              <a href="./product.html">
+                <div class="inner">
+                  <div class="content">
+
+                    <span><img src="../dist/images/trade/product1.png"></span>
+                    <h2>小烏龜</h2>
+                    <h3>$250E</h3>
+                  </div>
+                  <div class="lower">
+                    <ul class="features-list">
+                      <li>可交換</li>
+                      <div class="ysellerImgy">
+                        <img src="../dist/images/trade/sellerimg1.png" alt="">
+                      </div>
+                      <li>Slapaye</li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="cta">查看資訊</button>
+              </a>
+            </div>
+
+            <div class="container">
+              <a href="./product.html">
+                <div class="inner">
+                  <div class="content">
+
+                    <span><img src="../dist/images/trade/product1.png"></span>
+                    <h2>小烏龜</h2>
+                    <h3>$250E</h3>
+                  </div>
+                  <div class="lower">
+                    <ul class="features-list">
+                      <li>可交換</li>
+                      <div class="ysellerImgy">
+                        <img src="../dist/images/trade/sellerimg1.png" alt="">
+                      </div>
+                      <li>Slapaye</li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="cta">查看資訊</button>
+              </a>
+            </div>
+
+            <div class="container">
+              <a href="./product.html">
+                <div class="inner">
+                  <div class="content">
+
+                    <span><img src="../dist/images/trade/product1.png"></span>
+                    <h2>小烏龜</h2>
+                    <h3>$250E</h3>
+                  </div>
+                  <div class="lower">
+                    <ul class="features-list">
+                      <li>可交換</li>
+                      <div class="ysellerImgy">
+                        <img src="../dist/images/trade/sellerimg1.png" alt="">
+                      </div>
+                      <li>Slapaye</li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="cta">查看資訊</button>
+              </a>
+            </div>
+
+          </div>
+
+        </main>
+
+        <h2 class="yproductNamey">小烏龜</h2>
+
+
+
+        <div class="changeBlock">
+          <span class="ychangey">可交換</span>
+        </div>
+
+        <div class="ysellerBlocky">
+          @@include('./footer.html')
+          <script>
+
+            let vm = new Vue({
+              el: "#app",
+              data: {
+                pop: false,
+                one: true,
+                two: false,
+                three: false,
+              },
+              methods: {
+                clickPop() {
+                  vm.$data.pop = true;
+                  vm.$data.one = true;
+                  vm.$data.three = false;
+                  $.ajax({
+                    method: "POST",
+                    url: "../php/product/callMemberRole.php",
+                    data: {
+                      Name: 'JERRY',
+                    },
+                    dataType: "json",
+                    success: function (response) {
+
+                      let chooseRole = document.getElementById('chooseRole');
+                      chooseRole.innerHTML = "";
+                      chooseRole.insertAdjacentHTML("afterbegin", ` <h3>選擇角色</h3>`);
+
+                      let innerAccount = document.getElementById('innerAccount');
+                      innerAccount.innerHTML = "";
+
+
+                      $.each(response, function (index, row) {
+                        let str = ` <img src="../dist/images/trade/${row.ROLE_IMG}" onclick="chooseImg(this)" style="width:120px;" id="${row.RNAME}" name= "${row.GACHA_ID}">`;
+                        chooseRole.insertAdjacentHTML("beforeend", str);
+                        innerAccount.innerHTML = `${row.FK_USERNAME}`;
+
+
+                      })
+                      let chooseRoleChild = document.getElementById("chooseRole").childNodes[3];
+                      let showImg = document.getElementById("showImg");
+                      // console.log(document.getElementById("chooseRole").childNodes);
+                      let N = chooseRoleChild.attributes['src'].value;
+                      showImg.attributes['src'].value = `${N}`;
+                      let roleName = document.getElementById('roleName');
+                      let roleId = chooseRoleChild.attributes['id'].value;
+                      let gachaId = chooseRoleChild.attributes['name'].value
+                      roleName.innerText = roleId;
+                      showImg.attributes['name'].value = gachaId;
+
+                    },
+                    error: function (exception) {
+                      alert("數據載入失敗: " + exception.status);
+                    }
+                  });
+
+
+                },
+                clickClose() {
+                  vm.$data.pop = false;
+                },
+                toTwo() {
+                  // console.log(document.getElementById('choice').value);
+                  let check = document.querySelector('input[id="choice"]:checked');
+                  let checkValue = null;
+                  if (check != null) {
+                    checkValue = 1;
+                  } else {
+                    checkValue = 0;
+                  }
+                  //console.log(checkValue);
+
+                  let username = document.getElementById('innerAccount').innerText;
+                  console.log(username);
+
+                  let price = document.getElementById('price').value;
+                  //console.log(price);
+
+                  let gachaId = document.getElementById("showImg").attributes['name'].value;
+                  console.log(gachaId);
+
+
+
+                  if (price == "") {
+                    alert("填寫販售價格");
+                    return false;
+                  }
+
+                  $.ajax({
+                    method: "POST",
+                    url: "../php/product/upProduct.php",
+                    data: {
+                      GACHA_ID: gachaId,
+                      USERNAME: username,
+                      PRICE: price,
+                      TRANS: checkValue,
+                    },
+                    dataType: "text",
+                    success: function (response) {
+                      vm.$data.two = true;
+                      vm.$data.one = false;
+                    },
+                    error: function (exception) {
+                      alert("數據載入失敗: " + exception.status);
+                    }
+                  });
+
+
+
+                },
+                clickClose1() {
+                  vm.$data.pop = false;
+                  vm.$data.two = false;
+                },
+                toThree() {
+                  vm.$data.pop = true;
+                  vm.$data.three = true;
+                }
+              },
+            });
+
+          </script>
+
+          <script>
+            const toggleClass = document.querySelectorAll('[data-toggle-class]');
+            if (toggleClass) {
+              for (let i = 0; i < toggleClass.length; i += 1) {
+                const elem = toggleClass[i];
+                elem.addEventListener('click', () => {
+                  const className = elem.getAttribute('data-toggle-class');
+                  const target = elem.getAttribute('data-target').slice(1);
+                  document.getElementById(target).classList.toggle(className);
+                });
+              }
+            }
+          </script>
+
+
+
+          <!-- 點小圖切換圖片 -->
+
+          <script>
+            function chooseImg(item) {
+              console.log(item);
+              let N = item.attributes['src'].value;
+              //console.log(N);
+              showImg.attributes['src'].value = `${N}`;
+              let roleName = document.getElementById('roleName');
+              roleName.innerHTML = item.attributes['id'].value;
+            }
+
+          </script>
+
+          </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <div class="yproductImgy">
+                <img src="../dist/images/trade/product2.png">
+              </div>
+
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    </body>
+
+</html>
+
+<div class="ysellerBlocky">
+
+  <div class="ysellerImgy">
+    <img src="../dist/images/trade/sellerimg1.png" alt="">
+  </div>
+
+  <div class="ysellerInfoy">
+    <span class="sellerAccount">Slapaye</span>
+  </div>
+
+</div>
+
+</a>
+</li>
+
+<li>
+  <a href="#">
+    <div class="yproductImgy">
+      <img src="../dist/images/trade/product6.png">
+    </div>
+
+    <h2 class="yproductNamey">小烏龜</h2>
+
+    <div class="yproductPricey">
+      <span class="ypricey">$250E</span>
+    </div>
+
+    <div class="changeBlock">
+      <span class="ychangey">可交換</span>
+    </div>
+
+    <div class="ysellerBlocky">
+
+      <div class="ysellerImgy">
+        <img src="../dist/images/trade/sellerimg1.png" alt="">
+      </div>
+
+      <div class="ysellerInfoy">
+        <span class="sellerAccount">Slapaye</span>
+      </div>
+
+    </div>
+
+  </a>
+</li>
+
+<li>
+  <a href="#">
+    <div class="yproductImgy">
+      <img src="../dist/images/trade/product7.png">
+    </div>
+
+    <h2 class="yproductNamey">小烏龜</h2>
+
+    <div class="yproductPricey">
+      <span class="ypricey">$250E</span>
+    </div>
+
+    <div class="changeBlock">
+      <span class="ychangey">可交換</span>
+    </div>
+
+    <div class="ysellerBlocky">
+
+      <div class="ysellerImgy">
+        <img src="../dist/images/trade/sellerimg1.png" alt="">
+      </div>
+
+      <div class="ysellerInfoy">
+        <span class="sellerAccount">Slapaye</span>
+      </div>
+
+    </div>
+
+  </a>
+</li>
+
+<li>
+  <a href="#">
+    <div class="yproductImgy">
+      <img src="../dist/images/trade/product8.png">
+    </div>
+
+    <h2 class="yproductNamey">小烏龜</h2>
+
+    <div class="yproductPricey">
+      <span class="ypricey">$250E</span>
+    </div>
+
+    <div class="changeBlock">
+      <span class="ychangey">可交換</span>
+    </div>
+
+    <div class="ysellerBlocky">
+
+      <div class="ysellerImgy">
+        <img src="../dist/images/trade/sellerimg1.png" alt="">
+      </div>
+
+      <div class="ysellerInfoy">
+        <span class="sellerAccount">Slapaye</span>
+      </div>
+
+    </div>
+
+  </a>
+</li>
+
+<li>
+  <a href="#">
+    <div class="yproductImgy">
+      <img src="../dist/images/trade/product9.png">
+    </div>
+
+    <h2 class="yproductNamey">小烏龜</h2>
+
+    <div class="yproductPricey">
+      <span class="ypricey">$250E</span>
+    </div>
+
+    <div class="changeBlock">
+      <span class="ychangey">可交換</span>
+    </div>
+
+    <div class="ysellerBlocky">
+
+      <div class="ysellerImgy">
+        <img src="../dist/images/trade/sellerimg1.png" alt="">
+      </div>
+
+      <div class="ysellerInfoy">
+        <span class="ysellerAccounty">Slapaye</span>
+      </div>
+
+    </div>
+
+  </a>
+</li>
+</ul>
+</main>
+
+<section class="ypagey">
+  <div class="pagination">
+    <ul class="pagination_list">
+      <li><a href="#"><img src="../dist/images/trade/arrow_left.png"></a></li>
+      <li class="focus"><a href="#"></a>1</li>
+      <li><a href="#"></a>2</li>
+      <li><a href="#"></a>3</li>
+      <li><a href="#"></a>4</li>
+      <li><a href="#"></a>5</li>
+      <li><a href="#"></a>6</li>
+      <li><a href="#"></a>7</li>
+      <li><a href="#"></a>8</li>
+      <li><a href="#"></a>9</li>
+      <li><a href="#"><img src="../dist/images/trade/arrow_right.png"></a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+</body>
+
+let vm = new Vue({
+el: '#box',
+data: {
+isShow: false,
+},
+//在父層掛載子組件
+components: {
+hidden: hiddenPopUps
+},
+//綁定點擊事件
+methods: {
+clickShow() {
+this.isShow = true
+},
+close() {
+this.isShow = false
+}
+},
+})
+
+
+</script>

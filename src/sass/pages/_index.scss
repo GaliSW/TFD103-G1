@@ -1,0 +1,986 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    background-color: #22267c;
+}
+
+.index{
+    // 首頁第一屏
+    .indexOne{
+        // @include border;
+        @include center;
+        font-size: 0;
+        background-image: url(../dist/images/index/bg2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        width: 100%;
+        .banner{
+            // @include border;
+            @include center;
+            max-width: 1200px;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            .box{
+                display: block;
+                @include border(2,rgb(128, 195, 249));
+                width: 400px;
+                height: 400px;
+                opacity: .5;
+            }
+            @media(max-width: 767.98px){
+                .box{
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+            #canvas{
+                // @include border;
+                position: absolute;
+                top: 5%;
+            }
+            @media(max-width: 991.98px){
+                #canvas{
+                    display: none;
+                }
+            }
+            .welcome{
+                display: none;
+                width: 450px;
+                position: absolute;
+                top: 22%;
+                left: 12%;
+                @include pad_small{
+                    width: 400px;
+                    left: 6%;
+                }
+                @include phone{
+                    width: 400px;
+                    left: 0;
+                }
+            }
+            @media(max-width: 991.98px){
+                .welcome{
+                    display: block;
+                }
+            }
+            .logoImg{
+                position: absolute;
+                padding: 0 0 0 260px;
+                margin: -250px 0;
+                transform: rotate(5deg);
+                opacity: 0;
+                img{
+                    width: 400px;
+                }
+            }
+            @media(max-width: 991.98px){
+                .logoImg{
+                    display: none;
+                }
+            }
+            .text{
+                // @include border;
+                position: absolute;
+                margin-top: 100px;
+                margin-left: 100px;
+                font-size: $fontSizeH4;
+                color: rgb(255, 255, 255);
+                opacity: 0;
+                z-index: 1;
+                @include desktop_small{
+                    margin-top: -90px;
+                }
+                @include pad{
+                    font-size: $fontSize;
+                    margin-top: 20px;
+                }
+                @include pad_small{
+                    font-size: $fontSize;
+                    margin-top: 20px;
+                }
+                @include phone{
+                    background-color: rgba(95, 141, 179, .5);
+                    font-size: $fontSize;
+                    padding: 20px;
+                    margin-top: 5px;
+                    margin-left: 50px;
+                }
+            }
+            .roleCar{
+                // @include border;
+                position: absolute;
+                right: 0;
+                margin-top: -100px;
+                opacity: 0;
+                img{
+                    width: 500px;
+                    @include desktop_small{
+                        width: 450px;
+                    }
+                }
+                @media(max-width: 767.98px){
+                    img{
+                        max-width: 90%;
+                        width: 400px;
+                    }
+                }
+                @include desktop_small{
+                    margin-top: -90px;
+                }
+                @include pad{
+                    margin-top: 80px;
+                }
+                @include pad_small{
+                    right: -15%;
+                    margin-top: 15%;
+                }
+                @include phone{
+                    right: -15%;
+                    margin-top: 40%;
+                    img{
+                        max-width: 90%;
+                        width: 300px;
+                    }
+                }
+            }
+            .point{
+                // @include border;
+                color: #a9f6cc;
+                margin-left: 20px;
+                margin-top: 180px;
+                opacity: 0;
+                @include pad{
+                    margin-top: 280px;
+                }
+                @include pad_small{
+                    margin-top: 280px;
+                }
+                @include phone{
+                    margin-top: 65%;
+                }
+                .fa-angle-double-down{
+                    font-size: 50px;
+                    @include phone{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+    
+    // 首頁第二屏
+    .indexTwo{
+        background: url(../dist/images/index/bluebg.jpeg)0 0 fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        width: 100%;
+        // height: 2400px;
+        top: 100px;
+        z-index: 2;
+        .imgBlock{
+            width: 100%;
+        }
+    }
+    .angle{
+        position: absolute;
+        // left: 50%;
+        // transform: translate(-50%, 0) rotate(2deg);
+    }
+    .sportsCar{
+        // @include border;
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        top: -150px;
+        @include phone{
+            top: -110px;
+        }
+        .carId{
+            // @include border;
+            position: absolute;
+            width: 200px;
+            @include phone{
+                width: 150px;
+            }
+            img{
+                width: 100%;
+                vertical-align: bottom;
+            }
+        }
+    }
+    .imgLine{
+        // @include border;
+        position: absolute;
+        width: 100%;
+        height: 320px;
+        animation: marquee 10s infinite linear;
+        .raceTrack{
+            // @include border;
+            width: 25%;
+            float: left;
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .content{
+        // @include border;
+        @include center;
+        position: relative;
+        max-width: 1200px;
+        width: 100%;
+        z-index: 10;
+        .rcbig{
+            // @include border;
+            position: absolute;
+            width: 600px;
+            top: 60px;
+            left: -100px;
+            @include desktop_small{
+                width: 450px;
+                top: 50px;
+            }
+            @include pad{
+                width: 400px;
+                top: 40px;
+            }
+            @include pad_small{
+                width: 350px;
+                top: 30px;
+            }
+            @include phone{
+                width: 220px;
+                top: 10px;
+                left: -60px;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        .textBox{
+            // @include border;
+            position: absolute;
+            width: 215px;
+            left: 40%;
+            top: 24%;
+            transform: rotate(-10deg);
+            @include desktop_small{
+                width: 180px;
+                top: 20%;
+            }
+            @include pad{
+                width: 170px;
+                top: 18%;
+            }
+            @include pad_small{
+                width: 140px;
+                top: 16%;
+            }
+            @include phone{
+                width: 118px;
+                top: 10%;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        .txtStyle{
+            // @include border;
+            padding-left: 45%;
+            padding-top: 30%;
+            transform: rotate(7.5deg);
+            @include phone{
+                width: 380px;
+                padding-top: 50%;
+                padding-left: 0;
+                transform: rotate(0deg);
+            }
+            img{
+                width: 100%;
+            }
+        }
+        .picRole{
+            // @include border;
+            position: absolute;
+            width: 200px;
+            right: 15%;
+            bottom: -15%;
+            @include desktop_small{
+                width: 160px;
+                right: 5%;
+                bottom: -12%;
+            }
+            @include pad{
+                width: 160px;
+                right: 0%;
+                bottom: -16%;
+            }
+            @include pad_small{
+                width: 160px;
+                right: -5%;
+                bottom: -18%;
+            }
+            @include phone{
+                width: 120px;
+                right: 0%;
+                bottom: -18%;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        .pointLogin{
+            // padding: 23px;
+            font-weight: 400;
+            position: relative;
+            padding-left: 65%;
+            padding-top: 4%;
+            transform: rotate(-10deg);
+            @include desktop_small{
+                padding-top: 3%;
+            }
+            @include phone{
+                padding-left: 50%;
+                margin-bottom: 2%;
+                margin-top: -10%;
+            }
+            img{
+                width: 230px;
+                @include desktop_small{
+                    width: 200px;
+                }
+                @include pad{
+                    width: 200px;
+                }
+                @include pad_small{
+                    width: 160px;
+                }
+                @include phone{
+                    width: 140px;
+                }
+            }
+            p{
+                text-align: start;
+                color: rgb(0, 0, 0);
+                position: absolute;
+                top: -70%;
+                
+                @include desktop_small{
+                    top: -65%;
+                }
+                @include pad{
+                    top: -65%;
+                    font-size: $fontSize;
+                }
+                @include pad_small{
+                    top: -65%;
+                    font-size: $fontSizeSmall;
+                }
+                @include phone{
+                    top: -65%;
+                    font-size: $fontSizeSmall;
+                    left: 10px;
+                }
+            }
+            a{
+                display: block;
+                text-decoration: none;
+                color: #3c8ceb;
+                position: absolute;
+                padding: 3px;
+                top: 52%;
+                left: 69%;
+                @include border_r(12);
+                @include desktop_small{
+                    top: 49%;
+                }
+                @include pad{
+                    top: 50%;
+                }
+                @include pad_small{
+                    top: 48%;
+                    left: 70%;
+                    font-size: $fontSizeSmall;
+                }
+                @include phone{
+                    top: 44%;
+                    left: 55%;
+                    font-size: $fontSizeSmall;
+                }
+                &:hover{
+                    color: $light_green;
+                }
+            }
+        }
+    }
+    
+    // 扭蛋區介紹
+    .h2Games{
+        width: 300px;
+        height: 100px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        margin-top: -6%;
+        @include phone{
+            width: 250px;
+            height: 80px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        h2{
+            // @include border;
+            font-size: 36px;
+            color: #fff;
+            text-align: center;
+            margin: -25% 0 20px 0;
+            @include phone{
+                font-size: $fontSizeH1;
+                margin: -26% 0 20px 0;
+            }
+        }
+    }
+    p{
+        font-size: $fontSize;
+        text-align: center;
+        color: #fff;
+        @include pad{
+            font-size: $fontSize;
+        }
+        @include pad_small{
+            font-size: $fontSize;
+        }
+        @include phone{
+            font-size: $fontSizeSmall;
+        }
+    }
+    // 輪播
+    .image{
+        width: 100%;
+        height: 400px;
+    }
+    #sliderBoard{
+        @include border(2, $light_green);
+        @include border_r(5);
+        width: 70%;
+        height: 400px;
+        margin: 30px auto 20px;
+        overflow: hidden;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        @include phone{
+            margin: 40px auto 20px;
+        }
+        #content{
+            position: relative;
+            z-index: 20;
+            li{
+                float: left;
+                position: relative;
+                h1{
+                    position: absolute;
+                    top: 160px;
+                    left: 10%;
+                    color: #fff;
+                    font-weight: 400;
+                    font-size: 34px;
+                }
+                h4{
+                    position: absolute;
+                    top: 210px;
+                    left: 10%;
+                    color: #fff;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    #contentButton{
+        // @include border;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        @include phone{
+            height: 20px;
+        }
+    }
+    #contentButton li{
+        width: 15px;
+        height: 10px;
+        border-radius: 20%;
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        cursor: pointer;
+    }
+    #contentButton li.clickMe{
+        background: $light_green;
+    }
+
+
+
+
+    .effect{
+        // @include border;
+        width: 600px;
+        position: absolute;
+        left: -4%;
+        top: 28%;
+        z-index: -1;
+        @include phone{
+            width: 390px;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .blockBox{
+        // @include border;
+        height: 400px;
+        margin-top: 2%;
+        z-index: 10;
+        .bgColor{
+            @include border(3,rgb(124, 147, 190));
+            @include border_r(10);
+            @include center;
+            max-width: 1000px;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            @include pad{
+                height: 70%;
+            }
+            @include pad_small{
+                height: 70%;
+            }
+            @include phone{
+                height: 70%;
+            }
+            img{
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+            }
+            position: relative;
+            .intro{
+                // @include border;
+                // position: absolute;
+                height: 450px;
+                width: 620px;
+                display: inline-block;
+                h1{
+                    margin: 25% 0 0 10%;
+                    font-size: $fontSizeH1;
+                    color: #fff;
+                }
+                h4{
+                    margin: 2% 0 0 10%;
+                    font-size: $fontSizeH4;
+                    font-weight: 400;
+                    color: #fff;
+                }
+            }
+            .machineBox{
+                position: absolute;
+                right: 30px;
+                // @include border;
+                width: 300px;
+                height: 450px;
+                display: inline-block;
+                @include pad{
+                    display: none;
+                }
+                @include pad_small{
+                    display: none;
+                }
+                @include phone{
+                    display: none;
+                }
+                img{
+                    width: 100%;
+                    position: absolute;
+                }
+                // 球
+                .pokemon{
+                    width: 40px;
+                    position: absolute;
+                    right: 60px;
+                    bottom: 160px;
+                    .images{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .pkm1{
+                        img{
+                            right: 100px;
+                            margin-bottom: 30px;
+                        }
+                    }
+                    .pkm2{
+                        img{
+                            right: 43px;
+                            margin-bottom: 60px;
+                        }
+                    }
+                    .pkm3{
+                        img{
+                            right: 150px;
+                            margin-bottom: 80px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .manyRC{
+        display: inline-flex;
+        align-items: center;
+        margin: 20px 0 0 15%;
+        @include pad_small{
+            margin-left: 50px;
+        }
+        @include phone{
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+        h2{
+            font-size: $fontSizeH4;
+            margin: 0;
+            color: #fff;
+        }
+        h4{
+            font-size: $fontSizeH4;
+            margin-left: 20px;
+        }
+        .gamesIntro{
+            @include pad_small{
+                margin-left: 0;
+            }
+            @include phone{
+                
+            }
+            a{
+                color: $light_green;
+                @include center;
+                border-bottom: 1px solid transparent;
+                @include pad_small{
+                    margin-left: 10px;
+                }
+                @include phone{
+                    
+                }
+                &:hover{
+                    border-bottom: 1px solid $light_green;
+                }
+            }
+        }
+    }
+    h2{
+        font-size: 32px;
+        color: #59c0e7;
+        margin: 8% auto 2%;
+        text-align: center;
+    }
+    .manyRole{
+        @include grids(12);
+        @include center;
+        max-width: 1200px;
+        width: 95%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 6%;
+        @include pad{
+            justify-content: space-around;
+        }
+        @include pad_small{
+            justify-content: space-around;
+        }
+        
+        .roleCard{
+            // @include border;
+            @include border_r(18);
+            background-color: #fff;
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            &:hover img{
+                width: 100%;
+                transform: scale(1.2);
+                transform-origin: center;
+                transition: all 1s;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        .col-2{
+            margin-bottom: 5%;
+            @include desktop_small{
+                width: 26%;
+            }
+            @include pad{
+                width: 30%;
+            }
+            @include pad_small{
+                width: 42%;
+            }
+            @include phone{
+                width: 45%;
+            }
+        }
+        p{
+            color: $dark_blue;
+            background-color: #fff;
+            margin: 5px 0;
+            padding: 2px;
+            font-size: $fontSizeH4;
+            z-index: 2;
+        }
+        @media (max-width: 578px){
+            .lastCard{
+                display: none;
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+        .btn {
+            @include border_r(10);
+            @include btn_blur(130px, 10px);
+            @include center;
+            margin-top: 2%;
+            cursor: pointer;
+            &:hover{
+                @include btn_on(130px, 10px);
+            }
+        }
+    }
+
+    // 扭蛋解鎖小遊戲
+    .picGames{
+        width: 560px;
+        height: 100px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        margin-top: 10%;
+        @include phone{
+            width: 510px;
+            height: 80px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        h2{
+            // @include border;
+            font-size: 36px;
+            color: #fff;
+            text-align: center;
+            margin: -14% 0 0 0;
+            @include phone{
+                font-size: $fontSizeH1;
+                margin: -13% 0 0 0;
+            }
+        }
+    }
+    
+    .unlock{
+        @include border(1, #bcb177);
+        margin: 30px auto;
+        background-color: rgb(53, 92, 69);
+        box-shadow: rgb(122, 218, 162) 0 0 70px 20px;
+        width: 500px;
+        height: 450px;
+        display: table;
+        position: relative;
+        @include phone{
+            max-width: 500px;
+            width: 100%;
+            height: 400px;
+        }
+    } 
+    .roleD{
+        .roleDance01{
+            // @include border;
+            position: absolute;
+            width: 300px;
+            top: 26%;
+            left: 22%;
+            z-index: 1;
+            img{
+                width: 100%;
+            }
+        }
+        .roleDance02{
+            // @include border;
+            position: absolute;
+            width: 300px;
+            top: 8%;
+            right: 0;
+            img{
+                width: 100%;
+            }
+        }
+        .roleDance03{
+            // @include border;
+            position: absolute;
+            width: 300px;
+            top: 8%;
+            left: 0;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    
+    // 角色交換
+    .change{
+        // @include border;
+        padding-bottom: 10%;
+        .txt{
+            width: 380px;
+            height: 100px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            margin-top: 10%;
+            @include phone{
+                height: 80px;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            h2{
+                // @include border;
+                font-size: 36px;
+                color: #fff;
+                text-align: center;
+                margin: -20% 0 20px 0;
+                @include phone{
+                    font-size: $fontSizeH1;
+                    margin: -17% 0 20px 0;
+                }
+            }
+        }
+        .changeRole{
+            // @include border;
+            @include center;
+            max-width: 1200px;
+            width: 100%;
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            // margin-top: 100px;
+            .myRole{
+                width: 350px;
+                display: block;
+                @include desktop_small{
+                    width: 300px;
+                }
+                @include pad{
+                    width: 260px;
+                }
+                @include pad_small{
+                    width: 200px;
+                }
+                @include phone{
+                    width: 150px;
+                }
+                p{
+                    // @include border;
+                    font-size: $fontSizeH2;
+                    margin: 0 auto 20px; 
+                    color: rgb(255, 255, 255);
+                    @include phone{
+                        font-size: $fontSizeH4;
+                    }
+                }
+                .rolesR{
+                    @include border(10,#fff);
+                    background-color: $light_green;
+                    margin-bottom: 40%;
+                    img{
+                        width: 100%;
+                    }
+                    .roleName{
+                        background-color: #fff;
+                        p{
+                            padding: 5px;
+                            margin: 0;
+                            color: black;
+                            @include phone{
+                                font-size: $fontSize;
+                            }
+                        }
+                    }
+                }
+            }
+            .otherRole{
+                width: 350px;
+                display: block;
+                @include desktop_small{
+                    width: 300px;
+                }
+                @include pad{
+                    width: 260px;
+                }
+                @include pad_small{
+                    width: 200px;
+                }
+                @include phone{
+                    width: 150px;
+                }
+                p{
+                    // @include border;
+                    font-size: $fontSizeH2;
+                    margin: 0 auto 20px; 
+                    color: rgb(255, 255, 255);
+                    @include phone{
+                        font-size: $fontSizeH4;
+                    }
+                }
+                .rolesL{
+                    @include border(10,#fff);
+                    background-color: $light_green;
+                    margin-bottom: 40%;
+                    img{
+                        width: 100%;
+                    }
+                    .roleName{
+                        @include border(1,#fff);
+                        background-color: #fff;
+                        p{
+                            padding: 5px;
+                            margin: 0;
+                            color: black;
+                            @include phone{
+                                font-size: $fontSize;
+                            }
+                        }
+                    }
+                }
+            }    
+        }
+    }
+}

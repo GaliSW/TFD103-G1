@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+}
+
+main.login {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../dist/images/login/back.jpg);
+    // padding-top: 100px;
+    // padding-bottom: 100px;
+    width: 100%;
+    background-position: left bottom;
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin-top: 90px;
+
+    div.contain {
+        // border: 1px solid $dark_green;
+        // background-color: $dark_green;
+        @include center;
+        @include grids(12);
+        display: flex;
+        flex-wrap: wrap;
+        width: 1200px;
+        max-width: 95%;
+        padding-top: 100px;
+        // margin-top: 100px;
+        // position:relative;
+        // top: 100px;
+
+        @media (max-width: 767.98px) {
+            div.signup {
+                display: none;
+            }
+
+            .rwd_box {
+                width: 100%;
+            }
+        }
+
+
+        h1 {
+            color: white;
+            margin-bottom: 35px;
+            font-size: $fontSizeH1;
+        }
+
+
+
+        .login_contain,
+        .signup_contain {
+            @include center;
+            width: 400px;
+
+            .rwd_signup {
+                display: none;
+
+            }
+
+            @media (max-width: 767.98px) {
+                .rwd_signup {
+                    display: block;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+
+
+        input {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            width: 400px;
+            max-width: 95%;
+            height: 35px;
+        }
+
+        button.btn_login,
+        button.btn_confirm,
+        button.btn_signup {
+            @include btn_blur(100%, 10px);
+            max-width: 400px;
+            cursor: pointer;
+        }
+
+        button.btn_login:hover,
+        button.btn_confirm:hover,
+        button.btn_signup:hover {
+            @include btn_on(100%, 10px);
+            max-width: 400px;
+            cursor: pointer;
+        }
+
+
+        .login_contain {
+            // display: none;
+            max-width: 100%;
+
+            #login_error {
+                color: red;
+
+            }
+
+            button.forgot {
+                color: gray;
+                text-decoration: underline;
+                background-color: transparent;
+                @include border(0);
+                cursor: pointer;
+            }
+
+
+        }
+
+        .signup_contain {
+            color: white;
+            font-size: 20px;
+            max-width: 100%;
+
+            button {
+                margin-top: 10px;
+            }
+
+            div.content {
+                margin-top: 15px;
+                font-size: 20px;
+                line-height: 1.5;
+
+                .fa-check {
+                    color: $light_green;
+                    margin-right: 10px;
+
+                }
+            }
+
+        }
+
+        .forget_contain {
+            @include center;
+            // border: 1px solid black;
+            width: 400px;
+            display: none;
+            max-width: 100%;
+
+            .forget_error {
+                color: red;
+            }
+
+            button.backToLogin {
+                color: gray;
+                text-decoration: underline;
+                background-color: transparent;
+                @include border(0);
+                cursor: pointer;
+            }
+        }
+
+        .forget_contain,
+        .login_contain {
+            display: none;
+
+            .error {
+                display: none;
+            }
+
+            .bookmark {
+                display: block;
+            }
+        }
+
+        .bookmark {
+            display: block;
+        }
+    }
+}

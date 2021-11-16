@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扭蛋趣</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+
+</head>
+
+<body>
+    @@include('./header.html')
+    <!-- @@include('./header.html') -->
+    <p class="breadcrumb">首頁>角色抽取</p>
+    <div class="gaChaBgBlk"></div>
+    <div class="carouselTitle">
+        <h1>扭蛋池角色</h1>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container two">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slider-image">
+                    <img src="../dist/images/gacha/role1.jpg" alt="slide 1">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image">
+                    <img src="../dist/images/gacha/role2.jpg" alt="slide 2">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image">
+                    <img src="../dist/images/gacha/role3.jpg" alt="slide 3">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image">
+                    <img src="../dist/images/gacha/role4.jpg" alt="slide 4">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image">
+                    <img src="../dist/images/gacha/role5.jpg" alt="slide 5">
+                </div>
+            </div>
+            <!-- Add Pagination -->
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <section class="gaChaLabelBtn">
+        <div class="gachaPageLable">
+            <div id="app">
+                <!-- 頁籤 -->
+                <div class="button_bar ">
+                    <button id="box1" class="-on">扭蛋</button>
+                    <button id="box2" onclick="callMyRole()">我的角色</button>
+                    <button id="box3" onclick="callAllRole()">角色圖鑑</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 扭蛋 -->
+    <section class="gachaPage" id="boxOne">
+        <div class="GaCha" id="gachaGamePage">
+            <div class="GaChaGame col-6">
+                <div>
+                    <div class="gachaBg">
+                        <span id="message">GaCha!!!</span>
+                        <div class="lotterybg">
+                            <canvas id="myCanvas" width="285px" height="170px"></canvas>
+                            <img src="../dist/images/gachaGame/lighting.png" class="lighting" />
+                        </div>
+                    </div>
+                    <div id="box0">
+                        <img src="../dist/images/gachaGame/—Pngtree—round button_576652.png" id="gachaStart"
+                            @click="clickShow" />
+                        <hidden v-if="isShow" @stop-show="close"></hidden>
+                    </div>
+                    <template id="PopUps0">
+                        <section class="gachaMaskLayer">
+                            <div class="gachaPopUpBox">
+                                <div @click="clickClose" class="closeBtn1">
+                                    x
+                                </div>
+                                <div class="popContent1">
+                                    <p>將花費您300E的點數進行扭蛋</p>
+                                </div>
+                                <div class="confirmBlk">
+                                    <button onclick="play()" @click="clickClose">確認</button>
+                                    <button @click="clickClose">取消</button>
+                                </div>
+                            </div>
+                        </section>
+                    </template>
+                    <div class="award"><span id="awardBall"></span></div>
+                </div>
+                <img src="../dist/images/gachaGame/Pokemon.png" id="ball1" class="gachaImgSrc">
+                <img src="../dist/images/gachaGame/Pokemon.png" id="ball2" class="gachaImgSrc">
+                <img src="../dist/images/gachaGame/Pokemon.png" id="ball3" class="gachaImgSrc">
+                <img src="../dist/images/gachaGame/Pokemon.png" id="ball4" class="gachaImgSrc">
+            </div>
+            <div class="GaChaInfo col-6">
+                <h1>扭蛋介紹</h1>
+                <h2>每個角色在怪哩怪汽中<span class="red">僅有一隻</span><br>快來扭蛋獲取你的專屬角色吧！</h2>
+                <div class="para">
+                    <h3><i class="far fa-star"></i>扭蛋中的顏色代表著該球中角色能力值的分配</h3>
+                    <p>
+                        <span class="red">紅球 : 起步速度加成</span>
+                        <br>
+                        <span class="blue">藍球 : 碰撞干擾降低</span>
+                        <br>
+                        <span class="purple">紫球 : 道具能力加成</span>
+                        <br>
+                        <span class="yellow">黃球 : 抓地能力加成</span>
+                        <br>
+                        <span class="green">綠球 : 迴避攻擊率高</span>
+                    </p>
+                </div>
+                <h4><i class=" fas fa-coins"></i>&nbsp;每次扭蛋將花費300E幣
+                </h4>
+                <label>點數餘額：</label><input type="text" id="point" value="10000" readonly unselectable="on">
+                <div class="goBtnBlk">
+                    <div id="goBtn">
+                        <button class="goBtn" @click="clickShow">扭蛋&nbsp;GO</button>
+                        <hidden v-if="isShow" @stop-show="close"></hidden>
+                    </div>
+                    <template id="PopUps">
+                        <section class="gachaMaskLayer">
+                            <div class="gachaPopUpBox">
+                                <div @click="clickClose" class="closeBtn1">
+                                    x
+                                </div>
+                                <div class="popContent1">
+                                    <p>將花費您300E的點數進行扭蛋</p>
+                                </div>
+                                <div class="confirmBlk">
+                                    <button onclick="play()" @click="clickClose">確認</button>
+                                    <button @click="clickClose">取消</button>
+                                </div>
+                            </div>
+                        </section>
+                    </template>
+                </div>
+                <a href="./points_list.html">點數不夠？</a>
+            </div>
+        </div>
+        <section class="pintooBlk" id="pintooBlk">
+            <div class="miniGameTitle">怪哩怪氣的小遊戲</div>
+            <div class="pin">
+                <div class="pintooMask" id="pintooMask">
+                    <h1 onclick="scrollToTop()">請進行扭蛋解鎖</h1>
+                </div>
+                <ul id="ul"></ul>
+            </div>
+        </section>
+    </section>
+
+    <!-- 我的角色 -->
+    <section class="myRoleBlk boxBlur" id="boxTwo">
+        <div class="myRoleContent" id="myRoleContent">
+            <section class="rolesBlk">
+                <div class="container">
+                    <div class="inner">
+                        <div class="content">
+
+                            <span><img src="../image/gacha/role9.png" alt=""></span>
+                            <h2>我是一隻貓</h2>
+                        </div>
+                        <div class="lower">
+                            <div class="features-list">
+                                <h1>ID:xxx</h1>
+                                <br>
+                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cta roleInfo">查看能力值</button>
+                </div>
+            </section>
+            <section class="rolesBlk">
+                <div class="container">
+                    <div class="inner">
+                        <div class="content">
+
+                            <span><img src="../image/gacha/role9.png" alt=""></span>
+                            <h2>我是一隻貓</h2>
+                        </div>
+                        <div class="lower">
+                            <div class="features-list">
+                                <h1>ID:xxx</h1>
+                                <br>
+                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cta roleInfo">查看能力值</button>
+                </div>
+            </section>
+            <section class="rolesBlk">
+                <div class="container">
+                    <div class="inner">
+                        <div class="content">
+
+                            <span><img src="../image/gacha/role9.png" alt=""></span>
+                            <h2>我是一隻貓</h2>
+                        </div>
+                        <div class="lower">
+                            <div class="features-list">
+                                <h1>ID:xxx</h1>
+                                <br>
+                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cta roleInfo">查看能力值</button>
+                </div>
+            </section>
+            <section class="rolesBlk">
+                <div class="container">
+                    <div class="inner">
+                        <div class="content">
+
+                            <span><img src="../image/gacha/role9.png" alt=""></span>
+                            <h2>我是一隻貓</h2>
+                        </div>
+                        <div class="lower">
+                            <div class="features-list">
+                                <h1>ID:xxx</h1>
+                                <br>
+                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cta roleInfo">查看能力值</button>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- <table>
+            <tr>
+                <th col-3>我的角色</th>
+                <th col-3>角色名稱</th>
+                <th col-3>角色編號</th>
+                <th col-3>角色能力值</th>
+            </tr>
+            <tr>
+                <td><img src="../dist/images/gacha/role9.png" alt="#"></td>
+                <td>米奇林貓</td>
+                <td>ani3450395</td>
+                <td class="chart">
+                    <canvas class="myChart" width="100px" height="100px" id='firstChart'></canvas>
+                </td>
+                <td>
+                    <div class="roleInfo">查看角色資訊</div>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>我的角色</th>
+                <th>角色名稱</th>
+                <th>角色編號</th>
+                <th>角色能力值</th>
+            </tr>
+            <tr>
+                <td><img src="../dist/images/gacha/role10.png" alt="#"></td>
+                <td>Duck不必</td>
+                <td>ani3450395</td>
+                <td class="chart">
+                    <canvas class="myChart" id='secondChart'></canvas>
+                </td>
+                <td>
+                    <div class="roleInfo">查看角色資訊</div>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>我的角色</th>
+                <th>角色名稱</th>
+                <th>角色編號</th>
+                <th>角色能力值</th>
+            </tr>
+            <tr>
+                <td><img src="../dist/images/gacha/role9.png" alt="#"></td>
+                <td>米奇林貓</td>
+                <td>ani3450395</td>
+                <td class="chart">
+                    <canvas class="myChart"></canvas>
+                </td>
+                <td>
+                    <div class="roleInfo">查看角色資訊</div>
+                </td>
+            </tr>
+        </table> -->
+
+        <div class="pagination">
+            <ul class="pagination_list">
+                <li class="prev">&lt;</li>
+                <li class="pageNumber one focus">1</li>
+                <li class="pageNumber two">2</li>
+                <li class="pageNumber three">3</li>
+                <li class="pageNumber four">4</li>
+                <li class="pageNumber five">5</li>
+                <li class="next">&gt;</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 角色圖鑑 -->
+    <section class="myRoleBlk boxBlur" id="boxThree">
+        <div class="myRoleContent" id="RoleContent">
+            <section class="rolesBlk">
+                <div class="container">
+                    <div class="inner">
+                        <div class="content">
+
+                            <span><img src="../image/gacha/role9.png" alt=""></span>
+                            <h2>我是一隻貓</h2>
+                        </div>
+                        <div class="lower">
+                            <div class="features-list">
+                                <h1>ID:xxx</h1>
+                                <br>
+                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cta roleInfo">查看能力值</button>
+                </div>
+            </section>
+            <section class="rolesBlk">
+                <div class="container">
+                    <div class="inner">
+                        <div class="content">
+
+                            <span><img src="../image/gacha/role9.png" alt=""></span>
+                            <h2>我是一隻貓</h2>
+                        </div>
+                        <div class="lower">
+                            <div class="features-list">
+                                <h1>ID:xxx</h1>
+                                <br>
+                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cta roleInfo">查看能力值</button>
+                </div>
+            </section>
+            <section class="rolesBlk">
+                <div class="container">
+                    <div class="inner">
+                        <div class="content">
+
+                            <span><img src="../image/gacha/role9.png" alt=""></span>
+                            <h2>我是一隻貓</h2>
+                        </div>
+                        <div class="lower">
+                            <div class="features-list">
+                                <h1>ID:xxx</h1>
+                                <br>
+                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cta roleInfo">查看能力值</button>
+                </div>
+            </section>
+            <section class="rolesBlk">
+                <div class="container">
+                    <div class="inner">
+                        <div class="content">
+
+                            <span><img src="../image/gacha/role9.png" alt=""></span>
+                            <h2>我是一隻貓</h2>
+                        </div>
+                        <div class="lower">
+                            <div class="features-list">
+                                <h1>ID:xxx</h1>
+                                <br>
+                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cta roleInfo">查看能力值</button>
+                </div>
+            </section>
+        </div>
+        <div class="pagination">
+            <ul class="pagination_list">
+                <li class="prev">&lt;</li>
+                <li class="pageNumber one focus">1</li>
+                <li class="pageNumber two">2</li>
+                <li class="pageNumber three">3</li>
+                <li class="pageNumber four">4</li>
+                <li class="pageNumber five">5</li>
+                <li class="next">&gt;</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="rolesPop" class="none">
+        <div class="roleMaskLayer">
+            <div class="rolePopUpBox">
+                <div class="roleCloseBtn">
+                    x
+                </div>
+                <div id="rolePopContent">
+                    <div class="roleImg">
+                        <img src="../dist/images/gacha/role6.jpg" alt="">
+                    </div>
+                    <div class="roleInfoPara">
+                        <div class="para">
+                            <h1>角色名稱:</h1>
+                            <h2>我不是企鵝
+                                <br>
+                                <h1>角色編號:</h1>
+                                <h2>hvsfnvjks</h2>
+
+                        </div>
+                        <div class="chart">
+                            <canvas id="myChart" width="250" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./footer.html')
+</body>
+
+<script src="../js/gacha/changeLabel.js"></script>
+<script src="../js/gacha/swiper.js"></script>
+<script src="../js/gacha/gachaGame.js"></script>
+<script src="../js/gacha/pintoo.js"></script>
+<!-- <script src="../js/gacha/chart.js"></script> -->
+<script src="../js/gacha/gachaConfirmPop.js"></script>
+<script src="../js/gacha/toGacha.js"></script>
+<script src="../js/gacha/pop.js"></script>
+<script src="../js/gacha/roleInfoChart.js"></script>
+<script src="../js/gacha/rolePop.js"></script>
+<script src="../js/gacha/pagination.js"></script>
+<!-- <script src="../js/gacha/perChart.js"></script> -->
+<script>
+    window.onload = function () {
+        function resize() {
+            let p1 = new Ping();
+            p1.init("#ul", 3);
+        }
+        resize();
+        window.addEventListener('resize', resize, false);
+    }
+
+    function chartApi() {
+        let chart = document.getElementById('firstChart').getContext('2d');
+
+        const chartData = {
+            labels: [
+                '加速',
+                '抓地',
+                '碰撞',
+                '迴避',
+                '道具'
+            ],
+            datasets: [{
+                label: '',
+                data: [9, 9, 9, 9, 9],
+                fill: true,
+                fillStyle: 'red',
+                backgroundColor: ' rgba(14, 52, 97, .5)',
+                borderColor: 'rgba(16, 197, 177, 1)',
+                pointRadius: 6,
+                pointBackgroundColor: 'rgba(14, 52, 97, .1)',
+                pointBorderColor: 'rgba(2, 79, 63, 1)',
+                pointHoverRadius: 6,
+                pointHoverBackgroundColor: 'rgba(16, 197, 177, .5)',
+                pointHoverBorderColor: 'rgba(14, 52, 97, 1)',
+            }]
+        };
+        const firstChart = new Chart(chart, {
+            type: 'radar',
+            data: chartData,
+            options: {
+                plugins: {
+                    legend: {
+                        display: false,
+                    }
+                },
+                scales: {
+                    r: {
+                        pointLabels: {
+                            font: {
+                                size: 16,
+                            }
+                        },
+                        angleLines: {
+                            display: true
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 10
+                    }
+                },
+                elements: {
+
+                    line: {
+                        borderWidth: 5
+                    }
+                }
+            },
+        });
+
+    }
+
+    // function callMyRole() {
+    //     let myRoleContent = document.getElementById('myRoleContent');
+    //     myRoleContent.innerHTML = "";
+    //     // boxTwo.insertAdjacentHTML("beforeend",)
+    //     $.ajax({
+
+    //     });
+    // };
+
+    function callAllRole() {
+
+    }
+</script>
+
+</html>
