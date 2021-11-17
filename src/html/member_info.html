@@ -10,6 +10,7 @@
 
     <script src="../js/vendor/js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 
@@ -60,7 +61,7 @@
                         <!-- 編輯頭像 -->
                         <button class="member_img" @click=clickPop()>
                             <div class="img_outside">
-                                <img src="" alt="">
+                                <img id="userImg" src="" alt="">
 
                             </div>
                             <div class="img_cover">
@@ -70,16 +71,17 @@
 
 
                         <div class="edit">
-                            <span>會員資料:a12345</span>
+                            <span>會員帳號:<p id="account"></p>
+                            </span>
                             <div class="edit_detail">
                                 <button class="edit_btn" :class="{'black_btn': btn_on }"
-                                    >編輯密碼</button>
+                                    >編輯密碼:</button>
                                 <form class="edit_password " :class="{'bookmark': edit_on }">
-                                    <input type="text" name="pwd" id="pwd" placeholder="請輸入新密碼">
+                                    <input type="text" name="pwd" v-model="newPassword" placeholder="請輸入新密碼">
                                     <br>
-                                    <input type="text" placeholder="請確認新密碼">
+                                    <input type="text" placeholder="請確認新密碼" v-model="twicePassword">
                                     <br>
-                                    <button>確認</button>
+                                    <input class="button" type="button" onclick="showPwdError()" value="確認">
                                 </form>
                             </div>
 
@@ -109,7 +111,7 @@
                                 <div class="imgShow">
                                     <div class="back">
                                         <div class="circle">
-                                            <img :src="image">
+                                            <img id="userImage">
                                         </div>
                                     </div>
                                 </div>

@@ -11,7 +11,7 @@
     <script src="../js/vendor/js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+   
 </head>
 
 <body>
@@ -69,11 +69,11 @@
                             <span class="method col-2">交易方式</span>
                             <span class="price col-2">購買金額</span>
                             <div class="dropdown col-2" id="app">
-                                <select>
-                                    <option value="t3">近三個月</option>
-                                    <option value="t6">近六個月</option>
+                                <select id="buyFilter" onchange="displayBuy()">
+                                    <option value="t3" >近三個月</option>
+                                    <option value="t6" >近六個月</option>
                                     <option value="t9">近九個月</option>
-                                    <option value="t12">近一年</option>
+                                    <option value="t12" selected>近一年</option>
                                 </select>
                             </div>
                         </div>
@@ -101,26 +101,26 @@
                             <span class="method col-2">交易方式</span>
                             <span class="price col-2">我的角色</span>
                             <div class="dropdown col-2" id="app1">
-                                <select>
-                                    <option value="t3">近三個月</option>
+                                <select id="buyChangeFilter" onchange="displayBuyCng()">
+                                    <option value="t3" >近三個月</option>
                                     <option value="t6">近六個月</option>
                                     <option value="t9">近九個月</option>
-                                    <option value="t12">近一年</option>
+                                    <option value="t12" selected>近一年</option>
                                 </select>
                             </div>
                         </div>
 
                         <!-- php回傳 -->
                         <div id="result_buy_change">
-                            <div class="contain_list">
+                            <!-- <div class="contain_list">
                                 <span class="apply_date col-3">110-10-20</span>
-                                <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                                <div class="my_role col-3"><img src=""></div>
                                 <span class="method col-2">購買</span>
                                 <div class="price col-2">
-                                    <img src="../dist/images/member/r2.jpg">
+                                    <img src="">
                                 </div>
                                 <span class="block col-2"></span>
-                            </div>
+                            </div> -->
                         </div>
 
 
@@ -134,11 +134,11 @@
                             <span class="method col-2">交易方式</span>
                             <span class="price col-2">販售金額</span>
                             <div class="dropdown col-2" id="app2">
-                                <select>
-                                    <option value="t3"> 近三個月</option>
+                                <select id="saleFilter" onchange="displaySale()">
+                                    <option value="t3" > 近三個月</option>
                                     <option value="t6">近六個月</option>
                                     <option value="t9">近九個月</option>
-                                    <option value="t12">近一年</option>
+                                    <option value="t12" selected>近一年</option>
                                 </select>
                             </div>
                         </div>
@@ -164,23 +164,28 @@
                             <span class="method col-2">交易方式</span>
                             <span class="price col-2">交換角色</span>
                             <div class="dropdown col-2" id="app3">
-                                <select>
-                                    <option value="t3">近三個月</option>
+                                <select id="saleChangeFilter" >
+                                    <option value="t3" >近三個月</option>
                                     <option value="t6">近六個月</option>
                                     <option value="t9">近九個月</option>
-                                    <option value="t12">近一年</option>
+                                    <option value="t12" selected>近一年</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="contain_list">
+                        
+                        <!-- php回傳這 賣家交換-->
+                        <div id="result_sale_change">
+
+                        </div>
+                        <!-- <div class="contain_list">
                             <span class="apply_date col-3">110-10-20</span>
-                            <div class="my_role col-3"><img src="../dist/images/member/r1.jpg"></div>
+                            <div class="my_role col-3"><img src=""></div>
                             <span class="method col-2">交換</span>
                             <div class="price col-2">
-                                <img src="../dist/images/member/r2.jpg">
+                                <img src="">
                             </div>
                             <span class="block col-2"></span>
-                        </div>
+                        </div> -->
 
                     </div>
 

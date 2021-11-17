@@ -10,7 +10,7 @@
 
        //建立SQL
        $sql = "UPDATE  MEMBER SET PASSWORD =  '?'  WHERE USERNAME = 'LARRY'";
-        $pdo = getPDO();
+
         //執行
         $statement = $pdo->prepare($sql);
 

@@ -164,7 +164,7 @@
                                     <p>取消此筆交易?</p>
                                 </div>
                                 <div class="confirmBlk">
-                                    <button class="confirmBtn" @click=clickYes()>是</button>
+                                    <button class="confirmBtn" onclick="confirmBuyCancel()">是</button>
                                     <button class="confirmBtn" @click=clickClose()>否</button>
                                 </div>
                             </div>
@@ -180,7 +180,7 @@
                                     <p>確認此筆交易?</p>
                                 </div>
                                 <div class="confirmBlk">
-                                    <button class="confirmBtn" @click=clickConfirm()>是</button>
+                                    <button class="confirmBtn" onclick="saleConfirm()">是</button>
                                     <button class="confirmBtn" @click=clickClose()>否</button>
                                 </div>
                             </div>
@@ -194,9 +194,9 @@
                             <div class="popContent">
                                 <div class="title col-4">
                                     <span>拒絕原因:</span>
-                                    <button @click=clickClose()>不喜歡角色</button>
-                                    <button @click=clickClose()>不喜歡角色能力</button>
-                                    <button @click=clickClose()>其他</button>
+                                    <button  onclick="rejectValue(1)">不喜歡角色</button>
+                                    <button  onclick="rejectValue(2)">不喜歡角色能力</button>
+                                    <button  onclick="rejectValue(3)">其他</button>
                                 </div>
 
                             </div>

@@ -1,16 +1,17 @@
 
     function display(){
+      let filter = document.getElementById("filter").value;
         $.ajax({
+          method: "POST",
           url: "../php/member/points_list.php",
           data: {
-            // account: new URL(location.href).searchParams.get("POINTS_ID"),
+            Filter: filter,
           },
           dataType: "json",
           success: function (response) {
             $("#result").html("");
             //更新html內容(透過jQuery跑迴圈取值)
             $.each(response, function (index, row) {
-
               //設定來源
               let srcName = "";
               switch (row.SRC) {
@@ -29,9 +30,7 @@
                 case "4":
                   srcName = "bonus";
                   break;
-              };
-
-              
+              }
 
               $("#result").append(
                 `
