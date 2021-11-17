@@ -97,19 +97,71 @@ function play() {
         }
         setTimeout(function () {//扭蛋成功提示
             award.setAttribute('class', '');
+            let color = null;
             switch (r.color) {
+
                 case 0:
-                    message.innerText = 'PURPLE BALL！';
+                    color = "purple";
                     break;
                 case 1:
-                    message.innerText = 'GREEN BALL！';
+                    color = "green";
                     break;
                 case 2:
-                    message.innerText = 'YELLOW BALL！';
+                    color = "yellow";
                     break;
                 case 3:
-                    message.innerText = 'RED BALL！';
+                    color = "red";
                     break;
+            }
+            $.ajax({
+                method: "POST",
+                url: "../php/Gacha/callBall.php",
+                data: {
+                    Color: color,
+                },
+                dataType: "json",
+                success: function (response) {
+                    console.log(response);
+                    var roleStr = response[0][1];
+                    message.innerText = roleStr;
+                    setGacha(roleStr);
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+            function setGacha(roleStr) {
+                $.ajax({
+                    method: "POST",
+                    url: "../php/Gacha/setGacha.php",
+                    data: {
+                        roleStr: roleStr,
+                    },
+                    dataType: "text",
+                    success: function (response) {
+                        findRoleId(roleStr);
+                    },
+                    error: function (exception) {
+                        alert("發生錯誤: " + exception.status);
+                    }
+                });
+            }
+            function findRoleId(roleStr) {
+                console.log(roleStr);
+                $.ajax({
+                    method: "POST",
+                    url: "../php/Gacha/findRoleId.php",
+                    data: {
+                        roleStr: roleStr,
+                    },
+                    dataType: "text",
+                    success: function (response) {
+                        findRoleId();
+                    },
+                    error: function (exception) {
+                        alert("發生錯誤: " + exception.status);
+                    }
+                });
             }
             point.value -= 300;
             mask.classList.add('none');
