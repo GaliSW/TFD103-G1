@@ -9,6 +9,9 @@
             session_start(); 
         
         }
+        if(!session_id()) {
+            session_start();
+        }
         session_unset();
         session_destroy();
     }
