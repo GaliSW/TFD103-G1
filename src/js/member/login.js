@@ -27,7 +27,7 @@ let vm = new Vue({
             let mgPassword = document.getElementById('password').value;
             user = mgUser; //填入的user
             pass = mgPassword; //填入的密碼
-            console.log(user, pass);
+            // console.log(user, pass);
             login(user, pass);
         })
         function login(user, pass) {
@@ -41,27 +41,17 @@ let vm = new Vue({
                 dataType: "text",
                 success: function (response) {
                     if (response == 1) {
-                      alert('ok');
-                        let appear1 = document.getElementById('appear1');
-                        console.log(appear1);
-                        appear1.classList.remove('disappear');
-                        let appear2 = document.getElementById('appear2');
-                        console.log(appear2);
-                        appear2.classList.remove('disappear');
-                        window.location.href='http://localhost/TFD103_g1/src/index.html';//正確登入後頁面跳轉至 
+                        // headerStatus();
+                    //   alert('ok');
+                      let appear1 = document.getElementById('appear1');
+                    //   console.log(appear1);
+                      appear1.classList.remove('disappear');
+                      let appear2 = document.getElementById('appear2');
+                      appear2.classList.remove('disappear');
+                      window.location.href='http://localhost/TFD103_g1/src/html/index.html';//正確登入後頁面跳轉至 
                     } else {
                         // alert('有誤')
-                        if(user != data.user){//判斷是使用者名稱還是密碼錯誤，提示相應資訊 
-                            alert(data.message);
-                            $user.val(""); 
-                            $pass.val(""); 
-                            return false; 
-                            } 
-                        if(pass != data.pass){ 
-                        alert(data.message); 
-                        $pass.val(""); 
-                        return false; 
-                        } 
+                        vm.$data.loginError= true;
                     }
                 },
                 error: function (exception) {

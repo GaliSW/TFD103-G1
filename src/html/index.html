@@ -82,8 +82,12 @@
                         <div class="show">收藏</div>
                     </botton>
                     <botton type="button" class="button">
-                        <a href="../html/login.html"><i class="fas fa-user-circle fa-2x"></i></a>
+                        <a href="#"><i class="fas fa-user-circle fa-2x"></i></a>
                         <div class="show">會員</div>
+                    </botton>
+                    <botton type="button" class="button" id="LogOut" onclick="LogOut()">
+                        <a href="#"><i class="fas fa-user-circle fa-2x"></i></a>
+                        <div class="show">LogOut</div>
                     </botton>
                 </div>
             </div>
@@ -345,10 +349,48 @@
         </script>
         <script src="../js/index/index.js"></script>
         <script src="../js/header/header.js"></script>
-        <!-- <script>
-        let appear1 = document.getElementById('appear1');
-        console.log(appear1);
-        appear1.classList.remove('disappear');
-        </script> -->
+        <script>
+            window.onload = function status(){
+                $.ajax({            
+          method: "POST",
+          url: "../php/LoginCheck.php",
+          data:{},            
+          dataType: "text",
+          success: function (response) {
+              if(response == ""){
+                alert('請先登入，將前往登入頁'); 
+                // location.href = 'login.html';                
+              }else{
+                let appear1 = document.getElementById('appear1');
+                      appear1.classList.remove('disappear');
+                      let appear2 = document.getElementById('appear2');
+                      appear2.classList.remove('disappear');
+              }
+          },
+          error: function(exception) {
+              alert("數據載入失敗: " + exception.status);
+          }
+      });
+            }
+        </script>
+        <script>
+            function LogOut(){
+                $.ajax({            
+          method: "POST",
+          url: "../php/memLogin/LogOut.php",
+          data:{},            
+          dataType: "text",
+          success: function (response) {
+                let appear1 = document.getElementById('appear1');
+                appear1.classList.add('disappear');
+                let appear2 = document.getElementById('appear2');
+                appear2.classList.add('disappear');
+          },
+          error: function(exception) {
+              alert("數據載入失敗: " + exception.status);
+          }
+      });
+            }
+        </script>
 </body>
 </html>
