@@ -4,7 +4,8 @@ var ball1 = document.getElementById('ball1');
 var ball2 = document.getElementById('ball2');
 var ball3 = document.getElementById('ball3');
 var ball4 = document.getElementById('ball4');
-var ballList = [ball1, ball2, ball3, ball4];
+var ball5 = document.getElementById('ball5');
+var ballList = [ball1, ball2, ball3, ball4, ball5];
 var ballNum = 10;//扭蛋機球數
 var awardList = [];//扭蛋機球的陣列
 var timer;//計時器
@@ -12,10 +13,11 @@ var award = document.getElementById('awardBall');
 var message = document.getElementById('message');
 let point = document.getElementById('point');
 let mask = document.getElementById('pintooMask');
+let gachaScreen = document.getElementById('gachaScreen');
 
 function init() {//初始化
     for (let i = 0; i < ballNum; i++) {//隨機生成各色小球
-        let index = Math.floor(4 * Math.random());
+        let index = Math.floor(5 * Math.random());
         awardList[i] = new Ball(index, ballList[index]);//新建小球對象
     }
     window.clearInterval(timer);//計時器歸零
@@ -29,8 +31,8 @@ function init() {//初始化
 
 function Ball(index, img) {
     this.r = 30;//扭蛋池半徑
-    this.x = this.rand(canvas.width - this.r * 4);//小球X軸座標
-    this.y = this.rand(canvas.height - this.r * 4);//小球Y軸座標
+    this.x = this.rand(canvas.width - this.r * 5);//小球X軸座標
+    this.y = this.rand(canvas.height - this.r * 5);//小球Y軸座標
     this.color = index;//小球顏色
     this.img = img;//小球素材
     // console.log(this.x);
@@ -94,6 +96,9 @@ function play() {
             case 3:
                 award.setAttribute('class', 'dropBall4');
                 break;
+            case 4:
+                award.setAttribute('class', 'dropBall5');
+                break;
         }
         setTimeout(function () {//扭蛋成功提示
             award.setAttribute('class', '');
@@ -112,8 +117,11 @@ function play() {
                 case 3:
                     color = "red";
                     break;
+                case 4:
+                    color = "blue";
+                    break;
             }
-            //由資料庫中扭顏色
+            //由資料庫中扭顏色-->角色
             $.ajax({
                 method: "POST",
                 url: "../php/Gacha/callBall.php",
@@ -123,7 +131,11 @@ function play() {
                 dataType: "json",
                 success: function (response) {
                     // console.log(response);
-                    var roleStr = response[0][1];
+                    let roleStr = response[0][1];
+                    let roleImg = response[0][3];
+                    let img = document.getElementById('gachaRoleImg');
+                    let str = `../image/ROLE/${roleImg}`
+                    img.attributes['src'].value = str;
                     message.innerText = roleStr;
                     setAmount(roleStr);
                 },
@@ -161,6 +173,7 @@ function play() {
                     success: function (response) {
                         let roleID = response;
                         setGacha(roleID);
+                        gachaSceen();
                     },
                     error: function (exception) {
                         alert("發生錯誤: " + exception.status);
@@ -196,11 +209,14 @@ function play() {
                     },
                     dataType: "text",
                     success: function (response) {
+                        callPoints();
                     },
                     error: function (exception) {
                         alert("發生錯誤: " + exception.status);
                     }
                 });
+            }
+            function callPoints() {
                 $.ajax({
                     method: "POST",
                     url: "../php/Gacha/callPoints.php",
@@ -224,10 +240,12 @@ function play() {
             mask.classList.add('none');
             let element = document.getElementById('pintooBlk');
 
+
             function scrollToTop() {
                 element.scrollIntoView(false);
             }
             scrollToTop();
+            gachaScreen.classList.add('none');
 
         }, 1100);
     }

@@ -5,17 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>扭蛋趣</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="../js/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
 
 </head>
 
 <body>
+    <!-- 扭蛋彈窗 -->
+    <div class="gachascreen none" id="gachaScreen">
+        <div class="blackScreen"></div>
+        <section class="screen">
+            <div class="ball">
+                <img src="../image/gachaScreen/pokemon.png">
+            </div>
+            <div class="pokemonTop">
+                <img src="../image/gachaScreen/Pokemontop.png">
+            </div>
+            <div class="pokemonBottom">
+                <img src="../image/gachaScreen/Pokemonbottom.png">
+            </div>
+            <div class="supRole">
+                <img src="" id="gachaRoleImg">
+            </div>
+            <div class="surprise">
+                <img src="../image/gachaScreen/surprise.png">
+            </div>
+        </section>
+    </div>
     @@include('./header.html')
     <!-- @@include('./header.html') -->
     <p class="breadcrumb">首頁>角色抽取</p>
@@ -107,6 +129,7 @@
                 <img src="../image/gachaGame/Pokemon.png" id="ball2" class="gachaImgSrc">
                 <img src="../image/gachaGame/Pokemon.png" id="ball3" class="gachaImgSrc">
                 <img src="../image/gachaGame/Pokemon.png" id="ball4" class="gachaImgSrc">
+                <img src="../image/gachaGame/Pokemon.png" id="ball5" class="gachaImgSrc">
             </div>
             <div class="GaChaInfo col-6">
                 <h1>扭蛋介紹</h1>
@@ -437,7 +460,6 @@
             </div>
         </div>
     </section>
-
     @@include('./footer.html')
 </body>
 
@@ -452,15 +474,25 @@
 <script src="../js/gacha/roleInfoChart.js"></script>
 <script src="../js/gacha/rolePop.js"></script>
 <script src="../js/gacha/pagination.js"></script>
+<script src="../js/gacha/gachaScreen.js"></script>
 <!-- <script src="../js/gacha/perChart.js"></script> -->
 <script>
     window.onload = function () {
         function resize() {
             let p1 = new Ping();
-            p1.init("#ul", 3);
+            p1.init("#ul", 3, "role9.png");
         }
         resize();
         window.addEventListener('resize', resize, false);
+        callPoints();
+    }
+    // function changePintooImg() {
+    //     let liArr = document.getElementById('ul').childNodes;
+    //     for (i = 0; i < liArr.length; i++) {
+    //         liArr[i].style.background = 'url(../image/ROLE/role9.png)';
+    //     }
+    // }
+    function callPoints() {
         $.ajax({
             method: "POST",
             url: "../php/Gacha/callPoints.php",
@@ -482,7 +514,6 @@
             }
         });
     }
-
     function chartApi() {
         let chart = document.getElementById('firstChart').getContext('2d');
 
