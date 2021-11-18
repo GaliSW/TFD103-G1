@@ -81,7 +81,7 @@
                         <a href="../html/collection.html"><i class="fab fa-gratipay fa-2x"></i></a>
                         <div class="show">收藏</div>
                     </botton>
-                    <botton type="button" class="button">
+                    <botton type="button" class="button" onclick="memberCheck()">
                         <a href="#"><i class="fas fa-user-circle fa-2x"></i></a>
                         <div class="show">會員</div>
                     </botton>
@@ -140,7 +140,7 @@
                         <img src="../image/index/car05.png">
                     </div>
                 </div>
-    
+
                 <div class="imgLine">
                     <div class="raceTrack track1">
                         <img src="../image/index/racetrack01.jpg">
@@ -156,7 +156,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="content">
                 <div class="rcbig">
                     <img src="../image/index/rc.png">
@@ -173,13 +173,13 @@
                 <div class="pointLogin" data-aos="zoom-in" data-aos-duration="2000">
                     <img src="../image/index/dialogbox.png">
                     <a href="../html/login.html">
-                    <p>別猶豫了～</p>
-                        點我註冊登入吧 
+                        <p>別猶豫了～</p>
+                        點我註冊登入吧
                         <i class="fas fa-hand-point-left"></i>
                     </a>
                 </div>
             </div>
-    
+
             <!-- 介紹 -->
             <div class="h2Games">
                 <img src="../image/index/strtxtbg.png" alt="">
@@ -223,7 +223,7 @@
                 <li></li>
                 <li></li> -->
             </ul>
-            
+
             <div class="effect">
                 <img src="../image/index/bg3.png">
             </div>
@@ -263,7 +263,7 @@
             <a href="../html/Gacha.html">
                 <div class="btn" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1">扭蛋GO</div>
             </a>
-            
+
             <!-- 解鎖拼圖title -->
             <div class="picGames">
                 <img src="../image/index/strtxtbg.png">
@@ -284,7 +284,7 @@
                     </div>
                 </div>
             </div>
-            
+
 
             <!-- 角色交換 -->
             <div class="change">
@@ -303,7 +303,7 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <div class="otherRole">
                         <p>對方角色</p>
                         <div class="rolesL">
@@ -354,47 +354,67 @@
         <script src="../js/index/index.js"></script>
         <script src="../js/header/header.js"></script>
         <script>
-            window.onload = function status(){
-                $.ajax({            
-          method: "POST",
-          url: "../php/LoginCheck.php",
-          data:{},            
-          dataType: "text",
-          success: function (response) {
-              if(response == ""){
-                alert('請先登入，將前往登入頁'); 
-                // location.href = 'login.html';                
-              }else{
-                let appear1 = document.getElementById('appear1');
-                      appear1.classList.remove('disappear');
-                      let appear2 = document.getElementById('appear2');
-                      appear2.classList.remove('disappear');
-              }
-          },
-          error: function(exception) {
-              alert("數據載入失敗: " + exception.status);
-          }
-      });
+            window.onload = function status() {
+                $.ajax({
+                    method: "POST",
+                    url: "../php/LoginCheck.php",
+                    data: {},
+                    dataType: "text",
+                    success: function (response) {
+                        if (response == "") {
+                            let LogOut = document.getElementById('LogOut');
+                            LogOut.classList.add('disappear');
+                        } else {
+                            let appear1 = document.getElementById('appear1');
+                            appear1.classList.remove('disappear');
+                            let appear2 = document.getElementById('appear2');
+                            appear2.classList.remove('disappear');
+                        }
+                    },
+                    error: function (exception) {
+                        alert("數據載入失敗: " + exception.status);
+                    }
+                });
             }
         </script>
         <script>
-            function LogOut(){
-                $.ajax({            
-          method: "POST",
-          url: "../php/memLogin/LogOut.php",
-          data:{},            
-          dataType: "text",
-          success: function (response) {
-                let appear1 = document.getElementById('appear1');
-                appear1.classList.add('disappear');
-                let appear2 = document.getElementById('appear2');
-                appear2.classList.add('disappear');
-          },
-          error: function(exception) {
-              alert("數據載入失敗: " + exception.status);
-          }
-      });
+            function LogOut() {
+                $.ajax({
+                    method: "POST",
+                    url: "../php/memLogin/LogOut.php",
+                    data: {},
+                    dataType: "text",
+                    success: function (response) {
+                        let appear1 = document.getElementById('appear1');
+                        appear1.classList.add('disappear');
+                        let appear2 = document.getElementById('appear2');
+                        appear2.classList.add('disappear');
+                    },
+                    error: function (exception) {
+                        alert("數據載入失敗: " + exception.status);
+                    }
+                });
+            }
+            function memberCheck() {
+                $.ajax({
+                    method: "POST",
+                    url: "../php/LoginCheck.php",
+                    data: {},
+                    dataType: "text",
+                    success: function (response) {
+                        if (response == "") {
+                            location.href = 'login.html';
+                        } else {
+                            location.href = 'member.html';
+                        }
+                    },
+                    error: function (exception) {
+                        alert("數據載入失敗: " + exception.status);
+                    }
+                });
             }
         </script>
+
 </body>
+
 </html>

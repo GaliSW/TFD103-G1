@@ -1,5 +1,4 @@
 <?php
     include "../Manager.php";
-   
-  clearSession();
+    clearSession();
 ?>

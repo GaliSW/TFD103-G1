@@ -21,8 +21,14 @@ let vm = new Vue({
     //綁定點擊事件
     methods: {
         clickShow() {
-            console.log('123');
-            this.isShow = true
+            let total = (point.value).replace("$", "");;
+            if (total < 300) {
+                alert("您的點數不足，可至儲姪專區進行儲值喔～");
+                return false;
+            } else {
+                this.isShow = true
+            }
+
         },
         close() {
             // console.log('321');

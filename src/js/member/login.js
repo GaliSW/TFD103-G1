@@ -19,46 +19,42 @@ let vm = new Vue({
     },
 
     loginCheck: function (event) {
-        event.preventDefault();
-        // vm.$data.loginError = true;
-        let loginBtn = document.querySelector('.btn_login');
-        loginBtn.addEventListener('click', () => {
-            let mgUser = document.getElementById('userId').value;
-            let mgPassword = document.getElementById('password').value;
-            user = mgUser; //填入的user
-            pass = mgPassword; //填入的密碼
-            // console.log(user, pass);
-            login(user, pass);
-        })
-        function login(user, pass) {
-            $.ajax({
-                method: "POST",
-                url: "../php/memLogin/login.php",
-                data: {
-                    Name: user,
-                    Pass: pass
-                },
-                dataType: "text",
-                success: function (response) {
-                    if (response == 1) {
-                        // headerStatus();
-                    //   alert('ok');
-                      let appear1 = document.getElementById('appear1');
-                    //   console.log(appear1);
-                      appear1.classList.remove('disappear');
-                      let appear2 = document.getElementById('appear2');
-                      appear2.classList.remove('disappear');
-                      window.location.href='http://localhost/TFD103_g1/src/html/index.html';//正確登入後頁面跳轉至 
-                    } else {
-                        // alert('有誤')
-                        vm.$data.loginError= true;
-                    }
-                },
-                error: function (exception) {
-                    alert("發生錯誤: " + exception.status);
-                }
-            });
-        };
+      event.preventDefault();
+      // vm.$data.loginError = true;
+      let loginBtn = document.querySelector('.btn_login');
+      loginBtn.addEventListener('click', () => {
+        let mgUser = document.getElementById('userId').value;
+        let mgPassword = document.getElementById('password').value;
+        user = mgUser; //填入的user
+        pass = mgPassword; //填入的密碼
+        // console.log(user, pass);
+        login(user, pass);
+      })
+      function login(user, pass) {
+        $.ajax({
+          method: "POST",
+          url: "../php/memLogin/login.php",
+          data: {
+            Name: user,
+            Pass: pass
+          },
+          dataType: "text",
+          success: function (response) {
+            if (response == 1) {
+              let appear1 = document.getElementById('appear1');
+              appear1.classList.remove('disappear');
+              let appear2 = document.getElementById('appear2');
+              appear2.classList.remove('disappear');
+              window.location.href = 'http://localhost/TFD103-G1/src/html/index.html';//正確登入後頁面跳轉至 
+            } else {
+              vm.$data.loginError = true;
+            }
+          },
+          error: function (exception) {
+            alert("發生錯誤: " + exception.status);
+          }
+        });
+      };
     },
     forgetCheck: function (event) {
       event.preventDefault();
