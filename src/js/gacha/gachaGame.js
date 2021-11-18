@@ -113,6 +113,7 @@ function play() {
                     color = "red";
                     break;
             }
+            //由資料庫中扭顏色
             $.ajax({
                 method: "POST",
                 url: "../php/Gacha/callBall.php",
@@ -121,19 +122,20 @@ function play() {
                 },
                 dataType: "json",
                 success: function (response) {
-                    console.log(response);
+                    // console.log(response);
                     var roleStr = response[0][1];
                     message.innerText = roleStr;
-                    setGacha(roleStr);
+                    setAmount(roleStr);
                 },
                 error: function (exception) {
                     alert("發生錯誤: " + exception.status);
                 }
             });
-            function setGacha(roleStr) {
+            //將角色Amount -> 0
+            function setAmount(roleStr) {
                 $.ajax({
                     method: "POST",
-                    url: "../php/Gacha/setGacha.php",
+                    url: "../php/Gacha/setAmount.php",
                     data: {
                         roleStr: roleStr,
                     },
@@ -146,8 +148,9 @@ function play() {
                     }
                 });
             }
+            //撈出角色ID
             function findRoleId(roleStr) {
-                console.log(roleStr);
+                // console.log(roleStr);
                 $.ajax({
                     method: "POST",
                     url: "../php/Gacha/findRoleId.php",
@@ -156,14 +159,68 @@ function play() {
                     },
                     dataType: "text",
                     success: function (response) {
-                        findRoleId();
+                        let roleID = response;
+                        setGacha(roleID);
                     },
                     error: function (exception) {
                         alert("發生錯誤: " + exception.status);
                     }
                 });
             }
-            point.value -= 300;
+            //建立 Gacha 資料
+            function setGacha(roleID) {
+                // console.log(roleID);
+                $.ajax({
+                    method: "POST",
+                    url: "../php/Gacha/setGacha.php",
+                    data: {
+                        roleID: roleID,
+                    },
+                    dataType: "text",
+                    success: function (response) {
+                        let member = response;
+                        dePoints(member);
+                    },
+                    error: function (exception) {
+                        alert("發生錯誤: " + exception.status);
+                    }
+                });
+            }
+            //扣除會員點數
+            function dePoints(member) {
+                $.ajax({
+                    method: "POST",
+                    url: "../php/Gacha/dePoints.php",
+                    data: {
+                        member: member,
+                    },
+                    dataType: "text",
+                    success: function (response) {
+                    },
+                    error: function (exception) {
+                        alert("發生錯誤: " + exception.status);
+                    }
+                });
+                $.ajax({
+                    method: "POST",
+                    url: "../php/Gacha/callPoints.php",
+                    data: {},
+                    dataType: "text",
+                    success: function (response) {
+                        let p = response;
+                        if (response != "false") {
+                            if (response = "") {
+                                point.value = "0";
+                            } else {
+                                point.value = "$" + p;
+                            }
+                        }
+                    },
+                    error: function (exception) {
+                        alert("數據載入失敗: " + exception.status);
+                    }
+                });
+            }
             mask.classList.add('none');
             let element = document.getElementById('pintooBlk');
 

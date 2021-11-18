@@ -4,6 +4,11 @@
     //回傳session檢查結果
     // echo getSessionB();
     include "./memLogin/getsession.php";
+    
     getMemberName();
-    echo $_SESSION["Name"];
+    if(isset($_SESSION["Name"])){
+        echo "true";
+    }else{
+        echo "";
+    }
 ?>
