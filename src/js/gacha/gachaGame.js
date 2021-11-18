@@ -97,21 +97,130 @@ function play() {
         }
         setTimeout(function () {//扭蛋成功提示
             award.setAttribute('class', '');
+            let color = null;
             switch (r.color) {
+
                 case 0:
-                    message.innerText = 'PURPLE BALL！';
+                    color = "purple";
                     break;
                 case 1:
-                    message.innerText = 'GREEN BALL！';
+                    color = "green";
                     break;
                 case 2:
-                    message.innerText = 'YELLOW BALL！';
+                    color = "yellow";
                     break;
                 case 3:
-                    message.innerText = 'RED BALL！';
+                    color = "red";
                     break;
             }
-            point.value -= 300;
+            //由資料庫中扭顏色
+            $.ajax({
+                method: "POST",
+                url: "../php/Gacha/callBall.php",
+                data: {
+                    Color: color,
+                },
+                dataType: "json",
+                success: function (response) {
+                    // console.log(response);
+                    var roleStr = response[0][1];
+                    message.innerText = roleStr;
+                    setAmount(roleStr);
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+            //將角色Amount -> 0
+            function setAmount(roleStr) {
+                $.ajax({
+                    method: "POST",
+                    url: "../php/Gacha/setAmount.php",
+                    data: {
+                        roleStr: roleStr,
+                    },
+                    dataType: "text",
+                    success: function (response) {
+                        findRoleId(roleStr);
+                    },
+                    error: function (exception) {
+                        alert("發生錯誤: " + exception.status);
+                    }
+                });
+            }
+            //撈出角色ID
+            function findRoleId(roleStr) {
+                // console.log(roleStr);
+                $.ajax({
+                    method: "POST",
+                    url: "../php/Gacha/findRoleId.php",
+                    data: {
+                        roleStr: roleStr,
+                    },
+                    dataType: "text",
+                    success: function (response) {
+                        let roleID = response;
+                        setGacha(roleID);
+                    },
+                    error: function (exception) {
+                        alert("發生錯誤: " + exception.status);
+                    }
+                });
+            }
+            //建立 Gacha 資料
+            function setGacha(roleID) {
+                // console.log(roleID);
+                $.ajax({
+                    method: "POST",
+                    url: "../php/Gacha/setGacha.php",
+                    data: {
+                        roleID: roleID,
+                    },
+                    dataType: "text",
+                    success: function (response) {
+                        let member = response;
+                        dePoints(member);
+                    },
+                    error: function (exception) {
+                        alert("發生錯誤: " + exception.status);
+                    }
+                });
+            }
+            //扣除會員點數
+            function dePoints(member) {
+                $.ajax({
+                    method: "POST",
+                    url: "../php/Gacha/dePoints.php",
+                    data: {
+                        member: member,
+                    },
+                    dataType: "text",
+                    success: function (response) {
+                    },
+                    error: function (exception) {
+                        alert("發生錯誤: " + exception.status);
+                    }
+                });
+                $.ajax({
+                    method: "POST",
+                    url: "../php/Gacha/callPoints.php",
+                    data: {},
+                    dataType: "text",
+                    success: function (response) {
+                        let p = response;
+                        if (response != "false") {
+                            if (response = "") {
+                                point.value = "0";
+                            } else {
+                                point.value = "$" + p;
+                            }
+                        }
+                    },
+                    error: function (exception) {
+                        alert("數據載入失敗: " + exception.status);
+                    }
+                });
+            }
             mask.classList.add('none');
             let element = document.getElementById('pintooBlk');
 

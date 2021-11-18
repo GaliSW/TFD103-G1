@@ -23,8 +23,7 @@
             <h1>怪哩怪汽管理後台</h1>
         </div>
         <div class="logOut">
-            <button onclick="clearSession()"><a href="ManagerLogin.html">帳號登出<i
-                        class="fas fa-sign-out-alt"></i></a></button>
+            <button onclick="clearSession()">帳號登出<i class="fas fa-sign-out-alt"></i></button>
         </div>
     </header>
     <div class="mgContainer" id="manager">
@@ -355,11 +354,6 @@
             data() {
                 roleID = null;
             },
-            methods: {
-                r() {
-                    console.log(roleID);
-                }
-            },
         })
 
         // 公告管理
@@ -410,7 +404,7 @@
             `,
             methods: {
                 filter() {
-                    alert();
+                    // alert();
                     let filter = document.getElementById('pointFilter').value;
                     let userName = document.getElementById('memberPointsTitle').childNodes[0].innerText;
                     console.log(userName);
