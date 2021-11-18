@@ -10165,24 +10165,72 @@ top: 5px; */
   transition: all .3s ease;
 }
 
-.gachascreen .screen {
+.gachascreen * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  margin: 0 auto;
+}
+
+.gachascreen .blackScreen {
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
   height: 100vh;
+  position: fixed;
+}
+
+.gachascreen .screen {
+  max-width: 1400px;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
 }
 
 .gachascreen .screen .ball {
-  width: 200px;
-  height: 200px;
-  margin-top: 20%;
-}
-
-.gachascreen .screen .PokemonTop {
+  position: absolute;
   width: 200px;
   height: 200px;
 }
 
-.gachascreen .screen .PokemonBottom {
-  width: 200px;
-  height: 200px;
+.gachascreen .screen .pokemonTop {
+  width: 320px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  left: 38%;
+  z-index: 1;
+  opacity: 0;
+}
+
+.gachascreen .screen .pokemonBottom {
+  width: 320px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  left: 38%;
+  opacity: 0;
+}
+
+.gachascreen .screen .supRole {
+  width: 400px;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.gachascreen .screen .surprise {
+  width: 850px;
+  position: absolute;
+  top: -10%;
+  left: 20%;
+  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */

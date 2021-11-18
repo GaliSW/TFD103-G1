@@ -167,24 +167,24 @@
     <script>
         window.onload = function status(){
             $.ajax({            
-          method: "POST",
-          url: "../php/LoginCheck.php",
-          data:{},            
-          dataType: "text",
-          success: function (response) {
-              if(response == ""){
-                alert('請先登入，將前往登入頁'); 
-                // location.href = 'login.html';                
-              }else{
-                // alert('登入成功');
-                console.log(response); 
-                // location.href = 'member.html'; 
-              }
-          },
-          error: function(exception) {
-              alert("數據載入失敗: " + exception.status);
-          }
-      });
+                method: "POST",
+                url: "../php/LoginCheck.php",
+                data:{},            
+                dataType: "text",
+                success: function (response) {
+                    if(response == ""){
+                        alert('請先登入，將前往登入頁'); 
+                        // location.href = 'login.html';                
+                    }else{
+                        // alert('登入成功');
+                        console.log(response); 
+                        // location.href = 'member.html'; 
+                    }
+                },
+                error: function(exception) {
+                    alert("數據載入失敗: " + exception.status);
+                }
+            });
         }
     </script>
 
