@@ -8661,7 +8661,7 @@ main.signup .main_contain div._on {
 }
 
 .allBlock1 {
-  background-image: url("../dist/images/trade/background.png");
+  background-image: url("../src/image/trade/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 0px 0px;
@@ -8676,6 +8676,7 @@ main.signup .main_contain div._on {
 }
 
 .allBlock1 .roleRanksection .rankBloCk {
+  border: 1px solid orange;
   width: 900px;
   margin: 0 auto;
   display: flex;
@@ -8894,6 +8895,13 @@ main.signup .main_contain div._on {
   overflow: auto;
 }
 
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .roleUpPop .popUpBox {
+    position: static;
+    transform: translateX(0%);
+  }
+}
+
 .roleUpPop .popUpBox .popContent2 {
   text-align: center;
   color: #60cd90;
@@ -8923,6 +8931,7 @@ main.signup .main_contain div._on {
 
 .roleUpPop .popUpBox .input {
   display: flex;
+  border: 1px solid red;
   align-items: flex-start;
   display: -moz-flex;
   width: 90%;
@@ -8936,24 +8945,91 @@ main.signup .main_contain div._on {
   flex: 1;
   overflow-y: auto;
   height: 360px;
-  text-align: left;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock {
-  padding-left: 15px;
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .roleUpPop .popUpBox .input .chooseRoleBlockk {
+    flex: 0.6;
+  }
 }
 
-.roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock h3 {
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .roleUpPop .popUpBox .input .chooseRoleBlockk {
+    flex: 0.6;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 577.98px) {
+  .roleUpPop .popUpBox .input .chooseRoleBlockk {
+    height: 250px;
+  }
+}
+
+.roleUpPop .popUpBox .input .chooseRoleBlockk h3 {
   margin-bottom: 10px;
   text-align: center;
 }
 
-.roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock img {
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .roleUpPop .popUpBox .input .chooseRoleBlockk h3 {
+    font-size: 16px;
+  }
+}
+
+.roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock {
+  border: 1px solid orchid;
   text-align: left;
+  width: 250px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) and (max-width: 1140px) {
+  .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock {
+    width: 120px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock {
+    width: 120px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock {
+    width: 60px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 577.98px) {
+  .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock img {
+  border: 1px solid red;
+  width: 100px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock img {
+    width: 80px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock img {
+    width: 60px;
+  }
 }
 
 .roleUpPop .popUpBox .input .showImgBlock {
-  margin-top: 20px;
+  border: 1px solid blue;
+  margin: 20px;
   flex: 1;
 }
 
@@ -8977,8 +9053,23 @@ main.signup .main_contain div._on {
   text-align: left;
 }
 
+@media (max-width: 1106px) {
+  .roleUpPop .popUpBox .input .informationBlock .pricee span {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
 .roleUpPop .popUpBox .input .informationBlock .openChange {
   text-align: left;
+  border: 1px solid yellowgreen;
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .roleUpPop .popUpBox .input .informationBlock .openChange #openChange span {
+    display: block;
+    margin-bottom: 10px;
+  }
 }
 
 .roleUpPop .popUpBox .input .informationBlock .aBtnBlock {
@@ -9050,10 +9141,164 @@ main.signup .main_contain div._on {
   font-size: 32px;
 }
 
+.roleUpPop .popContent3 .manageListOut {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid blue;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex.first {
+  padding: 0;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex {
+  display: flex;
+  border: 1px solid #10c5b1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex p {
+  font-size: 24px;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .leftBlock {
+  width: 100px;
+  flex-shrink: 0;
+  border: 1px solid gold;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .leftBlock .imgBlockRole {
+  font-size: 0;
+  margin-left: 20px;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock {
+  width: 400px;
+  border: 1px solid green;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo.firstTitle p {
+  font-size: 28px;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+@media (min-width: 768px) and (max-width: 1017px) {
+  .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo {
+    display: block;
+    border: 1px solid red;
+  }
+  .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo p {
+    margin: 0 auto;
+  }
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo .roleNamee {
+  width: 150px;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo .rolePrice {
+  width: 100px;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo .roleNumber {
+  width: 150px;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock {
+  border: 1px solid purple;
+  width: 250px;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock {
+  display: flex;
+  text-align: center;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock .downBt {
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  border: 3px solid #10c5b1;
+  color: #10c5b1;
+  background-color: #0e3461;
+  width: 100px;
+  height: 35px;
+  border-radius: 3px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock .downBt:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 0px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock .upBt {
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  border: 3px solid #10c5b1;
+  color: #10c5b1;
+  background-color: #0e3461;
+  width: 100px;
+  height: 35px;
+  border-radius: 3px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock .upBt:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 0px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock .deleteBt {
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  border: 3px solid #10c5b1;
+  color: #10c5b1;
+  background-color: #0e3461;
+  width: 100px;
+  height: 35px;
+  border-radius: 3px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock .deleteBt:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 0px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
 .roleUpPop .popContent3 .manageList {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.roleUpPop .popContent3 .manageList .itemFlex.first {
+  padding: 0;
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex {
@@ -9071,11 +9316,22 @@ main.signup .main_contain div._on {
 .roleUpPop .popContent3 .manageList .itemFlex .leftBlock {
   width: 100px;
   flex-shrink: 0;
+  border: 2px solid yellow;
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .leftBlock .imgBlockRole {
+  border: 2px solid red;
   font-size: 0;
   margin-left: 20px;
+}
+
+.roleUpPop .popContent3 .manageList .itemFlex .middleBlock {
+  width: 400px;
+  border: 2px solid green;
+}
+
+.roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo.firstTitle p {
+  font-size: 28px;
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo {
@@ -9084,8 +9340,31 @@ main.signup .main_contain div._on {
   color: #fff;
 }
 
+@media (min-width: 768px) and (max-width: 1017px) {
+  .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo {
+    display: block;
+    border: 1px solid red;
+  }
+  .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo p {
+    margin: 0 auto;
+  }
+}
+
+.roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo .roleNamee {
+  width: 150px;
+}
+
 .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo .rolePrice {
-  margin: 0 50px;
+  width: 100px;
+}
+
+.roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo .roleNumber {
+  width: 150px;
+}
+
+.roleUpPop .popContent3 .manageList .itemFlex .rightBlock {
+  border: 2px solid black;
+  width: 250px;
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .rightBlock .btnBlock {
