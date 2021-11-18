@@ -1470,7 +1470,7 @@ main.deposit div.container div#app button {
 }
 
 main.deposit div.container div#app button div.point {
-  background-image: url(../dist/images/deposit/point.jpg);
+  background-image: url(../src/image/deposit/point.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -7296,7 +7296,7 @@ main.points_list div.content div.contain_bar {
   main.points_list div.content div.contain_bar .method {
     line-height: 30px;
     height: 30px;
-    width: 25%;
+    width: 30%;
     font-size: 16px;
   }
 }
@@ -7332,7 +7332,7 @@ main.points_list div.content div.contain_list hr {
   main.points_list div.content .price,
   main.points_list div.content .my_role,
   main.points_list div.content .method {
-    width: 25%;
+    width: 30%;
   }
   main.points_list div.content .block {
     display: none;
@@ -7780,7 +7780,7 @@ main.member_info section.maskLayer div.popUpBox div.contain div.back div.circle 
   }
 }
 
-main.member_info section.maskLayer div.popUpBox div.contain div.btn_area {
+main.member_info section.maskLayer div.popUpBox div.contain form.btn_area {
   width: 300px;
   margin-left: 100px;
   display: -webkit-box;
@@ -7796,7 +7796,7 @@ main.member_info section.maskLayer div.popUpBox div.contain div.btn_area {
   max-width: 95%;
 }
 
-main.member_info section.maskLayer div.popUpBox div.contain div.btn_area button {
+main.member_info section.maskLayer div.popUpBox div.contain form.btn_area button {
   color: #60cd90;
   width: 300px;
   padding: 10px;
@@ -7808,7 +7808,7 @@ main.member_info section.maskLayer div.popUpBox div.contain div.btn_area button 
   margin: 0 auto;
 }
 
-main.member_info section.maskLayer div.popUpBox div.contain div.btn_area button:hover {
+main.member_info section.maskLayer div.popUpBox div.contain form.btn_area button:hover {
   color: #0e3461;
   width: 300px;
   padding: 10px;
@@ -7819,11 +7819,11 @@ main.member_info section.maskLayer div.popUpBox div.contain div.btn_area button:
   max-width: 100%;
 }
 
-main.member_info section.maskLayer div.popUpBox div.contain div.btn_area button.input_btn {
+main.member_info section.maskLayer div.popUpBox div.contain form.btn_area button.input_btn {
   margin-bottom: 20px;
 }
 
-main.member_info section.maskLayer div.popUpBox div.contain div.btn_area input {
+main.member_info section.maskLayer div.popUpBox div.contain form.btn_area input {
   position: absolute;
   top: 0;
   left: 0;
@@ -7833,13 +7833,13 @@ main.member_info section.maskLayer div.popUpBox div.contain div.btn_area input {
 }
 
 @media (max-width: 991.98px) {
-  main.member_info section.maskLayer div.popUpBox div.contain div.btn_area {
+  main.member_info section.maskLayer div.popUpBox div.contain form.btn_area {
     margin-left: 10px;
   }
 }
 
 @media (max-width: 767.98px) {
-  main.member_info section.maskLayer div.popUpBox div.contain div.btn_area {
+  main.member_info section.maskLayer div.popUpBox div.contain form.btn_area {
     margin: 0 auto;
     margin-top: 20px;
   }
@@ -7849,7 +7849,7 @@ main.member_info section.maskLayer div.popUpBox div.contain div.btn_area input {
   main.member_info section.maskLayer div.popUpBox div.contain {
     width: 100%;
   }
-  main.member_info section.maskLayer div.popUpBox div.btn_area {
+  main.member_info section.maskLayer div.popUpBox form.btn_area {
     margin-left: 50px;
   }
 }

@@ -111,19 +111,19 @@
                                 <div class="imgShow">
                                     <div class="back">
                                         <div class="circle">
-                                            <img id="userImage">
+                                            <img id="userImage" :src="image">
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="btn_area">
+                                <form class="btn_area" method="post" action="../php/member/update_img.php" enctype="multipart/form-data">
                                     <button class="input_btn">
                                         +上傳照片
-                                        <input type="file" @change="fileChange">
+                                        <input type="file" @change="fileChange" name="file">
                                     </button>
 
-                                    <button>儲存</button>
-                                </div>
+                                    <button type="submit" @click=clickSubmit()>儲存</button>
+                                </form>
                             </div>
 
                         </div>

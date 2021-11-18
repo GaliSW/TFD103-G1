@@ -36,12 +36,12 @@
                 `
               <div class="contain_list">
                             <span class="apply_date col-3">${row.DEALDATE}</span>
-                            <span class="my_role col-2">
+                            <span class="my_role col-4">
                                 ${srcName}
                             </span>
-                            <span class="method col-3">${row.CHANGE_POINT}</span>
-                            <span class="price col-2">${row.BALANCE}</span>
-                            <span class="block col-2"></span>
+                            <span class="method col-4">${row.CHANGE_POINT}</span>
+                           
+                            <span class="block col-1"></span>
                         </div>                 
                 <span><hr></span>
                                 `

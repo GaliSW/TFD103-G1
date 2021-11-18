@@ -1,3 +1,24 @@
+function showInfo() {
+  $.ajax({
+    url: "../php/member/memberInfo.php",
+    data: {},
+    dataType: "json",
+    success: function (response) {
+      $("#account").html("");
+      $("#userImg").attr("src", "");
+      vm.$data.image = "";
+      $.each(response, function (index, row) {
+        $("#account").html(row.USERNAME);
+        $("#userImg").attr("src", "../image/member/" + row.USER_IMG);
+        vm.$data.image = "../image/member/" + row.USER_IMG;
+      });
+    },
+    error: function (exception) {
+      alert("發生錯誤: " + exception.status);
+    },
+  });
+}
+
 let vm = new Vue({
   el: "#app",
   data: {
@@ -6,6 +27,7 @@ let vm = new Vue({
     newPassword: "",
     twicePassword: "",
     pop: false,
+    image: "",
   },
   methods: {
     fileChange(e) {
@@ -16,24 +38,22 @@ let vm = new Vue({
     },
     loadImage(e) {
       this.image = readFile.result;
-      // this.image = e.target.result;
     },
     clickPop() {
+      showInfo();
       vm.$data.pop = true;
     },
     clickClose() {
       vm.$data.pop = false;
+      this.image = "";
     },
-    // showPwdError: function (event) {
-      
-    // },
-    // alertPwd(){
-      
-    // }
+    clickSubmit(){
+      showInfo();
+    }
   },
 });
 
-function showPwdError(){
+function showPwdError() {
   // e.preventDefault();
   let passwordRegular = /^[a-zA-Z0-9]*$/;
   if (
@@ -44,9 +64,9 @@ function showPwdError(){
   } else {
     alert("請勿輸入特殊符號");
   }
-};
+}
 
-function alertPwd(){
+function alertPwd() {
   if (vm.$data.newPassword == vm.$data.twicePassword) {
     $.ajax({
       method: "POST",
@@ -68,29 +88,6 @@ function alertPwd(){
   } else {
     alert("兩次密碼不同");
   }
-};
-
-function showInfo() {
-  $.ajax({
-    url: "../php/member/memberInfo.php",
-    data: {},
-    dataType: "json",
-    success: function (response) {
-      $("#account").html("");
-      $("#userImg").attr("src", "");
-      $("#userImage").attr("src", "");
-      $.each(response, function (index, row) {
-        $("#account").html(row.USERNAME);
-        $("#userImg").attr("src", '../image/ROLE/' + row.USER_IMG);
-        $("#userImage").attr("src", "../image/ROLE/" + row.USER_IMG);
-        })
-      },
-    error: function (exception) {
-      alert("發生錯誤: " + exception.status);
-    },
-  });
 }
-      
-        
-    
+
 window.onload = showInfo();

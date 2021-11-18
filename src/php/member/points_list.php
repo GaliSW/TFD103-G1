@@ -5,10 +5,11 @@
 
 //建立SQL語法
 
+
+
 if ($Filters == "t3") {
-       $sql = "-- set @BALANCE := 0;
+       $sql = "
               select
-              -- (@BALANCE := @BALANCE + CHANGE_POINT) AS BALANCE,
               POINTS_ID,
               CHANGE_POINT,
               FK_USERNAME,
@@ -21,9 +22,8 @@ if ($Filters == "t3") {
               ";     
 } else if ($Filters == "t6") {
        $sql =
-       "-- set @BALANCE := 0;
+       "
               select
-              -- (@BALANCE := @BALANCE + CHANGE_POINT) AS BALANCE,
               POINTS_ID,
               CHANGE_POINT,
               FK_USERNAME,
@@ -36,9 +36,8 @@ if ($Filters == "t3") {
               ";      
 } else if ($Filters == "t9") {
        $sql =
-              "-- set @BALANCE := 0;
+              "
               select
-              -- (@BALANCE := @BALANCE + CHANGE_POINT) AS BALANCE,
               POINTS_ID,
               CHANGE_POINT,
               FK_USERNAME,
@@ -51,9 +50,8 @@ if ($Filters == "t3") {
               ";       
 } else if ($Filters == "t12"){
        $sql =
-              "-- set @BALANCE := 0;
+              "
               select
-              -- (@BALANCE := @BALANCE + CHANGE_POINT) AS BALANCE,
               POINTS_ID,
               CHANGE_POINT,
               FK_USERNAME,

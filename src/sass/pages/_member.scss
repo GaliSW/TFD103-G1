@@ -942,7 +942,7 @@ main.points_list {
                 .method {
                     line-height: 30px;
                     height: 30px;
-                    width: 25%;
+                    width: 30%;
                     font-size: 16px;
                 }
 
@@ -983,7 +983,7 @@ main.points_list {
             .price,
             .my_role,
             .method {
-                width: 25%;
+                width: 30%;
             }
 
             .block {
@@ -1387,7 +1387,7 @@ main.member_info {
                     }
                 }
 
-                div.btn_area {
+                form.btn_area {
                     width: 300px;
                     margin-left: 100px;
                     display: flex;
@@ -1423,13 +1423,13 @@ main.member_info {
                 }
 
                 @media (max-width: 991.98px) {
-                    div.btn_area {
+                    form.btn_area {
                         margin-left: 10px;
                     }
                 }
 
                 @media (max-width: 767.98px) {
-                    div.btn_area {
+                    form.btn_area {
                         margin: 0 auto;
                         margin-top: 20px;
                     }
@@ -1441,7 +1441,7 @@ main.member_info {
                     width: 100%;
                 }
 
-                div.btn_area {
+                form.btn_area {
                     margin-left: 50px;
                 }
             }
