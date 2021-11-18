@@ -1,31 +1,38 @@
-.gachascreen{
-    *{
+.gachascreen {
+    position: fixed;
+    z-index: 999;
+
+    * {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
         @include center;
     }
-    .blackScreen{
+
+    .blackScreen {
         background-color: rgba(0, 0, 0, 0.5);
         // z-index: -1;
         width: 100vw;
         height: 100vh;
         position: fixed;
     }
-    .screen{
+
+    .screen {
         // @include border;
         max-width: 1400px;
         width: 100vw;
         height: 100vh;
         position: relative;
         overflow-y: hidden;
-        .ball{
+
+        .ball {
             // @include border;
             position: absolute;
             width: 200px;
             height: 200px;
         }
-        .pokemonTop{
+
+        .pokemonTop {
             // @include border;
             width: 320px;
             transform: rotate(270deg);
@@ -36,7 +43,8 @@
             z-index: 1;
             opacity: 0;
         }
-        .pokemonBottom{
+
+        .pokemonBottom {
             // @include border;
             width: 320px;
             transform: rotate(270deg);
@@ -46,7 +54,8 @@
             left: 38%;
             opacity: 0;
         }
-        .supRole{
+
+        .supRole {
             // @include border;
             // @include center;
             width: 400px;
@@ -56,7 +65,8 @@
             opacity: 0;
             z-index: 1;
         }
-        .surprise{
+
+        .surprise {
             // @include border;
             width: 850px;
             position: absolute;

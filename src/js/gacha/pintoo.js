@@ -17,7 +17,7 @@ function Ping() {
     this.zIndex = 2;
     this.arr = [];
 }
-Ping.prototype.init = function (id, num) {
+Ping.prototype.init = function (id, num, img) {
     this.oUl = document.querySelector(id);
     this.oUl.innerHTML = this.pics(num);
     this.aLi = this.oUl.querySelectorAll("li");
@@ -25,9 +25,8 @@ Ping.prototype.init = function (id, num) {
     this.len = this.aLi.length;
     this.oLi = this.aLi[this.len - 1];//最後一個li
     this.num = num;
-
     this.oLi.className = "active";
-    this.local();
+    this.local(img);
     this.click();
     this.keycode();
 }
@@ -153,7 +152,7 @@ Ping.prototype.click = function () {
 }
 
 //定位
-Ping.prototype.local = function () {
+Ping.prototype.local = function (img) {
     let arr1 = [];
     let arrA = [];
     for (let i = 0; i < this.len; i++) {
@@ -194,6 +193,7 @@ Ping.prototype.local = function () {
     }
     arr1 = arr2;
     let windowWidth = screen.width;
+    // changePintooImg(img);
     if (windowWidth < 575.98) {
         for (let i = 0; i < this.len; i++) {
             this.aLi[i].style.position = "absolute";
@@ -208,7 +208,10 @@ Ping.prototype.local = function () {
             // console.log('1');
         }
     } else {
-
+        let liArr = document.getElementById('ul').childNodes;
+        for (i = 0; i < liArr.length; i++) {
+            liArr[i].style.background = `url(../image/ROLE/${img})`;
+        }
         for (let i = 0; i < this.len; i++) {
             this.aLi[i].style.position = "absolute";
             this.aLi[i].style.left = arr1[i][0] + "px";
