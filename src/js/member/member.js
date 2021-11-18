@@ -8,7 +8,9 @@ let vm = new Vue({
     buyCancel: false,
     saleCheck: false,
     saleReject: false,
-    thisId : ""
+    thisId : "",
+    thisBuy:"",
+    thisSale:""
   },
 
   methods: {
@@ -101,6 +103,7 @@ function deleted(clickId) {
 //我是買方
 function displayBuy() {
   $.ajax({
+    method:"POST",
     url: "../php/member/apply_buy.php",
     data: {},
     dataType: "json",
@@ -185,12 +188,14 @@ window,onload = displayBuy();
 
 
 // 賣家確認交易
-function clickSaleCheck(clickId) {
+function clickSaleCheck(clickId , clickBuy , clickSale) {
   vm.$data.pop = true;
   vm.$data.buyCancel = false;
   vm.$data.saleCheck = true;
   vm.$data.saleReject = false;
   vm.$data.thisId = clickId;
+  vm.$data.thisBuy = clickBuy;
+  vm.$data.thisSale = clickSale;
 }
 function saleConfirm(){
   vm.$data.pop = false;
@@ -199,6 +204,8 @@ function saleConfirm(){
     url: "../php/member/apply_sale_confirm.php",
     data: {
       Name: vm.$data.thisId,
+      Buy: vm.$data.thisBuy,
+      Sale: vm.$data.thisSale,
     },
     dataType: "text",
     success: function (response) {
@@ -263,6 +270,7 @@ function displaySale() {
       $("#result_sale_off").html("");
       //更新html內容(透過jQuery跑迴圈取值)
       $.each(response, function (index, row) {
+
         if (row.CONFIRM == 0 && row.AMOUNT == 1) {
           $("#result_sale").append(
             `
@@ -274,7 +282,7 @@ function displaySale() {
                       </div>
                       <span class="trade_status col-1">等待確認</span>
                       <div class="trade_button col-3">
-                          <button class="confirm" onclick=clickSaleCheck(${row.BYCHECK_ID})>確認交易</button>
+                          <button class="confirm" onclick=clickSaleCheck("${row.BYCHECK_ID}","${row.FK_USERNAME_BUY}","${row.FK_USERNAME}")>確認交易</button>
                           <button class="reject" onclick="clickSaleReject(${row.BYCHECK_ID})">拒絕交易</button>
                       </div>
                   </div>    
@@ -302,6 +310,8 @@ function displaySale() {
                                 `
           );
         }
+
+
       });
     },
     error: function (exception) {

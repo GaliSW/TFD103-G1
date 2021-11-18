@@ -77,9 +77,9 @@
                                 <button class="edit_btn" :class="{'black_btn': btn_on }"
                                     >編輯密碼:</button>
                                 <form class="edit_password " :class="{'bookmark': edit_on }">
-                                    <input type="text" name="pwd" v-model="newPassword" placeholder="請輸入新密碼">
+                                    <input type="password" name="pwd" v-model="newPassword" placeholder="請輸入新密碼">
                                     <br>
-                                    <input type="text" placeholder="請確認新密碼" v-model="twicePassword">
+                                    <input type="password" placeholder="請確認新密碼" v-model="twicePassword">
                                     <br>
                                     <input class="button" type="button" onclick="showPwdError()" value="確認">
                                 </form>

@@ -1,14 +1,16 @@
 <?php
-// $Name = $_POST[""];
+
 $password = $_POST["password"];
 include("../connection.php");
+include "../Manager.php";
+$Name = getSession();
 
 //---------------------------------------------------
 
 //建立SQL
 $sql = "update MEMBER 
 	set PASSWORD = ?
-    where USERNAME =  'LILLAN123'";
+    where USERNAME =  '$Name'";
 
 //執行
 $statement = $pdo->prepare($sql);

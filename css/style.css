@@ -2213,7 +2213,6 @@ body {
   0% {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
-<<<<<<< HEAD
   }
   50% {
     -webkit-transform: scale(1.5);
@@ -2241,35 +2240,6 @@ body {
   }
   100% {
     -webkit-transform: translateY(100px);
-=======
-  }
-  50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  51% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  100% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-}
-
-@-webkit-keyframes drop {
-  0% {
-    -webkit-transform: scale(0.7);
-  }
-  50% {
-    -webkit-transform: scale(1);
-  }
-  51% {
-    -webkit-transform: translateY(0px);
-  }
-  100% {
-    -webkit-transform: translateY(100px);
->>>>>>> dev
   }
 }
 
@@ -9719,7 +9689,8 @@ main.signup .main_contain div._on {
 @media (min-width: 375px) and (max-width: 413.98px) {
   .roleUpPop .popUpBox {
     position: static;
-    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
 
@@ -9755,20 +9726,10 @@ main.signup .main_contain div._on {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-=======
-<<<<<<< HEAD
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-=======
   border: 1px solid red;
-  align-items: flex-start;
->>>>>>> MARK
->>>>>>> dev
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   display: -moz-flex;
   width: 90%;
   margin: 0 auto;
@@ -9789,13 +9750,17 @@ main.signup .main_contain div._on {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .roleUpPop .popUpBox .input .chooseRoleBlockk {
-    flex: 0.6;
+    -webkit-box-flex: 0.6;
+        -ms-flex: 0.6;
+            flex: 0.6;
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
   .roleUpPop .popUpBox .input .chooseRoleBlockk {
-    flex: 0.6;
+    -webkit-box-flex: 0.6;
+        -ms-flex: 0.6;
+            flex: 0.6;
   }
 }
 
@@ -9843,8 +9808,13 @@ main.signup .main_contain div._on {
 
 @media (min-width: 375px) and (max-width: 577.98px) {
   .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -9866,19 +9836,11 @@ main.signup .main_contain div._on {
 }
 
 .roleUpPop .popUpBox .input .showImgBlock {
-<<<<<<< HEAD
-  margin-top: 20px;
+  border: 1px solid blue;
+  margin: 20px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-<<<<<<< HEAD
-=======
-=======
-  border: 1px solid blue;
-  margin: 20px;
-  flex: 1;
->>>>>>> MARK
->>>>>>> dev
 }
 
 .roleUpPop .popUpBox .input .informationBlock {
@@ -9998,17 +9960,13 @@ main.signup .main_contain div._on {
   border: 1px solid blue;
 }
 
-<<<<<<< HEAD
-.roleUpPop .popContent3 .manageList .itemFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-=======
 .roleUpPop .popContent3 .manageListOut .itemFlex.first {
   padding: 0;
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex {
->>>>>>> dev
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border: 1px solid #10c5b1;
   -webkit-box-align: center;
@@ -10026,7 +9984,8 @@ main.signup .main_contain div._on {
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .leftBlock {
   width: 100px;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   border: 1px solid gold;
 }
 
@@ -10045,8 +10004,12 @@ main.signup .main_contain div._on {
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
 }
 
@@ -10078,6 +10041,8 @@ main.signup .main_contain div._on {
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
 }
@@ -10181,18 +10146,9 @@ main.signup .main_contain div._on {
 
 .roleUpPop .popContent3 .manageList .itemFlex .leftBlock {
   width: 100px;
-<<<<<<< HEAD
   -ms-flex-negative: 0;
       flex-shrink: 0;
-=======
-<<<<<<< HEAD
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-=======
-  flex-shrink: 0;
   border: 2px solid yellow;
->>>>>>> MARK
->>>>>>> dev
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .leftBlock .imgBlockRole {

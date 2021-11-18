@@ -31,12 +31,12 @@
 
         $sql = " update member 
                 set USER_IMG = ?
-                where USERNAME = 'LILLAN123'";
+                where USERNAME = ?";
 
         //執行
         $statement = $pdo->prepare($sql);
         $statement->bindValue(1, $Name . $fileName);
-        // $statement->bindValue(2, $Name);
+        $statement->bindValue(2, $Name);
         
         $statement->execute();
         echo "<script>location.href='../../html/member_info.html';</script>";
