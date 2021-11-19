@@ -13,7 +13,7 @@ var award = document.getElementById('awardBall');
 var message = document.getElementById('message');
 let point = document.getElementById('point');
 let mask = document.getElementById('pintooMask');
-let gachaScreen = document.getElementById('gachaScreen');
+let gachaScreenBlk = document.getElementById('gachaScreen');
 
 function init() {//初始化
     for (let i = 0; i < ballNum; i++) {//隨機生成各色小球
@@ -130,14 +130,20 @@ function play() {
                 },
                 dataType: "json",
                 success: function (response) {
-                    // console.log(response);
-                    let roleStr = response[0][1];
-                    let roleImg = response[0][3];
-                    let img = document.getElementById('gachaRoleImg');
-                    let str = `../image/ROLE/${roleImg}`
-                    img.attributes['src'].value = str;
-                    message.innerText = roleStr;
-                    setAmount(roleStr);
+                    console.log(response);
+                    if (response == "") {
+                        // console.log('a');
+                        play();
+                    } else {
+                        let roleStr = response[0][1];
+                        let roleImg = response[0][3];
+                        let img = document.getElementById('gachaRoleImg');
+                        let str = `../image/ROLE/${roleImg}`
+                        img.attributes['src'].value = str;
+                        message.innerText = roleStr;
+                        setAmount(roleStr);
+                    }
+
                 },
                 error: function (exception) {
                     alert("發生錯誤: " + exception.status);
@@ -169,11 +175,14 @@ function play() {
                     data: {
                         roleStr: roleStr,
                     },
-                    dataType: "text",
+                    dataType: "json",
                     success: function (response) {
-                        let roleID = response;
-                        setGacha(roleID);
-                        gachaSceen();
+                        $.each(response, function (index, row) {
+                            let roleID = row.ROLE_ID;
+                            let img = row.ROLE_IMG;
+                            setGacha(roleID);
+                            gachaScreen(img);
+                        });
                     },
                     error: function (exception) {
                         alert("發生錯誤: " + exception.status);
@@ -228,7 +237,7 @@ function play() {
                             if (response = "") {
                                 point.value = "0";
                             } else {
-                                point.value = "$" + p;
+                                point.value = p + "E";
                             }
                         }
                     },
@@ -245,7 +254,7 @@ function play() {
                 element.scrollIntoView(false);
             }
             scrollToTop();
-            gachaScreen.classList.add('none');
+            gachaScreenBlk.classList.add('none');
 
         }, 1100);
     }

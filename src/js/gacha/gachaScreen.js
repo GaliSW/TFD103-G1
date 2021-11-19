@@ -1,10 +1,10 @@
-function gachaSceen() {
-    let gachaScreen = document.getElementById('gachaScreen');
-    gachaScreen.classList.remove('none');
+function gachaScreen(img) {
+    let gachaScreenBlk = document.getElementById('gachaScreen');
+    gachaScreenBlk.classList.remove('none');
     setTimeout(function () {
-        gachaScreen.classList.add('none');
+        gachaScreenBlk.classList.add('none');
         let p1 = new Ping();
-        p1.init("#ul", 3, "role2.png");
+        p1.init("#ul", 3, img);
     }, 5000);
     gsap.fromTo('.ball', {
         x: -100,
