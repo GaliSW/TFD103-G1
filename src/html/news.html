@@ -17,20 +17,35 @@
     <script src="https://kit.fontawesome.com/8988cd1b75.js" crossorigin="anonymous"></script>
 
     <script>
-        function doQuery(str) {
+        window.onload = function doQuery() {
             $.ajax({
                 method: "POST",
-                url: "API.php",
+                url: "../src/php/news/callnews.php",
                 data: {
-                    Name: str
                 },
+
                 dataType: "json",
                 success: function (response) {
-                    //更新html內容前先清空原有資料
-                    $("#result").html("");
+                    let block_1 = document.getElementById("block_1");
+                    alert("");
                     //更新html內容(透過jQuery跑迴圈取值)
                     $.each(response, function (index, row) {
-                        $("#result").append(row.Name + "/" + row.PWD + "/" + row.CreateDate + "<br/>");
+                        let str = ` 
+                        <div class="sort">
+                            <div class="wrap">
+                                    <img src="../image/intro/${row.AIMG}" class="sec" alt="slide4">
+                                <div class="name">
+                                    <a href="./news_in.html">
+                                        <p class="p">${row.ADATE}</p>
+                                        <h3>${row.TITLE}</h3>
+                                        <p class="p">${row.CONTENT}</p>
+                                        <p>閱讀更多></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    block_1.insertAdjacentHTML("beforeend " , str);
                     });
                 },
                 error: function (exception) {
@@ -72,6 +87,7 @@
 
         <div id="content">
             <div id="block_1">
+
                 <div class="search-form">
                     <div style="display:flex;" class="searsear">
                         <h3>文章搜尋：</h3>
@@ -85,8 +101,9 @@
                     <button id="bbbn" class="btn old bbbn2">按時間排序由新至舊</button>
                 </div>
 
+                
 
-                <div class="sort" ls_date="2001">
+                <!-- <div class="sort" ls_date="2001">
                     <div class="wrap" data-index="2022年10月25號《怪哩怪汽》:版本更新1.1.1下面來看看版本更新中1.1.值得注意的變動。閱讀更多>">
                         <a href="./news_in.html">
                             <img src="../image/intro/4.jpg" class="sec" alt="slide4">
@@ -252,7 +269,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
