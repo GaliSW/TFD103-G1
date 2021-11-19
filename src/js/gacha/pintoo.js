@@ -16,6 +16,7 @@ function Ping() {
     this.num = 0;
     this.zIndex = 2;
     this.arr = [];
+    this.roleImg = null;
 }
 Ping.prototype.init = function (id, num, img) {
     this.oUl = document.querySelector(id);
@@ -26,6 +27,7 @@ Ping.prototype.init = function (id, num, img) {
     this.oLi = this.aLi[this.len - 1];//最後一個li
     this.num = num;
     this.oLi.className = "active";
+    this.roleImg = img;
     this.local(img);
     this.click();
     this.keycode();
@@ -56,11 +58,22 @@ Ping.prototype.done = function () {
         }
     }
     if (n == this.len) {
-        console.log('done');
+        // console.log('done');
         this.num++;
         let This = this;
         //!do another function
-        alert('恭喜完成');
+        $.ajax({
+            method: "POST",
+            url: "../php/Gacha/InsertMemberImg.php",
+            data: {
+                roleImg: this.roleImg,
+            },
+            dataType: "json",
+            success: function (response) {
+            }
+        })
+        document.getElementById('bonusBlk').classList.remove('none');
+        callPoints();
         // setTimeout(() => {
         //     This.init("ul", This.num)
         // }, 1000);
@@ -177,24 +190,29 @@ Ping.prototype.local = function (img) {
         arr3.push(arr2[i][2]);
     }
     for (let i = 0; i < this.len; i++) {
-        let b = arr3[i];
-        for (let j = 0; j < this.len; j++) {
-            let c = arr3[j]
-            if (b > c) {
+        var bp = arr3[i];
+        for (let j = i; j < this.len; j++) {
+            var cp = arr3[j]
+            if (bp > cp) {
                 a += 1;
+                // console.log(a, bp, cp);
             }
         }
     }
-    // console.log(arr3, a);
+    // console.log(a);
     if (a % 2 == 0) {
         // console.log('go');
     } else {
-        this.ding();
+        this.local(img);
+        return false;
     }
     arr1 = arr2;
     let windowWidth = screen.width;
-    // changePintooImg(img);
     if (windowWidth < 575.98) {
+        let liArr = document.getElementById('ul').childNodes;
+        for (i = 0; i < liArr.length - 1; i++) {
+            liArr[i].style.background = `url(../image/ROLE/${img})`;
+        }
         for (let i = 0; i < this.len; i++) {
             this.aLi[i].style.position = "absolute";
             this.aLi[i].style.left = arr1[i][0] + "px";
@@ -209,7 +227,7 @@ Ping.prototype.local = function (img) {
         }
     } else {
         let liArr = document.getElementById('ul').childNodes;
-        for (i = 0; i < liArr.length; i++) {
+        for (i = 0; i < liArr.length - 1; i++) {
             liArr[i].style.background = `url(../image/ROLE/${img})`;
         }
         for (let i = 0; i < this.len; i++) {

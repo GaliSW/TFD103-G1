@@ -2048,6 +2048,14 @@ body {
   margin-left: 50%;
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
+  color: #0e3461;
+  font-weight: 800;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .gachaBg #message {
+    margin-top: 90px;
+  }
 }
 
 .gachaBg .lotterybg {
@@ -2059,6 +2067,12 @@ body {
   margin-left: 50%;
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .gachaBg .lotterybg {
+    margin-top: 140px;
+  }
 }
 
 .gachaBg .lotterybg #myCanvas {
@@ -2577,6 +2591,110 @@ body {
   text-align: center;
 }
 
+.gachaHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.gachaHintmaskLayer .bonusPopUpBox {
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.gachaHintmaskLayer .bonusCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.gachaHintmaskLayer .gachaPopContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .gachaHintmaskLayer .gachaPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .gachaHintmaskLayer .gachaPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .gachaHintmaskLayer .gachaPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .gachaHintmaskLayer .gachaPopContent {
+    font-size: 12px;
+  }
+}
+
+.gachaHintmaskLayer .bonusConfirmBlk {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.gachaHintmaskLayer .bonusConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.gachaHintmaskLayer .bonusConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
 .miniGameTitle {
   margin: 0 auto;
   text-align: center;
@@ -2708,14 +2826,17 @@ body {
 }
 
 .myRoleBlk {
+  margin: 0 auto;
   margin-top: 80px;
   margin-bottom: 30px;
+  max-width: 1200px;
 }
 
 .myRoleBlk .myRoleContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -2732,6 +2853,10 @@ body {
           justify-content: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+=======
+  flex-wrap: wrap;
+  width: 100%;
+>>>>>>> dev
 }
 
 .myRoleBlk .pagination {
@@ -2739,6 +2864,7 @@ body {
 }
 
 .rolesBlk {
+<<<<<<< HEAD
   margin: 0 auto;
   margin-top: 0px;
   max-width: 1200px;
@@ -2767,17 +2893,43 @@ body {
   border: 1px solid #60cd90;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+=======
+  margin-bottom: 30px;
+  display: flex;
+  width: 25%;
+  justify-content: center;
+}
+
+@media (max-width: 767.98px) {
+  .rolesBlk {
+    width: 33%;
+  }
+}
+
+@media (max-width: 413.98px) {
+  .rolesBlk {
+    width: 50%;
+  }
+}
+
+.rolesBlk .container {
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  transition: all 1s ease;
+  border: 1px solid #60cd90;
+>>>>>>> dev
+}
+
+.rolesBlk .container:hover {
+  box-shadow: rgba(16, 197, 177, 0.8) 0px 19px 38px, rgba(16, 197, 177, 0.2) 0px 15px 12px;
 }
 
 @media (max-width: 1200px) {
   .rolesBlk .container {
-    width: 200px;
-  }
-}
-
-@media (max-width: 800px) {
-  .rolesBlk .container {
-    width: 150px;
+    width: 80%;
   }
 }
 
@@ -2794,6 +2946,12 @@ body {
 .rolesBlk .container:hover span {
   -webkit-transform: translateY(35%);
           transform: translateY(35%);
+}
+
+@media (max-width: 413.98px) {
+  .rolesBlk .container:hover span {
+    transform: translateY(10%);
+  }
 }
 
 .rolesBlk .container:hover .content h2 {
@@ -2821,13 +2979,25 @@ body {
 
 @media (max-width: 1200px) {
   .rolesBlk .inner {
-    height: 266px;
+    height: 300px;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 992px) {
+  .rolesBlk .inner {
+    height: 250px;
+  }
+}
+
+@media (max-width: 575.98px) {
   .rolesBlk .inner {
     height: 200px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .rolesBlk .inner {
+    height: 150px;
   }
 }
 
@@ -2918,12 +3088,38 @@ body {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   width: 100%;
-  height: 33%;
+  height: 27%;
+}
+
+@media (max-width: 1200px) {
+  .rolesBlk .lower {
+    height: 31%;
+  }
+}
+
+@media (max-width: 992px) {
+  .rolesBlk .lower {
+    height: 33%;
+  }
+}
+
+@media (max-width: 413.98px) {
+  .rolesBlk .lower {
+    height: 47%;
+  }
+}
+
+@media (max-width: 413.98px) {
+  .rolesBlk .lower {
+    height: 44%;
+  }
 }
 
 .rolesBlk .features-list {
   text-align: center;
   list-style: none;
+  margin: 0;
+  padding: 0;
   opacity: 0;
   width: 100%;
   -webkit-transition: all .2s ease;
@@ -2984,6 +3180,14 @@ body {
 @media (max-width: 800px) {
   .rolesBlk .cta {
     font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 414.98px) {
+  .rolesBlk .cta {
+    font-size: 14px;
+    padding: 5px;
   }
 }
 
@@ -9688,8 +9892,7 @@ main.signup .main_contain div._on {
 @media (min-width: 375px) and (max-width: 413.98px) {
   .roleUpPop .popUpBox {
     position: static;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
   }
 }
 
@@ -9726,18 +9929,20 @@ main.signup .main_contain div._on {
   display: -ms-flexbox;
   display: flex;
 <<<<<<< HEAD
+<<<<<<< HEAD
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 =======
 <<<<<<< HEAD
-  border: 1px solid red;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 =======
+>>>>>>> dev
+  border: 1px solid red;
   align-items: flex-start;
+<<<<<<< HEAD
 >>>>>>> Gary
+>>>>>>> dev
+=======
 >>>>>>> dev
   display: -moz-flex;
   width: 90%;
@@ -9759,17 +9964,13 @@ main.signup .main_contain div._on {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .roleUpPop .popUpBox .input .chooseRoleBlockk {
-    -webkit-box-flex: 0.6;
-        -ms-flex: 0.6;
-            flex: 0.6;
+    flex: 0.6;
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
   .roleUpPop .popUpBox .input .chooseRoleBlockk {
-    -webkit-box-flex: 0.6;
-        -ms-flex: 0.6;
-            flex: 0.6;
+    flex: 0.6;
   }
 }
 
@@ -9817,13 +10018,8 @@ main.signup .main_contain div._on {
 
 @media (min-width: 375px) and (max-width: 577.98px) {
   .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
 
@@ -9845,9 +10041,9 @@ main.signup .main_contain div._on {
 }
 
 .roleUpPop .popUpBox .input .showImgBlock {
-<<<<<<< HEAD
   border: 1px solid blue;
   margin: 20px;
+<<<<<<< HEAD
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -9860,6 +10056,9 @@ main.signup .main_contain div._on {
 =======
   flex: 1;
 >>>>>>> Gary
+>>>>>>> dev
+=======
+  flex: 1;
 >>>>>>> dev
 }
 
@@ -9985,16 +10184,10 @@ main.signup .main_contain div._on {
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border: 1px solid #10c5b1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px 0;
 }
 
@@ -10004,8 +10197,7 @@ main.signup .main_contain div._on {
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .leftBlock {
   width: 100px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   border: 1px solid gold;
 }
 
@@ -10024,12 +10216,8 @@ main.signup .main_contain div._on {
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
 }
 
@@ -10061,8 +10249,6 @@ main.signup .main_contain div._on {
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: center;
 }
@@ -10167,6 +10353,7 @@ main.signup .main_contain div._on {
 .roleUpPop .popContent3 .manageList .itemFlex .leftBlock {
   width: 100px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   -ms-flex-negative: 0;
       flex-shrink: 0;
 =======
@@ -10177,6 +10364,10 @@ main.signup .main_contain div._on {
 =======
   flex-shrink: 0;
 >>>>>>> Gary
+>>>>>>> dev
+=======
+  flex-shrink: 0;
+  border: 2px solid yellow;
 >>>>>>> dev
 }
 

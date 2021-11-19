@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <!-- 扭蛋彈窗 -->
+    <!-- 扭蛋動畫 -->
     <div class="gachascreen none" id="gachaScreen">
         <div class="blackScreen"></div>
         <section class="screen">
@@ -150,7 +150,8 @@
                 </div>
                 <h4><i class=" fas fa-coins"></i>&nbsp;每次扭蛋將花費300E幣
                 </h4>
-                <label>點數餘額：</label><input type="text" id="point" value="尚未登入會員" readonly unselectable="on">
+                <label>點數餘額：</label><input type="text" id="point" value="尚未登入會員" readonly unselectable="on"
+                    style="color: rgb(14, 52, 97);">
                 <div class="goBtnBlk">
                     <div id="goBtn">
                         <button class="goBtn" @click="clickShow">扭蛋&nbsp;GO</button>
@@ -186,6 +187,26 @@
             </div>
         </section>
     </section>
+    <!-- 扭蛋成功提示 -->
+    <div id="bonusBlk" class="bonusBlk none">
+        <section class="gachaHintmaskLayer">
+            <div class="bonusPopUpBox">
+                <div onclick="bonusClose()" class="bonusCloseBtn">
+                    x
+                </div>
+                <div class="gachaPopContent">
+                    <p>恭喜獲得50E的扭蛋獎勵
+                        <br>
+                        並且成功獲得角色頭像!!!
+                    </p>
+                </div>
+                <div class="bonusConfirmBlk">
+                    <button class="bonusConfirmBtn" onclick="toMember()">點我查看頭像</button>
+                    <button class="bonusConfirmBtn" onclick="bonusClose()">我知道了</button>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- 我的角色 -->
     <section class="myRoleBlk boxBlur" id="boxTwo">
@@ -196,6 +217,25 @@
                         <div class="content">
 
                             <span><img src="../image/ROLE/role9.png" alt=""></span>
+                            <h2>我是一隻貓</h2>
+                        </div>
+                        <div class="lower">
+                            <div class="features-list">
+                                <h1>ID:xxx</h1>
+                                <br>
+                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cta roleInfo">查看能力值</button>
+                </div>
+            </section>
+            <section class="rolesBlk">
+                <div class="container">
+                    <div class="inner">
+                        <div class="content">
+
+                            <span><img src="../image/gacha/role9.png" alt=""></span>
                             <h2>我是一隻貓</h2>
                         </div>
                         <div class="lower">
@@ -478,20 +518,15 @@
 <!-- <script src="../js/gacha/perChart.js"></script> -->
 <script>
     window.onload = function () {
+        let p1 = new Ping();
+        p1.init("#ul", 3, "role6.png");
         function resize() {
-            let p1 = new Ping();
-            p1.init("#ul", 3, "role9.png");
+
         }
         resize();
         window.addEventListener('resize', resize, false);
         callPoints();
     }
-    // function changePintooImg() {
-    //     let liArr = document.getElementById('ul').childNodes;
-    //     for (i = 0; i < liArr.length; i++) {
-    //         liArr[i].style.background = 'url(../image/ROLE/role9.png)';
-    //     }
-    // }
     function callPoints() {
         $.ajax({
             method: "POST",
@@ -505,7 +540,7 @@
                     if (response = "") {
                         point.value = "0";
                     } else {
-                        point.value = "$" + p;
+                        point.value = p + "E";
                     }
                 }
             },
@@ -573,7 +608,12 @@
         });
 
     }
-
+    function toMember() {
+        location.href = "./member_info.html";
+    };
+    function bonusClose() {
+        document.getElementById('bonusBlk').classList.add('none');
+    }
 </script>
 
 </html>
