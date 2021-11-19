@@ -104,40 +104,28 @@
               <div class="popContent">
                 <h1>角色上架</h1>
                 <div class="input">
-                
-                  
-                    <div class="chooseRoleBlock" id="chooseRole">
-                      <!-- <h3>選擇角色</h3> -->
-              
-                        <!-- <img src="../dist/images/trade/product1.png"  style="width:120px;" id="roleImg1">
-                        <img src="../dist/images/trade/product2.png"  style="width:120px;" id="roleImg2">
-                        <img src="../dist/images/trade/product3.png"  style="width:120px;" id="roleImg3">
-                        <img src="../dist/images/trade/product4.png"  style="width:120px;" id="roleImg4">
-                        <img src="../dist/images/trade/product5.png"  style="width:120px;" id="roleImg5">
-                        <img src="../dist/images/trade/product6.png"  style="width:100px;" id="roleImg6">
-                        <img src="../dist/images/trade/product7.png"  style="width:100px;" id="roleImg7">
-                        <img src="../dist/images/trade/product8.png"  style="width:100px;" id="roleImg8"> -->
-              
-                    </div>
-                  
-                
+                    <div class="chooseRoleBlockk">
+                      <h3>選擇角色</h3>
+                      <div class="chooseRoleBlock" id="chooseRole">
+                        <!-- 小圖 -->
+                      </div>
+                    </div>  
                   <div class="showImgBlock" id="showImgBlock">
-                    <img src="" id="showImg" name="">
+                    <img src="" id="showImg" name="" alt="">
                   </div>
-                
                   <div class="informationBlock" action="" method="post" >
                     <h3 id="roleName"></h3>
                     
-                    <label class="sellerAccountt" id="sellerAccount">賣家帳號: <span id="innerAccount">xxxxxxxxxxxx</span></label>
+                    <label class="sellerAccountt" id="sellerAccount">賣家帳號: <span id="innerAccount"></span></label>
                     
                     <br>
                     
-                    <label class="pricee">販售價格: <input type="text" id="price" placeholder="請輸入價格" name="sellprice"></label>
+                    <label class="pricee"><span>販售價格: </span><input type="text" id="price" placeholder="請輸入價格" name="sellprice"></label>
                     
                     <br>
                       
                     <div class="openChange">
-                        <label id="openChange">開啟交換: 
+                        <label id="openChange"><span>開啟交換:</span> 
                           <input type="radio" name="choice" value="1" checked>
                           開啟
                           <input id="choice" type="radio" name="choice" >
@@ -180,36 +168,38 @@
             <div class="popContent3">
               <h1>角色管理</h1>
               <div class="manageFlex">
-                <ol class="manageList">
-                  
+                <ol class="manageListOut">
                   <li>
-                    <div class="itemFlex">  
+                    <div class="itemFlex first">  
                       <div class="leftBlock">
                         <div class="imgBlockRole">
-                          <img src="../image/trade/product1.png">
+                          <img src="../image/trade/product1.png" style="visibility: hidden">
                         </div>
                       </div>
 
                       <div class="middleBlock">
-                        <div class="detailInfo">
-                          <p class="roleName">綠色怪物</p>
-                          <p class="rolePrice">$250E</p>
-                          <p class="roleNumber">abc153</p>
+                        <div class="detailInfo firstTitle">
+                          <p class="roleNamee one">名稱</p>
+                          <p class="rolePrice one">價錢</p>
+                          <p class="roleNumber one">角色編號</p>
                         </div>
                       </div>
                       
                       <div class="rightBlock">
-                        <div class="btnBlock">
+                        <div class="btnBlock" style="visibility: hidden">
                           <button class="downBt">下架</button>
                           <button class="upBt">重新上架</button>
                           <button class="deleteBt"><i class="fas fa-trash"></i></button>
                         </div>
                       </div>
                     </div>
-                  </li>  
+                  </li>
+                </ol>
+
+                <ol class="manageList" id="manageList">
 
                   <li>
-                    <div class="itemFlex">  
+                    <!-- <div class="itemFlex">  
                       <div class="leftBlock">
                         <div class="imgBlockRole">
                           <img src="../image/trade/product2.png">
@@ -218,7 +208,7 @@
 
                       <div class="middleBlock">
                         <div class="detailInfo">
-                          <p class="roleName">綠色怪物</p>
+                          <p class="roleNamee">綠色怪物</p>
                           <p class="rolePrice">$250E</p>
                           <p class="roleNumber">abc153</p>
                         </div>
@@ -231,60 +221,10 @@
                           <button class="deleteBt"><i class="fas fa-trash"></i></button>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                   </li>
 
-                  <li>
-                    <div class="itemFlex">  
-                      <div class="leftBlock">
-                        <div class="imgBlockRole">
-                          <img src="../image/trade/product3.png">
-                        </div>
-                      </div>
-
-                      <div class="middleBlock">
-                        <div class="detailInfo">
-                          <p class="roleName">綠色怪物</p>
-                          <p class="rolePrice">$250E</p>
-                          <p class="roleNumber">abc153</p>
-                        </div>
-                      </div>
-                      
-                      <div class="rightBlock">
-                        <div class="btnBlock">
-                          <button class="downBt">下架</button>
-                          <button class="upBt">重新上架</button>
-                          <button class="deleteBt"><i class="fas fa-trash"></i></button>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li>
-                    <div class="itemFlex">  
-                      <div class="leftBlock">
-                        <div class="imgBlockRole">
-                          <img src="..image/trade/product4.png">
-                        </div>
-                      </div>
-
-                      <div class="middleBlock">
-                        <div class="detailInfo">
-                          <p class="roleName">綠色怪物</p>
-                          <p class="rolePrice">$250E</p>
-                          <p class="roleNumber">abc153</p>
-                        </div>
-                      </div>
-                      
-                      <div class="rightBlock">
-                        <div class="btnBlock">
-                          <button class="downBt">下架</button>
-                          <button class="upBt">重新上架</button>
-                          <button class="deleteBt"><i class="fas fa-trash"></i></button>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+                  
                 </ol>
 
                 
@@ -602,30 +542,30 @@
 
                             let chooseRole = document.getElementById('chooseRole');
                             chooseRole.innerHTML= "";
-                            chooseRole.insertAdjacentHTML("afterbegin",` <h3>選擇角色</h3>`);
+                            //chooseRole.insertAdjacentHTML("afterbegin",` <h3>選擇角色</h3>`);
                           
                             let innerAccount = document.getElementById('innerAccount');
                             innerAccount.innerHTML= "";
                             
 
                             $.each(response, function (index, row) {
-                                let str = ` <img src="../dist/images/trade/${row.ROLE_IMG}" onclick="chooseImg(this)" style="width:120px;" id="${row.RNAME}" name= "${row.GACHA_ID}">`;
+                                let str = ` <img src="../image/ROLE/${row.ROLE_IMG}" onclick="chooseImg(this)" style="width:120px;" id="${row.RNAME}" name= "${row.FK_GACHA_ID}" alt="${row.STATUS}">`;
                                 chooseRole.insertAdjacentHTML("beforeend",str);
                                 innerAccount.innerHTML= `${row.FK_USERNAME}`;
                                 
                                 
                             })
-                            let chooseRoleChild = document.getElementById("chooseRole").childNodes[3];
+                            let chooseRoleChild = document.getElementById("chooseRole").childNodes[1];
                             let showImg = document.getElementById("showImg");
-                            // console.log(document.getElementById("chooseRole").childNodes);
                             let N = chooseRoleChild.attributes['src'].value;
                             showImg.attributes['src'].value = `${N}`;
                             let roleName = document.getElementById('roleName');
                             let roleId = chooseRoleChild.attributes['id'].value;
-                            let gachaId = chooseRoleChild.attributes['name'].value
+                            let gachaId = chooseRoleChild.attributes['name'].value;
                             roleName.innerText = roleId;
                             showImg.attributes['name'].value = gachaId;
-
+                            let status = chooseRoleChild.attributes['alt'].value;
+                            showImg.attributes['alt'].value = status;
                         },
                         error: function (exception) {
                             alert("數據載入失敗: " + exception.status);
@@ -642,28 +582,38 @@
                 let check = document.querySelector('input[id="choice"]:checked');
                 let checkValue = null;
                 if(check != null){
-                  checkValue = 1;
-                }else{
                   checkValue = 0;
+                }else{
+                  checkValue = 1;
                 }
                 //console.log(checkValue);
                 
                 let username = document.getElementById('innerAccount').innerText;
-                console.log(username);
+                //console.log(username);
                 
                 let price = document.getElementById('price').value;
                 //console.log(price);
                 
                 let gachaId = document.getElementById("showImg").attributes['name'].value;
-                console.log(gachaId);
+                //console.log(gachaId);
                 
-                
-                
+                let status = document.getElementById("showImg").attributes['alt'].value;
+                //console.log(status);
+
+                if(status == 1){
+                  status = 0;
+                }else{
+                  status = 1;
+                }
+
+
                 if (price == "") {
                 alert("填寫販售價格");
                 return false;
                 }
-            
+
+                // 上架功能
+
                   $.ajax({
                     method: "POST",
                         url: "../php/product/upProduct.php",
@@ -672,6 +622,7 @@
                           USERNAME: username,
                           PRICE: price,
                           TRANS: checkValue,
+                          STATUS: status,
                         },
                         dataType: "text",
                         success: function (response) {
@@ -693,13 +644,91 @@
               toThree(){
                 vm.$data.pop = true;
                 vm.$data.three = true;
+
+                $.ajax({
+                    method: "POST",
+                        url: "../php/product/rollManage.php",
+                        data: {
+                          Name:'JERRY',
+                        },
+                        dataType: "json",
+                        success: function (response) {
+
+                            let manageList = document.getElementById('manageList');
+                            manageList.innerHTML= "";
+
+                            $.each(response, function (index, row) {
+                                let liList1 = `<li>
+                                              <div class="itemFlex">  
+                                                <div class="leftBlock">
+                                                  <div class="imgBlockRole">
+                                                    <img src="../image/ROLE/${row.ROLE_IMG}" name= "${row.ISSHOW}" id= "roleImgg">
+                                                  </div>
+                                                </div>
+
+                                                <div class="middleBlock">
+                                                  <div class="detailInfo">
+                                                    <p class="roleNamee">${row.RNAME}</p>
+                                                    <p class="rolePrice">${row.PRICE}</p>
+                                                    <p class="roleNumber" id="roleNumber">${row.FK_GACHA_ID}</p>
+                                                  </div>
+                                                </div>
+                      
+                                                <div class="rightBlock">
+                                                  <div class="btnBlock"  id="changeStatus">
+                                                    <button class="downBt" onclick="down(this)">下架</button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </li>`;
+                                let liList0 = `<li>
+                                              <div class="itemFlex">  
+                                                <div class="leftBlock">
+                                                  <div class="imgBlockRole">
+                                                    <img src="../image/ROLE/${row.ROLE_IMG}" name= "${row.ISSHOW}" id= "roleImgg">
+                                                  </div>
+                                                </div>
+
+                                                <div class="middleBlock">
+                                                  <div class="detailInfo">
+                                                    <p class="roleNamee">${row.RNAME}</p>
+                                                    <p class="rolePrice">${row.PRICE}</p>
+                                                    <p class="roleNumber">${row.FK_GACHA_ID}</p>
+                                                  </div>
+                                                </div>
+                      
+                                                <div class="rightBlock">
+                                                  <div class="btnBlock" id="changeStatus">
+                                                    <button class="upBt">重新上架</button>
+                                                    <button class="deleteBt"><i class="fas fa-trash"></i></button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </li>`;
+                                if(row.ISSHOW == 1){
+                                    manageList.insertAdjacentHTML("beforeend",liList1);
+                                }else{
+                                    manageList.insertAdjacentHTML("beforeend",liList0);
+                                }
+                            })
+
+                            
+
+
+                        },
+                        error: function (exception) {
+                            alert("數據載入失敗: " + exception.status);
+                        }
+                    });
               }
           },
       });
 
     </script>
 
-    <script>
+<!-- 搜尋開關 -->
+  
+  <script>
       const toggleClass  = document.querySelectorAll('[data-toggle-class]');
         if (toggleClass) {
           for (let i = 0; i < toggleClass.length; i += 1) {
@@ -725,19 +754,58 @@
         showImg.attributes['src'].value = `${N}`;
         let roleName = document.getElementById('roleName');
         roleName.innerHTML= item.attributes['id'].value;
-      }
+        let name = item.attributes['name'].value;
+        showImg.attributes['name'].value = name;
+            }
     
     </script>
+
+<!-- 下架功能 -->
+
+    <script>
+        function down(item){
+            //console.log(item);
+            item.classList.add('none');
+            let changeStatus = document.getElementById('changeStatus');
+            let str = `
+            <button class="upBt">重新上架</button>
+            <button class="deleteBt"><i class="fas fa-trash"></i></button>
+            `;
+            changeStatus.innerHTML = str;
+            let gachaID = document.getElementById('roleNumber').innerText;
+            let b = document.getElementById('roleImgg');
+            isShow = b.attributes['name'].value;
+            if(isShow == 1){
+                isShow = 0;
+            }else{
+                isShow = 1;
+            }
+
+
+
+            $.ajax({            
+                method: "POST",
+                url: "../php/product/down.php",
+                data:{
+                    GACHA_ID:gachaID,
+                    ISSHOW:isShow
+                },            
+                dataType: "json",
+                success: function (response) {                
+                                                
+                },
+                error: function(exception) {
+                    alert("數據載入失敗: " + exception.status);
+                }
+            });
+
+        }
+    
+    </script>
+
 
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-

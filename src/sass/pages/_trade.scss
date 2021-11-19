@@ -4,13 +4,12 @@
 
 
 .allBlock1{
-    background-image: url("../dist/images/trade/background.png");
+    background-image: url("../src/image/trade/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 0px 0px;
     margin: 90px 0 0 0;
     padding: 0;
-
 
 
 ///////////////////////////////////////////////////////////////////角色排行
@@ -25,7 +24,7 @@
     }
     
     .rankBloCk{
-        //border: 1px solid orange;
+        border: 1px solid orange;
         width: 900px;
         @include center;
         @include desktop_small{
@@ -244,6 +243,13 @@
         border-radius: 5px;
         overflow: auto;
         
+        @include phone{
+            position: static;
+            transform: translateX(0%);
+        }
+
+
+
         .popContent2{
             text-align: center;
             color: rgba(96, 205, 144, 1);
@@ -273,41 +279,96 @@
 
         .input{
             display: flex;
-            //border: 1px solid red;
+            border: 1px solid red;
             align-items: flex-start;
             display: -webkit-flex;
             display: -moz-flex;
             width: 90%;
             @include center;
+            // @media (max-width:628px){
+            //     display: block;
+            // }
 
             .chooseRoleBlockk{
+                // width:210px;
                 border:3px solid gray;
                 background-color: #fff;
                 padding:10px;
                 flex: 1;
                 overflow-y:auto;
                 height: 360px;
-                text-align: left;
-
-
-                .chooseRoleBlock{
-                    padding-left: 15px;
+                text-align: center;
+                margin: 0 auto;
                     
-                        
-                    h3{
-                        margin-bottom: 10px;
-                        text-align: center;
-                    }
-                    
-                    img{
-                        text-align: left;
+                @include desktop_small{
+                    flex: 0.6;
+                }
+
+                @include pad{
+                    flex: 0.6;
+                }
+
+                @media (min-width:375px) and (max-width:577.98px){
+                    height: 250px;
+                }
+
+                h3{
+                    margin-bottom: 10px;
+                    text-align: center;
+
+                    @include pad{
+                        font-size: 16px;
                     }
                 }
+                
+                .chooseRoleBlock{
+                    border: 1px solid orchid;
+                    text-align: left;
+                    width: 250px;
+                    margin: 0 auto;
+                    
+                    @media (min-width:992px) and (max-width:1140px){
+                        width:120px;
+                    }
+
+                    @include desktop_small{
+                        width:120px;
+                    }
+
+                    @include pad{
+                        width: 60px;
+                    }
+
+                    @media (min-width:375px) and (max-width:577.98px){
+                        display: flex;
+                        flex-direction: row;
+                    }
+
+
+
+
+
+                    img{
+                        border: 1px solid red;
+                        width: 100px;
+                        @include desktop_small{
+                            width: 80px;
+                        }
+
+                        @include pad{
+                            width: 60px;
+                        }
+
+
+
+                    }
+            
+                }    
             }
 
             .showImgBlock{
-                //border: 1px solid blue;
-                margin-top: 20px;
+                border: 1px solid blue;
+                margin: 20px;
                 flex: 1;
             }
 
@@ -329,12 +390,30 @@
 
                 .pricee{
                     display: block;
-                    //margin-bottom: 15px;
                     text-align: left;
+                    span{
+                        @media (max-width:1106px){
+                        display: block;    
+                        margin-bottom: 10px;
+                        }
+                    }
                 }
 
                 .openChange{
                     text-align: left;
+                    border: 1px solid yellowgreen;
+
+                    
+                    #openChange{
+                        span{
+                        @include pad{
+                            display: block;
+                            margin-bottom: 10px;
+                        }
+                        }
+                    }
+
+
                 }
 
                 
@@ -396,13 +475,15 @@
         }
 
 
-        .manageList{
+        .manageListOut{
             margin: 0;
             padding: 0;
             list-style: none;
-            //border: 2px solid rgba(16, 197, 177, 1);
+            border: 1px solid blue;
 
-            
+            .itemFlex.first{
+                padding: 0;
+            }
 
             .itemFlex{
                 display: flex;
@@ -418,6 +499,7 @@
                 .leftBlock{
                     width: 100px;
                     flex-shrink: 0;
+                    border: 1px solid gold;
 
                     .imgBlockRole{
                         font-size: 0;
@@ -427,21 +509,192 @@
 
                 .middleBlock{
 
+                    width: 400px;
+                    border: 1px solid green;
+
+                    .detailInfo.firstTitle{
+                        
+                        p{
+                            font-size: 28px;
+                        }
+                    }
+
                     .detailInfo{
                         display: flex;
                         align-items: center;
                         color: #fff;
 
+                        @media (min-width:768px) and (max-width:1017px){
+                            display: block;
+                            @include border;
+
+                            p{
+                                //@include border;
+                                margin: 0 auto;
+                            }
+
+                        }
+
+                        .roleNamee{
+                            width: 150px;
+                        }
+
                         .rolePrice{
-                            margin: 0 50px;
+                            width: 100px;
+                        }
+
+                        .roleNumber{
+                            width: 150px;
                         }
                     }    
                 }
 
                 .rightBlock{
+
+                    border: 1px solid purple;
+                    width: 250px;
+
                     .btnBlock{
                         display: flex;
                         text-align: center;
+
+                        
+                        .downBt{
+                            text-align: center;
+                            line-height: 30px;
+                            text-decoration: none;
+                            border: 3px solid rgba(16, 197, 177, 1);
+                            color: rgba(16, 197, 177, 1);
+                            background-color: rgba(14, 52, 97, 1);
+                            width: 100px;
+                            height: 35px;
+                            border-radius: 3px;
+                            padding: 0;
+                            @include center;
+                            &:hover {@include btn_on (100px, 0px)}
+                        }
+
+                        .upBt{
+                            text-align: center;
+                            line-height: 30px;
+                            text-decoration: none;
+                            border: 3px solid rgba(16, 197, 177, 1);
+                            color: rgba(16, 197, 177, 1);
+                            background-color: rgba(14, 52, 97, 1);
+                            width: 100px;
+                            height: 35px;
+                            border-radius: 3px;
+                            padding: 0;
+                            @include center;
+                            &:hover {@include btn_on (100px, 0px)}
+                        }
+
+                        .deleteBt{
+                            text-align: center;
+                            line-height: 30px;
+                            text-decoration: none;
+                            border: 3px solid rgba(16, 197, 177, 1);
+                            color: rgba(16, 197, 177, 1);
+                            background-color: rgba(14, 52, 97, 1);
+                            width: 100px;
+                            height: 35px;
+                            border-radius: 3px;
+                            padding: 0;
+                            @include center;
+                            &:hover {@include btn_on (100px, 0px)}
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+
+
+        .manageList{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            //border: 2px solid rgba(16, 197, 177, 1);
+
+            .itemFlex.first{
+                padding: 0;
+            }
+
+            .itemFlex{
+                display: flex;
+                border: 1px solid rgba(16, 197, 177, 1);
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 0;
+
+                p{
+                    font-size: 24px;
+                }
+
+                .leftBlock{
+                    width: 100px;
+                    flex-shrink: 0;
+                    border: 2px solid yellow;
+
+                    .imgBlockRole{
+                        border: 2px solid red;
+                        font-size: 0;
+                        margin-left: 20px;
+                    }
+                }
+
+                .middleBlock{
+
+                    width: 400px;
+                    border: 2px solid green;
+
+                    .detailInfo.firstTitle{
+                        
+                        p{
+                            font-size: 28px;
+                        }
+                    }
+
+                    .detailInfo{
+                        display: flex;
+                        align-items: center;
+                        color: #fff;
+
+                        @media (min-width:768px) and (max-width:1017px){
+                            display: block;
+                            @include border;
+
+                            p{
+                                //@include border;
+                                margin: 0 auto;
+                            }
+
+                        }
+
+                        .roleNamee{
+                            width: 150px;
+                        }
+
+                        .rolePrice{
+                            width: 100px;
+                        }
+
+                        .roleNumber{
+                            width: 150px;
+                        }
+                    }    
+                }
+
+                .rightBlock{
+                    border: 2px solid black;
+                    width: 250px;
+
+                    .btnBlock{
+                        display: flex;
+                        text-align: center;
+
                         
                         .downBt{
                             text-align: center;

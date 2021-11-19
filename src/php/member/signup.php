@@ -11,8 +11,8 @@
         // auth = 1為正常
 
        //建立SQL
-       $sql = "INSERT INTO MEMBER( USERNAME, PASSWORD , EMAIL ,POINTS , USER_IMG , SIGNUP_DATE , AUTH) VALUES  ( ? , ? , ? , 0 , 'r1.jpg' ,  NOW() , 1)";
-        $pdo = getPDO();
+       $sql = "INSERT INTO MEMBER( USERNAME, PASSWORD , EMAIL , USER_IMG , SIGNUP_DATE , AUTH) VALUES  ( ? , ? , ? , 'r1.jpg' ,  NOW() , 1)";
+        
         //執行
         $statement = $pdo->prepare($sql);
 

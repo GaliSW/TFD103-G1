@@ -197,6 +197,12 @@ body {
         -ms-transform: translate(-50%);
         -o-transform: translate(-50%);
         transform: translate(-50%);
+        color: $dark_blue;
+        font-weight: 800;
+
+        @include phone {
+            margin-top: 90px;
+        }
     }
 
     .lotterybg {
@@ -213,6 +219,10 @@ body {
         -ms-transform: translate(-50%);
         -o-transform: translate(-50%);
         transform: translate(-50%);
+
+        @include phone {
+            margin-top: 140px;
+        }
 
         #myCanvas {
             /* border: 1px solid red; */
@@ -585,26 +595,6 @@ body {
     border-radius: 5px;
     z-index: 999;
 
-    // @include desktop_small {
-    //     width: 700px;
-    //     height: 700px;
-    // }
-
-    // @include pad {
-    //     width: 550px;
-    //     height: 550px;
-    // }
-
-    // @include pad_small {
-    //     width: 300px;
-    //     height: 300px;
-    // }
-
-    // @include phone {
-    //     width: 300px;
-    //     height: 300px;
-    // }
-
     .closeBtn1 {
         position: absolute;
         right: 0;
@@ -671,7 +661,93 @@ body {
     }
 }
 
+.gachaHintmaskLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
 
+    .bonusPopUpBox {
+        position: relative;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        background-color: rgba(2, 79, 63, 1);
+        border: 2px solid rgba(16, 197, 177, 1);
+        width: 300px;
+        height: 200px;
+        border-radius: 5px;
+        z-index: 999;
+    }
+
+    .bonusCloseBtn {
+        position: absolute;
+        right: 0;
+        background-color: rgba(16, 197, 177, 1);
+        border-radius: 2px;
+        font-size: 28px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+    }
+
+    .gachaPopContent {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        color: rgba(96, 205, 144, 1);
+        color: $tiffiny_green;
+        font-size: $fontSize;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include desktop_small {
+            font-size: $fontSize;
+        }
+
+        @include pad {
+            font-size: $fontSizeSmall;
+        }
+
+        @include pad_small {
+            font-size: $fontSizeMin;
+        }
+
+        @include phone {
+            font-size: $fontSizeMin;
+        }
+    }
+
+    .bonusConfirmBlk {
+        position: absolute;
+        display: flex;
+        // @include border();
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+
+
+        button {
+            margin: 0 10px;
+            @include btn_blur(100px, 5px);
+            @include border_r(5);
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                @include btn_on(100px, 5px);
+            }
+        }
+    }
+}
 
 
 
@@ -735,7 +811,7 @@ body {
             width: 200px;
             height: 200px;
             background-color: pink;
-            background: url(../src/image/ROLE/role9.png);
+            // background: url(../src/image/ROLE/role9.png);
             /* background-color: pink; */
             float: left;
             list-style: none;
@@ -795,132 +871,20 @@ body {
 
 // ***********myRole 我的角色頁面**********
 .myRoleBlk {
+    @include center;
     margin-top: 80px;
     margin-bottom: 30px;
+    max-width: 1200px;
+    // @include border(1, blue);
 
     .myRoleContent {
         display: flex;
-        justify-content: flex-end;
+        // justify-content: center;
         flex-wrap: wrap;
+        // @include border();
+        width: 100%;
+        // justify-content: center;
     }
-
-    .RoleContent {
-        display: flex;
-        justify-content: flex-end;
-        flex-wrap: wrap;
-    }
-
-    // table {
-    //     background-color: $dark_blue;
-    //     @include center;
-    //     width: 100%;
-    //     max-width: 1200px;
-    //     @include border(3, $light_green);
-    //     padding: 0;
-
-
-
-    //     th {
-    //         color: #fff;
-    //         padding: 20px 0;
-    //         font-size: $fontSizeH2;
-    //         text-align: center;
-    //         border-bottom: 1px dotted #fff;
-
-    //         @media (max-width:991.98px) {
-    //             font-size: $fontSizeH3;
-    //         }
-
-    //         &:nth-child(2),
-    //         &:nth-child(3),
-    //         &:nth-child(4) {
-    //             @media (max-width:991.98px) {
-    //                 display: none;
-    //             }
-    //         }
-    //     }
-
-    //     td {
-    //         color: #fff;
-    //         font-size: $fontSizeH3;
-    //         text-align: center;
-    //         // @include border();
-
-    //         @media (max-width:991.98px) {
-    //             display: flex;
-    //             justify-content: center;
-    //         }
-
-    //         @include desktop_small {
-    //             font-size: $fontSizeH4;
-    //         }
-
-    //         .roleInfo {
-    //             @include btn_on(200px, 10px);
-    //             text-align: center;
-    //             transition: .5s;
-
-    //             &:hover {
-    //                 color: rgba(96, 205, 144, 1);
-    //                 background-color: rgba(14, 52, 97, 1);
-    //                 border: 3px solid rgba(96, 205, 144, 1);
-    //             }
-
-
-    //             @include desktop {
-    //                 display: none;
-    //             }
-
-    //             @include desktop_small {
-    //                 // @include border();
-    //                 display: block;
-    //             }
-
-    //             @include pad {
-    //                 font-size: $fontSize;
-    //                 @include btn_on(150px, 10px);
-    //             }
-
-    //             @include pad_small {
-    //                 font-size: $fontSizeSmall;
-    //                 @include btn_on(150px, 10px);
-    //             }
-
-    //             @include phone {
-    //                 font-size: $fontSizeSmall;
-    //                 @include btn_on(120px, 10px);
-    //             }
-    //         }
-
-    //         &:nth-child(2),
-    //         &:nth-child(3) {
-    //             @media (max-width:991.98px) {
-    //                 display: none;
-    //             }
-    //         }
-    //     }
-
-    //     img {
-    //         width: 250px;
-
-    //         @media (max-width:575.98px) {
-    //             width: 150px;
-    //         }
-    //     }
-
-    //     .chart {
-    //         @include border(2, $dark_green);
-    //         @include border(3, orange);
-    //         @include border_r(10);
-    //         // color: rgba(250, 224, 141, .5);
-    //         background-color: rgba(255, 255, 255, 1);
-    //         width: 300px;
-
-    //         @media (max-width:991.98px) {
-    //             display: none;
-    //         }
-    //     }
-    // }
 
     .pagination {
         margin-top: 50px;
@@ -930,31 +894,39 @@ body {
 
 // ****************roleBlk 角色圖鑑**************** 
 .rolesBlk {
-    // position: relative;
-    // @include border();
-    @include center;
-    margin-top: 0px;
-    max-width: 1200px;
+    margin-bottom: 30px;
+    // margin: 0 30px 30px 30px;
     display: flex;
-    flex-wrap: wrap;
+    width: 25%;
+    justify-content: center;
+
+    @media (max-width:767.98px) {
+        width: 33%;
+    }
+
+    @media (max-width:413.98px) {
+        width: 50%;
+    }
 
     .container {
-        // margin: 0 100px;
-        width: 300px;
+        width: 90%;
         justify-content: center;
         align-items: center;
         display: flex;
         flex-direction: column;
+        transition: all 1s ease;
         @include border(1, $light_green);
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+        &:hover {
+            box-shadow: rgba(16, 197, 177, .8) 0px 19px 38px, rgba(16, 197, 177, .2) 0px 15px 12px;
+            // box-shadow: rgba(16, 197, 177, 0.1) 0px 1px 2px, rgba(16, 197, 177, 0.1) 0px 2px 4px, rgba(16, 197, 177, 0.1) 0px 4px 8px, rgba(16, 197, 177, 0.07) 0px 8px 16px, rgba(16, 197, 177, 0.07) 0px 16px 32px, rgba(16, 197, 177, 0.07) 0px 32px 64px;
+        }
+
 
         @media (max-width:1200px) {
-            width: 200px;
+            width: 80%;
         }
 
-        @media (max-width:800px) {
-            width: 150px;
-        }
     }
 
     .container:hover .lower {
@@ -968,6 +940,10 @@ body {
 
     .container:hover span {
         transform: translateY(35%);
+
+        @media (max-width:413.98px) {
+            transform: translateY(10%);
+        }
     }
 
     .container:hover .content h2 {
@@ -993,11 +969,19 @@ body {
         overflow: hidden;
 
         @media (max-width:1200px) {
-            height: 266px;
+            height: 300px;
         }
 
-        @media (max-width:800px) {
+        @media (max-width:992px) {
+            height: 250px;
+        }
+
+        @media (max-width:575.98px) {
             height: 200px;
+        }
+
+        @media (max-width:575.98px) {
+            height: 150px;
         }
     }
 
@@ -1061,13 +1045,31 @@ body {
         transform: translateY(40%);
         transition: all 1s ease;
         width: 100%;
-        height: 33%;
+        height: 27%;
+
+        @media (max-width:1200px) {
+            height: 31%;
+        }
+
+        @media (max-width:992px) {
+            height: 33%;
+        }
+
+        @media (max-width:413.98px) {
+            height: 47%;
+        }
+
+        @media (max-width:413.98px) {
+            height: 44%;
+        }
     }
 
     .features-list {
         text-align: center;
         // padding: 35px;
         list-style: none;
+        margin: 0;
+        padding: 0;
         opacity: 0;
         width: 100%;
         transition: all .2s ease;
@@ -1114,55 +1116,14 @@ body {
 
         @media (max-width:800px) {
             font-size: $fontSizeSmall;
+            padding: 10px;
+        }
+
+        @media (max-width:414.98px) {
+            font-size: $fontSizeSmall;
+            padding: 5px;
         }
     }
-
-    // div {
-    //     display: flex;
-    //     flex-direction: column;
-    //     margin: 0 0px 30px 0px;
-    //     align-items: center;
-    //     margin-top: 80px;
-
-    //     @include pad_small {
-    //         width: 33%;
-    //     }
-
-    //     @include phone {
-    //         width: 50%;
-    //     }
-    // }
-
-    // img {
-    //     width: 80%;
-    //     @include border(3, $dark_green);
-
-    // }
-
-
-
-    // .roleInfo {
-    //     @include btn_blur(80%, 10px);
-    //     text-align: center;
-    //     transition: .5s;
-    //     margin: 0;
-
-
-    //     @include pad_small {
-    //         font-size: $fontSizeSmall;
-    //     }
-
-    //     @include phone {
-    //         font-size: $fontSizeMin;
-    //         padding: 10px 0px;
-    //     }
-
-    //     &:hover {
-    //         color: rgba(14, 52, 97, 1);
-    //         background-color: rgba(96, 205, 144, 1);
-    //         border: 3px solid rgba(14, 52, 97, 1);
-    //     }
-    // }
 }
 
 // ********** rolePop************
