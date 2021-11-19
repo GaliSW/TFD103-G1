@@ -121,10 +121,11 @@
     justify-content: flex-end;
     #search-input{
         font-size:20px;
-        background-image: url("/dist/images/intro/search.jpg");
+        background: url('../src/image/intro/search.jpg');
         background-repeat: no-repeat;
         background-position: right;
         background-size: 30px;
+        background-color: #fff;
     }
     .search{
         font-size:30px;
