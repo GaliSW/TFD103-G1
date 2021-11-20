@@ -1,4 +1,16 @@
+function visiblePwd(){
+  visible = $("#visible");
+  if (pwd.type === "password") {
+    pwd.type = "text";
+    pwd2.type = "text";
+  } else {
+    pwd.type = "password";
+    pwd2.type = "text";
+  }
+}
+
 function showInfo() {
+  countDeal()
   $.ajax({
     url: "../php/member/memberInfo.php",
     data: {},
@@ -54,6 +66,10 @@ let vm = new Vue({
 });
 
 function showPwdError() {
+  $("#no").removeClass("_on");
+  $("#false").removeClass("_on");
+  $("#diff").removeClass("_on");
+  $("#alert").removeClass("_on");
   // e.preventDefault();
   let passwordRegular = /^[a-zA-Z0-9]*$/;
   if (
@@ -62,7 +78,7 @@ function showPwdError() {
   ) {
     alertPwd();
   } else {
-    alert("請勿輸入特殊符號");
+    $("#no").addClass("_on");
   }
 }
 
@@ -78,16 +94,31 @@ function alertPwd() {
       success: function (response) {
         vm.$data.newPassword = "";
         vm.$data.twicePassword = "";
-        alert("密碼已修改");
+        $("#alert").addClass("_on");
       },
       error: function (exception) {
-        alert("發生錯誤 ");
-        // console.log(exception);
+        $("#false").addClass("_on");
       },
     });
   } else {
-    alert("兩次密碼不同");
+    $("#diff").addClass("_on");
   }
 }
+function countDeal(){
+  $("#countResult").html("");
+  $.ajax({
+    url: "../php/member/count_deal.php",
+    data: {},
+    dataType: "json",
+    success: function (response) {
+      if(response > 0){
+        $("#countResult").append(response);
+        $("#countResult").removeClass("_off");
+      }
+    }
+  });
+};
 
 window.onload = showInfo();
+
+

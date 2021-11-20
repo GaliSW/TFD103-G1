@@ -15,9 +15,12 @@
 
     <main class="deposit">
         <div class="container">
+            <div class="sumPoint col-10">
+                目前點數: <p id="result">0</p> e
+            </div>
             <div id="app" class="col-10">
-                <button v-for="card in cards" @click="test(card.value)">
-                    <a href="./deposit_pay.html">
+                <button v-for="card in cards" @click="store(card.value)">
+                    <!-- <a href="./deposit_pay.html"> -->
                         <div class="point">
                             <span>{{card.value}}點券</span>
                         </div>
@@ -25,7 +28,7 @@
                             <img :src=card.imgUrl alt="">
                             <span>以NT{{card.value}}購買</span>
                         </div>
-                    </a>
+                    <!-- </a> -->
 
                 </button>
 
@@ -38,7 +41,9 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/member/dsposit.js">
+        
     </script>
 </body>
 

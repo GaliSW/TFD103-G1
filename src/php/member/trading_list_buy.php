@@ -1,5 +1,6 @@
 <?php
-       // $Name = $_POST["Name"];
+include "../Manager.php";
+$Name = getSession();
        $Filters = $_POST["Filters"];
        include("../connection.php");
        
@@ -23,7 +24,7 @@
                 left join ROLE t4
                 on t3.FK_ROLE_ID = t4.ROLE_ID
                 where 
-                    t1.FK_USERNAME_BUY =  'LARRY'
+                    t1.FK_USERNAME_BUY =  '$Name'
                     && BUYDATE BETWEEN (now() - interval 90 DAY) AND now()
                     order by ORDER_ID desc;";
                     
@@ -43,7 +44,7 @@
                 left join ROLE t4
                 on t3.FK_ROLE_ID = t4.ROLE_ID
                 where 
-                    t1.FK_USERNAME_BUY =  'LARRY'
+                    t1.FK_USERNAME_BUY =  '$Name'
                     && BUYDATE BETWEEN (now() - interval 180 DAY) AND now()
                     order by ORDER_ID desc;";
        }else if($Filters == "t9"){
@@ -61,7 +62,7 @@
                 left join ROLE t4
                 on t3.FK_ROLE_ID = t4.ROLE_ID
                 where 
-                    t1.FK_USERNAME_BUY =  'LARRY'
+                    t1.FK_USERNAME_BUY =  '$Name'
                     && BUYDATE BETWEEN (now() - interval 270 DAY) AND now()
                     order by ORDER_ID desc;";
        }else if($Filters == "t12"){
@@ -79,7 +80,7 @@
                 left join ROLE t4
                 on t3.FK_ROLE_ID = t4.ROLE_ID
                 where 
-                    t1.FK_USERNAME_BUY =  'LARRY'
+                    t1.FK_USERNAME_BUY =  '$Name'
                     && BUYDATE BETWEEN (now() - interval 365 DAY) AND now()
                     order by ORDER_ID desc;";
        }

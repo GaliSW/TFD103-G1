@@ -14,7 +14,16 @@ main.deposit {
         @include center;
         // border: 1px solid black;
         padding-top: 100px;
-
+        div.sumPoint{
+            font-size: 20px;
+            @include center;
+            display: flex;
+            margin-bottom: 20px;
+            color: white;
+            p{
+                margin-left: 5px;
+            }
+        }
         div#app {
             @include center;
             display: flex;

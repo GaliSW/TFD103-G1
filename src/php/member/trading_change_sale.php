@@ -1,7 +1,8 @@
 <?php
 include("../connection.php");
 $Filters = $_POST["Filter"];
-// $Name = $_POST["Name"];
+include "../Manager.php";
+$Name = getSession();
 //---------------------------------------------------
 // 查詢購買，篩選會員id為1class為0
 //建立SQL語法
@@ -35,7 +36,7 @@ if ($Filters == "t3") {
         on T2.FK_GACHA_ID = T5.GACHA_ID
         left join ROLE T6
         on T5.FK_ROLE_ID = T6.ROLE_ID
-        where T1.CONFIRM = 1 && T2.FK_USERNAME = 'JERRY'
+        where T1.CONFIRM = 1 && T2.FK_USERNAME = '$Name'
         && CHANGEDATE BETWEEN (now() - interval 90 DAY) AND now()
         order by BYCHECK_ID desc
         ";
@@ -67,7 +68,7 @@ if ($Filters == "t3") {
         on T2.FK_GACHA_ID = T5.GACHA_ID
         left join ROLE T6
         on T5.FK_ROLE_ID = T6.ROLE_ID
-        where T1.CONFIRM = 1 && T2.FK_USERNAME = 'JERRY'
+        where T1.CONFIRM = 1 && T2.FK_USERNAME = '$Name'
         && CHANGEDATE BETWEEN (now() - interval 180 DAY) AND now()
         order by BYCHECK_ID desc
         ";
@@ -99,7 +100,7 @@ if ($Filters == "t3") {
         on T2.FK_GACHA_ID = T5.GACHA_ID
         left join ROLE T6
         on T5.FK_ROLE_ID = T6.ROLE_ID
-        where T1.CONFIRM = 1 && T2.FK_USERNAME = 'JERRY'
+        where T1.CONFIRM = 1 && T2.FK_USERNAME = '$Name'
         && CHANGEDATE BETWEEN (now() - interval 270 DAY) AND now()
         order by BYCHECK_ID desc
         ";   
@@ -132,7 +133,7 @@ if ($Filters == "t3") {
         on T2.FK_GACHA_ID = T5.GACHA_ID
         left join ROLE T6
         on T5.FK_ROLE_ID = T6.ROLE_ID
-        where T1.CONFIRM = 1 && T2.FK_USERNAME = 'JERRY'
+        where T1.CONFIRM = 1 && T2.FK_USERNAME = '$Name'
         && CHANGEDATE BETWEEN (now() - interval 365 DAY) AND now()
         order by BYCHECK_ID desc
         ;";      
