@@ -222,4 +222,53 @@ main.signup {
         }
 
     }
+
+    .verify_contain {
+        width: 600px;
+        @include center;
+        height: 350px;
+        max-width: 95%;
+
+        h1 {
+            color: white;
+            margin: 20px 20px;
+            float: left;
+            margin-bottom: 20px;
+        }
+        .ok{
+            display: none;
+        }
+        ._off{
+            display: none;
+        }
+        h1._on{
+            display: block;
+        }
+        div.verify {
+            width: 250px;
+            margin-top: 100px;
+
+            form {
+                margin-top: 15px;
+                display: inline-block;
+            }
+
+            .button {
+                margin-top: 20px;
+                @include btn_blur(200px, 5px);
+            }
+
+            .button:hover {
+                margin-top: 20px;
+                @include btn_on(200px, 5px);
+            }
+
+            input {
+                margin-top: 10px;
+                height: 30px;
+                width: 200px;
+            }
+        }
+    }
+
 }

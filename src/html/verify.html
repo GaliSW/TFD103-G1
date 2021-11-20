@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signUp</title>
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+    @@include('./header.html')
+
+
+    <main class="signup">
+        <div class="contain ">
+            <div class="main_contain verify_contain" id="app">
+                <h1 id="thisOk">會員驗證</h1>
+                <h1 id="ok" class="ok">驗證成功，請重新登入</h1>
+                <!-- 加上class: _on 出現 -->
+                <div class="sucess_box _on verify ">
+                    <p>
+                        請至信箱收取驗證信，
+                        <br>
+                        並輸入驗證碼:
+                    </p>
+
+                    <form>
+                        <input type="text" id="Name" placeholder="請輸入帳號" name="Name">
+                        <br>
+                        <input type="text" id="thisVerify" maxlength="4" placeholder="請輸入四位數驗證碼" name="thisVerify">
+                        <br>
+                        <input class="button" type="button" onclick=clickThis() value="送出">
+                    </form>
+                </div>
+            </div>
+            
+            
+        </div>
+                
+
+    </main>
+    @@include('./footer.html')
+
+    <script src="../js/vendor/js/vue.js"></script>
+    <script src="../js/member/sign_up.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>
+
+<Script>
+    
+
+    function trans(){
+        window.location.href = './login.html';
+    };
+    function clickThis(){
+        let Name = $("#Name").val();
+        Name = $.trim(Name);
+        let thisVerify = $("#thisVerify").val();
+        thisVerify = $.trim(thisVerify);
+
+        $.ajax({
+                    method: "POST",
+                    url: "../php/member/verify.php",
+                    data: {
+                        Name: name,
+                        thisVerify: thisVerify
+                    },
+                    dataType: "text",
+                    success: function (response) {
+                        if (response == "Y") {
+                            $("#thisOk").addClass('_off');
+                            $("#ok").addClass('_on');
+                            setTimeout("trans()",5);
+                        } else {
+                            alert("驗證失敗")
+                        }
+                    },
+                });
+            };
+    
+</Script>

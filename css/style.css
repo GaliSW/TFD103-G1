@@ -1444,6 +1444,20 @@ main.deposit div.container .col-12 {
   width: 100%;
 }
 
+main.deposit div.container div.sumPoint {
+  font-size: 20px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  color: white;
+}
+
+main.deposit div.container div.sumPoint p {
+  margin-left: 5px;
+}
+
 main.deposit div.container div#app {
   margin: 0 auto;
   display: -webkit-box;
@@ -6482,6 +6496,26 @@ main.member div.bar div.trading {
   border: 0;
 }
 
+main.member div.bar div.trading div.countDeal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+main.member div.bar div.trading div.countDeal p {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: red;
+  border: solid 1px red;
+  border-radius: 50%;
+}
+
+main.member div.bar div.trading div.countDeal p._off {
+  display: none;
+}
+
 main.member div.bar div.points,
 main.member div.bar div.information {
   width: 25%;
@@ -7068,6 +7102,26 @@ main.trading_list div.bar div.trading {
   border: 0;
 }
 
+main.trading_list div.bar div.trading div.countDeal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+main.trading_list div.bar div.trading div.countDeal p {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: red;
+  border: solid 1px red;
+  border-radius: 50%;
+}
+
+main.trading_list div.bar div.trading div.countDeal p._off {
+  display: none;
+}
+
 main.trading_list div.bar div.points,
 main.trading_list div.bar div.information {
   width: 25%;
@@ -7360,6 +7414,26 @@ main.points_list div.bar div.trading {
   border: 0;
 }
 
+main.points_list div.bar div.trading div.countDeal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+main.points_list div.bar div.trading div.countDeal p {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: red;
+  border: solid 1px red;
+  border-radius: 50%;
+}
+
+main.points_list div.bar div.trading div.countDeal p._off {
+  display: none;
+}
+
 main.points_list div.bar div.points,
 main.points_list div.bar div.information {
   width: 25%;
@@ -7613,6 +7687,26 @@ main.member_info div.bar div.trading {
   border: 0;
 }
 
+main.member_info div.bar div.trading div.countDeal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+main.member_info div.bar div.trading div.countDeal p {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: red;
+  border: solid 1px red;
+  border-radius: 50%;
+}
+
+main.member_info div.bar div.trading div.countDeal p._off {
+  display: none;
+}
+
 main.member_info div.bar div.points,
 main.member_info div.bar div.information {
   width: 25%;
@@ -7809,6 +7903,17 @@ main.member_info div.content div.contain_list div.edit div.edit_detail form.edit
   }
 }
 
+main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password input#visible {
+  margin: 0;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 10px;
+}
+
+main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password label {
+  font-size: 16px;
+}
+
 main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password .button {
   color: #60cd90;
   width: 100%;
@@ -7867,6 +7972,16 @@ main.member_info div.content div.contain_list div.edit div.edit_detail form.book
   main.member_info div.content div.contain_list {
     width: 100%;
   }
+}
+
+main.member_info div.content p._off {
+  display: none;
+  font-size: 16px;
+  color: red;
+}
+
+main.member_info div.content p._on {
+  display: block;
 }
 
 main.member_info section.maskLayer {
@@ -9620,6 +9735,68 @@ main.signup .main_contain div.sucess_box {
 
 main.signup .main_contain div._on {
   display: block;
+}
+
+main.signup .verify_contain {
+  width: 600px;
+  margin: 0 auto;
+  height: 350px;
+  max-width: 95%;
+}
+
+main.signup .verify_contain h1 {
+  color: white;
+  margin: 20px 20px;
+  float: left;
+  margin-bottom: 20px;
+}
+
+main.signup .verify_contain .ok {
+  display: none;
+}
+
+main.signup .verify_contain ._off {
+  display: none;
+}
+
+main.signup .verify_contain h1._on {
+  display: block;
+}
+
+main.signup .verify_contain div.verify {
+  width: 250px;
+  margin-top: 100px;
+}
+
+main.signup .verify_contain div.verify form {
+  margin-top: 15px;
+  display: inline-block;
+}
+
+main.signup .verify_contain div.verify .button {
+  margin-top: 20px;
+  color: #60cd90;
+  width: 200px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+}
+
+main.signup .verify_contain div.verify .button:hover {
+  margin-top: 20px;
+  color: #0e3461;
+  width: 200px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+main.signup .verify_contain div.verify input {
+  margin-top: 10px;
+  height: 30px;
+  width: 200px;
 }
 
 * {

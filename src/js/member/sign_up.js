@@ -19,7 +19,12 @@ let vm = new Vue({
     },
     showIdError: function () {
       let idRegular = /^(?=.*[A-Za-z])(?=.*\d)[^]{8,16}$/;
-      if (idRegular.test(this.id) && this.id !== "") {
+      let passwordRegular = /^[a-zA-Z0-9]*$/;
+      if (
+        idRegular.test(this.id) &&
+        this.id !== "" &&
+        passwordRegular.test(this.id)
+      ) {
         vm.$data.idError = false;
         // console.log(this.id.length);
       } else {
@@ -66,6 +71,14 @@ let vm = new Vue({
         this.twicePassword !== "" &&
         this.mail !== ""
       ) {
+        let userId = $("#userId").val();
+        userId = $.trim(userId);
+        let password = $("#password").val();
+        password = $.trim(password);
+        let email = $("#email").val();
+        email = $.trim(email);
+
+
         $.ajax({
           method: "POST",
           url: "../php/member/signup.php",
@@ -74,14 +87,21 @@ let vm = new Vue({
           // },
 
           data: {
-            userId: $("#userId").val(),
-            password: $("#password").val(),
-            email: $("#email").val(),
+            userId: userId,
+            password: password,
+            email: email,
           },
           dataType: "text",
           success: function (response) {
-            vm.$data.writing = false;
-            vm.$data.success = true;
+            if (response == "X") {
+              vm.$data.id = "此帳號已被使用過，請換一個試試!!!";
+            }
+            if (response == "Y") {
+              vm.$data.writing = false;
+              vm.$data.success = true;
+
+              setTimeout(trans(), 5);
+            }
           },
           error: function (exception) {
             alert("發生錯誤 ");
@@ -94,3 +114,13 @@ let vm = new Vue({
     },
   },
 });
+
+// 重新點選帳號清空
+function blank(){
+  vm.$data.id="";
+};
+
+// 註冊成功跳轉驗證
+function trans(){
+        window.location.href = './verify.html';
+    };

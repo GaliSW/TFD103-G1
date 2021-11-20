@@ -1,7 +1,21 @@
+function countDeal() {
+  $("#countResult").html("");
+  $.ajax({
+    url: "../php/member/count_deal.php",
+    data: {},
+    dataType: "json",
+    success: function (response) {
+      if (response > 0) {
+        $("#countResult").append(response);
+        $("#countResult").removeClass("_off");
+      }
+    },
+  });
+}
 function displaySale() {
   let FilterSale = document.getElementById("saleFilter").value;
   $.ajax({
-    method:"post",
+    method: "post",
     url: "../php/member/trading_list_sale.php",
     data: {
       FilterSale: FilterSale,
@@ -19,7 +33,7 @@ function displaySale() {
                                 <span class="apply_date col-3">${row.BUYDATE}</span>
                                 <div class="my_role col-3"><img src="../image/ROLE/${row.ROLE_IMG}"></div>
                                 <span class="method col-2">販售</span>
-                                <span class="price col-2">${row.PRICE}e</span>
+                                <span class="price col-2">${row.PRICE}E</span>
                                 <span class="block col-2"></span>
                             </div>
                             <span><hr></span>
@@ -31,7 +45,7 @@ function displaySale() {
       alert("發生錯誤: " + exception.status);
     },
   });
-};
+}
 
 let vm0 = new Vue({
   el: "#app0",
@@ -78,6 +92,7 @@ let vm0 = new Vue({
 });
 
 function displayBuy() {
+  countDeal()
   // let userName = LARRY;
   let filters = document.getElementById("buyFilter").value;
   $.ajax({
@@ -98,7 +113,7 @@ function displayBuy() {
                                 <span class="apply_date col-3">${row.BUYDATE}</span>
                                 <div class="my_role col-3"><img src="../image/ROLE/${row.ROLE_IMG}"></div>
                                 <span class="method col-2">購買</span>
-                                <span class="price col-2">${row.PRICE}e</span>
+                                <span class="price col-2">${row.PRICE}E</span>
                                 <span class="block col-2"></span>
                             </div>
                             <span><hr></span>
@@ -128,7 +143,6 @@ function displayBuyCng() {
       $("#result_buy_change").html("");
       //更新html內容(透過jQuery跑迴圈取值)
       $.each(response, function (index, row) {
-        
         $("#result_buy_change").append(
           `
                <div class="contain_list">
@@ -148,7 +162,7 @@ function displayBuyCng() {
       alert("發生錯誤: " + exception.status);
     },
   });
-};
+}
 
 // 賣家交換
 function displaySaleCng() {
@@ -164,13 +178,12 @@ function displaySaleCng() {
       $("#result_sale_change").html("");
       //更新html內容(透過jQuery跑迴圈取值)
       $.each(response, function (index, row) {
-        
         $("#result_sale_change").append(
           `
                <div class="contain_list">
                             <span class="apply_date col-3">${row.CHANGEDATE}</span>
                             <div class="my_role col-3"><img src="../image/ROLE/${row.ROLE_IMG}"></div>
-                            <span class="method col-2">交換</span>
+                            <span class="method col-2">交換(賣)</span>
                             <div class="price col-2">
                                 <img src="../image/ROLE/${row.ROLE_IMG_BUY}">
                             </div>
@@ -184,4 +197,4 @@ function displaySaleCng() {
       alert("發生錯誤: " + exception.status);
     },
   });
-};
+}
