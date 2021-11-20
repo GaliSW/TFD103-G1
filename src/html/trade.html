@@ -38,42 +38,8 @@
 
     <section class="roleRanksection">
         <h1>角色排行</h1>
-        <div class="rankBloCk">
-            <div class="roleBloCk1">
-                <div class="imgBlock">
-                    <img src="../image/trade/rank1.png" >
-                </div>
-    
-                <div class="name">
-                    <p>微笑虎</p>
-                </div>
-    
-                <div class="price">$2660E</div>
-            </div>
-
-            <div class="roleBloCk2">
-                <div class="imgBlock">
-                    <img src="../image/trade/rank2.png" >
-                </div>
-    
-                <div class="name">
-                    <p>呆呆貓咪</p>
-                </div>
-    
-                <div class="price">$3750E</div>
-            </div>
-
-            <div class="roleBloCk3">
-                <div class="imgBlock">
-                    <img src="../image/trade/rank3.png" >
-                </div>
-    
-                <div class="name">
-                    <p>貓頭鷹</p>
-                </div>
-    
-                <div class="price">$2510E</div>
-            </div>
+        <div class="rankBloCk" id="rankBloCk">
+            
         </div>
     </section>
 
@@ -84,8 +50,8 @@
     <main class="roleUpPop" id="app">
 
       <div class="btnBlockmy" id="box">
-        <button type="button" class="btn111" @click=clickPop()>角色上架</button>
-        <button type="button" class="btn222" @click=toThree()>我的角色管理</button>
+        <button type="button" class="btn111" @click=clickStatus()>角色上架</button>
+        <button type="button" class="btn222" @click=clickStatus2()>我的角色管理</button>
       </div>
 
   
@@ -244,7 +210,7 @@
 
     <section class="searchFlex">
       <div class="searchFlexleft">
-        <input type="text" name="search" id="ysearchy" placeholder="請輸入角色名稱">
+        <input type="text" name="search" id="ysearchy" onkeyup="search()" placeholder="請輸入角色名稱">
         <button class="ysearchBtny" type="submit"><i class="fas fa-search"></i></button>
       </div>
 
@@ -252,23 +218,23 @@
         <button class="openBtn" data-toggle-class="foo" data-target="#bar" type="button">搜尋分類+</button>
         <div id="bar" class="none">
             <div> 
-                <input type="checkbox" id="1">
+                <input type="radio" name="searchRadio" id="1" onclick="search3000">
                 <label for="1">$3000E以上</label>
             </div>
             <div> 
-                <input type="checkbox" id="2">
+                <input type="radio" name="searchRadio" id="2" onclick="search2000">
                 <label for="2">$2000E~$3000E</label>
             </div>
             <div> 
-                <input type="checkbox" id="3">
+                <input type="radio" name="searchRadio" id="3" onclick="search1000">
                 <label for="3">$1000E~$2000E</label>
             </div>
             <div> 
-                <input type="checkbox" id="4">
+                <input type="radio" name="searchRadio" id="4" onclick="search1000Down">
                 <label for="4">$1000E以下</label>
             </div>
             <div> 
-                <input type="checkbox" id="5">
+                <input type="radio" name="searchRadio" id="5" onclick="searchTrans">
                 <label for="5">可交換</label>
             </div>
         </div>
@@ -281,214 +247,7 @@
 <!-- 商品列表 -->
 
     <main class="ymainy">
-      <div class="containerFlex">
-        <div class="container">
-          <a href="./product.html">
-            <div class="inner">
-                <div class="content">
-
-                    <span><img src="../image/trade/product1.png"></span>
-                    <h2>小烏龜</h2>
-                    <h3>$250E</h3>
-                </div>
-                <div class="lower">
-                    <ul class="features-list">
-                        <li>可交換</li>
-                        <div class="ysellerImgy">
-                          <img src="../image/trade/sellerimg1.png" alt="">
-                        </div>
-                        <li>Slapaye</li>
-                    </ul>
-                </div>
-            </div>
-            <button class="cta">查看資訊</button>
-          </a>
-        </div>
-
-        <div class="container">
-          <a href="./product.html">
-            <div class="inner">
-                <div class="content">
-
-                    <span><img src="../image/trade/product1.png"></span>
-                    <h2>小烏龜</h2>
-                    <h3>$250E</h3>
-                </div>
-                <div class="lower">
-                    <ul class="features-list">
-                        <li>可交換</li>
-                        <div class="ysellerImgy">
-                          <img src="../image/trade/sellerimg1.png" alt="">
-                        </div>
-                        <li>Slapaye</li>
-                    </ul>
-                </div>
-            </div>
-            <button class="cta">查看資訊</button>
-          </a>
-        </div>
-
-        <div class="container">
-          <a href="./product.html">
-            <div class="inner">
-                <div class="content">
-
-                    <span><img src="../image/trade/product1.png"></span>
-                    <h2>小烏龜</h2>
-                    <h3>$250E</h3>
-                </div>
-                <div class="lower">
-                    <ul class="features-list">
-                        <li>可交換</li>
-                        <div class="ysellerImgy">
-                          <img src="../image/trade/sellerimg1.png" alt="">
-                        </div>
-                        <li>Slapaye</li>
-                    </ul>
-                </div>
-            </div>
-            <button class="cta">查看資訊</button>
-          </a>
-        </div>
-
-        <div class="container">
-          <a href="./product.html">
-            <div class="inner">
-                <div class="content">
-
-                    <span><img src="../image/trade/product1.png"></span>
-                    <h2>小烏龜</h2>
-                    <h3>$250E</h3>
-                </div>
-                <div class="lower">
-                    <ul class="features-list">
-                        <li>可交換</li>
-                        <div class="ysellerImgy">
-                          <img src="../image/trade/sellerimg1.png" alt="">
-                        </div>
-                        <li>Slapaye</li>
-                    </ul>
-                </div>
-            </div>
-            <button class="cta">查看資訊</button>
-          </a>
-        </div>
-
-        <div class="container">
-          <a href="./product.html">
-            <div class="inner">
-                <div class="content">
-
-                  <span><img src="../image/trade/product1.png"></span>
-                    <h2>小烏龜</h2>
-                    <h3>$250E</h3>
-                </div>
-                <div class="lower">
-                    <ul class="features-list">
-                        <li>可交換</li>
-                        <div class="ysellerImgy">
-                          <img src="../image/trade/sellerimg1.png" alt="">
-                        </div>
-                        <li>Slapaye</li>
-                    </ul>
-                </div>
-            </div>
-            <button class="cta">查看資訊</button>
-          </a>
-        </div>
-
-        <div class="container">
-          <a href="./product.html">
-            <div class="inner">
-                <div class="content">
-
-                    <span><img src="../image/trade/product1.png"></span>
-                    <h2>小烏龜</h2>
-                    <h3>$250E</h3>
-                </div>
-                <div class="lower">
-                    <ul class="features-list">
-                        <li>可交換</li>
-                        <div class="ysellerImgy">
-                          <img src="../image/trade/sellerimg1.png" alt="">
-                        </div>
-                        <li>Slapaye</li>
-                    </ul>
-                </div>
-            </div>
-            <button class="cta">查看資訊</button>
-          </a>
-        </div>
-
-        <div class="container">
-          <a href="./product.html">
-            <div class="inner">
-                <div class="content">
-
-                    <span><img src="../image/trade/product1.png"></span>
-                    <h2>小烏龜</h2>
-                    <h3>$250E</h3>
-                </div>
-                <div class="lower">
-                    <ul class="features-list">
-                        <li>可交換</li>
-                        <div class="ysellerImgy">
-                          <img src="../image/trade/sellerimg1.png" alt="">
-                        </div>
-                        <li>Slapaye</li>
-                    </ul>
-                </div>
-            </div>
-            <button class="cta">查看資訊</button>
-          </a>
-        </div>
-
-        <div class="container">
-          <a href="./product.html">
-            <div class="inner">
-                <div class="content">
-
-                    <span><img src="../image/trade/product1.png"></span>
-                    <h2>小烏龜</h2>
-                    <h3>$250E</h3>
-                </div>
-                <div class="lower">
-                    <ul class="features-list">
-                        <li>可交換</li>
-                        <div class="ysellerImgy">
-                          <img src="../image/trade/sellerimg1.png" alt="">
-                        </div>
-                        <li>Slapaye</li>
-                    </ul>
-                </div>
-            </div>
-            <button class="cta">查看資訊</button>
-          </a>
-        </div>
-
-        <div class="container">
-          <a href="./product.html">
-            <div class="inner">
-                <div class="content">
-
-                    <span><img src="../image/trade/product1.png"></span>
-                    <h2>小烏龜</h2>
-                    <h3>$250E</h3>
-                </div>
-                <div class="lower">
-                    <ul class="features-list">
-                        <li>可交換</li>
-                        <div class="ysellerImgy">
-                          <img src="../image/trade/sellerimg1.png" alt="">
-                        </div>
-                        <li>Slapaye</li>
-                    </ul>
-                </div>
-            </div>
-            <button class="cta">查看資訊</button>
-          </a>
-        </div>
-
+      <div class="containerFlex" id="containerFlex">
       </div>
         
     </main>
@@ -502,10 +261,6 @@
             <li><a href="#"></a>3</li>
             <li><a href="#"></a>4</li>
             <li><a href="#"></a>5</li>
-            <li><a href="#"></a>6</li>
-            <li><a href="#"></a>7</li>
-            <li><a href="#"></a>8</li>
-            <li><a href="#"></a>9</li>
             <li><a href="#"><img src="../image/trade/arrow_right.png"></a></li>
           </ul>
         </div>
@@ -514,7 +269,7 @@
     @@include('./footer.html')
     
 
-
+<!-- popup視窗vue -->
 
     <script>
 
@@ -527,52 +282,37 @@
               three:false,
           },
           methods: {
-              clickPop() {
-                  vm.$data.pop = true;
-                  vm.$data.one = true;
-                  vm.$data.three = false;
-                  $.ajax({
-                    method: "POST",
-                        url: "../php/product/callMemberRole.php",
-                        data: {
-                          Name:'JERRY',
-                        },
-                        dataType: "json",
-                        success: function (response) {
-
-                            let chooseRole = document.getElementById('chooseRole');
-                            chooseRole.innerHTML= "";
-                            //chooseRole.insertAdjacentHTML("afterbegin",` <h3>選擇角色</h3>`);
-                          
-                            let innerAccount = document.getElementById('innerAccount');
-                            innerAccount.innerHTML= "";
-                            
-
-                            $.each(response, function (index, row) {
-                                let str = ` <img src="../image/ROLE/${row.ROLE_IMG}" onclick="chooseImg(this)" style="width:120px;" id="${row.RNAME}" name= "${row.FK_GACHA_ID}" alt="${row.STATUS}">`;
-                                chooseRole.insertAdjacentHTML("beforeend",str);
-                                innerAccount.innerHTML= `${row.FK_USERNAME}`;
-                                
-                                
-                            })
-                            let chooseRoleChild = document.getElementById("chooseRole").childNodes[1];
-                            let showImg = document.getElementById("showImg");
-                            let N = chooseRoleChild.attributes['src'].value;
-                            showImg.attributes['src'].value = `${N}`;
-                            let roleName = document.getElementById('roleName');
-                            let roleId = chooseRoleChild.attributes['id'].value;
-                            let gachaId = chooseRoleChild.attributes['name'].value;
-                            roleName.innerText = roleId;
-                            showImg.attributes['name'].value = gachaId;
-                            let status = chooseRoleChild.attributes['alt'].value;
-                            showImg.attributes['alt'].value = status;
-                        },
-                        error: function (exception) {
-                            alert("數據載入失敗: " + exception.status);
+              clickStatus(){
+                $.ajax({
+                    method:"POST",
+                    url:"../php/LoginCheck.php",
+                    data:{},
+                    dataType:"text",
+                    success:function(response){
+                        if(response == ""){
+                            alert();
+                            location.href="./login.html";
+                        }else{
+                            clickPop();
                         }
-                    });
-                  
-
+                    }
+                })
+              },
+              clickStatus2(){
+                $.ajax({
+                    method:"POST",
+                    url:"../php/LoginCheck.php",
+                    data:{},
+                    dataType:"text",
+                    success:function(response){
+                        if(response == ""){
+                            alert();
+                            location.href="./login.html";
+                        }else{
+                            toThree();
+                        }
+                    }
+                })
               },
               clickClose() {
                   vm.$data.pop = false;
@@ -614,15 +354,15 @@
 
                 // 上架功能
 
-                  $.ajax({
+                $.ajax({
                     method: "POST",
                         url: "../php/product/upProduct.php",
                         data: {
-                          GACHA_ID: gachaId,
-                          USERNAME: username,
-                          PRICE: price,
-                          TRANS: checkValue,
-                          STATUS: status,
+                        GACHA_ID: gachaId,
+                        USERNAME: username,
+                        PRICE: price,
+                        TRANS: checkValue,
+                        STATUS: status,
                         },
                         dataType: "text",
                         success: function (response) {
@@ -638,20 +378,65 @@
                     
               },
               clickClose1() {
-                  vm.$data.pop = false;
-                  vm.$data.two = false;
+                vm.$data.pop = false;
+                vm.$data.two = false;
               },
-              toThree(){
+          },
+      });
+      
+      function clickPop() {
+                $.ajax({
+                    method: "POST",
+                        url: "../php/product/callMemberRole.php",
+                        data: {},
+                        dataType: "json",
+                        success: function (response) {
+
+                                let chooseRole = document.getElementById('chooseRole');
+                            chooseRole.innerHTML= "";
+                            //chooseRole.insertAdjacentHTML("afterbegin",` <h3>選擇角色</h3>`);
+                        
+                            let innerAccount = document.getElementById('innerAccount');
+                            innerAccount.innerHTML= "";
+                            
+
+                            $.each(response, function (index, row) {
+                                let str = ` <img src="../image/ROLE/${row.ROLE_IMG}" onclick="chooseImg(this)" style="width:120px;" id="${row.RNAME}" name= "${row.FK_GACHA_ID}" alt="${row.STATUS}">`;
+                                chooseRole.insertAdjacentHTML("beforeend",str);
+                                innerAccount.innerHTML= `${row.FK_USERNAME}`;
+                                
+                                
+                            })
+                            let chooseRoleChild = document.getElementById("chooseRole").childNodes[1];
+                            let showImg = document.getElementById("showImg");
+                            let N = chooseRoleChild.attributes['src'].value;
+                            showImg.attributes['src'].value = `${N}`;
+                            let roleName = document.getElementById('roleName');
+                            let roleId = chooseRoleChild.attributes['id'].value;
+                            let gachaId = chooseRoleChild.attributes['name'].value;
+                            roleName.innerText = roleId;
+                            showImg.attributes['name'].value = gachaId;
+                            let status = chooseRoleChild.attributes['alt'].value;
+                            showImg.attributes['alt'].value = status;
+                        },
+                        error: function (exception) {
+                            alert("數據載入失敗: " + exception.status);
+                        }
+                    });
+                  vm.$data.pop = true;
+                  vm.$data.one = true;
+                  vm.$data.three = false;
+            }
+    
+      function toThree(){
                 vm.$data.pop = true;
                 vm.$data.three = true;
 
                 $.ajax({
                     method: "POST",
-                        url: "../php/product/rollManage.php",
-                        data: {
-                          Name:'JERRY',
-                        },
-                        dataType: "json",
+                        url: "../php/product/roleManage.php",
+                        data: {},
+                        dataType: "JSON",
                         success: function (response) {
 
                             let manageList = document.getElementById('manageList');
@@ -662,30 +447,7 @@
                                               <div class="itemFlex">  
                                                 <div class="leftBlock">
                                                   <div class="imgBlockRole">
-                                                    <img src="../image/ROLE/${row.ROLE_IMG}" name= "${row.ISSHOW}" id= "roleImgg">
-                                                  </div>
-                                                </div>
-
-                                                <div class="middleBlock">
-                                                  <div class="detailInfo">
-                                                    <p class="roleNamee">${row.RNAME}</p>
-                                                    <p class="rolePrice">${row.PRICE}</p>
-                                                    <p class="roleNumber" id="roleNumber">${row.FK_GACHA_ID}</p>
-                                                  </div>
-                                                </div>
-                      
-                                                <div class="rightBlock">
-                                                  <div class="btnBlock"  id="changeStatus">
-                                                    <button class="downBt" onclick="down(this)">下架</button>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </li>`;
-                                let liList0 = `<li>
-                                              <div class="itemFlex">  
-                                                <div class="leftBlock">
-                                                  <div class="imgBlockRole">
-                                                    <img src="../image/ROLE/${row.ROLE_IMG}" name= "${row.ISSHOW}" id= "roleImgg">
+                                                    <img src="../image/ROLE/${row.ROLE_IMG}">
                                                   </div>
                                                 </div>
 
@@ -698,32 +460,55 @@
                                                 </div>
                       
                                                 <div class="rightBlock">
-                                                  <div class="btnBlock" id="changeStatus">
-                                                    <button class="upBt">重新上架</button>
-                                                    <button class="deleteBt"><i class="fas fa-trash"></i></button>
+                                                  <div class="btnBlock">
+                                                    <button class="downBt" onclick="down(this)">下架</button>
                                                   </div>
                                                 </div>
                                               </div>
                                             </li>`;
-                                if(row.ISSHOW == 1){
+                                let liList0 = `<li>
+                                              <div class="itemFlex">  
+                                                <div class="leftBlock">
+                                                  <div class="imgBlockRole">
+                                                    <img src="../image/ROLE/${row.ROLE_IMG}" >
+                                                  </div>
+                                                </div>
+
+                                                <div class="middleBlock">
+                                                  <div class="detailInfo">
+                                                    <p class="roleNamee">${row.RNAME}</p>
+                                                    <p class="rolePrice">${row.PRICE}</p>
+                                                    <p class="roleNumber">${row.FK_GACHA_ID}</p>
+                                                  </div>
+                                                </div>
+                      
+                                                <div class="rightBlock">
+                                                  <div class="btnBlock">
+                                                    <button class="upBt" onclick="up(this)">重新上架</button>
+                                                    <button class="deleteBt" onclick="dele(this)"><i class="fas fa-trash"></i></button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </li>`;
+                                if(`${row.AMOUNT}` == 1){
                                     manageList.insertAdjacentHTML("beforeend",liList1);
                                 }else{
                                     manageList.insertAdjacentHTML("beforeend",liList0);
                                 }
                             })
-
-                            
-
-
                         },
                         error: function (exception) {
                             alert("數據載入失敗: " + exception.status);
                         }
                     });
               }
-          },
-      });
 
+    
+    
+    
+    
+    
+    
     </script>
 
 <!-- 搜尋開關 -->
@@ -741,10 +526,8 @@
           }
         }
     </script>
-  
 
-
-  <!-- 點小圖切換圖片 -->
+<!-- 點小圖切換圖片 -->
 
     <script>
       function chooseImg(item){
@@ -760,37 +543,30 @@
     
     </script>
 
-<!-- 下架功能 -->
+<!-- 下架click function -->
 
     <script>
         function down(item){
-            //console.log(item);
             item.classList.add('none');
-            let changeStatus = document.getElementById('changeStatus');
+            let gachaID = item.parentNode.parentNode.previousSibling.previousSibling.childNodes[1].childNodes[5].innerText;
+            let changeStatus = item.parentNode;
             let str = `
-            <button class="upBt">重新上架</button>
-            <button class="deleteBt"><i class="fas fa-trash"></i></button>
+            <button class="upBt" onclick="up(this)">重新上架</button>
+            <button class="deleteBt" onclick="dele(this)"><i class="fas fa-trash"></i></button>
             `;
             changeStatus.innerHTML = str;
-            let gachaID = document.getElementById('roleNumber').innerText;
-            let b = document.getElementById('roleImgg');
-            isShow = b.attributes['name'].value;
-            if(isShow == 1){
-                isShow = 0;
-            }else{
-                isShow = 1;
-            }
-
+            
+            
+            console.log(gachaID);
 
 
             $.ajax({            
                 method: "POST",
                 url: "../php/product/down.php",
                 data:{
-                    GACHA_ID:gachaID,
-                    ISSHOW:isShow
+                    GACHA_ID:gachaID
                 },            
-                dataType: "json",
+                dataType: "TEXT",
                 success: function (response) {                
                                                 
                 },
@@ -803,9 +579,300 @@
     
     </script>
 
+<!-- 重新上架click function -->
+
+    <script>
+        function up(item){
+                // console.log(item.parentNode.parentNode.parentNode.parentNode);
+                // let x = item.parentNode.parentNode.parentNode.parentNode;
+                // x.innerHTML="";
+                // item.classList.add('none');
+                let gachaID = item.parentNode.parentNode.previousSibling.previousSibling.childNodes[1].childNodes[5].innerText;
+                let changeStatus = item.parentNode;
+                let str = `
+                <button class="downBt" onclick="down(this)">下架</button>
+                `;
+                changeStatus.innerHTML = str;
+            
+            
+            console.log(gachaID);
+
+                $.ajax({            
+                    method: "POST",
+                    url: "../php/product/up.php",
+                    data:{
+                        GACHA_ID:gachaID
+                    },            
+                    dataType: "TEXT",
+                    success: function (response) {                
+                                                    
+                    },
+                    error: function(exception) {
+                        alert("數據載入失敗: " + exception.status);
+                    }
+                });
+
+        }
+    </script>
+
+
+<!-- 刪除click function -->
+
+    <script>
+      function dele(item){
+              let gachaID = item.parentNode.parentNode.previousSibling.previousSibling.childNodes[1].childNodes[5].innerText;
+              console.log(gachaID);
+              //console.log(item.parentNode.parentNode.parentNode.parentNode);
+              let x = item.parentNode.parentNode.parentNode.parentNode;
+              x.innerHTML="";
+
+              $.ajax({            
+                  method: "POST",
+                  url: "../php/product/delete.php",
+                  data:{
+                      GACHA_ID:gachaID
+                  },            
+                  dataType: "TEXT",
+                  success: function (response) {                
+                                                  
+                  },
+                  error: function(exception) {
+                      alert("數據載入失敗: " + exception.status);
+                  }
+              });
+
+      }
+  </script>
+
+
+<!-- 角色排行 -->
+<script>
+  $.ajax({
+                      method: "POST",
+                        url: "../php/product/callRank.php",
+                        data: {},
+                        dataType: "json",
+                      success: function (response) {
+
+                              let rankBloCk = document.getElementById('rankBloCk');
+                              rankBloCk.innerHTML= "";
+
+                          $.each(response, function (index, row) {
+                              let str = `<div class="roleBloCk1">
+                                            <div class="imgBlock">
+                                                <img src="../image/ROLE/${row.ROLE_IMG}" >
+                                            </div>
+                                
+                                            <div class="name">
+                                                <p>${row.RNAME}</p>
+                                            </div>
+                                
+                                            <div class="price">${row.PRICE}</div>
+                                        </div>`;
+
+                              rankBloCk.insertAdjacentHTML("beforeend",str);                                
+                              
+                          })
+                      },
+                      error: function (exception) {
+                      alert("數據載入失敗: " + exception.status);
+                      }
+                  });
+</script>
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+  <!-- 商城 -->
+
+  <script>
+    $.ajax({
+                    method: "POST",
+                        url: "../php/product/callAllRole.php",
+                        data: {},
+                        dataType: "json",
+                        success: function (response) {
+
+                                let containerFlex = document.getElementById('containerFlex');
+                                containerFlex.innerHTML= "";
+
+                            $.each(response, function (index, row) {
+								let redShadow = "";
+                        		let shadowNone = "";
+                        		let trans = ""
+								if (row.TRANS == 1) {
+									redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
+									shadowNone = `this.style.boxShadow='none'`;
+								}
+                                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}">
+                                            <a href="./product.html">
+                                            <div class="inner">
+                                                <div class="content">
+
+                                                    <span><img src="../image/ROLE/${row.ROLE_IMG}"></span>
+                                                    <h2>${row.RNAME}</h2>
+                                                    <h3>${row.PRICE}</h3>
+                                                </div>
+                                                <div class="lower">
+                                                    <ul class="features-list">
+                                                        <li class="${row.TRANS}">可交換</li>
+                                                        <div class="ysellerImgy">
+                                                            <img src="../image/ROLE/${row.USER_IMG}" alt="">
+                                                        </div>
+                                                        <li>${row.FK_USERNAME}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <button class="cta">查看資訊</button>
+                                            </a>
+                                        </div>`;
+
+                                containerFlex.insertAdjacentHTML("beforeend",str);
+                                let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];
+                                console.log(liTrans);
+                                if(`${row.TRANS}` == 0){
+                                    liTrans.innerHTML= "";
+                                }                     
+                            })
+                        },
+                        error: function (exception) {
+                            alert("數據載入失敗: " + exception.status);
+                        }
+                    });
+  </script>
+
+<!-- 搜尋角色名字function -->
+
+<script>
+	function search() {
+				let keyUpValue = document.getElementById('ysearchy').value;
+				$.ajax({
+					method: "POST",
+					url: "../php/product/searchRole.php",
+					data: {
+						search: keyUpValue,
+					},
+					dataType: "json",
+					success: function (response) {
+						//更新html內容前先清空原有資料
+						let memberContent = document.getElementById('containerFlex');
+						memberContent.innerHTML = "";
+
+
+						//更新html內容(透過jQuery跑迴圈取值)
+						$.each(response, function (index, row) {
+								let redShadow = "";
+                        		let shadowNone = "";
+                        		let trans = ""
+								if (row.TRANS == 1) {
+									redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
+									shadowNone = `this.style.boxShadow='none'`;
+								}
+                                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}">
+                                            <a href="./product.html">
+                                            <div class="inner">
+                                                <div class="content">
+
+                                                    <span><img src="../image/ROLE/${row.ROLE_IMG}"></span>
+                                                    <h2>${row.RNAME}</h2>
+                                                    <h3>${row.PRICE}</h3>
+                                                </div>
+                                                <div class="lower">
+                                                    <ul class="features-list">
+                                                        <li class="${row.TRANS}">可交換</li>
+                                                        <div class="ysellerImgy">
+                                                            <img src="../image/ROLE/${row.USER_IMG}" alt="">
+                                                        </div>
+                                                        <li>${row.FK_USERNAME}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <button class="cta">查看資訊</button>
+                                            </a>
+                                        </div>`;
+
+                                containerFlex.insertAdjacentHTML("beforeend",str);
+                                let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];
+                                console.log(liTrans);
+                                if(`${row.TRANS}` == 0){
+                                    liTrans.innerHTML= "";
+                                }                     
+                            })
+					},
+					error: function (exception) {
+						alert("發生錯誤: " + exception.status);
+					}
+				});
+			}
+</script>
+
+<!-- 價錢搜尋function -->
+
+<script>
+	function search() {
+				let keyUpValue = document.getElementById('ysearchy').value;
+				$.ajax({
+					method: "POST",
+					url: "../php/product/searchRole.php",
+					data: {
+						search: keyUpValue,
+					},
+					dataType: "json",
+					success: function (response) {
+						//更新html內容前先清空原有資料
+						let memberContent = document.getElementById('containerFlex');
+						memberContent.innerHTML = "";
+
+
+						//更新html內容(透過jQuery跑迴圈取值)
+						$.each(response, function (index, row) {
+								let redShadow = "";
+                        		let shadowNone = "";
+                        		let trans = ""
+								if (row.TRANS == 1) {
+									redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
+									shadowNone = `this.style.boxShadow='none'`;
+								}
+                                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}">
+                                            <a href="./product.html">
+                                            <div class="inner">
+                                                <div class="content">
+
+                                                    <span><img src="../image/ROLE/${row.ROLE_IMG}"></span>
+                                                    <h2>${row.RNAME}</h2>
+                                                    <h3>${row.PRICE}</h3>
+                                                </div>
+                                                <div class="lower">
+                                                    <ul class="features-list">
+                                                        <li class="${row.TRANS}">可交換</li>
+                                                        <div class="ysellerImgy">
+                                                            <img src="../image/ROLE/${row.USER_IMG}" alt="">
+                                                        </div>
+                                                        <li>${row.FK_USERNAME}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <button class="cta">查看資訊</button>
+                                            </a>
+                                        </div>`;
+
+                                containerFlex.insertAdjacentHTML("beforeend",str);
+                                let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];
+                                console.log(liTrans);
+                                if(`${row.TRANS}` == 0){
+                                    liTrans.innerHTML= "";
+                                }                     
+                            })
+					},
+					error: function (exception) {
+						alert("發生錯誤: " + exception.status);
+					}
+				});
+			}
+
+
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 </body>
 </html>
+

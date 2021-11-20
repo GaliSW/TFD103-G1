@@ -1,8 +1,10 @@
 <?php
-     $Name = $_POST['Name'];
      include "../connection.php";
-
-     $sql = "SELECT * FROM
+     include "../Manager.php";
+     
+     // echo getSession();
+          $Name = getSession();
+          $sql = "SELECT * FROM
                PRODUCT t3
                left join GACHA t1
                on t3.FK_GACHA_ID = t1.GACHA_ID
@@ -11,11 +13,10 @@
                     WHERE t1.FK_USERNAME = ? && 
                     STATUS = 1";
 
-
      $statement= $pdo->prepare($sql);
      $statement->bindValue(1, $Name);
      $statement->execute();
      $data= $statement->fetchAll();
-     echo json_encode($data);         
+     echo json_encode($data);  
 
 ?>
