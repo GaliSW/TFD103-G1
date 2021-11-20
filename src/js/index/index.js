@@ -49,6 +49,8 @@ gsap.from('.logoImg', {
     delay:2.5, 
     duration: 2
 })
+
+// web
 gsap.fromTo('.car01', {
     x: -200
 }, {
@@ -88,6 +90,48 @@ gsap.fromTo('.car05', {
     duration: 30, 
     repeat: -1
 });
+
+// phone
+gsap.fromTo('.car01P', {
+    x: -200
+}, {
+    x: 350,
+    duration: 25, 
+    repeat: -1
+});
+gsap.fromTo('.car02P', {
+    x: -200
+}, {
+    x: 350,
+    delay: 2,
+    duration: 10, 
+    repeat: -1
+});
+gsap.fromTo('.car03P', {
+    x: -200
+}, {
+    x: 350,
+    delay: 4,
+    duration: 15, 
+    repeat: -1
+});
+gsap.fromTo('.car04P', {
+    x: -200
+}, {
+    x: 350,
+    delay: 8,
+    duration: 25, 
+    repeat: -1
+});
+gsap.fromTo('.car05P', {
+    x: -200
+}, {
+    x: 350,
+    delay: 16,
+    duration: 30, 
+    repeat: -1
+});
+
 
 gsap.to('.effect', {
     rotation: 360,
@@ -176,47 +220,6 @@ gsap.to('.mark', {
     repeat: -1
 })
 
-// canvas
-window.onload = function () {
-    function resize() {
-        let canvas = document.getElementById('canvas');
-        let width = screen.width;
-        let context = canvas.getContext('2d');
-        context.clearRect(0,0,canvas.width,canvas.height);
-        if(width >= 768){
-            context.clearRect(0,0,canvas.width,canvas.height);
-            context.font='bold 120px Tahoma';
-            context.strokeStyle='#fff';
-            context.shadowColor='#9dff00';
-            context.shadowOffsetX=5;
-            context.shadowOffsetY=5;
-            context.shadowBlur=10;
-
-            context.strokeText('Welcome', 100, 200);
-            context.stroke();
-
-            context.strokeText('to', 100, 350);
-            context.stroke();
-        }else{
-            context.clearRect(0,0,canvas.width,canvas.height);
-            context.font='bold 80px Tahoma';
-            context.strokeStyle='#fff';
-            context.shadowColor='#9dff00';
-            context.shadowOffsetX=5;
-            context.shadowOffsetY=5;
-            context.shadowBlur=10;
-
-            context.strokeText('Welcome', 50, 200);
-            context.stroke();
-
-            context.strokeText('to', 50, 350);
-            context.stroke();
-        }
-    }
-    resize();
-    window.addEventListener('resize', resize, false);
-}
-
 
 //輪播
 $(function (){
@@ -281,10 +284,10 @@ $(function (){
     });
 })
 
-$(document).ready(function() {
-    $('.upup').click(function(event) {
-      event.preventDefault();
+// $(document).ready(function() {
+//     $('.upup').click(function(event) {
+//       event.preventDefault();
       
-      $('html, body').animate({scrollTop: 0}, 100);
-    })
-  });
+//       $('html, body').animate({scrollTop: 0}, 100);
+//     })
+// });

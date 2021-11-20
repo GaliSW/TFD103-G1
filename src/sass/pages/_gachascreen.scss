@@ -5,12 +5,21 @@
         margin: 0;
         @include center;
     }
+
     .blackScreen{
         background-color: rgba(0, 0, 0, 0.5);
         // z-index: -1;
         width: 100vw;
         height: 100vh;
         position: fixed;
+    }
+
+    // web
+    .op1{
+        display: block;
+        @include phone{
+            display: none;
+        }
     }
     .screen{
         // @include border;
@@ -59,6 +68,68 @@
         .surprise{
             // @include border;
             width: 850px;
+            position: absolute;
+            top: -10%;
+            left: 20%;
+            opacity: 0;
+        }
+    }
+
+    //phone
+    .op{
+        display: none;
+        @include phone{
+            display: block;
+        }
+    }
+    .screenPhone{
+        // @include border;
+        max-width: 370px;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        .ballPhone{
+            // @include border;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+        }
+        .pokemonTopPhone{
+            // @include border;
+            width: 120px;
+            transform: rotate(270deg);
+            display: inline-block;
+            position: absolute;
+            top: 45%;
+            left: 38%;
+            z-index: 1;
+            opacity: 0;
+        }
+        .pokemonBottomPhone{
+            // @include border;
+            width: 120px;
+            transform: rotate(270deg);
+            display: inline-block;
+            position: absolute;
+            top: 45%;
+            left: 38%;
+            opacity: 0;
+        }
+        .supRolePhone{
+            // @include border;
+            // @include center;
+            width: 200px;
+            position: absolute;
+            top: 30%;
+            left: 35%;
+            opacity: 0;
+            z-index: 1;
+        }
+        .surprisePhone{
+            // @include border;
+            width: 450px;
             position: absolute;
             top: -10%;
             left: 20%;

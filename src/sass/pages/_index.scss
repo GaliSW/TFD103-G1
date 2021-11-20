@@ -39,18 +39,7 @@ body{
                     height: 300px;
                 }
             }
-            #canvas{
-                // @include border;
-                position: absolute;
-                top: 5%;
-            }
-            @media(max-width: 991.98px){
-                #canvas{
-                    display: none;
-                }
-            }
             .welcome{
-                display: none;
                 width: 450px;
                 position: absolute;
                 top: 22%;
@@ -60,7 +49,7 @@ body{
                     left: 6%;
                 }
                 @include phone{
-                    width: 400px;
+                    width: 370px;
                     left: 0;
                 }
             }
@@ -72,7 +61,7 @@ body{
             .logoImg{
                 position: absolute;
                 padding: 0 0 0 260px;
-                margin: -250px 0;
+                margin: -230px 0;
                 transform: rotate(5deg);
                 opacity: 0;
                 img{
@@ -193,28 +182,56 @@ body{
         // left: 50%;
         // transform: translate(-50%, 0) rotate(2deg);
     }
+
+    //web
+    .dpW{
+        display: block;
+        @include phone{
+            display: none;
+        }
+    }
     .sportsCar{
         // @include border;
         position: absolute;
         width: 100%;
         height: 150px;
         top: -150px;
-        @include phone{
-            top: -110px;
-        }
         .carId{
             // @include border;
             position: absolute;
             width: 200px;
-            @include phone{
-                width: 150px;
-            }
             img{
                 width: 100%;
                 vertical-align: bottom;
             }
         }
     }
+
+    //phone
+    .dpP{
+        display: none;
+        @include phone{
+            display: block;
+        }
+    }
+    .sportsCar{
+        // @include border;
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        top: -110px;
+        overflow-x: hidden;
+        .carId{
+            // @include border;
+            position: absolute;
+            width: 150px;
+            img{
+                width: 100%;
+                vertical-align: bottom;
+            }
+        }
+    }
+
     .imgLine{
         // @include border;
         position: absolute;
@@ -813,7 +830,7 @@ body{
         display: table;
         position: relative;
         @include phone{
-            max-width: 500px;
+            max-width: 400px;
             width: 100%;
             height: 400px;
         }
@@ -826,6 +843,10 @@ body{
             top: 26%;
             left: 22%;
             z-index: 1;
+            @include phone{
+                width: 250px;
+                left: 10%;
+            }
             img{
                 width: 100%;
             }
@@ -836,6 +857,11 @@ body{
             width: 300px;
             top: 8%;
             right: 0;
+            @include phone{
+                width: 250px;
+                top: 4%;
+                right: 20%;
+            }
             img{
                 width: 100%;
             }
@@ -846,6 +872,11 @@ body{
             width: 300px;
             top: 8%;
             left: 0;
+            @include phone{
+                width: 250px;
+                top: 4%;
+                left: 15%;
+            }
             img{
                 width: 100%;
             }
