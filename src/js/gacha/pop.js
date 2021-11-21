@@ -23,13 +23,29 @@ let vm0 = new Vue({
     //綁定點擊事件
     methods: {
         clickShow() {
-            let total = (point.value).replace("$", "");;
-            if (total < 300) {
-                alert("您的點數不足，可至儲姪專區進行儲值喔～");
-                return false;
-            } else {
-                this.isShow = true
-            }
+            $.ajax({
+                method: "POST",
+                url: "../php/Gacha/playCheck.php",
+                data: {},
+                dataType: "text",
+                success: function (response) {
+                    if (response == "false") {
+                        let blk = document.getElementById('toLoginBlk');
+                        blk.classList.remove('none');
+                    } else {
+                        let total = (point.value).replace("$", "");;
+                        if (total < 300) {
+                            let blk = document.getElementById('coinBlk');
+                            blk.classList.remove('none');
+                            return false;
+                        } else {
+                            vm0.isShow = true
+                        }
+
+                    }
+                }
+            })
+
         },
         close() {
             // console.log('321');

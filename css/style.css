@@ -2400,6 +2400,214 @@ body {
   text-align: center;
 }
 
+.coinHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.coinHintmaskLayer .coinPopUpBox {
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.coinHintmaskLayer .coinCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.coinHintmaskLayer .coinPopContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .coinHintmaskLayer .coinPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .coinHintmaskLayer .coinPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .coinHintmaskLayer .coinPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .coinHintmaskLayer .coinPopContent {
+    font-size: 12px;
+  }
+}
+
+.coinHintmaskLayer .coinConfirmBlk {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.coinHintmaskLayer .coinConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.coinHintmaskLayer .coinConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+.toLoginHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.toLoginHintmaskLayer .toLoginPopUpBox {
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.toLoginHintmaskLayer .toLoginCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.toLoginHintmaskLayer .toLoginPopContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .toLoginHintmaskLayer .toLoginPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .toLoginHintmaskLayer .toLoginPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .toLoginHintmaskLayer .toLoginPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .toLoginHintmaskLayer .toLoginPopContent {
+    font-size: 12px;
+  }
+}
+
+.toLoginHintmaskLayer .toLoginConfirmBlk {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.toLoginHintmaskLayer .toLoginConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.toLoginHintmaskLayer .toLoginConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
 .miniGameTitle {
   margin: 0 auto;
   text-align: center;
@@ -5353,6 +5561,11 @@ main.login div.contain .bookmark {
   background: linear-gradient(45deg, #024f3f 0%, #b8b8b8 100%);
 }
 
+#contentContainer {
+  height: 536px;
+  overflow-y: auto;
+}
+
 #error {
   color: red;
 }
@@ -5372,6 +5585,24 @@ main.login div.contain .bookmark {
   transition: .5s;
 }
 
+.mgLoginBlk .mgLogoImg {
+  background-image: url(../src/image/index/logo.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: 50%;
+  transform: rotate(7deg) translate(-50%, 0);
+  top: -100px;
+  position: absolute;
+  width: 400px;
+  height: 100%;
+  z-index: -999;
+}
+
+.mgLoginBlk form {
+  margin-top: 200px;
+}
+
 .mgLoginBlk h1 {
   border: none;
 }
@@ -5382,10 +5613,6 @@ main.login div.contain .bookmark {
 
 .mgLoginBlk div {
   margin: 20px 0;
-}
-
-.mgLoginBlk img {
-  width: 400px;
 }
 
 .mgLoginBlk label {
@@ -5461,7 +5688,8 @@ main.login div.contain .bookmark {
 }
 
 .mgHeaderBlk .logo a {
-  background-image: url(../src/image/manager/logo.png);
+  background-image: url(../src/image/index/logo.png);
+  transform: rotate(7deg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -5496,24 +5724,25 @@ main.login div.contain .bookmark {
 }
 
 .mgHeaderBlk .logOut button {
-  color: #60cd90;
-  width: 150px;
-  padding: 0px;
-  background-color: #0e3461;
-  border: 3px solid #60cd90;
-  text-align: center;
-  font-size: 20px;
-  position: relative;
-  border-radius: 10px;
-  transition: .3s;
-}
-
-.mgHeaderBlk .logOut button:hover {
   color: #0e3461;
   width: 150px;
   padding: 0px;
   background-color: #60cd90;
   border: 3px solid #0e3461;
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  border-radius: 10px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.mgHeaderBlk .logOut button:hover {
+  color: #60cd90;
+  width: 150px;
+  padding: 0px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
   text-align: center;
 }
 

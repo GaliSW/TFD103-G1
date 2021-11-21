@@ -4,7 +4,7 @@
 
     $sql = "SELECT MAUTH from MANAGER where MACCOUNT = ? ";
     $statement = $pdo->prepare($sql);
-    $statement->bindValue(1 , getSessionB());   
+    $statement->bindValue(1 , getSession());   
 
     $statement->execute();
 
@@ -12,7 +12,7 @@
     
     echo json_encode($data);
     //回傳session檢查結果
-    // echo getSessionB();
+    // echo getSession();
     
     
 

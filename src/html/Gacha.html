@@ -83,8 +83,8 @@
                 <!-- 頁籤 -->
                 <div class="button_bar ">
                     <button id="box1" class="-on">扭蛋</button>
-                    <button id="box2" onclick="callMyRole()">我的角色</button>
-                    <button id="box3" onclick="callAllRole()">角色圖鑑</button>
+                    <button id="box2" onclick="callMyRole(1)">我的角色</button>
+                    <button id="box3" onclick="callAllRole(1)">角色圖鑑</button>
                 </div>
             </div>
         </div>
@@ -191,7 +191,7 @@
     <div id="bonusBlk" class="bonusBlk none">
         <section class="gachaHintmaskLayer">
             <div class="bonusPopUpBox">
-                <div onclick="bonusClose()" class="bonusCloseBtn">
+                <div onclick="popClose(this)" class="bonusCloseBtn">
                     x
                 </div>
                 <div class="gachaPopContent">
@@ -201,8 +201,46 @@
                     </p>
                 </div>
                 <div class="bonusConfirmBlk">
+                    <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
                     <button class="bonusConfirmBtn" onclick="toMember()">點我查看頭像</button>
-                    <button class="bonusConfirmBtn" onclick="bonusClose()">我知道了</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 餘額不足提示 -->
+    <div id="coinBlk" class="coinBlk none">
+        <section class="coinHintmaskLayer">
+            <div class="coinPopUpBox">
+                <div onclick="popCloseX(this)" class="coinCloseBtn">
+                    x
+                </div>
+                <div class="coinPopContent">
+                    <p>
+                        您目前點數餘額不足喔<i class="far fa-sad-tear"></i>
+                    </p>
+                </div>
+                <div class="coinConfirmBlk">
+                    <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                    <button class="bonusConfirmBtn" onclick="toPoint()">前往儲值</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 尚未登入提示 -->
+    <div id="toLoginBlk" class="toLoginBlk none">
+        <section class="toLoginHintmaskLayer">
+            <div class="toLoginPopUpBox">
+                <div onclick="popCloseX(this)" class="toLoginCloseBtn">
+                    x
+                </div>
+                <div class="toLoginPopContent">
+                    <p>
+                        <i class="far fa-user-circle"></i>&nbsp;您尚未登入會員喔
+                    </p>
+                </div>
+                <div class="toLoginConfirmBlk">
+                    <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                    <button class="bonusConfirmBtn" onclick="toLogin()">登入或註冊～</button>
                 </div>
             </div>
         </section>
@@ -211,171 +249,16 @@
     <!-- 我的角色 -->
     <section class="myRoleBlk boxBlur" id="boxTwo">
         <div class="myRoleContent" id="myRoleContent">
-            <section class="rolesBlk">
-                <div class="container">
-                    <div class="inner">
-                        <div class="content">
-
-                            <span><img src="../image/ROLE/role9.png" alt=""></span>
-                            <h2>我是一隻貓</h2>
-                        </div>
-                        <div class="lower">
-                            <div class="features-list">
-                                <h1>ID:xxx</h1>
-                                <br>
-                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="cta roleInfo">查看能力值</button>
-                </div>
-            </section>
-            <section class="rolesBlk">
-                <div class="container">
-                    <div class="inner">
-                        <div class="content">
-
-                            <span><img src="../image/gacha/role9.png" alt=""></span>
-                            <h2>我是一隻貓</h2>
-                        </div>
-                        <div class="lower">
-                            <div class="features-list">
-                                <h1>ID:xxx</h1>
-                                <br>
-                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="cta roleInfo">查看能力值</button>
-                </div>
-            </section>
-            <section class="rolesBlk">
-                <div class="container">
-                    <div class="inner">
-                        <div class="content">
-
-                            <span><img src="../image/gacha/role9.png" alt=""></span>
-                            <h2>我是一隻貓</h2>
-                        </div>
-                        <div class="lower">
-                            <div class="features-list">
-                                <h1>ID:xxx</h1>
-                                <br>
-                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="cta roleInfo">查看能力值</button>
-                </div>
-            </section>
-            <section class="rolesBlk">
-                <div class="container">
-                    <div class="inner">
-                        <div class="content">
-
-                            <span><img src="../image/gacha/role9.png" alt=""></span>
-                            <h2>我是一隻貓</h2>
-                        </div>
-                        <div class="lower">
-                            <div class="features-list">
-                                <h1>ID:xxx</h1>
-                                <br>
-                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="cta roleInfo">查看能力值</button>
-                </div>
-            </section>
-            <section class="rolesBlk">
-                <div class="container">
-                    <div class="inner">
-                        <div class="content">
-
-                            <span><img src="../image/gacha/role9.png" alt=""></span>
-                            <h2>我是一隻貓</h2>
-                        </div>
-                        <div class="lower">
-                            <div class="features-list">
-                                <h1>ID:xxx</h1>
-                                <br>
-                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="cta roleInfo">查看能力值</button>
-                </div>
-            </section>
         </div>
-
-
-        <!-- <table>
-            <tr>
-                <th col-3>我的角色</th>
-                <th col-3>角色名稱</th>
-                <th col-3>角色編號</th>
-                <th col-3>角色能力值</th>
-            </tr>
-            <tr>
-                <td><img src="../dist/images/gacha/role9.png" alt="#"></td>
-                <td>米奇林貓</td>
-                <td>ani3450395</td>
-                <td class="chart">
-                    <canvas class="myChart" width="100px" height="100px" id='firstChart'></canvas>
-                </td>
-                <td>
-                    <div class="roleInfo">查看角色資訊</div>
-                </td>
-            </tr>
-        </table>
-        <table>
-            <tr>
-                <th>我的角色</th>
-                <th>角色名稱</th>
-                <th>角色編號</th>
-                <th>角色能力值</th>
-            </tr>
-            <tr>
-                <td><img src="../dist/images/gacha/role10.png" alt="#"></td>
-                <td>Duck不必</td>
-                <td>ani3450395</td>
-                <td class="chart">
-                    <canvas class="myChart" id='secondChart'></canvas>
-                </td>
-                <td>
-                    <div class="roleInfo">查看角色資訊</div>
-                </td>
-            </tr>
-        </table>
-        <table>
-            <tr>
-                <th>我的角色</th>
-                <th>角色名稱</th>
-                <th>角色編號</th>
-                <th>角色能力值</th>
-            </tr>
-            <tr>
-                <td><img src="../dist/images/gacha/role9.png" alt="#"></td>
-                <td>米奇林貓</td>
-                <td>ani3450395</td>
-                <td class="chart">
-                    <canvas class="myChart"></canvas>
-                </td>
-                <td>
-                    <div class="roleInfo">查看角色資訊</div>
-                </td>
-            </tr>
-        </table> -->
-
         <div class="pagination">
             <ul class="pagination_list">
-                <li class="prev">&lt;</li>
-                <li class="pageNumber one focus">1</li>
-                <li class="pageNumber two">2</li>
-                <li class="pageNumber three">3</li>
-                <li class="pageNumber four">4</li>
-                <li class="pageNumber five">5</li>
-                <li class="next">&gt;</li>
+                <li class="prev" onclick="prev()">&lt;</li>
+                <li class="pageNumber one focus" onclick="callMyRole(1)">1</li>
+                <li class="pageNumber two" onclick="callMyRole(2)">2</li>
+                <li class="pageNumber three" onclick="callMyRole(3)">3</li>
+                <li class="pageNumber four" onclick="callMyRole(4)">4</li>
+                <li class="pageNumber five" onclick="callMyRole(5)">5</li>
+                <li class="next" onclick="next()">&gt;</li>
             </ul>
         </div>
     </section>
@@ -383,92 +266,16 @@
     <!-- 角色圖鑑 -->
     <section class="myRoleBlk boxBlur" id="boxThree">
         <div class="myRoleContent" id="RoleContent">
-            <section class="rolesBlk">
-                <div class="container">
-                    <div class="inner">
-                        <div class="content">
-
-                            <span><img src="../image/gacha/role9.png" alt=""></span>
-                            <h2>我是一隻貓</h2>
-                        </div>
-                        <div class="lower">
-                            <div class="features-list">
-                                <h1>ID:xxx</h1>
-                                <br>
-                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="cta roleInfo">查看能力值</button>
-                </div>
-            </section>
-            <section class="rolesBlk">
-                <div class="container">
-                    <div class="inner">
-                        <div class="content">
-
-                            <span><img src="../image/gacha/role9.png" alt=""></span>
-                            <h2>我是一隻貓</h2>
-                        </div>
-                        <div class="lower">
-                            <div class="features-list">
-                                <h1>ID:xxx</h1>
-                                <br>
-                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="cta roleInfo">查看能力值</button>
-                </div>
-            </section>
-            <section class="rolesBlk">
-                <div class="container">
-                    <div class="inner">
-                        <div class="content">
-
-                            <span><img src="../image/gacha/role9.png" alt=""></span>
-                            <h2>我是一隻貓</h2>
-                        </div>
-                        <div class="lower">
-                            <div class="features-list">
-                                <h1>ID:xxx</h1>
-                                <br>
-                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="cta roleInfo">查看能力值</button>
-                </div>
-            </section>
-            <section class="rolesBlk">
-                <div class="container">
-                    <div class="inner">
-                        <div class="content">
-
-                            <span><img src="../image/gacha/role9.png" alt=""></span>
-                            <h2>我是一隻貓</h2>
-                        </div>
-                        <div class="lower">
-                            <div class="features-list">
-                                <h1>ID:xxx</h1>
-                                <br>
-                                <h2>我是一隻隱藏在神秘森林的虎貓...</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="cta roleInfo">查看能力值</button>
-                </div>
-            </section>
         </div>
         <div class="pagination">
             <ul class="pagination_list">
-                <li class="prev">&lt;</li>
-                <li class="pageNumber one focus">1</li>
-                <li class="pageNumber two">2</li>
-                <li class="pageNumber three">3</li>
-                <li class="pageNumber four">4</li>
-                <li class="pageNumber five">5</li>
-                <li class="next">&gt;</li>
+                <li class="prev" onclick="prevAll()">&lt;</li>
+                <li class="pageNumber one focus" onclick="callAllRole(1)">1</li>
+                <li class="pageNumber two" onclick="callAllRole(2)">2</li>
+                <li class="pageNumber three" onclick="callAllRole(3)">3</li>
+                <li class="pageNumber four" onclick="callAllRole(4)">4</li>
+                <li class="pageNumber five" onclick="callAllRole(5)">5</li>
+                <li class="next" onclick="nextAll()">&gt;</li>
             </ul>
         </div>
     </section>
@@ -480,22 +287,6 @@
                     x
                 </div>
                 <div id="rolePopContent">
-                    <div class="roleImg">
-                        <img src="../image/ROLE/role6.png" alt="">
-                    </div>
-                    <div class="roleInfoPara">
-                        <div class="para">
-                            <h1>角色名稱:</h1>
-                            <h2>我不是企鵝
-                                <br>
-                                <h1>角色編號:</h1>
-                                <h2>hvsfnvjks</h2>
-
-                        </div>
-                        <div class="chart">
-                            <canvas id="myChart" width="250" height="250"></canvas>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -507,15 +298,12 @@
 <script src="../js/gacha/swiper.js"></script>
 <script src="../js/gacha/gachaGame.js"></script>
 <script src="../js/gacha/pintoo.js"></script>
-<!-- <script src="../js/gacha/chart.js"></script> -->
 <script src="../js/gacha/gachaConfirmPop.js"></script>
 <script src="../js/gacha/toGacha.js"></script>
 <script src="../js/gacha/pop.js"></script>
-<script src="../js/gacha/roleInfoChart.js"></script>
 <script src="../js/gacha/rolePop.js"></script>
 <script src="../js/gacha/pagination.js"></script>
 <script src="../js/gacha/gachaScreen.js"></script>
-<!-- <script src="../js/gacha/perChart.js"></script> -->
 <script>
     window.onload = function () {
         let p1 = new Ping();
@@ -537,7 +325,7 @@
                 let point = document.getElementById('point');
                 let p = response;
                 if (response != "false") {
-                    if (response = "") {
+                    if (response == "") {
                         point.value = "0";
                     } else {
                         point.value = p + "E";
@@ -549,8 +337,145 @@
             }
         });
     }
-    function chartApi() {
-        let chart = document.getElementById('firstChart').getContext('2d');
+    function toMember() {
+        location.href = "./member_info.html";
+    };
+    function toPoint() {
+        location.href = "./deposit.html";
+    };
+    function toLogin() {
+        location.href = "./login.html";
+    };
+    function callMyRole(page) {
+        $.ajax({
+            method: "POST",
+            url: "../php/Gacha/callMyRole.php",
+            data: {},
+            dataType: "json",
+            success: function (response) {
+                if (response == "N") {
+                    alert("尚未登入會員！");
+                } else {
+                    let myRoleContent = document.getElementById('myRoleContent');
+                    myRoleContent.innerHTML = "";
+                    $.each(response, function (index, row) {
+                        if ((page - 1) * 8 <= index && index < page * 8) {
+                            let redShadow = "";
+                            let shadowNone = "";
+                            let status = ""
+                            if (row.STATUS == 0) {
+                                redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
+                                shadowNone = `this.style.boxShadow='none'`;
+                                status = "上架中";
+                            }
+                            let str = ` 
+                        <section class="rolesBlk">
+                            <div class="container"  onMouseOver="${redShadow}"  onMouseOut="${shadowNone}">
+                                <div class="inner">
+                                    <div class="content">
+                                        <span><img src="../image/ROLE/${row.ROLE_IMG}" alt=""></span>
+                                        <h2>${row.RNAME}</h2>
+                                    </div>
+                                    <div class="lower">
+                                        <div class="features-list">
+                                            <h1 name="${row.ABILITY}">角色編號:${row.ROLE_ID}</h1>
+                                            <p style="color:red">${status}</p>
+                                            <br>
+                                            <h2>${row.ROLE_CONTENT}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="cta roleInfo" onclick="callChart(this)">查看能力值</button>
+                            </div>
+                        </section>`;
+                            myRoleContent.insertAdjacentHTML("afterbegin", str);
+                        }
+                    });
+
+                }
+            }
+        })
+    }
+    function callAllRole(page) {
+        $.ajax({
+            method: "POST",
+            url: "../php/Gacha/callAllRole.php",
+            data: {},
+            dataType: "json",
+            success: function (response) {
+                let RoleContent = document.getElementById('RoleContent');
+                RoleContent.innerHTML = "";
+                $.each(response, function (index, row) {
+                    if ((page - 1) * 8 <= index && index < page * 8) {
+                        let redShadow = "";
+                        let shadowNone = "";
+                        let status = "未抽取"
+                        if (row.AMOUNT == 0) {
+                            redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
+                            shadowNone = `this.style.boxShadow='none'`;
+                            status = "已抽取";
+                        }
+                        let str = ` 
+                        <section class="rolesBlk">
+                            <div class="container"  onMouseOver="${redShadow}"  onMouseOut="${shadowNone}">
+                                <div class="inner">
+                                    <div class="content">
+                                        <span><img src="../image/ROLE/${row.ROLE_IMG}" alt=""></span>
+                                        <h2>${row.RNAME}</h2>
+                                    </div>
+                                    <div class="lower">
+                                        <div class="features-list">
+                                            <h1 name="${row.ABILITY}">ID:${row.ROLE_ID}</h1>
+                                            <p style="color:red">${status}</p>
+                                            <br>
+                                            <h2>${row.ROLE_CONTENT}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="cta roleInfo" onclick="callChart(this)">查看能力值</button>
+                            </div>
+                        </section>`;
+                        RoleContent.insertAdjacentHTML("afterbegin", str);
+                    }
+                });
+            }
+        })
+    }
+    function callChart(item) {
+        let rolesPop = document.getElementById('rolesPop');
+        rolesPop.classList.remove('none');
+
+        let img = item.parentNode.childNodes[1].childNodes[1].childNodes[1].childNodes[0].attributes['src'].value;
+        // console.log(item.parentNode.childNodes[1].childNodes[3].childNodes[1].childNodes[1].attributes['name'].value);
+        let rName = item.parentNode.childNodes[1].childNodes[1].childNodes[3].innerText;
+        let id = item.parentNode.childNodes[1].childNodes[3].childNodes[1].childNodes[1].innerText;
+        let ab = item.parentNode.childNodes[1].childNodes[3].childNodes[1].childNodes[1].attributes['name'].value;
+        let rolePopContent = document.getElementById('rolePopContent');
+        let str = `
+                    <div class="roleImg">
+                        <img src="${img}" alt="">
+                    </div>
+                    <div class="roleInfoPara">
+                        <div class="para">
+                            <h1>角色名稱:</h1>
+                            <h2>${rName}
+                                <br>
+                                <h1>${id}</h1>
+
+                        </div>
+                        <div class="chart">
+                            <canvas id="myChart" width="250" height="250"></canvas>
+                        </div>
+                    </div>
+                        `;
+        rolePopContent.innerHTML = str;
+        let chart = document.getElementById('myChart').getContext('2d');
+        let num = `"${ab}"`;
+        let ab1 = num.slice(1, 2);
+        let ab2 = num.slice(2, 3);
+        let ab3 = num.slice(3, 4);
+        let ab4 = num.slice(4, 5);
+        let ab5 = num.slice(5, 6);
 
         const chartData = {
             labels: [
@@ -562,7 +487,7 @@
             ],
             datasets: [{
                 label: '',
-                data: [9, 9, 9, 9, 9],
+                data: [ab1, ab2, ab3, ab4, ab5],
                 fill: true,
                 fillStyle: 'red',
                 backgroundColor: ' rgba(14, 52, 97, .5)',
@@ -608,11 +533,42 @@
         });
 
     }
-    function toMember() {
-        location.href = "./member_info.html";
-    };
     function bonusClose() {
         document.getElementById('bonusBlk').classList.add('none');
+    }
+    function prev() {
+        let page = document.querySelector('.pagination_list').querySelector(".focus").innerText - 1;
+        if (page == 0) {
+            return false;
+        } else {
+            callMyRole(page);
+        }
+    }
+    function next() {
+        let page = document.querySelector('.pagination_list').querySelector(".focus").innerText;
+        callMyRole(parseInt(page) + 1);
+    }
+    function prevAll() {
+        let page = document.querySelector('.pagination_list').querySelector(".focus").innerText - 1;
+
+        if (page == 0) {
+            return false;
+        } else {
+            callAllRole(page);
+        }
+
+    }
+    function nextAll() {
+        let page = document.querySelector('.pagination_list').querySelector(".focus").innerText;
+        callAllRole(parseInt(page) + 1);
+    }
+    function popClose(item) {
+        let blk = item.parentNode.parentNode.parentNode.parentNode;
+        blk.classList.add('none');
+    }
+    function popCloseX(item) {
+        let blk = item.parentNode.parentNode.parentNode;
+        blk.classList.add('none');
     }
 </script>
 
