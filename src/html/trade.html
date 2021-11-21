@@ -335,7 +335,7 @@
                 //console.log(price);
                 
                 let gachaId = document.getElementById("showImg").attributes['name'].value;
-                //console.log(gachaId);
+                console.log(gachaId);
                 
                 let status = document.getElementById("showImg").attributes['alt'].value;
                 //console.log(status);
@@ -401,13 +401,14 @@
                             
 
                             $.each(response, function (index, row) {
-                                let str = ` <img src="../image/ROLE/${row.ROLE_IMG}" onclick="chooseImg(this)" style="width:120px;" id="${row.RNAME}" name= "${row.FK_GACHA_ID}" alt="${row.STATUS}">`;
+                                let str = ` <img src="../image/ROLE/${row.ROLE_IMG}" onclick="chooseImg(this)" style="width:120px;" id="${row.RNAME}" name= "${row.GACHA_ID}" alt="${row.STATUS}">`;
                                 chooseRole.insertAdjacentHTML("beforeend",str);
                                 innerAccount.innerHTML= `${row.FK_USERNAME}`;
                                 
                                 
                             })
                             let chooseRoleChild = document.getElementById("chooseRole").childNodes[1];
+                            console.log(chooseRoleChild);
                             let showImg = document.getElementById("showImg");
                             let N = chooseRoleChild.attributes['src'].value;
                             showImg.attributes['src'].value = `${N}`;
@@ -805,17 +806,14 @@
 			}
 </script>
 
-<!-- 價錢搜尋function -->
+<!-- 搜尋3000以上function -->
 
 <script>
-	function search() {
-				let keyUpValue = document.getElementById('ysearchy').value;
+	function search3000() {
 				$.ajax({
 					method: "POST",
 					url: "../php/product/searchRole.php",
-					data: {
-						search: keyUpValue,
-					},
+					data: {},
 					dataType: "json",
 					success: function (response) {
 						//更新html內容前先清空原有資料
@@ -826,8 +824,8 @@
 						//更新html內容(透過jQuery跑迴圈取值)
 						$.each(response, function (index, row) {
 								let redShadow = "";
-                        		let shadowNone = "";
-                        		let trans = ""
+                let shadowNone = "";
+                let trans = ""
 								if (row.TRANS == 1) {
 									redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
 									shadowNone = `this.style.boxShadow='none'`;

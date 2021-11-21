@@ -502,6 +502,15 @@
   margin-left: 6px;
 }
 
+#header .icon .button p {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: red;
+  border: solid 1px red;
+  border-radius: 50%;
+}
+
 #header .icon .disappear {
   display: none;
 }
@@ -1272,8 +1281,6 @@ main.deposit div.container .col-12 {
 main.deposit div.container div.sumPoint {
   font-size: 20px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
   color: white;
@@ -2324,8 +2331,7 @@ body {
 .gachaHintmaskLayer .bonusPopUpBox {
   position: relative;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   left: 50%;
   background-color: #024f3f;
   border: 2px solid #10c5b1;
@@ -2351,23 +2357,15 @@ body {
 
 .gachaHintmaskLayer .gachaPopContent {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   color: #60cd90;
   color: #10c5b1;
   font-size: 16px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -2396,12 +2394,9 @@ body {
 
 .gachaHintmaskLayer .bonusConfirmBlk {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   bottom: 10px;
 }
 
@@ -2415,7 +2410,6 @@ body {
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
-  -webkit-transition: .3s;
   transition: .3s;
 }
 
@@ -2564,20 +2558,8 @@ body {
 
 .myRoleBlk .myRoleContent {
   display: flex;
-<<<<<<< HEAD
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
-=======
-  justify-content: flex-end;
-  flex-wrap: wrap;
-}
-
-.myRoleBlk .RoleContent {
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
->>>>>>> MARK
 }
 
 .myRoleBlk .pagination {
@@ -2585,15 +2567,10 @@ body {
 }
 
 .rolesBlk {
-<<<<<<< HEAD
   margin-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 25%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 @media (max-width: 767.98px) {
@@ -2610,44 +2587,16 @@ body {
 
 .rolesBlk .container {
   width: 90%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  border: 1px solid #60cd90;
-=======
-  margin: 0 auto;
-  margin-top: 0px;
-  max-width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.rolesBlk .container {
-  width: 300px;
   justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
+  transition: all 1s ease;
   border: 1px solid #60cd90;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
->>>>>>> MARK
 }
 
 .rolesBlk .container:hover {
-  -webkit-box-shadow: rgba(16, 197, 177, 0.8) 0px 19px 38px, rgba(16, 197, 177, 0.2) 0px 15px 12px;
-          box-shadow: rgba(16, 197, 177, 0.8) 0px 19px 38px, rgba(16, 197, 177, 0.2) 0px 15px 12px;
+  box-shadow: rgba(16, 197, 177, 0.8) 0px 19px 38px, rgba(16, 197, 177, 0.2) 0px 15px 12px;
 }
 
 @media (max-width: 1200px) {
@@ -2671,8 +2620,7 @@ body {
 
 @media (max-width: 413.98px) {
   .rolesBlk .container:hover span {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
+    transform: translateY(10%);
   }
 }
 
@@ -3678,14 +3626,8 @@ body {
 .index .indexOne .banner .logoImg {
   position: absolute;
   padding: 0 0 0 260px;
-<<<<<<< HEAD
   margin: -230px 0;
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
-=======
-  margin: -250px 0;
   transform: rotate(5deg);
->>>>>>> MARK
   opacity: 0;
 }
 
@@ -6085,8 +6027,6 @@ main.member div.bar div.trading {
 }
 
 main.member div.bar div.trading div.countDeal {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
@@ -6668,8 +6608,6 @@ main.trading_list div.bar div.trading {
 }
 
 main.trading_list div.bar div.trading div.countDeal {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
@@ -6966,8 +6904,6 @@ main.points_list div.bar div.trading {
 }
 
 main.points_list div.bar div.trading div.countDeal {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
@@ -7227,8 +7163,6 @@ main.member_info div.bar div.trading {
 }
 
 main.member_info div.bar div.trading div.countDeal {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
@@ -9409,17 +9343,6 @@ main.signup .verify_contain div.verify input {
   overflow: auto;
 }
 
-<<<<<<< HEAD
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .roleUpPop .popUpBox {
-    position: static;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
-=======
->>>>>>> MARK
 .roleUpPop .popUpBox .popContent2 {
   text-align: center;
   color: #60cd90;
@@ -9450,13 +9373,7 @@ main.signup .verify_contain div.verify input {
 .roleUpPop .popUpBox .input {
   display: flex;
   border: 1px solid red;
-<<<<<<< HEAD
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-=======
   align-items: flex-start;
->>>>>>> MARK
   display: -moz-flex;
   width: 90%;
   margin: 0 auto;
@@ -9481,17 +9398,13 @@ main.signup .verify_contain div.verify input {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .roleUpPop .popUpBox .input .chooseRoleBlockk {
-    -webkit-box-flex: 0.6;
-        -ms-flex: 0.6;
-            flex: 0.6;
+    flex: 0.6;
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
   .roleUpPop .popUpBox .input .chooseRoleBlockk {
-    -webkit-box-flex: 0.6;
-        -ms-flex: 0.6;
-            flex: 0.6;
+    flex: 0.6;
   }
 }
 
@@ -9547,13 +9460,8 @@ main.signup .verify_contain div.verify input {
 
 @media (min-width: 375px) and (max-width: 577px) {
   .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
 
@@ -9577,11 +9485,6 @@ main.signup .verify_contain div.verify input {
 .roleUpPop .popUpBox .input .showImgBlock {
   border: 1px solid blue;
   margin: 20px;
-<<<<<<< HEAD
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-=======
   flex: 1;
 }
 
@@ -9590,7 +9493,6 @@ main.signup .verify_contain div.verify input {
     width: 200px;
     margin: 30px auto 0;
   }
->>>>>>> MARK
 }
 
 .roleUpPop .popUpBox .input .informationBlock {
@@ -9714,16 +9616,10 @@ main.signup .verify_contain div.verify input {
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border: 1px solid #10c5b1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px 0;
 }
 
@@ -9733,8 +9629,7 @@ main.signup .verify_contain div.verify input {
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .leftBlock {
   width: 100px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   border: 1px solid gold;
 }
 
@@ -9753,16 +9648,8 @@ main.signup .verify_contain div.verify input {
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-=======
   justify-content: center;
->>>>>>> MARK
   color: #fff;
   border: 1px solid red;
 }
@@ -9795,8 +9682,6 @@ main.signup .verify_contain div.verify input {
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: center;
 }
@@ -9894,12 +9779,7 @@ main.signup .verify_contain div.verify input {
 
 .roleUpPop .popContent3 .manageList .itemFlex .leftBlock {
   width: 100px;
-<<<<<<< HEAD
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-=======
   flex-shrink: 0;
->>>>>>> MARK
   border: 2px solid yellow;
 }
 
@@ -10303,8 +10183,7 @@ top: 5px; */
 
 .gachascreen .screenPhone .pokemonTopPhone {
   width: 120px;
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
+  transform: rotate(270deg);
   display: inline-block;
   position: absolute;
   top: 45%;
@@ -10315,8 +10194,7 @@ top: 5px; */
 
 .gachascreen .screenPhone .pokemonBottomPhone {
   width: 120px;
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
+  transform: rotate(270deg);
   display: inline-block;
   position: absolute;
   top: 45%;
