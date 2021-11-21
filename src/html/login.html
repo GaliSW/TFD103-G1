@@ -15,80 +15,85 @@
 </head>
 
 <body>
-    <!-- 首頁nav -->
-    <header id="header">
-        <div class="container">
-            <a class="logo" href="../html/index.html">
-                <img src="../image/index/logo.png" alt="logoImg">
-            </a>
-            <nav class="navbar">
-                <ul>
+   <!-- 首頁nav -->
+   <header id="header">
+    <div class="container">
+        <a class="logo" href="../html/index.html">
+            <img src="../image/index/logo.png" alt="logoImg">
+        </a>
+        <nav class="navbar">
+            <ul>
+                <a href="../html/Intro.html">
+                    <li>
+                        <img src="../image/index/pic.png">
+                        消息/介紹
+                    </li>
+                </a>
+                <a href="../html/Gacha.html">
+                    <li>
+                        <img src="../image/index/pokemon.png">
+                        角色抽取
+                    </li>
+                </a>
+                <a href="../html/trade.html">
+                    <li>
+                        <img src="../image/index/role01.png">
+                        角色交易
+                    </li>
+                </a>
+            </ul>
+        </nav>
+
+        <!-- phone nav-->
+        <nav class="hamburger">
+            <div id="menuToggle">
+                <input type="checkbox" />
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="headerMenu">
+                    <a href="../html/index.html"><img src="../image/index/logo.png"></a>
                     <a href="../html/Intro.html">
-                        <li>
-                            <img src="../image/index/pic.png">
-                            消息/介紹
-                        </li>
+                        <li><img src="../image/index/pic.png">消息/介紹</li>
                     </a>
                     <a href="../html/Gacha.html">
-                        <li>
-                            <img src="../image/index/pokemon.png">
-                            角色抽取
-                        </li>
+                        <li><img src="../image/index/pokemon.png">角色抽取</li>
                     </a>
                     <a href="../html/trade.html">
-                        <li>
-                            <img src="../image/index/role01.png">
-                            角色交易
-                        </li>
+                        <li><img src="../image/index/role01.png">角色交易</li>
                     </a>
+                    <div id="LogOut" onclick="LogOut()">
+                        <a href="#">登出</a>
+                    </div>
                 </ul>
-            </nav>
-
-            <!-- phone nav-->
-            <nav class="hamburger">
-                <div id="menuToggle">
-                    <input type="checkbox" />
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                    <ul id="menu">
-                        <a href="../html/index.html"><img src="../image/index/logo.png"></a>
-                        <a href="../html/Intro.html">
-                            <li><img src="../image/index/pic.png">消息/介紹</li>
-                        </a>
-                        <a href="../html/Gacha.html">
-                            <li><img src="../image/index/pokemon.png">角色抽取</li>
-                        </a>
-                        <a href="../html/trade.html">
-                            <li><img src="../image/index/role01.png">角色交易</li>
-                        </a>
-                        <button class="btn">登出</button>
-                    </ul>
-                </div>
-            </nav>
-            <!-- phone nav end -->
-
-            <div class="icon">
-                <botton type="button" class="button disappear" id="appear1">
-                    <a href="../html/deposit.html"><i class="fas fa-coins fa-2x"></i></a>
-                    <div class="show">儲值</div>
-                </botton>
-                <botton type="button" class="button disappear" id="appear2">
-                    <a href="../html/collection.html"><i class="fab fa-gratipay fa-2x"></i></a>
-                    <div class="show">收藏</div>
-                </botton>
-                <botton type="button" class="button" onclick="memberCheck()">
-                    <a href="#"><i class="fas fa-user-circle fa-2x"></i></a>
-                    <div class="show">會員</div>
-                </botton>
-                <botton type="button" class="button" id="LogOut" onclick="LogOut()">
-                    <a href="#">登出</a>
-                </botton>
             </div>
+        </nav>
+        <!-- phone nav end -->
+
+        <div class="icon">
+            <botton type="button" class="button disappear" id="appear1">
+                <a href="../html/deposit.html"><i class="fas fa-coins fa-2x"></i></a>
+                <p id="headerResult"></p>
+                <div class="show">儲值</div>
+            </botton>
+            <botton type="button" class="button disappear" id="appear2">
+                <a href="../html/collection.html"><i class="fab fa-gratipay fa-2x"></i></a>
+                <div class="show">收藏</div>
+            </botton>
+            <botton type="button" class="button" onclick="memberCheck()">
+                <a href="#"><i class="fas fa-user-circle fa-2x"></i>
+                    <h5 id="headerCountResult" class="countResul _off"></h5>
+                </a>
+                <div class="show">會員</div>
+            </botton>
+            <botton type="button" id="LogOut" onclick="LogOut()">
+                <a href="#">登出</a>
+            </botton>
         </div>
-    </header>
+    </div>
+</header>
     <!-- @@include('./header.html') -->
 
     <main class="login">

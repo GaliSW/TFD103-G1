@@ -225,7 +225,7 @@
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   #header .logo {
-    margin: 0 0 10px 30px;
+    margin: 0 0 10px 0px;
   }
 }
 
@@ -397,12 +397,12 @@
   }
 }
 
-@media (min-width: 375px) and (max-width: 413.98px) {
+@media (max-width: 480px) {
   #header .hamburger {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 32px;
+    margin: 30px 20px;
   }
 }
 
@@ -499,7 +499,7 @@
           transform-origin: 0% 100%;
 }
 
-#header #menu {
+#header #headerMenu {
   position: absolute;
   width: 300px;
   height: 100vh;
@@ -517,30 +517,31 @@
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#header #menu a > img {
+#header #headerMenu a > img {
   width: 100px;
   margin-left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
 }
 
-#header #menu li {
+#header #headerMenu li {
+  background-color: lightblue;
   padding: 15px 0;
   font-size: 18px;
   text-align: center;
   border-top: 1px solid #0E3461;
 }
 
-#header #menu li:hover {
+#header #headerMenu li:hover {
   background: #0E3461;
 }
 
-#header #menu li:hover img {
+#header #headerMenu li:hover img {
   -webkit-animation: move 1s infinite;
           animation: move 1s infinite;
 }
 
-#header #menu li img {
+#header #headerMenu li img {
   width: 30px;
   margin-right: 10px;
   vertical-align: bottom;
@@ -548,17 +549,25 @@
           animation-play-state: paused;
 }
 
-#header #menu .btn {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  cursor: pointer;
-  color: cornflowerblue;
+#header #headerMenu .hamLog {
+  display: none;
 }
 
-#header #menu .btn:hover {
-  background-color: cornflowerblue;
-  color: #fff;
+@media (max-width: 480px) {
+  #header #headerMenu .hamLog {
+    display: block;
+    position: absolute;
+    padding: 15px 0;
+    font-size: 18px;
+    text-align: center;
+    border-top: 1px solid #0E3461;
+    bottom: 0;
+    width: 100%;
+    background-color: azure;
+  }
+  #header #headerMenu .hamLog:hover {
+    background: #0E3461;
+  }
 }
 
 #header .icon {
@@ -580,14 +589,26 @@
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   #header .icon {
-    margin: 0 8px;
+    margin: 0 0;
   }
 }
 
 #header .icon .button {
   text-align: center;
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  #header .icon .button {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  #header .icon .button {
+    font-size: 12px;
+  }
 }
 
 #header .icon .button:hover .show {
@@ -599,12 +620,19 @@
   color: #a2d6d2;
   border: 1px solid #19ADD2;
   border-radius: 50%;
+  position: relative;
 }
 
 #header .icon .button a:hover {
   color: #9dfdc8;
   border: 1px solid #0E3461;
   border-radius: 50%;
+}
+
+@media (max-width: 480px) {
+  #header .icon .button a {
+    margin: 5px;
+  }
 }
 
 #header .icon .button .show {
@@ -616,6 +644,55 @@
   position: absolute;
   margin-top: 5px;
   margin-left: 6px;
+}
+
+@media (max-width: 480px) {
+  #header .icon .button .show {
+    padding: 2px 2px;
+    margin-left: 4px;
+  }
+}
+
+#header .icon .button h5 {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: red;
+  right: -6px;
+  top: -22px;
+  position: absolute;
+}
+
+#header .icon .button h5._off {
+  display: none;
+}
+
+#header .icon .button #headerResult {
+  height: 20px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+@media (max-width: 480px) {
+  #header .icon .button #headerResult {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #header .icon #LogOut {
+    display: none;
+  }
+}
+
+#header .icon #LogOut a {
+  margin: 0px;
+  color: #a2d6d2;
+  font-size: 14px;
+}
+
+#header .icon #LogOut a:hover {
+  color: #9dfdc8;
 }
 
 #header .icon .disappear {
