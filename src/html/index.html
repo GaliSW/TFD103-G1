@@ -55,7 +55,7 @@
                         <span></span>
                         <span></span>
 
-                        <ul id="menu">
+                        <ul id="headerMenu">
                             <a href="../html/index.html"><img src="../image/index/logo.png"></a>
                             <a href="../html/Intro.html">
                                 <li><img src="../image/index/pic.png">消息/介紹</li>
@@ -66,7 +66,10 @@
                             <a href="../html/trade.html">
                                 <li><img src="../image/index/role01.png">角色交易</li>
                             </a>
-                            <button class="btn">登出</button>
+
+                            <a href="#">
+                                <div class="hamLog" id="LogOut" onclick="LogOut()">登出</div>
+                            </a>
                         </ul>
                     </div>
                 </nav>
@@ -75,6 +78,7 @@
                 <div class="icon">
                     <botton type="button" class="button disappear" id="appear1">
                         <a href="../html/deposit.html"><i class="fas fa-coins fa-2x"></i></a>
+                        <p id="headerResult"></p>
                         <div class="show">儲值</div>
                     </botton>
                     <botton type="button" class="button disappear" id="appear2">
@@ -82,12 +86,13 @@
                         <div class="show">收藏</div>
                     </botton>
                     <botton type="button" class="button" onclick="memberCheck()">
-                        <a href="#"><i class="fas fa-user-circle fa-2x"></i></a>
+                        <a href="#"><i class="fas fa-user-circle fa-2x"></i>
+                            <h5 id="headerCountResult" class="countResul _off"></h5>
+                        </a>
                         <div class="show">會員</div>
                     </botton>
-                    <botton type="button" class="button" id="LogOut" onclick="LogOut()">
-                        <a href="#"><i class="fas fa-user-circle fa-2x"></i></a>
-                        <div class="show">LogOut</div>
+                    <botton type="button" id="LogOut" onclick="LogOut()">
+                        <a href="#">登出</a>
                     </botton>
                 </div>
             </div>
@@ -98,7 +103,6 @@
         <section class="indexOne">
             <div class="banner">
                 <div class="box"></div>
-                <canvas id="canvas" width="1000" height="800"></canvas>
                 <div class="welcome">
                     <img src="../image/index/text.png">
                 </div>
@@ -123,7 +127,8 @@
         <!-- bgTwo -->
         <section class="indexTwo">
             <div class="imgBlock angle">
-                <div class="sportsCar">
+                <!-- web -->
+                <div class="sportsCar dpW">
                     <div class="carId car01">
                         <img src="../image/index/car01.png">
                     </div>
@@ -137,6 +142,25 @@
                         <img src="../image/index/car04.png">
                     </div>
                     <div class="carId car05">
+                        <img src="../image/index/car05.png">
+                    </div>
+                </div>
+
+                <!-- phone -->
+                <div class="sportsCar dpP">
+                    <div class="carId car01P">
+                        <img src="../image/index/car01.png">
+                    </div>
+                    <div class="carId car02P">
+                        <img src="../image/index/car02.png">
+                    </div>
+                    <div class="carId car03P">
+                        <img src="../image/index/car03.png">
+                    </div>
+                    <div class="carId car04P">
+                        <img src="../image/index/car04.png">
+                    </div>
+                    <div class="carId car05P">
                         <img src="../image/index/car05.png">
                     </div>
                 </div>

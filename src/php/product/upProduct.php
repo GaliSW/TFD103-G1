@@ -4,8 +4,13 @@ $USERNAME = $_POST["USERNAME"];
 $PRICE = $_POST["PRICE"];
 $TRANS = $_POST["TRANS"];
 $STATUS = $_POST["STATUS"];
-include "../connection.php";
-       //建立SQL
+include "../connection.php";  
+echo $GACHA_ID;
+echo $USERNAME;
+echo $PRICE;
+echo $TRANS;
+echo $STATUS;
+//ho建立SQL 
       $sql = "INSERT INTO PRODUCT(FK_USERNAME, PRICE, TRANS, AMOUNT, ISSHOW, FK_GACHA_ID) VALUES (?, ?, ?, 1, 1, ?);
             UPDATE GACHA SET STATUS = (?) WHERE GACHA_ID = $GACHA_ID";
        //執行

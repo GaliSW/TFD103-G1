@@ -44,6 +44,26 @@ main.member {
             flex-wrap: nowrap;
             padding: 0;
             border: 0;
+
+            div.countDeal {
+                display: flex;
+                width: 100%;
+
+                p {
+                    width: 20px;
+                    height: 20px;
+                    font-size: 16px;
+                    color: red;
+                    border: solid 1px red;
+                    border-radius: 50%;
+
+                }
+
+                p._off {
+                    display: none;
+                }
+            }
+
         }
 
         div.points,
@@ -559,6 +579,25 @@ main.trading_list {
             flex-wrap: nowrap;
             padding: 0;
             border: 0;
+
+            div.countDeal {
+                display: flex;
+                width: 100%;
+
+                p {
+                    width: 20px;
+                    height: 20px;
+                    font-size: 16px;
+                    color: red;
+                    border: solid 1px red;
+                    border-radius: 50%;
+
+                }
+
+                p._off {
+                    display: none;
+                }
+            }
         }
 
         div.points,
@@ -819,6 +858,25 @@ main.points_list {
             flex-wrap: nowrap;
             padding: 0;
             border: 0;
+
+            div.countDeal {
+                display: flex;
+                width: 100%;
+
+                p {
+                    width: 20px;
+                    height: 20px;
+                    font-size: 16px;
+                    color: red;
+                    border: solid 1px red;
+                    border-radius: 50%;
+
+                }
+
+                p._off {
+                    display: none;
+                }
+            }
         }
 
         div.points,
@@ -1039,6 +1097,25 @@ main.member_info {
             flex-wrap: nowrap;
             padding: 0;
             border: 0;
+
+            div.countDeal {
+                display: flex;
+                width: 100%;
+
+                p {
+                    width: 20px;
+                    height: 20px;
+                    font-size: 16px;
+                    color: red;
+                    border: solid 1px red;
+                    border-radius: 50%;
+
+                }
+
+                p._off {
+                    display: none;
+                }
+            }
         }
 
         div.points,
@@ -1242,6 +1319,17 @@ main.member_info {
                             }
                         }
 
+                        input#visible {
+                            margin: 0;
+                            width: 15px;
+                            height: 15px;
+                            margin-bottom: 10px;
+                        }
+
+                        label {
+                            font-size: 16px;
+                        }
+
                         .button {
                             @include btn_blur(100%, 15px);
                             width: 400px;
@@ -1298,6 +1386,15 @@ main.member_info {
             }
         }
 
+        p._off {
+            display: none;
+            font-size: 16px;
+            color: red;
+        }
+
+        p._on {
+            display: block;
+        }
     }
 
 

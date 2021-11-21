@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>商品頁</title>
 </head>
 <header></header>
@@ -31,8 +32,7 @@
 
                     <div class="collectForm">
                         <div class="btnBlock1">
-                            <button type="button" class="collectBtn" name="button"><i class="fas fa-heart"></i>
-                                收藏</button>
+                            <button type="button" class="collectBtn" name="button" id="myfav" onclick="myfav()"><i class="fas fa-heart"></i>收藏</button>
                             <button type="button" class="changeBtn" name="button" @click=clickPopp()>交換</button>
                         </div>
                     </div>
@@ -48,8 +48,6 @@
             </div>
 
             <main class="test">
-
-
                 <template id="=hiddenPopUps">
 
                     <section class="maskLayer" :class="{'popShow':pop}">
@@ -334,6 +332,10 @@
                 clickPop() {
                     // console.log(e.target)
                     this.content = 'maskBlock'
+
+                    //
+                        
+                    //
                 },
                 myClick(val) {
                     this.content = val;
@@ -344,6 +346,27 @@
             },
         });
 
+    </script>
+
+    <script>
+
+            function myfav(){
+                    let myfavvalue = document.getElementById('myfav');
+                    // console.log(myfavvalue);
+                    $.ajax({
+                    method: "POST",
+                    url: "../php/product/myfav.php",
+                    data: {
+                        myfav: myfavvalue,
+                    },
+                    dataType: "text",
+                    success: function (response) {
+                    },
+                    error: function (exception) {
+                        alert("發生錯誤: " + exception.status);
+                    }
+                });
+            }
     </script>
 
 

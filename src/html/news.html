@@ -17,20 +17,69 @@
     <script src="https://kit.fontawesome.com/8988cd1b75.js" crossorigin="anonymous"></script>
 
     <script>
-        function doQuery(str) {
+        
+        window.onload = function doQuery() {
             $.ajax({
                 method: "POST",
-                url: "API.php",
+                url: "../php/news/callnews.php",
                 data: {
-                    Name: str
+                },
+
+                dataType: "json",
+                success: function (response) {
+                    // console.log(response);
+                    let date = response[0][1];
+                    let title = response[0][2];
+                    let content = response[0][3];
+                    let img = response[0][4];
+
+                    let block_10 = document.getElementById("block_10");
+                    let str =`
+                    <div class="left">
+                        <p>${date}</p>
+                        <h3>${title}</h3>
+                        <p>${content}</p>
+                        <a href="./news_in.html">
+                            <p class="pp">
+                                <閱讀更多>
+                            </p>
+                        </a>
+                    </div>
+                    <img src="../image/intro/${img}" class="fir1" alt="slide4">
+                    `;
+
+                    block_10.innerHTML = str;
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+
+            $.ajax({
+                method: "POST",
+                url: "../php/news/callnews.php",
+                data: {
                 },
                 dataType: "json",
                 success: function (response) {
-                    //更新html內容前先清空原有資料
-                    $("#result").html("");
+                    // console.log(response);
+                    let block_9 = document.getElementById("block_9");
                     //更新html內容(透過jQuery跑迴圈取值)
                     $.each(response, function (index, row) {
-                        $("#result").append(row.Name + "/" + row.PWD + "/" + row.CreateDate + "<br/>");
+                        let str = ` 
+                        <div class="sort" onclick="parseCookie(this)" >
+                            <div class="wrap" >
+                                    <img src="../image/intro/${row.AIMG}" class="sec" alt="slide4">
+                                <div class="name" >
+                                        <p class="p">${row.ADATE}</p>
+                                        <h3>${row.TITLE}</h3>
+                                        <p class="p">${row.CONTENT}</p>
+                                        <p >閱讀更多></p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    block_9.insertAdjacentHTML("beforeend" ,str);
                     });
                 },
                 error: function (exception) {
@@ -39,6 +88,8 @@
             });
         }
     </script>
+
+    
 
 
 </head>
@@ -53,8 +104,8 @@
             <p class="p">首頁>消息/介紹>所有消息</p>
             <section>
                 <h1>所有消息</h1>
-                <div class="content">
-                    <div class="left">
+                <div class="content" id="block_10">
+                    <!-- <div class="left">
                         <p>2022年2月1號</p>
                         <h3>《怪哩怪汽》未來計畫揭露，第二年內容公布！</h3>
                         <p>即將發佈「全新VR賽道」和全新《發現之旅》，還有更多值得期待的內容。</p>
@@ -64,7 +115,7 @@
                             </p>
                         </a>
                     </div>
-                    <img src="../image/intro/1010.jpg" class="fir1" alt="slide4">
+                    <img src="../image/intro/1010.jpg" class="fir1" alt="slide4"> -->
                 </div>
             </section>
         </main>
@@ -72,10 +123,11 @@
 
         <div id="content">
             <div id="block_1">
+
                 <div class="search-form">
                     <div style="display:flex;" class="searsear">
                         <h3>文章搜尋：</h3>
-                        <input id="search-input" type="text" placeholder="關鍵字搜尋" style="outline: none;" />
+                        <input id="search-input" onkeyup="find()" name="search-input" type="text" placeholder="關鍵字搜尋" style="outline: none;" />
                         <style id="m-search"></style>
                     </div>
                 </div>
@@ -85,174 +137,7 @@
                     <button id="bbbn" class="btn old bbbn2">按時間排序由新至舊</button>
                 </div>
 
-
-                <div class="sort" ls_date="2001">
-                    <div class="wrap" data-index="2022年10月25號《怪哩怪汽》:版本更新1.1.1下面來看看版本更新中1.1.值得注意的變動。閱讀更多>">
-                        <a href="./news_in.html">
-                            <img src="../image/intro/4.jpg" class="sec" alt="slide4">
-                        </a>
-                        <div class="name">
-                            <a href="./news_in.html">
-                                <p class="p">2022年10月25號</p>
-                                <h3>《怪哩怪汽》:版本更新1.1.1</h3>
-                                <p class="p">下面來看看版本更新中1.1.值得注意的變動。</p>
-                                <p>閱讀更多></p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sort" ls_date="2002">
-                    <div class="wrap" data-index="2022年9月20號《怪哩怪汽》:搶先一窺季節限定本月的《怪哩怪汽》有什麼新內容？秋季限定角色加冬季活動及更多內容。閱讀更多>">
-                        <a href="./news_in.html">
-                            <img src="../image/intro/newsin_2.jpg" class="sec" alt="slide4">
-                        </a>
-                        <div class="name">
-                            <a href="./news_in.html">
-                                <p class="p">2022年9月20號</p>
-                                <h3>《怪哩怪汽》:搶先一窺季節限定</h3>
-                                <p class="p">本月的《怪哩怪汽》有什麼新內容？秋季限定角色加冬季活動及更多內容。</p>
-                                <p>閱讀更多></p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sort" ls_date="2003">
-                    <div class="wrap" data-index="2022年9月1號《怪哩怪汽》:全新加開賽道終於來啦使用者們的需求我們聽到啦，這次將更新將推出全新的賽道給所有玩家們。閱讀更多>">
-                        <a href="./news_in.html">
-                            <img src="../image/intro/news_in.jpg" class="sec" alt="slide4">
-                        </a>
-                        <div class="name">
-                            <a href="./news_in.html">
-                                <p class="p">2022年9月1號</p>
-                                <h3>《怪哩怪汽》:全新加開賽道終於來啦</h3>
-                                <p class="p">使用者們的需求我們聽到啦，這次將更新將推出全新的賽道給所有玩家們。</p>
-                                <p>閱讀更多></p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sort" ls_date="2004">
-                    <div class="wrap" data-index="2022年8月15號《怪哩怪汽》:我適合什麼角色?快藉由角色圖鑑來收集你最喜歡的或者能力值最強的角色吧。閱讀更多>">
-                        <a href="./news_in.html">
-                            <img src="../image/intro/7.jpg" class="sec" alt="slide4">
-                        </a>
-                        <div class="name">
-                            <a href="./news_in.html">
-                                <p class="p">2022年8月15號</p>
-                                <h3>《怪哩怪汽》:我適合什麼角色?</h3>
-                                <p class="p">我們所有角色都有各自擅長的屬性及技能，快藉由角色圖鑑來收集你最喜歡的或者能力值最強的角色吧。</p>
-                                <p>閱讀更多></p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sort" ls_date="2005">
-                    <div class="wrap"
-                        data-index="2022年8月8號《怪哩怪汽》:父親節特別活動即將發佈「全新VR賽道」和全新《發現之旅》，還有更多值得期待的內容。一年一度的父親節活動又來拉，這次我們特別徵求賽車圖形稿，只要有投稿你就有機會獲得最大獎NT $10,000塊獎金。閱讀更多>">
-                        <a href="./news_in.html">
-                            <img src="../image/intro/8.jpg" class="sec" alt="slide4">
-                        </a>
-                        <div class="name">
-                            <a href="./news_in.html">
-                                <p class="p">2022年8月8號</p>
-                                <h3>《怪哩怪汽》:父親節特別活動</h3>
-                                <p class="p">
-                                    即將發佈「全新VR賽道」和全新《發現之旅》，<br>還有更多值得期待的內容。一年一度的父親節活動又來拉，<br>這次我們特別徵求賽車圖形稿，只要有投稿你就有機會獲得最大獎NT
-                                    $10,000塊獎金。</p>
-                                <p>閱讀更多></p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sort" ls_date="2006">
-                    <div class="wrap78 wrap" data-index="2022年8月2號《怪哩怪汽》:版本更新1.1.0下面來看看版本更新中1.1.0值得注意的變動。閱讀更多>">
-                        <a href="./news_in.html">
-                            <img src="../image/intro/圖-19.jpg" class="sec" alt="slide4">
-                        </a>
-                        <div class="name">
-                            <a href="./news_in.html">
-                                <p class="p">2022年8月2號</p>
-                                <h3>《怪哩怪汽》:版本更新1.1.0</h3>
-                                <p class="p">下面來看看版本更新中1.1.0值得注意的變動。</p>
-                                <p>閱讀更多></p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sort" ls_date="2007">
-                    <div class="wrap78 wrap"
-                        data-index="2022年7月20號《怪哩怪汽》:準備迎接立夏時節的戰爭！這場限時活動將從 7 月 29 日開始，帶來新活動、任務以及獎勵，引爆渡鴉鄉。閱讀更多>">
-                        <a href="./news_in.html">
-                            <img src="../image/intro/圖-16.jpg" class="sec" alt="slide4">
-                        </a>
-                        <div class="name">
-                            <a href="./news_in.html">
-                                <p class="p">2022年7月20號</p>
-                                <h3>《怪哩怪汽》:準備迎接立夏時節的戰爭！</h3>
-                                <p class="p">這場限時活動將從 7 月 29 日開始，帶來新活動、任務以及獎勵，引爆渡鴉鄉。</p>
-                                <p>閱讀更多></p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sort" ls_date="2008">
-                    <div class="wrap78 wrap"
-                        data-index="2022年6月24號《怪哩怪汽》開發日誌：更新流程今天，我們想和各位談談推出一項版本更新背後所經歷的過程，並分享不久的將來裡我們對版本更新的規劃。我們所作所為的核心一向都是我們的社群，也一直努力提供各位美好的遊戲體驗。不過，我們了解到近幾次的版本更新可能沒有符合各位的期待，或是達到我們的標準。閱讀更多>">
-                        <a href="./news_in.html">
-                            <img src="../image/intro/圖-24.jpg" class="sec" alt="slide4">
-                        </a>
-                        <div class="name">
-                            <a href="./news_in.html">
-                                <p class="p">2022年6月24號</p>
-                                <h3>《怪哩怪汽》開發日誌：更新流程</h3>
-                                <p class="p">
-                                    今天，我們想和各位談談推出一項版本更新背後所經歷的過程，並分享不久的將來裡我們對版本更新的規劃。<br>我們所作所為的核心一向都是我們的社群，也一直努力提供各位美好的遊戲體驗。<br>不過，我們了解到近幾次的版本更新可能沒有符合各位的期待，或是達到我們的標準。
-                                </p>
-                                <p>閱讀更多></p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sort" ls_date="2009">
-                    <div class="wrap78 wrap"
-                        data-index="2022年5月14號遊玩《怪哩怪汽》的 5 大秘訣。有許許多多的事情得忙。而為了幫助你充分體現身為玩家的精神，我們蒐集了下列五項秘訣來幫助你展開征服的第一步。閱讀更多>">
-                        <a href="./news_in.html">
-                            <img src="../image/intro/圖-27.jpg" class="sec" alt="slide4">
-                        </a>
-                        <div class="name">
-                            <a href="./news_in.html">
-                                <p class="p">2022年5月14號</p>
-                                <h3>遊玩《怪哩怪汽》的 5 大秘訣</h3>
-                                <p class="p">怪哩怪汽團隊有許許多多的事情得忙。<br>而為了幫助你充分體現身為玩家的精神，我們蒐集了下列五項秘訣來幫助你展開征服的第一步。</p>
-                                <p>閱讀更多></p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sort" ls_date="2010">
-                    <div class="wrap78 wrap"
-                        data-index="2022年4月4號《怪哩怪汽》耶魯季預報&背後的歷史跳舞、喝酒、悠閒快樂！為了進一步了解這個通常被稱做「黑暗時代」歷史時期，我們專訪了《怪哩怪汽》編輯研究部的歷史學家和內容發想顧問Rierry Noël。閱讀更多>">
-                        <a href="./news_in.html">
-                            <img src="../image/intro/圖-29.jpg" class="sec" alt="slide4">
-                        </a>
-                        <div class="name">
-                            <a href="./news_in.html">
-                                <p class="p">2022年4月4號</p>
-                                <h3>《怪哩怪汽》耶魯季預報&背後的歷史</h3>
-                                <p class="p">
-                                    跳舞、喝酒、悠閒快樂！<br>為了進一步了解這個通常被稱做「黑暗時代」歷史時期，<br>我們專訪了《怪哩怪汽》編輯研究部的歷史學家和內容發想顧問Rierry Noël。
-                                </p>
-                                <p>閱讀更多></p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <div id="block_9"></div>
 
             </div>
         </div>
@@ -276,6 +161,62 @@
     <script src="../js/vendor/slick-1.8.1/slick/slick.min.js"></script>
     <script src="../js/vendor/slick-1.8.1/slick/slick.js"></script>
     <script src="../js/news/news.js"></script>  
+
+
+    <script>
+        function find() {
+            // 綁定input標籤的變數
+            let findvalue = document.getElementById('search-input').value
+            $.ajax({
+                method: "POST",
+                url: "../php/news/callnews1.php",
+                // php 跟 ajax交流
+                data: {
+                    find: findvalue,
+                },
+                dataType: "json",
+                success: function (response) {
+                    //更新html內容(透過jQuery跑迴圈取值)
+                    let block_9 = document.getElementById("block_9");
+                    // 先清空資料
+                    block_9.innerHTML = "";
+                    $.each(response, function (index, row) {
+                        let str = ` 
+                        <div class="sort" >
+                            <div class="wrap" >
+                                    <img src="../image/intro/${row.AIMG}" class="sec" alt="slide4">
+                                <div class="name" >
+                                        <p class="p">${row.ADATE}</p>
+                                        <h3>${row.TITLE}</h3>
+                                        <p class="p">${row.CONTENT}</p>
+                                        <p >閱讀更多></p>   
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    block_9.insertAdjacentHTML("beforeend" ,str);
+                    });
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+        }
+    </script>
+    
+
+    <script>
+        function parseCookie(item) {
+            console.log(item.childNodes[1].childNodes[3].childNodes[3].innerText);
+            let title = item.childNodes[1].childNodes[3].childNodes[3].innerText;
+            sessionStorage.setItem('title', title);
+            location.href="./news_in.html";
+        }
+
+
+
+    </script>
+
 </body>
 
 </html>

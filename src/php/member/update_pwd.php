@@ -1,6 +1,8 @@
 <?php
 
     include("../connection.php");
+include "../Manager.php";
+$Name = getSession();
 
        //---------------------------------------------------
 
@@ -9,7 +11,7 @@
        
 
        //建立SQL
-       $sql = "UPDATE  MEMBER SET PASSWORD =  '?'  WHERE USERNAME = 'LARRY'";
+       $sql = "UPDATE  MEMBER SET PASSWORD =  '?'  WHERE USERNAME = '$Name'";
 
         //執行
         $statement = $pdo->prepare($sql);

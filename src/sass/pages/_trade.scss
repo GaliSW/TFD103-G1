@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-  }
+}
 
 
 .allBlock1{
@@ -25,21 +25,38 @@
     
     .rankBloCk{
         border: 1px solid orange;
+        display: flex;
         width: 900px;
         @include center;
         @include desktop_small{
         width:750px;
         }
 
+        @include pad{
+            width: 550px;
+        }
 
+        @media (max-width:630px){
+            display:block;
+            width: 360px;
+        }
 
         .roleBloCk1{
             //@include border;
+            margin: 0 auto;
             .imgBlock{
+
+                border: 1px solid red;
+                width: 250px;
+                margin: 0 auto;
+
                 @include desktop_small{
                 width: 70%;
-                height: 70%;
                 @include center
+                }
+
+                @include pad{
+                    width: 80%;
                 }
             }
             .name{
@@ -56,84 +73,68 @@
                 text-align: center;
             }
         }
-        .roleBloCk2{
-            //@include border;
-            @include center;
-
-            .imgBlock{
-                @include desktop_small{
-                width: 70%;
-                height: 70%;
-                @include center
-                }
-            }
-            .name{
-                color:#fff;
-                text-align: center;
-                
-                p{
-                    margin: 20px 0;
-                }
-            }
-
-            .price{
-                color:#fff;
-                text-align: center;
-            }
-        }
-        .roleBloCk3{
-            //@include border;
-            .imgBlock{
-                @include desktop_small{
-                width: 70%;
-                height: 70%;
-                @include center
-                }
-            }
-            .name{
-                color:#fff;
-                text-align: center;
-
-                p{
-                    margin: 20px 0;
-                }
-            }
-
-            .price{
-                color:#fff;
-                text-align: center;
-            }
-        }
-        display: flex;
     }
+
+    .roleBloCk1:nth-child(2){
+        @media (max-width:630px){
+            display: none;
+        }
+    }
+
+    .roleBloCk1:nth-child(3){
+        @media (max-width:630px){
+            display: none;
+        }
+    }
+
+
 }
 
 
 
 ///////////////////////////////////////////////////////////////// 按鈕
 .btnBlockmy{
-    //@include border;
+    @include border;
     text-align: center;
     margin: 100px 0px;
     
     .btn111{
         @include btn_blur (200px, 20px);
         margin-right: 100px;
+
+        @media (max-width:630px){
+            @include btn_blur (150px, 15px);
+            margin-right: 50px;
+        }
     }
     
     .btn222{
         @include btn_blur (200px, 20px){
         };
+
+        @media (max-width:630px){
+            @include btn_blur (150px, 15px);
+        }
     }
 
     .btn111:hover{
         @include btn_on (200px, 20px);
         cursor: pointer;
+
+        @media (max-width:630px){
+            @include btn_blur (150px, 15px);
+            margin-right: 50px;
+        }
+
     }    
 
     .btn222:hover{
         @include btn_on (200px, 20px);
-        cursor: pointer;    
+        cursor: pointer;   
+        
+        @media (max-width:630px){
+            @include btn_blur (150px, 15px);
+        }
     }    
 }
 //////////////////////////////////////////////////////////////////////搜尋列
@@ -228,7 +229,14 @@
         height: 250vh;
         background-color: rgba(0, 0, 0, 0.7);
     }
-        
+
+
+    .box1{
+        @media (max-width:577.98px){
+            height: 650px;
+        }
+    }
+
 
     .popUpBox{
 
@@ -242,11 +250,6 @@
         border: 2px solid rgba(16, 197, 177, 1);
         border-radius: 5px;
         overflow: auto;
-        
-        @include phone{
-            position: static;
-            transform: translateX(0%);
-        }
 
 
 
@@ -285,9 +288,9 @@
             display: -moz-flex;
             width: 90%;
             @include center;
-            // @media (max-width:628px){
-            //     display: block;
-            // }
+            @media (max-width:577px){
+                display: block;
+            }
 
             .chooseRoleBlockk{
                 // width:210px;
@@ -308,8 +311,9 @@
                     flex: 0.6;
                 }
 
-                @media (min-width:375px) and (max-width:577.98px){
-                    height: 250px;
+                @media (min-width:375px) and (max-width:577px){
+                    height: 210px;
+                    margin-top: 20px;
                 }
 
                 h3{
@@ -318,6 +322,11 @@
 
                     @include pad{
                         font-size: 16px;
+                    }
+
+                    @media (min-width:375px) and (max-width:577px){
+                        border: 1px solid red;
+                        margin-left: -35px;
                     }
                 }
                 
@@ -339,7 +348,7 @@
                         width: 60px;
                     }
 
-                    @media (min-width:375px) and (max-width:577.98px){
+                    @media (min-width:375px) and (max-width:577px){
                         display: flex;
                         flex-direction: row;
                     }
@@ -370,6 +379,12 @@
                 border: 1px solid blue;
                 margin: 20px;
                 flex: 1;
+
+                @media (min-width:375px) and (max-width:577px){
+                    width: 200px;
+                    margin: 30px auto 0;
+    
+                }
             }
 
             .informationBlock{
@@ -468,6 +483,7 @@
         font-size: 32px;
 
         h1{
+            border: 1px solid red;
             margin-top: -130px;
             padding-bottom: 20px;
             border-bottom: 1px solid rgba(16, 197, 177, 1);
@@ -509,7 +525,7 @@
 
                 .middleBlock{
 
-                    width: 400px;
+                    flex-grow: 1;
                     border: 1px solid green;
 
                     .detailInfo.firstTitle{
@@ -521,10 +537,11 @@
 
                     .detailInfo{
                         display: flex;
-                        align-items: center;
+                        justify-content: center;
                         color: #fff;
+                        border: 1px solid red;
 
-                        @media (min-width:768px) and (max-width:1017px){
+                        @media (min-width:375px) and (max-width:1017px){
                             display: block;
                             @include border;
 
@@ -552,7 +569,7 @@
                 .rightBlock{
 
                     border: 1px solid purple;
-                    width: 250px;
+                    width: 246px;
 
                     .btnBlock{
                         display: flex;
@@ -647,7 +664,7 @@
 
                 .middleBlock{
 
-                    width: 400px;
+                    flex-grow: 1;
                     border: 2px solid green;
 
                     .detailInfo.firstTitle{
@@ -659,10 +676,10 @@
 
                     .detailInfo{
                         display: flex;
-                        align-items: center;
+                        justify-content: center;
                         color: #fff;
 
-                        @media (min-width:768px) and (max-width:1017px){
+                        @media (min-width:375px) and (max-width:1017px){
                             display: block;
                             @include border;
 
@@ -766,6 +783,7 @@
 }
 
 .container {
+    border: 1px solid #60cd90;
     margin-right: 50px;
     margin-bottom: 50px;
     width: 300px;
@@ -784,11 +802,15 @@
 
 }
 
-
+.container:hover{
+    box-shadow: rgba(16, 197, 177, .8) 0px 19px 38px,
+                rgba(16, 197, 177, .2) 0px 15px 12px;
+}
 
 .container:hover .lower {
     transform: translateY(-18%);
-    background: white;
+    //background: white;
+    background: #60cd90;
 }
 
 .container:hover .features-list {
@@ -815,7 +837,8 @@
 .inner {
     width: 100%;
     height: 400px;
-    background-color: pink;
+    //background-color: pink;
+    background-color: #0e3461;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -857,8 +880,9 @@
     flex-direction: column;
     background: transparent;
     position: relative;
-    transform: translateY(60%);
+    transform: translateY(10%);
     transition: all .5s ease;
+    height: 120px;  
     // min-height: 40%;
     // height: 100px;
 
@@ -905,7 +929,6 @@
     font-weight: 100;
     line-height: 150%;
     font-size: 1.1em;
-    /* text-align: left; */
 }
 
 .features-list li::before {

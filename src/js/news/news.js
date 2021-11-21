@@ -1,18 +1,18 @@
 "use strict";
 
-var that = $(void 0);
-var mSearch = $("#m-search");
-$("#search-input").bind("change paste keyup", function () {
-  var value = $(this).val();
+// var that = $(void 0);
+// var mSearch = $("#m-search");
+// $("#search-input").bind("change paste keyup", function () {
+//   var value = $(this).val();
 
-  if (!value) {
-    mSearch.html("");
-    return;
-  }
+//   if (!value) {
+//     mSearch.html("");
+//     return;
+//   }
 
-  ;
-  mSearch.html('.wrap:not([data-index*="' + value.toLowerCase() + '"]) {display: none;}');
-});
+//   ;
+//   mSearch.html('.wrap:not([data-index*="' + value.toLowerCase() + '"]) {display: none;}');
+// });
 
 
 // 
@@ -88,17 +88,20 @@ letssort({
 
 //
 
+
 $(document).ready(function(){
-  $(".wrap78").slice(0, 99).hide();
+  $(".wrap").slice(1,3).hide();
   $("#bnbn").on("click", function(e){
-    e.preventDefault();
-    $(".wrap78:hidden").slice(0, 2).slideDown();
-    if($(".wrap78:hidden").length == 0) {
+      e.preventDefault();
+      $(".wrap:hidden").slice(0, 2).slideDown();
+      if($(".wrap:hidden").length == 0) {
       $("#bnbn").text("沒有更多內容了").addClass("noContent");
-    }
+      }
   });
-  
 })
+
+
+
 
 //
 
@@ -133,11 +136,12 @@ $(document).ready(function(){
 $(document).ready(function() {
   $('.upup').click(function(event) {
     event.preventDefault();
-    
     $('html, body').animate({scrollTop: 0}, 100);
   })
 });
 
+
+//
 
 
 

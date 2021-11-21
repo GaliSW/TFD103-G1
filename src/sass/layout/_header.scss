@@ -1,7 +1,7 @@
 #header{
     // @include border();
     // @include grids(12);
-    width: 100%;
+    width: 100vw;
     height: 90px;
     z-index: 100;
     position: fixed;
@@ -52,7 +52,7 @@
             margin: 0 0 10px 30px;
         }
         @include phone{
-            margin: 0 0 10px 30px;
+            margin: 0 0 10px 0px;
         }
     }
     .logo img{
@@ -145,9 +145,9 @@
             display: flex;
             margin: 32px;
         }
-        @include phone{
+        @media(max-width: 480px){
             display: flex;
-            margin: 32px;
+            margin: 30px 20px;
         }
     }
     #menuToggle{
@@ -212,7 +212,7 @@
             }
         }
     }
-    #menu{
+    #headerMenu{
         position: absolute;
         width: 300px;
         height: 100vh;
@@ -229,6 +229,7 @@
             transform: translate(-50%);
         }
         li{
+            background-color: lightblue;
             padding: 15px 0;
             font-size: 18px;
             text-align: center;
@@ -246,15 +247,21 @@
                 animation-play-state: paused;
             }
         }
-        .btn{
-            position: absolute;
-            right: 20px;
-            bottom: 20px;
-            cursor: pointer;
-            color: cornflowerblue;
-            &:hover{
-                background-color: cornflowerblue;
-                color: #fff;
+        .hamLog{
+            display: none;
+            @media(max-width: 480px){
+                display: block;
+                position: absolute;
+                padding: 15px 0;
+                font-size: 18px;
+                text-align: center;
+                border-top: 1px solid #0E3461;
+                bottom: 0;
+                width: 100%;
+                background-color: azure;
+                &:hover{
+                    background: #0E3461;
+                }
             }
         }
     }
@@ -269,13 +276,19 @@
             margin: 0 10px;
         }
         @include phone{
-            margin: 0 8px;
+            margin: 0 0;
         }
         .button{
             // width:100px;
             text-align: center;
             color:#fff;
-            font-size: 12px;
+            font-size: 13px;
+            @include pad_small{
+                font-size: 12px;
+            }
+            @include phone{
+                font-size: 12px;
+            }
             &:hover .show{
                 display:block;
             }
@@ -284,10 +297,14 @@
                 color: #a2d6d2;
                 border: 1px solid #19ADD2;
                 border-radius: 50%;
+                position: relative;
                 &:hover{
                     color: #9dfdc8;
                     border: 1px solid #0E3461;
                     border-radius: 50%;
+                }
+                @media(max-width: 480px){
+                    margin: 5px;
                 }
             }
             .show{
@@ -299,6 +316,44 @@
                 position: absolute;
                 margin-top: 5px;
                 margin-left: 6px;
+                @media(max-width: 480px){
+                    padding: 2px 2px;
+                    margin-left: 4px;
+                }
+            }
+            h5{
+                width: 20px;
+                height: 20px;
+                font-size: 16px;
+                color: red;
+                right: -6px;
+                top: -22px;
+                position: absolute;
+            }
+            h5._off {
+                display: none;
+            }
+
+            #headerResult{
+                height: 20px;
+                display: inline-block;
+                margin-right: 10px;
+                @media(max-width: 480px){
+                    display: none;
+                }
+            }
+        }
+        #LogOut{
+            @media(max-width: 480px){
+                display: none;
+            }
+            a{
+                margin: 0px;
+                color: #a2d6d2;
+                font-size: 14px;
+                &:hover{
+                    color: #9dfdc8;
+                }
             }
         }
         .disappear{

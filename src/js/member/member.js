@@ -10,7 +10,9 @@ let vm = new Vue({
     saleReject: false,
     thisId : "",
     thisBuy:"",
-    thisSale:""
+    thisSale:"",
+    gachaBuy:"",
+    gachaSale:""
   },
 
   methods: {
@@ -37,7 +39,21 @@ let vm = new Vue({
   
   },
 );
-
+//計算交易數量
+function countDeal(){
+  $("#countResult").html("");
+  $.ajax({
+    url: "../php/member/count_deal.php",
+    data: {},
+    dataType: "json",
+    success: function (response) {
+      if(response > 0){
+        $("#countResult").append(response);
+        $("#countResult").removeClass("_off");
+      }
+    }
+  });
+};
 
 function clickBuyCancel(clickId) 
 {
@@ -179,6 +195,9 @@ function displayBuy() {
       alert("發生錯誤: " + exception.status);
     },
   });
+
+  // 計算交易數
+  countDeal();
 }
 
 window,onload = displayBuy();
@@ -188,7 +207,7 @@ window,onload = displayBuy();
 
 
 // 賣家確認交易
-function clickSaleCheck(clickId , clickBuy , clickSale) {
+function clickSaleCheck(clickId, clickBuy, clickSale, gachaBuy, gachaSale) {
   vm.$data.pop = true;
   vm.$data.buyCancel = false;
   vm.$data.saleCheck = true;
@@ -196,6 +215,8 @@ function clickSaleCheck(clickId , clickBuy , clickSale) {
   vm.$data.thisId = clickId;
   vm.$data.thisBuy = clickBuy;
   vm.$data.thisSale = clickSale;
+  vm.$data.gachaBuy = gachaBuy;
+  vm.$data.gachaSale = gachaSale;
 }
 function saleConfirm(){
   vm.$data.pop = false;
@@ -203,9 +224,11 @@ function saleConfirm(){
     method: "POST",
     url: "../php/member/apply_sale_confirm.php",
     data: {
-      Name: vm.$data.thisId,
+      Id: vm.$data.thisId,
       Buy: vm.$data.thisBuy,
       Sale: vm.$data.thisSale,
+      gachaBuy: vm.$data.gachaBuy,
+      gachaSale: vm.$data.gachaSale,
     },
     dataType: "text",
     success: function (response) {
@@ -214,6 +237,10 @@ function saleConfirm(){
         $("#result_sale_off").html("");
         displaySale();
         vm.$data.thisId = "";
+        vm.$data.thisBuy="",
+        vm.$data.thisSale="",
+        vm.$data.gachaBuy="",
+        vm.$data.gachaSale=""
       } else {
         alert("error");
       }
@@ -261,6 +288,7 @@ function rejectValue(thisCheckValue) {
 }
 
 function displaySale() {
+  countDeal();
   $.ajax({
     url: "../php/member/apply_sale.php",
     data: {},
@@ -282,7 +310,7 @@ function displaySale() {
                       </div>
                       <span class="trade_status col-1">等待確認</span>
                       <div class="trade_button col-3">
-                          <button class="confirm" onclick=clickSaleCheck("${row.BYCHECK_ID}","${row.FK_USERNAME_BUY}","${row.FK_USERNAME}")>確認交易</button>
+                          <button class="confirm" onclick=clickSaleCheck("${row.BYCHECK_ID}","${row.FK_USERNAME_BUY}","${row.FK_USERNAME}","${row.FK_GACHA_ID_BUY}","${row.FK_GACHA_ID}")>確認交易</button>
                           <button class="reject" onclick="clickSaleReject(${row.BYCHECK_ID})">拒絕交易</button>
                       </div>
                   </div>    

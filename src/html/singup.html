@@ -38,11 +38,11 @@
                                 <div class="input_form">
                                     <label for="userid">帳號:</label>
                                     <br>
-                                    <input type="text" id="userId" placeholder="*請輸入帳號" name="userId"
-                                        @blur=showIdError() v-model="id">
+                                    <input type="text" id="userId" placeholder="*請輸入英數混合8-16位數，區分英文大小寫" name="userId"
+                                        @blur=showIdError() v-model="id" onclick="blank()">
                                 </div>
                                 <div class="error" :class="{'error_on': idError}">
-                                    <span>請輸入8-16位數，內含英文跟數字，英文區分大小寫!</span>
+                                    <span>請輸入英數混合8-16位數，英文區分大小寫!</span>
                                 </div>
                             </div>
 
@@ -51,7 +51,7 @@
                                 <div class="input_form">
                                     <label for="password">密碼:</label>
                                     <br>
-                                    <input type="text" id="password" placeholder="*請輸入密碼" name="password"
+                                    <input type="PASSWORD" id="password" placeholder="*請輸入密碼" name="password"
                                         @blur=showPwdError() v-model="newPassword">
                                 </div>
 
@@ -64,7 +64,7 @@
                                 <div class="input_form">
                                     <label for="confirm">再次確認密碼:</label>
                                     <br>
-                                    <input type="text" id="confirm" placeholder="*請確認密碼" name="confirm"
+                                    <input type="PASSWORD" id="confirm" placeholder="*請確認密碼" name="confirm"
                                         @blur=showPwdTwoError() v-model="twicePassword">
                                 </div>
                                 <div class="error" :class="{'error_on': pwdTwoError}">

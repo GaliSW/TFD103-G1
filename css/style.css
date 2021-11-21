@@ -103,7 +103,7 @@
 }
 
 #header {
-  width: 100%;
+  width: 100vw;
   height: 90px;
   z-index: 100;
   position: fixed;
@@ -187,7 +187,7 @@
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   #header .logo {
-    margin: 0 0 10px 30px;
+    margin: 0 0 10px 0px;
   }
 }
 
@@ -314,10 +314,10 @@
   }
 }
 
-@media (min-width: 375px) and (max-width: 413.98px) {
+@media (max-width: 480px) {
   #header .hamburger {
     display: flex;
-    margin: 32px;
+    margin: 30px 20px;
   }
 }
 
@@ -395,7 +395,7 @@
   transform-origin: 0% 100%;
 }
 
-#header #menu {
+#header #headerMenu {
   position: absolute;
   width: 300px;
   height: 100vh;
@@ -408,45 +408,54 @@
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#header #menu a > img {
+#header #headerMenu a > img {
   width: 100px;
   margin-left: 50%;
   transform: translate(-50%);
 }
 
-#header #menu li {
+#header #headerMenu li {
+  background-color: lightblue;
   padding: 15px 0;
   font-size: 18px;
   text-align: center;
   border-top: 1px solid #0E3461;
 }
 
-#header #menu li:hover {
+#header #headerMenu li:hover {
   background: #0E3461;
 }
 
-#header #menu li:hover img {
+#header #headerMenu li:hover img {
   animation: move 1s infinite;
 }
 
-#header #menu li img {
+#header #headerMenu li img {
   width: 30px;
   margin-right: 10px;
   vertical-align: bottom;
   animation-play-state: paused;
 }
 
-#header #menu .btn {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  cursor: pointer;
-  color: cornflowerblue;
+#header #headerMenu .hamLog {
+  display: none;
 }
 
-#header #menu .btn:hover {
-  background-color: cornflowerblue;
-  color: #fff;
+@media (max-width: 480px) {
+  #header #headerMenu .hamLog {
+    display: block;
+    position: absolute;
+    padding: 15px 0;
+    font-size: 18px;
+    text-align: center;
+    border-top: 1px solid #0E3461;
+    bottom: 0;
+    width: 100%;
+    background-color: azure;
+  }
+  #header #headerMenu .hamLog:hover {
+    background: #0E3461;
+  }
 }
 
 #header .icon {
@@ -464,14 +473,26 @@
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   #header .icon {
-    margin: 0 8px;
+    margin: 0 0;
   }
 }
 
 #header .icon .button {
   text-align: center;
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  #header .icon .button {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  #header .icon .button {
+    font-size: 12px;
+  }
 }
 
 #header .icon .button:hover .show {
@@ -483,12 +504,19 @@
   color: #a2d6d2;
   border: 1px solid #19ADD2;
   border-radius: 50%;
+  position: relative;
 }
 
 #header .icon .button a:hover {
   color: #9dfdc8;
   border: 1px solid #0E3461;
   border-radius: 50%;
+}
+
+@media (max-width: 480px) {
+  #header .icon .button a {
+    margin: 5px;
+  }
 }
 
 #header .icon .button .show {
@@ -500,6 +528,55 @@
   position: absolute;
   margin-top: 5px;
   margin-left: 6px;
+}
+
+@media (max-width: 480px) {
+  #header .icon .button .show {
+    padding: 2px 2px;
+    margin-left: 4px;
+  }
+}
+
+#header .icon .button h5 {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: red;
+  right: -6px;
+  top: -22px;
+  position: absolute;
+}
+
+#header .icon .button h5._off {
+  display: none;
+}
+
+#header .icon .button #headerResult {
+  height: 20px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+@media (max-width: 480px) {
+  #header .icon .button #headerResult {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #header .icon #LogOut {
+    display: none;
+  }
+}
+
+#header .icon #LogOut a {
+  margin: 0px;
+  color: #a2d6d2;
+  font-size: 14px;
+}
+
+#header .icon #LogOut a:hover {
+  color: #9dfdc8;
 }
 
 #header .icon .disappear {
@@ -713,6 +790,7 @@ main.collection div.collect_contain div.ability {
   height: 200px;
   vertical-align: middle;
   max-height: 100%;
+  line-height: 40px;
 }
 
 main.collection div.collect_contain div.ability div.chartBox {
@@ -1266,6 +1344,18 @@ main.deposit div.container .col-11 {
 
 main.deposit div.container .col-12 {
   width: 100%;
+}
+
+main.deposit div.container div.sumPoint {
+  font-size: 20px;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 20px;
+  color: white;
+}
+
+main.deposit div.container div.sumPoint p {
+  margin-left: 5px;
 }
 
 main.deposit div.container div#app {
@@ -3782,19 +3872,7 @@ body {
   }
 }
 
-.index .indexOne .banner #canvas {
-  position: absolute;
-  top: 5%;
-}
-
-@media (max-width: 991.98px) {
-  .index .indexOne .banner #canvas {
-    display: none;
-  }
-}
-
 .index .indexOne .banner .welcome {
-  display: none;
   width: 450px;
   position: absolute;
   top: 22%;
@@ -3810,7 +3888,7 @@ body {
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   .index .indexOne .banner .welcome {
-    width: 400px;
+    width: 370px;
     left: 0;
   }
 }
@@ -3824,7 +3902,7 @@ body {
 .index .indexOne .banner .logoImg {
   position: absolute;
   padding: 0 0 0 260px;
-  margin: -250px 0;
+  margin: -230px 0;
   transform: rotate(5deg);
   opacity: 0;
 }
@@ -3986,6 +4064,16 @@ body {
   position: absolute;
 }
 
+.index .dpW {
+  display: block;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .dpW {
+    display: none;
+  }
+}
+
 .index .sportsCar {
   position: absolute;
   width: 100%;
@@ -3993,21 +4081,37 @@ body {
   top: -150px;
 }
 
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .index .sportsCar {
-    top: -110px;
-  }
-}
-
 .index .sportsCar .carId {
   position: absolute;
   width: 200px;
 }
 
+.index .sportsCar .carId img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.index .dpP {
+  display: none;
+}
+
 @media (min-width: 375px) and (max-width: 413.98px) {
-  .index .sportsCar .carId {
-    width: 150px;
+  .index .dpP {
+    display: block;
   }
+}
+
+.index .sportsCar {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  top: -110px;
+  overflow-x: hidden;
+}
+
+.index .sportsCar .carId {
+  position: absolute;
+  width: 150px;
 }
 
 .index .sportsCar .carId img {
@@ -4853,7 +4957,7 @@ body {
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   .index .unlock {
-    max-width: 500px;
+    max-width: 400px;
     width: 100%;
     height: 400px;
   }
@@ -4867,6 +4971,13 @@ body {
   z-index: 1;
 }
 
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .roleD .roleDance01 {
+    width: 250px;
+    left: 10%;
+  }
+}
+
 .index .roleD .roleDance01 img {
   width: 100%;
 }
@@ -4878,6 +4989,14 @@ body {
   right: 0;
 }
 
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .roleD .roleDance02 {
+    width: 250px;
+    top: 4%;
+    right: 20%;
+  }
+}
+
 .index .roleD .roleDance02 img {
   width: 100%;
 }
@@ -4887,6 +5006,14 @@ body {
   width: 300px;
   top: 8%;
   left: 0;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .roleD .roleDance03 {
+    width: 250px;
+    top: 4%;
+    left: 15%;
+  }
 }
 
 .index .roleD .roleDance03 img {
@@ -5277,7 +5404,7 @@ body {
 
 .out .total .fs {
   z-index: 5;
-  background: url("/src/image/intro/圖-12.jpg");
+  background: url("../src/image/intro/圖-12.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5285,7 +5412,7 @@ body {
 
 .out .total .sc {
   z-index: 4;
-  background: url("/src/image/intro/圖-26.jpg");
+  background: url("../src/image/intro/圖-26.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5293,7 +5420,7 @@ body {
 
 .out .total .th {
   z-index: 3;
-  background: url("/src/image/intro/圖-21.jpg");
+  background: url("../src/image/intro/圖-21.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5301,7 +5428,7 @@ body {
 
 .out .total .fr {
   z-index: 2;
-  background: url("/src/image/intro/圖-25.jpg");
+  background: url("../src/image/intro/圖-25.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5309,7 +5436,7 @@ body {
 
 .out .total .fi {
   z-index: 1;
-  background: url("/src/image/intro/圖-30.jpg");
+  background: url("../src/image/intro/圖-30.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -6196,6 +6323,24 @@ main.member div.bar div.trading {
   border: 0;
 }
 
+main.member div.bar div.trading div.countDeal {
+  display: flex;
+  width: 100%;
+}
+
+main.member div.bar div.trading div.countDeal p {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: red;
+  border: solid 1px red;
+  border-radius: 50%;
+}
+
+main.member div.bar div.trading div.countDeal p._off {
+  display: none;
+}
+
 main.member div.bar div.points,
 main.member div.bar div.information {
   width: 25%;
@@ -6759,6 +6904,24 @@ main.trading_list div.bar div.trading {
   border: 0;
 }
 
+main.trading_list div.bar div.trading div.countDeal {
+  display: flex;
+  width: 100%;
+}
+
+main.trading_list div.bar div.trading div.countDeal p {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: red;
+  border: solid 1px red;
+  border-radius: 50%;
+}
+
+main.trading_list div.bar div.trading div.countDeal p._off {
+  display: none;
+}
+
 main.trading_list div.bar div.points,
 main.trading_list div.bar div.information {
   width: 25%;
@@ -7037,6 +7200,24 @@ main.points_list div.bar div.trading {
   border: 0;
 }
 
+main.points_list div.bar div.trading div.countDeal {
+  display: flex;
+  width: 100%;
+}
+
+main.points_list div.bar div.trading div.countDeal p {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: red;
+  border: solid 1px red;
+  border-radius: 50%;
+}
+
+main.points_list div.bar div.trading div.countDeal p._off {
+  display: none;
+}
+
 main.points_list div.bar div.points,
 main.points_list div.bar div.information {
   width: 25%;
@@ -7278,6 +7459,24 @@ main.member_info div.bar div.trading {
   border: 0;
 }
 
+main.member_info div.bar div.trading div.countDeal {
+  display: flex;
+  width: 100%;
+}
+
+main.member_info div.bar div.trading div.countDeal p {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: red;
+  border: solid 1px red;
+  border-radius: 50%;
+}
+
+main.member_info div.bar div.trading div.countDeal p._off {
+  display: none;
+}
+
 main.member_info div.bar div.points,
 main.member_info div.bar div.information {
   width: 25%;
@@ -7467,6 +7666,17 @@ main.member_info div.content div.contain_list div.edit div.edit_detail form.edit
   }
 }
 
+main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password input#visible {
+  margin: 0;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 10px;
+}
+
+main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password label {
+  font-size: 16px;
+}
+
 main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password .button {
   color: #60cd90;
   width: 100%;
@@ -7525,6 +7735,16 @@ main.member_info div.content div.contain_list div.edit div.edit_detail form.book
   main.member_info div.content div.contain_list {
     width: 100%;
   }
+}
+
+main.member_info div.content p._off {
+  display: none;
+  font-size: 16px;
+  color: red;
+}
+
+main.member_info div.content p._on {
+  display: block;
 }
 
 main.member_info section.maskLayer {
@@ -7842,10 +8062,11 @@ main.member_info section.popShow {
 
 .out .search-form #search-input {
   font-size: 20px;
-  background-image: url("/dist/images/intro/search.jpg");
+  background: url("../src/image/intro/search.jpg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: 30px;
+  background-color: #fff;
 }
 
 .out .search-form .search {
@@ -9073,6 +9294,68 @@ main.signup .main_contain div._on {
   display: block;
 }
 
+main.signup .verify_contain {
+  width: 600px;
+  margin: 0 auto;
+  height: 350px;
+  max-width: 95%;
+}
+
+main.signup .verify_contain h1 {
+  color: white;
+  margin: 20px 20px;
+  float: left;
+  margin-bottom: 20px;
+}
+
+main.signup .verify_contain .ok {
+  display: none;
+}
+
+main.signup .verify_contain ._off {
+  display: none;
+}
+
+main.signup .verify_contain h1._on {
+  display: block;
+}
+
+main.signup .verify_contain div.verify {
+  width: 250px;
+  margin-top: 100px;
+}
+
+main.signup .verify_contain div.verify form {
+  margin-top: 15px;
+  display: inline-block;
+}
+
+main.signup .verify_contain div.verify .button {
+  margin-top: 20px;
+  color: #60cd90;
+  width: 200px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+}
+
+main.signup .verify_contain div.verify .button:hover {
+  margin-top: 20px;
+  color: #0e3461;
+  width: 200px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+main.signup .verify_contain div.verify input {
+  margin-top: 10px;
+  height: 30px;
+  width: 200px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9094,9 +9377,9 @@ main.signup .main_contain div._on {
 
 .allBlock1 .roleRanksection .rankBloCk {
   border: 1px solid orange;
+  display: flex;
   width: 900px;
   margin: 0 auto;
-  display: flex;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -9105,11 +9388,39 @@ main.signup .main_contain div._on {
   }
 }
 
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock1 .roleRanksection .rankBloCk {
+    width: 550px;
+  }
+}
+
+@media (max-width: 630px) {
+  .allBlock1 .roleRanksection .rankBloCk {
+    display: block;
+    width: 360px;
+  }
+}
+
+.allBlock1 .roleRanksection .rankBloCk .roleBloCk1 {
+  margin: 0 auto;
+}
+
+.allBlock1 .roleRanksection .rankBloCk .roleBloCk1 .imgBlock {
+  border: 1px solid red;
+  width: 250px;
+  margin: 0 auto;
+}
+
 @media (min-width: 768px) and (max-width: 991.98px) {
   .allBlock1 .roleRanksection .rankBloCk .roleBloCk1 .imgBlock {
     width: 70%;
-    height: 70%;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock1 .roleRanksection .rankBloCk .roleBloCk1 .imgBlock {
+    width: 80%;
   }
 }
 
@@ -9127,55 +9438,20 @@ main.signup .main_contain div._on {
   text-align: center;
 }
 
-.allBlock1 .roleRanksection .rankBloCk .roleBloCk2 {
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .allBlock1 .roleRanksection .rankBloCk .roleBloCk2 .imgBlock {
-    width: 70%;
-    height: 70%;
-    margin: 0 auto;
+@media (max-width: 630px) {
+  .allBlock1 .roleRanksection .roleBloCk1:nth-child(2) {
+    display: none;
   }
 }
 
-.allBlock1 .roleRanksection .rankBloCk .roleBloCk2 .name {
-  color: #fff;
-  text-align: center;
-}
-
-.allBlock1 .roleRanksection .rankBloCk .roleBloCk2 .name p {
-  margin: 20px 0;
-}
-
-.allBlock1 .roleRanksection .rankBloCk .roleBloCk2 .price {
-  color: #fff;
-  text-align: center;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .allBlock1 .roleRanksection .rankBloCk .roleBloCk3 .imgBlock {
-    width: 70%;
-    height: 70%;
-    margin: 0 auto;
+@media (max-width: 630px) {
+  .allBlock1 .roleRanksection .roleBloCk1:nth-child(3) {
+    display: none;
   }
-}
-
-.allBlock1 .roleRanksection .rankBloCk .roleBloCk3 .name {
-  color: #fff;
-  text-align: center;
-}
-
-.allBlock1 .roleRanksection .rankBloCk .roleBloCk3 .name p {
-  margin: 20px 0;
-}
-
-.allBlock1 .roleRanksection .rankBloCk .roleBloCk3 .price {
-  color: #fff;
-  text-align: center;
 }
 
 .allBlock1 .btnBlockmy {
+  border: 1px solid red;
   text-align: center;
   margin: 100px 0px;
 }
@@ -9190,6 +9466,18 @@ main.signup .main_contain div._on {
   margin-right: 100px;
 }
 
+@media (max-width: 630px) {
+  .allBlock1 .btnBlockmy .btn111 {
+    color: #60cd90;
+    width: 150px;
+    padding: 15px;
+    background-color: #0e3461;
+    border: 3px solid #60cd90;
+    text-align: center;
+    margin-right: 50px;
+  }
+}
+
 .allBlock1 .btnBlockmy .btn222 {
   color: #60cd90;
   width: 200px;
@@ -9197,6 +9485,17 @@ main.signup .main_contain div._on {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+}
+
+@media (max-width: 630px) {
+  .allBlock1 .btnBlockmy .btn222 {
+    color: #60cd90;
+    width: 150px;
+    padding: 15px;
+    background-color: #0e3461;
+    border: 3px solid #60cd90;
+    text-align: center;
+  }
 }
 
 .allBlock1 .btnBlockmy .btn111:hover {
@@ -9209,6 +9508,18 @@ main.signup .main_contain div._on {
   cursor: pointer;
 }
 
+@media (max-width: 630px) {
+  .allBlock1 .btnBlockmy .btn111:hover {
+    color: #60cd90;
+    width: 150px;
+    padding: 15px;
+    background-color: #0e3461;
+    border: 3px solid #60cd90;
+    text-align: center;
+    margin-right: 50px;
+  }
+}
+
 .allBlock1 .btnBlockmy .btn222:hover {
   color: #0e3461;
   width: 200px;
@@ -9217,6 +9528,17 @@ main.signup .main_contain div._on {
   border: 3px solid #0e3461;
   text-align: center;
   cursor: pointer;
+}
+
+@media (max-width: 630px) {
+  .allBlock1 .btnBlockmy .btn222:hover {
+    color: #60cd90;
+    width: 150px;
+    padding: 15px;
+    background-color: #0e3461;
+    border: 3px solid #60cd90;
+    text-align: center;
+  }
 }
 
 .allBlock1 .searchFlex {
@@ -9299,6 +9621,12 @@ main.signup .main_contain div._on {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+@media (max-width: 577.98px) {
+  .roleUpPop .box1 {
+    height: 650px;
+  }
+}
+
 .roleUpPop .popUpBox {
   width: 80%;
   height: 480px;
@@ -9310,13 +9638,6 @@ main.signup .main_contain div._on {
   border: 2px solid #10c5b1;
   border-radius: 5px;
   overflow: auto;
-}
-
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .roleUpPop .popUpBox {
-    position: static;
-    transform: translateX(0%);
-  }
 }
 
 .roleUpPop .popUpBox .popContent2 {
@@ -9355,6 +9676,12 @@ main.signup .main_contain div._on {
   margin: 0 auto;
 }
 
+@media (max-width: 577px) {
+  .roleUpPop .popUpBox .input {
+    display: block;
+  }
+}
+
 .roleUpPop .popUpBox .input .chooseRoleBlockk {
   border: 3px solid gray;
   background-color: #fff;
@@ -9378,9 +9705,10 @@ main.signup .main_contain div._on {
   }
 }
 
-@media (min-width: 375px) and (max-width: 577.98px) {
+@media (min-width: 375px) and (max-width: 577px) {
   .roleUpPop .popUpBox .input .chooseRoleBlockk {
-    height: 250px;
+    height: 210px;
+    margin-top: 20px;
   }
 }
 
@@ -9392,6 +9720,13 @@ main.signup .main_contain div._on {
 @media (min-width: 578px) and (max-width: 767.98px) {
   .roleUpPop .popUpBox .input .chooseRoleBlockk h3 {
     font-size: 16px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 577px) {
+  .roleUpPop .popUpBox .input .chooseRoleBlockk h3 {
+    border: 1px solid red;
+    margin-left: -35px;
   }
 }
 
@@ -9420,7 +9755,7 @@ main.signup .main_contain div._on {
   }
 }
 
-@media (min-width: 375px) and (max-width: 577.98px) {
+@media (min-width: 375px) and (max-width: 577px) {
   .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock {
     display: flex;
     flex-direction: row;
@@ -9448,6 +9783,13 @@ main.signup .main_contain div._on {
   border: 1px solid blue;
   margin: 20px;
   flex: 1;
+}
+
+@media (min-width: 375px) and (max-width: 577px) {
+  .roleUpPop .popUpBox .input .showImgBlock {
+    width: 200px;
+    margin: 30px auto 0;
+  }
 }
 
 .roleUpPop .popUpBox .input .informationBlock {
@@ -9552,6 +9894,7 @@ main.signup .main_contain div._on {
 }
 
 .roleUpPop .popContent3 h1 {
+  border: 1px solid red;
   margin-top: -130px;
   padding-bottom: 20px;
   border-bottom: 1px solid #10c5b1;
@@ -9593,7 +9936,7 @@ main.signup .main_contain div._on {
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock {
-  width: 400px;
+  flex-grow: 1;
   border: 1px solid green;
 }
 
@@ -9603,11 +9946,12 @@ main.signup .main_contain div._on {
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo {
   display: flex;
-  align-items: center;
+  justify-content: center;
   color: #fff;
+  border: 1px solid red;
 }
 
-@media (min-width: 768px) and (max-width: 1017px) {
+@media (min-width: 375px) and (max-width: 1017px) {
   .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo {
     display: block;
     border: 1px solid red;
@@ -9631,7 +9975,7 @@ main.signup .main_contain div._on {
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock {
   border: 1px solid purple;
-  width: 250px;
+  width: 246px;
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock {
@@ -9743,7 +10087,7 @@ main.signup .main_contain div._on {
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .middleBlock {
-  width: 400px;
+  flex-grow: 1;
   border: 2px solid green;
 }
 
@@ -9753,11 +10097,11 @@ main.signup .main_contain div._on {
 
 .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo {
   display: flex;
-  align-items: center;
+  justify-content: center;
   color: #fff;
 }
 
-@media (min-width: 768px) and (max-width: 1017px) {
+@media (min-width: 375px) and (max-width: 1017px) {
   .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo {
     display: block;
     border: 1px solid red;
@@ -9872,6 +10216,7 @@ main.signup .main_contain div._on {
 }
 
 .ymainy .container {
+  border: 1px solid #60cd90;
   margin-right: 50px;
   margin-bottom: 50px;
   width: 300px;
@@ -9889,9 +10234,13 @@ main.signup .main_contain div._on {
   color: black;
 }
 
+.ymainy .container:hover {
+  box-shadow: rgba(16, 197, 177, 0.8) 0px 19px 38px, rgba(16, 197, 177, 0.2) 0px 15px 12px;
+}
+
 .ymainy .container:hover .lower {
   transform: translateY(-18%);
-  background: white;
+  background: #60cd90;
 }
 
 .ymainy .container:hover .features-list {
@@ -9918,7 +10267,7 @@ main.signup .main_contain div._on {
 .ymainy .inner {
   width: 100%;
   height: 400px;
-  background-color: pink;
+  background-color: #0e3461;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -9957,8 +10306,9 @@ main.signup .main_contain div._on {
   flex-direction: column;
   background: transparent;
   position: relative;
-  transform: translateY(60%);
+  transform: translateY(10%);
   transition: all .5s ease;
+  height: 120px;
 }
 
 .ymainy .lower .ysellerImgy, .ymainy .lower .ysellerInfoy {
@@ -9996,7 +10346,6 @@ main.signup .main_contain div._on {
   font-weight: 100;
   line-height: 150%;
   font-size: 1.1em;
-  /* text-align: left; */
 }
 
 .ymainy .features-list li::before {
@@ -10040,6 +10389,16 @@ top: 5px; */
   width: 100vw;
   height: 100vh;
   position: fixed;
+}
+
+.gachascreen .op1 {
+  display: block;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .gachascreen .op1 {
+    display: none;
+  }
 }
 
 .gachascreen .screen {
@@ -10088,6 +10447,69 @@ top: 5px; */
 
 .gachascreen .screen .surprise {
   width: 850px;
+  position: absolute;
+  top: -10%;
+  left: 20%;
+  opacity: 0;
+}
+
+.gachascreen .op {
+  display: none;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .gachascreen .op {
+    display: block;
+  }
+}
+
+.gachascreen .screenPhone {
+  max-width: 370px;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.gachascreen .screenPhone .ballPhone {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.gachascreen .screenPhone .pokemonTopPhone {
+  width: 120px;
+  transform: rotate(270deg);
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  left: 38%;
+  z-index: 1;
+  opacity: 0;
+}
+
+.gachascreen .screenPhone .pokemonBottomPhone {
+  width: 120px;
+  transform: rotate(270deg);
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  left: 38%;
+  opacity: 0;
+}
+
+.gachascreen .screenPhone .supRolePhone {
+  width: 200px;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.gachascreen .screenPhone .surprisePhone {
+  width: 450px;
   position: absolute;
   top: -10%;
   left: 20%;
