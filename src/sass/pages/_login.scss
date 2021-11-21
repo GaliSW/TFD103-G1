@@ -75,7 +75,17 @@ main.login {
             height: 35px;
         }
 
-        button.btn_login,
+        input#visible {
+            margin: 0;
+            width: 15px;
+            height: 15px;
+            margin-bottom: 10px;
+        }
+
+        .visible{
+            color: white;
+        }
+         button.btn_login,
         button.btn_confirm,
         button.btn_signup {
             @include btn_blur(100%, 10px);

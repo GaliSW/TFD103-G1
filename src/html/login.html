@@ -27,8 +27,10 @@
                         <h1>登入帳號</h1>
                         <input type="text" name="userId" id='userId' placeholder="*請輸入帳號">
                         <br>
-                        <input type="text" name="password" id='password' placeholder="*請輸入密碼">
+                        <input type="password" name="password" id='password' placeholder="*請輸入密碼">
                         <br>
+                        <input type="checkbox" id="visible" onclick="visiblePwd()">
+                        <label for="visible" class="visible">顯示密碼</label>
                         <span id="login_error" class="error" :class="{'bookmark': loginError }">帳號密碼有誤</span>
 
                         <button type="button" class="btn_login" @click=loginCheck($event)>登入</button>
@@ -46,10 +48,10 @@
                 <div class="forget_contain" :class="{'bookmark': forget }">
                     <form action="#" method="post">
                         <h1>忘記密碼?</h1>
-                        <input type="text" placeholder="請輸入註冊信箱">
+                        <input type="text" id="email"placeholder="請輸入註冊信箱">
                         <br>
                         <span class="forget_error error" :class="{'bookmark': forgetError }">*此信箱並未註冊</span>
-
+                        <span class="forget_error error" :class="{'bookmark': sendOk }">已重寄密碼</span>
                         <button class="btn_confirm" type="submit" @click=forgetCheck($event)>確認</button>
                     </form>
                     <button class="backToLogin" @click=showLogin()>

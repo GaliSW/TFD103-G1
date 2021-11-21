@@ -1,63 +1,64 @@
 <?php
+// auth = 1為正常
 
-$email = $_POST["email"];
-include("../connection.php");
-//新增
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+//建立SQL
 
-//設定檔案路徑
-require 'src/Exception.php';
-require 'src/PHPMailer.php';
-require 'src/SMTP.php';
+    include("../connection.php");
 
-// include("./mail.php");
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
 
-
+    //設定檔案路徑
+    require 'src/Exception.php';
+    require 'src/PHPMailer.php';
+    require 'src/SMTP.php';
 //---------------------------------------------------
-$arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-$new = "";
 
-for ($i = 0; $i < 6; $i++) {
-    shuffle($arr);
-    $new = $new.$arr[0];
-}
+$Name = $_POST["Name"];
+    // 設定驗證碼變數
+    $arr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    $verifyA = [];
 
-// 收件人
-$recipient = "$email";
-// 寄件標題
-$mailTitle = 'Your password has been changed successfully.';
-// html內容
-$mailBody = "您的密碼已更新，新密碼為 <B> $new </B>";
-// 不支援html時的內容
-$mailAltBody = "'您的密碼已更新，新密碼為 $new'";
+    for ($i = 0; $i < 4; $i++) {
+        shuffle($arr);
+        array_push($verifyA, $arr[0]);
+    }
+    $verify = intval($verifyA[0] . $verifyA[1] . $verifyA[2] . $verifyA[3]);
 
-$sql2 = "select * from MEMBER WHERE EMAIL = '$email'";
+    $sql = "select * from MEMBER WHERE USERNAME = '$Name'";
 
-$statement = $pdo->prepare($sql2);
-$statement->execute();
-$data = $statement->fetchAll();
-
-
-if (count($data) > 0) {
-    //建立SQL
-    $sql = "
-    SET SQL_SAFE_UPDATES=0;
-    update MEMBER 
-	set PASSWORD = ?
-    where EMAIL = '$email';
-    SET SQL_SAFE_UPDATES=1;";
-
-    // 執行
     $statement = $pdo->prepare($sql);
-
-    $statement->bindValue(1, $new);
     $statement->execute();
-    echo "1";
+    $data = $statement->fetchAll();
+
+    foreach ($data as $index => $row) {
+        $email = $row["EMAIL"];
+    }
+    
+    // 收件人
+    $recipient = "$email";
+    // 寄件標題
+    $mailTitle = 'Please verify.';
+    // html內容
+    $mailBody = "您的驗證碼為: <B> $verify </B>，請點擊網址驗證。
+                    https://tibamef2e.com/tfd103/g1/TFD103-G1/src/verify.html";
+    // 不支援html時的內容
+    $mailAltBody = "您的驗證碼為: $verify ，請點擊網址驗證。
+                    https://tibamef2e.com/tfd103/g1/TFD103-G1/src/verify.html";
+if (count($data) > 0) {
+    $sql2 = "UPDATE MEMBER SET AUTH = $verify WHERE USERNAME = '$Name';
+    ";
+
+    //執行
+    $statement = $pdo->prepare($sql2);
+    $statement->execute();
+
+    echo ("Y");
     sendMail($recipient, $mailTitle, $mailBody, $mailAltBody);
-}else{
-    echo "0";
-}
+} else {
+    echo ("X");
+};
+
 
 function sendMail($recipient, $mailTitle, $mailBody, $mailAltBody)
 {
@@ -118,7 +119,3 @@ function sendMail($recipient, $mailTitle, $mailBody, $mailAltBody)
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 }
-    
-
-
-
