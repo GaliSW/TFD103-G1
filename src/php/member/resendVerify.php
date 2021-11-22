@@ -38,7 +38,7 @@ if (count($data) > 0) {
     // 收件人
     $recipient = "$email";
     // 寄件標題
-    $mailTitle = 'Please verify.';
+    $mailTitle = 'Please verify (new).';
     // html內容
     $mailBody = "您的驗證碼為: <B> $verify </B>，請點擊網址驗證。
                     https://tibamef2e.com/tfd103/g1/TFD103-G1/src/verify.html";

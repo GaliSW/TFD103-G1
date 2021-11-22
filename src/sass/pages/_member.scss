@@ -1186,7 +1186,7 @@ main.member_info {
         }
 
         @media (max-width: 577.98px) {
-            .button {
+            button {
                 font-size: 14px;
             }
         }
@@ -1326,6 +1326,15 @@ main.member_info {
                             width: 15px;
                             height: 15px;
                             margin-bottom: 10px;
+                        }
+
+                        @media (max-width: 767.98px) {
+                            div.visible {
+                                width: 300px;
+                                // border: 1px solid black;
+                                @include center;
+                                text-align: left;
+                            }
                         }
 
                         label {

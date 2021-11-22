@@ -8421,7 +8421,7 @@ main.member_info div.bar button._on {
 }
 
 @media (max-width: 577.98px) {
-  main.member_info div.bar .button {
+  main.member_info div.bar button {
     font-size: 14px;
   }
 }
@@ -8561,6 +8561,14 @@ main.member_info div.content div.contain_list div.edit div.edit_detail form.edit
   width: 15px;
   height: 15px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 767.98px) {
+  main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password div.visible {
+    width: 300px;
+    margin: 0 auto;
+    text-align: left;
+  }
 }
 
 main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password label {

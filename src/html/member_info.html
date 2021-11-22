@@ -86,8 +86,11 @@
                                     <br>
                                     <input type="password" id="pwd2" placeholder="請確認新密碼" v-model="twicePassword">
                                     <br>
-                                    <input type="checkbox" id="visible" onclick="visiblePwd()">
-                                    <label for="visible">顯示密碼</label>
+                                    <div class="visible">
+                                        <input type="checkbox" id="visible" onclick="visiblePwd()">
+                                        <label for="visible">顯示密碼</label>
+                                    </div>
+                                    
                                     <input class="button" type="button" onclick="showPwdError()" value="確認">
                                 </form>
                                 <p class="_off" id="alert">密碼已修改</p>
