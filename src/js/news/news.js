@@ -15,107 +15,96 @@
 // });
 
 
-// 
 
-var sortfunctions = {
-  sortArrayByDate : function (a, b){
-      var a_date = Date.parse($(a).attr("ls_date"));
-      var b_date = Date.parse($(b).attr("ls_date"));
 
-      if (a_date > b_date) return -1;
-      if (a_date < b_date) return 1;
-      return 0;
-  },
-  sortArrayByScore : function (a, b){
-      var a_int = $(a).attr("ls_score");
-      var b_int =$(b).attr("ls_score");
+// var sortfunctions = {
+//   sortArrayByDate : function (a, b){
+//       var a_date = Date.parse($(a).attr("ls_date"));
+//       var b_date = Date.parse($(b).attr("ls_date"));
 
-      if (a_int === b_int) {
-          return 0;
-      }
-      else {
-          return (a_int > b_int) ? -1 : 1;
-      }
-      return 0;
-  }
-}
+//       if (a_date > b_date) return -1;
+//       if (a_date < b_date) return 1;
+//       return 0;
+//   },
+//   sortArrayByScore : function (a, b){
+//       var a_int = $(a).attr("ls_score");
+//       var b_int =$(b).attr("ls_score");
 
-function letssort(p){ 
-      var defaults = {
-      _class:null,
-      _target:null,
-      _reverse:false,
-      _attr:null
-      }
+//       if (a_int === b_int) {
+//           return 0;
+//       }
+//       else {
+//           return (a_int > b_int) ? -1 : 1;
+//       }
+//       return 0;
+//   }
+// }
 
-      $.extend(defaults, p);
+// function letssort(p){ 
+//       var defaults = {
+//       _class:null,
+//       _target:null,
+//       _reverse:false,
+//       _attr:null
+//       }
+
+//       $.extend(defaults, p);
   
-      var elements = document.getElementsByClassName(defaults._class);
-      var array = $("#" + defaults._target + " ." + defaults._class).toArray();
+//       var elements = document.getElementsByClassName(defaults._class);
+//       var array = $("#" + defaults._target + " ." + defaults._class).toArray();
   
-      if(array.length > 0){
-        if(defaults._attr == "ls_date"){
-          array.sort(sortfunctions.sortArrayByDate);
-        }else if(defaults._attr == "ls_score"){
-          array.sort(sortfunctions.sortArrayByScore);
-        }
+//       if(array.length > 0){
+//         if(defaults._attr == "ls_date"){
+//           array.sort(sortfunctions.sortArrayByDate);
+//         }else if(defaults._attr == "ls_score"){
+//           array.sort(sortfunctions.sortArrayByScore);
+//         }
           
-        if(defaults._reverse){
-            array.reverse();
-          }
+//         if(defaults._reverse){
+//             array.reverse();
+//           }
 
-          $(array).appendTo("#" + defaults._target);
-      }
-  }
+//           $(array).appendTo("#" + defaults._target);
+//       }
+//   }
 
-$("#block_1 .new").click(function(){
-  letssort({
-  _class: "sort", //specify the class to select
-  _target: "block_1", //specify the target to add the sort to
-  _reverse: false, //reverse the sort
-  _multiple: "ls_date" //if multiple data attr, specify one
-});
-});
+// $("#block_1 .new").click(function(){
+//   letssort({
+//   _class: "sort", //specify the class to select
+//   _target: "block_1", //specify the target to add the sort to
+//   _reverse: false, //reverse the sort
+//   _multiple: "ls_date" //if multiple data attr, specify one
+// });
+// });
 
-$("#block_1 .old").click(function(){
-letssort({
-  _class: "sort", //specify the class to select
-  _target: "block_1", //specify the target to add the sort to
-  _reverse: true, //reverse the sort
-  _multiple: "ls_date" //if multiple data attr, specify one
-});
-});
-
-//
-
-
-$(document).ready(function(){
-  $(".wrap").slice(1,3).hide();
-  $("#bnbn").on("click", function(e){
-      e.preventDefault();
-      $(".wrap:hidden").slice(0, 2).slideDown();
-      if($(".wrap:hidden").length == 0) {
-      $("#bnbn").text("沒有更多內容了").addClass("noContent");
-      }
-  });
-})
+// $("#block_1 .old").click(function(){
+// letssort({
+//   _class: "sort", //specify the class to select
+//   _target: "block_1", //specify the target to add the sort to
+//   _reverse: true, //reverse the sort
+//   _multiple: "ls_date" //if multiple data attr, specify one
+// });
+// });
 
 
 
 
-//
+// $(document).ready(function(){
+//   $(".sort").slice(3,4).hide();
+//   $("#bnbn").on("click", function(e){
+//       e.preventDefault();
+//       $(".sort:hidden").slice(0, 2).slideDown();
+//       if($(".sort:hidden").length == 0) {
+//       $("#bnbn").text("沒有更多內容了").addClass("noContent");
+//       }
+//   });
+// })
 
-var input = document.getElementById('search-input');
-input.addEventListener('focus', function(){
-  input.style.outline = '2px solid rgba(96, 205, 144, 1)';
-});
 
-var input = document.getElementById('search-input');
-input.addEventListener('blur', function(){
-  input.style.outline = 'none';
-});
+
 
 //
+
 
 $(document).ready(function(){
   $(".bbbn").on("click", function(e){
@@ -129,6 +118,19 @@ $(document).ready(function(){
     $(".bbbn2").css("display" , "none");
     $(".bbbn").css("display" , "flex");
   });
+});
+
+//
+
+
+var input = document.getElementById('search-input');
+input.addEventListener('focus', function(){
+  input.style.outline = '2px solid rgba(96, 205, 144, 1)';
+});
+
+var input = document.getElementById('search-input');
+input.addEventListener('blur', function(){
+  input.style.outline = 'none';
 });
 
 //

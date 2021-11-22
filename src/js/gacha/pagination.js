@@ -1,15 +1,32 @@
 $(document).ready(function () {
     $('.next').click(function () {
-        $('.pagination_list').find('.pageNumber.focus').next().addClass('focus');
-        $('.pagination_list').find('.pageNumber.focus').prev().removeClass('focus');
-        console.log("next");
+        let num = document.querySelector('.focus').innerText;
+
+        if (num >= 5) {
+            return false;
+        } else {
+            $('.pagination_list').find('.pageNumber.focus').next().addClass('focus');
+            $('.pagination_list').find('.pageNumber.focus').prev().removeClass('focus');
+            // console.log(document.querySelector('.focus').innerText);
+        }
     })
     $('.prev').click(function () {
-        $('.pagination_list').find('.pageNumber.focus').prev().addClass('focus');
-        $('.pagination_list').find('.pageNumber.focus').next().removeClass('focus');
-        console.log("prev");
+        let num = document.querySelector('.focus').innerText;
+
+        if (num == 1) {
+            return false;
+        } else {
+            $('.pagination_list').find('.pageNumber.focus').prev().addClass('focus');
+            $('.pagination_list').find('.pageNumber.focus').next().removeClass('focus');
+        }
+
+        // console.log("prev");
     })
     $('.one').click(function () {
+        $('.pagination_list').find('.pageNumber.focus').removeClass('focus');
+        $('.one').addClass('focus');
+    })
+    $('.first').click(function () {
         $('.pagination_list').find('.pageNumber.focus').removeClass('focus');
         $('.one').addClass('focus');
     })

@@ -187,7 +187,7 @@
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   #header .logo {
-    margin: 0 0 10px 30px;
+    margin: 0 0 10px 0px;
   }
 }
 
@@ -314,10 +314,10 @@
   }
 }
 
-@media (min-width: 375px) and (max-width: 413.98px) {
+@media (max-width: 480px) {
   #header .hamburger {
     display: flex;
-    margin: 32px;
+    margin: 30px 20px;
   }
 }
 
@@ -395,12 +395,11 @@
   transform-origin: 0% 100%;
 }
 
-#header #menu {
+#header #headerMenu {
   position: absolute;
   width: 300px;
   height: 100vh;
-  border: solid;
-  margin: -33px 0 0 -32px;
+  margin: -32px 0 0 -32px;
   background: #c7e3f0;
   list-style-type: none;
   transform-origin: 0% 0%;
@@ -408,45 +407,60 @@
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#header #menu a > img {
+@media (max-width: 480px) {
+  #header #headerMenu {
+    margin: -30px 0 0 -32px;
+  }
+}
+
+#header #headerMenu a > img {
   width: 100px;
   margin-left: 50%;
   transform: translate(-50%);
 }
 
-#header #menu li {
+#header #headerMenu li {
+  background-color: lightblue;
   padding: 15px 0;
   font-size: 18px;
   text-align: center;
   border-top: 1px solid #0E3461;
 }
 
-#header #menu li:hover {
+#header #headerMenu li:hover {
   background: #0E3461;
 }
 
-#header #menu li:hover img {
+#header #headerMenu li:hover img {
   animation: move 1s infinite;
 }
 
-#header #menu li img {
+#header #headerMenu li img {
   width: 30px;
   margin-right: 10px;
   vertical-align: bottom;
   animation-play-state: paused;
 }
 
-#header #menu .btn {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  cursor: pointer;
-  color: cornflowerblue;
+#header #headerMenu .hamLog {
+  display: none;
 }
 
-#header #menu .btn:hover {
-  background-color: cornflowerblue;
-  color: #fff;
+@media (max-width: 480px) {
+  #header #headerMenu .hamLog {
+    display: block;
+    position: absolute;
+    padding: 15px 0;
+    font-size: 18px;
+    text-align: center;
+    border-top: 1px solid #0E3461;
+    bottom: 0;
+    width: 100%;
+    background-color: azure;
+  }
+  #header #headerMenu .hamLog:hover {
+    background: #0E3461;
+  }
 }
 
 #header .icon {
@@ -464,14 +478,26 @@
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   #header .icon {
-    margin: 0 8px;
+    margin: 0 0;
   }
 }
 
 #header .icon .button {
   text-align: center;
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  #header .icon .button {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  #header .icon .button {
+    font-size: 12px;
+  }
 }
 
 #header .icon .button:hover .show {
@@ -483,12 +509,19 @@
   color: #a2d6d2;
   border: 1px solid #19ADD2;
   border-radius: 50%;
+  position: relative;
 }
 
 #header .icon .button a:hover {
   color: #9dfdc8;
   border: 1px solid #0E3461;
   border-radius: 50%;
+}
+
+@media (max-width: 480px) {
+  #header .icon .button a {
+    margin: 5px;
+  }
 }
 
 #header .icon .button .show {
@@ -502,13 +535,53 @@
   margin-left: 6px;
 }
 
-#header .icon .button p {
+@media (max-width: 480px) {
+  #header .icon .button .show {
+    padding: 2px 2px;
+    margin-left: 4px;
+  }
+}
+
+#header .icon .button h5 {
   width: 20px;
   height: 20px;
   font-size: 16px;
-  color: red;
-  border: solid 1px red;
-  border-radius: 50%;
+  color: yellow;
+  right: -6px;
+  top: -22px;
+  position: absolute;
+}
+
+#header .icon .button h5._off {
+  display: none;
+}
+
+#header .icon .button #headerResult {
+  height: 20px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+@media (max-width: 480px) {
+  #header .icon .button #headerResult {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #header .icon #LogOut {
+    display: none;
+  }
+}
+
+#header .icon #LogOut a {
+  margin: 0px;
+  color: #a2d6d2;
+  font-size: 14px;
+}
+
+#header .icon #LogOut a:hover {
+  color: #9dfdc8;
 }
 
 #header .icon .disappear {
@@ -530,18 +603,47 @@
   padding-top: 5px;
 }
 
-.footer .iconLink span {
-  margin: 5px 10px;
+.footer .iconLink a {
+  margin: 5px 20px;
+  padding: 6px 8px;
+  width: 45px;
+  height: 45px;
+  color: yellowgreen;
+  background-color: white;
+  border-radius: 24%;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  font-size: 16px;
+  transition: .3s linear;
+  position: relative;
 }
 
-.footer .iconLink span .fa-2x {
-  color: #cacaca;
+.footer .iconLink a:hover {
+  transform: scale(1.2);
+  border-radius: 50%;
 }
 
-.footer .iconLink span .fa-2x:hover {
-  color: #477dbe;
-  transform: scale(1.25, 1.25);
-  transition: transform 0.25s ease;
+.footer .iconLink a i::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-size: 200% 200%;
+  background-position: 75% 75%;
+  top: 0;
+  left: 5%;
+  line-height: 80px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background .5s linear;
+}
+
+.footer .iconLink a:hover i::before {
+  background-position: 0% 0%;
+}
+
+.footer .iconLink .fa-facebook-square::before {
+  background: linear-gradient(135deg, #264dfa 30%, #0a3d62 50%);
 }
 
 .footer .notice {
@@ -2422,6 +2524,214 @@ body {
   text-align: center;
 }
 
+.coinHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.coinHintmaskLayer .coinPopUpBox {
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.coinHintmaskLayer .coinCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.coinHintmaskLayer .coinPopContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .coinHintmaskLayer .coinPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .coinHintmaskLayer .coinPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .coinHintmaskLayer .coinPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .coinHintmaskLayer .coinPopContent {
+    font-size: 12px;
+  }
+}
+
+.coinHintmaskLayer .coinConfirmBlk {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.coinHintmaskLayer .coinConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.coinHintmaskLayer .coinConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+.toLoginHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.toLoginHintmaskLayer .toLoginPopUpBox {
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.toLoginHintmaskLayer .toLoginCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.toLoginHintmaskLayer .toLoginPopContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .toLoginHintmaskLayer .toLoginPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .toLoginHintmaskLayer .toLoginPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .toLoginHintmaskLayer .toLoginPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .toLoginHintmaskLayer .toLoginPopContent {
+    font-size: 12px;
+  }
+}
+
+.toLoginHintmaskLayer .toLoginConfirmBlk {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.toLoginHintmaskLayer .toLoginConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.toLoginHintmaskLayer .toLoginConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
 .miniGameTitle {
   margin: 0 auto;
   text-align: center;
@@ -3838,6 +4148,10 @@ body {
   width: 150px;
 }
 
+.index .sportsCar .carId:hover {
+  bottom: 10%;
+}
+
 .index .sportsCar .carId img {
   width: 100%;
   vertical-align: bottom;
@@ -4669,9 +4983,8 @@ body {
 }
 
 .index .unlock {
-  border: 1px solid #bcb177;
+  border: 2px solid black;
   margin: 30px auto;
-  background-color: #355c45;
   box-shadow: #7adaa2 0 0 70px 20px;
   width: 500px;
   height: 450px;
@@ -4834,8 +5147,8 @@ body {
 }
 
 .index .change .changeRole .myRole .rolesR {
-  border: 10px solid #fff;
-  background-color: #60cd90;
+  border: 2px solid #60cd90;
+  background-color: #0e3461;
   margin-bottom: 40%;
 }
 
@@ -4844,13 +5157,13 @@ body {
 }
 
 .index .change .changeRole .myRole .rolesR .roleName {
-  background-color: #fff;
+  background-color: #0e3461;
 }
 
 .index .change .changeRole .myRole .rolesR .roleName p {
   padding: 5px;
   margin: 0;
-  color: black;
+  color: white;
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -4901,8 +5214,8 @@ body {
 }
 
 .index .change .changeRole .otherRole .rolesL {
-  border: 10px solid #fff;
-  background-color: #60cd90;
+  border: 2px solid #60cd90;
+  background-color: #0e3461;
   margin-bottom: 40%;
 }
 
@@ -4911,14 +5224,13 @@ body {
 }
 
 .index .change .changeRole .otherRole .rolesL .roleName {
-  border: 1px solid #fff;
-  background-color: #fff;
+  background-color: #0e3461;
 }
 
 .index .change .changeRole .otherRole .rolesL .roleName p {
   padding: 5px;
   margin: 0;
-  color: black;
+  color: white;
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -5305,6 +5617,17 @@ main.login div.contain input {
   height: 35px;
 }
 
+main.login div.contain input#visible {
+  margin: 0;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 10px;
+}
+
+main.login div.contain .visible {
+  color: white;
+}
+
 main.login div.contain button.btn_login,
 main.login div.contain button.btn_confirm,
 main.login div.contain button.btn_signup {
@@ -5406,10 +5729,223 @@ main.login div.contain .bookmark {
   display: block;
 }
 
+.banHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.banHintmaskLayer .banPopUpBox {
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.banHintmaskLayer .banCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.banHintmaskLayer .banPopContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .banHintmaskLayer .banPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .banHintmaskLayer .banPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .banHintmaskLayer .banPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .banHintmaskLayer .banPopContent {
+    font-size: 12px;
+  }
+}
+
+.banHintmaskLayer .banConfirmBlk {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.banHintmaskLayer .banConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.banHintmaskLayer .banConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+.veriHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.veriHintmaskLayer .veriPopUpBox {
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.veriHintmaskLayer .veriCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.veriHintmaskLayer .veriPopContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .veriHintmaskLayer .veriPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .veriHintmaskLayer .veriPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .veriHintmaskLayer .veriPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .veriHintmaskLayer .veriPopContent {
+    font-size: 12px;
+  }
+}
+
+.veriHintmaskLayer .veriConfirmBlk {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.veriHintmaskLayer .veriConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.veriHintmaskLayer .veriConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
 .mgLoginBg {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(45deg, #024f3f 0%, #b8b8b8 100%);
+}
+
+#contentContainer {
+  height: 536px;
+  overflow-y: auto;
 }
 
 #error {
@@ -5431,6 +5967,24 @@ main.login div.contain .bookmark {
   transition: .5s;
 }
 
+.mgLoginBlk .mgLogoImg {
+  background-image: url(../src/image/index/logo.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: 50%;
+  transform: rotate(7deg) translate(-50%, 0);
+  top: -100px;
+  position: absolute;
+  width: 400px;
+  height: 100%;
+  z-index: -999;
+}
+
+.mgLoginBlk form {
+  margin-top: 200px;
+}
+
 .mgLoginBlk h1 {
   border: none;
 }
@@ -5441,10 +5995,6 @@ main.login div.contain .bookmark {
 
 .mgLoginBlk div {
   margin: 20px 0;
-}
-
-.mgLoginBlk img {
-  width: 400px;
 }
 
 .mgLoginBlk label {
@@ -5520,7 +6070,8 @@ main.login div.contain .bookmark {
 }
 
 .mgHeaderBlk .logo a {
-  background-image: url(../src/image/manager/logo.png);
+  background-image: url(../src/image/index/logo.png);
+  transform: rotate(7deg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -5555,24 +6106,25 @@ main.login div.contain .bookmark {
 }
 
 .mgHeaderBlk .logOut button {
-  color: #60cd90;
-  width: 150px;
-  padding: 0px;
-  background-color: #0e3461;
-  border: 3px solid #60cd90;
-  text-align: center;
-  font-size: 20px;
-  position: relative;
-  border-radius: 10px;
-  transition: .3s;
-}
-
-.mgHeaderBlk .logOut button:hover {
   color: #0e3461;
   width: 150px;
   padding: 0px;
   background-color: #60cd90;
   border: 3px solid #0e3461;
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  border-radius: 10px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.mgHeaderBlk .logOut button:hover {
+  color: #60cd90;
+  width: 150px;
+  padding: 0px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
   text-align: center;
 }
 
@@ -7841,6 +8393,7 @@ main.member_info section.popShow {
 }
 
 .out .wrap {
+  cursor: pointer;
   width: 100%;
   margin-top: 50px;
   display: flex;
@@ -7913,6 +8466,7 @@ main.member_info section.popShow {
 }
 
 .out .wrap .sec {
+  color: #10c5b1;
   margin-right: 20px;
   height: 250px;
 }
@@ -7922,7 +8476,16 @@ main.member_info section.popShow {
   width: 100%;
 }
 
+.out .wrap .name .h3 {
+  color: #10c5b1;
+}
+
+.out .wrap .name .p {
+  color: #10c5b1;
+}
+
 #bnbn {
+  pointer-events: none;
   cursor: pointer;
   color: #60cd90;
   width: 20;
@@ -8055,14 +8618,14 @@ main.member_info section.popShow {
   font-size: 16px;
 }
 
-.out .ti {
+.out .date {
   display: flex;
-  margin: 50px 0;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
-.out .ti .date {
-  margin: 0 auto;
+.out .ti {
+  margin: 50px 0;
+  display: flex;
 }
 
 .out .con {
@@ -8073,6 +8636,7 @@ main.member_info section.popShow {
 }
 
 .out .con h1 {
+  margin: 50px 0;
   text-align: center;
 }
 
@@ -8086,6 +8650,7 @@ main.member_info section.popShow {
 }
 
 .out .con li {
+  margin: 50px 0;
   text-align: left;
   color: white;
 }
@@ -8264,6 +8829,15 @@ main.member_info section.popShow {
 
 .allBlock .sec1 .flexContainer .items.-right .collectForm {
   margin-left: 70px;
+}
+
+.allBlock .sec1 .flexContainer .items.-right .collectForm .changes {
+  color: #0e3461;
+  width: 70px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
 }
 
 .allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn {
@@ -9000,7 +9574,7 @@ main.signup .main_contain div._on {
 main.signup .verify_contain {
   width: 600px;
   margin: 0 auto;
-  height: 350px;
+  height: 400px;
   max-width: 95%;
 }
 
@@ -9034,7 +9608,7 @@ main.signup .verify_contain div.verify form {
 }
 
 main.signup .verify_contain div.verify .button {
-  margin-top: 20px;
+  margin-top: 10px;
   color: #60cd90;
   width: 200px;
   padding: 5px;
@@ -9044,7 +9618,30 @@ main.signup .verify_contain div.verify .button {
 }
 
 main.signup .verify_contain div.verify .button:hover {
-  margin-top: 20px;
+  margin-top: 10px;
+  color: #0e3461;
+  width: 200px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+main.signup .verify_contain div.verify .resend {
+  color: #0e3461;
+  width: 200px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+  background-color: #024F7B;
+  border-color: #51AB82;
+  color: #51AB82;
+  margin-top: 15px;
+}
+
+main.signup .verify_contain div.verify .resend:hover {
+  margin-top: 15px;
   color: #0e3461;
   width: 200px;
   padding: 5px;
@@ -9057,6 +9654,16 @@ main.signup .verify_contain div.verify input {
   margin-top: 10px;
   height: 30px;
   width: 200px;
+}
+
+main.signup .verify_contain div.verify #resendOk {
+  font-size: 16px;
+}
+
+main.signup .verify_contain div.verify #idError,
+main.signup .verify_contain div.verify .falseVerify {
+  font-size: 16px;
+  color: red;
 }
 
 * {

@@ -225,6 +225,9 @@ body{
             // @include border;
             position: absolute;
             width: 150px;
+            &:hover{
+                bottom: 10%;
+            }
             img{
                 width: 100%;
                 vertical-align: bottom;
@@ -821,9 +824,10 @@ body{
     }
     
     .unlock{
-        @include border(1, #bcb177);
+        @include border(2, black);
+        // @include border(1, #bcb177);
+        // background-color: rgb(53, 92, 69);
         margin: 30px auto;
-        background-color: rgb(53, 92, 69);
         box-shadow: rgb(122, 218, 162) 0 0 70px 20px;
         width: 500px;
         height: 450px;
@@ -948,18 +952,18 @@ body{
                     }
                 }
                 .rolesR{
-                    @include border(10,#fff);
-                    background-color: $light_green;
+                    @include border(2, $light_green);
+                    background-color: $dark_blue;
                     margin-bottom: 40%;
                     img{
                         width: 100%;
                     }
                     .roleName{
-                        background-color: #fff;
+                        background-color: $dark_blue;
                         p{
                             padding: 5px;
                             margin: 0;
-                            color: black;
+                            color: white;
                             @include phone{
                                 font-size: $fontSize;
                             }
@@ -992,19 +996,18 @@ body{
                     }
                 }
                 .rolesL{
-                    @include border(10,#fff);
-                    background-color: $light_green;
+                    @include border(2, $light_green);
+                    background-color: $dark_blue;
                     margin-bottom: 40%;
                     img{
                         width: 100%;
                     }
                     .roleName{
-                        @include border(1,#fff);
-                        background-color: #fff;
+                        background-color: $dark_blue;
                         p{
                             padding: 5px;
                             margin: 0;
-                            color: black;
+                            color: white;
                             @include phone{
                                 font-size: $fontSize;
                             }

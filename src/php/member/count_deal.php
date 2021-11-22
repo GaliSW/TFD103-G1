@@ -11,9 +11,7 @@
         where (FK_USERNAME_BUY = '$Name' && T2.AMOUNT = 1 && T1.CONFIRM = 0)
         OR
         (T2.FK_USERNAME = '$Name' && T1.CONFIRM = 0 && T2.AMOUNT =1)";
-    // $statement = $pdo->query($sql);
 
-    // //抓出全部且依照順序封裝成一個二維陣列
     $statement = $pdo->prepare($sql);
 
     $statement->execute();
@@ -22,6 +20,4 @@
     if(count($data)> 0){
         echo count($data);
     }
-   
-    
-    // echo $_SESSION["Name"];
+

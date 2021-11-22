@@ -12,6 +12,7 @@
     $statement->execute();
     
     $data = $statement->fetchAll();
+
     if(count($data)> 0){
     
         $sql2 = "update MEMBER set AUTH = 1   where USERNAME = ? ";
@@ -20,6 +21,9 @@
         $statement->execute();
         echo "Y";
         // echo "<script>location.href='../../html/login.html';</script>";
-    };
+    }else{
+        echo "X";
+    }
+    ;
     
 

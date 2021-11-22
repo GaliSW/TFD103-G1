@@ -226,7 +226,7 @@ main.signup {
     .verify_contain {
         width: 600px;
         @include center;
-        height: 350px;
+        height: 400px;
         max-width: 95%;
 
         h1 {
@@ -235,15 +235,19 @@ main.signup {
             float: left;
             margin-bottom: 20px;
         }
-        .ok{
+
+        .ok {
             display: none;
         }
-        ._off{
+
+        ._off {
             display: none;
         }
-        h1._on{
+
+        h1._on {
             display: block;
         }
+
         div.verify {
             width: 250px;
             margin-top: 100px;
@@ -254,12 +258,25 @@ main.signup {
             }
 
             .button {
-                margin-top: 20px;
+                margin-top: 10px;
                 @include btn_blur(200px, 5px);
             }
 
             .button:hover {
-                margin-top: 20px;
+                margin-top: 10px;
+                @include btn_on(200px, 5px);
+            }
+
+            .resend {
+                @include btn_on(200px, 5px);
+                background-color: #024F7B;
+                border-color: #51AB82;
+                color: #51AB82;
+                margin-top: 15px;
+            }
+
+            .resend:hover {
+                margin-top: 15px;
                 @include btn_on(200px, 5px);
             }
 
@@ -267,6 +284,16 @@ main.signup {
                 margin-top: 10px;
                 height: 30px;
                 width: 200px;
+            }
+
+            #resendOk {
+                font-size: 16px;
+            }
+
+            #idError,
+            .falseVerify {
+                font-size: 16px;
+                color: red;
             }
         }
     }

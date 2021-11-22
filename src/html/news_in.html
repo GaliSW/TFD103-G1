@@ -68,7 +68,7 @@
                 </ul>
             </div> -->
 
-            <h1 class="h1_final">了解更多</h1>
+            <!-- <h1 class="h1_final">了解更多</h1>
 
             <section class="final">
 
@@ -92,7 +92,7 @@
                     <button class="bt"> <a href="./trade.html" class="btnbtn">檢視交易平台 ></a></button>
                 </div>
 
-            </section>
+            </section> -->
         </div>
     </div>
 
@@ -126,7 +126,7 @@
                 },
                 dataType: "json",
                 success: function (response) {
-                    // console.log(response);
+                    console.log(response);
                     let date = response[0][1];
                     let title = response[0][2];
                     let content = response[0][3];
@@ -137,14 +137,38 @@
                     <h1>${title}</h1>
                     <img src="../image/intro/${img}" class="img_in" alt="slide4">
                     <div class="news_in1">
-                        <p>${content}</p>
+                        
                         <ul>
                             <li>
                                 ${content}                            </li>
-                            <li>
-                                ${content}                            </li>
+                            </li>
                         </ul>
                     </div>
+                    <h1 class="h1_final">了解更多</h1>
+
+                    <section class="final">
+
+                        <div class="gacha">
+                            <img src="../image/intro/圖-17.jpg" class="img_in" alt="slide4">
+                            <p>扭蛋詳情</p>
+                            <p>
+                                了解《怪哩怪汽》專屬的扭蛋與小遊戲，<br>獲取第一隻屬於你個人的專屬角色，<br>玩過小遊戲後還可以解鎖更多獨具特色的夥伴們。
+                            </p>
+                            <button class="bt"> <a href="./Gacha.html" class="btnbtn">前往扭蛋介紹 ></a></button>
+                        </div>
+
+                        <p class="line"></p>
+
+                        <div class="trade">
+                            <img src="../image/intro/圖-22.jpg" class="img_in" alt="slide4">
+                            <p>與他人互動</p>
+                            <p>
+                                透過《怪哩怪汽》獨特的交換模式，<br>取得心目中理想的角色與扭蛋時帶來的刺激時刻，<br>與好友分享或是瞧瞧他人的角色。
+                            </p>
+                            <button class="bt"> <a href="./trade.html" class="btnbtn">檢視交易平台 ></a></button>
+                        </div>
+
+                    </section>
                     `;
                     block_11.innerHTML = str;
                 },
