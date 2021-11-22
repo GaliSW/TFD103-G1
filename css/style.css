@@ -8158,7 +8158,7 @@ main.member_info section.popShow {
 }
 
 .allBlock {
-  background-image: url("../dist/images/trade/background.png");
+  background-image: url("../src/image/trade/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 0px 0px;
@@ -9294,6 +9294,7 @@ main.signup .verify_contain div.verify input {
   display: block;
   position: absolute;
   top: 54px;
+  z-index: 3;
   background-color: #9bcfb7;
   transition: 1s;
   padding: 10px;
@@ -10073,6 +10074,110 @@ top: 5px; */
   font-weight: 100;
   cursor: pointer;
   transition: all .3s ease;
+}
+
+.toGachaHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.toGachaHintmaskLayer .toGachaPopUpBox {
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.toGachaHintmaskLayer .toGachaCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.toGachaHintmaskLayer .toGachaPopContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .toGachaHintmaskLayer .toGachaPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .toGachaHintmaskLayer .toGachaPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .toGachaHintmaskLayer .toGachaPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .toGachaHintmaskLayer .toGachaPopContent {
+    font-size: 12px;
+  }
+}
+
+.toGachaHintmaskLayer .toGachaConfirmBlk {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.toGachaHintmaskLayer .toGachaConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.toGachaHintmaskLayer .toGachaConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
 }
 
 .gachascreen {
