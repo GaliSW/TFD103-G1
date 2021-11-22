@@ -24,6 +24,7 @@ let vm = new Vue({
       // vm.$data.loginError = true;
 <<<<<<< HEAD
       let loginBtn = document.querySelector('.btn_login');
+<<<<<<< HEAD
         let mgUser = document.getElementById('userId').value;
         let mgPassword = document.getElementById('password').value;
 =======
@@ -40,6 +41,13 @@ let vm = new Vue({
 =======
       });
 >>>>>>> Lillian
+=======
+      let mgUser = document.getElementById('userId').value;
+      let mgPassword = document.getElementById('password').value;
+      user = mgUser; //填入的user
+      pass = mgPassword; //填入的密碼
+      login(user, pass);
+>>>>>>> Gary
       function login(user, pass) {
         $.ajax({
           method: "POST",
