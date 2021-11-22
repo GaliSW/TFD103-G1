@@ -32,7 +32,13 @@
                         <input type="text" id="thisVerify" maxlength="4" placeholder="請輸入四位數驗證碼" name="thisVerify">
                         <br>
                         <input class="button" type="button" onclick=clickThis() value="送出">
+                        <input type="button" class="resend" value="重寄驗證信" onclick="resendThis()">
                     </form>
+                    <p id="falseVerify" class="falseVerify _off">驗證失敗</p>
+                    <p id="idError" class="_off">此帳號未註冊</p>
+                    <p id="resendOk" class="_off">驗證碼已重寄</p>
+                    
+                    
                 </div>
             </div>
             
@@ -51,36 +57,4 @@
 
 </html>
 
-<Script>
-    
-
-    function trans(){
-        window.location.href = './login.html';
-    };
-    function clickThis(){
-        let Name = $("#Name").val();
-        Name = $.trim(Name);
-        let thisVerify = $("#thisVerify").val();
-        thisVerify = $.trim(thisVerify);
-
-        $.ajax({
-                    method: "POST",
-                    url: "../php/member/verify.php",
-                    data: {
-                        Name: name,
-                        thisVerify: thisVerify
-                    },
-                    dataType: "text",
-                    success: function (response) {
-                        if (response == "Y") {
-                            $("#thisOk").addClass('_off');
-                            $("#ok").addClass('_on');
-                            setTimeout("trans()",5);
-                        } else {
-                            alert("驗證失敗")
-                        }
-                    },
-                });
-            };
-    
-</Script>
+<Script src="../js/member/verify.js"></Script>
