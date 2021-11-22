@@ -112,7 +112,7 @@
                 .collectForm {
                     margin-left: 70px;
 
-                   
+
 
                     .collectBtn {
                         @include btn_blur (70px, 5px);
@@ -405,7 +405,7 @@
                 color: #fff;
             }
 
-            .myRoleImg{
+            .myRoleImg {
                 width: 230px;
             }
 
@@ -438,8 +438,8 @@
                 }
             }
 
-            .yourRoleImg{
-                width:230px;
+            .yourRoleImg {
+                width: 230px;
             }
 
             .yourRoleNameBlock {
@@ -607,12 +607,9 @@
 
 
 }
-<<<<<<< HEAD
-.buyHintmaskLayer {
-=======
+
 // 沒有點數談窗
 .noPointHintmaskLayer {
->>>>>>> MARK
     position: fixed;
     top: 0;
     left: 0;
@@ -621,11 +618,7 @@
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 999;
 
-<<<<<<< HEAD
-    .buyPopUpBox {
-=======
     .noPointPopUpBox {
->>>>>>> MARK
         position: relative;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -638,11 +631,7 @@
         z-index: 999;
     }
 
-<<<<<<< HEAD
-    .buyCloseBtn {
-=======
     .noPointCloseBtn {
->>>>>>> MARK
         position: absolute;
         right: 0;
         background-color: rgba(16, 197, 177, 1);
@@ -656,11 +645,7 @@
         cursor: pointer;
     }
 
-<<<<<<< HEAD
-    .buyPopContent {
-=======
     .noPointPopContent {
->>>>>>> MARK
         position: relative;
         display: flex;
         flex-direction: column;
@@ -689,11 +674,7 @@
         }
     }
 
-<<<<<<< HEAD
-    .buyConfirmBlk {
-=======
     .noPointConfirmBlk {
->>>>>>> MARK
         position: absolute;
         display: flex;
         // @include border();
@@ -714,9 +695,93 @@
             }
         }
     }
-<<<<<<< HEAD
-}
-=======
 }
 
->>>>>>> MARK
+// 自我交易彈窗
+.selfHintmaskLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+
+    .selfPopUpBox {
+        position: relative;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        background-color: rgba(2, 79, 63, 1);
+        border: 2px solid rgba(16, 197, 177, 1);
+        width: 300px;
+        height: 200px;
+        border-radius: 5px;
+        z-index: 999;
+    }
+
+    .selfCloseBtn {
+        position: absolute;
+        right: 0;
+        background-color: rgba(16, 197, 177, 1);
+        border-radius: 2px;
+        font-size: 28px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+    }
+
+    .selfPopContent {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        color: rgba(96, 205, 144, 1);
+        color: $tiffiny_green;
+        font-size: $fontSize;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include desktop_small {
+            font-size: $fontSize;
+        }
+
+        @include pad {
+            font-size: $fontSizeSmall;
+        }
+
+        @include pad_small {
+            font-size: $fontSizeMin;
+        }
+
+        @include phone {
+            font-size: $fontSizeMin;
+        }
+    }
+
+    .selfConfirmBlk {
+        position: absolute;
+        display: flex;
+        // @include border();
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+
+
+        button {
+            margin: 0 10px;
+            @include btn_blur(100px, 5px);
+            @include border_r(5);
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                @include btn_on(100px, 5px);
+            }
+        }
+    }
+}
