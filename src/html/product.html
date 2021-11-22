@@ -15,18 +15,49 @@
     <script>
 
         window.onload = function getproductname(){
-            let gachaid = sessionStorage.getItem('productname');
-            // console.log(gachaid);
+            callProductInfo();
+            myFavStatus();
+        }   
 
+
+        function myFavStatus(){
+            let productid = sessionStorage.getItem('productname');
+
+            $.ajax({
+                method: "POST",
+                url: "../php/product/loadMyFav.php",
+                data: { 
+                    productID:productid,
+                },
+                dataType: "text",
+                success: function (response) {
+                    let btn = document.getElementById('myfav');
+                    if(response == "YY"){
+                        btn.style.background = "rgba(96, 205, 144, 1)";
+                        btn.style.color = "rgba(14, 52, 97, 1)";
+                        btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
+                        btn.innerText="已收藏";
+                    }else if(response == "YN"){
+                        btn.style.background = "rgba(14, 52, 97, 1)";
+                        btn.style.color = "rgba(96, 205, 144, 1)";
+                        btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
+                        btn.innerText="收藏";
+                    }
+                }
+                }); 
+        }     
+
+        function callProductInfo(){
+            let productid = sessionStorage.getItem('productname');
             $.ajax({
                 method: "POST",
                 url: "../php/product/callproductname.php",
                 data: { 
-                    GACHAID:gachaid,
+                    GACHAID: productid,
                 },
                 dataType: "json",
                 success: function (response) {
-                    console.log(response);
+                    // console.log(response);
                     let username = response[0][1];
                     let gachaid = response[0][2];
                     let price = response[0][3];
@@ -64,12 +95,9 @@
                     alert("發生錯誤: " + exception.status);
                 }
             });
-
         }
-        
-
-
     </script>
+
 </head>
 <header></header>
 
@@ -408,38 +436,96 @@
     
     <script>
             function myfav(){
-                let btnName = document.getElementById('myfav').innerText; 
-                    if(btnName == "收藏"){
-                        let username = document.getElementById('username').attributes['name'].value;
-                        let myfavvalue = document.getElementById('myfav').attributes['type'].value;
-                        let favchange = document.getElementById('myfav');
+                let productid = sessionStorage.getItem('productname');
+                console.log(productid);
+                $.ajax({
+                method: "POST",
+                url: "../php/product/loadMyFav.php",
+                data: { 
+                    productID:productid,
+                },
+                dataType: "text",
+                success: function (response) {
+                    let btn = document.getElementById('myfav');
+                    if(response == "YN"){
+                        insertMyfav();
+                        btn.style.background = "rgba(96, 205, 144, 1)";
+                        btn.style.color = "rgba(14, 52, 97, 1)";
+                        btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
+                        btn.innerText="已收藏";
+                    }else if(response=="N"){
+                        alert('N');
+                        // document.getElementById('tologinBlk').remove('none');
+                    }else if(response =="YY"){
+                        deletemyfav(productid);
+                        btn.style.background = "rgba(14, 52, 97, 1)";
+                        btn.style.color = "rgba(96, 205, 144, 1)";
+                        btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
+                        btn.innerText="收藏";
+                    }
+                }
+                }); 
+}
+
+            function insertMyfav(){
+                let productid = sessionStorage.getItem('productname');
                             $.ajax({
                             method: "POST",
                                 url: "../php/product/myfav.php",
                                 data: {
-                                USERNAME:username,
-                                PRODUCTID: myfavvalue,
+                                PRODUCTID: productid,
                                 },
                                 dataType: "text",
                                 success: function (response) {
-                                    alert('收藏成功');
-                                    favchange.classList.remove('collectBtn');
-                                    favchange.classList.add('changes');
-                                    btnName.innerText = "已收藏"
+                                    let btnName = document.getElementById('myfav').innerText;
+                                    btnName.innerText = "已收藏";
+                                    document.getElementById('buyBlk').remove('none');
                                 },
                                 error: function (exception) {
                                     alert("數據載入失敗: " + exception.status);
                                 }
                             });            
-                    }
-                }
+            }    
+            
+            function deletemyfav(productid){
+                let cancel = document.getElementById('myfav'.innerText);
+                            $.ajax({
+                            method: "POST",
+                                url: "../php/product/deltemyfav.php",
+                                data: {
+                                PRODUCTID: productid,
+                                },
+                                dataType: "text",
+                                success: function (response) {
+                                },
+                                error: function (exception) {
+                                    alert("數據載入失敗: " + exception.status);
+                                }
+                            });            
+            }
+    
     </script>
 
 
-
-
-
     <script src="../js/gacha/chart.js"></script>
+
+    <div id="buyBlk" class="toGachaBlk none">
+        <section class="buyHintmaskLayer">
+            <div class="buyPopUpBox">
+                <div onclick="popCloseX(this)" class="buyCloseBtn">
+                    x
+                </div>
+                <div class="buyPopContent">
+                    <p>
+                        <i class="far fa-user-circle"></i>&nbsp;收藏成功!
+                    </p>
+                </div>
+                <div class="buyConfirmBlk">
+                    <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 <?php
     $GACHAID = $_POST["GACHAID"];
+    
     include "../connection.php";
 
     // $sql = "SELECT * from product WHERE FK_GACHA_ID  = '$GACHAID'" ;
@@ -21,5 +22,7 @@
     //抓出全部且依照順序封裝成一個二維陣列
     $data = $statement->fetchAll();
     echo json_encode($data);
+
+
 
 ?>

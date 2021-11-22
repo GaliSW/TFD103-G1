@@ -1,13 +1,13 @@
 <?php
     include("../connection.php");
-    $Id = $_POST['Id'];
+    $DELETEMYFAV = $_POST['DELETEMYFAV'];
     //---------------------------------------------------
 
        //建立SQL
        $sql = "DELETE FROM MYFAV WHERE FK_PRODUCT_ID = 2";
 
        $statement = $pdo->prepare($sql);
-       $statement->bindValue(1 , );   
+       $statement->bindValue(1 , $DELETEMYFAV);   
 
        $statement->execute();
 ?>

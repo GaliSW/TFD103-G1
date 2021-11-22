@@ -1,8 +1,9 @@
 <?php
 
     include("../connection.php");
+    include "../Manager.php";
 
-    $USERNAME = ($_POST["USERNAME"]);
+    $USERNAME = getSession();
     $PRODUCTID = ($_POST["PRODUCTID"]);
 
        //建立SQL
