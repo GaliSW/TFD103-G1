@@ -9321,8 +9321,7 @@ main.member_info section.popShow {
 .buyHintmaskLayer .buyPopUpBox {
   position: relative;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   left: 50%;
   background-color: #024f3f;
   border: 2px solid #10c5b1;
@@ -9348,23 +9347,15 @@ main.member_info section.popShow {
 
 .buyHintmaskLayer .buyPopContent {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   color: #60cd90;
   color: #10c5b1;
   font-size: 16px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -9393,12 +9384,9 @@ main.member_info section.popShow {
 
 .buyHintmaskLayer .buyConfirmBlk {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   bottom: 10px;
 }
 
@@ -9412,7 +9400,6 @@ main.member_info section.popShow {
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
-  -webkit-transition: .3s;
   transition: .3s;
 }
 
