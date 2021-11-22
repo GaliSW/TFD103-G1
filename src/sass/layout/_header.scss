@@ -267,6 +267,37 @@
                 }
             }
         }
+        #LogOutPhone{
+            display: none;
+            @media(max-width: 480px){
+                display: block;
+            }
+            a{
+                margin: 0px;
+                color: #a2d6d2;
+                font-size: 14px;
+                &:hover{
+                    color: #9dfdc8;
+                }
+            }
+        }
+        .LogInPhone{
+            display: none;
+            @media(max-width: 480px){
+                display: block;
+            }
+            a{
+                margin: 0px;
+                color: #a2d6d2;
+                font-size: 14px;
+                &:hover{
+                    color: #9dfdc8;
+                }
+            }
+        }
+        .logbt{
+            display: none;
+        }
     }
     // phone nav end
     
@@ -274,12 +305,26 @@
         display: flex;
         align-items: center;
         margin: auto;
-        margin: 0 28px;
+        margin: 8px 28px 0;
+        @include pad{
+            margin: 0 28px;
+        }
         @include pad_small{
             margin: 0 10px;
         }
         @include phone{
             margin: 0 0;
+        }
+        .bt{
+            margin-right: -10px;
+            position: relative;
+            @media(max-width: 480px){
+                margin-right: 0px;
+            }
+            p{
+                position: relative;
+                bottom: 2px;
+            }
         }
         .button{
             // width:100px;
@@ -360,6 +405,22 @@
             }
         }
         .disappear{
+            display: none;
+        }
+        #LogIn{
+            @media(max-width: 480px){
+                display: none;
+            }
+            a{
+                margin: 0px;
+                color: #a2d6d2;
+                font-size: 14px;
+                &:hover{
+                    color: #9dfdc8;
+                }
+            }
+        }
+        .logbt{
             display: none;
         }
     }

@@ -18,12 +18,6 @@
     }
 
     // web
-    .op1{
-        display: block;
-        @include phone{
-            display: none;
-        }
-    }
     .screen{
         // @include border;
         max-width: 1400px;
@@ -84,12 +78,6 @@
     }
 
     //phone
-    .op{
-        display: none;
-        @include phone{
-            display: block;
-        }
-    }
     .screenPhone{
         // @include border;
         max-width: 370px;

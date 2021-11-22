@@ -66,9 +66,11 @@
                             <a href="../html/trade.html">
                                 <li><img src="../image/index/role01.png">角色交易</li>
                             </a>
-
                             <a href="#">
-                                <div class="hamLog" id="LogOutPhone" class="LogOut" onclick="LogOut()">登出</div>
+                                <div class="hamLog " id="LogOutPhone" onclick="LogOut()">登出</div>
+                            </a>
+                            <a href="#">
+                                <div class="hamLog logbt LogInPhone" id="LogInPhone" onclick="LogIn()">登入</div>
                             </a>
                         </ul>
                     </div>
@@ -76,7 +78,7 @@
                 <!-- phone nav end -->
 
                 <div class="icon">
-                    <botton type="button" class="button disappear" id="appear1">
+                    <botton type="button" class="button bt disappear" id="appear1">
                         <a href="../html/deposit.html"><i class="fas fa-coins fa-2x"></i></a>
                         <p id="headerResult"></p>
                         <div class="show">儲值</div>
@@ -93,6 +95,9 @@
                     </botton>
                     <botton type="button" id="LogOut" class="LogOut" onclick="LogOut()">
                         <a href="#">登出</a>
+                    </botton>
+                    <botton type="button" id="LogIn" class="LogIn logbt" onclick="LogIn()">
+                        <a href="#">登入</a>
                     </botton>
                 </div>
             </div>
@@ -226,12 +231,12 @@
                         <h1>立即前往扭轉</h1>
                         <h4>透過扭蛋機獲取新角色，
                             每一個角色都是獨一無二的，<br>
-                            在技能方面上也擁有不同的能力值。
+                            在技能方面上也擁有不同的能力值。
                         </h4>
                     </li>
                     <li>
                         <img src="../image/index/bg07.jpg" class="image">
-                        <h1>怪哩賽車遊戲</h1>
+                        <h1>怪哩賽車遊戲</h1>
                         <h4>2Ｄ線上賽車遊戲，帶你探索不同場景，<br>
                             體驗競速賽車的刺激快感。
                         </h4>
@@ -384,6 +389,10 @@
                             LogOut.classList.add('none');
                             let LogOutPhone = document.getElementById('LogOutPhone');
                             LogOutPhone.classList.add('none');
+                            let LogIn = document.getElementById('LogIn');
+                            LogIn.classList.remove('logbt');
+                            let LogInPhone = document.getElementById('LogInPhone');
+                            LogInPhone.classList.remove('logbt');
                         } else {
                             let appear1 = document.getElementById('appear1');
                             appear1.classList.remove('disappear');
