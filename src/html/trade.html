@@ -335,10 +335,10 @@
                 //console.log(price);
                 
                 let gachaId = document.getElementById("showImg").attributes['name'].value;
-                console.log(gachaId);
+                // console.log(gachaId);
                 
                 let status = document.getElementById("showImg").attributes['alt'].value;
-                //console.log(status);
+                // console.log(status);
 
                 if(status == 1){
                   status = 0;
@@ -704,7 +704,7 @@
 									redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
 									shadowNone = `this.style.boxShadow='none'`;
 								}
-                                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}">
+                                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}" onclick="productcookie(this)">
                                             <a href="./product.html">
                                             <div class="inner">
                                                 <div class="content">
@@ -868,6 +868,15 @@
 			}
 
 
+</script>
+
+<script>
+  function productcookie(item){
+    // console.log(item.attributes[1].value);
+    let productname = item.attributes[1].value;
+    sessionStorage.setItem('productname' , productname);
+    location.href="./product.html";
+  }
 </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>

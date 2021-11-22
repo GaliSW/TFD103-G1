@@ -181,6 +181,7 @@
 
 
 .wrap{
+    cursor:pointer;
     width:100%;
     margin-top:50px;
     display:flex;
@@ -237,6 +238,7 @@
     }
 
     .sec{
+        color:$tiffiny_green;
         margin-right:20px;
         height:250px;
     }
@@ -244,12 +246,19 @@
     .name{
         text-align: center;
         width:100%;
+        .h3{
+          color:$tiffiny_green;
+        }
+        .p{
+          color:$tiffiny_green;
+        }
     }
     
   }
 }
 
 #bnbn{
+  pointer-events: none;
   cursor: pointer;
   @include btn_blur(20, 20);
   @include border_r(15);

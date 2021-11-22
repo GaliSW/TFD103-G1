@@ -24,7 +24,6 @@
                 url: "../php/news/callnews.php",
                 data: {
                 },
-
                 dataType: "json",
                 success: function (response) {
                     // console.log(response);
@@ -32,7 +31,6 @@
                     let title = response[0][2];
                     let content = response[0][3];
                     let img = response[0][4];
-
                     let block_10 = document.getElementById("block_10");
                     let str =`
                     <div class="left">
@@ -67,14 +65,14 @@
                     //更新html內容(透過jQuery跑迴圈取值)
                     $.each(response, function (index, row) {
                         let str = ` 
-                        <div class="sort" onclick="parseCookie(this)" >
+                        <div class="sort" onclick="parseCookie(this)" value="${row.ARTICLEID}" >
                             <div class="wrap" >
                                     <img src="../image/intro/${row.AIMG}" class="sec" alt="slide4">
                                 <div class="name" >
-                                        <p class="p">${row.ADATE}</p>
-                                        <h3>${row.TITLE}</h3>
-                                        <p class="p">${row.CONTENT}</p>
-                                        <p >閱讀更多></p>
+                                        <p >${row.ADATE}</p>
+                                        <h3 class=h3>${row.TITLE}</h3>
+                                        <p >${row.CONTENT}</p>
+                                        <p class="p">閱讀更多></p>
                                 </div>
                             </div>
                         </div>
@@ -87,6 +85,84 @@
                 }
             });
         }
+
+    </script>
+
+    <script>
+
+function sort2(){
+            $.ajax({
+                method: "POST",
+                url: "../php/news/callnews3.php",
+                data: {
+                },
+                dataType: "json",
+                success: function (response) {
+                    // console.log(response);
+                    let block_9 = document.getElementById("block_9");
+                    block_9.innerHTML = ""; 
+
+                    //更新html內容(透過jQuery跑迴圈取值)
+                    $.each(response, function (index, row) {
+                        let str = ` 
+                        <div class="sort" onclick="parseCookie(this)" value="${row.ARTICLEID}" >
+                            <div class="wrap" >
+                                    <img src="../image/intro/${row.AIMG}" class="sec" alt="slide4">
+                                <div class="name" >
+                                        <p >${row.ADATE}</p>
+                                        <h3 class=h3>${row.TITLE}</h3>
+                                        <p >${row.CONTENT}</p>
+                                        <p class="p">閱讀更多></p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    block_9.insertAdjacentHTML("beforeend" ,str);
+                    });
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+        }
+
+
+        function sort(){
+            $.ajax({
+                method: "POST",
+                url: "../php/news/callnews.php",
+                data: {
+                },
+                dataType: "json",
+                success: function (response) {
+                    // console.log(response);
+                    let block_9 = document.getElementById("block_9");
+                    block_9.innerHTML = ""; 
+
+                    //更新html內容(透過jQuery跑迴圈取值)
+                    $.each(response, function (index, row) {
+                        let str = ` 
+                        <div class="sort" onclick="parseCookie(this)" value="${row.ARTICLEID}" >
+                            <div class="wrap" >
+                                    <img src="../image/intro/${row.AIMG}" class="sec" alt="slide4">
+                                <div class="name" >
+                                        <p >${row.ADATE}</p>
+                                        <h3 class=h3>${row.TITLE}</h3>
+                                        <p >${row.CONTENT}</p>
+                                        <p class="p">閱讀更多></p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    block_9.insertAdjacentHTML("beforeend" ,str);
+                    });
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+        }
+
     </script>
 
     
@@ -133,8 +209,8 @@
                 </div>
 
                 <div class="buttons">
-                    <button id="bbbn" class="btn old bbbn">按時間排序由舊至新</button>
-                    <button id="bbbn" class="btn old bbbn2">按時間排序由新至舊</button>
+                    <button id="bbbn" class="btn old bbbn" onclick="sort()" >按時間排序由舊至新</button>
+                    <button id="bbbn2" class="btn old bbbn2" onclick="sort2()">按時間排序由新至舊</button>
                 </div>
 
                 <div id="block_9"></div>
@@ -143,7 +219,7 @@
         </div>
 
         <section class="section_news">
-            <button id="bnbn"> 看更多 </button>
+            <button id="bnbn">沒有更多內容了</button>
         </section>
 
 

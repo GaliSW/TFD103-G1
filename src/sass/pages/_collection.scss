@@ -152,12 +152,14 @@ main.collection {
                     display: block;
                     @include center;
                     cursor: pointer;
+                    @include border_r(10);
                 }
 
                 button.buy:hover,
                 button.change:hover {
                     @include btn_on(100px, 5px);
                     cursor: pointer;
+                    @include border_r(10);
                 }
 
                 @media (max-width: 767.98px) {
@@ -165,11 +167,13 @@ main.collection {
                     button.buy,
                     button.change {
                         width: 50px;
+                        @include border_r(10);
                     }
 
                     button.buy:hover,
                     button.change:hover {
                         width: 50px;
+                        @include border_r(10);
                     }
                 }
             }

@@ -127,7 +127,7 @@ function display() {
     })                      
 }
 
-window.onload = display();
+
 
 function deleted(clickId) {
     $.ajax({
@@ -152,8 +152,6 @@ function deleted(clickId) {
     });
   }
 
-<<<<<<< HEAD
-=======
 
 function clickPop() {
         vmm.$data.pop = true;
@@ -172,4 +170,3 @@ function clickChange() {
         vmm.$data.two = false;
         vmm.$data.three = false;
         }
->>>>>>> Lillian
