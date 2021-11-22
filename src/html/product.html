@@ -587,6 +587,7 @@ function clickPop() {
                 success:function(response){
                     let tologinBlk = document.getElementById('tologinBlk');
                     let nopointBlk = document.getElementById('nopointBlk');
+                    let successBlk = document.getElementById('successBlk');
                     if(response == ""){
                         // 沒有登入
                         tologinBlk.classList.remove('none');
@@ -594,13 +595,13 @@ function clickPop() {
                             $.ajax({
                                     method:"POST",
                                     url:"../php/product/buyRole.php",
-                                    data:{ FK_PRODUCT_ID },
+                                    data:{},
                                     dataType:"text",
                                     success:function(response2){
                                         
                                         if(response == "y"){
                                             // 有錢而且成功
-                                            buyBtn();
+                                            successBlk.classList.remove('none');
                                             
                                             }else if(response == "no"){
                                                 // 沒錢
