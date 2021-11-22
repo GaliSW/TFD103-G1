@@ -33,11 +33,12 @@
                     let title = response[0][12];
                     let img = response[0][14];
                     let content = response[0][16];
+                    let PRODUCT_ID = response[0].PRODUCT_ID;
                     let block_product = document.getElementById("flexContainer");
                     let str =`
                     <div class="items -left" id="username" name="${username}">
-                        <div class="imgBlock">
-                            <img src="../image/product/${img}">
+                        <div class="imgBlock" id="iimgBlock" name='${PRODUCT_ID}'>
+                            <img id='${PRODUCT_ID}' src="../image/product/${img}">
                         </div>
                     </div>
                     <div class="items -right">
@@ -48,12 +49,12 @@
                         <div class="collectForm">
                             <div class="btnBlock1">
                                 <button type="${gachaid}" class="collectBtn" name="button" id="myfav" onclick="myfav()"><i class="fas fa-heart"></i>收藏</button>
-                                <button type="button" class="changeBtn" name="button" @click=clickPopp()>交換</button>
+                                <button type="button" class="changeBtn" name="button" onclick="clickStatus()">交換</button>
                             </div>
                         </div>
 
                         <div class="buyForm" id="app">
-                            <button type="button" class="buyBtn" name="button" @click=clickPop()>購買</button>
+                            <button type="button" class="buyBtn" name="button" onclick="clickStatus1()">購買</button>
                             <component :is="content" id="popUp" @nextacc="myClick" @click-2="myClick2"></component>
                         </div>
                     </div>
@@ -125,11 +126,47 @@
             </section>
         </div>
 
+        <!-- 沒有點數alert -->
 
+        <div id="noPointBlk" class="noPointBlk none">
+            <section class="noPointHintmaskLayer">
+                <div class="noPointPopUpBox">
+                    <div onclick="popCloseX(this)" class="noPointCloseBtn">
+                        x
+                    </div>
+                    <div class="noPointPopContent">
+                        <p>
+                            <i class="far fa-user-circle"></i>&nbsp;您的點數不足，請前往儲值
+                        </p>
+                    </div>
+                    <div class="noPointConfirmBlk">
+                        <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                        <button class="bonusConfirmBtn" onclick="toPoints()">前往儲值</button>
+                    </div>
+                </div>
+            </section>
+        </div>
 
+<!-- 購買成功 -->
 
-
-
+       <div id="successBlk" class="noPointBlk none">
+            <section class="noPointHintmaskLayer">
+                <div class="noPointPopUpBox">
+                    <div onclick="popCloseX(this)" class="noPointCloseBtn">
+                        x
+                    </div>
+                    <div class="noPointPopContent">
+                        <p>
+                            <i class="far fa-user-circle"></i>&nbsp;您已購買成功
+                        </p>
+                    </div>
+                    <div class="noPointConfirmBlk">
+                        <button class="bonusConfirmBtn" onclick="popClose(this)">確定</button>
+                        <!-- <button class="bonusConfirmBtn" onclick="toPoints()">前往儲值</button> -->
+                    </div>
+                </div>
+            </section>
+        </div>
 
 
 
@@ -178,59 +215,7 @@
 
                             <div class="roleBlock1Mark">
                                 <ul class="roleList1Mark" id="roleList1Mark">
-                                    <!-- <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../image/ROLE/role1.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../image/ROLE/role2.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../image/ROLE/role3.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../image/ROLE/role4.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../image/ROLE/role5.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../image/ROLE/role6.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../image/ROLE/role7.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../image/ROLE/role8.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../image/ROLE/role9.png">
-                                        </div>
-                                    </li> -->
+                                    
                                 </ul>
                             </div>
 
@@ -279,7 +264,7 @@
 
                             <div class="confirmBlk13">
                                 <button href="#" class="confirmBtnBack13" @click=toBack()>返回</button>
-                                <button href="#" class="confirmBtn13" @click=toThree()>確定</button>
+                                <button href="#" class="confirmBtn13" onclick="toThree()">確定</button>
                             </div>
 
                         </div>
@@ -296,11 +281,8 @@
                     </section>
 
                 </template>
-
-
-
             </main>
-        </section>
+</section>
 
 
 
@@ -420,7 +402,28 @@
                 content: false,
             },
             methods: {
-                clickStatus(){
+                clickClose() {
+                    vmm.$data.pop = false;
+                },
+                
+                toBack() {
+                    vmm.$data.pop = true;
+                    vmm.$data.one = true;
+                    vmm.$data.two = false;
+                    vmm.$data.three = false;
+                },
+                
+                myClick(val) {
+                    this.content = val;
+                },
+                myClick2(r) {
+                    this.content = r;
+                },
+            },
+        });
+
+
+function clickStatus(){
                     $.ajax({
                         method:"POST",
                         url:"../php/LoginCheck.php",
@@ -435,54 +438,12 @@
                             }
                         }
                     })
-
-
-                },
-                // clickPopp() {
-                //     vmm.$data.pop = true;
-                //     vmm.$data.one = true;
-                //     vmm.$data.two = false;
-                //     vmm.$data.three = false;
-                // },
-                clickClose() {
-                    vmm.$data.pop = false;
-                },
-                // toTwo() {
-                //     vmm.$data.two = true;
-                //     vmm.$data.one = false;
-                //     vmm.$data.three = false;
-                // },
-                toThree() {
-                    vmm.$data.three = true;
-                    vmm.$data.one = false;
-                    vmm.$data.two = false;
-                },
-                toBack() {
-                    vmm.$data.pop = true;
-                    vmm.$data.one = true;
-                    vmm.$data.two = false;
-                    vmm.$data.three = false;
-                },
-                clickPop() {
+                }
+function clickPop() {
                     // console.log(e.target)
-                    this.content = 'maskBlock'
-
-                    //
-                        
-                    //
-                },
-                myClick(val) {
-                    this.content = val;
-                },
-                myClick2(r) {
-                    this.content = r;
-                },
-            },
-        });
-
-
-
-
+                    alert();
+                    vmm.$data.content = 'maskBlock';
+                }
 
 
         function clickPopp() {
@@ -499,8 +460,8 @@
 
                             $.each(response, function (index, row) {
                                 let str =`<li onclick=toTwo(this)>
-                                            <div class="imgBlock1Mark">
-                                                <img src="../image/ROLE/${row.ROLE_IMG}" id="${row.RNAME}" name= "${row.FK_USERNAME}" alt="${row.GACHA_ID}">
+                                            <div class="imgBlock1Mark" id="imgBlock1Mark" name="${row.GACHA_ID}">
+                                                <img src="../image/ROLE/${row.ROLE_IMG}" id="${row.RNAME}" name= "${row.FK_USERNAME}">
                                             </div>
                                         </li>`;
                                 roleList1Mark.insertAdjacentHTML("beforeend",str);
@@ -562,26 +523,35 @@
             let yourRoleImg1 = document.getElementById('yourRoleImg1');
             yourRoleImg1.attributes['src'].value = yourImgSrc;
 
+
         }
 
-
         function toThree(){
+
+                    vmm.$data.three = true;
+                    vmm.$data.one = false;
+                    vmm.$data.two = false;
+
+                    let imgBlock1Mark = document.getElementById("imgBlock1Mark");
+                    let FK_GACHA_ID = imgBlock1Mark.attributes['name'].value;
+                    console.log(FK_GACHA_ID);
+
+                    
+                    let iimgBlock = document.getElementById("iimgBlock");
+                    let PRODUCT_ID = iimgBlock.attributes['name'].value;
+                    console.log(PRODUCT_ID);
+
                     $.ajax({
-                    method: "POST",
-                        // url: "../php/product/insertByCheck.php",
+                        method: "POST",
+                        url: "../php/product/insertByCheck.php",
                         data: {
                             // FK_USERNAME_BUY: FK_USERNAME_BUY,
-                            // FK_PRODUCT_ID: ,
-                            // FK_GACHA_ID_BUY: FK_GACHA_ID,
-                            // CHANGEDATE: NOW(),
+                            FK_PRODUCT_ID: PRODUCT_ID,
+                            FK_GACHA_ID_BUY: FK_GACHA_ID,
+                        
                         },
-                        dataType: "text",
+                        dataType: "TEXT",
                         success: function (response) {
-                            let imgg = item.querySelector("img");
-                            let FK_USERNAME_BUY = imgg.attributes['name'].value;
-                            let FK_GACHA_ID = imgg.attributes['alt'].value;
-
-
 
                         },
                         error: function (exception) {
@@ -589,23 +559,72 @@
                         }
                     });
 
-
-
-
-                    vmm.$data.three = true;
-                    vmm.$data.one = false;
-                    vmm.$data.two = false;
-
-
-
         }
-
-
-
-
-
     </script>
     
+
+<!-- 購買功能fuction -->
+
+
+
+<script>
+        function clickStatus1(){
+
+            let iimgBlock = document.getElementById("iimgBlock");
+            let PRODUCT_ID = iimgBlock.attributes['name'].value;
+            console.log(PRODUCT_ID);
+
+
+
+
+
+
+            $.ajax({
+                method:"POST",
+                url:"../php/LoginCheck.php",
+                data:{},
+                dataType:"text",
+                success:function(response){
+                    let tologinBlk = document.getElementById('tologinBlk');
+                    let nopointBlk = document.getElementById('nopointBlk');
+                    if(response == ""){
+                        // 沒有登入
+                        tologinBlk.classList.remove('none');
+                        }else if(response == "true"){
+                            $.ajax({
+                                    method:"POST",
+                                    url:"../php/product/buyRole.php",
+                                    data:{ FK_PRODUCT_ID },
+                                    dataType:"text",
+                                    success:function(response2){
+                                        
+                                        if(response == "y"){
+                                            // 有錢而且成功
+                                            buyBtn();
+                                            
+                                            }else if(response == "no"){
+                                                // 沒錢
+                                                noPointBlk.classList.remove('none');
+                                        }
+                                    }
+                                })
+
+                    }
+                }
+            })
+        }
+</script>
+
+
+
+
+
+
+
+
+
+
+
     <script>
             function myfav(){
                 let btnName = document.getElementById('myfav').innerText; 
@@ -648,23 +667,19 @@
                 let blk = item.parentNode.parentNode.parentNode;
                 blk.classList.add('none');
             }
-            function tologIn() {
+        function tologIn() {
                 location.href = "./login.html";
             };
         function toGacha() {
                 location.href = "./Gacha.html";
             };
+        function toPoints() {
+                location.href = "./deposit.html";
+            };
+
     
     
     </script>
-
-
-
-
-
-
-
-
 
     <script src="../js/gacha/chart.js"></script>
 </body>

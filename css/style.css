@@ -9135,6 +9135,10 @@ main.member_info section.popShow {
   color: #fff;
 }
 
+.test .popUpBox .myRoleBlock .myRoleImg {
+  width: 230px;
+}
+
 .test .popUpBox .myRoleBlock .myRoleNameBlock {
   text-align: center;
   margin-top: 20px;
@@ -9158,6 +9162,10 @@ main.member_info section.popShow {
 
 .test .popUpBox .yourRoleBlock .yourRoleP p {
   color: #fff;
+}
+
+.test .popUpBox .yourRoleBlock .yourRoleImg {
+  width: 230px;
 }
 
 .test .popUpBox .yourRoleBlock .yourRoleNameBlock {
@@ -9304,6 +9312,110 @@ main.member_info section.popShow {
 
 .allBlock .abc {
   display: block;
+}
+
+.noPointHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.noPointHintmaskLayer .noPointPopUpBox {
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.noPointHintmaskLayer .noPointCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.noPointHintmaskLayer .noPointPopContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .noPointHintmaskLayer .noPointPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .noPointHintmaskLayer .noPointPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .noPointHintmaskLayer .noPointPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .noPointHintmaskLayer .noPointPopContent {
+    font-size: 12px;
+  }
+}
+
+.noPointHintmaskLayer .noPointConfirmBlk {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.noPointHintmaskLayer .noPointConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.noPointHintmaskLayer .noPointConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
 }
 
 main.signup {
