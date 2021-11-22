@@ -111,6 +111,10 @@
                 .collectForm {
                     margin-left: 70px;
 
+                    .changes{
+                        @include btn_on (70px, 5px)
+                    }
+
                     .collectBtn {
                         @include btn_blur (70px, 5px);
 
