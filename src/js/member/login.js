@@ -22,12 +22,11 @@ let vm = new Vue({
       event.preventDefault();
       // vm.$data.loginError = true;
       let loginBtn = document.querySelector('.btn_login');
-        let mgUser = document.getElementById('userId').value;
-        let mgPassword = document.getElementById('password').value;
-        user = mgUser; //填入的user
-        pass = mgPassword; //填入的密碼
-        // console.log(user, pass);
-        login(user, pass);
+      let mgUser = document.getElementById('userId').value;
+      let mgPassword = document.getElementById('password').value;
+      user = mgUser; //填入的user
+      pass = mgPassword; //填入的密碼
+      login(user, pass);
       function login(user, pass) {
         $.ajax({
           method: "POST",

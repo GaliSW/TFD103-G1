@@ -137,9 +137,15 @@ function play() {
                     } else {
                         let roleStr = response[0][1];
                         let roleImg = response[0][3];
-                        let img = document.getElementById('gachaRoleImg');
-                        let str = `../image/ROLE/${roleImg}`
-                        img.attributes['src'].value = str;
+                        if (window.innerWidth < 414) {
+                            let img = document.getElementById('gachaRoleImgPhone');
+                            let str = `../image/ROLE/${roleImg}`
+                            img.attributes['src'].value = str;
+                        } else {
+                            let img = document.getElementById('gachaRoleImg');
+                            let str = `../image/ROLE/${roleImg}`
+                            img.attributes['src'].value = str;
+                        }
                         message.innerText = roleStr;
                         setAmount(roleStr);
                     }
@@ -182,6 +188,11 @@ function play() {
                             let img = row.ROLE_IMG;
                             setGacha(roleID);
                             gachaScreen(img);
+                            // if (window.width < 414) {
+                            //     gachaScreenPhone(img);
+                            // } else {
+                            //     gachaScreenWeb(img);
+                            // }
                         });
                     },
                     error: function (exception) {
