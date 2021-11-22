@@ -34,7 +34,7 @@
             session_start(); 
         }
 
-        $_SESSION["BackendUserID"] = $UserID;
+        $_SESSION["Name"] = $UserID;
 
     }
 

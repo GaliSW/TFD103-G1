@@ -5,6 +5,11 @@
     background: linear-gradient(45deg, rgba(2, 79, 63, 1) 0%, rgb(184, 184, 184) 100%);
 }
 
+#contentContainer {
+    height: 536px;
+    overflow-y: auto;
+}
+
 #error {
     color: red;
 }
@@ -24,6 +29,24 @@
     @include shadow(10, 10, 30);
     transition: .5s;
 
+    .mgLogoImg {
+        background-image: url(../src/image/index/logo.png);
+        // transform: rotate(7deg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        left: 50%;
+        transform: rotate(7deg) translate(-50%, 0);
+        top: -100px;
+        position: absolute;
+        width: 400px;
+        height: 100%;
+        z-index: -999;
+    }
+
+    form {
+        margin-top: 200px;
+    }
 
     h1 {
         border: none;
@@ -37,9 +60,10 @@
         margin: 20px 0;
     }
 
-    img {
-        width: 400px;
-    }
+    // img {
+    //     width: 200px;
+    //     transform: rotate(7deg);
+    // }
 
     label {
         color: #fff;
@@ -99,7 +123,8 @@
     .logo {
 
         a {
-            background-image: url(../src/image/manager/logo.png);
+            background-image: url(../src/image/index/logo.png);
+            transform: rotate(7deg);
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -135,14 +160,15 @@
         text-align: center;
 
         button {
-            @include btn_blur(150px, 0px);
+            @include btn_on(150px, 0px);
             font-size: $fontSizeH4;
             position: relative;
             @include border_r(10);
             transition: .3s;
+            cursor: pointer;
 
             &:hover {
-                @include btn_on(150px, 0px);
+                @include btn_blur(150px, 0px);
             }
 
             a {
