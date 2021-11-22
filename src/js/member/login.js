@@ -22,24 +22,13 @@ let vm = new Vue({
     loginCheck: function (event) {
       event.preventDefault();
       // vm.$data.loginError = true;
-<<<<<<< HEAD
       let loginBtn = document.querySelector('.btn_login');
         let mgUser = document.getElementById('userId').value;
         let mgPassword = document.getElementById('password').value;
-=======
-      let loginBtn = document.querySelector(".btn_login");
-      loginBtn.addEventListener("click", () => {
-        let mgUser = document.getElementById("userId").value;
-        let mgPassword = document.getElementById("password").value;
->>>>>>> Lillian
         user = mgUser; //填入的user
         pass = mgPassword; //填入的密碼
         // console.log(user, pass);
         login(user, pass);
-<<<<<<< HEAD
-=======
-      });
->>>>>>> Lillian
       function login(user, pass) {
         $.ajax({
           method: "POST",
