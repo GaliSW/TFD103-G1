@@ -29,11 +29,8 @@ let vm0 = new Vue({
                 data: {},
                 dataType: "text",
                 success: function (response) {
-                    if (response == "false") {
-                        let blk = document.getElementById('toLoginBlk');
-                        blk.classList.remove('none');
-                    } else {
-                        let total = (point.value).replace("$", "");;
+                    if (response == "Y") {
+                        let total = (point.value).replace("E", "");
                         if (total < 300) {
                             let blk = document.getElementById('coinBlk');
                             blk.classList.remove('none');
@@ -41,6 +38,9 @@ let vm0 = new Vue({
                         } else {
                             vm0.isShow = true
                         }
+                    } else {
+                        let blk = document.getElementById('toLoginBlk');
+                        blk.classList.remove('none');
 
                     }
                 }
