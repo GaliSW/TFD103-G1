@@ -5,7 +5,7 @@ let vm = new Vue({
     forget: false,
     loginError: false,
     forgetError: false,
-    sendOk:false,
+    sendOk: false,
   },
   methods: {
     showForget: function () {
@@ -22,32 +22,13 @@ let vm = new Vue({
     loginCheck: function (event) {
       event.preventDefault();
       // vm.$data.loginError = true;
-<<<<<<< HEAD
       let loginBtn = document.querySelector('.btn_login');
-<<<<<<< HEAD
-        let mgUser = document.getElementById('userId').value;
-        let mgPassword = document.getElementById('password').value;
-=======
-      let loginBtn = document.querySelector(".btn_login");
-      loginBtn.addEventListener("click", () => {
-        let mgUser = document.getElementById("userId").value;
-        let mgPassword = document.getElementById("password").value;
->>>>>>> Lillian
-        user = mgUser; //填入的user
-        pass = mgPassword; //填入的密碼
-        // console.log(user, pass);
-        login(user, pass);
-<<<<<<< HEAD
-=======
-      });
->>>>>>> Lillian
-=======
       let mgUser = document.getElementById('userId').value;
       let mgPassword = document.getElementById('password').value;
       user = mgUser; //填入的user
       pass = mgPassword; //填入的密碼
+      // console.log(user, pass);
       login(user, pass);
->>>>>>> Gary
       function login(user, pass) {
         $.ajax({
           method: "POST",
@@ -63,8 +44,13 @@ let vm = new Vue({
               appear1.classList.remove("disappear");
               let appear2 = document.getElementById("appear2");
               appear2.classList.remove("disappear");
-              window.location.href =
-                "http://localhost/TFD103-G1/src/html/index.html"; //正確登入後頁面跳轉至
+              location.href = "../html/index.html";
+            } else if (response == 0) {
+              let banBlk = document.getElementById('banBlk');
+              banBlk.classList.remove('none');
+            } else if (response == 2) {
+              let veriBlk = document.getElementById('veriBlk');
+              veriBlk.classList.remove('none');
             } else {
               vm.$data.loginError = true;
             }
@@ -90,7 +76,6 @@ let vm = new Vue({
           if (response == 1) {
             vm.$data.sendOk = true;
             vm.$data.forgetError = false;
-            
           } else {
             vm.$data.forgetError = true;
           }
@@ -106,7 +91,7 @@ let vm = new Vue({
 function visiblePwd() {
   if (password.type === "password") {
     password.type = "text";
-    
+
   } else {
     password.type = "password";
   }

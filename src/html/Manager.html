@@ -812,10 +812,7 @@
                                 let memberAuth = null;
                                 if (row.AUTH == 1) {
                                     memberAuth = '正常';
-                                } else {
-                                    memberAuth = '停權';
-                                }
-                                let str = `
+                                    let str = `
                                 <tr>
                                     <td>${row.USERNAME}</td>
                                     <td>${row.EMAIL}</td>
@@ -826,7 +823,37 @@
                                 </tr>
                                 <br>
                                 `
-                                my_block.insertAdjacentHTML("afterend", str);
+                                    my_block.insertAdjacentHTML("afterend", str);
+                                } else if (row.AUTH == 0) {
+                                    memberAuth = '停權';
+                                    let str = `
+                                <tr>
+                                    <td>${row.USERNAME}</td>
+                                    <td>${row.EMAIL}</td>
+                                    <td>${row.USER_ID}</td>
+                                    <td>${memberAuth}</td>
+                                    <td><i class="fas fa-edit memberEdit" onclick="memberAuth(this)"></i>編輯權限</td>
+                                    <td><p id="searchPoints" onclick="linkToMemberPoints(this)">查詢儲值記錄</p></td>
+                                </tr>
+                                <br>
+                                `
+                                    my_block.insertAdjacentHTML("afterend", str);
+                                } else {
+                                    memberAuth = '驗證中';
+                                    let str = `
+                                <tr>
+                                    <td>${row.USERNAME}</td>
+                                    <td>${row.EMAIL}</td>
+                                    <td>${row.USER_ID}</td>
+                                    <td>${memberAuth}</td>
+                                    <td></td>
+                                    <td><p id="searchPoints" onclick="linkToMemberPoints(this)">查詢儲值記錄</p></td>
+                                </tr>
+                                <br>
+                                `
+                                    my_block.insertAdjacentHTML("afterend", str);
+                                }
+
                             });
                         },
                         error: function (exception) {
