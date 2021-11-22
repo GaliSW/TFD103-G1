@@ -18,11 +18,6 @@
         include "session.php";
         setMemberInfo($Name, $Pass);
     }
-    // include "getsession.php";
-    // getMemberName();
-
-    // echo json_encode($data);
     echo count($data);
-    // echo $_SESSION["Name"];
 
 ?>
