@@ -503,8 +503,7 @@
   position: absolute;
   width: 300px;
   height: 100vh;
-  border: solid;
-  margin: -33px 0 0 -32px;
+  margin: -32px 0 0 -32px;
   background: #c7e3f0;
   list-style-type: none;
   -webkit-transform-origin: 0% 0%;
@@ -515,6 +514,15 @@
   transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+<<<<<<< HEAD
+=======
+}
+
+@media (max-width: 480px) {
+  #header #headerMenu {
+    margin: -30px 0 0 -32px;
+  }
+>>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
 }
 
 #header #headerMenu a > img {
@@ -537,8 +545,17 @@
 }
 
 #header #headerMenu li:hover img {
+<<<<<<< HEAD
   -webkit-animation: move 1s infinite;
           animation: move 1s infinite;
+=======
+<<<<<<< HEAD
+  -webkit-animation: move 1s infinite;
+          animation: move 1s infinite;
+=======
+  animation: move 1s infinite;
+>>>>>>> 6125696878d96ab7d78dace3bd62fa9d1e54c37f
+>>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
 }
 
 #header #headerMenu li img {
@@ -657,7 +674,11 @@
   width: 20px;
   height: 20px;
   font-size: 16px;
+<<<<<<< HEAD
+  color: yellow;
+=======
   color: red;
+>>>>>>> 6125696878d96ab7d78dace3bd62fa9d1e54c37f
   right: -6px;
   top: -22px;
   position: absolute;
@@ -718,14 +739,30 @@
   padding-top: 5px;
 }
 
-.footer .iconLink span {
-  margin: 5px 10px;
+.footer .iconLink a {
+  margin: 5px 20px;
+  padding: 6px 8px;
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  border-radius: 24%;
+  -webkit-box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
+          box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  font-size: 16px;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  position: relative;
 }
 
-.footer .iconLink span .fa-2x {
-  color: #cacaca;
+.footer .iconLink a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border-radius: 50%;
+  background-position: 0% 0%;
 }
 
+<<<<<<< HEAD
 .footer .iconLink span .fa-2x:hover {
   color: #477dbe;
   -webkit-transform: scale(1.25, 1.25);
@@ -734,6 +771,19 @@
   transition: -webkit-transform 0.25s ease;
   transition: transform 0.25s ease;
   transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+=======
+.footer .iconLink i::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-size: 200% 200%;
+  background-position: 75% 75%;
+  top: 0;
+  left: 5%;
+  line-height: 80px;
+  background-position: 0% 0%;
+>>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
 }
 
 .footer .notice {
@@ -2319,6 +2369,7 @@ body {
   0% {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
+<<<<<<< HEAD
   }
   50% {
     -webkit-transform: scale(1.5);
@@ -2346,6 +2397,35 @@ body {
   }
   100% {
     -webkit-transform: translateY(100px);
+=======
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  51% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+@-webkit-keyframes drop {
+  0% {
+    -webkit-transform: scale(0.7);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+  51% {
+    -webkit-transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+>>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
   }
 }
 
@@ -4575,6 +4655,10 @@ body {
   width: 150px;
 }
 
+.index .sportsCar .carId:hover {
+  bottom: 10%;
+}
+
 .index .sportsCar .carId img {
   width: 100%;
   vertical-align: bottom;
@@ -5437,9 +5521,12 @@ body {
 }
 
 .index .unlock {
-  border: 1px solid #bcb177;
+  border: 2px solid black;
   margin: 30px auto;
+<<<<<<< HEAD
   background-color: #355c45;
+=======
+>>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
   -webkit-box-shadow: #7adaa2 0 0 70px 20px;
           box-shadow: #7adaa2 0 0 70px 20px;
   width: 500px;
@@ -5610,8 +5697,8 @@ body {
 }
 
 .index .change .changeRole .myRole .rolesR {
-  border: 10px solid #fff;
-  background-color: #60cd90;
+  border: 2px solid #60cd90;
+  background-color: #0e3461;
   margin-bottom: 40%;
 }
 
@@ -5620,13 +5707,13 @@ body {
 }
 
 .index .change .changeRole .myRole .rolesR .roleName {
-  background-color: #fff;
+  background-color: #0e3461;
 }
 
 .index .change .changeRole .myRole .rolesR .roleName p {
   padding: 5px;
   margin: 0;
-  color: black;
+  color: white;
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -5677,8 +5764,8 @@ body {
 }
 
 .index .change .changeRole .otherRole .rolesL {
-  border: 10px solid #fff;
-  background-color: #60cd90;
+  border: 2px solid #60cd90;
+  background-color: #0e3461;
   margin-bottom: 40%;
 }
 
@@ -5687,14 +5774,13 @@ body {
 }
 
 .index .change .changeRole .otherRole .rolesL .roleName {
-  border: 1px solid #fff;
-  background-color: #fff;
+  background-color: #0e3461;
 }
 
 .index .change .changeRole .otherRole .rolesL .roleName p {
   padding: 5px;
   margin: 0;
-  color: black;
+  color: white;
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
