@@ -267,12 +267,14 @@ main.member {
             button {
                 @include btn_blur(100, 10px);
                 cursor: pointer;
+                @include border_r(10);
             }
 
 
             button:hover {
                 @include btn_on(100, 10px);
                 cursor: pointer;
+                @include border_r(10);
             }
 
             @media (max-width: 767.98px) {

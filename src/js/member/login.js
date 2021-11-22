@@ -22,9 +22,9 @@ let vm = new Vue({
     loginCheck: function (event) {
       event.preventDefault();
       // vm.$data.loginError = true;
-      let loginBtn = document.querySelector('.btn_login');
-      let mgUser = document.getElementById('userId').value;
-      let mgPassword = document.getElementById('password').value;
+      let loginBtn = document.querySelector(".btn_login");
+      let mgUser = document.getElementById("userId").value;
+      let mgPassword = document.getElementById("password").value;
       user = mgUser; //填入的user
       pass = mgPassword; //填入的密碼
       // console.log(user, pass);
@@ -46,11 +46,11 @@ let vm = new Vue({
               appear2.classList.remove("disappear");
               location.href = "../html/index.html";
             } else if (response == 0) {
-              let banBlk = document.getElementById('banBlk');
-              banBlk.classList.remove('none');
+              let banBlk = document.getElementById("banBlk");
+              banBlk.classList.remove("none");
             } else if (response == 2) {
-              let veriBlk = document.getElementById('veriBlk');
-              veriBlk.classList.remove('none');
+              let veriBlk = document.getElementById("veriBlk");
+              veriBlk.classList.remove("none");
             } else {
               vm.$data.loginError = true;
             }
@@ -91,7 +91,6 @@ let vm = new Vue({
 function visiblePwd() {
   if (password.type === "password") {
     password.type = "text";
-
   } else {
     password.type = "password";
   }
