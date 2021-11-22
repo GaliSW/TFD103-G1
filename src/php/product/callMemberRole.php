@@ -16,7 +16,7 @@
           $sql ="select * FROM GACHA
           LEFT JOIN ROLE
           ON GACHA.FK_ROLE_ID=ROLE.ROLE_ID
-          where FK_USERNAME = ?";
+          where FK_USERNAME = ? && STATUS = 1 && ROLE_ID != 666 ";
 
      $statement= $pdo->prepare($sql);
      $statement->bindValue(1, $Name);

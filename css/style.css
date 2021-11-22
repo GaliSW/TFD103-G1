@@ -433,6 +433,10 @@
 
 #header #headerMenu li:hover img {
   animation: move 1s infinite;
+<<<<<<< HEAD
+>>>>>>> dev
+=======
+>>>>>>> MARK
 }
 
 #header #headerMenu li img {
@@ -463,11 +467,61 @@
   }
 }
 
+#header #headerMenu #LogOutPhone {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  #header #headerMenu #LogOutPhone {
+    display: block;
+  }
+}
+
+#header #headerMenu #LogOutPhone a {
+  margin: 0px;
+  color: #a2d6d2;
+  font-size: 14px;
+}
+
+#header #headerMenu #LogOutPhone a:hover {
+  color: #9dfdc8;
+}
+
+#header #headerMenu .LogInPhone {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  #header #headerMenu .LogInPhone {
+    display: block;
+  }
+}
+
+#header #headerMenu .LogInPhone a {
+  margin: 0px;
+  color: #a2d6d2;
+  font-size: 14px;
+}
+
+#header #headerMenu .LogInPhone a:hover {
+  color: #9dfdc8;
+}
+
+#header #headerMenu .logbt {
+  display: none;
+}
+
 #header .icon {
   display: flex;
   align-items: center;
   margin: auto;
-  margin: 0 28px;
+  margin: 8px 28px 0;
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  #header .icon {
+    margin: 0 28px;
+  }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
@@ -480,6 +534,22 @@
   #header .icon {
     margin: 0 0;
   }
+}
+
+#header .icon .bt {
+  margin-right: -10px;
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  #header .icon .bt {
+    margin-right: 0px;
+  }
+}
+
+#header .icon .bt p {
+  position: relative;
+  bottom: 2px;
 }
 
 #header .icon .button {
@@ -588,6 +658,26 @@
   display: none;
 }
 
+@media (max-width: 480px) {
+  #header .icon #LogIn {
+    display: none;
+  }
+}
+
+#header .icon #LogIn a {
+  margin: 0px;
+  color: #a2d6d2;
+  font-size: 14px;
+}
+
+#header .icon #LogIn a:hover {
+  color: #9dfdc8;
+}
+
+#header .icon .logbt {
+  display: none;
+}
+
 .footer {
   background: url(../src/image/index/strbg.jpg);
   background-repeat: no-repeat;
@@ -605,22 +695,26 @@
 
 .footer .iconLink a {
   margin: 5px 20px;
-  padding: 6px 8px;
-  width: 45px;
-  height: 45px;
-  color: yellowgreen;
+  padding: 4px 6px;
+  width: 40px;
+  height: 40px;
+  color: #60ce90;
   background-color: white;
   border-radius: 24%;
-  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
+          box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
   overflow: hidden;
   font-size: 16px;
+  -webkit-transition: .3s linear;
   transition: .3s linear;
   position: relative;
 }
 
 .footer .iconLink a:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   border-radius: 50%;
+  color: #1d2b76;
 }
 
 .footer .iconLink a i::before {
@@ -642,10 +736,13 @@
   background-position: 0% 0%;
 }
 
+<<<<<<< HEAD
+=======
 .footer .iconLink .fa-facebook-square::before {
   background: linear-gradient(135deg, #264dfa 30%, #0a3d62 50%);
 }
 
+>>>>>>> MARK
 .footer .notice {
   justify-content: center;
   flex-direction: column;
@@ -1664,9 +1761,9 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 }
 
 .entry .entrybg .contentBox .frontSide {
-  width: 250px;
+  width: 210px;
   height: 160px;
-  margin-left: 1000px;
+  margin-left: 420px;
   margin-top: -110px;
 }
 
@@ -1690,9 +1787,9 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 }
 
 .entry .entrybg .contentBox .backSide {
-  width: 250px;
+  width: 210px;
   height: 160px;
-  margin-left: 1000px;
+  margin-left: 800px;
 }
 
 .entry .entrybg .contentBox .backSide a {
@@ -1704,14 +1801,14 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
   font-size: 48px;
   font-weight: 400;
   color: #fff;
-  background-color: #60cd90;
+  background-color: #0e3461;
   padding: 12% 22%;
   border-radius: 20px;
   text-align: center;
 }
 
 .entry .entrybg .contentBox .backSide a h1:hover {
-  background-color: #0e3461;
+  background-color: #60cd90;
 }
 
 .entry .entrybg .contentBox .word {
@@ -5004,7 +5101,12 @@ body {
 .index .unlock {
   border: 2px solid black;
   margin: 30px auto;
+<<<<<<< HEAD
+  -webkit-box-shadow: #7adaa2 0 0 70px 20px;
+          box-shadow: #7adaa2 0 0 70px 20px;
+=======
   box-shadow: #7adaa2 0 0 70px 20px;
+>>>>>>> MARK
   width: 500px;
   height: 450px;
   display: table;
@@ -5764,7 +5866,8 @@ main.login div.contain .bookmark {
 .banHintmaskLayer .banPopUpBox {
   position: relative;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   left: 50%;
   background-color: #024f3f;
   border: 2px solid #10c5b1;
@@ -5790,15 +5893,23 @@ main.login div.contain .bookmark {
 
 .banHintmaskLayer .banPopContent {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #60cd90;
   color: #10c5b1;
   font-size: 16px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -5827,9 +5938,12 @@ main.login div.contain .bookmark {
 
 .banHintmaskLayer .banConfirmBlk {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   bottom: 10px;
 }
 
@@ -5843,6 +5957,7 @@ main.login div.contain .bookmark {
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
+  -webkit-transition: .3s;
   transition: .3s;
   border-radius: 10px;
 }
@@ -5870,7 +5985,8 @@ main.login div.contain .bookmark {
 .veriHintmaskLayer .veriPopUpBox {
   position: relative;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   left: 50%;
   background-color: #024f3f;
   border: 2px solid #10c5b1;
@@ -5896,15 +6012,23 @@ main.login div.contain .bookmark {
 
 .veriHintmaskLayer .veriPopContent {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #60cd90;
   color: #10c5b1;
   font-size: 16px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -5933,9 +6057,12 @@ main.login div.contain .bookmark {
 
 .veriHintmaskLayer .veriConfirmBlk {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   bottom: 10px;
 }
 
@@ -5949,6 +6076,7 @@ main.login div.contain .bookmark {
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
+  -webkit-transition: .3s;
   transition: .3s;
 }
 
@@ -8644,9 +8772,26 @@ main.member_info section.popShow {
   font-size: 16px;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+.out .ti {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+=======
 .out .date {
   display: flex;
   justify-content: center;
+>>>>>>> dev
+=======
+.out .date {
+  display: flex;
+  justify-content: center;
+>>>>>>> MARK
 }
 
 .out .ti {
@@ -8749,7 +8894,7 @@ main.member_info section.popShow {
 }
 
 .allBlock {
-  background-image: url("../dist/images/trade/background.png");
+  background-image: url("../src/image/trade/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 0px 0px;
@@ -9152,6 +9297,10 @@ main.member_info section.popShow {
   color: #fff;
 }
 
+.test .popUpBox .myRoleBlock .myRoleImg {
+  width: 230px;
+}
+
 .test .popUpBox .myRoleBlock .myRoleNameBlock {
   text-align: center;
   margin-top: 20px;
@@ -9175,6 +9324,10 @@ main.member_info section.popShow {
 
 .test .popUpBox .yourRoleBlock .yourRoleP p {
   color: #fff;
+}
+
+.test .popUpBox .yourRoleBlock .yourRoleImg {
+  width: 230px;
 }
 
 .test .popUpBox .yourRoleBlock .yourRoleNameBlock {
@@ -9323,7 +9476,11 @@ main.member_info section.popShow {
   display: block;
 }
 
+<<<<<<< HEAD
 .buyHintmaskLayer {
+=======
+.noPointHintmaskLayer {
+>>>>>>> MARK
   position: fixed;
   top: 0;
   left: 0;
@@ -9333,7 +9490,11 @@ main.member_info section.popShow {
   z-index: 999;
 }
 
+<<<<<<< HEAD
 .buyHintmaskLayer .buyPopUpBox {
+=======
+.noPointHintmaskLayer .noPointPopUpBox {
+>>>>>>> MARK
   position: relative;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -9346,7 +9507,11 @@ main.member_info section.popShow {
   z-index: 999;
 }
 
+<<<<<<< HEAD
 .buyHintmaskLayer .buyCloseBtn {
+=======
+.noPointHintmaskLayer .noPointCloseBtn {
+>>>>>>> MARK
   position: absolute;
   right: 0;
   background-color: #10c5b1;
@@ -9360,7 +9525,11 @@ main.member_info section.popShow {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .buyHintmaskLayer .buyPopContent {
+=======
+.noPointHintmaskLayer .noPointPopContent {
+>>>>>>> MARK
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9374,30 +9543,50 @@ main.member_info section.popShow {
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
+<<<<<<< HEAD
   .buyHintmaskLayer .buyPopContent {
+=======
+  .noPointHintmaskLayer .noPointPopContent {
+>>>>>>> MARK
     font-size: 16px;
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
+<<<<<<< HEAD
   .buyHintmaskLayer .buyPopContent {
+=======
+  .noPointHintmaskLayer .noPointPopContent {
+>>>>>>> MARK
     font-size: 14px;
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
+<<<<<<< HEAD
   .buyHintmaskLayer .buyPopContent {
+=======
+  .noPointHintmaskLayer .noPointPopContent {
+>>>>>>> MARK
     font-size: 12px;
   }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
+<<<<<<< HEAD
   .buyHintmaskLayer .buyPopContent {
+=======
+  .noPointHintmaskLayer .noPointPopContent {
+>>>>>>> MARK
     font-size: 12px;
   }
 }
 
+<<<<<<< HEAD
 .buyHintmaskLayer .buyConfirmBlk {
+=======
+.noPointHintmaskLayer .noPointConfirmBlk {
+>>>>>>> MARK
   position: absolute;
   display: flex;
   left: 50%;
@@ -9405,7 +9594,11 @@ main.member_info section.popShow {
   bottom: 10px;
 }
 
+<<<<<<< HEAD
 .buyHintmaskLayer .buyConfirmBlk button {
+=======
+.noPointHintmaskLayer .noPointConfirmBlk button {
+>>>>>>> MARK
   margin: 0 10px;
   color: #60cd90;
   width: 100px;
@@ -9418,7 +9611,11 @@ main.member_info section.popShow {
   transition: .3s;
 }
 
+<<<<<<< HEAD
 .buyHintmaskLayer .buyConfirmBlk button:hover {
+=======
+.noPointHintmaskLayer .noPointConfirmBlk button:hover {
+>>>>>>> MARK
   color: #0e3461;
   width: 100px;
   padding: 5px;
@@ -10028,6 +10225,7 @@ main.signup .verify_contain div.verify .falseVerify {
   display: block;
   position: absolute;
   top: 54px;
+  z-index: 3;
   background-color: #9bcfb7;
   transition: 1s;
   padding: 10px;
@@ -10809,6 +11007,110 @@ top: 5px; */
   transition: all .3s ease;
 }
 
+.toGachaHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.toGachaHintmaskLayer .toGachaPopUpBox {
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.toGachaHintmaskLayer .toGachaCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.toGachaHintmaskLayer .toGachaPopContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .toGachaHintmaskLayer .toGachaPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .toGachaHintmaskLayer .toGachaPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .toGachaHintmaskLayer .toGachaPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .toGachaHintmaskLayer .toGachaPopContent {
+    font-size: 12px;
+  }
+}
+
+.toGachaHintmaskLayer .toGachaConfirmBlk {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.toGachaHintmaskLayer .toGachaConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.toGachaHintmaskLayer .toGachaConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
 .gachascreen {
   position: fixed;
   z-index: 999;
@@ -10880,6 +11182,7 @@ top: 5px; */
   opacity: 0;
 }
 
+<<<<<<< HEAD
 .gachascreenPhone {
   position: fixed;
   z-index: 999;
@@ -10900,6 +11203,9 @@ top: 5px; */
 }
 
 .gachascreenPhone .screenPhone {
+=======
+.gachascreen .screenPhone {
+>>>>>>> dev
   max-width: 370px;
   width: 100vw;
   height: 100vh;

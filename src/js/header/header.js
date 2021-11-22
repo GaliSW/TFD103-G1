@@ -52,6 +52,10 @@ function status() {
                 LogOut.classList.add('none');
                 let LogOutPhone = document.getElementById('LogOutPhone');
                 LogOutPhone.classList.add('none');
+                let LogIn = document.getElementById('LogIn');
+                LogIn.classList.remove('logbt');
+                let LogInPhone = document.getElementById('LogInPhone');
+                LogInPhone.classList.remove('logbt');
             } else {
                 let appear1 = document.getElementById('appear1');
                 appear1.classList.remove('disappear');
@@ -83,12 +87,20 @@ function LogOut() {
             LogOut.classList.add('none');
             let LogOutPhone = document.getElementById('LogOutPhone');
             LogOutPhone.classList.add('none');
+            let LogIn = document.getElementById('LogIn');
+            LogIn.classList.remove('logbt');
+            let LogInPhone = document.getElementById('LogInPhone');
+            // LogInPhone.classList.remove('logbt');
         },
         error: function (exception) {
             alert("數據載入失敗: " + exception.status);
         }
     });
 }
+function LogIn() {
+    location.href='./login.html'
+}
+
 function memberCheck() {
     $.ajax({
         method: "POST",

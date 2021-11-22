@@ -64,11 +64,12 @@
                     let title = response[0][12];
                     let img = response[0][14];
                     let content = response[0][16];
+                    let PRODUCT_ID = response[0].PRODUCT_ID;
                     let block_product = document.getElementById("flexContainer");
                     let str =`
                     <div class="items -left" id="username" name="${username}">
-                        <div class="imgBlock">
-                            <img src="../image/product/${img}">
+                        <div class="imgBlock" id="iimgBlock" name='${PRODUCT_ID}'>
+                            <img id='${PRODUCT_ID}' src="../image/product/${img}">
                         </div>
                     </div>
                     <div class="items -right">
@@ -79,12 +80,12 @@
                         <div class="collectForm">
                             <div class="btnBlock1">
                                 <button type="${gachaid}" class="collectBtn" name="button" id="myfav" onclick="myfav()"><i class="fas fa-heart"></i>收藏</button>
-                                <button type="button" class="changeBtn" name="button" @click=clickPopp()>交換</button>
+                                <button type="button" class="changeBtn" name="button" onclick="clickStatus()">交換</button>
                             </div>
                         </div>
 
                         <div class="buyForm" id="app">
-                            <button type="button" class="buyBtn" name="button" @click=clickPop()>購買</button>
+                            <button type="button" class="buyBtn" name="button" onclick="clickStatus1()">購買</button>
                             <component :is="content" id="popUp" @nextacc="myClick" @click-2="myClick2"></component>
                         </div>
                     </div>
@@ -104,6 +105,100 @@
 <body>
     @@include('./header.html')
     <main class="allBlock" id="appp">
+
+
+
+
+
+        <!-- 未登入alert -->
+    
+        <div id="tologinBlk" class="toGachaBlk none">
+            <section class="toGachaHintmaskLayer">
+                <div class="toGachaPopUpBox">
+                    <div onclick="popCloseX(this)" class="toGachaCloseBtn">
+                        x
+                    </div>
+                    <div class="toGachaPopContent">
+                        <p>
+                            <i class="far fa-user-circle"></i>&nbsp;您尚未登入會員喔
+                        </p>
+                    </div>
+                    <div class="toGachaConfirmBlk">
+                        <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                        <button class="bonusConfirmBtn" onclick="tologIn()">登入或註冊～</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- 沒角色alert -->
+
+
+        <div id="toGachaBlk" class="toGachaBlk none">
+            <section class="toGachaHintmaskLayer">
+                <div class="toGachaPopUpBox">
+                    <div onclick="popCloseX(this)" class="toGachaCloseBtn">
+                        x
+                    </div>
+                    <div class="toGachaPopContent">
+                        <p>
+                            <i class="far fa-user-circle"></i>&nbsp;您的角色不足，請前往扭蛋
+                        </p>
+                    </div>
+                    <div class="toGachaConfirmBlk">
+                        <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                        <button class="bonusConfirmBtn" onclick="toGacha()">前往扭蛋</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 沒有點數alert -->
+
+        <div id="noPointBlk" class="noPointBlk none">
+            <section class="noPointHintmaskLayer">
+                <div class="noPointPopUpBox">
+                    <div onclick="popCloseX(this)" class="noPointCloseBtn">
+                        x
+                    </div>
+                    <div class="noPointPopContent">
+                        <p>
+                            <i class="far fa-user-circle"></i>&nbsp;您的點數不足，請前往儲值
+                        </p>
+                    </div>
+                    <div class="noPointConfirmBlk">
+                        <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                        <button class="bonusConfirmBtn" onclick="toPoints()">前往儲值</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+<!-- 購買成功 -->
+
+       <div id="successBlk" class="noPointBlk none">
+            <section class="noPointHintmaskLayer">
+                <div class="noPointPopUpBox">
+                    <div onclick="popCloseX(this)" class="noPointCloseBtn">
+                        x
+                    </div>
+                    <div class="noPointPopContent">
+                        <p>
+                            <i class="far fa-user-circle"></i>&nbsp;您已購買成功
+                        </p>
+                    </div>
+                    <div class="noPointConfirmBlk">
+                        <button class="bonusConfirmBtn" onclick="popClose(this)">確定</button>
+                        <!-- <button class="bonusConfirmBtn" onclick="toPoints()">前往儲值</button> -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+
         <section class="sec1">
             <div class="flexContainer" id="flexContainer">
                 <!-- <div class="items -left">
@@ -119,7 +214,7 @@
                     <!-- <div class="collectForm">
                         <div class="btnBlock1">
                             <button type="button" class="collectBtn" name="button" id="myfav" onclick="myfav()"><i class="fas fa-heart"></i>收藏</button>
-                            <button type="button" class="changeBtn" name="button" @click=clickPopp()>交換</button>
+                            <button type="button" class="changeBtn" name="button" @click=clickStatus()>交換</button>
                         </div>
                     </div>
 
@@ -147,60 +242,8 @@
                             </div>
 
                             <div class="roleBlock1Mark">
-                                <ul class="roleList1Mark">
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../dist/images/product/change/change1.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../dist/images/product/change/change2.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../dist/images/product/change/change3.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../dist/images/product/change/change4.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../dist/images/product/change/change5.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../dist/images/product/change/change6.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../dist/images/product/change/change7.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../dist/images/product/change/change8.png">
-                                        </div>
-                                    </li>
-
-                                    <li @click=toTwo()>
-                                        <div class="imgBlock1Mark">
-                                            <img src="../dist/images/product/change/change9.png">
-                                        </div>
-                                    </li>
+                                <ul class="roleList1Mark" id="roleList1Mark">
+                                    
                                 </ul>
                             </div>
 
@@ -209,7 +252,7 @@
                         </div>
 
 
-                        <div class="popUpBox" :class="{'box':two}">
+                        <div id="popUpBox2" class="popUpBox" :class="{'box':two}">
                             <div class="closeBtn" @click=clickClose()>
                                 x
                             </div>
@@ -223,11 +266,11 @@
                                 </div>
 
                                 <div class="myRoleImg">
-                                    <img src="../dist/images/product/change/change1.png">
+                                    <img id="myRoleImg1" src="../dist/images/product/change/change1.png">
                                 </div>
 
                                 <div class="myRoleNameBlock">
-                                    <p>小烏龜</p>
+                                    <p id="myRoleName1">小烏龜</p>
                                 </div>
                             </div>
 
@@ -239,7 +282,7 @@
                                 </div>
 
                                 <div class="yourRoleImg">
-                                    <img src="../dist/images/product/change/change2.png">
+                                    <img id="yourRoleImg1" src="../dist/images/product/change/change2.png">
                                 </div>
 
                                 <div class="yourRoleNameBlock">
@@ -249,7 +292,7 @@
 
                             <div class="confirmBlk13">
                                 <button href="#" class="confirmBtnBack13" @click=toBack()>返回</button>
-                                <button href="#" class="confirmBtn13" @click=toThree()>確定</button>
+                                <button href="#" class="confirmBtn13" onclick="toThree()">確定</button>
                             </div>
 
                         </div>
@@ -266,11 +309,8 @@
                     </section>
 
                 </template>
-
-
-
             </main>
-        </section>
+</section>
 
 
 
@@ -390,39 +430,17 @@
                 content: false,
             },
             methods: {
-                clickPopp() {
-                    vmm.$data.pop = true;
-                    vmm.$data.one = true;
-                    vmm.$data.two = false;
-                    vmm.$data.three = false;
-                },
                 clickClose() {
                     vmm.$data.pop = false;
                 },
-                toTwo() {
-                    vmm.$data.two = true;
-                    vmm.$data.one = false;
-                    vmm.$data.three = false;
-                },
-                toThree() {
-                    vmm.$data.three = true;
-                    vmm.$data.one = false;
-                    vmm.$data.two = false;
-                },
+                
                 toBack() {
                     vmm.$data.pop = true;
                     vmm.$data.one = true;
                     vmm.$data.two = false;
                     vmm.$data.three = false;
                 },
-                clickPop() {
-                    // console.log(e.target)
-                    this.content = 'maskBlock'
-
-                    //
-                        
-                    //
-                },
+                
                 myClick(val) {
                     this.content = val;
                 },
@@ -432,8 +450,210 @@
             },
         });
 
+
+function clickStatus(){
+                    $.ajax({
+                        method:"POST",
+                        url:"../php/LoginCheck.php",
+                        data:{},
+                        dataType:"text",
+                        success:function(response){
+                            let tologinBlk = document.getElementById('tologinBlk');
+                            if(response == ""){
+                                tologinBlk.classList.remove('none');
+                                }else{
+                                    clickPopp();
+                            }
+                        }
+                    })
+                }
+function clickPop() {
+                    // console.log(e.target)
+                    alert();
+                    vmm.$data.content = 'maskBlock';
+                }
+
+
+        function clickPopp() {
+                $.ajax({
+                    method: "POST",
+                        url: "../php/product/callChangeRole.php",
+                        data: {},
+                        dataType: "json",
+                        success: function (response) {
+
+                            let roleList1Mark = document.getElementById('roleList1Mark');
+                            roleList1Mark.innerHTML= "";
+                        
+
+                            $.each(response, function (index, row) {
+                                let str =`<li onclick=toTwo(this)>
+                                            <div class="imgBlock1Mark" id="imgBlock1Mark" name="${row.GACHA_ID}">
+                                                <img src="../image/ROLE/${row.ROLE_IMG}" id="${row.RNAME}" name= "${row.FK_USERNAME}">
+                                            </div>
+                                        </li>`;
+                                roleList1Mark.insertAdjacentHTML("beforeend",str);
+
+                                
+                            })
+                            let roleList1MarkChild = document.getElementById("roleList1Mark").childNodes[0];
+                            console.log(roleList1MarkChild);
+                            // 判斷是否有角色
+                            let toGachaBlk = document.getElementById('toGachaBlk');
+                            if(roleList1MarkChild == null){
+                                toGachaBlk.classList.remove('none');
+                                vmm.$data.pop = false;
+                                vmm.$data.one = false;
+                            }
+
+                        },
+                        error: function (exception) {
+                            alert("數據載入失敗: " + exception.status);
+                        }
+                    });
+
+                    vmm.$data.pop = true;
+                    vmm.$data.one = true;
+                    vmm.$data.two = false;
+                    vmm.$data.three = false;
+            }
+
+        function toTwo(item) {
+            vmm.$data.two = true;
+            vmm.$data.one = false;
+            vmm.$data.three = false;
+            
+            
+            //console.log(item);
+            let imgg = item.querySelector("img");
+            //console.log(imgg);
+
+//////////// 我的角色圖片
+
+            let imgSrc = imgg.attributes['src'].value;
+            let myRoleImg = document.getElementById('myRoleImg1');
+            myRoleImg.attributes['src'].value = imgSrc;
+
+//////////// 我的角色名字
+
+            let imgName = imgg.attributes['id'].value;
+            let myRoleName = document.getElementById('myRoleName1');
+            myRoleName.innerText = imgName;
+            //console.log(imgName);
+
+//////////// 我的角色圖片
+
+            let imgBlock = document.getElementsByClassName("imgBlock")[0];
+            //console.log(imgBlock);
+            let yourImg = imgBlock.querySelector("img");
+            //console.log(yourImg);
+            yourImgSrc = yourImg.attributes['src'].value;
+            let yourRoleImg1 = document.getElementById('yourRoleImg1');
+            yourRoleImg1.attributes['src'].value = yourImgSrc;
+
+
+        }
+
+        function toThree(){
+
+                    vmm.$data.three = true;
+                    vmm.$data.one = false;
+                    vmm.$data.two = false;
+
+                    let imgBlock1Mark = document.getElementById("imgBlock1Mark");
+                    let FK_GACHA_ID = imgBlock1Mark.attributes['name'].value;
+                    console.log(FK_GACHA_ID);
+
+                    
+                    let iimgBlock = document.getElementById("iimgBlock");
+                    let PRODUCT_ID = iimgBlock.attributes['name'].value;
+                    console.log(PRODUCT_ID);
+
+                    $.ajax({
+                        method: "POST",
+                        url: "../php/product/insertByCheck.php",
+                        data: {
+                            // FK_USERNAME_BUY: FK_USERNAME_BUY,
+                            FK_PRODUCT_ID: PRODUCT_ID,
+                            FK_GACHA_ID_BUY: FK_GACHA_ID,
+                        
+                        },
+                        dataType: "TEXT",
+                        success: function (response) {
+
+                        },
+                        error: function (exception) {
+                            alert("數據載入失敗: " + exception.status);
+                        }
+                    });
+
+        }
     </script>
     
+
+<!-- 購買功能fuction -->
+
+
+
+<script>
+        function clickStatus1(){
+
+            let iimgBlock = document.getElementById("iimgBlock");
+            let PRODUCT_ID = iimgBlock.attributes['name'].value;
+            console.log(PRODUCT_ID);
+
+
+
+
+
+
+            $.ajax({
+                method:"POST",
+                url:"../php/LoginCheck.php",
+                data:{},
+                dataType:"text",
+                success:function(response){
+                    let tologinBlk = document.getElementById('tologinBlk');
+                    let nopointBlk = document.getElementById('nopointBlk');
+                    let successBlk = document.getElementById('successBlk');
+                    if(response == ""){
+                        // 沒有登入
+                        tologinBlk.classList.remove('none');
+                        }else if(response == "true"){
+                            $.ajax({
+                                    method:"POST",
+                                    url:"../php/product/buyRole.php",
+                                    data:{},
+                                    dataType:"text",
+                                    success:function(response2){
+                                        
+                                        if(response == "y"){
+                                            // 有錢而且成功
+                                            successBlk.classList.remove('none');
+                                            
+                                            }else if(response == "no"){
+                                                // 沒錢
+                                                noPointBlk.classList.remove('none');
+                                        }
+                                    }
+                                })
+
+                    }
+                }
+            })
+        }
+</script>
+
+
+
+
+
+
+
+
+
+
+
     <script>
             function myfav(){
                 let productid = sessionStorage.getItem('productname');
@@ -506,6 +726,32 @@
     
     </script>
 
+
+<!-- 未登入彈窗function -->
+
+    <script>
+
+        function popClose(item) {
+                let blk = item.parentNode.parentNode.parentNode.parentNode;
+                blk.classList.add('none');
+            }
+        function popCloseX(item) {
+                let blk = item.parentNode.parentNode.parentNode;
+                blk.classList.add('none');
+            }
+        function tologIn() {
+                location.href = "./login.html";
+            };
+        function toGacha() {
+                location.href = "./Gacha.html";
+            };
+        function toPoints() {
+                location.href = "./deposit.html";
+            };
+
+    
+    
+    </script>
 
     <script src="../js/gacha/chart.js"></script>
 
