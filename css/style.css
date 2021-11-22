@@ -608,6 +608,7 @@
   padding: 6px 8px;
   width: 45px;
   height: 45px;
+  color: yellowgreen;
   background-color: white;
   border-radius: 24%;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
@@ -620,10 +621,9 @@
 .footer .iconLink a:hover {
   transform: scale(1.2);
   border-radius: 50%;
-  background-position: 0% 0%;
 }
 
-.footer .iconLink i::before {
+.footer .iconLink a i::before {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -633,7 +633,17 @@
   top: 0;
   left: 5%;
   line-height: 80px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background .5s linear;
+}
+
+.footer .iconLink a:hover i::before {
   background-position: 0% 0%;
+}
+
+.footer .iconLink .fa-facebook-square::before {
+  background: linear-gradient(135deg, #264dfa 30%, #0a3d62 50%);
 }
 
 .footer .notice {
@@ -915,6 +925,7 @@ main.collection div.collect_contain div.contain_list div.trade_button button.cha
   display: block;
   margin: 0 auto;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 main.collection div.collect_contain div.contain_list div.trade_button button.buy:hover,
@@ -926,16 +937,19 @@ main.collection div.collect_contain div.contain_list div.trade_button button.cha
   border: 3px solid #0e3461;
   text-align: center;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 @media (max-width: 767.98px) {
   main.collection div.collect_contain div.contain_list div.trade_button button.buy,
   main.collection div.collect_contain div.contain_list div.trade_button button.change {
     width: 50px;
+    border-radius: 10px;
   }
   main.collection div.collect_contain div.contain_list div.trade_button button.buy:hover,
   main.collection div.collect_contain div.contain_list div.trade_button button.change:hover {
     width: 50px;
+    border-radius: 10px;
   }
 }
 
@@ -5644,6 +5658,7 @@ main.login div.contain button.btn_signup {
   text-align: center;
   max-width: 400px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 main.login div.contain button.btn_login:hover,
@@ -5657,6 +5672,7 @@ main.login div.contain button.btn_signup:hover {
   text-align: center;
   max-width: 400px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 main.login div.contain .login_contain {
@@ -5673,6 +5689,7 @@ main.login div.contain .login_contain button.forgot {
   background-color: transparent;
   border: 0px solid red;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 main.login div.contain .signup_contain {
@@ -5827,6 +5844,7 @@ main.login div.contain .bookmark {
   border-radius: 5px;
   cursor: pointer;
   transition: .3s;
+  border-radius: 10px;
 }
 
 .banHintmaskLayer .banConfirmBlk button:hover {
@@ -5836,6 +5854,7 @@ main.login div.contain .bookmark {
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
+  border-radius: 10px;
 }
 
 .veriHintmaskLayer {
@@ -6788,6 +6807,7 @@ main.member div.content div.contain_list button {
   border: 3px solid #60cd90;
   text-align: center;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 main.member div.content div.contain_list button:hover {
@@ -6798,6 +6818,7 @@ main.member div.content div.contain_list button:hover {
   border: 3px solid #0e3461;
   text-align: center;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 @media (max-width: 767.98px) {
@@ -8398,6 +8419,7 @@ main.member_info section.popShow {
 }
 
 .out .wrap {
+  cursor: pointer;
   width: 100%;
   margin-top: 50px;
   display: flex;
@@ -8470,6 +8492,7 @@ main.member_info section.popShow {
 }
 
 .out .wrap .sec {
+  color: #10c5b1;
   margin-right: 20px;
   height: 250px;
 }
@@ -8479,7 +8502,16 @@ main.member_info section.popShow {
   width: 100%;
 }
 
+.out .wrap .name .h3 {
+  color: #10c5b1;
+}
+
+.out .wrap .name .p {
+  color: #10c5b1;
+}
+
 #bnbn {
+  pointer-events: none;
   cursor: pointer;
   color: #60cd90;
   width: 20;
@@ -8612,14 +8644,14 @@ main.member_info section.popShow {
   font-size: 16px;
 }
 
-.out .ti {
+.out .date {
   display: flex;
-  margin: 50px 0;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
-.out .ti .date {
-  margin: 0 auto;
+.out .ti {
+  margin: 50px 0;
+  display: flex;
 }
 
 .out .con {
@@ -8630,6 +8662,7 @@ main.member_info section.popShow {
 }
 
 .out .con h1 {
+  margin: 50px 0;
   text-align: center;
 }
 
@@ -8643,6 +8676,7 @@ main.member_info section.popShow {
 }
 
 .out .con li {
+  margin: 50px 0;
   text-align: left;
   color: white;
 }
@@ -9289,6 +9323,110 @@ main.member_info section.popShow {
   display: block;
 }
 
+.buyHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.buyHintmaskLayer .buyPopUpBox {
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.buyHintmaskLayer .buyCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.buyHintmaskLayer .buyPopContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .buyHintmaskLayer .buyPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .buyHintmaskLayer .buyPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .buyHintmaskLayer .buyPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .buyHintmaskLayer .buyPopContent {
+    font-size: 12px;
+  }
+}
+
+.buyHintmaskLayer .buyConfirmBlk {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.buyHintmaskLayer .buyConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.buyHintmaskLayer .buyConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
 main.signup {
   background-size: cover;
   background-repeat: no-repeat;
@@ -9459,6 +9597,7 @@ main.signup .main_contain .form_contain form .button {
   max-width: 400px;
   cursor: pointer;
   font-size: 20px;
+  border-radius: 10px;
 }
 
 main.signup .main_contain .form_contain form .button:hover {
@@ -9471,6 +9610,7 @@ main.signup .main_contain .form_contain form .button:hover {
   max-width: 400px;
   cursor: pointer;
   font-size: 20px;
+  border-radius: 10px;
 }
 
 main.signup .main_contain .form_contain form div.input_form {
@@ -9598,6 +9738,7 @@ main.signup .verify_contain div.verify .button {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+  border-radius: 10px;
 }
 
 main.signup .verify_contain div.verify .button:hover {
@@ -9608,6 +9749,7 @@ main.signup .verify_contain div.verify .button:hover {
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
+  border-radius: 10px;
 }
 
 main.signup .verify_contain div.verify .resend {
@@ -9621,6 +9763,7 @@ main.signup .verify_contain div.verify .resend {
   border-color: #51AB82;
   color: #51AB82;
   margin-top: 15px;
+  border-radius: 10px;
 }
 
 main.signup .verify_contain div.verify .resend:hover {
@@ -9631,6 +9774,7 @@ main.signup .verify_contain div.verify .resend:hover {
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
+  border-radius: 10px;
 }
 
 main.signup .verify_contain div.verify input {

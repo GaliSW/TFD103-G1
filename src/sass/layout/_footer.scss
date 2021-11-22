@@ -1,3 +1,4 @@
+
 .footer{
     background: url(../src/image/index/strbg.jpg);
     background-repeat: no-repeat;
@@ -5,15 +6,18 @@
     width: 100%;
     margin-top: 7%;
     z-index: 10;
+   
     .iconLink{
         display: flex;
         justify-content: center;
         padding-top: 5px;
+        
         a{
             margin: 5px 20px;
             padding: 6px 8px;
             width: 45px;
             height: 45px;
+            color: yellowgreen;
             background-color: white;
             border-radius: 24%;
             box-shadow: 6px 6px 12px rgba(0, 0, 0, .15),
@@ -25,21 +29,35 @@
             &:hover{
                 transform:scale(1.2);
                 border-radius: 50%;
-                background-position: 0% 0%;
+            }
+            i{
+                &::before{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                background-size: 200% 200%;
+                background-position: 75% 75%;
+                top: 0;
+                left: 5%;
+                line-height: 80px;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: background .5s linear;
+                }
             }
         }
-        i{
+        a{
+            &:hover
+            i{
+                &::before{
+                    background-position: 0% 0%;
+                }
+            }
+        }
+        .fa-facebook-square{
             &::before{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            background-size: 200% 200%;
-            background-position: 75% 75%;
-            top: 0;
-            left: 5%;
-            line-height: 80px;
-            background-position: 0% 0%;
+                background: linear-gradient(135deg,rgb(38, 77, 250) 30%, #0a3d62 50%);
             }
         }
     }
