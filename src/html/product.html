@@ -12,6 +12,64 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>商品頁</title>
+    <script>
+
+        window.onload = function getproductname(){
+            let gachaid = sessionStorage.getItem('productname');
+            // console.log(gachaid);
+
+            $.ajax({
+                method: "POST",
+                url: "../php/product/callproductname.php",
+                data: { 
+                    GACHAID:gachaid,
+                },
+                dataType: "json",
+                success: function (response) {
+                    console.log(response);
+                    let username = response[0][1];
+                    let gachaid = response[0][2];
+                    let price = response[0][3];
+                    let title = response[0][12];
+                    let img = response[0][14];
+                    let content = response[0][16];
+                    let block_product = document.getElementById("flexContainer");
+                    let str =`
+                    <div class="items -left" id="username" name="${username}">
+                        <div class="imgBlock">
+                            <img src="../image/product/${img}">
+                        </div>
+                    </div>
+                    <div class="items -right">
+                        <h1 class="title1">${title}</h1>
+                        <p class="introduce">${content}</p>
+                        <p class="price">$${price}E</p>
+
+                        <div class="collectForm">
+                            <div class="btnBlock1">
+                                <button type="${gachaid}" class="collectBtn" name="button" id="myfav" onclick="myfav()"><i class="fas fa-heart"></i>收藏</button>
+                                <button type="button" class="changeBtn" name="button" @click=clickPopp()>交換</button>
+                            </div>
+                        </div>
+
+                        <div class="buyForm" id="app">
+                            <button type="button" class="buyBtn" name="button" @click=clickPop()>購買</button>
+                            <component :is="content" id="popUp" @nextacc="myClick" @click-2="myClick2"></component>
+                        </div>
+                    </div>
+                    `;
+                    block_product.innerHTML = str;
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+
+        }
+        
+
+
+    </script>
 </head>
 <header></header>
 
@@ -19,18 +77,18 @@
     @@include('./header.html')
     <main class="allBlock" id="appp">
         <section class="sec1">
-            <div class="flexContainer">
-                <div class="items -left">
+            <div class="flexContainer" id="flexContainer">
+                <!-- <div class="items -left">
                     <div class="imgBlock">
                         <img src="../image/product/role1.png">
                     </div>
-                </div>
-                <div class="items -right">
-                    <h1 class="title1">小烏龜</h1>
+                </div> -->
+                <!-- <div class="items -right"> -->
+                    <!-- <h1 class="title1">小烏龜</h1>
                     <p class="introduce">凡事簡單思考的個性和天生的樂天主義使他對速度沒有絲毫的恐懼感。</p>
-                    <p class="price">$250E</p>
+                    <p class="price">$250E</p> -->
 
-                    <div class="collectForm">
+                    <!-- <div class="collectForm">
                         <div class="btnBlock1">
                             <button type="button" class="collectBtn" name="button" id="myfav" onclick="myfav()"><i class="fas fa-heart"></i>收藏</button>
                             <button type="button" class="changeBtn" name="button" @click=clickPopp()>交換</button>
@@ -43,7 +101,7 @@
 
                     </div>
 
-                </div>
+                </div> -->
 
             </div>
 
@@ -347,27 +405,37 @@
         });
 
     </script>
-
+    
     <script>
-
             function myfav(){
-                    let myfavvalue = document.getElementById('myfav');
-                    // console.log(myfavvalue);
-                    $.ajax({
-                    method: "POST",
-                    url: "../php/product/myfav.php",
-                    data: {
-                        myfav: myfavvalue,
-                    },
-                    dataType: "text",
-                    success: function (response) {
-                    },
-                    error: function (exception) {
-                        alert("發生錯誤: " + exception.status);
+                let btnName = document.getElementById('myfav').innerText; 
+                    if(btnName == "收藏"){
+                        let username = document.getElementById('username').attributes['name'].value;
+                        let myfavvalue = document.getElementById('myfav').attributes['type'].value;
+                        let favchange = document.getElementById('myfav');
+                            $.ajax({
+                            method: "POST",
+                                url: "../php/product/myfav.php",
+                                data: {
+                                USERNAME:username,
+                                PRODUCTID: myfavvalue,
+                                },
+                                dataType: "text",
+                                success: function (response) {
+                                    alert('收藏成功');
+                                    favchange.classList.remove('collectBtn');
+                                    favchange.classList.add('changes');
+                                    btnName.innerText = "已收藏"
+                                },
+                                error: function (exception) {
+                                    alert("數據載入失敗: " + exception.status);
+                                }
+                            });            
                     }
-                });
-            }
+                }
     </script>
+
+
 
 
 
