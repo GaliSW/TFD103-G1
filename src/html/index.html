@@ -68,7 +68,7 @@
                             </a>
 
                             <a href="#">
-                                <div class="hamLog" id="LogOut" onclick="LogOut()">登出</div>
+                                <div class="hamLog" id="LogOutPhone" class="LogOut" onclick="LogOut()">登出</div>
                             </a>
                         </ul>
                     </div>
@@ -91,7 +91,7 @@
                         </a>
                         <div class="show">會員</div>
                     </botton>
-                    <botton type="button" id="LogOut" onclick="LogOut()">
+                    <botton type="button" id="LogOut" class="LogOut" onclick="LogOut()">
                         <a href="#">登出</a>
                     </botton>
                 </div>
@@ -387,49 +387,17 @@
                     success: function (response) {
                         if (response == "") {
                             let LogOut = document.getElementById('LogOut');
-                            LogOut.classList.add('disappear');
+                            LogOut.classList.add('none');
+                            let LogOutPhone = document.getElementById('LogOutPhone');
+                            LogOutPhone.classList.add('none');
                         } else {
                             let appear1 = document.getElementById('appear1');
                             appear1.classList.remove('disappear');
                             let appear2 = document.getElementById('appear2');
                             appear2.classList.remove('disappear');
-                        }
-                    },
-                    error: function (exception) {
-                        alert("數據載入失敗: " + exception.status);
-                    }
-                });
-            }
-        </script>
-        <script>
-            function LogOut() {
-                $.ajax({
-                    method: "POST",
-                    url: "../php/memLogin/LogOut.php",
-                    data: {},
-                    dataType: "text",
-                    success: function (response) {
-                        let appear1 = document.getElementById('appear1');
-                        appear1.classList.add('disappear');
-                        let appear2 = document.getElementById('appear2');
-                        appear2.classList.add('disappear');
-                    },
-                    error: function (exception) {
-                        alert("數據載入失敗: " + exception.status);
-                    }
-                });
-            }
-            function memberCheck() {
-                $.ajax({
-                    method: "POST",
-                    url: "../php/LoginCheck.php",
-                    data: {},
-                    dataType: "text",
-                    success: function (response) {
-                        if (response == "") {
-                            location.href = 'login.html';
-                        } else {
-                            location.href = 'member.html';
+                            let LogOut = document.getElementById('LogOut');
+                            balance();
+                            countDeal();
                         }
                     },
                     error: function (exception) {
