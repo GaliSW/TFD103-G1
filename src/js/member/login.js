@@ -5,7 +5,7 @@ let vm = new Vue({
     forget: false,
     loginError: false,
     forgetError: false,
-    sendOk:false,
+    sendOk: false,
   },
   methods: {
     showForget: function () {
@@ -22,28 +22,13 @@ let vm = new Vue({
     loginCheck: function (event) {
       event.preventDefault();
       // vm.$data.loginError = true;
-      let loginBtn = document.querySelector('.btn_login');
-<<<<<<< HEAD
-        let mgUser = document.getElementById('userId').value;
-        let mgPassword = document.getElementById('password').value;
-        user = mgUser; //填入的user
-        pass = mgPassword; //填入的密碼
-        // console.log(user, pass);
-        login(user, pass);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-      });
->>>>>>> Lillian
-=======
-      let mgUser = document.getElementById('userId').value;
-      let mgPassword = document.getElementById('password').value;
+      let loginBtn = document.querySelector(".btn_login");
+      let mgUser = document.getElementById("userId").value;
+      let mgPassword = document.getElementById("password").value;
       user = mgUser; //填入的user
       pass = mgPassword; //填入的密碼
+      // console.log(user, pass);
       login(user, pass);
->>>>>>> Gary
->>>>>>> 6125696878d96ab7d78dace3bd62fa9d1e54c37f
       function login(user, pass) {
         $.ajax({
           method: "POST",
@@ -86,7 +71,6 @@ let vm = new Vue({
           if (response == 1) {
             vm.$data.sendOk = true;
             vm.$data.forgetError = false;
-            
           } else {
             vm.$data.forgetError = true;
           }
@@ -102,7 +86,6 @@ let vm = new Vue({
 function visiblePwd() {
   if (password.type === "password") {
     password.type = "text";
-    
   } else {
     password.type = "password";
   }
