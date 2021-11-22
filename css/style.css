@@ -513,20 +513,7 @@
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6dcbc2ff75eb4ea2def69196589d8beb59e47003
-=======
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
->>>>>>> bca67ef3a9eca91079f7d1009627f1572fe2cd88
-=======
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
->>>>>>> Lillian
 }
 
 @media (max-width: 480px) {
@@ -554,40 +541,9 @@
   background: #0E3461;
 }
 
-<<<<<<< HEAD
-#header #menu li:hover img {
-  -webkit-animation: move 1s infinite;
-          animation: move 1s infinite;
-=======
 #header #headerMenu li:hover img {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   -webkit-animation: move 1s infinite;
           animation: move 1s infinite;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> bca67ef3a9eca91079f7d1009627f1572fe2cd88
-  -webkit-animation: move 1s infinite;
-          animation: move 1s infinite;
-=======
-  animation: move 1s infinite;
-<<<<<<< HEAD
->>>>>>> 6125696878d96ab7d78dace3bd62fa9d1e54c37f
->>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
-=======
-  animation: move 1s infinite;
->>>>>>> 6dcbc2ff75eb4ea2def69196589d8beb59e47003
-=======
->>>>>>> 6dcbc2ff75eb4ea2def69196589d8beb59e47003
->>>>>>> 601fad1f3fdb2fbd265a001fb3ab6485a123d2fc
->>>>>>> bca67ef3a9eca91079f7d1009627f1572fe2cd88
-=======
-  -webkit-animation: move 1s infinite;
-          animation: move 1s infinite;
->>>>>>> Lillian
 }
 
 #header #headerMenu li img {
@@ -790,24 +746,7 @@
   border-radius: 50%;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-.footer .iconLink span .fa-2x:hover {
-  color: #477dbe;
-  -webkit-transform: scale(1.25, 1.25);
-          transform: scale(1.25, 1.25);
-  -webkit-transition: -webkit-transform 0.25s ease;
-  transition: -webkit-transform 0.25s ease;
-  transition: transform 0.25s ease;
-  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
-=======
-=======
->>>>>>> Lillian
-.footer .iconLink i::before {
-=======
 .footer .iconLink a i::before {
->>>>>>> bca67ef3a9eca91079f7d1009627f1572fe2cd88
   position: absolute;
   width: 100%;
   height: 100%;
@@ -823,23 +762,12 @@
   transition: background .5s linear;
 }
 
-<<<<<<< HEAD
-.footer .iconLink span .fa-2x:hover {
-  color: #477dbe;
-  -webkit-transform: scale(1.25, 1.25);
-          transform: scale(1.25, 1.25);
-  -webkit-transition: -webkit-transform 0.25s ease;
-  transition: -webkit-transform 0.25s ease;
-  transition: transform 0.25s ease;
-  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
-=======
 .footer .iconLink a:hover i::before {
   background-position: 0% 0%;
 }
 
 .footer .iconLink .fa-facebook-square::before {
   background: linear-gradient(135deg, #264dfa 30%, #0a3d62 50%);
->>>>>>> 601fad1f3fdb2fbd265a001fb3ab6485a123d2fc
 }
 
 .footer .notice {
@@ -2427,56 +2355,8 @@ body {
 
 @keyframes drop {
   0% {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
-<<<<<<< HEAD
-=======
-    transform: scale(0.7);
->>>>>>> 6dcbc2ff75eb4ea2def69196589d8beb59e47003
-=======
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
->>>>>>> bca67ef3a9eca91079f7d1009627f1572fe2cd88
-  }
-  50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  51% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  100% {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> bca67ef3a9eca91079f7d1009627f1572fe2cd88
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-}
-
-@-webkit-keyframes drop {
-  0% {
-    -webkit-transform: scale(0.7);
-  }
-  50% {
-    -webkit-transform: scale(1);
-  }
-  51% {
-    -webkit-transform: translateY(0px);
-  }
-  100% {
-    -webkit-transform: translateY(100px);
-<<<<<<< HEAD
-=======
-=======
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
->>>>>>> Lillian
   }
   50% {
     -webkit-transform: scale(1.5);
@@ -2504,15 +2384,6 @@ body {
   }
   100% {
     -webkit-transform: translateY(100px);
-<<<<<<< HEAD
->>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
-=======
-    transform: translateY(100px);
->>>>>>> 6dcbc2ff75eb4ea2def69196589d8beb59e47003
-=======
->>>>>>> bca67ef3a9eca91079f7d1009627f1572fe2cd88
-=======
->>>>>>> Lillian
   }
 }
 
@@ -5610,29 +5481,8 @@ body {
 .index .unlock {
   border: 2px solid black;
   margin: 30px auto;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color: #355c45;
-=======
->>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
-=======
-  background-color: #355c45;
->>>>>>> bca67ef3a9eca91079f7d1009627f1572fe2cd88
   -webkit-box-shadow: #7adaa2 0 0 70px 20px;
           box-shadow: #7adaa2 0 0 70px 20px;
-=======
-  box-shadow: #7adaa2 0 0 70px 20px;
-<<<<<<< HEAD
->>>>>>> 6dcbc2ff75eb4ea2def69196589d8beb59e47003
-=======
->>>>>>> 601fad1f3fdb2fbd265a001fb3ab6485a123d2fc
->>>>>>> bca67ef3a9eca91079f7d1009627f1572fe2cd88
-=======
-  -webkit-box-shadow: #7adaa2 0 0 70px 20px;
-          box-shadow: #7adaa2 0 0 70px 20px;
->>>>>>> Lillian
   width: 500px;
   height: 450px;
   display: table;
@@ -8582,7 +8432,7 @@ main.member_info div.bar button._on {
 }
 
 @media (max-width: 577.98px) {
-  main.member_info div.bar button {
+  main.member_info div.bar .button {
     font-size: 14px;
   }
 }
@@ -8722,14 +8572,6 @@ main.member_info div.content div.contain_list div.edit div.edit_detail form.edit
   width: 15px;
   height: 15px;
   margin-bottom: 10px;
-}
-
-@media (max-width: 767.98px) {
-  main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password div.visible {
-    width: 300px;
-    margin: 0 auto;
-    text-align: left;
-  }
 }
 
 main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password label {
@@ -9570,7 +9412,6 @@ main.member_info section.popShow {
   font-size: 16px;
 }
 
-<<<<<<< HEAD
 .out .date {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9578,16 +9419,6 @@ main.member_info section.popShow {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-=======
-.out .ti {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 50px 0;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
->>>>>>> Lillian
 }
 
 .out .ti {
