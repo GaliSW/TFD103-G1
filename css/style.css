@@ -514,15 +514,12 @@
   transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-<<<<<<< HEAD
-=======
 }
 
 @media (max-width: 480px) {
   #header #headerMenu {
     margin: -30px 0 0 -32px;
   }
->>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
 }
 
 #header #headerMenu a > img {
@@ -545,17 +542,8 @@
 }
 
 #header #headerMenu li:hover img {
-<<<<<<< HEAD
   -webkit-animation: move 1s infinite;
           animation: move 1s infinite;
-=======
-<<<<<<< HEAD
-  -webkit-animation: move 1s infinite;
-          animation: move 1s infinite;
-=======
-  animation: move 1s infinite;
->>>>>>> 6125696878d96ab7d78dace3bd62fa9d1e54c37f
->>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
 }
 
 #header #headerMenu li img {
@@ -674,11 +662,7 @@
   width: 20px;
   height: 20px;
   font-size: 16px;
-<<<<<<< HEAD
   color: yellow;
-=======
-  color: red;
->>>>>>> 6125696878d96ab7d78dace3bd62fa9d1e54c37f
   right: -6px;
   top: -22px;
   position: absolute;
@@ -762,16 +746,6 @@
   background-position: 0% 0%;
 }
 
-<<<<<<< HEAD
-.footer .iconLink span .fa-2x:hover {
-  color: #477dbe;
-  -webkit-transform: scale(1.25, 1.25);
-          transform: scale(1.25, 1.25);
-  -webkit-transition: -webkit-transform 0.25s ease;
-  transition: -webkit-transform 0.25s ease;
-  transition: transform 0.25s ease;
-  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
-=======
 .footer .iconLink i::before {
   position: absolute;
   width: 100%;
@@ -783,7 +757,6 @@
   left: 5%;
   line-height: 80px;
   background-position: 0% 0%;
->>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
 }
 
 .footer .notice {
@@ -1093,6 +1066,7 @@ main.collection div.collect_contain div.contain_list div.trade_button button.cha
   display: block;
   margin: 0 auto;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 main.collection div.collect_contain div.contain_list div.trade_button button.buy:hover,
@@ -1104,16 +1078,19 @@ main.collection div.collect_contain div.contain_list div.trade_button button.cha
   border: 3px solid #0e3461;
   text-align: center;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 @media (max-width: 767.98px) {
   main.collection div.collect_contain div.contain_list div.trade_button button.buy,
   main.collection div.collect_contain div.contain_list div.trade_button button.change {
     width: 50px;
+    border-radius: 10px;
   }
   main.collection div.collect_contain div.contain_list div.trade_button button.buy:hover,
   main.collection div.collect_contain div.contain_list div.trade_button button.change:hover {
     width: 50px;
+    border-radius: 10px;
   }
 }
 
@@ -2369,7 +2346,6 @@ body {
   0% {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
-<<<<<<< HEAD
   }
   50% {
     -webkit-transform: scale(1.5);
@@ -2397,35 +2373,6 @@ body {
   }
   100% {
     -webkit-transform: translateY(100px);
-=======
-  }
-  50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  51% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  100% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-}
-
-@-webkit-keyframes drop {
-  0% {
-    -webkit-transform: scale(0.7);
-  }
-  50% {
-    -webkit-transform: scale(1);
-  }
-  51% {
-    -webkit-transform: translateY(0px);
-  }
-  100% {
-    -webkit-transform: translateY(100px);
->>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
   }
 }
 
@@ -5523,10 +5470,6 @@ body {
 .index .unlock {
   border: 2px solid black;
   margin: 30px auto;
-<<<<<<< HEAD
-  background-color: #355c45;
-=======
->>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
   -webkit-box-shadow: #7adaa2 0 0 70px 20px;
           box-shadow: #7adaa2 0 0 70px 20px;
   width: 500px;
@@ -6205,6 +6148,7 @@ main.login div.contain button.btn_signup {
   text-align: center;
   max-width: 400px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 main.login div.contain button.btn_login:hover,
@@ -6218,6 +6162,7 @@ main.login div.contain button.btn_signup:hover {
   text-align: center;
   max-width: 400px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 main.login div.contain .login_contain {
@@ -6234,6 +6179,7 @@ main.login div.contain .login_contain button.forgot {
   background-color: transparent;
   border: 0px solid red;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 main.login div.contain .signup_contain {
@@ -6293,6 +6239,242 @@ main.login div.contain .login_contain .bookmark {
 
 main.login div.contain .bookmark {
   display: block;
+}
+
+.banHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.banHintmaskLayer .banPopUpBox {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.banHintmaskLayer .banCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.banHintmaskLayer .banPopContent {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .banHintmaskLayer .banPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .banHintmaskLayer .banPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .banHintmaskLayer .banPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .banHintmaskLayer .banPopContent {
+    font-size: 12px;
+  }
+}
+
+.banHintmaskLayer .banConfirmBlk {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.banHintmaskLayer .banConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 10px;
+}
+
+.banHintmaskLayer .banConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.veriHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.veriHintmaskLayer .veriPopUpBox {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.veriHintmaskLayer .veriCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.veriHintmaskLayer .veriPopContent {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .veriHintmaskLayer .veriPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .veriHintmaskLayer .veriPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .veriHintmaskLayer .veriPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .veriHintmaskLayer .veriPopContent {
+    font-size: 12px;
+  }
+}
+
+.veriHintmaskLayer .veriConfirmBlk {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.veriHintmaskLayer .veriConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.veriHintmaskLayer .veriConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
 }
 
 .mgLoginBg {
@@ -7179,6 +7361,7 @@ main.member div.content div.contain_list button {
   border: 3px solid #60cd90;
   text-align: center;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 main.member div.content div.contain_list button:hover {
@@ -7189,6 +7372,7 @@ main.member div.content div.contain_list button:hover {
   border: 3px solid #0e3461;
   text-align: center;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 @media (max-width: 767.98px) {
@@ -10111,6 +10295,7 @@ main.signup .main_contain .form_contain form .button {
   max-width: 400px;
   cursor: pointer;
   font-size: 20px;
+  border-radius: 10px;
 }
 
 main.signup .main_contain .form_contain form .button:hover {
@@ -10123,6 +10308,7 @@ main.signup .main_contain .form_contain form .button:hover {
   max-width: 400px;
   cursor: pointer;
   font-size: 20px;
+  border-radius: 10px;
 }
 
 main.signup .main_contain .form_contain form div.input_form {
@@ -10250,6 +10436,7 @@ main.signup .verify_contain div.verify .button {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+  border-radius: 10px;
 }
 
 main.signup .verify_contain div.verify .button:hover {
@@ -10260,6 +10447,7 @@ main.signup .verify_contain div.verify .button:hover {
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
+  border-radius: 10px;
 }
 
 main.signup .verify_contain div.verify .resend {
@@ -10273,6 +10461,7 @@ main.signup .verify_contain div.verify .resend {
   border-color: #51AB82;
   color: #51AB82;
   margin-top: 15px;
+  border-radius: 10px;
 }
 
 main.signup .verify_contain div.verify .resend:hover {
@@ -10283,6 +10472,7 @@ main.signup .verify_contain div.verify .resend:hover {
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
+  border-radius: 10px;
 }
 
 main.signup .verify_contain div.verify input {

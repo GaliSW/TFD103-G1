@@ -127,7 +127,7 @@ function displayBuy() {
   });
 }
 
-window.onload = displayBuy();
+
 
 // 買家交換
 function displayBuyCng() {

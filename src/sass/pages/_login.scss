@@ -82,15 +82,17 @@ main.login {
             margin-bottom: 10px;
         }
 
-        .visible{
+        .visible {
             color: white;
         }
-         button.btn_login,
+
+        button.btn_login,
         button.btn_confirm,
         button.btn_signup {
             @include btn_blur(100%, 10px);
             max-width: 400px;
             cursor: pointer;
+            @include border_r(10);
         }
 
         button.btn_login:hover,
@@ -99,6 +101,7 @@ main.login {
             @include btn_on(100%, 10px);
             max-width: 400px;
             cursor: pointer;
+            @include border_r(10);
         }
 
 
@@ -117,6 +120,7 @@ main.login {
                 background-color: transparent;
                 @include border(0);
                 cursor: pointer;
+                @include border_r(10);
             }
 
 
@@ -129,6 +133,7 @@ main.login {
 
             button {
                 margin-top: 10px;
+
             }
 
             div.content {
@@ -180,6 +185,186 @@ main.login {
 
         .bookmark {
             display: block;
+        }
+    }
+}
+
+//停權彈窗
+.banHintmaskLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+
+    .banPopUpBox {
+        position: relative;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        background-color: rgba(2, 79, 63, 1);
+        border: 2px solid rgba(16, 197, 177, 1);
+        width: 300px;
+        height: 200px;
+        border-radius: 5px;
+        z-index: 999;
+    }
+
+    .banCloseBtn {
+        position: absolute;
+        right: 0;
+        background-color: rgba(16, 197, 177, 1);
+        border-radius: 2px;
+        font-size: 28px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+    }
+
+    .banPopContent {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        color: rgba(96, 205, 144, 1);
+        color: $tiffiny_green;
+        font-size: $fontSize;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include desktop_small {
+            font-size: $fontSize;
+        }
+
+        @include pad {
+            font-size: $fontSizeSmall;
+        }
+
+        @include pad_small {
+            font-size: $fontSizeMin;
+        }
+
+        @include phone {
+            font-size: $fontSizeMin;
+        }
+    }
+
+    .banConfirmBlk {
+        position: absolute;
+        display: flex;
+        // @include border();
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+
+
+        button {
+            margin: 0 10px;
+            @include btn_blur(100px, 5px);
+            @include border_r(5);
+            cursor: pointer;
+            transition: .3s;
+            @include border_r(10);
+
+            &:hover {
+                @include btn_on(100px, 5px);
+                @include border_r(10);
+            }
+        }
+    }
+}
+
+//驗證彈窗
+.veriHintmaskLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+
+    .veriPopUpBox {
+        position: relative;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        background-color: rgba(2, 79, 63, 1);
+        border: 2px solid rgba(16, 197, 177, 1);
+        width: 300px;
+        height: 200px;
+        border-radius: 5px;
+        z-index: 999;
+    }
+
+    .veriCloseBtn {
+        position: absolute;
+        right: 0;
+        background-color: rgba(16, 197, 177, 1);
+        border-radius: 2px;
+        font-size: 28px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+    }
+
+    .veriPopContent {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        color: rgba(96, 205, 144, 1);
+        color: $tiffiny_green;
+        font-size: $fontSize;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include desktop_small {
+            font-size: $fontSize;
+        }
+
+        @include pad {
+            font-size: $fontSizeSmall;
+        }
+
+        @include pad_small {
+            font-size: $fontSizeMin;
+        }
+
+        @include phone {
+            font-size: $fontSizeMin;
+        }
+    }
+
+    .veriConfirmBlk {
+        position: absolute;
+        display: flex;
+        // @include border();
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+
+
+        button {
+            margin: 0 10px;
+            @include btn_blur(100px, 5px);
+            @include border_r(5);
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                @include btn_on(100px, 5px);
+            }
         }
     }
 }

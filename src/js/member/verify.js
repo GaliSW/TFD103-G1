@@ -20,10 +20,19 @@ function clickThis() {
         $("#thisOk").addClass("_off");
         $("#idError").addClass("_off");
         $("#falseVerify").addClass("_off");
+        $("#resendOk").addClass("_off");
         $("#ok").addClass("_on");
         setTimeout("trans()", 5);
-      } else {
-         $("#falseVerify").removeClass("_off");
+      }else if (response == "X1") {
+        $("#resendOk").addClass("_off");
+        $("#thisOk").addClass("_off");
+        $("#idError").removeClass("_off");
+        $("#falseVerify").addClass("_off");
+      } else if (response == "N") {
+        $("#resendOk").addClass("_off");
+        $("#thisOk").addClass("_off");
+        $("#idError").addClass("_off");
+        $("#falseVerify").removeClass("_off");
       }
     },
   });
@@ -43,8 +52,13 @@ function resendThis() {
     success: function (response) {
       if (response == "Y") {
           $("#resendOk").removeClass("_off");
+          $("#falseVerify").addClass("_off");
+          $("#idError").addClass("_off");
+
       } else if (response == "X") {
-        $("#idError").removeClass("_off");
+         $("#thisOk").addClass("_off");
+         $("#idError").removeClass("_off");
+         $("#falseVerify").addClass("_off");
       }
     },
   });

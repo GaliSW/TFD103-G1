@@ -44,8 +44,13 @@ let vm = new Vue({
               appear1.classList.remove("disappear");
               let appear2 = document.getElementById("appear2");
               appear2.classList.remove("disappear");
-              window.location.href =
-                "http://localhost/TFD103-G1/src/html/index.html"; //正確登入後頁面跳轉至
+              location.href = "../html/index.html";
+            } else if (response == 0) {
+              let banBlk = document.getElementById("banBlk");
+              banBlk.classList.remove("none");
+            } else if (response == 2) {
+              let veriBlk = document.getElementById("veriBlk");
+              veriBlk.classList.remove("none");
             } else {
               vm.$data.loginError = true;
             }

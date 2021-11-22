@@ -124,6 +124,7 @@ main.signup {
                     max-width: 400px;
                     cursor: pointer;
                     font-size: 20px;
+                    @include border_r(10);
 
                 }
 
@@ -132,6 +133,7 @@ main.signup {
                     max-width: 400px;
                     cursor: pointer;
                     font-size: 20px;
+                    @include border_r(10);
                 }
 
                 div.input_form {
@@ -260,11 +262,13 @@ main.signup {
             .button {
                 margin-top: 10px;
                 @include btn_blur(200px, 5px);
+                @include border_r(10);
             }
 
             .button:hover {
                 margin-top: 10px;
                 @include btn_on(200px, 5px);
+                @include border_r(10);
             }
 
             .resend {
@@ -273,11 +277,13 @@ main.signup {
                 border-color: #51AB82;
                 color: #51AB82;
                 margin-top: 15px;
+                @include border_r(10);
             }
 
             .resend:hover {
                 margin-top: 15px;
                 @include btn_on(200px, 5px);
+                @include border_r(10);
             }
 
             input {

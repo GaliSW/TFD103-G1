@@ -119,6 +119,6 @@ function countDeal(){
   });
 };
 
-window.onload = showInfo();
+
 
 
