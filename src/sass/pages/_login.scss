@@ -92,6 +92,7 @@ main.login {
             @include btn_blur(100%, 10px);
             max-width: 400px;
             cursor: pointer;
+            @include border_r(10);
         }
 
         button.btn_login:hover,
@@ -100,6 +101,7 @@ main.login {
             @include btn_on(100%, 10px);
             max-width: 400px;
             cursor: pointer;
+            @include border_r(10);
         }
 
 
@@ -118,6 +120,7 @@ main.login {
                 background-color: transparent;
                 @include border(0);
                 cursor: pointer;
+                @include border_r(10);
             }
 
 
@@ -130,6 +133,7 @@ main.login {
 
             button {
                 margin-top: 10px;
+
             }
 
             div.content {
@@ -266,9 +270,11 @@ main.login {
             @include border_r(5);
             cursor: pointer;
             transition: .3s;
+            @include border_r(10);
 
             &:hover {
                 @include btn_on(100px, 5px);
+                @include border_r(10);
             }
         }
     }

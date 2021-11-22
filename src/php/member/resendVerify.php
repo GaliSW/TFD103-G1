@@ -30,7 +30,7 @@ $Name = $_POST["Name"];
     $statement = $pdo->prepare($sql);
     $statement->execute();
     $data = $statement->fetchAll();
-
+if (count($data) > 0) {
     foreach ($data as $index => $row) {
         $email = $row["EMAIL"];
     }
@@ -38,14 +38,14 @@ $Name = $_POST["Name"];
     // 收件人
     $recipient = "$email";
     // 寄件標題
-    $mailTitle = 'Please verify.';
+    $mailTitle = 'Please verify (new).';
     // html內容
     $mailBody = "您的驗證碼為: <B> $verify </B>，請點擊網址驗證。
                     https://tibamef2e.com/tfd103/g1/TFD103-G1/src/verify.html";
     // 不支援html時的內容
     $mailAltBody = "您的驗證碼為: $verify ，請點擊網址驗證。
                     https://tibamef2e.com/tfd103/g1/TFD103-G1/src/verify.html";
-if (count($data) > 0) {
+
     $sql2 = "UPDATE MEMBER SET AUTH = $verify WHERE USERNAME = '$Name';
     ";
 

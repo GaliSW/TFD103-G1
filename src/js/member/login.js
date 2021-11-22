@@ -22,35 +22,13 @@ let vm = new Vue({
     loginCheck: function (event) {
       event.preventDefault();
       // vm.$data.loginError = true;
-      let loginBtn = document.querySelector('.btn_login');
-<<<<<<< HEAD
-<<<<<<< HEAD
-        let mgUser = document.getElementById('userId').value;
-        let mgPassword = document.getElementById('password').value;
-        user = mgUser; //填入的user
-        pass = mgPassword; //填入的密碼
-        // console.log(user, pass);
-        login(user, pass);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-      });
->>>>>>> Lillian
-=======
-=======
->>>>>>> 6dcbc2ff75eb4ea2def69196589d8beb59e47003
-      let mgUser = document.getElementById('userId').value;
-      let mgPassword = document.getElementById('password').value;
+      let loginBtn = document.querySelector(".btn_login");
+      let mgUser = document.getElementById("userId").value;
+      let mgPassword = document.getElementById("password").value;
       user = mgUser; //填入的user
       pass = mgPassword; //填入的密碼
       // console.log(user, pass);
       login(user, pass);
-<<<<<<< HEAD
->>>>>>> Gary
->>>>>>> 6125696878d96ab7d78dace3bd62fa9d1e54c37f
-=======
->>>>>>> 6dcbc2ff75eb4ea2def69196589d8beb59e47003
       function login(user, pass) {
         $.ajax({
           method: "POST",
@@ -68,11 +46,11 @@ let vm = new Vue({
               appear2.classList.remove("disappear");
               location.href = "../html/index.html";
             } else if (response == 0) {
-              let banBlk = document.getElementById('banBlk');
-              banBlk.classList.remove('none');
+              let banBlk = document.getElementById("banBlk");
+              banBlk.classList.remove("none");
             } else if (response == 2) {
-              let veriBlk = document.getElementById('veriBlk');
-              veriBlk.classList.remove('none');
+              let veriBlk = document.getElementById("veriBlk");
+              veriBlk.classList.remove("none");
             } else {
               vm.$data.loginError = true;
             }
@@ -113,7 +91,6 @@ let vm = new Vue({
 function visiblePwd() {
   if (password.type === "password") {
     password.type = "text";
-
   } else {
     password.type = "password";
   }

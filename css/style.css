@@ -515,6 +515,7 @@
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 <<<<<<< HEAD
 =======
@@ -523,13 +524,15 @@
 =======
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 >>>>>>> bca67ef3a9eca91079f7d1009627f1572fe2cd88
+=======
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+>>>>>>> Lillian
 }
 
 @media (max-width: 480px) {
   #header #headerMenu {
     margin: -30px 0 0 -32px;
   }
->>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
 }
 
 #header #headerMenu a > img {
@@ -560,6 +563,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   -webkit-animation: move 1s infinite;
           animation: move 1s infinite;
 =======
@@ -580,6 +584,10 @@
 >>>>>>> 6dcbc2ff75eb4ea2def69196589d8beb59e47003
 >>>>>>> 601fad1f3fdb2fbd265a001fb3ab6485a123d2fc
 >>>>>>> bca67ef3a9eca91079f7d1009627f1572fe2cd88
+=======
+  -webkit-animation: move 1s infinite;
+          animation: move 1s infinite;
+>>>>>>> Lillian
 }
 
 #header #headerMenu li img {
@@ -767,18 +775,22 @@
   color: yellowgreen;
   background-color: white;
   border-radius: 24%;
-  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
+          box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
   overflow: hidden;
   font-size: 16px;
+  -webkit-transition: .3s linear;
   transition: .3s linear;
   position: relative;
 }
 
 .footer .iconLink a:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   border-radius: 50%;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .footer .iconLink span .fa-2x:hover {
@@ -790,6 +802,8 @@
   transition: transform 0.25s ease;
   transition: transform 0.25s ease, -webkit-transform 0.25s ease;
 =======
+=======
+>>>>>>> Lillian
 .footer .iconLink i::before {
 =======
 .footer .iconLink a i::before {
@@ -821,7 +835,6 @@
 =======
 .footer .iconLink a:hover i::before {
   background-position: 0% 0%;
->>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
 }
 
 .footer .iconLink .fa-facebook-square::before {
@@ -1136,6 +1149,7 @@ main.collection div.collect_contain div.contain_list div.trade_button button.cha
   display: block;
   margin: 0 auto;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 main.collection div.collect_contain div.contain_list div.trade_button button.buy:hover,
@@ -1147,16 +1161,19 @@ main.collection div.collect_contain div.contain_list div.trade_button button.cha
   border: 3px solid #0e3461;
   text-align: center;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 @media (max-width: 767.98px) {
   main.collection div.collect_contain div.contain_list div.trade_button button.buy,
   main.collection div.collect_contain div.contain_list div.trade_button button.change {
     width: 50px;
+    border-radius: 10px;
   }
   main.collection div.collect_contain div.contain_list div.trade_button button.buy:hover,
   main.collection div.collect_contain div.contain_list div.trade_button button.change:hover {
     width: 50px;
+    border-radius: 10px;
   }
 }
 
@@ -2412,6 +2429,7 @@ body {
   0% {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
 <<<<<<< HEAD
@@ -2455,6 +2473,10 @@ body {
     -webkit-transform: translateY(100px);
 <<<<<<< HEAD
 =======
+=======
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+>>>>>>> Lillian
   }
   50% {
     -webkit-transform: scale(1.5);
@@ -2482,12 +2504,15 @@ body {
   }
   100% {
     -webkit-transform: translateY(100px);
+<<<<<<< HEAD
 >>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
 =======
     transform: translateY(100px);
 >>>>>>> 6dcbc2ff75eb4ea2def69196589d8beb59e47003
 =======
 >>>>>>> bca67ef3a9eca91079f7d1009627f1572fe2cd88
+=======
+>>>>>>> Lillian
   }
 }
 
@@ -5588,6 +5613,7 @@ body {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: #355c45;
 =======
 >>>>>>> 7c526e3821580a7725cd990e707bbbac457dce50
@@ -5603,6 +5629,10 @@ body {
 =======
 >>>>>>> 601fad1f3fdb2fbd265a001fb3ab6485a123d2fc
 >>>>>>> bca67ef3a9eca91079f7d1009627f1572fe2cd88
+=======
+  -webkit-box-shadow: #7adaa2 0 0 70px 20px;
+          box-shadow: #7adaa2 0 0 70px 20px;
+>>>>>>> Lillian
   width: 500px;
   height: 450px;
   display: table;
@@ -6279,6 +6309,7 @@ main.login div.contain button.btn_signup {
   text-align: center;
   max-width: 400px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 main.login div.contain button.btn_login:hover,
@@ -6292,6 +6323,7 @@ main.login div.contain button.btn_signup:hover {
   text-align: center;
   max-width: 400px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 main.login div.contain .login_contain {
@@ -6308,6 +6340,7 @@ main.login div.contain .login_contain button.forgot {
   background-color: transparent;
   border: 0px solid red;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 main.login div.contain .signup_contain {
@@ -6382,7 +6415,8 @@ main.login div.contain .bookmark {
 .banHintmaskLayer .banPopUpBox {
   position: relative;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   left: 50%;
   background-color: #024f3f;
   border: 2px solid #10c5b1;
@@ -6408,15 +6442,23 @@ main.login div.contain .bookmark {
 
 .banHintmaskLayer .banPopContent {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #60cd90;
   color: #10c5b1;
   font-size: 16px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -6445,9 +6487,12 @@ main.login div.contain .bookmark {
 
 .banHintmaskLayer .banConfirmBlk {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   bottom: 10px;
 }
 
@@ -6461,7 +6506,9 @@ main.login div.contain .bookmark {
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
+  -webkit-transition: .3s;
   transition: .3s;
+  border-radius: 10px;
 }
 
 .banHintmaskLayer .banConfirmBlk button:hover {
@@ -6471,6 +6518,7 @@ main.login div.contain .bookmark {
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
+  border-radius: 10px;
 }
 
 .veriHintmaskLayer {
@@ -6486,7 +6534,8 @@ main.login div.contain .bookmark {
 .veriHintmaskLayer .veriPopUpBox {
   position: relative;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   left: 50%;
   background-color: #024f3f;
   border: 2px solid #10c5b1;
@@ -6512,15 +6561,23 @@ main.login div.contain .bookmark {
 
 .veriHintmaskLayer .veriPopContent {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #60cd90;
   color: #10c5b1;
   font-size: 16px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -6549,9 +6606,12 @@ main.login div.contain .bookmark {
 
 .veriHintmaskLayer .veriConfirmBlk {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   bottom: 10px;
 }
 
@@ -6565,6 +6625,7 @@ main.login div.contain .bookmark {
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
+  -webkit-transition: .3s;
   transition: .3s;
 }
 
@@ -7461,6 +7522,7 @@ main.member div.content div.contain_list button {
   border: 3px solid #60cd90;
   text-align: center;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 main.member div.content div.contain_list button:hover {
@@ -7471,6 +7533,7 @@ main.member div.content div.contain_list button:hover {
   border: 3px solid #0e3461;
   text-align: center;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 @media (max-width: 767.98px) {
@@ -8519,7 +8582,7 @@ main.member_info div.bar button._on {
 }
 
 @media (max-width: 577.98px) {
-  main.member_info div.bar .button {
+  main.member_info div.bar button {
     font-size: 14px;
   }
 }
@@ -8659,6 +8722,14 @@ main.member_info div.content div.contain_list div.edit div.edit_detail form.edit
   width: 15px;
   height: 15px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 767.98px) {
+  main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password div.visible {
+    width: 300px;
+    margin: 0 auto;
+    text-align: left;
+  }
 }
 
 main.member_info div.content div.contain_list div.edit div.edit_detail form.edit_password label {
@@ -9499,6 +9570,7 @@ main.member_info section.popShow {
   font-size: 16px;
 }
 
+<<<<<<< HEAD
 .out .date {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9506,6 +9578,16 @@ main.member_info section.popShow {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+=======
+.out .ti {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+>>>>>>> Lillian
 }
 
 .out .ti {
@@ -10417,6 +10499,7 @@ main.signup .main_contain .form_contain form .button {
   max-width: 400px;
   cursor: pointer;
   font-size: 20px;
+  border-radius: 10px;
 }
 
 main.signup .main_contain .form_contain form .button:hover {
@@ -10429,6 +10512,7 @@ main.signup .main_contain .form_contain form .button:hover {
   max-width: 400px;
   cursor: pointer;
   font-size: 20px;
+  border-radius: 10px;
 }
 
 main.signup .main_contain .form_contain form div.input_form {
@@ -10556,6 +10640,7 @@ main.signup .verify_contain div.verify .button {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+  border-radius: 10px;
 }
 
 main.signup .verify_contain div.verify .button:hover {
@@ -10566,6 +10651,7 @@ main.signup .verify_contain div.verify .button:hover {
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
+  border-radius: 10px;
 }
 
 main.signup .verify_contain div.verify .resend {
@@ -10579,6 +10665,7 @@ main.signup .verify_contain div.verify .resend {
   border-color: #51AB82;
   color: #51AB82;
   margin-top: 15px;
+  border-radius: 10px;
 }
 
 main.signup .verify_contain div.verify .resend:hover {
@@ -10589,6 +10676,7 @@ main.signup .verify_contain div.verify .resend:hover {
   background-color: #60cd90;
   border: 3px solid #0e3461;
   text-align: center;
+  border-radius: 10px;
 }
 
 main.signup .verify_contain div.verify input {

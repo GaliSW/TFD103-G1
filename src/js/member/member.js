@@ -200,7 +200,7 @@ function displayBuy() {
   countDeal();
 }
 
-window,onload = displayBuy();
+
 
 
 
