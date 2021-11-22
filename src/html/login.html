@@ -53,7 +53,7 @@
                     <span></span>
                     <span></span>
 
-                    <ul id="menu">
+                    <ul id="headerMenu">
                         <a href="../html/index.html"><img src="../image/index/logo.png"></a>
                         <a href="../html/Intro.html">
                             <li><img src="../image/index/pic.png">消息/介紹</li>
@@ -64,7 +64,10 @@
                         <a href="../html/trade.html">
                             <li><img src="../image/index/role01.png">角色交易</li>
                         </a>
-                        <button class="btn">登出</button>
+
+                        <a href="#">
+                            <div class="hamLog" id="LogOutPhone" class="LogOut" onclick="LogOut()">登出</div>
+                        </a>
                     </ul>
                 </div>
             </nav>
@@ -73,6 +76,7 @@
             <div class="icon">
                 <botton type="button" class="button disappear" id="appear1">
                     <a href="../html/deposit.html"><i class="fas fa-coins fa-2x"></i></a>
+                    <p id="headerResult"></p>
                     <div class="show">儲值</div>
                 </botton>
                 <botton type="button" class="button disappear" id="appear2">
@@ -80,10 +84,12 @@
                     <div class="show">收藏</div>
                 </botton>
                 <botton type="button" class="button" onclick="memberCheck()">
-                    <a href="#"><i class="fas fa-user-circle fa-2x"></i></a>
+                    <a href="#"><i class="fas fa-user-circle fa-2x"></i>
+                        <h5 id="headerCountResult" class="countResul _off"></h5>
+                    </a>
                     <div class="show">會員</div>
                 </botton>
-                <botton type="button" class="button" id="LogOut" onclick="LogOut()">
+                <botton type="button" id="LogOut" class="LogOut" onclick="LogOut()">
                     <a href="#">登出</a>
                 </botton>
             </div>
@@ -101,8 +107,10 @@
                         <h1>登入帳號</h1>
                         <input type="text" name="userId" id='userId' placeholder="*請輸入帳號">
                         <br>
-                        <input type="text" name="password" id='password' placeholder="*請輸入密碼">
+                        <input type="password" name="password" id='password' placeholder="*請輸入密碼">
                         <br>
+                        <input type="checkbox" id="visible" onclick="visiblePwd()">
+                        <label for="visible" class="visible">顯示密碼</label>
                         <span id="login_error" class="error" :class="{'bookmark': loginError }">帳號密碼有誤</span>
 
                         <button type="button" class="btn_login" @click=loginCheck($event)>登入</button>
@@ -120,10 +128,10 @@
                 <div class="forget_contain" :class="{'bookmark': forget }">
                     <form action="#" method="post">
                         <h1>忘記密碼?</h1>
-                        <input type="text" placeholder="請輸入註冊信箱">
+                        <input type="text" id="email" placeholder="請輸入註冊信箱">
                         <br>
                         <span class="forget_error error" :class="{'bookmark': forgetError }">*此信箱並未註冊</span>
-
+                        <span class="forget_error error" :class="{'bookmark': sendOk }">已重寄密碼</span>
                         <button class="btn_confirm" type="submit" @click=forgetCheck($event)>確認</button>
                     </form>
                     <button class="backToLogin" @click=showLogin()>
@@ -163,12 +171,58 @@
         </div>
 
     </main>
+
+    <!-- 停權彈窗 -->
+    <div id="banBlk" class="banBlk none">
+        <section class="banHintmaskLayer">
+            <div class="banPopUpBox">
+                <div onclick="popCloseX(this)" class="banCloseBtn">
+                    x
+                </div>
+                <div class="banPopContent">
+                    <p>
+                        <i class="far fa-user-circle"></i>&nbsp;您的帳號已被停權
+                    </p>
+                </div>
+                <div class="banConfirmBlk">
+                    <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                    <!-- <button class="bonusConfirmBtn" onclick="ban()">登入或註冊～</button> -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 驗證彈窗 -->
+    <div id="veriBlk" class="veriBlk none">
+        <section class="veriHintmaskLayer">
+            <div class="veriPopUpBox">
+                <div onclick="popCloseX(this)" class="veriCloseBtn">
+                    x
+                </div>
+                <div class="veriPopContent">
+                    <p>
+                        <i class="far fa-user-circle"></i>&nbsp;您的信箱尚未驗證
+                    </p>
+                </div>
+                <div class="veriConfirmBlk">
+                    <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                    <button class="bonusConfirmBtn" onclick="toVeri()">前往驗證</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
     @@include('./footer.html')
 
 
     <script src="../js/member/login.js"></script>
     <script src="../js/header/header.js"></script>
+    <script src="../js/member/loginPop.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
+    <script>
+        window.onload = function () {
+            status();
+        }
+    </script>
 </body>
 
 </html>
