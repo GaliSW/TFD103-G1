@@ -607,12 +607,8 @@
 
 
 }
-<<<<<<< HEAD
-.buyHintmaskLayer {
-=======
 // 沒有點數談窗
 .noPointHintmaskLayer {
->>>>>>> MARK
     position: fixed;
     top: 0;
     left: 0;
@@ -621,11 +617,7 @@
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 999;
 
-<<<<<<< HEAD
-    .buyPopUpBox {
-=======
     .noPointPopUpBox {
->>>>>>> MARK
         position: relative;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -638,11 +630,7 @@
         z-index: 999;
     }
 
-<<<<<<< HEAD
-    .buyCloseBtn {
-=======
     .noPointCloseBtn {
->>>>>>> MARK
         position: absolute;
         right: 0;
         background-color: rgba(16, 197, 177, 1);
@@ -656,11 +644,7 @@
         cursor: pointer;
     }
 
-<<<<<<< HEAD
-    .buyPopContent {
-=======
     .noPointPopContent {
->>>>>>> MARK
         position: relative;
         display: flex;
         flex-direction: column;
@@ -689,11 +673,7 @@
         }
     }
 
-<<<<<<< HEAD
-    .buyConfirmBlk {
-=======
     .noPointConfirmBlk {
->>>>>>> MARK
         position: absolute;
         display: flex;
         // @include border();
@@ -714,9 +694,5 @@
             }
         }
     }
-<<<<<<< HEAD
-}
-=======
 }
 
->>>>>>> MARK

@@ -433,10 +433,6 @@
 
 #header #headerMenu li:hover img {
   animation: move 1s infinite;
-<<<<<<< HEAD
->>>>>>> dev
-=======
->>>>>>> MARK
 }
 
 #header #headerMenu li img {
@@ -701,18 +697,15 @@
   color: #60ce90;
   background-color: white;
   border-radius: 24%;
-  -webkit-box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
-          box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
   overflow: hidden;
   font-size: 16px;
-  -webkit-transition: .3s linear;
   transition: .3s linear;
   position: relative;
 }
 
 .footer .iconLink a:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
   border-radius: 50%;
   color: #1d2b76;
 }
@@ -736,13 +729,6 @@
   background-position: 0% 0%;
 }
 
-<<<<<<< HEAD
-=======
-.footer .iconLink .fa-facebook-square::before {
-  background: linear-gradient(135deg, #264dfa 30%, #0a3d62 50%);
-}
-
->>>>>>> MARK
 .footer .notice {
   justify-content: center;
   flex-direction: column;
@@ -5086,12 +5072,7 @@ body {
 .index .unlock {
   border: 2px solid black;
   margin: 30px auto;
-<<<<<<< HEAD
-  -webkit-box-shadow: #7adaa2 0 0 70px 20px;
-          box-shadow: #7adaa2 0 0 70px 20px;
-=======
   box-shadow: #7adaa2 0 0 70px 20px;
->>>>>>> MARK
   width: 500px;
   height: 450px;
   display: table;
@@ -5851,8 +5832,7 @@ main.login div.contain .bookmark {
 .banHintmaskLayer .banPopUpBox {
   position: relative;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   left: 50%;
   background-color: #024f3f;
   border: 2px solid #10c5b1;
@@ -5878,23 +5858,15 @@ main.login div.contain .bookmark {
 
 .banHintmaskLayer .banPopContent {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   color: #60cd90;
   color: #10c5b1;
   font-size: 16px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -5923,12 +5895,9 @@ main.login div.contain .bookmark {
 
 .banHintmaskLayer .banConfirmBlk {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   bottom: 10px;
 }
 
@@ -5942,7 +5911,6 @@ main.login div.contain .bookmark {
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
-  -webkit-transition: .3s;
   transition: .3s;
   border-radius: 10px;
 }
@@ -5970,8 +5938,7 @@ main.login div.contain .bookmark {
 .veriHintmaskLayer .veriPopUpBox {
   position: relative;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   left: 50%;
   background-color: #024f3f;
   border: 2px solid #10c5b1;
@@ -5997,23 +5964,15 @@ main.login div.contain .bookmark {
 
 .veriHintmaskLayer .veriPopContent {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   color: #60cd90;
   color: #10c5b1;
   font-size: 16px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -6042,12 +6001,9 @@ main.login div.contain .bookmark {
 
 .veriHintmaskLayer .veriConfirmBlk {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   bottom: 10px;
 }
 
@@ -6061,7 +6017,6 @@ main.login div.contain .bookmark {
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
-  -webkit-transition: .3s;
   transition: .3s;
 }
 
@@ -8757,26 +8712,9 @@ main.member_info section.popShow {
   font-size: 16px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.out .ti {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 50px 0;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-=======
 .out .date {
   display: flex;
   justify-content: center;
->>>>>>> dev
-=======
-.out .date {
-  display: flex;
-  justify-content: center;
->>>>>>> MARK
 }
 
 .out .ti {
@@ -9461,11 +9399,7 @@ main.member_info section.popShow {
   display: block;
 }
 
-<<<<<<< HEAD
-.buyHintmaskLayer {
-=======
 .noPointHintmaskLayer {
->>>>>>> MARK
   position: fixed;
   top: 0;
   left: 0;
@@ -9475,11 +9409,7 @@ main.member_info section.popShow {
   z-index: 999;
 }
 
-<<<<<<< HEAD
-.buyHintmaskLayer .buyPopUpBox {
-=======
 .noPointHintmaskLayer .noPointPopUpBox {
->>>>>>> MARK
   position: relative;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -9492,11 +9422,7 @@ main.member_info section.popShow {
   z-index: 999;
 }
 
-<<<<<<< HEAD
-.buyHintmaskLayer .buyCloseBtn {
-=======
 .noPointHintmaskLayer .noPointCloseBtn {
->>>>>>> MARK
   position: absolute;
   right: 0;
   background-color: #10c5b1;
@@ -9510,11 +9436,7 @@ main.member_info section.popShow {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-.buyHintmaskLayer .buyPopContent {
-=======
 .noPointHintmaskLayer .noPointPopContent {
->>>>>>> MARK
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9528,50 +9450,30 @@ main.member_info section.popShow {
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-<<<<<<< HEAD
-  .buyHintmaskLayer .buyPopContent {
-=======
   .noPointHintmaskLayer .noPointPopContent {
->>>>>>> MARK
     font-size: 16px;
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
-<<<<<<< HEAD
-  .buyHintmaskLayer .buyPopContent {
-=======
   .noPointHintmaskLayer .noPointPopContent {
->>>>>>> MARK
     font-size: 14px;
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
-<<<<<<< HEAD
-  .buyHintmaskLayer .buyPopContent {
-=======
   .noPointHintmaskLayer .noPointPopContent {
->>>>>>> MARK
     font-size: 12px;
   }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
-<<<<<<< HEAD
-  .buyHintmaskLayer .buyPopContent {
-=======
   .noPointHintmaskLayer .noPointPopContent {
->>>>>>> MARK
     font-size: 12px;
   }
 }
 
-<<<<<<< HEAD
-.buyHintmaskLayer .buyConfirmBlk {
-=======
 .noPointHintmaskLayer .noPointConfirmBlk {
->>>>>>> MARK
   position: absolute;
   display: flex;
   left: 50%;
@@ -9579,11 +9481,7 @@ main.member_info section.popShow {
   bottom: 10px;
 }
 
-<<<<<<< HEAD
-.buyHintmaskLayer .buyConfirmBlk button {
-=======
 .noPointHintmaskLayer .noPointConfirmBlk button {
->>>>>>> MARK
   margin: 0 10px;
   color: #60cd90;
   width: 100px;
@@ -9596,11 +9494,7 @@ main.member_info section.popShow {
   transition: .3s;
 }
 
-<<<<<<< HEAD
-.buyHintmaskLayer .buyConfirmBlk button:hover {
-=======
 .noPointHintmaskLayer .noPointConfirmBlk button:hover {
->>>>>>> MARK
   color: #0e3461;
   width: 100px;
   padding: 5px;
