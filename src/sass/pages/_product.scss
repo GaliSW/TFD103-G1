@@ -4,7 +4,7 @@
 
 
 .allBlock {
-    background-image: url("../dist/images/trade/background.png");
+    background-image: url("../src/image/trade/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 0px 0px;
@@ -112,10 +112,11 @@
                 .collectForm {
                     margin-left: 70px;
 
-                   
+
 
                     .collectBtn {
                         @include btn_blur (70px, 5px);
+                        border-radius: 10px;
 
                         &:hover {
                             @include btn_on (70px, 5px)
@@ -128,6 +129,7 @@
 
                     .changeBtn {
                         @include btn_blur (70px, 5px);
+                        border-radius: 10px;
 
                         &:hover {
                             @include btn_on (70px, 5px)
@@ -145,6 +147,7 @@
                 .buyForm {
                     .buyBtn {
                         @include btn_blur (170px, 5px);
+                        border-radius: 10px;
 
                         &:hover {
                             @include btn_on (170px, 5px)
@@ -405,6 +408,10 @@
                 color: #fff;
             }
 
+            .myRoleImg {
+                width: 230px;
+            }
+
             .myRoleNameBlock {
                 text-align: center;
                 margin-top: 20px;
@@ -432,6 +439,10 @@
                 p {
                     color: #fff;
                 }
+            }
+
+            .yourRoleImg {
+                width: 230px;
             }
 
             .yourRoleNameBlock {
@@ -491,7 +502,7 @@
                 background-color: rgba(14, 52, 97, 1);
                 width: 100px;
                 height: 35px;
-                border-radius: 3px;
+                border-radius: 10px;
                 padding: 0;
                 margin-right: 30px;
 
@@ -510,7 +521,7 @@
                 background-color: rgba(14, 52, 97, 1);
                 width: 100px;
                 height: 35px;
-                border-radius: 3px;
+                border-radius: 10px;
                 padding: 0;
 
                 &:hover {
@@ -599,7 +610,8 @@
 
 
 }
-.buyHintmaskLayer {
+// 沒有點數談窗
+.noPointHintmaskLayer {
     position: fixed;
     top: 0;
     left: 0;
@@ -608,7 +620,7 @@
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 999;
 
-    .buyPopUpBox {
+    .noPointPopUpBox {
         position: relative;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -621,7 +633,7 @@
         z-index: 999;
     }
 
-    .buyCloseBtn {
+    .noPointCloseBtn {
         position: absolute;
         right: 0;
         background-color: rgba(16, 197, 177, 1);
@@ -635,7 +647,7 @@
         cursor: pointer;
     }
 
-    .buyPopContent {
+    .noPointPopContent {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -664,7 +676,7 @@
         }
     }
 
-    .buyConfirmBlk {
+    .noPointConfirmBlk {
         position: absolute;
         display: flex;
         // @include border();
@@ -687,5 +699,91 @@
     }
 }
 
+// 自我交易彈窗
+.selfHintmaskLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+
+    .selfPopUpBox {
+        position: relative;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        background-color: rgba(2, 79, 63, 1);
+        border: 2px solid rgba(16, 197, 177, 1);
+        width: 300px;
+        height: 200px;
+        border-radius: 5px;
+        z-index: 999;
+    }
+
+    .selfCloseBtn {
+        position: absolute;
+        right: 0;
+        background-color: rgba(16, 197, 177, 1);
+        border-radius: 2px;
+        font-size: 28px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+    }
+
+    .selfPopContent {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        color: rgba(96, 205, 144, 1);
+        color: $tiffiny_green;
+        font-size: $fontSize;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include desktop_small {
+            font-size: $fontSize;
+        }
+
+        @include pad {
+            font-size: $fontSizeSmall;
+        }
+
+        @include pad_small {
+            font-size: $fontSizeMin;
+        }
+
+        @include phone {
+            font-size: $fontSizeMin;
+        }
+    }
+
+    .selfConfirmBlk {
+        position: absolute;
+        display: flex;
+        // @include border();
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
 
 
+        button {
+            margin: 0 10px;
+            @include btn_blur(100px, 5px);
+            @include border_r(5);
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                @include btn_on(100px, 5px);
+            }
+        }
+    }
+}

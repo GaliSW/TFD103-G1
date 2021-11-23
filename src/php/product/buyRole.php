@@ -1,5 +1,5 @@
 <?php
-$FK_PRODUCT_ID = $_POST["FK_PRODUCT_ID"];
+$FK_PRODUCT_ID = $_POST["PRODUCT_ID"];
 
 //買家
 include "../Manager.php";

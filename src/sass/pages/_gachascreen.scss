@@ -9,7 +9,7 @@
         @include center;
     }
 
-    .blackScreen{
+    .blackScreen {
         background-color: rgba(0, 0, 0, 0.5);
         // z-index: -1;
         width: 100vw;
@@ -18,13 +18,7 @@
     }
 
     // web
-    .op1{
-        display: block;
-        @include phone{
-            display: none;
-        }
-    }
-    .screen{
+    .screen {
         // @include border;
         max-width: 1400px;
         width: 100vw;
@@ -82,15 +76,30 @@
             opacity: 0;
         }
     }
+}
+
+.gachascreenPhone {
+    position: fixed;
+    z-index: 999;
+
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        @include center;
+    }
+
+    .blackScreen {
+        background-color: rgba(0, 0, 0, 0.5);
+        // z-index: -1;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+    }
 
     //phone
-    .op{
-        display: none;
-        @include phone{
-            display: block;
-        }
-    }
-    .screenPhone{
+
+    .screenPhone {
         // @include border;
         max-width: 370px;
         width: 100vw;
@@ -98,13 +107,15 @@
         position: relative;
         overflow-x: hidden;
         overflow-y: hidden;
-        .ballPhone{
+
+        .ballPhone {
             // @include border;
             position: absolute;
             width: 50px;
             height: 50px;
         }
-        .pokemonTopPhone{
+
+        .pokemonTopPhone {
             // @include border;
             width: 120px;
             transform: rotate(270deg);
@@ -115,7 +126,8 @@
             z-index: 1;
             opacity: 0;
         }
-        .pokemonBottomPhone{
+
+        .pokemonBottomPhone {
             // @include border;
             width: 120px;
             transform: rotate(270deg);
@@ -125,7 +137,8 @@
             left: 38%;
             opacity: 0;
         }
-        .supRolePhone{
+
+        .supRolePhone {
             // @include border;
             // @include center;
             width: 200px;
@@ -135,7 +148,8 @@
             opacity: 0;
             z-index: 1;
         }
-        .surprisePhone{
+
+        .surprisePhone {
             // @include border;
             width: 450px;
             position: absolute;

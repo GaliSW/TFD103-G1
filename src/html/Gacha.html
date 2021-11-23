@@ -19,35 +19,38 @@
 <body>
     <!-- 扭蛋動畫 -->
     <div class="gachascreen none" id="gachaScreen">
-        <div class="blackScreen"></div>
-        <!-- 桌機版 -->
-        <section class="screen op1">
-            <div class="ball">
-                <img src="../image/gachaScreen/pokemon.png">
-            </div>
-            <div class="pokemonTop">
-                <img src="../image/gachaScreen/Pokemontop.png">
-            </div>
-            <div class="pokemonBottom">
-                <img src="../image/gachaScreen/Pokemonbottom.png">
-            </div>
-            <div class="supRole">
-                <img src="" id="gachaRoleImg">
-            </div>
-            <div class="surprise">
-                <img src="../image/gachaScreen/surprise.png">
-            </div>
-        </section>
+        <div class="blackScreen">
+            <!-- 桌機版 -->
+            <section class="screen">
+                <div class="ball">
+                    <img src="" id="gachaColorImg">
+                </div>
+                <div class="pokemonTop">
+                    <img src="" id="gachaTopImg">
+                </div>
+                <div class="pokemonBottom">
+                    <img src="" id="gachaBottomImg">
+                </div>
+                <div class="supRole">
+                    <img src="" id="gachaRoleImg">
+                </div>
+                <div class="surprise">
+                    <img src="../image/gachaScreen/surprise.png">
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="gachascreenPhone" id="gachaScreenPhone">
         <!-- 手機版 -->
-        <section class="screenPhone op">
+        <section class="screenPhone none">
             <div class="ballPhone">
-                <img src="../image/gachaScreen/pokemon.png">
+                <img src="" id="gachaColorImgPhone">
             </div>
             <div class="pokemonTopPhone">
-                <img src="../image/gachaScreen/Pokemontop.png">
+                <img src="" id="gachaTopImgPhone">
             </div>
             <div class="pokemonBottomPhone">
-                <img src="../image/gachaScreen/Pokemonbottom.png">
+                <img src="" id="gachaBottomImgPhone">
             </div>
             <div class="supRolePhone">
                 <img src="" id="gachaRoleImgPhone">
@@ -70,27 +73,57 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="slider-image">
-                    <img src="../image/gacha/role1.jpg" alt="slide 1">
+                    <img src="../image/gacha/role3.png" alt="slide 3">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slider-image">
-                    <img src="../image/gacha/role2.jpg" alt="slide 2">
+                    <img src="../image/gacha/role4.png" alt="slide 4">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slider-image">
-                    <img src="../image/gacha/role3.jpg" alt="slide 3">
+                    <img src="../image/gacha/role5.png" alt="slide 5">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slider-image">
-                    <img src="../image/gacha/role4.jpg" alt="slide 4">
+                    <img src="../image/gacha/role7.png" alt="slide 5">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slider-image">
-                    <img src="../image/gacha/role5.jpg" alt="slide 5">
+                    <img src="../image/gacha/role8.png" alt="slide 5">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image">
+                    <img src="../image/gacha/role10.png" alt="slide 5">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image">
+                    <img src="../image/gacha/role11.png" alt="slide 5">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image">
+                    <img src="../image/gacha/role12.png" alt="slide 5">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image">
+                    <img src="../image/gacha/role13.png" alt="slide 5">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image">
+                    <img src="../image/gacha/role14.png" alt="slide 5">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider-image">
+                    <img src="../image/gacha/role15.png" alt="slide 5">
                 </div>
             </div>
             <!-- Add Pagination -->
@@ -145,11 +178,11 @@
                     </template>
                     <div class="award"><span id="awardBall"></span></div>
                 </div>
-                <img src="../image/gachaGame/Pokemon.png" id="ball1" class="gachaImgSrc">
-                <img src="../image/gachaGame/Pokemon.png" id="ball2" class="gachaImgSrc">
-                <img src="../image/gachaGame/Pokemon.png" id="ball3" class="gachaImgSrc">
-                <img src="../image/gachaGame/Pokemon.png" id="ball4" class="gachaImgSrc">
-                <img src="../image/gachaGame/Pokemon.png" id="ball5" class="gachaImgSrc">
+                <img src="../image/gachaGame/purple.png" id="ball1" class="gachaImgSrc">
+                <img src="../image/gachaGame/green.png" id="ball2" class="gachaImgSrc">
+                <img src="../image/gachaGame/yellow.png" id="ball3" class="gachaImgSrc">
+                <img src="../image/gachaGame/red.png" id="ball4" class="gachaImgSrc">
+                <img src="../image/gachaGame/blue.png" id="ball5" class="gachaImgSrc">
             </div>
             <div class="GaChaInfo col-6">
                 <h1>扭蛋介紹</h1>
@@ -221,7 +254,7 @@
                     </p>
                 </div>
                 <div class="bonusConfirmBlk">
-                    <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                    <button class="bonusConfirmBtn" onclick="location.href='./Gacha.html'">我知道了</button>
                     <button class="bonusConfirmBtn" onclick="toMember()">點我查看頭像</button>
                 </div>
             </div>

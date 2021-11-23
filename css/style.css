@@ -575,6 +575,50 @@
   }
 }
 
+#header #headerMenu #LogOutPhone {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  #header #headerMenu #LogOutPhone {
+    display: block;
+  }
+}
+
+#header #headerMenu #LogOutPhone a {
+  margin: 0px;
+  color: #a2d6d2;
+  font-size: 14px;
+}
+
+#header #headerMenu #LogOutPhone a:hover {
+  color: #9dfdc8;
+}
+
+#header #headerMenu .LogInPhone {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  #header #headerMenu .LogInPhone {
+    display: block;
+  }
+}
+
+#header #headerMenu .LogInPhone a {
+  margin: 0px;
+  color: #a2d6d2;
+  font-size: 14px;
+}
+
+#header #headerMenu .LogInPhone a:hover {
+  color: #9dfdc8;
+}
+
+#header #headerMenu .logbt {
+  display: none;
+}
+
 #header .icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -583,7 +627,13 @@
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
-  margin: 0 28px;
+  margin: 8px 28px 0;
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  #header .icon {
+    margin: 0 28px;
+  }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
@@ -596,6 +646,22 @@
   #header .icon {
     margin: 0 0;
   }
+}
+
+#header .icon .bt {
+  margin-right: -10px;
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  #header .icon .bt {
+    margin-right: 0px;
+  }
+}
+
+#header .icon .bt p {
+  position: relative;
+  bottom: 2px;
 }
 
 #header .icon .button {
@@ -704,6 +770,26 @@
   display: none;
 }
 
+@media (max-width: 480px) {
+  #header .icon #LogIn {
+    display: none;
+  }
+}
+
+#header .icon #LogIn a {
+  margin: 0px;
+  color: #a2d6d2;
+  font-size: 14px;
+}
+
+#header .icon #LogIn a:hover {
+  color: #9dfdc8;
+}
+
+#header .icon .logbt {
+  display: none;
+}
+
 .footer {
   background: url(../src/image/index/strbg.jpg);
   background-repeat: no-repeat;
@@ -725,10 +811,10 @@
 
 .footer .iconLink a {
   margin: 5px 20px;
-  padding: 6px 8px;
-  width: 45px;
-  height: 45px;
-  color: yellowgreen;
+  padding: 4px 6px;
+  width: 40px;
+  height: 40px;
+  color: #60ce90;
   background-color: white;
   border-radius: 24%;
   -webkit-box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
@@ -744,6 +830,7 @@
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   border-radius: 50%;
+  color: #1d2b76;
 }
 
 .footer .iconLink a i::before {
@@ -764,10 +851,6 @@
 
 .footer .iconLink a:hover i::before {
   background-position: 0% 0%;
-}
-
-.footer .iconLink .fa-facebook-square::before {
-  background: linear-gradient(135deg, #264dfa 30%, #0a3d62 50%);
 }
 
 .footer .notice {
@@ -1850,9 +1933,9 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 }
 
 .entry .entrybg .contentBox .frontSide {
-  width: 250px;
+  width: 210px;
   height: 160px;
-  margin-left: 1000px;
+  margin-left: 420px;
   margin-top: -110px;
 }
 
@@ -1876,9 +1959,9 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
 }
 
 .entry .entrybg .contentBox .backSide {
-  width: 250px;
+  width: 210px;
   height: 160px;
-  margin-left: 1000px;
+  margin-left: 800px;
 }
 
 .entry .entrybg .contentBox .backSide a {
@@ -1890,14 +1973,14 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
   font-size: 48px;
   font-weight: 400;
   color: #fff;
-  background-color: #60cd90;
+  background-color: #0e3461;
   padding: 12% 22%;
   border-radius: 20px;
   text-align: center;
 }
 
 .entry .entrybg .contentBox .backSide a h1:hover {
-  background-color: #0e3461;
+  background-color: #60cd90;
 }
 
 .entry .entrybg .contentBox .word {
@@ -2303,7 +2386,7 @@ body {
   width: 50px;
   height: 50px;
   display: block;
-  background: url(../src/image/gachaGame/Pokemon.png) no-repeat;
+  background: url(../src/image/gachaGame/purple.png) no-repeat;
   background-size: contain;
   animation: drop 1s ease-out forwards;
   -webkit-animation: drop 3s ease-out forwards;
@@ -2317,7 +2400,7 @@ body {
   width: 50px;
   height: 50px;
   display: block;
-  background: url(../src/image/gachaGame/Pokemon.png) no-repeat;
+  background: url(../src/image/gachaGame/green.png) no-repeat;
   background-size: contain;
   animation: drop 3s ease-out forwards;
   -webkit-animation: drop 1s ease-out forwards;
@@ -2331,7 +2414,7 @@ body {
   width: 50px;
   height: 50px;
   display: block;
-  background: url(../src/image/gachaGame/Pokemon.png) no-repeat;
+  background: url(../src/image/gachaGame/yellow.png) no-repeat;
   background-size: contain;
   animation: drop 3s ease-out forwards;
   -webkit-animation: drop 1s ease-out forwards;
@@ -2347,7 +2430,23 @@ body {
   width: 50px;
   height: 50px;
   display: block;
-  background: url(../src/image/gachaGame/Pokemon.png) no-repeat;
+  background: url(../src/image/gachaGame/red.png) no-repeat;
+  background-size: contain;
+  animation: drop 3s ease-out forwards;
+  -webkit-animation: drop 1s ease-out forwards;
+}
+
+.dropBall5 {
+  content: "";
+  position: absolute;
+  left: 45%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  top: 77%;
+  width: 50px;
+  height: 50px;
+  display: block;
+  background: url(../src/image/gachaGame/blue.png) no-repeat;
   background-size: contain;
   animation: drop 3s ease-out forwards;
   -webkit-animation: drop 1s ease-out forwards;
@@ -9535,7 +9634,7 @@ main.member_info section.popShow {
 }
 
 .allBlock {
-  background-image: url("../dist/images/trade/background.png");
+  background-image: url("../src/image/trade/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 0px 0px;
@@ -9668,6 +9767,7 @@ main.member_info section.popShow {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+  border-radius: 10px;
 }
 
 .allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn:hover {
@@ -9690,6 +9790,7 @@ main.member_info section.popShow {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+  border-radius: 10px;
   margin-left: 25px;
 }
 
@@ -9713,6 +9814,7 @@ main.member_info section.popShow {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+  border-radius: 10px;
   margin-left: 0px;
   font-size: 24px;
 }
@@ -9967,6 +10069,10 @@ main.member_info section.popShow {
   color: #fff;
 }
 
+.test .popUpBox .myRoleBlock .myRoleImg {
+  width: 230px;
+}
+
 .test .popUpBox .myRoleBlock .myRoleNameBlock {
   text-align: center;
   margin-top: 20px;
@@ -9990,6 +10096,10 @@ main.member_info section.popShow {
 
 .test .popUpBox .yourRoleBlock .yourRoleP p {
   color: #fff;
+}
+
+.test .popUpBox .yourRoleBlock .yourRoleImg {
+  width: 230px;
 }
 
 .test .popUpBox .yourRoleBlock .yourRoleNameBlock {
@@ -10046,7 +10156,7 @@ main.member_info section.popShow {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin-right: 30px;
 }
@@ -10069,7 +10179,7 @@ main.member_info section.popShow {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
 }
 
@@ -10143,7 +10253,7 @@ main.member_info section.popShow {
   display: block;
 }
 
-.buyHintmaskLayer {
+.noPointHintmaskLayer {
   position: fixed;
   top: 0;
   left: 0;
@@ -10153,7 +10263,7 @@ main.member_info section.popShow {
   z-index: 999;
 }
 
-.buyHintmaskLayer .buyPopUpBox {
+.noPointHintmaskLayer .noPointPopUpBox {
   position: relative;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -10167,7 +10277,7 @@ main.member_info section.popShow {
   z-index: 999;
 }
 
-.buyHintmaskLayer .buyCloseBtn {
+.noPointHintmaskLayer .noPointCloseBtn {
   position: absolute;
   right: 0;
   background-color: #10c5b1;
@@ -10181,7 +10291,7 @@ main.member_info section.popShow {
   cursor: pointer;
 }
 
-.buyHintmaskLayer .buyPopContent {
+.noPointHintmaskLayer .noPointPopContent {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10203,30 +10313,30 @@ main.member_info section.popShow {
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .buyHintmaskLayer .buyPopContent {
+  .noPointHintmaskLayer .noPointPopContent {
     font-size: 16px;
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
-  .buyHintmaskLayer .buyPopContent {
+  .noPointHintmaskLayer .noPointPopContent {
     font-size: 14px;
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
-  .buyHintmaskLayer .buyPopContent {
+  .noPointHintmaskLayer .noPointPopContent {
     font-size: 12px;
   }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
-  .buyHintmaskLayer .buyPopContent {
+  .noPointHintmaskLayer .noPointPopContent {
     font-size: 12px;
   }
 }
 
-.buyHintmaskLayer .buyConfirmBlk {
+.noPointHintmaskLayer .noPointConfirmBlk {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10237,7 +10347,7 @@ main.member_info section.popShow {
   bottom: 10px;
 }
 
-.buyHintmaskLayer .buyConfirmBlk button {
+.noPointHintmaskLayer .noPointConfirmBlk button {
   margin: 0 10px;
   color: #60cd90;
   width: 100px;
@@ -10251,7 +10361,124 @@ main.member_info section.popShow {
   transition: .3s;
 }
 
-.buyHintmaskLayer .buyConfirmBlk button:hover {
+.noPointHintmaskLayer .noPointConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
+.selfHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.selfHintmaskLayer .selfPopUpBox {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.selfHintmaskLayer .selfCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.selfHintmaskLayer .selfPopContent {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .selfHintmaskLayer .selfPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .selfHintmaskLayer .selfPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .selfHintmaskLayer .selfPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .selfHintmaskLayer .selfPopContent {
+    font-size: 12px;
+  }
+}
+
+.selfHintmaskLayer .selfConfirmBlk {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.selfHintmaskLayer .selfConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.selfHintmaskLayer .selfConfirmBlk button:hover {
   color: #0e3461;
   width: 100px;
   padding: 5px;
@@ -10655,7 +10882,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .allBlock1 .roleRanksection .rankBloCk {
-  border: 1px solid orange;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10687,7 +10913,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .allBlock1 .roleRanksection .rankBloCk .roleBloCk1 .imgBlock {
-  border: 1px solid red;
   width: 250px;
   margin: 0 auto;
 }
@@ -10732,7 +10957,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .allBlock1 .btnBlockmy {
-  border: 1px solid red;
   text-align: center;
   margin: 100px 0px;
 }
@@ -10745,6 +10969,7 @@ main.signup .verify_contain div.verify .falseVerify {
   border: 3px solid #60cd90;
   text-align: center;
   margin-right: 100px;
+  border-radius: 10px;
 }
 
 @media (max-width: 630px) {
@@ -10766,6 +10991,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+  border-radius: 10px;
 }
 
 @media (max-width: 630px) {
@@ -10856,6 +11082,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+  border-radius: 10px;
 }
 
 .allBlock1 .searchFlex .searchFlexRight .openBtn:hover {
@@ -10876,6 +11103,7 @@ main.signup .verify_contain div.verify .falseVerify {
   display: block;
   position: absolute;
   top: 54px;
+  z-index: 3;
   background-color: #9bcfb7;
   -webkit-transition: 1s;
   transition: 1s;
@@ -10959,7 +11187,6 @@ main.signup .verify_contain div.verify .falseVerify {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid red;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -11023,13 +11250,11 @@ main.signup .verify_contain div.verify .falseVerify {
 
 @media (min-width: 375px) and (max-width: 577px) {
   .roleUpPop .popUpBox .input .chooseRoleBlockk h3 {
-    border: 1px solid red;
     margin-left: -35px;
   }
 }
 
 .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock {
-  border: 1px solid orchid;
   text-align: left;
   width: 250px;
   margin: 0 auto;
@@ -11066,7 +11291,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock img {
-  border: 1px solid red;
   width: 100px;
 }
 
@@ -11083,7 +11307,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .roleUpPop .popUpBox .input .showImgBlock {
-  border: 1px solid blue;
   margin: 20px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -11128,7 +11351,6 @@ main.signup .verify_contain div.verify .falseVerify {
 
 .roleUpPop .popUpBox .input .informationBlock .openChange {
   text-align: left;
-  border: 1px solid yellowgreen;
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
@@ -11151,7 +11373,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin-right: 30px;
 }
@@ -11201,7 +11423,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .roleUpPop .popContent3 h1 {
-  border: 1px solid red;
   margin-top: -130px;
   padding-bottom: 20px;
   border-bottom: 1px solid #10c5b1;
@@ -11212,7 +11433,6 @@ main.signup .verify_contain div.verify .falseVerify {
   margin: 0;
   padding: 0;
   list-style: none;
-  border: 1px solid blue;
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex.first {
@@ -11241,7 +11461,6 @@ main.signup .verify_contain div.verify .falseVerify {
   width: 100px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  border: 1px solid gold;
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .leftBlock .imgBlockRole {
@@ -11253,7 +11472,6 @@ main.signup .verify_contain div.verify .falseVerify {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  border: 1px solid green;
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo.firstTitle p {
@@ -11268,13 +11486,11 @@ main.signup .verify_contain div.verify .falseVerify {
       -ms-flex-pack: center;
           justify-content: center;
   color: #fff;
-  border: 1px solid red;
 }
 
 @media (min-width: 375px) and (max-width: 1017px) {
   .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo {
     display: block;
-    border: 1px solid red;
   }
   .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo p {
     margin: 0 auto;
@@ -11294,7 +11510,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock {
-  border: 1px solid purple;
   width: 246px;
 }
 
@@ -11314,7 +11529,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin: 0 auto;
 }
@@ -11337,7 +11552,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin: 0 auto;
 }
@@ -11360,7 +11575,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin: 0 auto;
 }
@@ -11406,11 +11621,9 @@ main.signup .verify_contain div.verify .falseVerify {
   width: 100px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  border: 2px solid yellow;
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .leftBlock .imgBlockRole {
-  border: 2px solid red;
   font-size: 0;
   margin-left: 20px;
 }
@@ -11419,7 +11632,6 @@ main.signup .verify_contain div.verify .falseVerify {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  border: 2px solid green;
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo.firstTitle p {
@@ -11439,7 +11651,6 @@ main.signup .verify_contain div.verify .falseVerify {
 @media (min-width: 375px) and (max-width: 1017px) {
   .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo {
     display: block;
-    border: 1px solid red;
   }
   .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo p {
     margin: 0 auto;
@@ -11459,7 +11670,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .rightBlock {
-  border: 2px solid black;
   width: 250px;
 }
 
@@ -11479,7 +11689,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin: 0 auto;
 }
@@ -11502,7 +11712,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin: 0 auto;
 }
@@ -11525,7 +11735,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin: 0 auto;
 }
@@ -11540,7 +11750,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .ymainy {
-  width: calc(100% - 70px);
   margin-bottom: 50px;
   max-width: 1200px;
   margin: 0 auto;
@@ -11552,22 +11761,18 @@ main.signup .verify_contain div.verify .falseVerify {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 100%;
 }
 
 .ymainy .container {
   border: 1px solid #60cd90;
-  margin-right: 50px;
   margin-bottom: 50px;
-  width: 300px;
+  width: 25%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11751,6 +11956,123 @@ top: 5px; */
   transition: all .3s ease;
 }
 
+.toGachaHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.toGachaHintmaskLayer .toGachaPopUpBox {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.toGachaHintmaskLayer .toGachaCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.toGachaHintmaskLayer .toGachaPopContent {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .toGachaHintmaskLayer .toGachaPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .toGachaHintmaskLayer .toGachaPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .toGachaHintmaskLayer .toGachaPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .toGachaHintmaskLayer .toGachaPopContent {
+    font-size: 12px;
+  }
+}
+
+.toGachaHintmaskLayer .toGachaConfirmBlk {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.toGachaHintmaskLayer .toGachaConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.toGachaHintmaskLayer .toGachaConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
 .gachascreen {
   position: fixed;
   z-index: 999;
@@ -11769,16 +12091,6 @@ top: 5px; */
   width: 100vw;
   height: 100vh;
   position: fixed;
-}
-
-.gachascreen .op1 {
-  display: block;
-}
-
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .gachascreen .op1 {
-    display: none;
-  }
 }
 
 .gachascreen .screen {
@@ -11835,17 +12147,27 @@ top: 5px; */
   opacity: 0;
 }
 
-.gachascreen .op {
-  display: none;
+.gachascreenPhone {
+  position: fixed;
+  z-index: 999;
 }
 
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .gachascreen .op {
-    display: block;
-  }
+.gachascreenPhone * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  margin: 0 auto;
 }
 
-.gachascreen .screenPhone {
+.gachascreenPhone .blackScreen {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.gachascreenPhone .screenPhone {
   max-width: 370px;
   width: 100vw;
   height: 100vh;
@@ -11854,13 +12176,13 @@ top: 5px; */
   overflow-y: hidden;
 }
 
-.gachascreen .screenPhone .ballPhone {
+.gachascreenPhone .screenPhone .ballPhone {
   position: absolute;
   width: 50px;
   height: 50px;
 }
 
-.gachascreen .screenPhone .pokemonTopPhone {
+.gachascreenPhone .screenPhone .pokemonTopPhone {
   width: 120px;
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
@@ -11872,7 +12194,7 @@ top: 5px; */
   opacity: 0;
 }
 
-.gachascreen .screenPhone .pokemonBottomPhone {
+.gachascreenPhone .screenPhone .pokemonBottomPhone {
   width: 120px;
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
@@ -11883,7 +12205,7 @@ top: 5px; */
   opacity: 0;
 }
 
-.gachascreen .screenPhone .supRolePhone {
+.gachascreenPhone .screenPhone .supRolePhone {
   width: 200px;
   position: absolute;
   top: 30%;
@@ -11892,7 +12214,7 @@ top: 5px; */
   z-index: 1;
 }
 
-.gachascreen .screenPhone .surprisePhone {
+.gachascreenPhone .screenPhone .surprisePhone {
   width: 450px;
   position: absolute;
   top: -10%;

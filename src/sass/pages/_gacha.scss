@@ -309,7 +309,7 @@ body {
     width: 50px;
     height: 50px;
     display: block;
-    background: url(../src/image/gachaGame/Pokemon.png) no-repeat;
+    background: url(../src/image/gachaGame/purple.png) no-repeat;
     background-size: contain;
     animation: drop 1s ease-out forwards;
     -webkit-animation: drop 3s ease-out forwards;
@@ -324,7 +324,7 @@ body {
     width: 50px;
     height: 50px;
     display: block;
-    background: url(../src/image/gachaGame/Pokemon.png) no-repeat;
+    background: url(../src/image/gachaGame/green.png) no-repeat;
     background-size: contain;
     animation: drop 3s ease-out forwards;
     -webkit-animation: drop 1s ease-out forwards;
@@ -338,7 +338,7 @@ body {
     width: 50px;
     height: 50px;
     display: block;
-    background: url(../src/image/gachaGame/Pokemon.png) no-repeat;
+    background: url(../src/image/gachaGame/yellow.png) no-repeat;
     background-size: contain;
     animation: drop 3s ease-out forwards;
     -webkit-animation: drop 1s ease-out forwards;
@@ -353,7 +353,22 @@ body {
     width: 50px;
     height: 50px;
     display: block;
-    background: url(../src/image/gachaGame/Pokemon.png) no-repeat;
+    background: url(../src/image/gachaGame/red.png) no-repeat;
+    background-size: contain;
+    animation: drop 3s ease-out forwards;
+    -webkit-animation: drop 1s ease-out forwards;
+}
+
+.dropBall5 {
+    content: "";
+    position: absolute;
+    left: 45%;
+    transform: translate(-50%);
+    top: 77%;
+    width: 50px;
+    height: 50px;
+    display: block;
+    background: url(../src/image/gachaGame/blue.png) no-repeat;
     background-size: contain;
     animation: drop 3s ease-out forwards;
     -webkit-animation: drop 1s ease-out forwards;
