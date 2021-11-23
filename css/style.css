@@ -2456,6 +2456,7 @@ body {
   0% {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
+<<<<<<< HEAD
   }
   50% {
     -webkit-transform: scale(1.5);
@@ -2483,6 +2484,35 @@ body {
   }
   100% {
     -webkit-transform: translateY(100px);
+=======
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  51% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+@-webkit-keyframes drop {
+  0% {
+    -webkit-transform: scale(0.7);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+  51% {
+    -webkit-transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+>>>>>>> Lillian
   }
 }
 
@@ -10882,6 +10912,10 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .allBlock1 .roleRanksection .rankBloCk {
+<<<<<<< HEAD
+=======
+  border: 1px solid orange;
+>>>>>>> Lillian
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11187,6 +11221,10 @@ main.signup .verify_contain div.verify .falseVerify {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
+=======
+  border: 1px solid red;
+>>>>>>> Lillian
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -11461,6 +11499,10 @@ main.signup .verify_contain div.verify .falseVerify {
   width: 100px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+<<<<<<< HEAD
+=======
+  border: 1px solid gold;
+>>>>>>> Lillian
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .leftBlock .imgBlockRole {
@@ -11472,6 +11514,10 @@ main.signup .verify_contain div.verify .falseVerify {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+<<<<<<< HEAD
+=======
+  border: 1px solid green;
+>>>>>>> Lillian
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo.firstTitle p {
@@ -11621,6 +11667,10 @@ main.signup .verify_contain div.verify .falseVerify {
   width: 100px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+<<<<<<< HEAD
+=======
+  border: 2px solid yellow;
+>>>>>>> Lillian
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .leftBlock .imgBlockRole {
@@ -11632,6 +11682,10 @@ main.signup .verify_contain div.verify .falseVerify {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+<<<<<<< HEAD
+=======
+  border: 2px solid green;
+>>>>>>> Lillian
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo.firstTitle p {
@@ -11761,18 +11815,34 @@ main.signup .verify_contain div.verify .falseVerify {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+<<<<<<< HEAD
   width: 100%;
+=======
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+>>>>>>> Lillian
 }
 
 .ymainy .container {
   border: 1px solid #60cd90;
   margin-bottom: 50px;
+<<<<<<< HEAD
   width: 25%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+=======
+  width: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+>>>>>>> Lillian
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

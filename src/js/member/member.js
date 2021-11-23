@@ -47,9 +47,11 @@ function countDeal(){
     data: {},
     dataType: "json",
     success: function (response) {
-      if(response > 0){
+      if (response > 0) {
         $("#countResult").append(response);
         $("#countResult").removeClass("_off");
+      } else if (response == "") {
+        $("#countResult").html("");
       }
     }
   });
@@ -110,9 +112,7 @@ function deleted(clickId) {
         alert("error");
       }
     },
-    error: function (exception) {
-      alert("發生錯誤: " + exception.status);
-    },
+    
   });
 }
 
@@ -191,9 +191,7 @@ function displayBuy() {
         }
       });
     },
-    error: function (exception) {
-      alert("發生錯誤: " + exception.status);
-    },
+    
   });
 
   // 計算交易數
@@ -233,14 +231,15 @@ function saleConfirm(){
     dataType: "text",
     success: function (response) {
       if (response == "Y") {
-        $("#result_sale").html("");
-        $("#result_sale_off").html("");
-        displaySale();
+        // $("#result_sale").html("");
+        // $("#result_sale_off").html("");
+        
         vm.$data.thisId = "";
         vm.$data.thisBuy="",
         vm.$data.thisSale="",
         vm.$data.gachaBuy="",
         vm.$data.gachaSale=""
+        displaySale();
       } else {
         alert("error");
       }
@@ -288,7 +287,7 @@ function rejectValue(thisCheckValue) {
 }
 
 function displaySale() {
-  countDeal();
+  
   $.ajax({
     url: "../php/member/apply_sale.php",
     data: {},
@@ -320,7 +319,7 @@ function displaySale() {
                                 `
           );
         }
-        if (row.CONFIRM == 4 && row.AMOUNT !== 0 && row.SHOW !== 0) {
+        if (row.CONFIRM == 4 && row.AMOUNT !== 0 && row.ISSHOW !== 0) {
           $("#result_sale_off").append(
             `
        <div class="contain_list _off">
@@ -342,10 +341,10 @@ function displaySale() {
 
       });
     },
-    error: function (exception) {
-      alert("發生錯誤: " + exception.status);
-    },
+    
   });
+
+  countDeal();
 }
 
 
