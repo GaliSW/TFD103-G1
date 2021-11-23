@@ -48,7 +48,7 @@ if (count($data) > 0) {
     echo ("X");
 } else {
     
-    $sql2 = "INSERT INTO MEMBER( USERNAME, PASSWORD , EMAIL , USER_IMG , SIGNUP_DATE , AUTH) VALUES  ( ? , ? , ? , 'role999.jpg' ,  NOW() , $verify);
+    $sql2 = "INSERT INTO MEMBER( USERNAME, PASSWORD , EMAIL , USER_IMG , SIGNUP_DATE , AUTH) VALUES  ( ? , ? , ? , 'role999.png' ,  NOW() , $verify);
     INSERT INTO GACHA (FK_USERNAME , FK_ROLE_ID ,STATUS) VALUES ( '$userId' , 999 , 0)";
 
     //執行

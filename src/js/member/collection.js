@@ -36,7 +36,7 @@ let vmm = new Vue({
 });
 
 function display() {
-    let that=this
+    
     $.ajax({
         method: "POST",
         url: "../php/member/getMemberRole.php",
@@ -45,18 +45,17 @@ function display() {
         success: (response)=>{
             $("#result").html("");
             $.each(response, function (indexA, rowA) {
-                let ab1 = rowA.ABILITY.slice(0, 1);
-                        let ab2 = rowA.ABILITY.slice(1, 2);
-                        let ab3 = rowA.ABILITY.slice(2, 3);
-                        let ab4 = rowA.ABILITY.slice(3, 4);
-                        let ab5 = rowA.ABILITY.slice(4, 5);
+                let row = rowA.ABILITY;
+                        let ab1 = row.slice(0, 1);
+                        let ab2 = row.slice(1, 2);
+                        let ab3 = row.slice(2, 3);
+                        let ab4 = row.slice(3, 4);
+                        let ab5 = row.slice(4, 5);
                 if (rowA.AMOUNT == 1) {
                         $("#result").append(
                           `
                             <div class="contain_list">
-                                <div class="role col-2"><img src="../image/ROLE/${
-                                  rowA.ROLE_IMG
-                                }"></div>
+                                <div class="role col-2"><img src="../image/ROLE/${rowA.ROLE_IMG}"></div>
                                 <span class="role_name col-2">
                                     ${rowA.RNAME}
                                     <p class="rwd_price">${rowA.PRICE}E</p>
@@ -80,9 +79,7 @@ function display() {
                                     <button class="change " onclick=clickChange()>交換</button>
                                 </div>
                                 <div class="delete col-1">
-                                    <button class="delete_btn" onclick= "deleted(${
-                                      rowA.FAV_ID
-                                    })"><i class="fas fa-trash-alt"></i></button>
+                                    <button class="delete_btn" onclick= "deleted(${rowA.FAV_ID})"><i class="fas fa-trash-alt"></i></button>
                                 </div>
                             </div>
                 
@@ -91,8 +88,8 @@ function display() {
                             </span>
                         `
                         );
-                }else{
-                    $("#result_off").append(
+                }else if (rowA.AMOUNT == 0) {
+                  $("#result_off").append(
                     `
                         <div class="contain_list _off">
                             <div class="role col-2"><img src="../image/ROLE/${rowA.ROLE_IMG}"></div>
@@ -102,14 +99,14 @@ function display() {
                             <div class="ability col-3">
                             <div class="chartBox">
                                 加速：${ab1}
-                                <br>
-                                抓地：${ab2}
-                                <br>
-                                碰撞：${ab3}
-                                <br>
-                                迴避：${ab4}
-                                <br>
-                                道具：${ab5}
+                                        <br>
+                                        抓地：${ab2}
+                                        <br>
+                                        碰撞：${ab3}
+                                        <br>
+                                        迴避：${ab4}
+                                        <br>
+                                        道具：${ab5}
                             </div>
                             </div>
                             <span class="price col-2">${rowA.PRICE}</span>
@@ -120,7 +117,8 @@ function display() {
                                 <button class="delete_btn" onclick= "deleted(${rowA.FAV_ID})"><i class="fas fa-trash-alt"></i></button>
                             </div>
                         </div>
-                    `);
+                    `
+                  );
                 }      
             })
         }

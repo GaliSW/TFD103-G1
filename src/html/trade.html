@@ -393,7 +393,7 @@
 
                                                     <span><img src="../image/ROLE/${row.ROLE_IMG}"></span>
                                                     <h2>${row.RNAME}</h2>
-                                                    <h3>${row.PRICE}</h3>
+                                                    <h3>$${row.PRICE}E</h3>
                                                 </div>
                                                 <div class="lower">
                                                     <ul class="features-list">
@@ -420,6 +420,38 @@
               vm.$data.two = false;
 
 
+            },
+            error: function (exception) {
+              alert("數據載入失敗: " + exception.status);
+            }
+          });
+
+          $.ajax({
+            method: "POST",
+            url: "../php/product/callRank.php",
+            data: {},
+            dataType: "json",
+            success: function (response) {
+
+              let rankBloCk = document.getElementById('rankBloCk');
+              rankBloCk.innerHTML = "";
+
+              $.each(response, function (index, row) {
+                let str = `<div class="roleBloCk1">
+                                                  <div class="imgBlock">
+                                                      <img src="../image/ROLE/${row.ROLE_IMG}" >
+                                                  </div>
+                                      
+                                                  <div class="name">
+                                                      <p>${row.RNAME}</p>
+                                                  </div>
+                                      
+                                                  <div class="price">$${row.PRICE}E</div>
+                                              </div>`;
+
+                rankBloCk.insertAdjacentHTML("beforeend", str);
+
+              })
             },
             error: function (exception) {
               alert("數據載入失敗: " + exception.status);
@@ -482,9 +514,6 @@
               alert("數據載入失敗: " + exception.status);
             }
           });
-
-
-
         },
         clickClose1() {
           $.ajax({
@@ -543,9 +572,42 @@
               alert("數據載入失敗: " + exception.status);
             }
           });
+
+          $.ajax({
+            method: "POST",
+            url: "../php/product/callRank.php",
+            data: {},
+            dataType: "json",
+            success: function (response) {
+
+              let rankBloCk = document.getElementById('rankBloCk');
+              rankBloCk.innerHTML = "";
+
+              $.each(response, function (index, row) {
+                let str = `<div class="roleBloCk1">
+                                                  <div class="imgBlock">
+                                                      <img src="../image/ROLE/${row.ROLE_IMG}" >
+                                                  </div>
+                                      
+                                                  <div class="name">
+                                                      <p>${row.RNAME}</p>
+                                                  </div>
+                                      
+                                                  <div class="price">$${row.PRICE}E</div>
+                                              </div>`;
+
+                rankBloCk.insertAdjacentHTML("beforeend", str);
+
+              })
+            },
+            error: function (exception) {
+              alert("數據載入失敗: " + exception.status);
+            }
+          });
+        },
         },
       },
-    });
+    );
 
 
     //////////////角色上架
@@ -632,8 +694,8 @@
                                                 <div class="middleBlock">
                                                   <div class="detailInfo">
                                                     <p class="roleNamee">${row.RNAME}</p>
-                                                    <p class="rolePrice">${row.PRICE}</p>
-                                                    <p class="roleNumber">${row.FK_GACHA_ID}</p>
+                                                    <p class="rolePrice">$${row.PRICE}E</p>
+                                                    <p class="roleNumber" name="${row.FK_GACHA_ID}">編號:${row.ROLE_ID}</p>
                                                   </div>
                                                 </div>
                       
@@ -656,7 +718,7 @@
                                                   <div class="detailInfo">
                                                     <p class="roleNamee">${row.RNAME}</p>
                                                     <p class="rolePrice">${row.PRICE}</p>
-                                                    <p class="roleNumber">${row.FK_GACHA_ID}</p>
+                                                    <p class="roleNumber" name="${row.FK_GACHA_ID}">${row.ROLE_ID}</p>
                                                   </div>
                                                 </div>
                       
@@ -716,10 +778,14 @@
 
   <!-- 下架click function -->
 
+  <!-- let gachaID = item.parentNode.parentNode.previousSibling.previousSibling.childNodes[1].childNodes[5].innerText; -->
+
   <script>
     function down(item) {
       item.classList.add('none');
-      let gachaID = item.parentNode.parentNode.previousSibling.previousSibling.childNodes[1].childNodes[5].innerText;
+      let n = item.parentNode.parentNode.previousSibling.previousSibling.childNodes[1].childNodes[5];
+      let gachaID = n.attributes['name'].value;
+      console.log(gachaID);
       let changeStatus = item.parentNode;
       let str = `
             <button class="upBt" onclick="up(this)">重新上架</button>
@@ -755,7 +821,9 @@
       // let x = item.parentNode.parentNode.parentNode.parentNode;
       // x.innerHTML="";
       // item.classList.add('none');
-      let gachaID = item.parentNode.parentNode.previousSibling.previousSibling.childNodes[1].childNodes[5].innerText;
+      let n = item.parentNode.parentNode.previousSibling.previousSibling.childNodes[1].childNodes[5];
+      let gachaID = n.attributes['name'].value;
+      console.log(gachaID)
       let changeStatus = item.parentNode;
       let str = `
                 <button class="downBt" onclick="down(this)">下架</button>
@@ -788,7 +856,8 @@
 
   <script>
     function dele(item) {
-      let gachaID = item.parentNode.parentNode.previousSibling.previousSibling.childNodes[1].childNodes[5].innerText;
+      let gachaID = item.parentNode.parentNode.previousSibling.previousSibling.childNodes[1].childNodes[5].attributes['name'].value;
+      
       console.log(gachaID);
       //console.log(item.parentNode.parentNode.parentNode.parentNode);
       let x = item.parentNode.parentNode.parentNode.parentNode;

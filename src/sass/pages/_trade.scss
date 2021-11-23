@@ -24,7 +24,7 @@
     }
     
     .rankBloCk{
-        border: 1px solid orange;
+        //border: 1px solid orange;
         display: flex;
         width: 900px;
         @include center;
@@ -46,7 +46,7 @@
             margin: 0 auto;
             .imgBlock{
 
-                border: 1px solid red;
+                //border: 1px solid red;
                 width: 250px;
                 margin: 0 auto;
 
@@ -94,13 +94,14 @@
 
 ///////////////////////////////////////////////////////////////// 按鈕
 .btnBlockmy{
-    @include border;
+    //@include border;
     text-align: center;
     margin: 100px 0px;
     
     .btn111{
         @include btn_blur (200px, 20px);
         margin-right: 100px;
+        border-radius: 10px;
 
         @media (max-width:630px){
             @include btn_blur (150px, 15px);
@@ -109,8 +110,9 @@
     }
     
     .btn222{
-        @include btn_blur (200px, 20px){
-        };
+        @include btn_blur (200px, 20px);
+        border-radius: 10px;
+
 
         @media (max-width:630px){
             @include btn_blur (150px, 15px);
@@ -164,6 +166,7 @@
 
         .openBtn{
             @include btn_blur (100px, 6px){
+                border-radius: 10px;
             };
         }
     
@@ -283,7 +286,7 @@
 
         .input{
             display: flex;
-            border: 1px solid red;
+            //border: 1px solid red;
             align-items: flex-start;
             display: -webkit-flex;
             display: -moz-flex;
@@ -326,13 +329,13 @@
                     }
 
                     @media (min-width:375px) and (max-width:577px){
-                        border: 1px solid red;
+                        //border: 1px solid red;
                         margin-left: -35px;
                     }
                 }
                 
                 .chooseRoleBlock{
-                    border: 1px solid orchid;
+                    //border: 1px solid orchid;
                     text-align: left;
                     width: 250px;
                     margin: 0 auto;
@@ -359,7 +362,7 @@
 
 
                     img{
-                        border: 1px solid red;
+                        //border: 1px solid red;
                         width: 100px;
                         @include desktop_small{
                             width: 80px;
@@ -377,7 +380,7 @@
             }
 
             .showImgBlock{
-                border: 1px solid blue;
+                //border: 1px solid blue;
                 margin: 20px;
                 flex: 1;
 
@@ -417,7 +420,7 @@
 
                 .openChange{
                     text-align: left;
-                    border: 1px solid yellowgreen;
+                    //border: 1px solid yellowgreen;
 
                     
                     #openChange{
@@ -446,7 +449,7 @@
                         background-color: rgba(14, 52, 97, 1);
                         width: 100px;
                         height: 35px;
-                        border-radius: 3px;
+                        border-radius: 10px;
                         padding: 0;
                         margin-right: 30px;
                         &:hover {@include btn_on (100px, 0px)}
@@ -484,7 +487,7 @@
         font-size: 32px;
 
         h1{
-            border: 1px solid red;
+            //border: 1px solid red;
             margin-top: -130px;
             padding-bottom: 20px;
             border-bottom: 1px solid rgba(16, 197, 177, 1);
@@ -496,7 +499,7 @@
             margin: 0;
             padding: 0;
             list-style: none;
-            border: 1px solid blue;
+            //border: 1px solid blue;
 
             .itemFlex.first{
                 padding: 0;
@@ -516,7 +519,7 @@
                 .leftBlock{
                     width: 100px;
                     flex-shrink: 0;
-                    border: 1px solid gold;
+                    //border: 1px solid gold;
 
                     .imgBlockRole{
                         font-size: 0;
@@ -527,7 +530,7 @@
                 .middleBlock{
 
                     flex-grow: 1;
-                    border: 1px solid green;
+                    //border: 1px solid green;
 
                     .detailInfo.firstTitle{
                         
@@ -540,11 +543,11 @@
                         display: flex;
                         justify-content: center;
                         color: #fff;
-                        border: 1px solid red;
+                        //border: 1px solid red;
 
                         @media (min-width:375px) and (max-width:1017px){
                             display: block;
-                            @include border;
+                            //@include border;
 
                             p{
                                 //@include border;
@@ -569,7 +572,7 @@
 
                 .rightBlock{
 
-                    border: 1px solid purple;
+                    //border: 1px solid purple;
                     width: 246px;
 
                     .btnBlock{
@@ -586,7 +589,7 @@
                             background-color: rgba(14, 52, 97, 1);
                             width: 100px;
                             height: 35px;
-                            border-radius: 3px;
+                            border-radius: 10px;
                             padding: 0;
                             @include center;
                             &:hover {@include btn_on (100px, 0px)}
@@ -601,7 +604,7 @@
                             background-color: rgba(14, 52, 97, 1);
                             width: 100px;
                             height: 35px;
-                            border-radius: 3px;
+                            border-radius: 10px;
                             padding: 0;
                             @include center;
                             &:hover {@include btn_on (100px, 0px)}
@@ -616,7 +619,7 @@
                             background-color: rgba(14, 52, 97, 1);
                             width: 100px;
                             height: 35px;
-                            border-radius: 3px;
+                            border-radius: 10px;
                             padding: 0;
                             @include center;
                             &:hover {@include btn_on (100px, 0px)}
@@ -654,10 +657,10 @@
                 .leftBlock{
                     width: 100px;
                     flex-shrink: 0;
-                    border: 2px solid yellow;
+                    //border: 2px solid yellow;
 
                     .imgBlockRole{
-                        border: 2px solid red;
+                        //border: 2px solid red;
                         font-size: 0;
                         margin-left: 20px;
                     }
@@ -666,7 +669,7 @@
                 .middleBlock{
 
                     flex-grow: 1;
-                    border: 2px solid green;
+                    //border: 2px solid green;
 
                     .detailInfo.firstTitle{
                         
@@ -682,7 +685,7 @@
 
                         @media (min-width:375px) and (max-width:1017px){
                             display: block;
-                            @include border;
+                            //@include border;
 
                             p{
                                 //@include border;
@@ -706,7 +709,7 @@
                 }
 
                 .rightBlock{
-                    border: 2px solid black;
+                    //border: 2px solid black;
                     width: 250px;
 
                     .btnBlock{
@@ -723,7 +726,7 @@
                             background-color: rgba(14, 52, 97, 1);
                             width: 100px;
                             height: 35px;
-                            border-radius: 3px;
+                            border-radius: 10px;
                             padding: 0;
                             @include center;
                             &:hover {@include btn_on (100px, 0px)}
@@ -738,7 +741,7 @@
                             background-color: rgba(14, 52, 97, 1);
                             width: 100px;
                             height: 35px;
-                            border-radius: 3px;
+                            border-radius: 10px;
                             padding: 0;
                             @include center;
                             &:hover {@include btn_on (100px, 0px)}
@@ -753,7 +756,7 @@
                             background-color: rgba(14, 52, 97, 1);
                             width: 100px;
                             height: 35px;
-                            border-radius: 3px;
+                            border-radius: 10px;
                             padding: 0;
                             @include center;
                             &:hover {@include btn_on (100px, 0px)}
@@ -772,24 +775,29 @@
 
 .ymainy{
 
-    width: calc(100% - 70px);
+    // width: calc(100% - 70px);
     margin-bottom: 50px;
     max-width: 1200px;
     margin: 0 auto;
+    //@include border();
 
 .containerFlex{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    // justify-content: center;
+    width: 100%;
+    // flex-direction: row;
+    //@include border(1,blue);
 }
 
 .container {
     border: 1px solid #60cd90;
-    margin-right: 50px;
+    // margin-right: 50px;
     margin-bottom: 50px;
-    width: 300px;
+    width: 25%;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;

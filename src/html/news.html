@@ -209,8 +209,8 @@ function sort2(){
                 </div>
 
                 <div class="buttons">
-                    <button id="bbbn" class="btn old bbbn" onclick="sort()" >按時間排序由舊至新</button>
-                    <button id="bbbn2" class="btn old bbbn2" onclick="sort2()">按時間排序由新至舊</button>
+                    <button id="bbbn" class="btn old bbbn" onclick="sort2()" >按時間排序由舊至新</button>
+                    <button id="bbbn2" class="btn old bbbn2" onclick="sort()">按時間排序由新至舊</button>
                 </div>
 
                 <div id="block_9"></div>
@@ -283,7 +283,7 @@ function sort2(){
 
     <script>
         function parseCookie(item) {
-            console.log(item.childNodes[1].childNodes[3].childNodes[3].innerText);
+            // console.log(item.childNodes[1].childNodes[3].childNodes[3].innerText);
             let title = item.childNodes[1].childNodes[3].childNodes[3].innerText;
             sessionStorage.setItem('title', title);
             location.href="./news_in.html";

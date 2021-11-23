@@ -13,11 +13,11 @@ $sql = "update BYCHECK SET CONFIRM = 1 WHERE BYCHECK_ID = $Id;
         update PRODUCT 
         SET AMOUNT = 0,
         ISSHOW = 0 
-        WHERE PRODUCT_ID = $gachaBuy;
+        WHERE FK_GACHA_ID = $gachaBuy;
         update PRODUCT 
         SET AMOUNT = 0,
         ISSHOW = 0 
-        WHERE PRODUCT_ID = $gachaSale;
+        WHERE FK_GACHA_ID = $gachaSale;
         ";
 $pdo->query($sql);
 

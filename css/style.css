@@ -8950,6 +8950,7 @@ main.member_info section.popShow {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+  border-radius: 10px;
 }
 
 .allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn:hover {
@@ -8972,6 +8973,7 @@ main.member_info section.popShow {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+  border-radius: 10px;
   margin-left: 25px;
 }
 
@@ -8995,6 +8997,7 @@ main.member_info section.popShow {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+  border-radius: 10px;
   margin-left: 0px;
   font-size: 24px;
 }
@@ -9321,7 +9324,7 @@ main.member_info section.popShow {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin-right: 30px;
 }
@@ -9344,7 +9347,7 @@ main.member_info section.popShow {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
 }
 
@@ -10011,7 +10014,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .allBlock1 .roleRanksection .rankBloCk {
-  border: 1px solid orange;
   display: flex;
   width: 900px;
   margin: 0 auto;
@@ -10041,7 +10043,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .allBlock1 .roleRanksection .rankBloCk .roleBloCk1 .imgBlock {
-  border: 1px solid red;
   width: 250px;
   margin: 0 auto;
 }
@@ -10086,7 +10087,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .allBlock1 .btnBlockmy {
-  border: 1px solid red;
   text-align: center;
   margin: 100px 0px;
 }
@@ -10099,6 +10099,7 @@ main.signup .verify_contain div.verify .falseVerify {
   border: 3px solid #60cd90;
   text-align: center;
   margin-right: 100px;
+  border-radius: 10px;
 }
 
 @media (max-width: 630px) {
@@ -10120,6 +10121,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+  border-radius: 10px;
 }
 
 @media (max-width: 630px) {
@@ -10206,6 +10208,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   border: 3px solid #60cd90;
   text-align: center;
+  border-radius: 10px;
 }
 
 .allBlock1 .searchFlex .searchFlexRight .openBtn:hover {
@@ -10305,7 +10308,6 @@ main.signup .verify_contain div.verify .falseVerify {
 
 .roleUpPop .popUpBox .input {
   display: flex;
-  border: 1px solid red;
   align-items: flex-start;
   display: -moz-flex;
   width: 90%;
@@ -10361,13 +10363,11 @@ main.signup .verify_contain div.verify .falseVerify {
 
 @media (min-width: 375px) and (max-width: 577px) {
   .roleUpPop .popUpBox .input .chooseRoleBlockk h3 {
-    border: 1px solid red;
     margin-left: -35px;
   }
 }
 
 .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock {
-  border: 1px solid orchid;
   text-align: left;
   width: 250px;
   margin: 0 auto;
@@ -10399,7 +10399,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock img {
-  border: 1px solid red;
   width: 100px;
 }
 
@@ -10416,7 +10415,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .roleUpPop .popUpBox .input .showImgBlock {
-  border: 1px solid blue;
   margin: 20px;
   flex: 1;
 }
@@ -10457,7 +10455,6 @@ main.signup .verify_contain div.verify .falseVerify {
 
 .roleUpPop .popUpBox .input .informationBlock .openChange {
   text-align: left;
-  border: 1px solid yellowgreen;
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
@@ -10480,7 +10477,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin-right: 30px;
 }
@@ -10530,7 +10527,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .roleUpPop .popContent3 h1 {
-  border: 1px solid red;
   margin-top: -130px;
   padding-bottom: 20px;
   border-bottom: 1px solid #10c5b1;
@@ -10541,7 +10537,6 @@ main.signup .verify_contain div.verify .falseVerify {
   margin: 0;
   padding: 0;
   list-style: none;
-  border: 1px solid blue;
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex.first {
@@ -10563,7 +10558,6 @@ main.signup .verify_contain div.verify .falseVerify {
 .roleUpPop .popContent3 .manageListOut .itemFlex .leftBlock {
   width: 100px;
   flex-shrink: 0;
-  border: 1px solid gold;
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .leftBlock .imgBlockRole {
@@ -10573,7 +10567,6 @@ main.signup .verify_contain div.verify .falseVerify {
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock {
   flex-grow: 1;
-  border: 1px solid green;
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo.firstTitle p {
@@ -10584,13 +10577,11 @@ main.signup .verify_contain div.verify .falseVerify {
   display: flex;
   justify-content: center;
   color: #fff;
-  border: 1px solid red;
 }
 
 @media (min-width: 375px) and (max-width: 1017px) {
   .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo {
     display: block;
-    border: 1px solid red;
   }
   .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo p {
     margin: 0 auto;
@@ -10610,7 +10601,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock {
-  border: 1px solid purple;
   width: 246px;
 }
 
@@ -10628,7 +10618,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin: 0 auto;
 }
@@ -10651,7 +10641,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin: 0 auto;
 }
@@ -10674,7 +10664,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin: 0 auto;
 }
@@ -10713,18 +10703,15 @@ main.signup .verify_contain div.verify .falseVerify {
 .roleUpPop .popContent3 .manageList .itemFlex .leftBlock {
   width: 100px;
   flex-shrink: 0;
-  border: 2px solid yellow;
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .leftBlock .imgBlockRole {
-  border: 2px solid red;
   font-size: 0;
   margin-left: 20px;
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .middleBlock {
   flex-grow: 1;
-  border: 2px solid green;
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo.firstTitle p {
@@ -10740,7 +10727,6 @@ main.signup .verify_contain div.verify .falseVerify {
 @media (min-width: 375px) and (max-width: 1017px) {
   .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo {
     display: block;
-    border: 1px solid red;
   }
   .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo p {
     margin: 0 auto;
@@ -10760,7 +10746,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .rightBlock {
-  border: 2px solid black;
   width: 250px;
 }
 
@@ -10778,7 +10763,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin: 0 auto;
 }
@@ -10801,7 +10786,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin: 0 auto;
 }
@@ -10824,7 +10809,7 @@ main.signup .verify_contain div.verify .falseVerify {
   background-color: #0e3461;
   width: 100px;
   height: 35px;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0;
   margin: 0 auto;
 }
@@ -10839,7 +10824,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .ymainy {
-  width: calc(100% - 70px);
   margin-bottom: 50px;
   max-width: 1200px;
   margin: 0 auto;
@@ -10848,16 +10832,15 @@ main.signup .verify_contain div.verify .falseVerify {
 .ymainy .containerFlex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  width: 100%;
 }
 
 .ymainy .container {
   border: 1px solid #60cd90;
-  margin-right: 50px;
   margin-bottom: 50px;
-  width: 300px;
+  width: 25%;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   display: flex;
   flex-direction: column;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;

@@ -116,6 +116,7 @@
 
                     .collectBtn {
                         @include btn_blur (70px, 5px);
+                        border-radius: 10px;
 
                         &:hover {
                             @include btn_on (70px, 5px)
@@ -128,6 +129,7 @@
 
                     .changeBtn {
                         @include btn_blur (70px, 5px);
+                        border-radius: 10px;
 
                         &:hover {
                             @include btn_on (70px, 5px)
@@ -145,6 +147,7 @@
                 .buyForm {
                     .buyBtn {
                         @include btn_blur (170px, 5px);
+                        border-radius: 10px;
 
                         &:hover {
                             @include btn_on (170px, 5px)
@@ -499,7 +502,7 @@
                 background-color: rgba(14, 52, 97, 1);
                 width: 100px;
                 height: 35px;
-                border-radius: 3px;
+                border-radius: 10px;
                 padding: 0;
                 margin-right: 30px;
 
@@ -518,7 +521,7 @@
                 background-color: rgba(14, 52, 97, 1);
                 width: 100px;
                 height: 35px;
-                border-radius: 3px;
+                border-radius: 10px;
                 padding: 0;
 
                 &:hover {
@@ -607,7 +610,6 @@
 
 
 }
-
 // 沒有點數談窗
 .noPointHintmaskLayer {
     position: fixed;
