@@ -20,7 +20,7 @@
         ON T2.FK_GACHA_ID = T3.GACHA_ID
         LEFT JOIN ROLE T4
         ON T3.FK_ROLE_ID = T4.ROLE_ID
-        WHERE T1.FK_USERNAME = 'JOJO'";
+        WHERE T1.FK_USERNAME = '$Name'";
 
 
         $statement = $pdo->query($sql);

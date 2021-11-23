@@ -83,7 +83,7 @@ $Name = getSession();
                     t1.FK_USERNAME_BUY =  '$Name'
                     && BUYDATE BETWEEN (now() - interval 365 DAY) AND now()
                     order by ORDER_ID desc;";
-       }
+       };
 
        
 
