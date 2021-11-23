@@ -354,15 +354,16 @@
 <script src="../js/gacha/gachaConfirmPop.js"></script>
 <script src="../js/gacha/toGacha.js"></script>
 <script src="../js/gacha/pop.js"></script>
-<script src="../js/gacha/rolePop.js"></script>
+<!-- <script src="../js/gacha/rolePop.js"></script> -->
 <script src="../js/gacha/pagination.js"></script>
 <script src="../js/gacha/gachaScreen.js"></script>
+<script src="../js/header/header.js"></script>
 <script>
     window.onload = function () {
-
+        status();
         function resize() {
             let p1 = new Ping();
-            p1.init("#ul", 3, "role6.png");
+            p1.init("#ul", 3, "role999.png");
         }
         resize();
         window.addEventListener('resize', resize, false);

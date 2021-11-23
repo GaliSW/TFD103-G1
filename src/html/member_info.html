@@ -15,9 +15,9 @@
 </head>
 
 <body>
-    
+
     @@include('./header.html')
-    
+
     <main class="member_info" id="box">
         <p class="breadcrumb">首頁>會員中心>修改個人資料</p>
         <div class="main_contain" id="app">
@@ -26,27 +26,27 @@
             <div class="bar col-12">
                 <div class="col-4 trading">
                     <button class="apply_trade" onclick="location.href='./member.html'">
-                            <div class="countDeal">
-                            
-                                <i class="fas fa-list-alt"></i>
-                                <p id="countResult" class="_off"></p>
-                            </div>
-                            申請中交易
+                        <div class="countDeal">
+
+                            <i class="fas fa-list-alt"></i>
+                            <p id="countResult" class="_off"></p>
+                        </div>
+                        申請中交易
                     </button>
                     <button class="trade_list" onclick="location.href='./trading_list.html'">
-                            <i class="fas fa-list-alt"></i>交易紀錄
+                        <i class="fas fa-list-alt"></i>交易紀錄
                     </button>
                 </div>
                 <div class="col-4 points">
                     <div class="title">點數相關</div>
                     <button class="point_list " onclick="location.href='./points_list.html'">
-                            <i class="fas fa-search-dollar"></i>點數紀錄
+                        <i class="fas fa-search-dollar"></i>點數紀錄
                     </button>
                 </div>
                 <div class="col-4 information">
                     <div class="title">會員資料</div>
                     <button class="member_info _on" onclick="location.href='./member_info.html'">
-                            <i class="fas fa-pencil-alt"></i>修改個人資料
+                        <i class="fas fa-pencil-alt"></i>修改個人資料
                     </button>
                 </div>
             </div>
@@ -79,10 +79,10 @@
                             <span>會員帳號:<p id="account"></p>
                             </span>
                             <div class="edit_detail">
-                                <button class="edit_btn" :class="{'black_btn': btn_on }"
-                                    >編輯密碼:</button>
+                                <button class="edit_btn" :class="{'black_btn': btn_on }">編輯密碼:</button>
                                 <form class="edit_password " :class="{'bookmark': edit_on }">
-                                    <input type="password" id="pwd" name="pwd" v-model="newPassword" placeholder="請輸入新密碼">
+                                    <input type="password" id="pwd" name="pwd" v-model="newPassword"
+                                        placeholder="請輸入新密碼">
                                     <br>
                                     <input type="password" id="pwd2" placeholder="請確認新密碼" v-model="twicePassword">
                                     <br>
@@ -127,7 +127,8 @@
                                     </div>
                                 </div>
 
-                                <form class="btn_area" method="post" action="../php/member/update_img.php" enctype="multipart/form-data">
+                                <form class="btn_area" method="post" action="../php/member/update_img.php"
+                                    enctype="multipart/form-data">
                                     <button class="input_btn">
                                         +上傳照片
                                         <input type="file" @change="fileChange" name="file">
@@ -147,14 +148,19 @@
     </main>
 
     @@include('./footer.html')
-    
+
 
     <script src="../js/member/member_info.js"></script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
+    <script src="../js/header/header.js"></script>
     <script>
-        window.onload = showInfo();
+        window.onload = function () {
+            status();
+            showInfo();
+        }
+
     </script>
 
 

@@ -29,13 +29,14 @@
             <section>
                 <div class="ti">
                     <a href="./news.html" class="back">
-                        <p class="bk"><返回</p>
+                        <p class="bk">
+                            <返回< /p>
                     </a>
                 </div>
             </section>
         </main>
 
-        <div class="con" id="block_11"> 
+        <div class="con" id="block_11">
             <!-- <p class="date">2022年10月25號</p>
             <h1>怪哩怪汽®版本更新1.1.0 </h1>
             <img src="../image/intro/圖-11 (1).jpg" class="img_in" alt="slide4">
@@ -112,17 +113,19 @@
     <script>AOS.init();</script>
     <script src="../js/vendor/slick-1.8.1/slick/slick.min.js"></script>
     <script src="../js/vendor/slick-1.8.1/slick/slick.js"></script>
-    <script src="../js/news/news_in.js"></script> 
+    <script src="../js/news/news_in.js"></script>
+    <script src="../js/header/header.js"></script>
     <script>
-        window.onload = function getTitle(){
+        window.onload = function getTitle() {
+            status();
             let title = sessionStorage.getItem('title');
             console.log(title);
 
             $.ajax({
                 method: "POST",
                 url: "../php/news/callnews2.php",
-                data: { 
-                    TITLE:title,
+                data: {
+                    TITLE: title,
                 },
                 dataType: "json",
                 success: function (response) {
@@ -132,7 +135,7 @@
                     let content = response[0][3];
                     let img = response[0][4];
                     let block_11 = document.getElementById("block_11");
-                    let str =`
+                    let str = `
                     <p class="date">${date}</p>
                     <h1>${title}</h1>
                     <img src="../image/intro/${img}" class="img_in" alt="slide4">

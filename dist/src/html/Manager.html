@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後台</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../js/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
+</head>
+
+<body>
+
+    <div class="mgBg"></div>
+    <header class="mgHeaderBlk">
+        <div class="logo">
+            <a href="#"></a>
+        </div>
+        <div class="title">
+            <h1>怪哩怪汽管理後台</h1>
+        </div>
+        <div class="logOut">
+            <button onclick="clearSession()">帳號登出<i class="fas fa-sign-out-alt"></i></button>
+        </div>
+    </header>
+    <div class="mgContainer" id="manager">
+        <navbar :index='index'></navbar>
+        <!-- <div class="navBar col-3">
+            <ul>
+                <li :class="{'on': index === 0 }" @click="showAdmin">權限管理</li>
+                <li :class="{'on': index === 1 }" @click="showMember">
+                    會員資料</li>
+                <li :class="{'on': index === 2 }" @click="showRole">角色管理</li>
+                <li :class="{'on': index === 3 }" @click="showNews">公告管理</li>
+            </ul>
+        </div> -->
+        <div class="contentContainer col-9" id="contentContainer">
+
+            <!-- 渲染元件 -->
+            <keep-alive>
+                <component :is="content" id="blk" @my-click="toMemberPoints" @role-click="toRoleUp"
+                    @news-click="toNewsUp" :user-name="name"></component>
+            </keep-alive>
+
+            <!-- 新增人員彈窗 -->
+            <div class="newAdmin none">
+
+                <div class="container">
+                    <form action="">
+                        <div>
+                            <label for="adminName">姓名：</label>
+                            <input type="text" id="adminName">
+                        </div>
+                        <div>
+                            <label for="adminEmail">信箱：</label>
+                            <input type="text" id="adminEmail">
+                        </div>
+                        <div>
+                            <label for="adminPass">密碼：</label>
+                            <input type="text" id="adminPass">
+                        </div>
+                        <div class="selectAth">
+                            <select name="selectAth">
+                                <option value="none">選擇權限</option>
+                                <option value="manager">管理員</option>
+                                <option value="admin">小編</option>
+                            </select>
+                        </div>
+                        <div class="btn">
+                            <button type="submit" onclick="newAdmin()">新增</button>
+                            <button type="button" class="btnClose" onclick="popClose()">取消</button>
+                        </div>
+                    </form>
+                    <!-- <div class="maskLayer"></div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            $.ajax({
+                method: "POST",
+                url: "../php/Manager/callAdmin.php",
+                data: {},
+                dataType: "json",
+                success: function (response) {
+                    //更新html內容前先清空原有資料
+                    let adminTable = document.getElementById('adminTable');
+                    adminTable.innerHTML = "";
+                    adminTable.innerHTML = `
+                            <tr>
+                                <th>管理人員</th>
+                                <th>登入帳號</th>
+                                <th>管理權限</th>
+                            </tr>
+                            `
+                    //更新html內容(透過jQuery跑迴圈取值)
+                    $.each(response, function (index, row) {
+                        let auth = "";
+                        if (row.MAUTH == 0) {
+                            auth = "小編";
+                            let str = `
+                                <tr>
+                                    <td>
+                                        ${row.MNAME}
+                                    </td>
+                                    <td>
+                                        ${row.MACCOUNT}
+                                    </td>
+                                    <td class="edit">
+                                        ${auth}
+                                    </td>
+                                    <td>
+                                        <button id="editBtn" onclick="Auth(this)">編輯權限</button>
+                                    </td>
+                        </tr>
+                                `;
+                            adminTable.insertAdjacentHTML("beforeend", str);
+                        } else if (row.MAUTH == 1) {
+                            auth = "管理員";
+                            let str = `
+                                <tr>
+                                    <td>
+                                        ${row.MNAME}
+                                    </td>
+                                    <td>
+                                        ${row.MACCOUNT}
+                                    </td>
+                                    <td class="edit">
+                                        ${auth}
+                                    </td>
+                                    <td>
+                                        <button id="editBtn" onclick="Auth(this)">編輯權限</button>
+                                    </td>
+                        </tr>
+                                `;
+                            adminTable.insertAdjacentHTML("beforeend", str);
+                        } else {
+                            auth = "超級管理員";
+                            let str = `
+                                <tr>
+                                    <td>
+                                        ${row.MNAME}
+                                    </td>
+                                    <td>
+                                        ${row.MACCOUNT}
+                                    </td>
+                                    <td class="edit">
+                                        ${auth}
+                                    </td>
+                                    <td>
+                                        BOSS
+                                    </td>
+                                    </tr>
+                                `;
+                            adminTable.insertAdjacentHTML("beforeend", str);
+                        }
+                    });
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+        };
+        // 權限管理
+        Vue.component(`adminAuth`, {
+            template: `
+            <div class="adminAuth" id="admin">
+                <div class="title">
+                    權限管理
+                    <button class="addAdminBtn" @click='addAdmin'>新增人員</button>
+                </div>
+                <div class="authContent">
+                    <table id="adminTable">
+                        <tr>
+                            <th>管理人員</th>
+                            <th>人員信箱</th>
+                            <th>管理權限</th>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+    `,
+            methods: {
+                addAdmin() {
+                    $.ajax({
+                        method: "POST",
+                        url: "../php/Manager/ManagerCheck.php",
+                        data: {},
+                        dataType: "json",
+                        success: function (response) {
+                            $.each(response, function (index, row) {
+                                if (row.MAUTH == 2) {
+                                    let newAdmin = document.querySelector('.newAdmin');
+                                    newAdmin.classList.remove('none');
+                                } else {
+                                    alert("您沒有權限");
+                                }
+                            })
+                        },
+                        error: function (exception) {
+                            alert("數據載入失敗: " + exception.status);
+                        }
+                    });
+                },
+            }
+        });
+
+        // 會員管理
+        Vue.component(`memberInfo`, {
+            template: `
+            <div class="memberInfo" id="member">
+                <div class="title">
+                    會員資料
+                    <div class="memberSearch">
+                        <label for="searchMember"><i class="fas fa-search"></i></label>
+                        <input type="email" id="searchMember" onkeyup="search()" name="searchMember" placeholder="Mail">
+                    </div>
+                </div>
+                <div class="memberContent" id="memberContent">
+                </div>
+            </div>
+    `,
+        });
+
+        // 角色管理
+        Vue.component(`roleMg`, {
+            template: `
+            <div class="roleMg" id="roleMg">
+                <div class="title">
+                    角色管理
+                    <button class="addAdminBtn" @click="linkToRoleMg">角色上架</button>
+                </div>
+                <div class="roleContent">
+                    <table id="roleTable">
+                    </table>
+                </div>
+            </div> 
+    `,
+            methods: {
+                linkToRoleMg() {
+                    this.$emit('role-click', 'rolesUp');
+                }
+            },
+        });
+
+        //角色上架
+        Vue.component(`rolesUp`, {
+            template: `
+            <div class="roleUp" id="roleUp">
+                <div class="title">
+                    角色上架
+                </div>
+                <div class="roleUpContent">
+                    <form method="post" action="../php/Manager/roleUpload.php" enctype="multipart/form-data">
+                    <table>
+                        <tr>
+                            <th>角色圖片上傳</th>
+                            <th>角色名稱</th>
+                            <th>角色編號</th>
+                            <th>角色介紹</th>
+                            <th>角色能力</th>
+                            <th>能力顏色</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="file" name="roleFile" id="file" style="border: none;"/>
+                            </td>
+                            <td><input type="text" placeholder="輸入名稱" name="roleName" id="rName"></td>
+                            <td><input type="text" placeholder="輸入編號" name="roleNum" id="rNum"></td>
+                            <td class="roleText">
+                                <textarea cols="20" rows="5" placeholder="輸入角色敘述" style="resize : none;"  name="roleText"></textarea>    
+                            </td>
+                            <td>
+                                加速:
+                                <select name="ab" class="ab">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <br>
+                                <br>
+                                抓地:
+                                <select name="ab1" class="ab">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <br>
+                                <br>
+                                碰撞:
+                                <select name="ab2" class="ab">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <br>
+                                <br>
+                                迴避:
+                                <select name="ab3" class="ab">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <br>
+                                <br>
+                                道具:
+                                <select name="ab4" class="ab">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="abColor">
+                                    <option value="red">紅色</option>
+                                    <option value="blue">藍色</option>
+                                    <option value="purple">紫色</option>
+                                    <option value="yellow">黃色</option>
+                                    <option value="green">綠色</option>
+                                </select>
+                            </td>
+                            <td>
+                                <button onclick="return doSubmit();" name="submitBtn" id="submitBtn">上架</button>
+                                <br>
+                                <button onclick="backRole()">取消</button>
+                                </td>
+                            </tr>  
+                            </table>
+                            </form>
+                </div>
+            </div> 
+                `,
+            data() {
+                roleID = null;
+            },
+        })
+
+        // 公告管理
+        Vue.component(`newsMg`, {
+            template: `
+            <div class="newsMg" id="newsMg">
+                <div class="title">
+                    文章管理
+                    <button class="addAdminBtn" @click="linkToNewUp">文章上架</button>
+                </div>
+                <div class="newsContent" >
+                    <table id="newsTable">
+                    </table>
+                </div>
+            </div>
+    `,
+            methods: {
+                linkToNewUp() {
+                    this.$emit("news-click", "newsUp")
+                }
+            },
+        });
+
+        // 儲值查詢
+        Vue.component(`memberPoints`, {
+            props: ["userName"],
+            template: `
+            <div class="memberPoints" id="points"> 
+                <div class="title" id="memberPointsTitle">
+                    <h1>{{ userName }}</h1>
+                                的儲值記錄
+                                <div class="memberFilter" id="filterBlk">
+                                    <label for="pointFilter"><i class="fas fa-filter"></i></label>
+                                    <select id="pointFilter" @change="filter">
+                                        <option value="none">選擇日期</option>
+                                        <option value="one">近一個月</option>
+                                        <option value="three" >近三個月</option>
+                                        <option value="six">近六個月</option>
+                                        <option value="year" >近一年</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="memberPointContent" id="memberPointContent">
+                                <table id="pointsTable">
+                                </table>
+                            </div>
+                    </div>
+            `,
+            methods: {
+                filter() {
+                    // alert();
+                    let filter = document.getElementById('pointFilter').value;
+                    let userName = document.getElementById('memberPointsTitle').childNodes[0].innerText;
+                    console.log(userName);
+                    $.ajax({
+                        method: "POST",
+                        url: "../php/Manager/FilterMemberPoints.php",
+                        data: {
+                            Filter: filter,
+                            Name: userName,
+                        },
+                        dataType: "json",
+                        success: function (response) {
+                            //更新html內容前先清空原有資料
+                            let memberPointContent = document.getElementById('memberPointContent');
+                            memberPointContent.innerHTML = "";
+                            let memberPointsTitle = document.getElementById('memberPointsTitle');
+                            memberPointContent.insertAdjacentHTML("afterbegin", ` 
+                                    <table id="pointsTable">          
+                                        <tr>
+                                            <th>儲值日期</th>
+                                            <th>儲值金額</th>
+                                        </tr>
+                                    </table>
+                                    `   );
+                            let pointsTable = document.getElementById('pointsTable');
+
+                            //更新html內容(透過jQuery跑迴圈取值)
+                            if (response == "") {
+                                let strNone = `
+                                <h2 style="text-align: center;">查無資料</h2>
+                                    `
+                                pointsTable.insertAdjacentHTML("afterend", strNone);
+                            } else {
+
+                                $.each(response, function (index, row) {
+
+                                    let str = `
+                                        <tr>
+                                            <td>${row.PDATE}</td>
+                                            <td>$${row.TOTAL}</td>
+                                        </tr>
+                                    `
+                                    pointsTable.insertAdjacentHTML("beforeend", str);
+                                });
+                            }
+                        },
+                        error: function (exception) {
+                            alert("發生錯誤: " + exception.status);
+                        }
+                    });
+
+                }
+            }
+        });
+
+        // 文章上架
+        Vue.component(`newsUp`, {
+            template: `
+            <div class="newsUp" id="newsUp">
+                <form method="post" action="../php/Manager/articleUpload.php" enctype="multipart/form-data">
+                    <div class="title">
+                        文章管理
+                    </div>
+                    <div class="newsImgUp" id="newsImgUp">
+                        <p>圖片上傳</p>
+                        <input type="file" id="myFile" name="file" style="border: none;">
+                    </div>
+                    <div class="newsTitle" id="newsTitle">
+                        <p>文章標題</p>
+                        <input type="text" placeholder="輸入標題" id="newsTitle" name="newsTitle">
+                    </div>
+                    <div class="newsText" id="newsText">
+                        <p>文章內容</p>
+                        <textarea cols="30" rows="10" placeholder="輸入內容" style="resize : none;" id="newsContent" name="newsContent"></textarea>
+                        <br>
+                        <button onclick="back()">取消</button>
+                        <button  onclick="return doSubmit2();" name="submitBtn" id="submitBtn">確認上傳</button>
+                    </div>
+                </form>
+            </div> 
+            `
+        });
+
+        Vue.component(`newsUp2`, {
+            template: `
+            <div class="newsUp" id="newsUp">
+                <form method="post" action="../php/Manager/articleUpdate.php" enctype="multipart/form-data">
+                    <div class="title">
+                        文章管理
+                    </div>
+                    <div class="newsImgUp" id="newsImgUp">
+                    </div>
+                    <div class="newsTitle" id="newsTitle">
+                    </div>
+                    <div class="newsText" id="newsText">
+                    </div>
+                </form>
+            </div> 
+            `
+        });
+        //Vue父組件
+        let vm0 = new Vue({
+            el: '#manager',
+            data: {
+                content: 'adminAuth',
+                index: 0,
+                name: 0,
+            },
+            components: {
+                navbar: {
+                    props: ['index'],
+                    template: `
+                        <div class="navBar col-3">
+                            <ul>
+                                <li :class="{'on': index === 0 }" @click="showAdmin">權限管理</li>
+                                <li :class="{'on': index === 1 }" @click="showMember">
+                                會員資料</li>
+                                <li :class="{'on': index === 2 }" @click="showRole">角色管理</li>
+                                <li :class="{'on': index === 3 }" @click="showNews">公告管理</li>
+                            </ul>
+                        </div>
+                    `,
+                    methods: {
+                        showAdmin: function () {
+                            vm0.index = 0;
+                            vm0.content = 'adminAuth';
+                            call("admin");
+
+                        },
+                        showMember: function () {
+                            vm0.index = 1;
+                            vm0.content = 'memberInfo';
+                            call("member");
+
+                        },
+                        showRole: function () {
+                            vm0.index = 2;
+                            vm0.content = 'roleMg';
+                            call("role");
+
+                        },
+                        showNews: function () {
+                            vm0.index = 3;
+                            vm0.content = 'newsMg';
+                            call("article");
+                        },
+                    },
+                },
+            },
+            methods: {
+                toMemberPoints: function (val) {
+                    this.index = 1;
+                    this.content = val;
+                    call(member);
+                },
+                toRoleUp: function (r) {
+                    this.index = 2;
+                    this.content = r;
+                },
+                toNewsUp: function (n) {
+                    this.index = 3;
+                    this.content = n;
+                }
+            },
+        });
+
+        // *******************************************頁面功能*******************************************
+
+        //新增管理員
+        function newAdmin() {
+            let adminName = document.getElementById('adminName').value.trim();
+            let adminEmail = document.getElementById('adminEmail').value.trim();
+            let adminPass = document.getElementById('adminPass').value.trim();
+            let selectAth = document.querySelector('select[name=selectAth]').value;
+            let auth = null;
+            if (selectAth == "manager") {
+                auth = 1;
+            } else {
+                auth = 0;
+            }
+            // console.log(adminName, adminPass, adminEmail, auth);
+            $.ajax({
+                method: "POST",
+                url: "../php/Manager/newAdmin.php",
+                data: {
+                    Name: adminName,
+                    Mail: adminEmail,
+                    Pass: adminPass,
+                    Auth: auth,
+                },
+                dataType: "text",
+                success: function (response) {
+                    alert("新增完成");
+                    popClose();
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+        };
+        //彈窗關閉
+        function popClose() {
+            let newAdmin = document.querySelector('.newAdmin');
+            newAdmin.classList.add('none');
+        }
+
+        //編輯儲存切換
+        function changeAdminAuth(item) {
+
+            let btnName = item.innerText;
+            let edit = item.parentNode.previousSibling.previousSibling;
+
+            if (btnName == '編輯權限') {
+                let content = edit.innerText;
+                if (content == '管理員') {
+                    edit.innerHTML = `<select name='editname'><option value='${content}'>${content}</option><option value='小編'>小編</option></select>`;
+                } else {
+                    edit.innerHTML = `<select name='editname'><option value='${content}'>${content}</option><option value='管理員'>管理員</option></select>`;
+                }
+
+                item.innerHTML = '儲存';
+            } else if (btnName == '儲存') {
+                let newFont = document.querySelector('select[name=editname]').value;
+                let admin = item.parentNode.parentNode.childNodes[1].innerText;
+                let adminBool = null;
+                if (newFont == "小編") {
+                    adminBool = 0;
+                } else {
+                    adminBool = 1;
+                }
+                edit.innerHTML = newFont;
+                $.ajax({
+                    method: "POST",
+                    url: "../php/Manager/updateAdmin.php",
+                    data: {
+                        adminBool: adminBool,
+                        Name: admin,
+                    },
+                    dataType: "json",
+                    success: function (response) {
+                        alert();
+                    }
+                })
+                item.innerHTML = '編輯權限';
+            }
+        };
+
+        function changeMemberAuth(item) {
+            let btnName = item.parentNode.innerText;
+            let content = item.parentNode.previousSibling.previousSibling.innerText;
+            let edit = item.parentNode.previousSibling.previousSibling;
+
+            if (btnName == '編輯權限') {
+                if (content == "正常") {
+                    let str = `<select name='editname'><option value='1'>${content}</option><option value='0'>停權</option></select>`
+                    edit.innerHTML = ("afterbegin", str);
+                } else if (content == "停權") {
+                    edit.innerHTML = `<select name='editname'><option value='0'>${content}</option><option value='1'>正常</option></select>`;
+                }
+                item.parentNode.innerHTML = `<i class="fas fa-edit memberEdit" onclick="changeMemberAuth(this)"></i>儲存`;
+
+            } else if (btnName == '儲存') {
+
+                let adminBool = document.querySelector('select[name=editname]').value;
+                let admin = item.parentNode.parentNode.childNodes[1].innerText;
+                let newFont = null;
+                if (adminBool == "0") {
+                    newFont = "停權";
+                } else {
+                    newFont = "正常";
+                }
+
+                edit.innerHTML = newFont;
+                item.parentNode.innerHTML = `<i class="fas fa-edit memberEdit" onclick="changeMemberAuth(this)"></i>編輯權限`
+                $.ajax({
+                    method: "POST",
+                    url: "../php/Manager/updateMemberAuth.php",
+                    data: {
+                        adminBool: adminBool,
+                        Name: admin,
+                    },
+                    dataType: "json",
+                    success: function (response) {
+                        alert();
+                    }
+                })
+            }
+        }
+
+        //生成各頁面資料
+        function call(page) {
+            switch (page) {
+                case 'admin':
+                    $.ajax({
+                        method: "POST",
+                        url: "../php/Manager/callAdmin.php",
+                        data: {},
+                        dataType: "json",
+                        success: function (response) {
+                            //更新html內容前先清空原有資料
+                            let adminTable = document.getElementById('adminTable');
+                            adminTable.innerHTML = "";
+                            adminTable.innerHTML = `
+                            <tr>
+                                <th>管理人員</th>
+                                <th>登入帳號</th>
+                                <th>管理權限</th>
+                            </tr>
+                            `
+                            //更新html內容(透過jQuery跑迴圈取值)
+                            $.each(response, function (index, row) {
+                                let auth = "";
+                                if (row.MAUTH == 0) {
+                                    auth = "小編";
+                                    let str = `
+                                <tr>
+                                    <td>
+                                        ${row.MNAME}
+                                    </td>
+                                    <td>
+                                        ${row.MACCOUNT}
+                                    </td>
+                                    <td class="edit">
+                                        ${auth}
+                                    </td>
+                                    <td>
+                                        <button id="editBtn" onclick="Auth(this)">編輯權限</button>
+                                    </td>
+                        </tr>
+                                `;
+                                    adminTable.insertAdjacentHTML("beforeend", str);
+                                } else if (row.MAUTH == 1) {
+                                    auth = "管理員";
+                                    let str = `
+                                <tr>
+                                    <td>
+                                        ${row.MNAME}
+                                    </td>
+                                    <td>
+                                        ${row.MACCOUNT}
+                                    </td>
+                                    <td class="edit">
+                                        ${auth}
+                                    </td>
+                                    <td>
+                                        <button id="editBtn" onclick="Auth(this)">編輯權限</button>
+                                    </td>
+                        </tr>
+                                `;
+                                    adminTable.insertAdjacentHTML("beforeend", str);
+                                } else {
+                                    auth = "超級管理員";
+                                    let str = `
+                                <tr>
+                                    <td>
+                                        ${row.MNAME}
+                                    </td>
+                                    <td>
+                                        ${row.MACCOUNT}
+                                    </td>
+                                    <td class="edit">
+                                        ${auth}
+                                    </td>
+                                    <td>
+                                        BOSS
+                                    </td>
+                                    </tr>
+                                `;
+                                    adminTable.insertAdjacentHTML("beforeend", str);
+                                }
+
+
+                            });
+                        },
+                        error: function (exception) {
+                            alert("發生錯誤: " + exception.status);
+                        }
+                    });
+                    break;
+                //////////////////////////////////////////////////////////
+                case 'member':
+                    $.ajax({
+                        method: "POST",
+                        url: "../php/Manager/callMember.php",
+                        data: {},
+                        dataType: "json",
+                        success: function (response) {
+                            //更新html內容前先清空原有資料
+                            let memberContent = document.getElementById('memberContent');
+                            memberContent.innerHTML = "";
+                            memberContent.innerHTML = `
+
+                            <table>
+                                <tr id="memberResult">
+                                    <th>遊戲ID</th>
+                                    <th>會員信箱</th>
+                                    <th>會員編號</th>
+                                    <th>帳號狀態</th>
+                            </tr>                       
+                        </table>
+                            `;
+                            //更新html內容(透過jQuery跑迴圈取值)
+                            $.each(response, function (index, row) {
+                                let my_block = document.getElementById('memberResult');
+                                let memberAuth = null;
+                                if (row.AUTH == 1) {
+                                    memberAuth = '正常';
+                                    let str = `
+                                <tr>
+                                    <td>${row.USERNAME}</td>
+                                    <td>${row.EMAIL}</td>
+                                    <td>${row.USER_ID}</td>
+                                    <td>${memberAuth}</td>
+                                    <td><i class="fas fa-edit memberEdit" onclick="memberAuth(this)"></i>編輯權限</td>
+                                    <td><p id="searchPoints" onclick="linkToMemberPoints(this)">查詢儲值記錄</p></td>
+                                </tr>
+                                <br>
+                                `
+                                    my_block.insertAdjacentHTML("afterend", str);
+                                } else if (row.AUTH == 0) {
+                                    memberAuth = '停權';
+                                    let str = `
+                                <tr>
+                                    <td>${row.USERNAME}</td>
+                                    <td>${row.EMAIL}</td>
+                                    <td>${row.USER_ID}</td>
+                                    <td>${memberAuth}</td>
+                                    <td><i class="fas fa-edit memberEdit" onclick="memberAuth(this)"></i>編輯權限</td>
+                                    <td><p id="searchPoints" onclick="linkToMemberPoints(this)">查詢儲值記錄</p></td>
+                                </tr>
+                                <br>
+                                `
+                                    my_block.insertAdjacentHTML("afterend", str);
+                                } else {
+                                    memberAuth = '驗證中';
+                                    let str = `
+                                <tr>
+                                    <td>${row.USERNAME}</td>
+                                    <td>${row.EMAIL}</td>
+                                    <td>${row.USER_ID}</td>
+                                    <td>${memberAuth}</td>
+                                    <td></td>
+                                    <td><p id="searchPoints" onclick="linkToMemberPoints(this)">查詢儲值記錄</p></td>
+                                </tr>
+                                <br>
+                                `
+                                    my_block.insertAdjacentHTML("afterend", str);
+                                }
+
+                            });
+                        },
+                        error: function (exception) {
+                            alert("發生錯誤: " + exception.status);
+                        }
+                    });
+                    break;
+                /////////////////////////////////////////////////////////////////
+                case 'role':
+                    $.ajax({
+                        method: "POST",
+                        url: "../php/Manager/callRoleIMG.php",
+                        data: {},
+                        dataType: "json",
+                        success: function (response) {
+                            //更新html內容前先清空原有資料
+                            let roleTable = document.getElementById('roleTable');
+                            roleTable.innerHTML = "";
+                            roleTable.innerHTML = `
+                            <tr>
+                                <th>角色圖片</th>
+                                <th>角色名稱</th>
+                                <th>角色編號</th>
+                                <th>角色狀態</th>
+                                <th>角色能力</th>
+                            </tr>
+                            `
+                            //更新html內容(透過jQuery跑迴圈取值)
+                            $.each(response, function (index, row) {
+                                let amount = null;
+                                let color = null;
+                                let status = null;
+                                if (row.AMOUNT == 1) {
+                                    amount = "未抽取";
+                                    color = "green";
+                                    status = `
+                                    <button onclick="deleteAuth(this)"><i class="fas fa-trash-alt"></i></button>
+                                    `
+                                } else {
+                                    amount = "已抽取";
+                                    color = "gray";
+                                    status = "";
+                                }
+                                let ab1 = row.ABILITY.slice(0, 1);
+                                let ab2 = row.ABILITY.slice(1, 2);
+                                let ab3 = row.ABILITY.slice(2, 3);
+                                let ab4 = row.ABILITY.slice(3, 4);
+                                let ab5 = row.ABILITY.slice(4, 5);
+                                let str = `
+                                <tr>
+                                    <td><img src="../image/ROLE/${row.ROLE_IMG}" alt="${row.ROLE_IMG}"></td>
+                                    <td>${row.RNAME}</td>
+                                    <td>${row.ROLE_ID}</td>
+                                    <td style="color:${color};">${amount}</td>
+                                    <td>
+                                        加速：${ab1}
+                                        <br>
+                                        抓地：${ab2}
+                                        <br>
+                                        碰撞：${ab3}
+                                        <br>
+                                        迴避：${ab4}
+                                        <br>
+                                        道具：${ab5}
+                                    </td>
+                                    <td>
+                                        ${status}
+                                    </td>
+                                </tr>
+                                `
+                                roleTable.insertAdjacentHTML("beforeend", str);
+                            });
+                        },
+                        error: function (exception) {
+                            alert("發生錯誤: " + exception.status);
+                        }
+                    });
+                    break;
+                ///////////////////////////////////////////////////////
+                case 'article':
+                    $.ajax({
+                        method: "POST",
+                        url: "../php/Manager/callArticle.php",
+                        data: {},
+                        dataType: "json",
+                        success: function (response) {
+                            //更新html內容前先清空原有資料
+                            let newsTable = document.getElementById('newsTable');
+                            newsTable.innerHTML = "";
+                            newsTable.innerHTML = `
+                            <tr>
+                                <th>文章編號</th>
+                                <th>文章標題</th>
+                                <th>上傳日期</th>
+                            </tr>
+                            `
+                            //更新html內容(透過jQuery跑迴圈取值)
+                            $.each(response, function (index, row) {
+                                let str = `
+                                <tr>
+                                    <td>${row.ARTICLEID}</td>
+                                    <td style="color:  rgba(16, 197, 177, 1);">${row.TITLE}</td>
+                                    <td>${row.ADATE}</td>
+                                    <td>
+                                        <button onclick="articleEdit(this)">編輯</button>
+                                    </td>
+                                </tr>
+                                `
+                                newsTable.insertAdjacentHTML("beforeend", str);
+                            });
+                        },
+                        error: function (exception) {
+                            alert("發生錯誤: " + exception.status);
+                        }
+                    });
+                    break;
+            }
+        };
+
+        //生成玩家儲值頁面
+        function linkToMemberPoints(item) {
+            vm0.index = 1;
+            vm0.content = 'memberPoints';
+            let userName = item.parentNode.parentNode.children[0].innerText;
+            vm0.name = userName;
+            $.ajax({
+                method: "POST",
+                url: "../php/Manager/callMemberPoints.php",
+                data: {
+                    Name: userName,
+                },
+                dataType: "json",
+                success: function (response) {
+                    //更新html內容前先清空原有資料
+                    let memberPointContent = document.getElementById('memberPointContent');
+                    memberPointContent.innerHTML = "";
+                    let memberPointsTitle = document.getElementById('memberPointsTitle');
+                    memberPointContent.insertAdjacentHTML("afterbegin", ` 
+                    <table id="pointsTable">          
+                        <tr>
+                            <th>儲值日期</th>
+                            <th>儲值金額</th>
+                        </tr>
+                    </table>
+                        `);
+                    let pointsTable = document.getElementById('pointsTable');
+
+                    //更新html內容(透過jQuery跑迴圈取值)
+                    if (response == "") {
+                        let strNone = `
+                                    <h2 style="text-align:center">查無資料</h2>
+                                `
+                        pointsTable.insertAdjacentHTML("afterend", strNone);
+                    } else {
+
+                        $.each(response, function (index, row) {
+
+                            let str = `
+                                        <tr>
+                                            <td>${row.PDATE}</td>
+                                            <td>$${row.TOTAL}</td>
+                                        </tr>
+                                    `
+                            pointsTable.insertAdjacentHTML("beforeend", str);
+                        });
+                    }
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+        }
+
+        //搜尋功能
+        function search() {
+            let keyUpValue = document.getElementById('searchMember').value;
+            $.ajax({
+                method: "POST",
+                url: "../php/Manager/searchMember.php",
+                data: {
+                    search: keyUpValue,
+                },
+                dataType: "json",
+                success: function (response) {
+                    //更新html內容前先清空原有資料
+                    let memberContent = document.getElementById('memberContent');
+                    memberContent.innerHTML = "";
+                    memberContent.innerHTML = `
+                    
+                            <table>
+                                <tr id="memberResult">
+                                    <th>會員編號</th>
+                                    <th>會員信箱</th>
+                                    <th>管理遊戲ID</th>
+                                    <th>帳號狀態</th>
+                            </tr>                       
+                        </table>
+                            `;
+                    //更新html內容(透過jQuery跑迴圈取值)
+                    $.each(response, function (index, row) {
+                        let my_block = document.getElementById('memberResult');
+                        let memberAuth = null;
+                        if (row.AUTH == 1) {
+                            memberAuth = '正常';
+                        } else {
+                            memberAuth = '停權';
+                        }
+                        let str = `
+                                <tr>
+                                    <td>${row.USERNAME}</td>
+                                    <td>${row.EMAIL}</td>
+                                    <td>${row.USER_ID}</td>
+                                    <td>${memberAuth}</td>
+                                    <td><i class="fas fa-edit memberEdit" onclick="changeMemberAuth(this)"></i>編輯權限</td>
+                                    <td><p id="searchPoints" onclick="linkToMemberPoints(this)">查詢儲值記錄</p></td>
+                                </tr>
+                                <br>
+                                `
+                        my_block.insertAdjacentHTML("afterend", str);
+                    });
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+        }
+
+        //角色上架
+        function doSubmit() {
+            if (document.getElementById('rName').value == '') {
+                alert("請輸入角色名稱");
+                return false;
+            }
+            if (document.getElementById('rNum').value == '') {
+                alert("請輸入角色編號");
+                return false;
+            }
+
+            if (document.getElementById('roleFile').value == '') {
+                alert("請選擇[角色圖片]");
+                return false;
+            }
+        }
+
+        //文章上架
+        function doSubmit2() {
+            if (document.getElementById('newsTitle').value == '') {
+                alert("填寫文章標題");
+                return false;
+            }
+            if (document.getElementById('newsContent').value == '') {
+                alert("請填寫文章內容");
+                return false;
+            }
+
+            if (document.getElementById('myFile').value == '') {
+                alert("請選擇文章圖片");
+                return false;
+            }
+        }
+
+        function doSubmit3() {
+            if (document.getElementById('newsTitle').value == '') {
+                alert("填寫文章標題");
+                return false;
+            }
+            if (document.getElementById('newsContent').value == '') {
+                alert("請填寫文章內容");
+                return false;
+            }
+            if (document.getElementById('myFile').value == '') {
+                alert("請選擇文章圖片");
+                return false;
+            }
+        }
+
+        //文章修改
+
+        //刪除角色
+        function deleteRole(item) {
+            let node = item.parentNode.parentNode
+            // console.log(item.parentNode.parentNode.childNodes[5].innerText);
+            let roleID = item.parentNode.parentNode.childNodes[5].innerText;
+            let msg = "您真的確定要刪除嗎？\n\n請確認！";
+            if (confirm(msg) == true) {
+                node.remove();
+                $.ajax({
+                    method: "POST",
+                    url: "../php/Manager/deleteRole.php",
+                    data: {
+                        roleID: roleID,
+                    },
+                    dataType: "json",
+                    success: function (response) { }
+                })
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        //文章修改
+        function articleEdit(item) {
+            let articleID = item.parentNode.parentNode.childNodes[1].innerText;
+            vm0.index = 3;
+            vm0.content = 'newsUp2';
+            $.ajax({
+                method: "POST",
+                url: "../php/Manager/articleEdit.php",
+                data: {
+                    Name: articleID,
+                },
+                dataType: "json",
+                success: function (response) {
+
+
+                    $.each(response, function (index, row) {
+                        let newsUp = document.getElementById('newsImgUp');
+                        newsUp.innerHTML = "";
+                        let newsTitle = document.getElementById('newsTitle');
+                        newsTitle.innerHTML = "";
+                        let newsText = document.getElementById('newsText');
+                        newsText.innerHTML = "";
+                        newsUp.innerHTML = `
+                        <input type="hidden" id="newsName" name="newsName" style="border: none;" value="${articleID}">
+                        <br>
+                        <img src=../image/intro/${row.AIMG} style="width:400px;" id="newImg">
+                        <p>圖片修改</p>
+                        <input type="file" id="myFile" name="file" style="border: none;">
+                        `;
+                        newsTitle.innerHTML = `
+                        <p>文章標題</p>
+                        <input type="text" placeholder="輸入標題" id="newsTitle" name="newsTitle" value="${row.TITLE}">
+                        `;
+                        newsText.innerHTML = `
+                        <p>文章內容</p>
+                        <textarea cols="30" rows="10" placeholder="輸入內容" style="resize : none;" id="newsContent" name="newsContent">${row.CONTENT}</textarea>
+                        <br>
+                        <button onclick="back()">回上頁</button>
+                        <button onclick="return doSubmit3();" name="submitBtn" id="submitBtn">確認修改</button>
+                        `;
+
+
+                    })
+                },
+                error: function (exception) {
+                    alert("數據載入失敗: " + exception.status);
+                }
+            });
+        }
+
+        //回上頁
+        function back() {
+            vm0.index = 3;
+            vm0.content = 'newsMg';
+        }
+        function backRole() {
+            vm0.index = 2;
+            vm0.content = 'roleMg';
+        }
+
+        //判斷權限
+        function Auth(item) {
+            $.ajax({
+                method: "POST",
+                url: "../php/Manager/ManagerCheck.php",
+                data: {},
+                dataType: "json",
+                success: function (response) {
+                    $.each(response, function (index, row) {
+                        if (row.MAUTH == 2) {
+                            changeAdminAuth(item);
+                        } else {
+                            alert("您沒有權限");
+                        }
+                    })
+                },
+                error: function (exception) {
+                    alert("數據載入失敗: " + exception.status);
+                }
+            });
+        }
+
+        function memberAuth(item) {
+            $.ajax({
+                method: "POST",
+                url: "../php/Manager/ManagerCheck.php",
+                data: {},
+                dataType: "json",
+                success: function (response) {
+                    $.each(response, function (index, row) {
+                        if (row.MAUTH == 0) {
+                            alert("您沒有權限");
+                        } else {
+                            changeMemberAuth(item);
+                        }
+                    })
+                },
+                error: function (exception) {
+                    alert("數據載入失敗: " + exception.status);
+                }
+            });
+        }
+
+        function deleteAuth(item) {
+            $.ajax({
+                method: "POST",
+                url: "../php/Manager/ManagerCheck.php",
+                data: {},
+                dataType: "json",
+                success: function (response) {
+                    $.each(response, function (index, row) {
+                        if (row.MAUTH == 0) {
+                            alert("您沒有權限");
+                        } else {
+                            deleteRole(item);
+                        }
+                    })
+                },
+                error: function (exception) {
+                    alert("數據載入失敗: " + exception.status);
+                }
+            });
+        }
+
+        function clearSession() {
+            $.ajax({
+                method: "POST",
+                url: "../php/Manager/ManagerLogout.php",
+                data: {},
+                dataType: "text",
+                success: function (response) {
+                    alert("登出成功");
+                    location.href = "./ManagerLogin.html"
+                },
+            })
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

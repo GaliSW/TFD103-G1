@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    
+
     @@include('./header.html')
 
 
@@ -212,8 +212,12 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
     <script src="../js/member/collection.js"></script>
+    <script src="../js/header/header.js"></script>
     <script>
-        window.onload = display();
+        window.onload = function () {
+            status();
+            display();
+        } 
     </script>
 </body>
 

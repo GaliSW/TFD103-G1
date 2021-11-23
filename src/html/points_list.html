@@ -17,23 +17,23 @@
 <body>
     @@include('./header.html')
 
-    
+
     <main class="points_list">
         <p class="breadcrumb">首頁>會員中心>點數紀錄</p>
         <div class="main_contain">
-            
+
 
             <!-- 上方選單 -->
             <div class="bar col-12">
                 <div class="col-4 trading">
-                    
+
                     <button class="apply_trade" onclick="location.href='./member.html'">
-                    <div class="countDeal">
-                    
-                        <i class="fas fa-list-alt"></i>
-                        <p id="countResult" class="_off"></p>
-                    </div>
-                    申請中交易
+                        <div class="countDeal">
+
+                            <i class="fas fa-list-alt"></i>
+                            <p id="countResult" class="_off"></p>
+                        </div>
+                        申請中交易
                     </button>
                     <button class="trade_list" onclick="location.href='./trading_list.html'">
                         <i class="fas fa-list-alt"></i>交易紀錄
@@ -100,9 +100,14 @@
     <script src="../js/member/points_list.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
+    <script src="../js/header/header.js"></script>
 
     <script>
-        window.onload = display();
+        window.onload = function () {
+            status();
+            display();
+        }
+
     </script>
 
 </body>
