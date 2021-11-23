@@ -132,7 +132,7 @@ function play() {
                 success: function (response) {
                     console.log(response);
                     if (response == "") {
-                        // console.log('a');
+                        // console.log('a');F
                         play();
                     } else {
                         let roleStr = response[0][1];
@@ -141,10 +141,29 @@ function play() {
                             let img = document.getElementById('gachaRoleImgPhone');
                             let str = `../image/ROLE/${roleImg}`
                             img.attributes['src'].value = str;
+
+                            let ball = document.getElementById('gachaColorImgPhone');
+                            let str2 = `../image/gachaGame/${color}.png`;
+                            ball.attributes['src'].value = str2;
+                            let top = document.getElementById('gachaTopImgPhone');
+                            let str3 = `../image/gachaGame/${color}top.png`;
+                            top.attributes['src'].value = str3;
+                            let bottom = document.getElementById('gachaBottomImgPhone');
+                            let str4 = `../image/gachaGame/${color}bottom.png`;
+                            bottom.attributes['src'].value = str4;
                         } else {
                             let img = document.getElementById('gachaRoleImg');
                             let str = `../image/ROLE/${roleImg}`
                             img.attributes['src'].value = str;
+                            let ball = document.getElementById('gachaColorImg');
+                            let str2 = `../image/gachaGame/${color}.png`;
+                            ball.attributes['src'].value = str2;
+                            let top = document.getElementById('gachaTopImg');
+                            let str3 = `../image/gachaGame/${color}top.png`;
+                            top.attributes['src'].value = str3;
+                            let bottom = document.getElementById('gachaBottomImg');
+                            let str4 = `../image/gachaGame/${color}bottom.png`;
+                            bottom.attributes['src'].value = str4;
                         }
                         message.innerText = roleStr;
                         setAmount(roleStr);
@@ -188,10 +207,11 @@ function play() {
                             let img = row.ROLE_IMG;
                             setGacha(roleID);
                             gachaScreen(img);
-                            // if (window.width < 414) {
+
+                            // if (window.innerWidth < 414) {
                             //     gachaScreenPhone(img);
                             // } else {
-                            //     gachaScreenWeb(img);
+                            //     gachaScreen(img);
                             // }
                         });
                     },
@@ -213,6 +233,7 @@ function play() {
                     success: function (response) {
                         let member = response;
                         dePoints(member);
+
                     },
                     error: function (exception) {
                         alert("發生錯誤: " + exception.status);

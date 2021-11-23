@@ -2158,7 +2158,7 @@ body {
   width: 50px;
   height: 50px;
   display: block;
-  background: url(../src/image/gachaGame/Pokemon.png) no-repeat;
+  background: url(../src/image/gachaGame/purple.png) no-repeat;
   background-size: contain;
   animation: drop 1s ease-out forwards;
   -webkit-animation: drop 3s ease-out forwards;
@@ -2172,7 +2172,7 @@ body {
   width: 50px;
   height: 50px;
   display: block;
-  background: url(../src/image/gachaGame/Pokemon.png) no-repeat;
+  background: url(../src/image/gachaGame/green.png) no-repeat;
   background-size: contain;
   animation: drop 3s ease-out forwards;
   -webkit-animation: drop 1s ease-out forwards;
@@ -2186,7 +2186,7 @@ body {
   width: 50px;
   height: 50px;
   display: block;
-  background: url(../src/image/gachaGame/Pokemon.png) no-repeat;
+  background: url(../src/image/gachaGame/yellow.png) no-repeat;
   background-size: contain;
   animation: drop 3s ease-out forwards;
   -webkit-animation: drop 1s ease-out forwards;
@@ -2201,7 +2201,22 @@ body {
   width: 50px;
   height: 50px;
   display: block;
-  background: url(../src/image/gachaGame/Pokemon.png) no-repeat;
+  background: url(../src/image/gachaGame/red.png) no-repeat;
+  background-size: contain;
+  animation: drop 3s ease-out forwards;
+  -webkit-animation: drop 1s ease-out forwards;
+}
+
+.dropBall5 {
+  content: "";
+  position: absolute;
+  left: 45%;
+  transform: translate(-50%);
+  top: 77%;
+  width: 50px;
+  height: 50px;
+  display: block;
+  background: url(../src/image/gachaGame/blue.png) no-repeat;
   background-size: contain;
   animation: drop 3s ease-out forwards;
   -webkit-animation: drop 1s ease-out forwards;
@@ -9503,6 +9518,110 @@ main.member_info section.popShow {
   text-align: center;
 }
 
+.selfHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.selfHintmaskLayer .selfPopUpBox {
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.selfHintmaskLayer .selfCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.selfHintmaskLayer .selfPopContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .selfHintmaskLayer .selfPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .selfHintmaskLayer .selfPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .selfHintmaskLayer .selfPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .selfHintmaskLayer .selfPopContent {
+    font-size: 12px;
+  }
+}
+
+.selfHintmaskLayer .selfConfirmBlk {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.selfHintmaskLayer .selfConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.selfHintmaskLayer .selfConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
+}
+
 main.signup {
   background-size: cover;
   background-repeat: no-repeat;
@@ -11061,7 +11180,26 @@ top: 5px; */
   opacity: 0;
 }
 
-.gachascreen .screenPhone {
+.gachascreenPhone {
+  position: fixed;
+  z-index: 999;
+}
+
+.gachascreenPhone * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  margin: 0 auto;
+}
+
+.gachascreenPhone .blackScreen {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.gachascreenPhone .screenPhone {
   max-width: 370px;
   width: 100vw;
   height: 100vh;
@@ -11070,13 +11208,13 @@ top: 5px; */
   overflow-y: hidden;
 }
 
-.gachascreen .screenPhone .ballPhone {
+.gachascreenPhone .screenPhone .ballPhone {
   position: absolute;
   width: 50px;
   height: 50px;
 }
 
-.gachascreen .screenPhone .pokemonTopPhone {
+.gachascreenPhone .screenPhone .pokemonTopPhone {
   width: 120px;
   transform: rotate(270deg);
   display: inline-block;
@@ -11087,7 +11225,7 @@ top: 5px; */
   opacity: 0;
 }
 
-.gachascreen .screenPhone .pokemonBottomPhone {
+.gachascreenPhone .screenPhone .pokemonBottomPhone {
   width: 120px;
   transform: rotate(270deg);
   display: inline-block;
@@ -11097,7 +11235,7 @@ top: 5px; */
   opacity: 0;
 }
 
-.gachascreen .screenPhone .supRolePhone {
+.gachascreenPhone .screenPhone .supRolePhone {
   width: 200px;
   position: absolute;
   top: 30%;
@@ -11106,7 +11244,7 @@ top: 5px; */
   z-index: 1;
 }
 
-.gachascreen .screenPhone .surprisePhone {
+.gachascreenPhone .screenPhone .surprisePhone {
   width: 450px;
   position: absolute;
   top: -10%;

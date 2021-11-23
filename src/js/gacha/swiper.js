@@ -17,10 +17,10 @@ var swiper = new Swiper('.swiper-container.two', {
 
     grabCursor: true,
     coverflow: {
-        rotate: 50,
-        stretch: 70,
-        depth: 150,
-        modifier: 1.5,
+        rotate: 60,
+        stretch: 90,
+        depth: 120,
+        modifier: 1.3,
         slideShadows: true,
     }
 });
