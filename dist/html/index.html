@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>怪哩怪汽</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js?v=3.3"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <div class="index">
+        <!-- 首頁nav -->
+        <header id="header">
+            <div class="container">
+                <a class="logo" href="../html/index.html">
+                    <img src="../image/index/logo.png" alt="logoImg">
+                </a>
+                <nav class="navbar">
+                    <ul>
+                        <a href="../html/Intro.html">
+                            <li>
+                                <img src="../image/index/pic.png">
+                                消息/介紹
+                            </li>
+                        </a>
+                        <a href="../html/Gacha.html">
+                            <li>
+                                <img src="../image/index/pokemon.png">
+                                角色抽取
+                            </li>
+                        </a>
+                        <a href="../html/trade.html">
+                            <li>
+                                <img src="../image/index/role01.png">
+                                角色交易
+                            </li>
+                        </a>
+                    </ul>
+                </nav>
+
+                <!-- phone nav-->
+                <nav class="hamburger">
+                    <div id="menuToggle">
+                        <input type="checkbox" />
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <ul id="headerMenu">
+                            <a href="../html/index.html"><img src="../image/index/logo.png"></a>
+                            <a href="../html/Intro.html">
+                                <li><img src="../image/index/pic.png">消息/介紹</li>
+                            </a>
+                            <a href="../html/Gacha.html">
+                                <li><img src="../image/index/pokemon.png">角色抽取</li>
+                            </a>
+                            <a href="../html/trade.html">
+                                <li><img src="../image/index/role01.png">角色交易</li>
+                            </a>
+                            <a href="#">
+                                <div class="hamLog " id="LogOutPhone" onclick="LogOut()">登出</div>
+                            </a>
+                            <a href="#">
+                                <div class="hamLog logbt LogInPhone" id="LogInPhone" onclick="LogIn()">登入</div>
+                            </a>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- phone nav end -->
+
+                <div class="icon">
+                    <botton type="button" class="button bt disappear" id="appear1">
+                        <a href="../html/deposit.html"><i class="fas fa-coins fa-2x"></i></a>
+                        <p id="headerResult"></p>
+                        <div class="show">儲值</div>
+                    </botton>
+                    <botton type="button" class="button disappear" id="appear2">
+                        <a href="../html/collection.html"><i class="fab fa-gratipay fa-2x"></i></a>
+                        <div class="show">收藏</div>
+                    </botton>
+                    <botton type="button" class="button" onclick="memberCheck()">
+                        <a href="#"><i class="fas fa-user-circle fa-2x"></i>
+                            <h5 id="headerCountResult" class="countResul _off"></h5>
+                        </a>
+                        <div class="show">會員</div>
+                    </botton>
+                    <botton type="button" id="LogOut" class="LogOut" onclick="LogOut()">
+                        <a href="#">登出</a>
+                    </botton>
+                    <botton type="button" id="LogIn" class="LogIn logbt" onclick="LogIn()">
+                        <a href="#">登入</a>
+                    </botton>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- main -->
+        <section class="indexOne">
+            <div class="banner">
+                <div class="box"></div>
+                <div class="welcome">
+                    <img src="../image/index/text.png">
+                </div>
+                <div class="logoImg">
+                    <img src="../image/index/logo.png">
+                </div>
+                <div class="text">
+                    歡迎來到怪哩怪汽，<br>
+                    除了競速賽車外，同時滿足玩家收集角色的樂趣！<br>
+                    在這裡可透過扭蛋方式抽取，獲得獨一無二的角色，<br>
+                    也能透過平台與玩家做交換喔～
+                </div>
+                <div class="roleCar">
+                    <img src="../image/index/rolecar_left.png">
+                </div>
+                <div class="point">
+                    <i class="fas fa-angle-double-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- bgTwo -->
+        <section class="indexTwo">
+            <div class="imgBlock angle">
+                <!-- web -->
+                <div class="sportsCar dpW">
+                    <div class="carId car01">
+                        <img src="../image/index/car01.png">
+                    </div>
+                    <div class="carId car02">
+                        <img src="../image/index/car02.png">
+                    </div>
+                    <div class="carId car03">
+                        <img src="../image/index/car03.png">
+                    </div>
+                    <div class="carId car04">
+                        <img src="../image/index/car04.png">
+                    </div>
+                    <div class="carId car05">
+                        <img src="../image/index/car05.png">
+                    </div>
+                </div>
+
+                <!-- phone -->
+                <div class="sportsCar dpP">
+                    <div class="carId car01P">
+                        <img src="../image/index/car01.png">
+                    </div>
+                    <div class="carId car02P">
+                        <img src="../image/index/car02.png">
+                    </div>
+                    <div class="carId car03P">
+                        <img src="../image/index/car03.png">
+                    </div>
+                    <div class="carId car04P">
+                        <img src="../image/index/car04.png">
+                    </div>
+                    <div class="carId car05P">
+                        <img src="../image/index/car05.png">
+                    </div>
+                </div>
+
+                <div class="imgLine">
+                    <div class="raceTrack track1">
+                        <img src="../image/index/racetrack01.jpg">
+                    </div>
+                    <div class="raceTrack track2">
+                        <img src="../image/index/racetrack02.jpg">
+                    </div>
+                    <div class="raceTrack track3">
+                        <img src="../image/index/racetrack03.jpg">
+                    </div>
+                    <div class="raceTrack track4">
+                        <img src="../image/index/racetrack04.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="rcbig">
+                    <img src="../image/index/rc.png">
+                </div>
+                <div class="textBox">
+                    <img src="../image/index/dialog.png">
+                </div>
+                <div class="txtStyle">
+                    <img src="../image/index/txtstyle01.png">
+                </div>
+                <div class="picRole">
+                    <img src="../image/index/role03.png">
+                </div>
+                <div class="pointLogin" data-aos="zoom-in" data-aos-duration="2000">
+                    <img src="../image/index/dialogbox.png">
+                    <a href="../html/login.html">
+                        <p>別猶豫了～</p>
+                        點我註冊登入吧
+                        <i class="fas fa-hand-point-left"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 介紹 -->
+            <div class="h2Games">
+                <img src="../image/index/strtxtbg.png" alt="">
+                <h2>遊戲探索</h2>
+                <p>收集特有角色，來體驗競速的樂趣吧！</p>
+            </div>
+
+            <!-- 輪播 -->
+            <div id="sliderBoard">
+                <ul id="content">
+                    <li>
+                        <img src="../image/index/bg05.png" class="image">
+                        <h1>快來扭蛋趣！</h1>
+                        <h4>有過扭蛋的童年嗎？《怪哩怪汽》讓你體驗轉扭蛋的樂趣，<br>
+                            最期待轉到哪隻角色呢？快來收藏自己的的角色圖庫吧！
+                        </h4>
+                    </li>
+                    <li>
+                        <img src="../image/index/bg06.jpg" class="image">
+                        <h1>立即前往扭轉</h1>
+                        <h4>透過扭蛋機獲取新角色，
+                            每一個角色都是獨一無二的，<br>
+                            在技能方面上也擁有不同的能力值。
+                        </h4>
+                    </li>
+                    <li>
+                        <img src="../image/index/bg07.jpg" class="image">
+                        <h1>怪哩賽車遊戲</h1>
+                        <h4>2Ｄ線上賽車遊戲，帶你探索不同場景，<br>
+                            體驗競速賽車的刺激快感。
+                        </h4>
+                    </li>
+                    <li>
+                        <img src="../image/index/bg10.jpg" class="image">
+                    </li>
+                </ul>
+            </div>
+            <ul id="contentButton">
+                <!-- <li class="clickMe"></li>
+                <li></li>
+                <li></li>
+                <li></li> -->
+            </ul>
+
+            <div class="effect">
+                <img src="../image/index/bg3.png">
+            </div>
+
+            <!-- 更多資訊 -->
+            <div class="manyRC">
+                <h2>更多《怪哩怪汽》消息資訊:</h2>
+                <h4 class="gamesIntro">
+                    <a href="../html/Intro.html">遊戲消息介紹 ＞</a>
+                </h4>
+            </div>
+
+            <!-- 更多角色 -->
+            <h2>各式各樣的角色等著你</h2>
+            <div class="manyRole">
+                <div class="roleCard col-2" data-aos="fade-up" data-aos-duration="2000">
+                    <img src="../image/index/rolecard01.png">
+                    <p>貓頭鷹先生</p>
+                </div>
+                <div class="roleCard col-2" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="250">
+                    <img src="../image/index/rolecard02.png">
+                    <p>小老虎</p>
+                </div>
+                <div class="roleCard col-2" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
+                    <img src="../image/index/rolecard03.png">
+                    <p>小象</p>
+                </div>
+                <div class="roleCard col-2" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="750">
+                    <img src="../image/index/rolecard04.png">
+                    <p>無尾熊</p>
+                </div>
+                <div class="roleCard col-2 lastCard" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1000">
+                    <img src="../image/index/rolecard05.png">
+                    <p>魔帽烏龜</p>
+                </div>
+            </div>
+            <a href="../html/Gacha.html">
+                <div class="btn" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1">扭蛋GO</div>
+            </a>
+
+            <!-- 解鎖拼圖title -->
+            <div class="picGames">
+                <img src="../image/index/strtxtbg.png">
+                <h2>扭蛋解鎖神秘小遊戲</h2>
+            </div>
+
+            <div class="unlock">
+                <!-- 烏龜 -->
+                <div class="roleD">
+                    <div class="roleDance01">
+                        <img src="../image/index/role05.png">
+                    </div>
+                    <div class="roleDance02">
+                        <img src="../image/index/role02.png">
+                    </div>
+                    <div class="roleDance03">
+                        <img src="../image/index/role01.png">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 角色交換 -->
+            <div class="change">
+                <div class="txt">
+                    <img src="../image/index/strtxtbg.png">
+                    <h2>角色交換平台</h2>
+                    <p>平台提供角色去做<span>交換</span>或<span>購買</span></p>
+                </div>
+                <div class="changeRole">
+                    <div class="myRole">
+                        <p>我的角色</p>
+                        <div class="rolesR">
+                            <img src="../image/index/role04.png">
+                            <div class="roleName">
+                                <p>白羊</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="otherRole">
+                        <p>對方角色</p>
+                        <div class="rolesL">
+                            <img src="../image/index/role02.png">
+                            <div class="roleName">
+                                <p>無尾熊</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <div class="upup">
+            <i class="fas fa-arrow-circle-up totop"></i>
+          </div> -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="iconLink">
+                <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+            </div>
+            <div class="notice">
+                <p>
+                    本網站為緯育TibaMe前端設計工程師班第70期第一組學員專題成果作品，本平台僅供學習、展示之用。<br>
+                    參考資源： 馬力歐賽車、NFT。若有侵權疑慮，您可以私訊 [ 緯育TibaMe ]，後續會由專人協助處理
+                </p>
+            </div>
+            <div class="copyright">
+                <p><i class="far fa-copyright"></i> 2021 怪哩怪汽 All Rights Reserved</p>
+            </div>
+        </footer>
+
+
+        <!-- AOS套件 -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="../js/index/index.js"></script>
+        <script src="../js/header/header.js"></script>
+        <script>
+            window.onload = function status() {
+                $.ajax({
+                    method: "POST",
+                    url: "../php/LoginCheck.php",
+                    data: {},
+                    dataType: "text",
+                    success: function (response) {
+                        if (response == "") {
+                            let LogOut = document.getElementById('LogOut');
+                            LogOut.classList.add('none');
+                            let LogOutPhone = document.getElementById('LogOutPhone');
+                            LogOutPhone.classList.add('none');
+                            let LogIn = document.getElementById('LogIn');
+                            LogIn.classList.remove('logbt');
+                            let LogInPhone = document.getElementById('LogInPhone');
+                            LogInPhone.classList.remove('logbt');
+                        } else {
+                            let appear1 = document.getElementById('appear1');
+                            appear1.classList.remove('disappear');
+                            let appear2 = document.getElementById('appear2');
+                            appear2.classList.remove('disappear');
+                            let LogOut = document.getElementById('LogOut');
+                            balance();
+                            countDeal();
+                        }
+                    },
+                    error: function (exception) {
+                        alert("數據載入失敗: " + exception.status);
+                    }
+                });
+            }
+        </script>
+
+</body>
+
+</html>

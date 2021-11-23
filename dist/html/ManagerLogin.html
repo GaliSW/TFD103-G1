@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後台登入</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="mgLoginBg"></div>
+    <div class="mgLoginBlk">
+        <div class="mgLogoImg"></div>
+        <form action="">
+            <div>
+                <label for="mgAccount">帳號:</label>
+                <input type="text" id="mgAccount" placeholder="輸入管理員帳號">
+            </div>
+            <div>
+                <label for="mgPassword">密碼:</label>
+                <input type="text" id="mgPassword" placeholder="輸入管理員密碼">
+            </div>
+            <br>
+            <button type="button" class="mgLogin" onclick="return doSubmit()">登入</button>
+            <a href="">回上頁</a>
+        </form>
+        <p id="error" class="none">帳號密碼有誤，請重新輸入</p>
+    </div>
+    <script>
+        let loginBtn = document.querySelector('.mgLogin');
+        loginBtn.addEventListener('click', () => {
+            let mgAccount = document.getElementById('mgAccount').value.trim();
+            let mgPassword = document.getElementById('mgPassword').value.trim();
+            email = mgAccount; //填入的 email
+            pass = mgPassword; //填入的密碼
+            login(email, pass);
+        })
+        function login(name, pass) {
+            $.ajax({
+                method: "POST",
+                url: "../php/Manager/mgLogin.php",
+                data: {
+                    Name: name,
+                    Pass: pass
+                },
+                dataType: "text",
+                success: function (response) {
+                    let error = document.getElementById('error');
+                    if (response == 1) {
+                        console.log(response)
+                        document.location.href = "./Manager.html";
+                    } else {
+                        error.classList.remove('none');
+                    }
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+        };
+        function doSubmit() {
+            if (document.getElementById('mgAccount').value == '') {
+                alert("請填寫[帳號]");
+                return false;
+            }
+            if (document.getElementById('mgPassword').value == '') {
+                alert("請填寫[密碼]");
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
