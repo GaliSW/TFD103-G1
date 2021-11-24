@@ -777,6 +777,9 @@
                     let btn = document.getElementById('myfav');
                     if (response == "YN") {
                         insertMyfav();
+                        buyBlk
+                        let buyBlk = document.getElementById('buyBlk');
+                        buyBlk.classList.remove('none');                        
                         btn.style.background = "rgba(96, 205, 144, 1)";
                         btn.style.color = "rgba(14, 52, 97, 1)";
                         btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
@@ -874,7 +877,7 @@
                 </div>
                 <div class="buyPopContent">
                     <p>
-                        <i class="far fa-user-circle"></i>&nbsp;收藏成功!
+                        <i class="far fa-user-circle">收藏成功!</i>
                     </p>
                 </div>
                 <div class="buyConfirmBlk">
