@@ -15,6 +15,7 @@
     <script>
 
         window.onload = function getproductname() {
+            status();
             callProductInfo();
             setTimeout(function () {
                 myFavStatus();
@@ -113,7 +114,11 @@
                     let str = `
                     <div class="items -left" id="username" name="${username}">
                         <div class="imgBlock" id="iimgBlock" name='${PRODUCT_ID}'>
+<<<<<<< HEAD
                             <img id='${PRODUCT_ID}' src="../image/ROLE/${img}">
+=======
+                            <img id='${PRODUCT_ID}' src="../image/ROLE${img}">
+>>>>>>> Gary
                         </div>
                     </div>
                     <div class="items -right">
@@ -875,6 +880,7 @@
     </script>
 
     <script src="../js/gacha/chart.js"></script>
+    <script src="../js/header/header.js"></script>
 
     <div id="buyBlk" class="toGachaBlk none">
         <section class="buyHintmaskLayer">

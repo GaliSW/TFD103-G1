@@ -10,6 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="../js/gacha/pagination.js"></script>
+  <script src="../js/header/header.js"></script>
   <title>角色交易</title>
 
   <style>
@@ -609,8 +610,8 @@
             }
           });
         },
-        },
       },
+    },
     );
 
 
@@ -861,7 +862,7 @@
   <script>
     function dele(item) {
       let gachaID = item.parentNode.parentNode.previousSibling.previousSibling.childNodes[1].childNodes[5].attributes['name'].value;
-      
+
       console.log(gachaID);
       //console.log(item.parentNode.parentNode.parentNode.parentNode);
       let x = item.parentNode.parentNode.parentNode.parentNode;
@@ -926,7 +927,11 @@
   <!-- 商城 -->
 
   <script>
-    window.onload = callAllRole(1);
+    window.onload = function () {
+      status();
+      callAllRole(1);
+    }
+
     function callAllRole(page) {
       $.ajax({
         method: "POST",

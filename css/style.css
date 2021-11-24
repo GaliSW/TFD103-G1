@@ -3242,7 +3242,7 @@ body {
 }
 
 .pintooBlk #ul {
-  background-color: wheat;
+  background-color: #0e3461;
   padding-top: 2px;
   position: relative;
   border-radius: 4px;
@@ -3269,7 +3269,7 @@ body {
 }
 
 .pintooBlk #ul .active {
-  background: wheat;
+  background: #10c5b1;
 }
 
 .pintooMask {
@@ -3550,7 +3550,10 @@ body {
 }
 
 .rolesBlk .features-list h2 {
-  font-size: 20px;
+  font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 1200px) {

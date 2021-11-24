@@ -105,13 +105,13 @@ const reload = browserSync.reload;
 function browser(done) {
     browserSync.init({
         server: {
-            baseDir: "./dist",
+            baseDir: "./dist/src/html",
             index: "index.html"
         },
         port: 3000
     });
     watch('style.scss', sassstyle).on('change', reload);
-    watch('./src/*.html', includeHTML).on('change', reload);
+    watch('./src/html/*.html', includeHTML).on('change', reload);
     watch('./src/js/**/*.js', jsdev).on('change', reload);
     watch('image/**/*.*', min_images).on('change', reload);
     done();
