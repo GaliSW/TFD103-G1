@@ -9163,7 +9163,7 @@ main.member_info section.popShow {
   transform: translateX(-50%);
   background-color: #024f3f;
   border: 2px solid #10c5b1;
-  width: 1000px;
+  width: 80%;
   height: 480px;
   border-radius: 5px;
   overflow: auto;
@@ -9221,62 +9221,126 @@ main.member_info section.popShow {
   border-radius: 5px;
 }
 
-.test .popUpBox .myRoleBlock,
-.test .popUpBox .doubleArrow,
-.test .popUpBox .yourRoleBlock {
+.test .popUpBox .roleArea {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .test .popUpBox .roleArea {
+    margin-bottom: 40px;
+  }
+}
+
+.test .popUpBox .roleArea .myRoleBlock,
+.test .popUpBox .roleArea .doubleArrow,
+.test .popUpBox .roleArea .yourRoleBlock {
   display: inline-block;
   vertical-align: middle;
 }
 
-.test .popUpBox .myRoleBlock {
-  margin-left: 185px;
-}
-
-.test .popUpBox .myRoleBlock .myRoleP {
+.test .popUpBox .roleArea .myRoleBlock .myRoleP {
   margin-bottom: 20px;
   text-align: center;
   color: #fff;
 }
 
-.test .popUpBox .myRoleBlock .myRoleImg {
+.test .popUpBox .roleArea .myRoleBlock .myRoleImg {
   width: 230px;
 }
 
-.test .popUpBox .myRoleBlock .myRoleNameBlock {
+@media (max-width: 900px) {
+  .test .popUpBox .roleArea .myRoleBlock .myRoleImg {
+    width: 150px;
+  }
+}
+
+@media (max-width: 700px) {
+  .test .popUpBox .roleArea .myRoleBlock .myRoleImg {
+    width: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .test .popUpBox .roleArea .myRoleBlock .myRoleImg {
+    width: 80px;
+  }
+}
+
+.test .popUpBox .roleArea .myRoleBlock .myRoleImg img {
+  width: 100%;
+}
+
+.test .popUpBox .roleArea .myRoleBlock .myRoleNameBlock {
   text-align: center;
   margin-top: 20px;
 }
 
-.test .popUpBox .myRoleBlock .myRoleNameBlock p {
+.test .popUpBox .roleArea .myRoleBlock .myRoleNameBlock p {
   color: #fff;
 }
 
-.test .popUpBox .doubleArrow {
+.test .popUpBox .roleArea .doubleArrow {
   width: 100px;
   height: 100px;
   font-size: 100px;
   margin: 0 30px;
 }
 
-.test .popUpBox .yourRoleBlock .yourRoleP {
+@media (max-width: 600px) {
+  .test .popUpBox .roleArea .doubleArrow {
+    width: 80px;
+    height: 80px;
+    font-size: 80px;
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .test .popUpBox .roleArea .doubleArrow {
+    width: 60px;
+    height: 60px;
+    font-size: 60px;
+    margin: 0 15px;
+  }
+}
+
+.test .popUpBox .roleArea .yourRoleBlock .yourRoleP {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.test .popUpBox .yourRoleBlock .yourRoleP p {
+.test .popUpBox .roleArea .yourRoleBlock .yourRoleP p {
   color: #fff;
 }
 
-.test .popUpBox .yourRoleBlock .yourRoleImg {
+.test .popUpBox .roleArea .yourRoleBlock .yourRoleImg {
   width: 230px;
 }
 
-.test .popUpBox .yourRoleBlock .yourRoleNameBlock {
+@media (max-width: 900px) {
+  .test .popUpBox .roleArea .yourRoleBlock .yourRoleImg {
+    width: 150px;
+  }
+}
+
+@media (max-width: 700px) {
+  .test .popUpBox .roleArea .yourRoleBlock .yourRoleImg {
+    width: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .test .popUpBox .roleArea .yourRoleBlock .yourRoleImg {
+    width: 80px;
+  }
+}
+
+.test .popUpBox .roleArea .yourRoleBlock .yourRoleNameBlock {
   text-align: center;
   margin-top: 20px;
 }
 
-.test .popUpBox .yourRoleBlock .yourRoleNameBlock p {
+.test .popUpBox .roleArea .yourRoleBlock .yourRoleNameBlock p {
   color: #fff;
 }
 
@@ -9304,6 +9368,12 @@ main.member_info section.popShow {
 .test .popUpBox .popContent13 p {
   margin-top: 30px;
   font-size: 24px;
+}
+
+@media (max-width: 900px) {
+  .test .popUpBox .popContent13 p {
+    margin-bottom: 40px;
+  }
 }
 
 .test .popUpBox .confirmBlk13 {
@@ -10236,10 +10306,6 @@ main.signup .verify_contain div.verify .falseVerify {
   margin-bottom: 10px;
 }
 
-.allBlock1 .ypagey {
-  padding-bottom: 80px;
-}
-
 .allBlock1 .ypagey li a {
   text-decoration: none;
 }
@@ -10541,7 +10607,7 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .roleUpPop .popContent3 .manageListOut .itemFlex {
-  display: flex;
+  display: block;
   border: 1px solid #10c5b1;
   align-items: center;
   justify-content: space-between;
@@ -10833,9 +10899,34 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .ymainy .container {
+  margin-bottom: 30px;
+  display: flex;
+  width: 25%;
+  justify-content: center;
+}
+
+@media (max-width: 767.98px) {
+  .ymainy .container {
+    width: 33%;
+  }
+}
+
+@media (max-width: 530px) {
+  .ymainy .container {
+    width: 48%;
+  }
+}
+
+@media (max-width: 413.98px) {
+  .ymainy .container {
+    width: 50%;
+  }
+}
+
+.ymainy .containerInner {
   border: 1px solid #60cd90;
   margin-bottom: 50px;
-  width: 25%;
+  width: 90%;
   flex-wrap: wrap;
   justify-content: center;
   display: flex;
@@ -10843,7 +10934,13 @@ main.signup .verify_contain div.verify .falseVerify {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.ymainy .container a {
+@media (max-width: 1200px) {
+  .ymainy .containerInner {
+    width: 80%;
+  }
+}
+
+.ymainy .containerInner a {
   display: inline-block;
   text-decoration: none;
   width: 100%;
@@ -10859,15 +10956,44 @@ main.signup .verify_contain div.verify .falseVerify {
   background: #60cd90;
 }
 
+@media (max-width: 1200px) {
+  .ymainy .container:hover .lower {
+    transform: translateY(-3%);
+  }
+}
+
+@media (max-width: 992px) {
+  .ymainy .container:hover .lower {
+    transform: translateY(-5%);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ymainy .container:hover .lower {
+    transform: translateY(-5%);
+  }
+}
+
+@media (max-width: 530px) {
+  .ymainy .container:hover .lower {
+    transform: translateY(-35%);
+  }
+}
+
 .ymainy .container:hover .features-list {
   opacity: 1;
+  background: #60cd90;
 }
 
 .ymainy .container:hover span {
-  transform: translateY(25%);
+  transform: translateY(15%);
 }
 
 .ymainy .container:hover .content h2 {
+  opacity: 0;
+}
+
+.ymainy .container:hover .content h3 {
   opacity: 0;
 }
 
@@ -10888,6 +11014,42 @@ main.signup .verify_contain div.verify .falseVerify {
   background-position: center;
   background-repeat: no-repeat;
   /* overflow: hidden; */
+}
+
+@media (max-width: 1200px) {
+  .ymainy .inner {
+    height: 350px;
+  }
+}
+
+@media (max-width: 992px) {
+  .ymainy .inner {
+    height: 270px;
+  }
+}
+
+@media (max-width: 760px) {
+  .ymainy .inner {
+    height: 270px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ymainy .inner {
+    height: 250px;
+  }
+}
+
+@media (max-width: 540px) {
+  .ymainy .inner {
+    height: 280px;
+  }
+}
+
+@media (max-width: 420px) {
+  .ymainy .inner {
+    height: 250px;
+  }
 }
 
 .ymainy .inner img {
@@ -10922,9 +11084,38 @@ main.signup .verify_contain div.verify .falseVerify {
   flex-direction: column;
   background: transparent;
   position: relative;
-  transform: translateY(10%);
+  transform: translateY(3%);
   transition: all .5s ease;
-  height: 120px;
+  width: 100%;
+  height: 32%;
+}
+
+@media (max-width: 1200px) {
+  .ymainy .lower {
+    height: 35%;
+    transform: translateY(40%);
+  }
+}
+
+@media (max-width: 992px) {
+  .ymainy .lower {
+    height: 35%;
+    transform: translateY(10%);
+  }
+}
+
+@media (max-width: 590px) and (max-width: 600px) {
+  .ymainy .lower {
+    height: 47%;
+    transform: translateY(50%);
+  }
+}
+
+@media (max-width: 413.98px) {
+  .ymainy .lower {
+    height: 47%;
+    transform: translateY(10%);
+  }
 }
 
 .ymainy .lower .ysellerImgy, .ymainy .lower .ysellerInfoy {

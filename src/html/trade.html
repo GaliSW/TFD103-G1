@@ -300,7 +300,6 @@
     <main class="ymainy">
       <div class="containerFlex" id="containerFlex">
       </div>
-
     </main>
 
     <!-- page -->
@@ -386,8 +385,8 @@
                   redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
                   shadowNone = `this.style.boxShadow='none'`;
                 }
-                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}">
-                                            <a href="./product.html">
+                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}" onclick="productcookie(this)" name="${row.ABILITY}">
+                                  <div class="containerInner">          
                                             <div class="inner">
                                                 <div class="content">
 
@@ -406,8 +405,8 @@
                                                 </div>
                                             </div>
                                             <button class="cta">查看資訊</button>
-                                            </a>
-                                        </div>`;
+                                  </div>         
+                        </div>`;
 
                 containerFlex.insertAdjacentHTML("beforeend", str);
                 let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];
@@ -534,8 +533,8 @@
                   redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
                   shadowNone = `this.style.boxShadow='none'`;
                 }
-                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}" name="${row.ABILITY}">
-                                            <a href="./product.html">
+                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}" onclick="productcookie(this)" name="${row.ABILITY}">
+                                  <div class="containerInner">          
                                             <div class="inner">
                                                 <div class="content">
 
@@ -554,8 +553,8 @@
                                                 </div>
                                             </div>
                                             <button class="cta">查看資訊</button>
-                                            </a>
-                                        </div>`;
+                                  </div>         
+                        </div>`;
 
                 containerFlex.insertAdjacentHTML("beforeend", str);
                 let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];
@@ -717,7 +716,7 @@
                                                 <div class="middleBlock">
                                                   <div class="detailInfo">
                                                     <p class="roleNamee">${row.RNAME}</p>
-                                                    <p class="rolePrice">${row.PRICE}</p>
+                                                    <p class="rolePrice">$${row.PRICE}E</p>
                                                     <p class="roleNumber" name="${row.FK_GACHA_ID}">${row.ROLE_ID}</p>
                                                   </div>
                                                 </div>
@@ -944,7 +943,7 @@
                 shadowNone = `this.style.boxShadow='none'`;
               }
               let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}" onclick="productcookie(this)" name="${row.ABILITY}">
-                                            
+                                  <div class="containerInner">          
                                             <div class="inner">
                                                 <div class="content">
 
@@ -963,8 +962,8 @@
                                                 </div>
                                             </div>
                                             <button class="cta">查看資訊</button>
-                                            
-                                        </div>`;
+                                  </div>         
+                        </div>`;
 
               containerFlex.insertAdjacentHTML("beforeend", str);
               let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];

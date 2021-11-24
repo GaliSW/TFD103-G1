@@ -107,12 +107,13 @@
                     let title = response[0][12];
                     let img = response[0][14];
                     let content = response[0][16];
+                    let trans = response[0].TRANS;
                     let PRODUCT_ID = response[0].PRODUCT_ID;
                     let block_product = document.getElementById("flexContainer");
                     let str = `
                     <div class="items -left" id="username" name="${username}">
                         <div class="imgBlock" id="iimgBlock" name='${PRODUCT_ID}'>
-                            <img id='${PRODUCT_ID}' src="../image/product/${img}">
+                            <img id='${PRODUCT_ID}' src="../image/ROLE/${img}">
                         </div>
                     </div>
                     <div class="items -right">
@@ -123,7 +124,7 @@
                         <div class="collectForm">
                             <div class="btnBlock1">
                                 <button type="${gachaid}" class="collectBtn" name="button" id="myfav" onclick="myfav()"><i class="fas fa-heart"></i>收藏</button>
-                                <button type="button" class="changeBtn" name="button" onclick="clickStatus()">交換</button>
+                                <button type="button" id="changeBtn" class="changeBtn" name="button" onclick="clickStatus()">交換</button>
                             </div>
                         </div>
 
@@ -134,6 +135,16 @@
                     </div>
                     `;
                     block_product.innerHTML = str;
+
+                    // 判斷是否開啟交換
+
+                    let changeBtn = document.getElementById("changeBtn");
+                    console.log(trans);
+                    if(trans == 0){
+                        changeBtn.classList.add('none');
+                    }else{
+                        changeBtn.classList.remove('none');
+                    }
                 },
                 error: function (exception) {
                     alert("發生錯誤: " + exception.status);
@@ -288,7 +299,7 @@
         </div>
 
 
-
+        <!-- 交換視窗 -->
 
         <section class="sec1">
             <div class="flexContainer" id="flexContainer">
@@ -325,37 +336,36 @@
                             <div class="popContent13">
                                 <p>確認你想要交換的角色</p>
                             </div>
+                            <div class="roleArea">
+                                <div class="myRoleBlock">
+                                    <div class="myRoleP">
+                                        <p>我的角色</p>
+                                    </div>
 
-                            <div class="myRoleBlock">
-                                <div class="myRoleP">
-                                    <p>我的角色</p>
+                                    <div class="myRoleImg">
+                                        <img id="myRoleImg1" src="../dist/images/product/change/change1.png">
+                                    </div>
+
+                                    <div class="myRoleNameBlock">
+                                        <p id="myRoleName1">小烏龜</p>
+                                    </div>
                                 </div>
 
-                                <div class="myRoleImg">
-                                    <img id="myRoleImg1" src="../dist/images/product/change/change1.png">
-                                </div>
+                                <div class="doubleArrow"><i class="fas fa-arrows-alt-h"></i></div>
 
-                                <div class="myRoleNameBlock">
-                                    <p id="myRoleName1">小烏龜</p>
-                                </div>
+                                <div class="yourRoleBlock">
+                                    <div class="yourRoleP">
+                                        <p>對方角色</p>
+                                    </div>
+
+                                    <div class="yourRoleImg">
+                                        <img id="yourRoleImg1" src="../dist/images/product/change/change2.png">
+                                    </div>    
+                                    <div class="yourRoleNameBlock">
+                                        <p>羊咩咩</p>
+                                    </div>
+                                </div>    
                             </div>
-
-                            <div class="doubleArrow"><i class="fas fa-arrows-alt-h"></i></div>
-
-                            <div class="yourRoleBlock">
-                                <div class="yourRoleP">
-                                    <p>對方角色</p>
-                                </div>
-
-                                <div class="yourRoleImg">
-                                    <img id="yourRoleImg1" src="../dist/images/product/change/change2.png">
-                                </div>
-
-                                <div class="yourRoleNameBlock">
-                                    <p>羊咩咩</p>
-                                </div>
-                            </div>
-
                             <div class="confirmBlk13">
                                 <button href="#" class="confirmBtnBack13" @click=toBack()>返回</button>
                                 <button href="#" class="confirmBtn13" onclick="toThree()">確定</button>
@@ -368,7 +378,7 @@
                                 x
                             </div>
                             <div class="popContent14">
-                                <p>已送出交換申請，請靜候佳音！</p>
+                                <p class="sendP">已送出交換申請</br>請靜候佳音！</p>
                             </div>
 
                         </div>
