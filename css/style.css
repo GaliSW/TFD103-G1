@@ -542,12 +542,8 @@
 }
 
 #header #headerMenu li:hover img {
-<<<<<<< HEAD
   -webkit-animation: move 1s infinite;
           animation: move 1s infinite;
-=======
-  animation: move 1s infinite;
->>>>>>> dev
 }
 
 #header #headerMenu li img {
@@ -835,25 +831,6 @@
           transform: scale(1.2);
   border-radius: 50%;
   color: #1d2b76;
-}
-
-.footer .iconLink a i::before {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background-size: 200% 200%;
-  background-position: 75% 75%;
-  top: 0;
-  left: 5%;
-  line-height: 80px;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background .5s linear;
-}
-
-.footer .iconLink a:hover i::before {
-  background-position: 0% 0%;
 }
 
 .footer .notice {
@@ -1916,30 +1893,113 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
   overflow-y: hidden;
   width: 100%;
   height: 100vh;
-  background-image: url(../src/image/index/entry.jpg);
+  background-image: url(../src/image/index/entry.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .entry .entrybg .contentBox {
-  max-width: 1400px;
+  border: 1px solid #4a418c;
+  margin: 0 auto;
+  max-width: 1440px;
   width: 100%;
+  height: 100%;
 }
 
 .entry .entrybg .contentBox .logoTitle {
-  width: 250px;
-  margin-left: 10%;
+  position: absolute;
+  width: 350px;
+  left: 38%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  margin-top: -5%;
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
+  z-index: 1;
 }
 
 .entry .entrybg .contentBox .logoTitle img {
   width: 100%;
 }
 
+@-webkit-keyframes picDraw1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes picDraw1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes picDraw2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes picDraw2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.entry .entrybg .contentBox .boxS {
+  position: absolute;
+  width: 500px;
+  top: 20%;
+  left: 32%;
+  z-index: 0;
+}
+
+.entry .entrybg .contentBox .boxS .pic1 {
+  width: 500px;
+  -webkit-animation: picDraw1 5s ease-in-out infinite;
+          animation: picDraw1 5s ease-in-out infinite;
+}
+
+.entry .entrybg .contentBox .boxS .pic2 {
+  position: absolute;
+  width: 500px;
+  left: 0;
+  top: 0;
+  -webkit-animation: picDraw2 5s ease-in-out infinite;
+          animation: picDraw2 5s ease-in-out infinite;
+}
+
 .entry .entrybg .contentBox .frontSide {
   width: 210px;
-  height: 160px;
   margin-left: 420px;
-  margin-top: -110px;
+  margin-top: 40%;
+  position: relative;
+  -webkit-box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .entry .entrybg .contentBox .frontSide a {
@@ -1951,20 +2011,26 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
   font-size: 48px;
   font-weight: 400;
   color: #fff;
-  background-color: #60cd90;
-  padding: 12% 22%;
+  background-color: #0e3461;
+  padding: 6% 22%;
   border-radius: 20px;
   text-align: center;
 }
 
 .entry .entrybg .contentBox .frontSide a h1:hover {
-  background-color: #0e3461;
+  background-color: #60cd90;
+  color: #0e3461;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 .entry .entrybg .contentBox .backSide {
   width: 210px;
-  height: 160px;
   margin-left: 800px;
+  margin-top: -6.5%;
+  position: relative;
 }
 
 .entry .entrybg .contentBox .backSide a {
@@ -1977,39 +2043,388 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
   font-weight: 400;
   color: #fff;
   background-color: #0e3461;
-  padding: 12% 22%;
+  padding: 6% 22%;
   border-radius: 20px;
   text-align: center;
 }
 
 .entry .entrybg .contentBox .backSide a h1:hover {
   background-color: #60cd90;
+  color: #0e3461;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
-.entry .entrybg .contentBox .word {
-  width: 400px;
-  margin-left: 57%;
-  -webkit-transform: translateX(-60%);
-          transform: translateX(-60%);
-  margin-top: -10%;
+.entry .entrybg .contentBox .left_sidebar.-open {
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
 }
 
-.entry .entrybg .contentBox .word p {
-  color: #302e81;
-  font-size: 28px;
-  line-height: 30px;
+.entry .entrybg .contentBox .left_sidebar2.-open {
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
 }
 
-.entry .entrybg .contentBox .roleLeft {
-  width: 500px;
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
-  position: relative;
+.entry .entrybg .contentBox .left_sidebar3.-open {
+  -webkit-transform: translate(0%, -100%);
+          transform: translate(0%, -100%);
+}
+
+.entry .entrybg .contentBox .RoleF {
+  position: fixed;
+  top: .5%;
+  left: 0;
+  -webkit-transform: translate(-100%, 0%);
+          transform: translate(-100%, 0%);
+  min-height: 180px;
+  width: 280px;
+  background-color: #9fcfec;
+  color: black;
+  padding: 10px 20px 10px 10px;
+  border-radius: 0 10px 10px 0;
+  z-index: 100;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.entry .entrybg .contentBox .RoleF .btDL {
+  background: none;
+  position: absolute;
+  left: 99%;
+  top: -15px;
+  -webkit-transform: translate(100%, 50%);
+          transform: translate(100%, 50%);
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.entry .entrybg .contentBox .RoleF .btDL .RoleLeft {
+  width: 180px;
+  position: absolute;
+}
+
+.entry .entrybg .contentBox .RoleF .btDL .RoleLeft img {
+  width: 100%;
+}
+
+.entry .entrybg .contentBox .RoleF .sidebar .bon {
+  display: inline-block;
+  width: 150px;
+}
+
+.entry .entrybg .contentBox .RoleF .sidebar .bon h3 {
+  margin-left: 15%;
+}
+
+.entry .entrybg .contentBox .RoleF .sidebar .bon img {
+  width: 100%;
+  margin-left: 50%;
+  margin-top: -50%;
+}
+
+.entry .entrybg .contentBox .RoleF2 {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  min-height: 180px;
+  width: 280px;
+  background-color: #f5f3e4;
+  color: black;
+  padding: 10px 20px 10px 10px;
+  border-radius: 0 10px 10px 0;
+  z-index: 100;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.entry .entrybg .contentBox .RoleF2 .btDL2 {
+  background: none;
+  position: absolute;
+  left: 99%;
+  top: -6%;
+  -webkit-transform: translate(100%, 50%);
+          transform: translate(100%, 50%);
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.entry .entrybg .contentBox .RoleF2 .btDL2 .RoleLeft2 {
+  width: 180px;
+  position: absolute;
+}
+
+.entry .entrybg .contentBox .RoleF2 .btDL2 .RoleLeft2 img {
+  width: 100%;
+}
+
+.entry .entrybg .contentBox .RoleF2 .sidebar2 .bon {
+  display: inline-block;
+  width: 150px;
+}
+
+.entry .entrybg .contentBox .RoleF2 .sidebar2 .bon h3 {
+  margin-left: 15%;
+}
+
+.entry .entrybg .contentBox .RoleF2 .sidebar2 .bon img {
+  width: 100%;
+  margin-left: 50%;
+  margin-top: -47%;
+}
+
+.entry .entrybg .contentBox .RoleF3 {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  -webkit-transform: translate(-100%, -100%);
+          transform: translate(-100%, -100%);
+  min-height: 180px;
+  width: 280px;
+  background-color: #9fcfec;
+  color: black;
+  padding: 10px 20px 10px 10px;
+  border-radius: 0 10px 10px 0;
+  z-index: 100;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.entry .entrybg .contentBox .RoleF3 .btDL3 {
+  background: none;
+  position: absolute;
+  left: 99%;
+  top: -6%;
+  -webkit-transform: translate(100%, 50%);
+          transform: translate(100%, 50%);
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.entry .entrybg .contentBox .RoleF3 .btDL3 .RoleLeft3 {
+  width: 180px;
+  position: absolute;
+}
+
+.entry .entrybg .contentBox .RoleF3 .btDL3 .RoleLeft3 img {
+  width: 100%;
+}
+
+.entry .entrybg .contentBox .RoleF3 .sidebar3 .bon {
+  display: inline-block;
+  width: 150px;
+}
+
+.entry .entrybg .contentBox .RoleF3 .sidebar3 .bon h3 {
+  margin-left: 15%;
+}
+
+.entry .entrybg .contentBox .RoleF3 .sidebar3 .bon img {
+  width: 100%;
+  margin-left: 50%;
+  margin-top: -47%;
+}
+
+.entry .entrybg .contentBox .right_sidebar.-open {
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+.entry .entrybg .contentBox .right_sidebar3.-open {
+  -webkit-transform: translate(0%, -100%);
+          transform: translate(0%, -100%);
+}
+
+.entry .entrybg .contentBox .RoleR {
+  position: fixed;
+  top: 12%;
+  right: 0;
+  -webkit-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+  min-height: 180px;
+  width: 280px;
+  background-color: #f5f3e4;
+  color: black;
+  padding: 10px 20px 10px 10px;
+  border-radius: 10px 0 0 10px;
+  z-index: 100;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.entry .entrybg .contentBox .RoleR .btD {
+  background: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.entry .entrybg .contentBox .RoleR .btD .RoleRight {
+  width: 180px;
+  position: absolute;
+  right: 0;
   top: 0;
 }
 
-.entry .entrybg .contentBox .roleLeft img {
+.entry .entrybg .contentBox .RoleR .btD .RoleRight img {
   width: 100%;
+}
+
+.entry .entrybg .contentBox .RoleR .sidebar4 {
+  display: inline-block;
+}
+
+.entry .entrybg .contentBox .RoleR .sidebar4 .bon {
+  width: 150px;
+}
+
+.entry .entrybg .contentBox .RoleR .sidebar4 .bon h3 {
+  margin-left: 15%;
+}
+
+.entry .entrybg .contentBox .RoleR .sidebar4 .bon img {
+  width: 100%;
+  margin-left: 50%;
+  margin-top: -47%;
+}
+
+.entry .entrybg .contentBox .RoleR2 {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+  min-height: 180px;
+  width: 280px;
+  background-color: #9fcfec;
+  color: black;
+  padding: 10px 20px 10px 10px;
+  border-radius: 10px 0 0 10px;
+  z-index: 100;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.entry .entrybg .contentBox .RoleR2 .btD2 {
+  background: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.entry .entrybg .contentBox .RoleR2 .btD2 .RoleRight2 {
+  width: 180px;
+  position: absolute;
+  right: 0;
+  top: -80px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.entry .entrybg .contentBox .RoleR2 .btD2 .RoleRight2 img {
+  width: 100%;
+}
+
+.entry .entrybg .contentBox .RoleR2 .sidebar5 {
+  display: inline-block;
+}
+
+.entry .entrybg .contentBox .RoleR2 .sidebar5 .bon {
+  width: 150px;
+}
+
+.entry .entrybg .contentBox .RoleR2 .sidebar5 .bon h3 {
+  margin-left: 145%;
+  margin-top: -102%;
+}
+
+.entry .entrybg .contentBox .RoleR2 .sidebar5 .bon img {
+  width: 100%;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+.entry .entrybg .contentBox .RoleR3 {
+  position: fixed;
+  top: 100%;
+  right: 0;
+  -webkit-transform: translate(100%, -100%);
+          transform: translate(100%, -100%);
+  min-height: 180px;
+  width: 280px;
+  background-color: #f5f3e4;
+  color: black;
+  padding: 10px 20px 10px 10px;
+  border-radius: 10px 0 0 10px;
+  z-index: 100;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.entry .entrybg .contentBox .RoleR3 .btD3 {
+  background: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  -webkit-transform: translate(-100%, -100%);
+          transform: translate(-100%, -100%);
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.entry .entrybg .contentBox .RoleR3 .btD3 .RoleRight3 {
+  width: 180px;
+  position: absolute;
+  right: 0;
+  top: -166px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.entry .entrybg .contentBox .RoleR3 .btD3 .RoleRight3 img {
+  width: 100%;
+}
+
+.entry .entrybg .contentBox .RoleR3 .sidebar6 {
+  display: inline-block;
+}
+
+.entry .entrybg .contentBox .RoleR3 .sidebar6 .bon {
+  width: 150px;
+}
+
+.entry .entrybg .contentBox .RoleR3 .sidebar6 .bon h3 {
+  margin-left: 145%;
+  margin-top: -102%;
+}
+
+.entry .entrybg .contentBox .RoleR3 .sidebar6 .bon img {
+  width: 100%;
+  margin-left: 25%;
+  margin-top: 5%;
 }
 
 * {
@@ -2937,7 +3352,8 @@ body {
 .coinHintmaskLayer .coinPopUpBox {
   position: relative;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   left: 50%;
   background-color: #024f3f;
   border: 2px solid #10c5b1;
@@ -2963,15 +3379,23 @@ body {
 
 .coinHintmaskLayer .coinPopContent {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #60cd90;
   color: #10c5b1;
   font-size: 16px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -3000,9 +3424,12 @@ body {
 
 .coinHintmaskLayer .coinConfirmBlk {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   bottom: 10px;
 }
 
@@ -3016,6 +3443,7 @@ body {
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
+  -webkit-transition: .3s;
   transition: .3s;
 }
 
@@ -3041,7 +3469,8 @@ body {
 .toLoginHintmaskLayer .toLoginPopUpBox {
   position: relative;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   left: 50%;
   background-color: #024f3f;
   border: 2px solid #10c5b1;
@@ -3067,15 +3496,23 @@ body {
 
 .toLoginHintmaskLayer .toLoginPopContent {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #60cd90;
   color: #10c5b1;
   font-size: 16px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -3104,9 +3541,12 @@ body {
 
 .toLoginHintmaskLayer .toLoginConfirmBlk {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   bottom: 10px;
 }
 
@@ -3120,6 +3560,7 @@ body {
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
+  -webkit-transition: .3s;
   transition: .3s;
 }
 
@@ -6587,7 +7028,8 @@ main.login div.contain .bookmark {
   background-position: center;
   background-repeat: no-repeat;
   left: 50%;
-  transform: rotate(7deg) translate(-50%, 0);
+  -webkit-transform: rotate(7deg) translate(-50%, 0);
+          transform: rotate(7deg) translate(-50%, 0);
   top: -100px;
   position: absolute;
   width: 400px;
@@ -6691,7 +7133,8 @@ main.login div.contain .bookmark {
 
 .mgHeaderBlk .logo a {
   background-image: url(../src/image/index/logo.png);
-  transform: rotate(7deg);
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -9470,24 +9913,19 @@ main.member_info section.popShow {
   font-size: 16px;
 }
 
-<<<<<<< HEAD
-.out .ti {
+.out .date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 50px 0;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-=======
-.out .date {
-  display: flex;
-  justify-content: center;
->>>>>>> dev
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .out .ti {
   margin: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -10219,7 +10657,8 @@ main.member_info section.popShow {
 .buyHintmaskLayer .buyPopUpBox {
   position: relative;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   left: 50%;
   background-color: #024f3f;
   border: 2px solid #10c5b1;
@@ -10245,15 +10684,23 @@ main.member_info section.popShow {
 
 .buyHintmaskLayer .buyPopContent {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #60cd90;
   color: #10c5b1;
   font-size: 16px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -10282,9 +10729,12 @@ main.member_info section.popShow {
 
 .buyHintmaskLayer .buyConfirmBlk {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   bottom: 10px;
 }
 
@@ -10298,6 +10748,7 @@ main.member_info section.popShow {
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
+  -webkit-transition: .3s;
   transition: .3s;
 }
 
