@@ -316,7 +316,7 @@
                 transform: translateX(-50%);
                 background-color: rgba(2, 79, 63, 1);
                 border: 2px solid rgba(16, 197, 177, 1);
-                width: 1000px;
+                width: 80%;
                 height: 480px;
                 border-radius: 5px;
                 overflow: auto;
@@ -392,6 +392,14 @@
         height: 480px;
         border-radius: 5px;
 
+        .roleArea{
+
+            text-align: center;
+
+            @media (max-width:900px){
+                margin-bottom: 40px;
+            }
+
         .myRoleBlock,
         .doubleArrow,
         .yourRoleBlock {
@@ -400,7 +408,9 @@
         }
 
         .myRoleBlock {
-            margin-left: 185px;
+
+            //border: 1px solid yellow;
+
 
             .myRoleP {
                 margin-bottom: 20px;
@@ -410,6 +420,26 @@
 
             .myRoleImg {
                 width: 230px;
+                @media (max-width:900px){
+                    width:150px;
+                    //border: 1px solid orangered;
+                }
+
+                @media (max-width:700px){
+                    width:100px;
+                    //border: 1px solid orangered;
+                }
+
+                @media (max-width:500px){
+                    width:80px;
+                    //border: 1px solid orangered;
+                }
+
+
+                img{
+                    width: 100%;
+                }
+    
             }
 
             .myRoleNameBlock {
@@ -427,10 +457,30 @@
             height: 100px;
             font-size: 100px;
             margin: 0 30px;
+            //border: 1px solid purple;
+
+            @media (max-width:600px){
+                width: 80px;
+                height: 80px;
+                font-size: 80px;
+                margin: 0 20px;
+                }
+
+                @media (max-width:450px){
+                    width: 60px;
+                    height: 60px;
+                    font-size: 60px;
+                    margin: 0 15px;
+                    }
+    
+
         }
 
 
         .yourRoleBlock {
+
+            //border: 1px solid yellow;   
+
 
             .yourRoleP {
                 margin-bottom: 20px;
@@ -443,6 +493,22 @@
 
             .yourRoleImg {
                 width: 230px;
+                @media (max-width:900px){
+                    width:150px;
+                    //border: 1px solid orangered;
+                }
+
+                @media (max-width:700px){
+                    width:100px;
+                    //border: 1px solid orangered;
+                }
+
+                @media (max-width:500px){
+                    width:80px;
+                    //border: 1px solid orangered;
+                }
+
+
             }
 
             .yourRoleNameBlock {
@@ -456,7 +522,7 @@
 
         }
 
-
+        }
 
         .closeBtn13 {
             background-color: rgba(16, 197, 177, 1);
@@ -481,11 +547,17 @@
             p {
                 margin-top: 30px;
                 font-size: 24px;
+
+                @media (max-width:900px){
+                    margin-bottom: 40px;
+                }
+
+
             }
 
 
         }
-
+    
         .confirmBlk13 {
 
             display: flex;
@@ -572,13 +644,8 @@
             font-size: 32px;
         }
 
-
-
-    }
-
 }
-
-
+}
 
 
 /////////////////////pop視窗

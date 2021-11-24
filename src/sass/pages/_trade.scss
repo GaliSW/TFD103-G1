@@ -209,7 +209,8 @@
 
 .ypagey {
 
-    padding-bottom: 80px;
+    //padding-bottom: 80px;
+    //border: 1px solid red;
     li{
         a{
             text-decoration: none;
@@ -479,6 +480,10 @@
         }
     }
 
+
+//////////角色管理POP
+
+
     .popContent3{
         text-align: center;
         color: rgba(96, 205, 144, 1);
@@ -506,7 +511,7 @@
             }
 
             .itemFlex{
-                display: flex;
+                display: block;
                 border: 1px solid rgba(16, 197, 177, 1);
                 align-items: center;
                 justify-content: space-between;
@@ -650,6 +655,9 @@
                 justify-content: space-between;
                 padding: 20px 0;
 
+                
+
+
                 p{
                     font-size: 24px;
                 }
@@ -781,26 +789,61 @@
     margin: 0 auto;
     //@include border();
 
+
+
 .containerFlex{
+    
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
+    //@include border();
     width: 100%;
-    // flex-direction: row;
-    //@include border(1,blue);
+    
 }
 
-.container {
+
+.container{
+
+    //border: 1px solid blue;
+    margin-bottom: 30px;
+    // margin: 0 30px 30px 30px;
+    display: flex;
+    width: 25%;
+    justify-content: center;
+
+
+
+    @media (max-width:767.98px) {
+        width: 33%;
+    }
+
+    @media (max-width:530px) {
+        width: 48%;
+    }
+
+
+
+    @media (max-width:413.98px) {
+        width: 50%;
+    }
+}
+
+.containerInner {
     border: 1px solid #60cd90;
     // margin-right: 50px;
     margin-bottom: 50px;
-    width: 25%;
+    width: 90%;
     flex-wrap: wrap;
     justify-content: center;
     // align-items: center;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+    @media (max-width:1200px) {
+        width: 80%;
+    }
+
+
 
     a{
         display: inline-block;
@@ -820,19 +863,42 @@
     transform: translateY(-18%);
     //background: white;
     background: #60cd90;
+
+    @media (max-width:1200px) {
+        transform: translateY(-3%);
+    }
+
+    @media (max-width:992px) {
+        transform: translateY(-5%);
+    }
+
+    @media (max-width:575.98px) {
+        transform: translateY(-5%);
+    }
+
+    @media (max-width:530px) {
+        transform: translateY(-35%);
+    }
+
 }
 
 .container:hover .features-list {
     opacity: 1;
+    background: #60cd90;
 }
 
 .container:hover span {
-    transform: translateY(25%);
+    transform: translateY(15%);
 }
 
 .container:hover .content h2 {
     opacity: 0;
 }
+
+.container:hover .content h3 {
+    opacity: 0;
+}
+
 
 .container:hover .cardImg {
     width: 65%;
@@ -844,6 +910,7 @@
 }
 
 .inner {
+    //border: 1px solid orange;
     width: 100%;
     height: 400px;
     //background-color: pink;
@@ -852,6 +919,33 @@
     background-position: center;
     background-repeat: no-repeat;
     /* overflow: hidden; */
+
+    @media (max-width:1200px) {
+        height: 350px;
+    }
+
+    @media (max-width:992px) {
+        height: 270px;
+    }
+
+    @media (max-width:760px) {
+        height: 270px;
+    }
+
+
+    @media (max-width:575.98px) {
+        height: 250px;
+    }
+
+    @media (max-width:540px) {
+        height: 280px;
+    }
+
+    @media (max-width:420px) {
+        height: 250px;
+    }
+
+
 }
 
 .inner img {
@@ -883,17 +977,44 @@
 
 
 .lower {
+    //rightBlockborder: 1px solid red;
     display: flex;
     justify-content: flex-end;
     align-content: center;
     flex-direction: column;
     background: transparent;
     position: relative;
-    transform: translateY(10%);
+    transform: translateY(3%);
     transition: all .5s ease;
-    height: 120px;  
-    // min-height: 40%;
-    // height: 100px;
+    width: 100%;
+    height: 32%;
+
+    @media (max-width:1200px) {
+        height: 35%;
+        transform: translateY(40%);
+
+    }
+
+    @media (max-width:992px) {
+        height: 35%;
+        transform: translateY(10%);
+
+    }
+
+    @media (max-width:590px) and (max-width:600px){
+        height: 47%;
+        transform: translateY(50%);
+    }
+
+
+
+    @media (max-width:413.98px) {
+        height: 47%;
+        transform: translateY(10%);
+
+    }
+
+
 
     .ysellerImgy, .ysellerInfoy{
         display: inline-block;
@@ -927,6 +1048,7 @@
     opacity: 0;
     transition: all .2s ease;
     text-align: center;
+    //border: 2px solid green;
 }
 
 
@@ -962,7 +1084,16 @@ top: 5px; */
     font-weight: 100;
     cursor: pointer;
     transition: all .3s ease;
+
+
+    // @media (min-width:668px) and (max-width:768px){
+    //     padding-top: 25px;
+    // }
 }
+
+
+
+
 }
 
 // 沒有角色alert視窗
