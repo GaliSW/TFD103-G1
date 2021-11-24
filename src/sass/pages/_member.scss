@@ -9,6 +9,7 @@ main.member {
     box-sizing: border-box;
     margin: 0;
     margin-top: 90px;
+    min-height: 100vh;
 
 
     .main_contain {
@@ -542,7 +543,7 @@ main.trading_list {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../src/image/member/back.jpg);
-
+    min-height: 100vh;
     padding-bottom: 100px;
     width: 100%;
     background-position: left top;
@@ -821,7 +822,7 @@ main.points_list {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../src/image/member/back.jpg);
-
+    min-height: 100vh;
     padding-bottom: 100px;
     width: 100%;
     background-position: left top;
@@ -1060,7 +1061,6 @@ main.member_info {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../src/image/member/back.jpg);
-
     padding-bottom: 100px;
     width: 100%;
     background-position: left top;
