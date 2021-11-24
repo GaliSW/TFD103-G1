@@ -152,18 +152,16 @@
                 },
                 dataType: "text",
                 success: function (response) {
-
                     console.log(btn);
                     if (response == "YY") {
                         btn.style.background = "rgba(96, 205, 144, 1)";
                         btn.style.color = "rgba(14, 52, 97, 1)";
-                        btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
+                        btn.style.boder = "3px solid rgba(14, 52, 97, 1)";
                         btn.innerText = "已收藏";
                     } else if (response == "YN") {
                         btn.style.background = "rgba(14, 52, 97, 1)";
                         btn.style.color = "rgba(96, 205, 144, 1)";
-                        btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
-                        btn.innerText = "收藏";
+                        btn.style.boder = "3px solid rgba(14, 52, 97, 1)";
                     }
                 }
             });
@@ -570,7 +568,6 @@
                     let roleList1Mark = document.getElementById('roleList1Mark');
                     roleList1Mark.innerHTML = "";
 
-
                     $.each(response, function (index, row) {
                         let str = `<li onclick=toTwo(this)>
                                             <div class="imgBlock1Mark" id="imgBlock1Mark" name="${row.GACHA_ID}">
@@ -761,14 +758,14 @@
                 dataType: "text",
                 success: function (response) {
                     if (response == "N") {
-                        let selfBlk = document.getElementById('selfBlk');
-                        selfBlk.classList.remove('none');
+                        // let selfBlk = document.getElementById('selfBlk');
+                        // selfBlk.classList.remove('none');
                     } else {
                         return false;
                     }
                 }
             });
-
+            
             $.ajax({
                 method: "POST",
                 url: "../php/product/loadMyFav.php",
@@ -785,8 +782,8 @@
                         btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
                         btn.innerText = "已收藏";
                     } else if (response == "N") {
-                        alert('N');
-                        // document.getElementById('tologinBlk').remove('none');
+                        let tologinBtn = document.getElementById('tologinBlk');
+                        tologinBtn.classList.remove('none');
                     } else if (response == "YY") {
                         deletemyfav(productid);
                         btn.style.background = "rgba(14, 52, 97, 1)";
@@ -886,6 +883,12 @@
             </div>
         </section>
     </div>
+    <div class="upup">
+        <i class="fas fa-arrow-circle-up totop"></i>
+    </div>
+
+    <script src="../js/news/news_in.js"></script> 
+
 </body>
 
 </html>

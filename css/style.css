@@ -698,7 +698,6 @@
   background-color: white;
   border-radius: 24%;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
-  overflow: hidden;
   font-size: 16px;
   transition: .3s linear;
   position: relative;
@@ -708,25 +707,6 @@
   transform: scale(1.2);
   border-radius: 50%;
   color: #1d2b76;
-}
-
-.footer .iconLink a i::before {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background-size: 200% 200%;
-  background-position: 75% 75%;
-  top: 0;
-  left: 5%;
-  line-height: 80px;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background .5s linear;
-}
-
-.footer .iconLink a:hover i::before {
-  background-position: 0% 0%;
 }
 
 .footer .notice {
@@ -821,6 +801,7 @@ main.collection {
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
+  min-height: 100vh;
   box-sizing: border-box;
   margin-top: 90px;
 }
@@ -1727,30 +1708,84 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
   overflow-y: hidden;
   width: 100%;
   height: 100vh;
-  background-image: url(../src/image/index/entry.jpg);
+  background-image: url(../src/image/index/entry.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .entry .entrybg .contentBox {
-  max-width: 1400px;
+  border: 1px solid #4a418c;
+  margin: 0 auto;
+  max-width: 1440px;
   width: 100%;
+  height: 100%;
 }
 
 .entry .entrybg .contentBox .logoTitle {
-  width: 250px;
-  margin-left: 10%;
+  position: absolute;
+  width: 350px;
+  left: 38%;
+  transform: translate(-50%);
+  margin-top: -5%;
+  transform: rotate(7deg);
+  z-index: 1;
 }
 
 .entry .entrybg .contentBox .logoTitle img {
   width: 100%;
 }
 
+@keyframes picDraw1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes picDraw2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.entry .entrybg .contentBox .boxS {
+  position: absolute;
+  width: 500px;
+  top: 20%;
+  left: 32%;
+  z-index: 0;
+}
+
+.entry .entrybg .contentBox .boxS .pic1 {
+  width: 500px;
+  animation: picDraw1 5s ease-in-out infinite;
+}
+
+.entry .entrybg .contentBox .boxS .pic2 {
+  position: absolute;
+  width: 500px;
+  left: 0;
+  top: 0;
+  animation: picDraw2 5s ease-in-out infinite;
+}
+
 .entry .entrybg .contentBox .frontSide {
   width: 210px;
-  height: 160px;
   margin-left: 420px;
-  margin-top: -110px;
+  margin-top: 40%;
+  position: relative;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .entry .entrybg .contentBox .frontSide a {
@@ -1762,20 +1797,24 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
   font-size: 48px;
   font-weight: 400;
   color: #fff;
-  background-color: #60cd90;
-  padding: 12% 22%;
+  background-color: #0e3461;
+  padding: 6% 22%;
   border-radius: 20px;
   text-align: center;
 }
 
 .entry .entrybg .contentBox .frontSide a h1:hover {
-  background-color: #0e3461;
+  background-color: #60cd90;
+  color: #0e3461;
+  transform: scale(1.2);
+  transition: all 0.6s;
 }
 
 .entry .entrybg .contentBox .backSide {
   width: 210px;
-  height: 160px;
   margin-left: 800px;
+  margin-top: -6.5%;
+  position: relative;
 }
 
 .entry .entrybg .contentBox .backSide a {
@@ -1788,37 +1827,349 @@ main.deposit div.container div.deposit_pay form.credit button:hover {
   font-weight: 400;
   color: #fff;
   background-color: #0e3461;
-  padding: 12% 22%;
+  padding: 6% 22%;
   border-radius: 20px;
   text-align: center;
 }
 
 .entry .entrybg .contentBox .backSide a h1:hover {
   background-color: #60cd90;
+  color: #0e3461;
+  transform: scale(1.2);
+  transition: all 0.6s;
 }
 
-.entry .entrybg .contentBox .word {
-  width: 400px;
-  margin-left: 57%;
-  transform: translateX(-60%);
-  margin-top: -10%;
+.entry .entrybg .contentBox .left_sidebar.-open {
+  transform: translate(0%, 0%);
 }
 
-.entry .entrybg .contentBox .word p {
-  color: #302e81;
-  font-size: 28px;
-  line-height: 30px;
+.entry .entrybg .contentBox .left_sidebar2.-open {
+  transform: translate(0%, -50%);
 }
 
-.entry .entrybg .contentBox .roleLeft {
-  width: 500px;
-  transform: rotate(5deg);
-  position: relative;
+.entry .entrybg .contentBox .left_sidebar3.-open {
+  transform: translate(0%, -100%);
+}
+
+.entry .entrybg .contentBox .RoleF {
+  position: fixed;
+  top: .5%;
+  left: 0;
+  transform: translate(-100%, 0%);
+  min-height: 180px;
+  width: 280px;
+  background-color: #9fcfec;
+  color: black;
+  padding: 10px 20px 10px 10px;
+  border-radius: 0 10px 10px 0;
+  z-index: 100;
+  transition: transform 1s;
+}
+
+.entry .entrybg .contentBox .RoleF .btDL {
+  background: none;
+  position: absolute;
+  left: 99%;
+  top: -15px;
+  transform: translate(100%, 50%);
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.entry .entrybg .contentBox .RoleF .btDL .RoleLeft {
+  width: 180px;
+  position: absolute;
+}
+
+.entry .entrybg .contentBox .RoleF .btDL .RoleLeft img {
+  width: 100%;
+}
+
+.entry .entrybg .contentBox .RoleF .sidebar .bon {
+  display: inline-block;
+  width: 150px;
+}
+
+.entry .entrybg .contentBox .RoleF .sidebar .bon h3 {
+  margin-left: 15%;
+}
+
+.entry .entrybg .contentBox .RoleF .sidebar .bon img {
+  width: 100%;
+  margin-left: 50%;
+  margin-top: -50%;
+}
+
+.entry .entrybg .contentBox .RoleF2 {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  min-height: 180px;
+  width: 280px;
+  background-color: #f5f3e4;
+  color: black;
+  padding: 10px 20px 10px 10px;
+  border-radius: 0 10px 10px 0;
+  z-index: 100;
+  transition: transform 1s;
+}
+
+.entry .entrybg .contentBox .RoleF2 .btDL2 {
+  background: none;
+  position: absolute;
+  left: 99%;
+  top: -6%;
+  transform: translate(100%, 50%);
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.entry .entrybg .contentBox .RoleF2 .btDL2 .RoleLeft2 {
+  width: 180px;
+  position: absolute;
+}
+
+.entry .entrybg .contentBox .RoleF2 .btDL2 .RoleLeft2 img {
+  width: 100%;
+}
+
+.entry .entrybg .contentBox .RoleF2 .sidebar2 .bon {
+  display: inline-block;
+  width: 150px;
+}
+
+.entry .entrybg .contentBox .RoleF2 .sidebar2 .bon h3 {
+  margin-left: 15%;
+}
+
+.entry .entrybg .contentBox .RoleF2 .sidebar2 .bon img {
+  width: 100%;
+  margin-left: 50%;
+  margin-top: -47%;
+}
+
+.entry .entrybg .contentBox .RoleF3 {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  transform: translate(-100%, -100%);
+  min-height: 180px;
+  width: 280px;
+  background-color: #9fcfec;
+  color: black;
+  padding: 10px 20px 10px 10px;
+  border-radius: 0 10px 10px 0;
+  z-index: 100;
+  transition: transform 1s;
+}
+
+.entry .entrybg .contentBox .RoleF3 .btDL3 {
+  background: none;
+  position: absolute;
+  left: 99%;
+  top: -6%;
+  transform: translate(100%, 50%);
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.entry .entrybg .contentBox .RoleF3 .btDL3 .RoleLeft3 {
+  width: 180px;
+  position: absolute;
+}
+
+.entry .entrybg .contentBox .RoleF3 .btDL3 .RoleLeft3 img {
+  width: 100%;
+}
+
+.entry .entrybg .contentBox .RoleF3 .sidebar3 .bon {
+  display: inline-block;
+  width: 150px;
+}
+
+.entry .entrybg .contentBox .RoleF3 .sidebar3 .bon h3 {
+  margin-left: 15%;
+}
+
+.entry .entrybg .contentBox .RoleF3 .sidebar3 .bon img {
+  width: 100%;
+  margin-left: 50%;
+  margin-top: -47%;
+}
+
+.entry .entrybg .contentBox .right_sidebar.-open {
+  transform: translate(0%, -50%);
+}
+
+.entry .entrybg .contentBox .right_sidebar3.-open {
+  transform: translate(0%, -100%);
+}
+
+.entry .entrybg .contentBox .RoleR {
+  position: fixed;
+  top: 12%;
+  right: 0;
+  transform: translate(100%, -50%);
+  min-height: 180px;
+  width: 280px;
+  background-color: #f5f3e4;
+  color: black;
+  padding: 10px 20px 10px 10px;
+  border-radius: 10px 0 0 10px;
+  z-index: 100;
+  transition: transform 1s;
+}
+
+.entry .entrybg .contentBox .RoleR .btD {
+  background: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, -50%);
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.entry .entrybg .contentBox .RoleR .btD .RoleRight {
+  width: 180px;
+  position: absolute;
+  right: 0;
   top: 0;
 }
 
-.entry .entrybg .contentBox .roleLeft img {
+.entry .entrybg .contentBox .RoleR .btD .RoleRight img {
   width: 100%;
+}
+
+.entry .entrybg .contentBox .RoleR .sidebar4 {
+  display: inline-block;
+}
+
+.entry .entrybg .contentBox .RoleR .sidebar4 .bon {
+  width: 150px;
+}
+
+.entry .entrybg .contentBox .RoleR .sidebar4 .bon h3 {
+  margin-left: 15%;
+}
+
+.entry .entrybg .contentBox .RoleR .sidebar4 .bon img {
+  width: 100%;
+  margin-left: 50%;
+  margin-top: -47%;
+}
+
+.entry .entrybg .contentBox .RoleR2 {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translate(100%, -50%);
+  min-height: 180px;
+  width: 280px;
+  background-color: #9fcfec;
+  color: black;
+  padding: 10px 20px 10px 10px;
+  border-radius: 10px 0 0 10px;
+  z-index: 100;
+  transition: transform 1s;
+}
+
+.entry .entrybg .contentBox .RoleR2 .btD2 {
+  background: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.entry .entrybg .contentBox .RoleR2 .btD2 .RoleRight2 {
+  width: 180px;
+  position: absolute;
+  right: 0;
+  top: -80px;
+  transform: translateY(-50%);
+}
+
+.entry .entrybg .contentBox .RoleR2 .btD2 .RoleRight2 img {
+  width: 100%;
+}
+
+.entry .entrybg .contentBox .RoleR2 .sidebar5 {
+  display: inline-block;
+}
+
+.entry .entrybg .contentBox .RoleR2 .sidebar5 .bon {
+  width: 150px;
+}
+
+.entry .entrybg .contentBox .RoleR2 .sidebar5 .bon h3 {
+  margin-left: 145%;
+  margin-top: -102%;
+}
+
+.entry .entrybg .contentBox .RoleR2 .sidebar5 .bon img {
+  width: 100%;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+.entry .entrybg .contentBox .RoleR3 {
+  position: fixed;
+  top: 100%;
+  right: 0;
+  transform: translate(100%, -100%);
+  min-height: 180px;
+  width: 280px;
+  background-color: #f5f3e4;
+  color: black;
+  padding: 10px 20px 10px 10px;
+  border-radius: 10px 0 0 10px;
+  z-index: 100;
+  transition: transform 1s;
+}
+
+.entry .entrybg .contentBox .RoleR3 .btD3 {
+  background: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform: translate(-100%, -100%);
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.entry .entrybg .contentBox .RoleR3 .btD3 .RoleRight3 {
+  width: 180px;
+  position: absolute;
+  right: 0;
+  top: -166px;
+  transform: translateY(-100%);
+}
+
+.entry .entrybg .contentBox .RoleR3 .btD3 .RoleRight3 img {
+  width: 100%;
+}
+
+.entry .entrybg .contentBox .RoleR3 .sidebar6 {
+  display: inline-block;
+}
+
+.entry .entrybg .contentBox .RoleR3 .sidebar6 .bon {
+  width: 150px;
+}
+
+.entry .entrybg .contentBox .RoleR3 .sidebar6 .bon h3 {
+  margin-left: 145%;
+  margin-top: -102%;
+}
+
+.entry .entrybg .contentBox .RoleR3 .sidebar6 .bon img {
+  width: 100%;
+  margin-left: 25%;
+  margin-top: 5%;
 }
 
 * {
@@ -5160,7 +5511,13 @@ body {
 }
 
 .index .change {
-  padding-bottom: 10%;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .change {
+    padding-bottom: 10%;
+  }
 }
 
 .index .change .txt {
@@ -5429,6 +5786,7 @@ body {
 }
 
 .out .mama .btnbtn {
+  margin: 50px;
   cursor: pointer;
   color: #60cd90;
   width: 20;
@@ -5588,12 +5946,73 @@ body {
   box-shadow: 0 10px 15px #00000060;
 }
 
+@media (min-width: 992px) {
+  .out .total .page {
+    max-width: 1200px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .out .total .page {
+    width: 100%;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .out .total .page {
+    width: 100%;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .out .total .page {
+    width: 100%;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .out .total .page {
+    width: 100%;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .out .total .page {
+    width: 100%;
+  }
+}
+
 .out .total .page .con-2 {
   width: 480px;
   background-color: black;
   text-align: center;
   color: #efefff;
   margin-top: 200px;
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .out .total .page .con-2 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .out .total .page .con-2 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .out .total .page .con-2 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .out .total .page .con-2 {
+    width: 100%;
+  }
 }
 
 .out .total .page h3 {
@@ -6606,6 +7025,7 @@ main.member {
   box-sizing: border-box;
   margin: 0;
   margin-top: 90px;
+  min-height: 100vh;
 }
 
 main.member .main_contain {
@@ -7184,6 +7604,7 @@ main.trading_list {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../src/image/member/back.jpg);
+  min-height: 100vh;
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;
@@ -7480,6 +7901,7 @@ main.points_list {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../src/image/member/back.jpg);
+  min-height: 100vh;
   padding-bottom: 100px;
   width: 100%;
   background-position: left top;

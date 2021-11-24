@@ -19,8 +19,42 @@ let vm = new Vue({
       vm.$data.forgetError = false;
     },
 
-    loginCheck: function (event) {
+    forgetCheck: function (event) {
       event.preventDefault();
+      let email = $("#email").val();
+      email = $.trim(email);
+      $.ajax({
+        method: "POST",
+        url: "../php/member/forget.php",
+        data: {
+          email: email,
+        },
+        dataType: "text",
+        success: function (response) {
+          if (response == 1) {
+            vm.$data.sendOk = true;
+            vm.$data.forgetError = false;
+          } else {
+            vm.$data.forgetError = true;
+          }
+        },
+        error: function (exception) {
+          alert("發生錯誤: " + exception.status);
+        },
+      });
+    },
+  },
+});
+
+function visiblePwd() {
+  if (password.type === "password") {
+    password.type = "text";
+  } else {
+    password.type = "password";
+  }
+}
+function loginCheck () {
+      // e.preventDefault();
       // vm.$data.loginError = true;
       let loginBtn = document.querySelector(".btn_login");
       let mgUser = document.getElementById("userId").value;
@@ -61,38 +95,4 @@ let vm = new Vue({
           },
         });
       }
-    },
-    forgetCheck: function (event) {
-      event.preventDefault();
-      let email = $("#email").val();
-      email = $.trim(email);
-      $.ajax({
-        method: "POST",
-        url: "../php/member/forget.php",
-        data: {
-          email: email,
-        },
-        dataType: "text",
-        success: function (response) {
-          if (response == 1) {
-            vm.$data.sendOk = true;
-            vm.$data.forgetError = false;
-          } else {
-            vm.$data.forgetError = true;
-          }
-        },
-        error: function (exception) {
-          alert("發生錯誤: " + exception.status);
-        },
-      });
-    },
-  },
-});
-
-function visiblePwd() {
-  if (password.type === "password") {
-    password.type = "text";
-  } else {
-    password.type = "password";
-  }
-}
+    }

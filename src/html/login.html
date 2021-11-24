@@ -113,7 +113,7 @@
                         <label for="visible" class="visible">顯示密碼</label>
                         <span id="login_error" class="error" :class="{'bookmark': loginError }">帳號密碼有誤</span>
 
-                        <button type="button" class="btn_login" @click=loginCheck($event)>登入</button>
+                        <button type="button" class="btn_login" onclick="loginCheck()">登入</button>
 
                     </form>
                     <a class="rwd_signup" href="./singup.html">
@@ -210,10 +210,14 @@
             </div>
         </section>
     </div>
+    <div class="upup">
+        <i class="fas fa-arrow-circle-up totop"></i>
+    </div>
+
 
     @@include('./footer.html')
 
-
+    <script src="../js/news/news_in.js"></script> 
     <script src="../js/member/login.js"></script>
     <script src="../js/header/header.js"></script>
     <script src="../js/member/loginPop.js"></script>

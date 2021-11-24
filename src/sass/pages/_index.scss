@@ -890,7 +890,10 @@ body{
     // 角色交換
     .change{
         // @include border;
-        padding-bottom: 10%;
+        padding-bottom: 5%;
+        @include phone{
+            padding-bottom: 10%;
+        }
         .txt{
             width: 380px;
             height: 100px;
