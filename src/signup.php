@@ -9,9 +9,9 @@
     use PHPMailer\PHPMailer\Exception;
 
     //設定檔案路徑
-    include './Exception.php';
-    include  './PHPMailer.php';
-    include  './SMTP.php';
+    require './src/Exception.php';
+    require './src/PHPMailer.php';
+    require './src/SMTP.php';
     //---------------------------------------------------
     //欄位名稱
     $userId = htmlspecialchars($_POST["userId"]);
@@ -91,7 +91,7 @@ function sendMail($recipient, $mailTitle, $mailBody, $mailAltBody)
 
         //$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
         $mail->SMTPSecure = "ssl"; // Gmail要透過SSL連線
-        $mail->Port       = 25; // SMTP TCP port 
+        $mail->Port       = 465; // SMTP TCP port 
 
         //設定收件人資料
         $mail->setFrom('tfd103g1@gmail.com', ''); // 寄件人(透過Gmail發送會顯示Gmail帳號為寄件者)

@@ -227,7 +227,7 @@
                         </section>
                     </template>
                 </div>
-                <a href="./points_list.html">點數不夠？</a>
+                <button style="background-color: none;"><a onclick="check()">點數不夠？</a></button>
             </div>
         </div>
         <section class="pintooBlk" id="pintooBlk">
@@ -336,7 +336,7 @@
     <section id="rolesPop" class="none">
         <div class="roleMaskLayer">
             <div class="rolePopUpBox">
-                <div class="roleCloseBtn">
+                <div class="roleCloseBtn" onclick="popCloseX(this)">
                     x
                 </div>
                 <div id="rolePopContent">
@@ -363,6 +363,7 @@
 <script src="../js/gacha/pagination.js"></script>
 <script src="../js/gacha/gachaScreen.js"></script>
 <script src="../js/header/header.js"></script>
+<script src="../js/news/news_in.js"></script>
 <script>
     window.onload = function () {
         status();
@@ -373,6 +374,24 @@
         resize();
         window.addEventListener('resize', resize, false);
         callPoints();
+    }
+    function check() {
+        $.ajax({
+            method: "POST",
+            url: "../php/Gacha/playCheck.php",
+            data: {},
+            dataType: "text",
+            success: function (response) {
+                if (response == "Y") {
+                    location.href = "./deposit.html";
+                } else if (response == "false") {
+                    document.getElementById('toLoginBlk').classList.remove('none');
+                }
+            },
+            error: function (exception) {
+                alert("數據載入失敗: " + exception.status);
+            }
+        });
     }
     function callPoints() {
         $.ajax({

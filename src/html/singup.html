@@ -39,7 +39,7 @@
                                     <label for="userid">帳號:</label>
                                     <br>
                                     <input type="text" id="userId" placeholder="*請輸入英數混合8-16位數，區分英文大小寫" name="userId"
-                                        @blur=showIdError() v-model="id" >
+                                        @blur=showIdError() v-model="id">
                                 </div>
                                 <div class="error" :class="{'error_on': idError}">
                                     <span>請輸入英數混合8-16位數，英文區分大小寫!</span>
@@ -111,9 +111,6 @@
     </div>
 
     @@include('./footer.html')
-
-
-    <script src="../js/news/news_in.js"></script> 
 
     <script src="../js/vendor/js/vue.js"></script>
     <script src="../js/member/sign_up.js"> </script>
