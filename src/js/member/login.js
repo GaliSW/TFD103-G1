@@ -52,6 +52,7 @@ let vm = new Vue({
               let veriBlk = document.getElementById("veriBlk");
               veriBlk.classList.remove("none");
             } else {
+
               vm.$data.loginError = true;
             }
           },

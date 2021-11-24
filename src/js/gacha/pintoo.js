@@ -227,7 +227,7 @@ Ping.prototype.local = function (img) {
         }
     } else {
         let liArr = document.getElementById('ul').childNodes;
-        for (i = 0; i < liArr.length - 1; i++) {
+        for (let i = 0; i < liArr.length - 1; i++) {
             liArr[i].style.background = `url(../image/ROLE/${img})`;
         }
         for (let i = 0; i < this.len; i++) {

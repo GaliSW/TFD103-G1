@@ -29,21 +29,21 @@ exports.sass = sassonline
 const babel = require('gulp-babel');
 
 function babel5() {
-    return src('./js/**/*.js')
+    return src('./src/js/**/*.js')
         .pipe(babel({
             presets: ['@babel/env']
         }))
-        .pipe(dest('dist/js'));
+        .pipe(dest('dist/src/js'));
 }
 exports.js = babel5
 
 const imagemin = require('gulp-imagemin');
 function min_images() {
-    return src('./image/**/*.*')
+    return src('./src/image/**/*.*')
         .pipe(imagemin([
             imagemin.mozjpeg({ quality: 70, progressive: true }) // 壓縮品質      quality越低 -> 壓縮越大 -> 品質越差 
         ]))
-        .pipe(dest('dist/images'))
+        .pipe(dest('dist/src/image'))
 }
 
 exports.image = min_images;
@@ -66,12 +66,12 @@ function clear() {
 const fileinclude = require('gulp-file-include');
 
 function includeHTML() {
-    return src('./src/*.html')
+    return src('./src/html/*.html')
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(dest('./dist'));
+        .pipe(dest('./dist/src/html'));
 }
 
 exports.html = includeHTML;
