@@ -11,7 +11,6 @@
         display: flex;
         justify-content: center;
         padding-top: 5px;
-        
         a{
             margin: 5px 20px;
             padding: 4px 6px;
@@ -22,7 +21,6 @@
             border-radius: 24%;
             box-shadow: 6px 6px 12px rgba(0, 0, 0, .15),
                         -6px -6px 12px rgba(255, 255, 255, .1);
-            overflow: hidden;
             font-size: $fontSize;
             transition: .3s linear;
             position: relative;

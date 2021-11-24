@@ -819,7 +819,6 @@
   border-radius: 24%;
   -webkit-box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
           box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.1);
-  overflow: hidden;
   font-size: 16px;
   -webkit-transition: .3s linear;
   transition: .3s linear;
@@ -833,29 +832,6 @@
   color: #1d2b76;
 }
 
-<<<<<<< HEAD
-.footer .iconLink a i::before {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background-size: 200% 200%;
-  background-position: 75% 75%;
-  top: 0;
-  left: 5%;
-  line-height: 80px;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-transition: background .5s linear;
-  transition: background .5s linear;
-}
-
-.footer .iconLink a:hover i::before {
-  background-position: 0% 0%;
-}
-
-=======
->>>>>>> Calista
 .footer .notice {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -10749,7 +10725,6 @@ main.member_info section.popShow {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-<<<<<<< HEAD
   color: #60cd90;
   color: #10c5b1;
   font-size: 16px;
@@ -10867,8 +10842,6 @@ main.member_info section.popShow {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-=======
->>>>>>> Calista
   color: #60cd90;
   color: #10c5b1;
   font-size: 16px;
