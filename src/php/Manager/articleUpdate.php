@@ -19,7 +19,7 @@
         // $filePath = getFilePath().$_FILES["file"]["name"];
 
         //檔案最終存放位置
-        $filePath = $ServerRoot."/src/image/intro/".$fileName;
+        $filePath = $ServerRoot."/TFD103-G1/src/image/intro/".$fileName;
         
 
         //將暫存檔搬移到正確位置
