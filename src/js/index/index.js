@@ -132,7 +132,6 @@ gsap.fromTo('.car05P', {
     repeat: -1
 });
 
-
 gsap.to('.effect', {
     rotation: 360,
     duration: 50,
@@ -283,11 +282,3 @@ $(function (){
         resizeWindow();
     });
 })
-
-// $(document).ready(function() {
-//     $('.upup').click(function(event) {
-//       event.preventDefault();
-      
-//       $('html, body').animate({scrollTop: 0}, 100);
-//     })
-// });

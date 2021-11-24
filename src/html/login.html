@@ -113,7 +113,7 @@
                         <label for="visible" class="visible">顯示密碼</label>
                         <span id="login_error" class="error" :class="{'bookmark': loginError }">帳號密碼有誤</span>
 
-                        <button type="button" class="btn_login" @click=loginCheck($event)>登入</button>
+                        <button type="button" class="btn_login" onclick="loginCheck()">登入</button>
 
                     </form>
                     <a class="rwd_signup" href="./singup.html">

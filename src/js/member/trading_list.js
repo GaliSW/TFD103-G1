@@ -41,9 +41,7 @@ function displaySale() {
         );
       });
     },
-    error: function (exception) {
-      alert("發生錯誤: " + exception.status);
-    },
+    
   });
 }
 
@@ -121,9 +119,7 @@ function displayBuy() {
         );
       });
     },
-    error: function (exception) {
-      alert("發生錯誤: " + exception.status);
-    },
+    
   });
 }
 
@@ -158,9 +154,7 @@ function displayBuyCng() {
         );
       });
     },
-    error: function (exception) {
-      alert("發生錯誤: " + exception.status);
-    },
+    
   });
 }
 
@@ -169,7 +163,7 @@ function displaySaleCng() {
   let FilterSaleCng = document.getElementById("saleChangeFilter").value;
   $.ajax({
     method: "post",
-    url: "../php/member/trading_change_buy.php",
+    url: "../php/member/trading_change_sale.php",
     data: {
       Filter: FilterSaleCng,
     },
@@ -193,8 +187,6 @@ function displaySaleCng() {
         );
       });
     },
-    error: function (exception) {
-      alert("發生錯誤: " + exception.status);
-    },
+   
   });
 }

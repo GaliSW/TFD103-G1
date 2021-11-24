@@ -47,7 +47,6 @@ let vm = new Vue({
         dataType: "text",
         success: function (response) {
           if (response == "Y") {
-            alert("ok");
               balance();
           } else {
             alert("儲值失敗")
@@ -73,9 +72,6 @@ function balance(){
       if(response > 0){
         $("#result").html(response);
       }
-    },
-    error: function (exception) {
-      alert("發生錯誤: " + exception.status);
     },
   });
 }
