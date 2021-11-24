@@ -116,9 +116,9 @@ let vm = new Vue({
 });
 
 // 重新點選帳號清空
-function blank(){
-  vm.$data.id="";
-};
+// function blank(){
+//   vm.$data.id="";
+// };
 
 // 註冊成功跳轉驗證
 function trans(){

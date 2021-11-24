@@ -33,7 +33,7 @@ function babel5() {
         .pipe(babel({
             presets: ['@babel/env']
         }))
-        .pipe(dest('dist/js'));
+        .pipe(dest('dist/src/js'));
 }
 exports.js = babel5
 
@@ -43,7 +43,7 @@ function min_images() {
         .pipe(imagemin([
             imagemin.mozjpeg({ quality: 70, progressive: true }) // 壓縮品質      quality越低 -> 壓縮越大 -> 品質越差 
         ]))
-        .pipe(dest('dist/image'))
+        .pipe(dest('dist/src/image'))
 }
 
 exports.image = min_images;
@@ -71,7 +71,7 @@ function includeHTML() {
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(dest('./dist/html'));
+        .pipe(dest('./dist/src/html'));
 }
 
 exports.html = includeHTML;

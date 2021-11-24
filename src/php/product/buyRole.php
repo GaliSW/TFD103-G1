@@ -53,7 +53,9 @@ if ($Balance >= $Price ){
                 UPDATE PRODUCT 
                 SET AMOUNT = 0,
                     ISSHOW = 0 
-                WHERE PRODUCT_ID = $FK_PRODUCT_ID
+                WHERE PRODUCT_ID = $FK_PRODUCT_ID;
+                INSERT INTO ORDERS( FK_USERNAME_BUY, FK_PRODUCT_ID, BUYDATE)
+                VALUES('$Name', $FK_PRODUCT_ID, NOW())
                 ";
 
     $statement3 = $pdo->prepare($sql3);
