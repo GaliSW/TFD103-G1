@@ -7,6 +7,12 @@ main.signup {
     margin: 0;
     box-sizing: border-box;
     margin-top: 90px;
+    @include pad_small{
+        margin-top: 70px;
+    }
+    @include phone{
+        margin-top: 70px;
+    }
 
     .contain {
         padding-top: 100px;
