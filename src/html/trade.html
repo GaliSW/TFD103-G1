@@ -34,7 +34,90 @@
 </head>
 
 <body>
-  @@include('./header.html')
+  <header id="header">
+    <div class="container">
+        <a class="logo" href="../html/index.html">
+            <img src="../image/index/logo.png" alt="logoImg">
+        </a>
+        <nav class="navbar">
+            <ul>
+                <a href="../html/Intro.html">
+                    <li>
+                        <img src="../image/index/pic.png">
+                        消息/介紹
+                    </li>
+                </a>
+                <a href="../html/Gacha.html">
+                    <li>
+                        <img src="../image/index/pokemon.png">
+                        角色抽取
+                    </li>
+                </a>
+                <a href="../html/trade.html">
+                    <li class="Change">
+                        <img src="../image/index/role01.png">
+                        角色交易
+                    </li>
+                </a>
+            </ul>
+        </nav>
+
+        <!-- phone nav-->
+        <nav class="hamburger">
+            <div id="menuToggle">
+                <input type="checkbox" />
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="headerMenu">
+                    <a href="../html/index.html"><img src="../image/index/logo.png"></a>
+                    <a href="../html/Intro.html">
+                        <li><img src="../image/index/pic.png">消息/介紹</li>
+                    </a>
+                    <a href="../html/Gacha.html">
+                        <li><img src="../image/index/pokemon.png">角色抽取</li>
+                    </a>
+                    <a href="../html/trade.html">
+                        <li><img src="../image/index/role01.png">角色交易</li>
+                    </a>
+                    <a href="#">
+                        <div class="hamLog " id="LogOutPhone" onclick="LogOut()">登出</div>
+                    </a>
+                    <a href="#">
+                        <div class="hamLog logbt LogInPhone" id="LogInPhone" onclick="LogIn()">登入</div>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+        <!-- phone nav end -->
+
+        <div class="icon">
+            <botton type="button" class="button bt disappear" id="appear1">
+                <a href="../html/deposit.html"><i class="fas fa-coins fa-2x"></i></a>
+                <p id="headerResult"></p>
+                <div class="show">儲值</div>
+            </botton>
+            <botton type="button" class="button disappear" id="appear2">
+                <a href="../html/collection.html"><i class="fab fa-gratipay fa-2x"></i></a>
+                <div class="show">收藏</div>
+            </botton>
+            <botton type="button" class="button" onclick="memberCheck()">
+                <a href="#"><i class="fas fa-user-circle fa-2x"></i>
+                    <h5 id="headerCountResult" class="countResul _off"></h5>
+                </a>
+                <div class="show">會員</div>
+            </botton>
+            <botton type="button" id="LogOut" class="LogOut" onclick="LogOut()">
+                <a href="#">登出</a>
+            </botton>
+            <botton type="button" id="LogIn" class="LogIn logbt" onclick="LogIn()">
+                <a href="#">登入</a>
+            </botton>
+        </div>
+    </div>
+</header>
   <main class="allBlock1">
 
 
@@ -204,7 +287,7 @@
             <div class="popContent3">
               <h1>角色管理</h1>
               <div class="manageFlex">
-                <ol class="manageListOut">
+                <!-- <ol class="manageListOut">
                   <li>
                     <div class="itemFlex first">
                       <div class="leftBlock">
@@ -230,7 +313,7 @@
                       </div>
                     </div>
                   </li>
-                </ol>
+                </ol> -->
 
                 <ol class="manageList" id="manageList">
 
@@ -324,7 +407,23 @@
     <i class="fas fa-arrow-circle-up totop"></i>
   </div>
 
-  @@include('./footer.html')
+  <!-- footer -->
+  <footer class="footer">
+    <div class="iconLink">
+        <a href="#"><i class="fab fa-facebook-square fa-2x i"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter-square fa-2x i"></i></a>
+    </div>
+    <div class="notice">
+        <p>
+            本網站為緯育TibaMe前端設計工程師班第70期第一組學員專題成果作品，本平台僅供學習、展示之用。<br>
+            參考資源： 馬力歐賽車、NFT。若有侵權疑慮，您可以私訊 [ 緯育TibaMe ]，後續會由專人協助處理
+        </p>
+    </div>
+    <div class="copyright">
+        <p><i class="far fa-copyright"></i> 2021 怪哩怪汽 All Rights Reserved</p>
+    </div>
+  </footer>
 
 
   <!-- popup視窗vue & ajax -->
@@ -386,10 +485,14 @@
               $.each(response, function (index, row) {
                 let redShadow = "";
                 let shadowNone = "";
-                let trans = ""
+                let trans = "";
+                let transStr= null;
                 if (row.TRANS == 1) {
                   redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
                   shadowNone = `this.style.boxShadow='none'`;
+                  transStr = `可交換`;
+                }else{
+                  transStr = "";
                 }
                 let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}" onclick="productcookie(this)" name="${row.ABILITY}">
                                   <div class="containerInner">          
@@ -402,7 +505,7 @@
                                                 </div>
                                                 <div class="lower">
                                                     <ul class="features-list">
-                                                        <li class="${row.TRANS}">可交換</li>
+                                                        <li class="${row.TRANS}">${transStr}</li>
                                                         <div class="ysellerImgy">
                                                             <img src="../image/ROLE/${row.USER_IMG}" alt="">
                                                         </div>
@@ -415,11 +518,6 @@
                         </div>`;
 
                 containerFlex.insertAdjacentHTML("beforeend", str);
-                let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];
-                console.log(liTrans);
-                if (`${row.TRANS}` == 0) {
-                  liTrans.innerHTML = "";
-                }
               })
               vm.$data.pop = false;
               vm.$data.two = false;
@@ -534,11 +632,16 @@
               $.each(response, function (index, row) {
                 let redShadow = "";
                 let shadowNone = "";
-                let trans = ""
+                let trans = "";
+                let transStr = null;
                 if (row.TRANS == 1) {
                   redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
                   shadowNone = `this.style.boxShadow='none'`;
+                  transStr = `可交換`;
+                }else{
+                  transStr = "";
                 }
+
                 let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}" onclick="productcookie(this)" name="${row.ABILITY}">
                                   <div class="containerInner">          
                                             <div class="inner">
@@ -550,7 +653,7 @@
                                                 </div>
                                                 <div class="lower">
                                                     <ul class="features-list">
-                                                        <li class="${row.TRANS}">可交換</li>
+                                                        <li class="${row.TRANS}" id="transStatus">${transStr}</li>
                                                         <div class="ysellerImgy">
                                                             <img src="../image/ROLE/${row.USER_IMG}" alt="">
                                                         </div>
@@ -561,13 +664,8 @@
                                             <button class="cta">查看資訊</button>
                                   </div>         
                         </div>`;
-
+                
                 containerFlex.insertAdjacentHTML("beforeend", str);
-                let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];
-                console.log(liTrans);
-                if (`${row.TRANS}` == 0) {
-                  liTrans.innerHTML = "";
-                }
               })
               vm.$data.pop = false;
               vm.$data.two = false;
@@ -698,9 +796,9 @@
 
                                                 <div class="middleBlock">
                                                   <div class="detailInfo">
-                                                    <p class="roleNamee">${row.RNAME}</p>
-                                                    <p class="rolePrice">$${row.PRICE}E</p>
-                                                    <p class="roleNumber" name="${row.FK_GACHA_ID}">編號:${row.ROLE_ID}</p>
+                                                    <p class="roleNamee">名稱: ${row.RNAME}</p>
+                                                    <p class="rolePrice">價錢: $${row.PRICE}E</p>
+                                                    <p class="roleNumber" name="${row.FK_GACHA_ID}">編號: ${row.ROLE_ID}</p>
                                                   </div>
                                                 </div>
                       
@@ -721,9 +819,9 @@
 
                                                 <div class="middleBlock">
                                                   <div class="detailInfo">
-                                                    <p class="roleNamee">${row.RNAME}</p>
-                                                    <p class="rolePrice">$${row.PRICE}E</p>
-                                                    <p class="roleNumber" name="${row.FK_GACHA_ID}">${row.ROLE_ID}</p>
+                                                    <p class="roleNamee">名稱: ${row.RNAME}</p>
+                                                    <p class="rolePrice">價錢: $${row.PRICE}E</p>
+                                                    <p class="roleNumber" name="${row.FK_GACHA_ID}">編號: ${row.ROLE_ID}</p>
                                                   </div>
                                                 </div>
                       
@@ -948,9 +1046,13 @@
               let redShadow = "";
               let shadowNone = "";
               let trans = ""
+              let transStr =null;
               if (row.TRANS == 1) {
                 redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
                 shadowNone = `this.style.boxShadow='none'`;
+                transStr = `可交換`
+              }else{
+                transStr="";
               }
               let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}" onclick="productcookie(this)" name="${row.ABILITY}">
                                   <div class="containerInner">          
@@ -963,7 +1065,7 @@
                                                 </div>
                                                 <div class="lower">
                                                     <ul class="features-list">
-                                                        <li class="${row.TRANS}">可交換</li>
+                                                        <li class="${row.TRANS}">${transStr}</li>
                                                         <div class="ysellerImgy">
                                                             <img src="../image/ROLE/${row.USER_IMG}" alt="">
                                                         </div>
@@ -976,11 +1078,6 @@
                         </div>`;
 
               containerFlex.insertAdjacentHTML("beforeend", str);
-              let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];
-              console.log(liTrans);
-              if (`${row.TRANS}` == 0) {
-                liTrans.innerHTML = "";
-              }
             }
           })
         },
@@ -1023,25 +1120,30 @@
 
           //更新html內容(透過jQuery跑迴圈取值)
           $.each(response, function (index, row) {
-            let redShadow = "";
-            let shadowNone = "";
-            let trans = ""
-            if (row.TRANS == 1) {
-              redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
-              shadowNone = `this.style.boxShadow='none'`;
-            }
-            let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}">
-                                            <a href="./product.html">
+                let redShadow = "";
+                let shadowNone = "";
+                let trans = "";
+                let transStr = null;
+                if (row.TRANS == 1) {
+                  redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
+                  shadowNone = `this.style.boxShadow='none'`;
+                  transStr = `可交換`;
+                }else{
+                  transStr = "";
+                }
+
+                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}" onclick="productcookie(this)" name="${row.ABILITY}">
+                                  <div class="containerInner">          
                                             <div class="inner">
                                                 <div class="content">
 
                                                     <span><img src="../image/ROLE/${row.ROLE_IMG}"></span>
                                                     <h2>${row.RNAME}</h2>
-                                                    <h3>${row.PRICE}</h3>
+                                                    <h3>$${row.PRICE}E</h3>
                                                 </div>
                                                 <div class="lower">
                                                     <ul class="features-list">
-                                                        <li class="${row.TRANS}">可交換</li>
+                                                        <li class="${row.TRANS}" id="transStatus">${transStr}</li>
                                                         <div class="ysellerImgy">
                                                             <img src="../image/ROLE/${row.USER_IMG}" alt="">
                                                         </div>
@@ -1050,15 +1152,10 @@
                                                 </div>
                                             </div>
                                             <button class="cta">查看資訊</button>
-                                            </a>
-                                        </div>`;
+                                  </div>         
+                        </div>`;
 
             containerFlex.insertAdjacentHTML("beforeend", str);
-            let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];
-            console.log(liTrans);
-            if (`${row.TRANS}` == 0) {
-              liTrans.innerHTML = "";
-            }
           })
         },
         error: function (exception) {
@@ -1085,25 +1182,30 @@
 
           //更新html內容(透過jQuery跑迴圈取值)
           $.each(response, function (index, row) {
-            let redShadow = "";
-            let shadowNone = "";
-            let trans = ""
-            if (row.TRANS == 1) {
-              redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
-              shadowNone = `this.style.boxShadow='none'`;
-            }
-            let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}">
-                                            <a href="./product.html">
+                let redShadow = "";
+                let shadowNone = "";
+                let trans = "";
+                let transStr = null;
+                if (row.TRANS == 1) {
+                  redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
+                  shadowNone = `this.style.boxShadow='none'`;
+                  transStr = `可交換`;
+                }else{
+                  transStr = "";
+                }
+
+                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}" onclick="productcookie(this)" name="${row.ABILITY}">
+                                  <div class="containerInner">          
                                             <div class="inner">
                                                 <div class="content">
 
                                                     <span><img src="../image/ROLE/${row.ROLE_IMG}"></span>
                                                     <h2>${row.RNAME}</h2>
-                                                    <h3>${row.PRICE}</h3>
+                                                    <h3>$${row.PRICE}E</h3>
                                                 </div>
                                                 <div class="lower">
                                                     <ul class="features-list">
-                                                        <li class="${row.TRANS}">可交換</li>
+                                                        <li class="${row.TRANS}" id="transStatus">${transStr}</li>
                                                         <div class="ysellerImgy">
                                                             <img src="../image/ROLE/${row.USER_IMG}" alt="">
                                                         </div>
@@ -1112,15 +1214,10 @@
                                                 </div>
                                             </div>
                                             <button class="cta">查看資訊</button>
-                                            </a>
-                                        </div>`;
+                                  </div>         
+                        </div>`;
 
             containerFlex.insertAdjacentHTML("beforeend", str);
-            let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];
-            console.log(liTrans);
-            if (`${row.TRANS}` == 0) {
-              liTrans.innerHTML = "";
-            }
           })
         },
         error: function (exception) {
@@ -1147,25 +1244,30 @@
 
           //更新html內容(透過jQuery跑迴圈取值)
           $.each(response, function (index, row) {
-            let redShadow = "";
-            let shadowNone = "";
-            let trans = ""
-            if (row.TRANS == 1) {
-              redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
-              shadowNone = `this.style.boxShadow='none'`;
-            }
-            let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}">
-                                            <a href="./product.html">
+                let redShadow = "";
+                let shadowNone = "";
+                let trans = "";
+                let transStr = null;
+                if (row.TRANS == 1) {
+                  redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
+                  shadowNone = `this.style.boxShadow='none'`;
+                  transStr = `可交換`;
+                }else{
+                  transStr = "";
+                }
+
+                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}" onclick="productcookie(this)" name="${row.ABILITY}">
+                                  <div class="containerInner">          
                                             <div class="inner">
                                                 <div class="content">
 
                                                     <span><img src="../image/ROLE/${row.ROLE_IMG}"></span>
                                                     <h2>${row.RNAME}</h2>
-                                                    <h3>${row.PRICE}</h3>
+                                                    <h3>$${row.PRICE}E</h3>
                                                 </div>
                                                 <div class="lower">
                                                     <ul class="features-list">
-                                                        <li class="${row.TRANS}">可交換</li>
+                                                        <li class="${row.TRANS}" id="transStatus">${transStr}</li>
                                                         <div class="ysellerImgy">
                                                             <img src="../image/ROLE/${row.USER_IMG}" alt="">
                                                         </div>
@@ -1174,15 +1276,10 @@
                                                 </div>
                                             </div>
                                             <button class="cta">查看資訊</button>
-                                            </a>
-                                        </div>`;
+                                  </div>         
+                        </div>`;
 
             containerFlex.insertAdjacentHTML("beforeend", str);
-            let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];
-            console.log(liTrans);
-            if (`${row.TRANS}` == 0) {
-              liTrans.innerHTML = "";
-            }
           })
         },
         error: function (exception) {
@@ -1209,25 +1306,30 @@
 
           //更新html內容(透過jQuery跑迴圈取值)
           $.each(response, function (index, row) {
-            let redShadow = "";
-            let shadowNone = "";
-            let trans = ""
-            if (row.TRANS == 1) {
-              redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
-              shadowNone = `this.style.boxShadow='none'`;
-            }
-            let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}">
-                                            <a href="./product.html">
+                let redShadow = "";
+                let shadowNone = "";
+                let trans = "";
+                let transStr = null;
+                if (row.TRANS == 1) {
+                  redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
+                  shadowNone = `this.style.boxShadow='none'`;
+                  transStr = `可交換`;
+                }else{
+                  transStr = "";
+                }
+
+                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}" onclick="productcookie(this)" name="${row.ABILITY}">
+                                  <div class="containerInner">          
                                             <div class="inner">
                                                 <div class="content">
 
                                                     <span><img src="../image/ROLE/${row.ROLE_IMG}"></span>
                                                     <h2>${row.RNAME}</h2>
-                                                    <h3>${row.PRICE}</h3>
+                                                    <h3>$${row.PRICE}E</h3>
                                                 </div>
                                                 <div class="lower">
                                                     <ul class="features-list">
-                                                        <li class="${row.TRANS}">可交換</li>
+                                                        <li class="${row.TRANS}" id="transStatus">${transStr}</li>
                                                         <div class="ysellerImgy">
                                                             <img src="../image/ROLE/${row.USER_IMG}" alt="">
                                                         </div>
@@ -1236,15 +1338,10 @@
                                                 </div>
                                             </div>
                                             <button class="cta">查看資訊</button>
-                                            </a>
-                                        </div>`;
+                                  </div>         
+                        </div>`;
 
             containerFlex.insertAdjacentHTML("beforeend", str);
-            let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];
-            console.log(liTrans);
-            if (`${row.TRANS}` == 0) {
-              liTrans.innerHTML = "";
-            }
           })
         },
         error: function (exception) {
@@ -1271,25 +1368,30 @@
 
           //更新html內容(透過jQuery跑迴圈取值)
           $.each(response, function (index, row) {
-            let redShadow = "";
-            let shadowNone = "";
-            let trans = ""
-            if (row.TRANS == 1) {
-              redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
-              shadowNone = `this.style.boxShadow='none'`;
-            }
-            let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}">
-                                            <a href="./product.html">
+                let redShadow = "";
+                let shadowNone = "";
+                let trans = "";
+                let transStr = null;
+                if (row.TRANS == 1) {
+                  redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
+                  shadowNone = `this.style.boxShadow='none'`;
+                  transStr = `可交換`;
+                }else{
+                  transStr = "";
+                }
+
+                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}" onclick="productcookie(this)" name="${row.ABILITY}">
+                                  <div class="containerInner">          
                                             <div class="inner">
                                                 <div class="content">
 
                                                     <span><img src="../image/ROLE/${row.ROLE_IMG}"></span>
                                                     <h2>${row.RNAME}</h2>
-                                                    <h3>${row.PRICE}</h3>
+                                                    <h3>$${row.PRICE}E</h3>
                                                 </div>
                                                 <div class="lower">
                                                     <ul class="features-list">
-                                                        <li class="${row.TRANS}">可交換</li>
+                                                        <li class="${row.TRANS}" id="transStatus">${transStr}</li>
                                                         <div class="ysellerImgy">
                                                             <img src="../image/ROLE/${row.USER_IMG}" alt="">
                                                         </div>
@@ -1298,15 +1400,10 @@
                                                 </div>
                                             </div>
                                             <button class="cta">查看資訊</button>
-                                            </a>
-                                        </div>`;
+                                  </div>         
+                        </div>`;
 
             containerFlex.insertAdjacentHTML("beforeend", str);
-            let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];
-            console.log(liTrans);
-            if (`${row.TRANS}` == 0) {
-              liTrans.innerHTML = "";
-            }
           })
         },
         error: function (exception) {
@@ -1333,25 +1430,30 @@
 
           //更新html內容(透過jQuery跑迴圈取值)
           $.each(response, function (index, row) {
-            let redShadow = "";
-            let shadowNone = "";
-            let trans = ""
-            if (row.TRANS == 1) {
-              redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
-              shadowNone = `this.style.boxShadow='none'`;
-            }
-            let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}">
-                                            <a href="./product.html">
+                let redShadow = "";
+                let shadowNone = "";
+                let trans = "";
+                let transStr = null;
+                if (row.TRANS == 1) {
+                  redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
+                  shadowNone = `this.style.boxShadow='none'`;
+                  transStr = `可交換`;
+                }else{
+                  transStr = "";
+                }
+
+                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}" onclick="productcookie(this)" name="${row.ABILITY}">
+                                  <div class="containerInner">          
                                             <div class="inner">
                                                 <div class="content">
 
                                                     <span><img src="../image/ROLE/${row.ROLE_IMG}"></span>
                                                     <h2>${row.RNAME}</h2>
-                                                    <h3>${row.PRICE}</h3>
+                                                    <h3>$${row.PRICE}E</h3>
                                                 </div>
                                                 <div class="lower">
                                                     <ul class="features-list">
-                                                        <li class="${row.TRANS}">可交換</li>
+                                                        <li class="${row.TRANS}" id="transStatus">${transStr}</li>
                                                         <div class="ysellerImgy">
                                                             <img src="../image/ROLE/${row.USER_IMG}" alt="">
                                                         </div>
@@ -1360,15 +1462,10 @@
                                                 </div>
                                             </div>
                                             <button class="cta">查看資訊</button>
-                                            </a>
-                                        </div>`;
+                                  </div>         
+                        </div>`;
 
             containerFlex.insertAdjacentHTML("beforeend", str);
-            let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];
-            console.log(liTrans);
-            if (`${row.TRANS}` == 0) {
-              liTrans.innerHTML = "";
-            }
           })
         },
         error: function (exception) {
@@ -1395,25 +1492,30 @@
 
           //更新html內容(透過jQuery跑迴圈取值)
           $.each(response, function (index, row) {
-            let redShadow = "";
-            let shadowNone = "";
-            let trans = ""
-            if (row.TRANS == 1) {
-              redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
-              shadowNone = `this.style.boxShadow='none'`;
-            }
-            let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}">
-                                            <a href="./product.html">
+                let redShadow = "";
+                let shadowNone = "";
+                let trans = "";
+                let transStr = null;
+                if (row.TRANS == 1) {
+                  redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
+                  shadowNone = `this.style.boxShadow='none'`;
+                  transStr = `可交換`;
+                }else{
+                  transStr = "";
+                }
+
+                let str = `<div class="container" id="${row.PRODUCT_ID}"onMouseOver="${redShadow}"  onMouseOut="${shadowNone}" onclick="productcookie(this)" name="${row.ABILITY}">
+                                  <div class="containerInner">          
                                             <div class="inner">
                                                 <div class="content">
 
                                                     <span><img src="../image/ROLE/${row.ROLE_IMG}"></span>
                                                     <h2>${row.RNAME}</h2>
-                                                    <h3>${row.PRICE}</h3>
+                                                    <h3>$${row.PRICE}E</h3>
                                                 </div>
                                                 <div class="lower">
                                                     <ul class="features-list">
-                                                        <li class="${row.TRANS}">可交換</li>
+                                                        <li class="${row.TRANS}" id="transStatus">${transStr}</li>
                                                         <div class="ysellerImgy">
                                                             <img src="../image/ROLE/${row.USER_IMG}" alt="">
                                                         </div>
@@ -1422,15 +1524,10 @@
                                                 </div>
                                             </div>
                                             <button class="cta">查看資訊</button>
-                                            </a>
-                                        </div>`;
+                                  </div>         
+                        </div>`;
 
             containerFlex.insertAdjacentHTML("beforeend", str);
-            let liTrans = document.getElementsByClassName(`${row.TRANS}`)[0];
-            console.log(liTrans);
-            if (`${row.TRANS}` == 0) {
-              liTrans.innerHTML = "";
-            }
           })
         },
         error: function (exception) {

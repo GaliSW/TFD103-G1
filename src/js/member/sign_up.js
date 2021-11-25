@@ -97,6 +97,7 @@ let vm = new Vue({
               vm.$data.id = "此帳號已被使用過，請換一個試試!!!";
             }
             if (response == "Y") {
+              vm.$data.id ="";
               vm.$data.writing = false;
               vm.$data.success = true;
 

@@ -1,11 +1,15 @@
 <?php
 
-$total = $_POST["total"];
+//接收綠界回傳參數，型string
+$data = file_get_contents("php://input");
+//  print_r($_POST["TradeAmt"]);
+
+//轉為數值
+$total = $_POST["TradeAmt"];
 include("../connection.php");
 include "../Manager.php";
-$Name = getSession();
+$Name = $_POST["StoreID"];
 
-//---------------------------------------------------
 
 //建立SQL
 $sql = "INSERT INTO POINTS_TU( FK_USERNAME, DEALDATE , SRC , CHANGE_POINT) 
@@ -15,9 +19,8 @@ $sql = "INSERT INTO POINTS_TU( FK_USERNAME, DEALDATE , SRC , CHANGE_POINT)
 
 //執行
 $statement = $pdo->prepare($sql);
-
 $statement->bindValue(1, $total);
 $statement->bindValue(2, $total);
 $statement->execute();
-//    header("Location: Select.php");
-echo "Y";
+header("Location: ../../html/deposit.html");
+;
