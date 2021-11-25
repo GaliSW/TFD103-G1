@@ -9580,7 +9580,6 @@ main.member_info section.popShow {
 
 .out .left {
   margin: 0 auto;
-  line-height: 50px;
 }
 
 .out .left .pp {
@@ -9610,6 +9609,10 @@ main.member_info section.popShow {
           justify-content: flex-end;
 }
 
+.out .search-form h3 {
+  margin-top: 10px;
+}
+
 .out .search-form #search-input {
   font-size: 20px;
   background: url("../src/image/intro/search.jpg");
@@ -9617,6 +9620,7 @@ main.member_info section.popShow {
   background-position: right;
   background-size: 30px;
   background-color: #fff;
+  height: 50px;
 }
 
 .out .search-form .search {
@@ -9694,15 +9698,18 @@ main.member_info section.popShow {
 .out .wrap {
   cursor: pointer;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   opacity: 0.6;
-  line-height: 100px;
+  line-height: 30px;
 }
 
 @media (min-width: 992px) {
