@@ -75,8 +75,8 @@ function display() {
                                 </div>
                                 <span class="price col-2">${rowA.PRICE}</span>
                                 <div class="trade_button col-2">
-                                    <button class="buy" onclick="clickPop()">購買</button>
-                                    <button class="change " onclick=clickChange()>交換</button>
+                                    <button class="buy" onclick="clickBuy(${rowA.PRODUCT_ID})">購買</button>
+                                    <button class="change " onclick=clickChange(${rowA.PRODUCT_ID})>交換</button>
                                 </div>
                                 <div class="delete col-1">
                                     <button class="delete_btn" onclick= "deleted(${rowA.FAV_ID})"><i class="fas fa-trash-alt"></i></button>
@@ -160,11 +160,24 @@ function clickPop() {
         vmm.$data.three = false;
         }
 
-function clickChange() {
-        vmm.$data.pop = true;
-        vmm.$data.buy = false;
-        vmm.$data.success = false;
-        vmm.$data.one = true;
-        vmm.$data.two = false;
-        vmm.$data.three = false;
+// 點購買
+function clickBuy(product) {
+        console.log(product);
+          vmm.$data.pop = true;
+          vmm.$data.buy = true;
+          vmm.$data.success = false;
+          vmm.$data.one = false;
+          vmm.$data.two = false;
+          vmm.$data.three = false;
         }
+
+// 點交換
+function clickChange(product) {
+    console.log(product);
+  vmm.$data.pop = true;
+  vmm.$data.buy = false;
+  vmm.$data.success = false;
+  vmm.$data.one = true;
+  vmm.$data.two = false;
+  vmm.$data.three = false;
+}

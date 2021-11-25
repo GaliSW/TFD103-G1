@@ -18,8 +18,11 @@
         $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
         //C:/xampp/htdocs
         
+        // //檔案最終存放位置
+        // $filePath = $ServerRoot . "./TFD103-G1/src/image/MEMBER/" . $Name. $fileName;
+        
         //檔案最終存放位置
-        $filePath = $ServerRoot . "/TFD103-G1/src/image/MEMBER/" . $Name. $fileName;
+        $filePath = $ServerRoot ."/tfd103/g1/TFD103-G1/src/image/MEMBER/" . $Name . $fileName;
 
         //判斷檔案格式是否為圖片
         $extensionName = getExtensionName($filePath);
