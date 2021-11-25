@@ -795,7 +795,6 @@
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
-  margin-top: 7%;
   z-index: 10;
 }
 
@@ -4851,7 +4850,7 @@ button.swiper-pagination-bullet {
 
 body {
   overflow-x: hidden;
-  background-color: #22267c;
+  z-index: -1;
 }
 
 .index .indexOne {
@@ -4862,6 +4861,7 @@ body {
   background-repeat: no-repeat;
   background-position: bottom right;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .index .indexOne .banner {
@@ -4958,6 +4958,7 @@ body {
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   .index .indexOne .banner .text {
+    background-color: rgba(95, 141, 179, 0.5);
     font-size: 16px;
     margin-top: 20px;
   }
@@ -5068,8 +5069,8 @@ body {
   background-size: cover;
   position: relative;
   width: 100%;
-  top: 100px;
   z-index: 2;
+  overflow-x: hidden;
 }
 
 .index .indexTwo .imgBlock {
@@ -5094,7 +5095,7 @@ body {
   position: absolute;
   width: 100%;
   height: 150px;
-  top: -150px;
+  top: -42px;
 }
 
 .index .sportsCar .carId {
@@ -5121,8 +5122,7 @@ body {
   position: absolute;
   width: 100%;
   height: 150px;
-  top: -110px;
-  overflow-x: hidden;
+  top: -42px;
 }
 
 .index .sportsCar .carId {
@@ -5145,6 +5145,13 @@ body {
   height: 320px;
   -webkit-animation: marquee 10s infinite linear;
           animation: marquee 10s infinite linear;
+  top: 70px;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .imgLine {
+    top: 70px;
+  }
 }
 
 .index .imgLine .raceTrack {
@@ -5164,6 +5171,7 @@ body {
   max-width: 1200px;
   width: 100%;
   z-index: 10;
+  top: 62px;
 }
 
 .index .content .rcbig {
@@ -5296,6 +5304,7 @@ body {
     width: 160px;
     right: -5%;
     bottom: -18%;
+    overflow-x: hidden;
   }
 }
 
@@ -5304,6 +5313,7 @@ body {
     width: 120px;
     right: 0%;
     bottom: -18%;
+    overflow-x: hidden;
   }
 }
 
@@ -5447,7 +5457,15 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: -1;
-  margin-top: -6%;
+  margin-top: 10%;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .h2Games {
+    width: 250px;
+    height: 80px;
+    margin-top: 20px;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -5467,6 +5485,13 @@ body {
   color: #fff;
   text-align: center;
   margin: -25% 0 20px 0;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .h2Games h2 {
+    font-size: 32px;
+    margin: -26% 0 8px 0;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -5585,6 +5610,12 @@ body {
   left: -4%;
   top: 28%;
   z-index: -1;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .effect {
+    width: 390px;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -5727,7 +5758,8 @@ body {
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   .index .manyRC {
-    margin-left: 50px;
+    margin-left: 20px;
+    display: block;
   }
 }
 
@@ -5757,7 +5789,7 @@ body {
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   .index .manyRC .gamesIntro {
-    margin-left: 0;
+    text-align: center;
   }
 }
 
@@ -5969,9 +6001,16 @@ body {
   margin-top: 10%;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .picGames {
+    width: 425px;
+    height: 80px;
+  }
+}
+
 @media (min-width: 375px) and (max-width: 413.98px) {
   .index .picGames {
-    width: 510px;
+    width: 390px;
     height: 80px;
   }
 }
@@ -5988,10 +6027,17 @@ body {
   margin: -14% 0 0 0;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .picGames h2 {
+    font-size: 32px;
+    margin: -15.5% 0 0 0;
+  }
+}
+
 @media (min-width: 375px) and (max-width: 413.98px) {
   .index .picGames h2 {
     font-size: 32px;
-    margin: -13% 0 0 0;
+    margin: -17% 0 0 0;
   }
 }
 
@@ -6004,6 +6050,14 @@ body {
   height: 450px;
   display: table;
   position: relative;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .unlock {
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
