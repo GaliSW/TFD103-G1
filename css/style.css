@@ -446,6 +446,11 @@
   animation-play-state: paused;
 }
 
+#header #headerMenu .ChangePhone {
+  background: #0E3461;
+  color: #9dfdc8;
+}
+
 #header #headerMenu .hamLog {
   display: none;
 }
@@ -1385,6 +1390,110 @@ main.collection .test .popContent14 {
 
 main.collection section.popShow {
   display: block;
+}
+
+.BuyingHintmaskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.BuyingHintmaskLayer .BuyingPopUpBox {
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: #024f3f;
+  border: 2px solid #10c5b1;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.BuyingHintmaskLayer .BuyingCloseBtn {
+  position: absolute;
+  right: 0;
+  background-color: #10c5b1;
+  border-radius: 2px;
+  font-size: 28px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.BuyingHintmaskLayer .BuyingPopContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #60cd90;
+  color: #10c5b1;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .BuyingHintmaskLayer .BuyingPopContent {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .BuyingHintmaskLayer .BuyingPopContent {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .BuyingHintmaskLayer .BuyingPopContent {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .BuyingHintmaskLayer .BuyingPopContent {
+    font-size: 12px;
+  }
+}
+
+.BuyingHintmaskLayer .BuyingConfirmBlk {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+
+.BuyingHintmaskLayer .BuyingConfirmBlk button {
+  margin: 0 10px;
+  color: #60cd90;
+  width: 100px;
+  padding: 5px;
+  background-color: #0e3461;
+  border: 3px solid #60cd90;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.BuyingHintmaskLayer .BuyingConfirmBlk button:hover {
+  color: #0e3461;
+  width: 100px;
+  padding: 5px;
+  background-color: #60cd90;
+  border: 3px solid #0e3461;
+  text-align: center;
 }
 
 main.deposit {
@@ -4340,7 +4449,7 @@ body {
   background-repeat: no-repeat;
   background-position: bottom right;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .index .indexOne .banner {
@@ -9325,6 +9434,11 @@ main.member_info section.popShow {
   margin: 90px 0 0 0;
 }
 
+.allBlock .p {
+  font-size: 16px;
+  color: #10c5b1;
+}
+
 .allBlock .sec1 {
   padding-top: 100px;
 }
@@ -10654,6 +10768,11 @@ main.signup .verify_contain div.verify .falseVerify {
   padding: 0;
 }
 
+.allBlock1 .p {
+  font-size: 16px;
+  color: #10c5b1;
+}
+
 .allBlock1 .roleRanksection h1 {
   color: #fff;
   text-align: center;
@@ -11565,7 +11684,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .ymainy .lower {
-  border: 1px solid red;
   display: flex;
   justify-content: flex-end;
   align-content: center;
