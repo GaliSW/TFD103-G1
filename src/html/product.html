@@ -117,7 +117,7 @@
                         </div>
                     </div>
                     <div class="items -right">
-                        <h1 class="title1">${title}</h1>
+                        <h1 class="title1" id="title1">${title}</h1>
                         <p class="introduce">${content}</p>
                         <p class="price">$${price}E</p>
 
@@ -360,7 +360,7 @@
                                         <img id="yourRoleImg1" src="../dist/images/product/change/change2.png">
                                     </div>    
                                     <div class="yourRoleNameBlock">
-                                        <p>羊咩咩</p>
+                                        <p id="yourRoleName1">羊咩咩</p>
                                     </div>
                                 </div>    
                             </div>
@@ -633,7 +633,7 @@
             myRoleName.innerText = imgName;
             //console.log(imgName);
 
-            //////////// 我的角色圖片
+            //////////// 你的角色圖片
 
             let imgBlock = document.getElementsByClassName("imgBlock")[0];
             //console.log(imgBlock);
@@ -642,8 +642,9 @@
             yourImgSrc = yourImg.attributes['src'].value;
             let yourRoleImg1 = document.getElementById('yourRoleImg1');
             yourRoleImg1.attributes['src'].value = yourImgSrc;
-
-
+            let name = document.getElementById("title1").innerText;
+            let yourname = document.getElementById('yourRoleName1');
+            yourname.innerText = name;
         }
 
         function toThree() {
