@@ -56,6 +56,11 @@ body {
 .gaChaLabelBtn {
     @include center;
     max-width: 1200px;
+    // @include border();
+
+    @media (max-width:767.98px) {
+        margin-top: 100px;
+    }
 
     .gachaPageLable {
         @include center;
@@ -279,6 +284,7 @@ body {
 
     @include phone {
         margin-top: 400px;
+        margin-left: 64%;
     }
 }
 
@@ -1103,6 +1109,7 @@ body {
     }
 
     .container {
+        position: relative;
         width: 90%;
         justify-content: center;
         align-items: center;
@@ -1123,9 +1130,24 @@ body {
 
     }
 
+    // .containerMask {
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(0, 0, 0, .5);
+    //     transition: all .3s ease;
+    // }
+
+    // 正常狀態
     .container:hover .lower {
         transform: translateY(-300%);
         background: $light_green;
+    }
+
+    //上架中
+    .container:hover .lower2 {
+        transform: translateY(-300%);
+        background: rgb(165, 165, 165);
     }
 
     .container:hover .features-list {
@@ -1148,8 +1170,15 @@ body {
         width: 65%;
     }
 
+    // 正常狀態
     .container:hover .cta {
         background: $light_green;
+        color: #151414;
+    }
+
+    // 上架中
+    .container:hover .cta2 {
+        background: rgb(165, 165, 165);
         color: #151414;
     }
 
@@ -1258,6 +1287,36 @@ body {
         }
     }
 
+    .lower2 {
+
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        flex-direction: column;
+        background: transparent;
+        position: relative;
+        transform: translateY(40%);
+        transition: all 1s ease;
+        width: 100%;
+        height: 27%;
+
+        @media (max-width:1200px) {
+            height: 31%;
+        }
+
+        @media (max-width:992px) {
+            height: 33%;
+        }
+
+        @media (max-width:413.98px) {
+            height: 47%;
+        }
+
+        @media (max-width:413.98px) {
+            height: 44%;
+        }
+    }
+
     .features-list {
 
         text-align: center;
@@ -1268,6 +1327,12 @@ body {
         opacity: 0;
         width: 100%;
         transition: all .2s ease;
+    }
+
+    .features-list p {
+        @media (max-width:767.98px) {
+            font-size: $fontSizeMin;
+        }
     }
 
     .features-list h1 {
@@ -1295,13 +1360,6 @@ body {
         @media (max-width:800px) {
             font-size: $fontSizeMin;
         }
-
-        // display: -webkit-box;
-        // -webkit-line-clamp: 2;
-        // // -webkit-box-orient: vertical;
-        // overflow: hidden;
-        // text-overflow: ellipsis;
-
     }
 
     .cta {
@@ -1329,7 +1387,35 @@ body {
             padding: 5px;
         }
     }
+
+    .cta2 {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 20px;
+        font-size: $fontSizeH3;
+        color: #000;
+        font-weight: 100;
+        cursor: pointer;
+        transition: all .3s ease;
+
+        @media (max-width:1200px) {
+            font-size: $fontSize;
+        }
+
+        @media (max-width:800px) {
+            font-size: $fontSizeSmall;
+            padding: 10px;
+        }
+
+        @media (max-width:414.98px) {
+            font-size: $fontSizeSmall;
+            padding: 5px;
+        }
+    }
 }
+
+
 
 // ********** rolePop************
 

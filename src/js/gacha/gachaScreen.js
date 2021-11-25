@@ -7,6 +7,7 @@ function gachaScreen(img) {
         p1.init("#ul", 3, img);
     }, 5000);
     var tl = gsap.timeline();
+    tl.restart();
     tl.to("#ball", { x: -100, y: 600 });
     tl.to("#ball", { x: 1100, y: -50, duration: .3, rotation: 360 });
     tl.to("#ball", { x: 500, y: 700, duration: .2, rotation: 360 });
@@ -75,6 +76,7 @@ function gachaScreen(img) {
         delay: 4.5,
         duration: 3
     });
+    tl.restart();
 }
 
 

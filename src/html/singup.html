@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signUp</title>
     <link rel="stylesheet" href="../../css/style.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 
 
 
@@ -220,6 +223,21 @@
     <script src="../js/header/header.js"></script>
     <script>
         window.onload = status();
+        function send(em, num) {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "tfd103g1",
+                Password: "tibame_tfd103",
+                To: em,
+                From: "tfd103g1@gmail.com",
+                Subject: "怪哩怪氣驗證信",
+                Body: `您的驗證碼為: ${num} ，請點擊網址驗證。
+                    https://tibamef2e.com/tfd103/g1/TFD103-G1/src/verify.html"`
+            })
+                .then(
+                    message => alert(message)
+                );
+        }
     </script>
 </body>
 
