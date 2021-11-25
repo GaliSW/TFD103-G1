@@ -53,8 +53,8 @@ function display() {
                 let ab5 = row.slice(4, 5);
                 if (rowA.AMOUNT == 1) {
                     $("#result").append(
-                        `
-                            <div class="contain_list">
+                      `
+                            <div class="contain_list" name="${rowA.PRODUCT_ID}">
                                 <div class="role col-2"><img src="../image/ROLE/${rowA.ROLE_IMG}"></div>
                                 <span class="role_name col-2">
                                     ${rowA.RNAME}
@@ -75,8 +75,8 @@ function display() {
                                 </div>
                                 <span class="price col-2">${rowA.PRICE}</span>
                                 <div class="trade_button col-2">
-                                    <button class="buy" onclick="buyingCheck()">購買</button>
-                                    <button class="change " onclick=clickPopp()>交換</button>
+                                    <button class="buy" onclick="buyingCheck(${rowA.PRODUCT_ID})">購買</button>
+                                    <button class="change " onclick=clickPopp(this)>交換</button>
                                 </div>
                                 <div class="delete col-1">
                                     <button class="delete_btn" onclick= "deleted(${rowA.FAV_ID})"><i class="fas fa-trash-alt"></i></button>

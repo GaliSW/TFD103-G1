@@ -13,6 +13,12 @@ main.login {
     box-sizing: border-box;
     min-height: 100vh;
     margin-top: 90px;
+    @include pad_small{
+        margin-top: 70px;
+    }
+    @include phone{
+        margin-top: 70px;
+    }
 
     div.contain {
         // border: 1px solid $dark_green;
