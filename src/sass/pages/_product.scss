@@ -20,6 +20,7 @@
     .p{
         font-size: $fontSize;
         color:$tiffiny_green;
+        padding: 30px 0px 0 30px;
         }
 
 
@@ -409,13 +410,13 @@
 
             .popUpBox {
                 position: absolute;
-                top: 5%;
+                top: 20%;
                 left: 50%;
                 transform: translateX(-50%);
                 background-color: rgba(2, 79, 63, 1);
                 border: 2px solid rgba(16, 197, 177, 1);
                 width: 80%;
-                height: 480px;
+                height: 440px;
                 border-radius: 5px;
                 overflow: auto;
 
@@ -481,13 +482,13 @@
 .test {
     .popUpBox {
         position: absolute;
-        top: 5%;
+        top: 20%;
         left: 50%;
         transform: translateX(-50%);
         background-color: rgba(2, 79, 63, 1);
         border: 2px solid rgba(16, 197, 177, 1);
         width: 800px;
-        height: 480px;
+        height: 440px;
         border-radius: 5px;
 
         .roleArea{
@@ -715,8 +716,6 @@
         transform: translateX(-50%);
         background-color: rgba(2, 79, 63, 1);
         border: 2px solid rgba(16, 197, 177, 1);
-        width: 300px;
-        height: 250px;
         border-radius: 5px;
 
         .closeBtn14 {

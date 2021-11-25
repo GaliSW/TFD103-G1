@@ -10381,6 +10381,7 @@ main.member_info section.popShow {
 .allBlock .p {
   font-size: 16px;
   color: #10c5b1;
+  padding: 30px 0px 0 30px;
 }
 
 .allBlock .sec1 {
@@ -10821,14 +10822,14 @@ main.member_info section.popShow {
 
 .allBlock .test .maskLayer .popUpBox {
   position: absolute;
-  top: 5%;
+  top: 20%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background-color: #024f3f;
   border: 2px solid #10c5b1;
   width: 80%;
-  height: 480px;
+  height: 440px;
   border-radius: 5px;
   overflow: auto;
 }
@@ -10879,14 +10880,14 @@ main.member_info section.popShow {
 
 .test .popUpBox {
   position: absolute;
-  top: 5%;
+  top: 20%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background-color: #024f3f;
   border: 2px solid #10c5b1;
   width: 800px;
-  height: 480px;
+  height: 440px;
   border-radius: 5px;
 }
 
@@ -11108,8 +11109,6 @@ main.member_info section.popShow {
           transform: translateX(-50%);
   background-color: #024f3f;
   border: 2px solid #10c5b1;
-  width: 300px;
-  height: 250px;
   border-radius: 5px;
 }
 
@@ -11810,6 +11809,7 @@ main.signup .verify_contain div.verify .falseVerify {
 .allBlock1 .p {
   font-size: 16px;
   color: #10c5b1;
+  padding: 30px 0px 0 30px;
 }
 
 .allBlock1 .roleRanksection h1 {
