@@ -5930,6 +5930,7 @@ body {
 }
 
 .out .mama .btnbtn {
+  margin: 50px;
   cursor: pointer;
   color: #60cd90;
   width: 20;
@@ -6101,12 +6102,73 @@ body {
           box-shadow: 0 10px 15px #00000060;
 }
 
+@media (min-width: 992px) {
+  .out .total .page {
+    max-width: 1200px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .out .total .page {
+    width: 100%;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .out .total .page {
+    width: 100%;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .out .total .page {
+    width: 100%;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .out .total .page {
+    width: 100%;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .out .total .page {
+    width: 100%;
+  }
+}
+
 .out .total .page .con-2 {
   width: 480px;
   background-color: black;
   text-align: center;
   color: #efefff;
   margin-top: 200px;
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .out .total .page .con-2 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .out .total .page .con-2 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .out .total .page .con-2 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 374.98px) {
+  .out .total .page .con-2 {
+    width: 100%;
+  }
 }
 
 .out .total .page h3 {
