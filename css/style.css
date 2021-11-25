@@ -1637,7 +1637,7 @@ main.deposit div.container div.sumPoint p {
   margin-left: 5px;
 }
 
-main.deposit div.container div#app {
+main.deposit div.container form#app {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1648,7 +1648,7 @@ main.deposit div.container div#app {
       justify-content: space-around;
 }
 
-main.deposit div.container div#app button {
+main.deposit div.container form#app button {
   width: 200px;
   height: 230px;
   background-color: transparent;
@@ -1658,7 +1658,7 @@ main.deposit div.container div#app button {
   cursor: pointer;
 }
 
-main.deposit div.container div#app button div.point {
+main.deposit div.container form#app button div.point {
   background-image: url(../src/image/deposit/point.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -1673,18 +1673,18 @@ main.deposit div.container div#app button div.point {
   line-height: 30px;
 }
 
-main.deposit div.container div#app button div.photo {
+main.deposit div.container form#app button div.photo {
   width: 100%;
   position: relative;
 }
 
-main.deposit div.container div#app button div.photo img {
+main.deposit div.container form#app button div.photo img {
   max-width: 100%;
   z-index: 0;
   position: relative;
 }
 
-main.deposit div.container div#app button div.photo span {
+main.deposit div.container form#app button div.photo span {
   z-index: 1;
   position: relative;
   color: white;
@@ -1692,18 +1692,18 @@ main.deposit div.container div#app button div.photo span {
 }
 
 @media (max-width: 577.98px) {
-  main.deposit div.container div#app button {
+  main.deposit div.container form#app button {
     height: 125px;
     width: 125px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 50px;
   }
-  main.deposit div.container div#app button div.point {
+  main.deposit div.container form#app button div.point {
     height: 20px;
     line-height: 20px;
   }
-  main.deposit div.container div#app button div.photo span {
+  main.deposit div.container form#app button div.photo span {
     bottom: 40px;
   }
 }

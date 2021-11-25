@@ -9,9 +9,9 @@
     use PHPMailer\PHPMailer\Exception;
 
     //設定檔案路徑
-    require 'src/Exception.php';
-    require 'src/PHPMailer.php';
-    require 'src/SMTP.php';
+    require './src/Exception.php';
+    require './src/PHPMailer.php';
+    require './src/SMTP.php';
     //---------------------------------------------------
     //欄位名稱
     $userId = htmlspecialchars($_POST["userId"]);

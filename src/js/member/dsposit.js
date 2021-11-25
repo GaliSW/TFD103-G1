@@ -40,26 +40,27 @@ let vm = new Vue({
     store(itemValue) {
       $.ajax({
         method: "POST",
-        url: "../php/member/deposit.php",
+        url: "../php/member/Credit_CreateOrder.php",
         data: {
           total: itemValue,
         },
         dataType: "text",
         success: function (response) {
           if (response == "Y") {
-              balance();
+            balance();
           } else {
-            alert("儲值失敗")
+            alert("儲值失敗");
           }
         },
         error: function (exception) {
           alert("發生錯誤: " + exception.status);
         },
       });
-      
-    },
+    }
   },
 });
+
+
 
 function balance(){
   $.ajax({
@@ -76,5 +77,23 @@ function balance(){
   });
 }
 
-
-
+// function store(itemValue) {
+//       $.ajax({
+//         method: "POST",
+//         url: "../php/member/deposit.php",
+//         data: {
+//           total: itemValue,
+//         },
+//         dataType: "text",
+//         success: function (response) {
+//           if (response == "Y") {
+//             balance();
+//           } else {
+//             alert("儲值失敗");
+//           }
+//         },
+//         error: function (exception) {
+//           alert("發生錯誤: " + exception.status);
+//         },
+//       });
+//     }
