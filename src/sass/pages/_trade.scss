@@ -28,6 +28,11 @@
         display: flex;
         width: 900px;
         @include center;
+
+        @include desktop{
+            width:930px;
+        }
+
         @include desktop_small{
         width:750px;
         }
@@ -46,17 +51,20 @@
             margin: 0 auto;
             .imgBlock{
 
-                //border: 1px solid red;
+                //border: 1px solid green;
                 width: 250px;
                 margin: 0 auto;
 
                 @include desktop_small{
                 width: 70%;
+                max-width: 280px;
                 @include center
                 }
 
                 @include pad{
                     width: 80%;
+                    max-width: 280px;
+
                 }
             }
             .name{
@@ -255,6 +263,10 @@
         border: 2px solid rgba(16, 197, 177, 1);
         border-radius: 5px;
         overflow: auto;
+
+        @media (max-width: 768px){
+            height: 30%;
+        }
 
 
 
@@ -499,145 +511,6 @@
             font-size: 32px;
         }
 
-
-        .manageListOut{
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            //border: 1px solid blue;
-
-            .itemFlex.first{
-                padding: 0;
-            }
-
-            .itemFlex{
-                display: block;
-                border: 1px solid rgba(16, 197, 177, 1);
-                align-items: center;
-                justify-content: space-between;
-                padding: 20px 0;
-
-                p{
-                    font-size: 24px;
-                }
-
-                .leftBlock{
-                    width: 100px;
-                    flex-shrink: 0;
-                    //border: 1px solid gold;
-
-                    .imgBlockRole{
-                        font-size: 0;
-                        margin-left: 20px;
-                    }
-                }
-
-                .middleBlock{
-
-                    flex-grow: 1;
-                    //border: 1px solid green;
-
-                    .detailInfo.firstTitle{
-                        
-                        p{
-                            font-size: 28px;
-                        }
-                    }
-
-                    .detailInfo{
-                        display: flex;
-                        justify-content: center;
-                        color: #fff;
-                        //border: 1px solid red;
-
-                        @media (min-width:375px) and (max-width:1017px){
-                            display: block;
-                            //@include border;
-
-                            p{
-                                //@include border;
-                                margin: 0 auto;
-                            }
-
-                        }
-
-                        .roleNamee{
-                            width: 150px;
-                        }
-
-                        .rolePrice{
-                            width: 100px;
-                        }
-
-                        .roleNumber{
-                            width: 150px;
-                        }
-                    }    
-                }
-
-                .rightBlock{
-
-                    //border: 1px solid purple;
-                    width: 246px;
-
-                    .btnBlock{
-                        display: flex;
-                        text-align: center;
-
-                        
-                        .downBt{
-                            text-align: center;
-                            line-height: 30px;
-                            text-decoration: none;
-                            border: 3px solid rgba(16, 197, 177, 1);
-                            color: rgba(16, 197, 177, 1);
-                            background-color: rgba(14, 52, 97, 1);
-                            width: 100px;
-                            height: 35px;
-                            border-radius: 10px;
-                            padding: 0;
-                            @include center;
-                            &:hover {@include btn_on (100px, 0px)}
-                        }
-
-                        .upBt{
-                            text-align: center;
-                            line-height: 30px;
-                            text-decoration: none;
-                            border: 3px solid rgba(16, 197, 177, 1);
-                            color: rgba(16, 197, 177, 1);
-                            background-color: rgba(14, 52, 97, 1);
-                            width: 100px;
-                            height: 35px;
-                            border-radius: 10px;
-                            padding: 0;
-                            @include center;
-                            &:hover {@include btn_on (100px, 0px)}
-                        }
-
-                        .deleteBt{
-                            text-align: center;
-                            line-height: 30px;
-                            text-decoration: none;
-                            border: 3px solid rgba(16, 197, 177, 1);
-                            color: rgba(16, 197, 177, 1);
-                            background-color: rgba(14, 52, 97, 1);
-                            width: 100px;
-                            height: 35px;
-                            border-radius: 10px;
-                            padding: 0;
-                            @include center;
-                            &:hover {@include btn_on (100px, 0px)}
-                        }
-                    }
-                }
-
-            }
-        }
-
-
-
-
         .manageList{
             margin: 0;
             padding: 0;
@@ -655,22 +528,49 @@
                 justify-content: space-between;
                 padding: 20px 0;
 
-                
+                @media (max-width: 768px){
+                    display: block;
+                }
 
 
                 p{
                     font-size: 24px;
                 }
 
+
+                .leftBlock, .middleBlock{
+                    @media (max-width: 768px){
+                    display: inline-block;
+                    
+                    }
+                }
+
+
                 .leftBlock{
-                    width: 100px;
+                    width: 180px;
                     flex-shrink: 0;
                     //border: 2px solid yellow;
+                    @media (max-width: 585px){
+                        width: 150px;
+                    }
+
+                    @media (max-width: 585px){
+                        display: block;
+                        width: 100%;
+                    }
+
+
 
                     .imgBlockRole{
                         //border: 2px solid red;
                         font-size: 0;
                         margin-left: 20px;
+
+                        @media (max-width: 585px){
+                            width: 150px;
+                            margin: 0 auto;
+                        }
+    
                     }
                 }
 
@@ -678,6 +578,10 @@
 
                     flex-grow: 1;
                     //border: 2px solid green;
+
+                    @media (max-width: 585px){
+                        display: block;
+                    }
 
                     .detailInfo.firstTitle{
                         
@@ -687,9 +591,10 @@
                     }
 
                     .detailInfo{
-                        display: flex;
+                        display: block;
                         justify-content: center;
                         color: #fff;
+                        //border: 1px solid red;  
 
                         @media (min-width:375px) and (max-width:1017px){
                             display: block;
@@ -703,15 +608,16 @@
                         }
 
                         .roleNamee{
-                            width: 150px;
+                            //width: 150px;
                         }
 
                         .rolePrice{
-                            width: 100px;
+                            //width: 100px;
+                            margin: 20px 0;
                         }
 
                         .roleNumber{
-                            width: 150px;
+                            //width: 150px;
                         }
                     }    
                 }
@@ -719,6 +625,10 @@
                 .rightBlock{
                     //border: 2px solid black;
                     width: 250px;
+                    @media (max-width: 768px){
+                        display: block;
+                        margin: 20px auto 0;
+                        }
 
                     .btnBlock{
                         display: flex;
@@ -978,6 +888,7 @@
 
 .lower {
     //rightBlockborder: 1px solid red;
+    border: 1px solid red;
     display: flex;
     justify-content: flex-end;
     align-content: center;
