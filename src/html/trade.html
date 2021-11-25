@@ -119,7 +119,7 @@
     </div>
 </header>
   <main class="allBlock1">
-    <p class="p">首頁>角色交易>所有消息</p>
+    <p class="p">首頁>角色交易</p>
 
 
 
@@ -288,34 +288,6 @@
             <div class="popContent3">
               <h1>角色管理</h1>
               <div class="manageFlex">
-                <!-- <ol class="manageListOut">
-                  <li>
-                    <div class="itemFlex first">
-                      <div class="leftBlock">
-                        <div class="imgBlockRole">
-                          <img src="../image/trade/product1.png" style="visibility: hidden">
-                        </div>
-                      </div>
-
-                      <div class="middleBlock">
-                        <div class="detailInfo firstTitle">
-                          <p class="roleNamee one">名稱</p>
-                          <p class="rolePrice one">價錢</p>
-                          <p class="roleNumber one">角色編號</p>
-                        </div>
-                      </div>
-
-                      <div class="rightBlock">
-                        <div class="btnBlock" style="visibility: hidden">
-                          <button class="downBt">下架</button>
-                          <button class="upBt">重新上架</button>
-                          <button class="deleteBt"><i class="fas fa-trash"></i></button>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ol> -->
-
                 <ol class="manageList" id="manageList">
 
                   <li>
@@ -404,9 +376,6 @@
     </section>
   </main>
 
-  <div class="upup">
-    <i class="fas fa-arrow-circle-up totop"></i>
-  </div>
 
   <!-- footer -->
   <footer class="footer">
@@ -796,10 +765,10 @@
                                                 </div>
 
                                                 <div class="middleBlock">
-                                                  <div class="detailInfo">
+                                                  <div class="detailInfo" id="${row.ISSHOW}">
                                                     <p class="roleNamee">名稱: ${row.RNAME}</p>
                                                     <p class="rolePrice">價錢: $${row.PRICE}E</p>
-                                                    <p class="roleNumber" name="${row.FK_GACHA_ID}">編號: ${row.ROLE_ID}</p>
+                                                    <p class="roleNumber" alt="${row.PRODUCT_ID}" name="${row.FK_GACHA_ID}">編號: ${row.ROLE_ID}</p>
                                                   </div>
                                                 </div>
                       
@@ -822,12 +791,12 @@
                                                   <div class="detailInfo">
                                                     <p class="roleNamee">名稱: ${row.RNAME}</p>
                                                     <p class="rolePrice">價錢: $${row.PRICE}E</p>
-                                                    <p class="roleNumber" name="${row.FK_GACHA_ID}">編號: ${row.ROLE_ID}</p>
+                                                    <p class="roleNumber" alt="${row.PRODUCT_ID}" name="${row.FK_GACHA_ID}">編號: ${row.ROLE_ID}</p>
                                                   </div>
                                                 </div>
                       
-                                                <div class="rightBlock">
-                                                  <div class="btnBlock">
+                                                <div class="rightBlock" >
+                                                  <div class="btnBlock" id="btnBlock">
                                                     <button class="upBt" onclick="up(this)">重新上架</button>
                                                     <button class="deleteBt" onclick="dele(this)"><i class="fas fa-trash"></i></button>
                                                   </div>
@@ -958,12 +927,17 @@
 
   <!-- 刪除click function -->
 
-  <script>
-    function dele(item) {
-      let gachaID = item.parentNode.parentNode.previousSibling.previousSibling.childNodes[1].childNodes[5].attributes['name'].value;
 
-      console.log(gachaID);
-      //console.log(item.parentNode.parentNode.parentNode.parentNode);
+
+  <script>
+
+    function dele(item) {
+
+
+      let gachaID = item.parentNode.parentNode.previousSibling.previousSibling.childNodes[1].childNodes[5].attributes['name'].value;
+      let PRODUCT_ID = item.parentNode.parentNode.previousSibling.previousSibling.childNodes[1].childNodes[5].attributes['alt'].value;
+      console.log(PRODUCT_ID);
+      
       let x = item.parentNode.parentNode.parentNode.parentNode;
       x.innerHTML = "";
 
@@ -971,7 +945,8 @@
         method: "POST",
         url: "../php/product/delete.php",
         data: {
-          GACHA_ID: gachaID
+          GACHA_ID: gachaID,
+          PRODUCT_ID: PRODUCT_ID
         },
         dataType: "TEXT",
         success: function (response) {
