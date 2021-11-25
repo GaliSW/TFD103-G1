@@ -305,7 +305,7 @@
             </section>
         </div>
         <!-- 購買確認Pop -->
-        <div id="BuyingBlk" class="BuyingBlk none">
+        <div id="BuyingBlk" class="BuyingBlk none" name="">
             <section class="BuyingHintmaskLayer">
                 <div class="BuyingPopUpBox">
                     <div onclick="popCloseX(this)" class="BuyingCloseBtn">
@@ -318,7 +318,7 @@
                     </div>
                     <div class="BuyingConfirmBlk">
                         <button class="bonusConfirmBtn" onclick="popClose(this)">否</button>
-                        <button class="bonusConfirmBtn" onclick="buyRole()">是</button>
+                        <button class="bonusConfirmBtn" onclick="buyRole(this)">是</button>
                     </div>
                 </div>
             </section>
@@ -349,11 +349,10 @@
             </div>
 
             <main class="test">
-                <template id="=hiddenPopUps">
 
-                    <section class="maskLayer">
+                    <!-- <section class="maskLayer"> -->
 
-                        <div class="popUpBox one" :class="{'box':one}" id="one">
+                        <div class="popUpBox" id="one">
                             <div class="closeBtn" onclick=clickClose()>
                                 x
                             </div>
@@ -408,12 +407,12 @@
                             </div>
                             <div class="confirmBlk13">
                                 <button href="#" class="confirmBtnBack13" onclick=toBack()>返回</button>
-                                <button href="#" class="confirmBtn13" onclick="toThree()">確定</button>
+                                <button href="#" class="confirmBtn13" onclick="toThree(this)">確定</button>
                             </div>
 
                         </div>
 
-                        <div class="popUpBox none" :class="{'box':three}" id="three">
+                        <div class="popUpBox none" :class="{'box':three}" id="three" name="">
                             <div class="closeBtn" onclick=clickClose()>
                                 x
                             </div>
@@ -422,9 +421,7 @@
                             </div>
 
                         </div>
-                    </section>
-
-                </template>
+                    <!-- </section> -->
             </main>
         </section>
 
@@ -487,12 +484,15 @@
             display();
         }
         // 購買
-        function buyingCheck() {
+        function buyingCheck(item) {
+            // console.log(item);
             let BuyingBlk = document.getElementById('BuyingBlk');
             BuyingBlk.classList.remove('none');
+             BuyingBlk.attributes['name'].value=item;
         }
-        function buyRole() {
+        function buyRole(item) {
             let successBlk = document.getElementById('successBlk');
+            let PRODUCT_ID = item.parentNode.parentNode.parentNode.parentNode.attributes['name'].value;
             $.ajax({
                 method: "POST",
                 url: "../php/product/buyRole.php",
@@ -505,7 +505,8 @@
                     if (response == "y") {
                         // 有錢而且成功
                         successBlk.classList.remove('none');
-
+                        let BuyingBlk = document.getElementById('BuyingBlk');
+                         BuyingBlk.classList.add('none');
                     } else if (response = "no") {
                         // 沒錢
                         noPointBlk.classList.remove('none');
@@ -514,14 +515,13 @@
             })
         };
         //交換
-        function clickPopp() {
+        function clickPopp(item) {
             // 判斷是否有角色
-            if (roleList1MarkChild == 0) {
-                let toGachaBlk = document.getElementById('toGachaBlk');
-                toGachaBlk.classList.remove('none');
-            } else {
                 let transBlk = document.getElementById('transBlk');
                 transBlk.classList.remove('none');
+                let yourName = item.parentNode.parentNode.childNodes[3].innerText;
+                let yourImg = item.parentNode.parentNode.childNodes[1].childNodes[0].attributes['src'].value;
+                let pID = item.parentNode.parentNode.attributes['name'].value;
                 $.ajax({
                     method: "POST",
                     url: "../php/product/callChangeRole.php",
@@ -534,21 +534,26 @@
 
                         $.each(response, function (index, row) {
                             let str = `<li onclick=toTwo(this)>
+                                <span name="${yourName}" class="${yourImg}" id="${pID}"></span>
                                             <div class="imgBlock1Mark" id="imgBlock1Mark" name="${row.GACHA_ID}">
                                                 <img src="../image/ROLE/${row.ROLE_IMG}" id="${row.RNAME}" name= "${row.FK_USERNAME}">
                                             </div>
                                         </li>`;
                             roleList1Mark.insertAdjacentHTML("beforeend", str);
-
-
                         })
                         let roleList1MarkChild = document.getElementById("roleList1Mark").childNodes.length;
+                        console.log(roleList1MarkChild);
+                        if (roleList1MarkChild == 0) {
+                            let toGachaBlk = document.getElementById('toGachaBlk');
+                            toGachaBlk.classList.remove('none');
+                        }
                     },
                     error: function (exception) {
                         alert("數據載入失敗: " + exception.status);
                     }
                 });
-            }
+
+            
         }
         function toTwo(item) {
             document.getElementById('one').classList.add('none');
@@ -569,22 +574,27 @@
 
             //////////// 你的角色圖片
 
-            let imgBlock = document.getElementsByClassName("imgBlock")[0];
-            //console.log(imgBlock);
-            let yourImg = imgBlock.querySelector("img");
+            // console.log(item.childNodes[1].attributes['name'].value);
+            console.log(item.parentNode.parentNode.parentNode.parentNode.childNodes[4].attributes['name'].value);
+            
             //console.log(yourImg);
-            yourImgSrc = yourImg.attributes['src'].value;
+            yourImgSrc = item.childNodes[1].attributes['class'].value
             let yourRoleImg1 = document.getElementById('yourRoleImg1');
             yourRoleImg1.attributes['src'].value = yourImgSrc;
-            let name = document.getElementById("title1").innerText;
+            let name = item.childNodes[1].attributes['name'].value
             let yourname = document.getElementById('yourRoleName1');
             yourname.innerText = name;
+            let productID = item.parentNode.parentNode.parentNode.parentNode.childNodes[4].attributes['name'];
+            let yourPID = item.childNodes[1].attributes['id'].value;
+            console.log(productID);
+            productID.value = yourPID;
+            console.log(productID);
         }
         function toBack() {
             document.getElementById('one').classList.remove('none');
             document.getElementById('popUpBox2').classList.add('none');
         };
-        function toThree() {
+        function toThree(item) {
             document.getElementById('one').classList.add('none');
             document.getElementById('popUpBox2').classList.add('none');
             document.getElementById('three').classList.remove('none');
@@ -593,10 +603,9 @@
             let FK_GACHA_ID = imgBlock1Mark.attributes['name'].value;
             console.log(FK_GACHA_ID);
 
-
-            let iimgBlock = document.getElementById("iimgBlock");
-            let PRODUCT_ID = iimgBlock.attributes['name'].value;
-            console.log(PRODUCT_ID);
+            console.log(item.parentNode.parentNode.parentNode.childNodes[4].attributes['name'].value);
+            // let iimgBlock = document.getElementById("iimgBlock");
+            let PRODUCT_ID = item.parentNode.parentNode.parentNode.childNodes[4].attributes['name'].value;
 
             $.ajax({
                 method: "POST",
