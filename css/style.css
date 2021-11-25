@@ -3646,7 +3646,7 @@ body {
 }
 
 .pintooBlk #ul {
-  background-color: wheat;
+  background-color: #0e3461;
   padding-top: 2px;
   position: relative;
   border-radius: 4px;
@@ -3674,7 +3674,7 @@ body {
 }
 
 .pintooBlk #ul .active {
-  background: wheat;
+  background: #10c5b1;
 }
 
 .pintooMask {
@@ -4004,7 +4004,10 @@ body {
 }
 
 .rolesBlk .features-list h2 {
-  font-size: 20px;
+  font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 1200px) {
@@ -10142,13 +10145,13 @@ main.member_info section.popShow {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .allBlock .sec1 .flexContainer {
-    width: 100%;
+    width: 730px;
   }
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
   .allBlock .sec1 .flexContainer {
-    width: 100%;
+    width: 500px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -10195,9 +10198,38 @@ main.member_info section.popShow {
   width: 100%;
 }
 
+@media (max-width: 823px) {
+  .allBlock .sec1 .flexContainer .items.-left {
+    -ms-flex-preferred-size: 250px;
+        flex-basis: 250px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .allBlock .sec1 .flexContainer .items.-left {
+    -ms-flex-preferred-size: 180px;
+        flex-basis: 180px;
+  }
+}
+
 .allBlock .sec1 .flexContainer .items.-left .imgBlock {
   width: 300px;
   height: 300px;
+}
+
+@media (max-width: 823px) {
+  .allBlock .sec1 .flexContainer .items.-left .imgBlock {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .allBlock .sec1 .flexContainer .items.-left .imgBlock {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
 }
 
 .allBlock .sec1 .flexContainer .items.-left .imgBlock img {
@@ -10214,13 +10246,33 @@ main.member_info section.popShow {
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  .allBlock .sec1 .flexContainer .items.-right {
+    text-align: center;
+    padding-left: 0px;
+  }
+}
+
 .allBlock .sec1 .flexContainer .items.-right .title1 {
   margin-top: 15px;
   margin-bottom: 30px;
 }
 
+@media (max-width: 768px) {
+  .allBlock .sec1 .flexContainer .items.-right .title1 {
+    text-align: center;
+  }
+}
+
 .allBlock .sec1 .flexContainer .items.-right .introduce {
   margin-bottom: 30px;
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .allBlock .sec1 .flexContainer .items.-right .introduce {
+    margin: 0 auto 30px;
+  }
 }
 
 .allBlock .sec1 .flexContainer .items.-right .price,
@@ -10229,8 +10281,11 @@ main.member_info section.popShow {
   margin-bottom: 30px;
 }
 
-.allBlock .sec1 .flexContainer .items.-right .price {
-  margin-bottom: 30px;
+@media (max-width: 412px) {
+  .allBlock .sec1 .flexContainer .items.-right .price,
+  .allBlock .sec1 .flexContainer .items.-right .buyForm {
+    display: block;
+  }
 }
 
 .allBlock .sec1 .flexContainer .items.-right .price,
@@ -10239,15 +10294,45 @@ main.member_info section.popShow {
   margin-bottom: 35px;
 }
 
+@media (max-width: 768px) {
+  .allBlock .sec1 .flexContainer .items.-right .price,
+  .allBlock .sec1 .flexContainer .items.-right .collectForm {
+    display: block;
+  }
+}
+
 .allBlock .sec1 .flexContainer .items.-right .price {
   margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .allBlock .sec1 .flexContainer .items.-right .price {
+    margin: 0 auto 30px;
+  }
 }
 
 .allBlock .sec1 .flexContainer .items.-right .collectForm {
   margin-left: 70px;
 }
 
-.allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn {
+@media (max-width: 768px) {
+  .allBlock .sec1 .flexContainer .items.-right .collectForm {
+    margin-left: 0px;
+  }
+}
+
+.allBlock .sec1 .flexContainer .items.-right .collectForm .btnBlock1 {
+  width: 180px;
+}
+
+@media (max-width: 768px) {
+  .allBlock .sec1 .flexContainer .items.-right .collectForm .btnBlock1 {
+    margin: 0 auto;
+  }
+}
+
+.allBlock .sec1 .flexContainer .items.-right .collectForm .btnBlock1 .collectBtn {
   color: #60cd90;
   width: 70px;
   padding: 5px;
@@ -10257,7 +10342,7 @@ main.member_info section.popShow {
   border-radius: 10px;
 }
 
-.allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn:hover {
+.allBlock .sec1 .flexContainer .items.-right .collectForm .btnBlock1 .collectBtn:hover {
   color: #0e3461;
   width: 70px;
   padding: 5px;
@@ -10266,11 +10351,11 @@ main.member_info section.popShow {
   text-align: center;
 }
 
-.allBlock .sec1 .flexContainer .items.-right .collectForm .collectBtn:hover {
+.allBlock .sec1 .flexContainer .items.-right .collectForm .btnBlock1 .collectBtn:hover {
   cursor: pointer;
 }
 
-.allBlock .sec1 .flexContainer .items.-right .collectForm .changeBtn {
+.allBlock .sec1 .flexContainer .items.-right .collectForm .btnBlock1 .changeBtn {
   color: #60cd90;
   width: 70px;
   padding: 5px;
@@ -10281,7 +10366,7 @@ main.member_info section.popShow {
   margin-left: 25px;
 }
 
-.allBlock .sec1 .flexContainer .items.-right .collectForm .changeBtn:hover {
+.allBlock .sec1 .flexContainer .items.-right .collectForm .btnBlock1 .changeBtn:hover {
   color: #0e3461;
   width: 70px;
   padding: 5px;
@@ -10290,7 +10375,7 @@ main.member_info section.popShow {
   text-align: center;
 }
 
-.allBlock .sec1 .flexContainer .items.-right .collectForm .changeBtn:hover {
+.allBlock .sec1 .flexContainer .items.-right .collectForm .btnBlock1 .changeBtn:hover {
   cursor: pointer;
 }
 
@@ -10325,17 +10410,14 @@ main.member_info section.popShow {
   width: 500px;
   height: 500px;
   padding: 15px;
+  border: 3px solid #d8b236;
+  border-radius: 20px;
 }
 
-@media (min-width: 375px) and (max-width: 413.98px) {
+@media (max-width: 600px) {
   .allBlock .chart {
-    width: 100%;
-  }
-}
-
-@media (min-width: 100px) and (max-width: 374.98px) {
-  .allBlock .chart {
-    width: 100%;
+    width: 80%;
+    height: 80%;
   }
 }
 
@@ -10352,21 +10434,24 @@ main.member_info section.popShow {
   height: 500px;
 }
 
-@media (min-width: 414px) and (max-width: 577.98px) {
+@media (max-width: 729px) {
   .allBlock .tableBlock table {
-    width: 100%;
+    width: 500px;
+    height: 400px;
   }
 }
 
-@media (min-width: 375px) and (max-width: 413.98px) {
+@media (max-width: 578px) {
   .allBlock .tableBlock table {
-    width: 100%;
+    width: 400px;
+    height: 300px;
   }
 }
 
-@media (min-width: 100px) and (max-width: 374.98px) {
+@media (max-width: 460px) {
   .allBlock .tableBlock table {
-    width: 100%;
+    width: 360px;
+    height: 300px;
   }
 }
 
@@ -10374,6 +10459,20 @@ main.member_info section.popShow {
 .allBlock .tableBlock table td {
   border: 2px solid #fff;
   text-align: center;
+}
+
+@media (max-width: 585px) {
+  .allBlock .tableBlock table th,
+  .allBlock .tableBlock table td {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 460px) {
+  .allBlock .tableBlock table th,
+  .allBlock .tableBlock table td {
+    font-size: 14px;
+  }
 }
 
 .allBlock .tableBlock th {
@@ -10476,7 +10575,7 @@ main.member_info section.popShow {
           transform: translateX(-50%);
   background-color: #024f3f;
   border: 2px solid #10c5b1;
-  width: 1000px;
+  width: 80%;
   height: 480px;
   border-radius: 5px;
   overflow: auto;
@@ -10539,62 +10638,126 @@ main.member_info section.popShow {
   border-radius: 5px;
 }
 
-.test .popUpBox .myRoleBlock,
-.test .popUpBox .doubleArrow,
-.test .popUpBox .yourRoleBlock {
+.test .popUpBox .roleArea {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .test .popUpBox .roleArea {
+    margin-bottom: 40px;
+  }
+}
+
+.test .popUpBox .roleArea .myRoleBlock,
+.test .popUpBox .roleArea .doubleArrow,
+.test .popUpBox .roleArea .yourRoleBlock {
   display: inline-block;
   vertical-align: middle;
 }
 
-.test .popUpBox .myRoleBlock {
-  margin-left: 185px;
-}
-
-.test .popUpBox .myRoleBlock .myRoleP {
+.test .popUpBox .roleArea .myRoleBlock .myRoleP {
   margin-bottom: 20px;
   text-align: center;
   color: #fff;
 }
 
-.test .popUpBox .myRoleBlock .myRoleImg {
+.test .popUpBox .roleArea .myRoleBlock .myRoleImg {
   width: 230px;
 }
 
-.test .popUpBox .myRoleBlock .myRoleNameBlock {
+@media (max-width: 900px) {
+  .test .popUpBox .roleArea .myRoleBlock .myRoleImg {
+    width: 150px;
+  }
+}
+
+@media (max-width: 700px) {
+  .test .popUpBox .roleArea .myRoleBlock .myRoleImg {
+    width: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .test .popUpBox .roleArea .myRoleBlock .myRoleImg {
+    width: 80px;
+  }
+}
+
+.test .popUpBox .roleArea .myRoleBlock .myRoleImg img {
+  width: 100%;
+}
+
+.test .popUpBox .roleArea .myRoleBlock .myRoleNameBlock {
   text-align: center;
   margin-top: 20px;
 }
 
-.test .popUpBox .myRoleBlock .myRoleNameBlock p {
+.test .popUpBox .roleArea .myRoleBlock .myRoleNameBlock p {
   color: #fff;
 }
 
-.test .popUpBox .doubleArrow {
+.test .popUpBox .roleArea .doubleArrow {
   width: 100px;
   height: 100px;
   font-size: 100px;
   margin: 0 30px;
 }
 
-.test .popUpBox .yourRoleBlock .yourRoleP {
+@media (max-width: 600px) {
+  .test .popUpBox .roleArea .doubleArrow {
+    width: 80px;
+    height: 80px;
+    font-size: 80px;
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .test .popUpBox .roleArea .doubleArrow {
+    width: 60px;
+    height: 60px;
+    font-size: 60px;
+    margin: 0 15px;
+  }
+}
+
+.test .popUpBox .roleArea .yourRoleBlock .yourRoleP {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.test .popUpBox .yourRoleBlock .yourRoleP p {
+.test .popUpBox .roleArea .yourRoleBlock .yourRoleP p {
   color: #fff;
 }
 
-.test .popUpBox .yourRoleBlock .yourRoleImg {
+.test .popUpBox .roleArea .yourRoleBlock .yourRoleImg {
   width: 230px;
 }
 
-.test .popUpBox .yourRoleBlock .yourRoleNameBlock {
+@media (max-width: 900px) {
+  .test .popUpBox .roleArea .yourRoleBlock .yourRoleImg {
+    width: 150px;
+  }
+}
+
+@media (max-width: 700px) {
+  .test .popUpBox .roleArea .yourRoleBlock .yourRoleImg {
+    width: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .test .popUpBox .roleArea .yourRoleBlock .yourRoleImg {
+    width: 80px;
+  }
+}
+
+.test .popUpBox .roleArea .yourRoleBlock .yourRoleNameBlock {
   text-align: center;
   margin-top: 20px;
 }
 
-.test .popUpBox .yourRoleBlock .yourRoleNameBlock p {
+.test .popUpBox .roleArea .yourRoleBlock .yourRoleNameBlock p {
   color: #fff;
 }
 
@@ -10622,6 +10785,12 @@ main.member_info section.popShow {
 .test .popUpBox .popContent13 p {
   margin-top: 30px;
   font-size: 24px;
+}
+
+@media (max-width: 900px) {
+  .test .popUpBox .popContent13 p {
+    margin-bottom: 40px;
+  }
 }
 
 .test .popUpBox .confirmBlk13 {
@@ -11376,6 +11545,13 @@ main.signup .verify_contain div.verify .falseVerify {
   margin: 0 auto;
 }
 
+@media (min-width: 992px) {
+  .allBlock1 .roleRanksection .rankBloCk {
+    max-width: 1200px;
+    width: 930px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 991.98px) {
   .allBlock1 .roleRanksection .rankBloCk {
     width: 750px;
@@ -11407,6 +11583,7 @@ main.signup .verify_contain div.verify .falseVerify {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .allBlock1 .roleRanksection .rankBloCk .roleBloCk1 .imgBlock {
     width: 70%;
+    max-width: 280px;
     margin: 0 auto;
   }
 }
@@ -11414,6 +11591,7 @@ main.signup .verify_contain div.verify .falseVerify {
 @media (min-width: 578px) and (max-width: 767.98px) {
   .allBlock1 .roleRanksection .rankBloCk .roleBloCk1 .imgBlock {
     width: 80%;
+    max-width: 280px;
   }
 }
 
@@ -11601,10 +11779,6 @@ main.signup .verify_contain div.verify .falseVerify {
   margin-bottom: 10px;
 }
 
-.allBlock1 .ypagey {
-  padding-bottom: 80px;
-}
-
 .allBlock1 .ypagey li a {
   text-decoration: none;
 }
@@ -11640,6 +11814,12 @@ main.signup .verify_contain div.verify .falseVerify {
   border: 2px solid #10c5b1;
   border-radius: 5px;
   overflow: auto;
+}
+
+@media (max-width: 768px) {
+  .roleUpPop .popUpBox {
+    height: 30%;
+  }
 }
 
 .roleUpPop .popUpBox .popContent2 {
@@ -11916,166 +12096,6 @@ main.signup .verify_contain div.verify .falseVerify {
   font-size: 32px;
 }
 
-.roleUpPop .popContent3 .manageListOut {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex.first {
-  padding: 0;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid #10c5b1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 20px 0;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex p {
-  font-size: 24px;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .leftBlock {
-  width: 100px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .leftBlock .imgBlockRole {
-  font-size: 0;
-  margin-left: 20px;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo.firstTitle p {
-  font-size: 28px;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #fff;
-}
-
-@media (min-width: 375px) and (max-width: 1017px) {
-  .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo {
-    display: block;
-  }
-  .roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo p {
-    margin: 0 auto;
-  }
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo .roleNamee {
-  width: 150px;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo .rolePrice {
-  width: 100px;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .middleBlock .detailInfo .roleNumber {
-  width: 150px;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock {
-  width: 246px;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock .downBt {
-  text-align: center;
-  line-height: 30px;
-  text-decoration: none;
-  border: 3px solid #10c5b1;
-  color: #10c5b1;
-  background-color: #0e3461;
-  width: 100px;
-  height: 35px;
-  border-radius: 10px;
-  padding: 0;
-  margin: 0 auto;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock .downBt:hover {
-  color: #0e3461;
-  width: 100px;
-  padding: 0px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock .upBt {
-  text-align: center;
-  line-height: 30px;
-  text-decoration: none;
-  border: 3px solid #10c5b1;
-  color: #10c5b1;
-  background-color: #0e3461;
-  width: 100px;
-  height: 35px;
-  border-radius: 10px;
-  padding: 0;
-  margin: 0 auto;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock .upBt:hover {
-  color: #0e3461;
-  width: 100px;
-  padding: 0px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock .deleteBt {
-  text-align: center;
-  line-height: 30px;
-  text-decoration: none;
-  border: 3px solid #10c5b1;
-  color: #10c5b1;
-  background-color: #0e3461;
-  width: 100px;
-  height: 35px;
-  border-radius: 10px;
-  padding: 0;
-  margin: 0 auto;
-}
-
-.roleUpPop .popContent3 .manageListOut .itemFlex .rightBlock .btnBlock .deleteBt:hover {
-  color: #0e3461;
-  width: 100px;
-  padding: 0px;
-  background-color: #60cd90;
-  border: 3px solid #0e3461;
-  text-align: center;
-}
-
 .roleUpPop .popContent3 .manageList {
   margin: 0;
   padding: 0;
@@ -12100,19 +12120,51 @@ main.signup .verify_contain div.verify .falseVerify {
   padding: 20px 0;
 }
 
+@media (max-width: 768px) {
+  .roleUpPop .popContent3 .manageList .itemFlex {
+    display: block;
+  }
+}
+
 .roleUpPop .popContent3 .manageList .itemFlex p {
   font-size: 24px;
 }
 
+@media (max-width: 768px) {
+  .roleUpPop .popContent3 .manageList .itemFlex .leftBlock, .roleUpPop .popContent3 .manageList .itemFlex .middleBlock {
+    display: inline-block;
+  }
+}
+
 .roleUpPop .popContent3 .manageList .itemFlex .leftBlock {
-  width: 100px;
+  width: 180px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+
+@media (max-width: 585px) {
+  .roleUpPop .popContent3 .manageList .itemFlex .leftBlock {
+    width: 150px;
+  }
+}
+
+@media (max-width: 585px) {
+  .roleUpPop .popContent3 .manageList .itemFlex .leftBlock {
+    display: block;
+    width: 100%;
+  }
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .leftBlock .imgBlockRole {
   font-size: 0;
   margin-left: 20px;
+}
+
+@media (max-width: 585px) {
+  .roleUpPop .popContent3 .manageList .itemFlex .leftBlock .imgBlockRole {
+    width: 150px;
+    margin: 0 auto;
+  }
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .middleBlock {
@@ -12121,14 +12173,18 @@ main.signup .verify_contain div.verify .falseVerify {
           flex-grow: 1;
 }
 
+@media (max-width: 585px) {
+  .roleUpPop .popContent3 .manageList .itemFlex .middleBlock {
+    display: block;
+  }
+}
+
 .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo.firstTitle p {
   font-size: 28px;
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -12144,20 +12200,19 @@ main.signup .verify_contain div.verify .falseVerify {
   }
 }
 
-.roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo .roleNamee {
-  width: 150px;
-}
-
 .roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo .rolePrice {
-  width: 100px;
-}
-
-.roleUpPop .popContent3 .manageList .itemFlex .middleBlock .detailInfo .roleNumber {
-  width: 150px;
+  margin: 20px 0;
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .rightBlock {
   width: 250px;
+}
+
+@media (max-width: 768px) {
+  .roleUpPop .popContent3 .manageList .itemFlex .rightBlock {
+    display: block;
+    margin: 20px auto 0;
+  }
 }
 
 .roleUpPop .popContent3 .manageList .itemFlex .rightBlock .btnBlock {
@@ -12252,9 +12307,38 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .ymainy .container {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 767.98px) {
+  .ymainy .container {
+    width: 33%;
+  }
+}
+
+@media (max-width: 530px) {
+  .ymainy .container {
+    width: 48%;
+  }
+}
+
+@media (max-width: 413.98px) {
+  .ymainy .container {
+    width: 50%;
+  }
+}
+
+.ymainy .containerInner {
   border: 1px solid #60cd90;
   margin-bottom: 50px;
-  width: 25%;
+  width: 90%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -12271,7 +12355,13 @@ main.signup .verify_contain div.verify .falseVerify {
           box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.ymainy .container a {
+@media (max-width: 1200px) {
+  .ymainy .containerInner {
+    width: 80%;
+  }
+}
+
+.ymainy .containerInner a {
   display: inline-block;
   text-decoration: none;
   width: 100%;
@@ -12289,16 +12379,49 @@ main.signup .verify_contain div.verify .falseVerify {
   background: #60cd90;
 }
 
+@media (max-width: 1200px) {
+  .ymainy .container:hover .lower {
+    -webkit-transform: translateY(-3%);
+            transform: translateY(-3%);
+  }
+}
+
+@media (max-width: 992px) {
+  .ymainy .container:hover .lower {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ymainy .container:hover .lower {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+}
+
+@media (max-width: 530px) {
+  .ymainy .container:hover .lower {
+    -webkit-transform: translateY(-35%);
+            transform: translateY(-35%);
+  }
+}
+
 .ymainy .container:hover .features-list {
   opacity: 1;
+  background: #60cd90;
 }
 
 .ymainy .container:hover span {
-  -webkit-transform: translateY(25%);
-          transform: translateY(25%);
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
 }
 
 .ymainy .container:hover .content h2 {
+  opacity: 0;
+}
+
+.ymainy .container:hover .content h3 {
   opacity: 0;
 }
 
@@ -12319,6 +12442,42 @@ main.signup .verify_contain div.verify .falseVerify {
   background-position: center;
   background-repeat: no-repeat;
   /* overflow: hidden; */
+}
+
+@media (max-width: 1200px) {
+  .ymainy .inner {
+    height: 350px;
+  }
+}
+
+@media (max-width: 992px) {
+  .ymainy .inner {
+    height: 270px;
+  }
+}
+
+@media (max-width: 760px) {
+  .ymainy .inner {
+    height: 270px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ymainy .inner {
+    height: 250px;
+  }
+}
+
+@media (max-width: 540px) {
+  .ymainy .inner {
+    height: 280px;
+  }
+}
+
+@media (max-width: 420px) {
+  .ymainy .inner {
+    height: 250px;
+  }
 }
 
 .ymainy .inner img {
@@ -12358,6 +12517,7 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .ymainy .lower {
+  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12372,11 +12532,44 @@ main.signup .verify_contain div.verify .falseVerify {
           flex-direction: column;
   background: transparent;
   position: relative;
-  -webkit-transform: translateY(10%);
-          transform: translateY(10%);
+  -webkit-transform: translateY(3%);
+          transform: translateY(3%);
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
-  height: 120px;
+  width: 100%;
+  height: 32%;
+}
+
+@media (max-width: 1200px) {
+  .ymainy .lower {
+    height: 35%;
+    -webkit-transform: translateY(40%);
+            transform: translateY(40%);
+  }
+}
+
+@media (max-width: 992px) {
+  .ymainy .lower {
+    height: 35%;
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+}
+
+@media (max-width: 590px) and (max-width: 600px) {
+  .ymainy .lower {
+    height: 47%;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+}
+
+@media (max-width: 413.98px) {
+  .ymainy .lower {
+    height: 47%;
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
 }
 
 .ymainy .lower .ysellerImgy, .ymainy .lower .ysellerInfoy {

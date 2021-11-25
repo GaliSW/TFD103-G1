@@ -15,10 +15,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/8988cd1b75.js" crossorigin="anonymous"></script>
+    <script src="../js/header/header.js"></script>
 
     <script>
-        
+
         window.onload = function doQuery() {
+            status();
             $.ajax({
                 method: "POST",
                 url: "../php/news/callnews.php",
@@ -32,7 +34,7 @@
                     let content = response[0][3];
                     let img = response[0][4];
                     let block_10 = document.getElementById("block_10");
-                    let str =`
+                    let str = `
                     <div class="left">
                         <p>${date}</p>
                         <h3>${title}</h3>
@@ -77,7 +79,7 @@
                             </div>
                         </div>
                     `;
-                    block_9.insertAdjacentHTML("beforeend" ,str);
+                        block_9.insertAdjacentHTML("beforeend", str);
                     });
                 },
                 error: function (exception) {
@@ -90,7 +92,7 @@
 
     <script>
 
-function sort2(){
+        function sort2() {
             $.ajax({
                 method: "POST",
                 url: "../php/news/callnews3.php",
@@ -100,7 +102,7 @@ function sort2(){
                 success: function (response) {
                     // console.log(response);
                     let block_9 = document.getElementById("block_9");
-                    block_9.innerHTML = ""; 
+                    block_9.innerHTML = "";
 
                     //更新html內容(透過jQuery跑迴圈取值)
                     $.each(response, function (index, row) {
@@ -117,7 +119,7 @@ function sort2(){
                             </div>
                         </div>
                     `;
-                    block_9.insertAdjacentHTML("beforeend" ,str);
+                        block_9.insertAdjacentHTML("beforeend", str);
                     });
                 },
                 error: function (exception) {
@@ -127,7 +129,7 @@ function sort2(){
         }
 
 
-        function sort(){
+        function sort() {
             $.ajax({
                 method: "POST",
                 url: "../php/news/callnews.php",
@@ -137,7 +139,7 @@ function sort2(){
                 success: function (response) {
                     // console.log(response);
                     let block_9 = document.getElementById("block_9");
-                    block_9.innerHTML = ""; 
+                    block_9.innerHTML = "";
 
                     //更新html內容(透過jQuery跑迴圈取值)
                     $.each(response, function (index, row) {
@@ -154,7 +156,7 @@ function sort2(){
                             </div>
                         </div>
                     `;
-                    block_9.insertAdjacentHTML("beforeend" ,str);
+                        block_9.insertAdjacentHTML("beforeend", str);
                     });
                 },
                 error: function (exception) {
@@ -165,7 +167,7 @@ function sort2(){
 
     </script>
 
-    
+
 
 
 </head>
@@ -203,13 +205,14 @@ function sort2(){
                 <div class="search-form">
                     <div style="display:flex;" class="searsear">
                         <h3>文章搜尋：</h3>
-                        <input id="search-input" onkeyup="find()" name="search-input" type="text" placeholder="關鍵字搜尋" style="outline: none;" />
+                        <input id="search-input" onkeyup="find()" name="search-input" type="text" placeholder="關鍵字搜尋"
+                            style="outline: none;" />
                         <style id="m-search"></style>
                     </div>
                 </div>
 
                 <div class="buttons">
-                    <button id="bbbn" class="btn old bbbn" onclick="sort2()" >按時間排序由舊至新</button>
+                    <button id="bbbn" class="btn old bbbn" onclick="sort2()">按時間排序由舊至新</button>
                     <button id="bbbn2" class="btn old bbbn2" onclick="sort()">按時間排序由新至舊</button>
                 </div>
 
@@ -270,7 +273,7 @@ function sort2(){
                             </div>
                         </div>
                     `;
-                    block_9.insertAdjacentHTML("beforeend" ,str);
+                        block_9.insertAdjacentHTML("beforeend", str);
                     });
                 },
                 error: function (exception) {
@@ -279,14 +282,14 @@ function sort2(){
             });
         }
     </script>
-    
+
 
     <script>
         function parseCookie(item) {
             // console.log(item.childNodes[1].childNodes[3].childNodes[3].innerText);
             let title = item.childNodes[1].childNodes[3].childNodes[3].innerText;
             sessionStorage.setItem('title', title);
-            location.href="./news_in.html";
+            location.href = "./news_in.html";
         }
 
 

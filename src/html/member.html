@@ -17,7 +17,7 @@
     @@include('./header.html')
 
 
-    
+
     <main class="member">
         <p class="breadcrumb">首頁>會員中心>申請中交易</p>
         <div class="main_contain">
@@ -27,7 +27,7 @@
                 <div class="col-4 trading">
                     <button class="apply_trade _on" onclick="location.href='./member.html'">
                         <div class="countDeal">
-                            
+
                             <i class="fas fa-list-alt"></i>
                             <p id="countResult" class="_off"></p>
                         </div>
@@ -199,9 +199,9 @@
                             <div class="popContent">
                                 <div class="title col-4">
                                     <span>拒絕原因:</span>
-                                    <button  onclick="rejectValue(1)">不喜歡角色</button>
-                                    <button  onclick="rejectValue(2)">不喜歡角色能力</button>
-                                    <button  onclick="rejectValue(3)">其他</button>
+                                    <button onclick="rejectValue(1)">不喜歡角色</button>
+                                    <button onclick="rejectValue(2)">不喜歡角色能力</button>
+                                    <button onclick="rejectValue(3)">其他</button>
                                 </div>
 
                             </div>
@@ -224,10 +224,15 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
     <script src="../js/member/member.js"></script>
+    <script src="../js/header/header.js"></script>
 
-<script>
-    window, onload = displayBuy();
-</script>
+    <script>
+        window, onload = function () {
+            status();
+            displayBuy();
+        }
+
+    </script>
 
 </body>
 
