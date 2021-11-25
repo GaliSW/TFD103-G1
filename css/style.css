@@ -446,6 +446,11 @@
   animation-play-state: paused;
 }
 
+#header #headerMenu .ChangePhone {
+  background: #0E3461;
+  color: #9dfdc8;
+}
+
 #header #headerMenu .hamLog {
   display: none;
 }
@@ -4340,7 +4345,7 @@ body {
   background-repeat: no-repeat;
   background-position: bottom right;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .index .indexOne .banner {
