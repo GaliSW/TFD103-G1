@@ -100,7 +100,6 @@
 
     .left{
         @include center;
-        line-height: 50px;
         .pp{
           line-height: 50px;
         }
@@ -119,6 +118,9 @@
     margin-top:110px;
     display:flex;
     justify-content: flex-end;
+    h3{
+      margin-top: 10px;
+    }
     #search-input{
         font-size:20px;
         background: url('../src/image/intro/search.jpg');
@@ -126,6 +128,7 @@
         background-position: right;
         background-size: 30px;
         background-color: #fff;
+        height:50px;
     }
     .search{
         font-size:30px;
@@ -183,11 +186,12 @@
 .wrap{
     cursor:pointer;
     width:100%;
-    margin-top:50px;
+    margin-top:80px;
     display:flex;
     justify-content: center;
+    align-items: center;
     opacity: 0.6;
-    line-height: 100px;
+    line-height: 30px;
     @include desktop{
         display:flex;
         flex-direction: row;

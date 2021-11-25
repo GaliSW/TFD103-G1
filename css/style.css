@@ -105,7 +105,7 @@
 #header {
   width: 100vw;
   height: 90px;
-  z-index: 100;
+  z-index: 1000;
   position: fixed;
   top: 0;
   box-shadow: 0px 5px 5px 0px #3bb6d2;
@@ -286,6 +286,10 @@
   width: 25px;
   margin-right: 10px;
   animation-play-state: paused;
+}
+
+#header .navbar ul a .Change {
+  color: #9dfdc8;
 }
 
 #header .hamburger {
@@ -679,7 +683,6 @@
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
-  margin-top: 7%;
   z-index: 10;
 }
 
@@ -1460,14 +1463,14 @@ main.deposit div.container div.sumPoint p {
   margin-left: 5px;
 }
 
-main.deposit div.container div#app {
+main.deposit div.container form#app {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-main.deposit div.container div#app button {
+main.deposit div.container form#app button {
   width: 200px;
   height: 230px;
   background-color: transparent;
@@ -1477,7 +1480,7 @@ main.deposit div.container div#app button {
   cursor: pointer;
 }
 
-main.deposit div.container div#app button div.point {
+main.deposit div.container form#app button div.point {
   background-image: url(../src/image/deposit/point.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -1492,18 +1495,18 @@ main.deposit div.container div#app button div.point {
   line-height: 30px;
 }
 
-main.deposit div.container div#app button div.photo {
+main.deposit div.container form#app button div.photo {
   width: 100%;
   position: relative;
 }
 
-main.deposit div.container div#app button div.photo img {
+main.deposit div.container form#app button div.photo img {
   max-width: 100%;
   z-index: 0;
   position: relative;
 }
 
-main.deposit div.container div#app button div.photo span {
+main.deposit div.container form#app button div.photo span {
   z-index: 1;
   position: relative;
   color: white;
@@ -1511,18 +1514,18 @@ main.deposit div.container div#app button div.photo span {
 }
 
 @media (max-width: 577.98px) {
-  main.deposit div.container div#app button {
+  main.deposit div.container form#app button {
     height: 125px;
     width: 125px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 50px;
   }
-  main.deposit div.container div#app button div.point {
+  main.deposit div.container form#app button div.point {
     height: 20px;
     line-height: 20px;
   }
-  main.deposit div.container div#app button div.photo span {
+  main.deposit div.container form#app button div.photo span {
     bottom: 40px;
   }
 }
@@ -4326,7 +4329,7 @@ button.swiper-pagination-bullet {
 
 body {
   overflow-x: hidden;
-  background-color: #22267c;
+  z-index: -1;
 }
 
 .index .indexOne {
@@ -4337,6 +4340,7 @@ body {
   background-repeat: no-repeat;
   background-position: bottom right;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .index .indexOne .banner {
@@ -4432,6 +4436,7 @@ body {
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   .index .indexOne .banner .text {
+    background-color: rgba(95, 141, 179, 0.5);
     font-size: 16px;
     margin-top: 20px;
   }
@@ -4542,8 +4547,8 @@ body {
   background-size: cover;
   position: relative;
   width: 100%;
-  top: 100px;
   z-index: 2;
+  overflow-x: hidden;
 }
 
 .index .indexTwo .imgBlock {
@@ -4568,7 +4573,7 @@ body {
   position: absolute;
   width: 100%;
   height: 150px;
-  top: -150px;
+  top: -42px;
 }
 
 .index .sportsCar .carId {
@@ -4595,8 +4600,7 @@ body {
   position: absolute;
   width: 100%;
   height: 150px;
-  top: -110px;
-  overflow-x: hidden;
+  top: -42px;
 }
 
 .index .sportsCar .carId {
@@ -4618,6 +4622,13 @@ body {
   width: 100%;
   height: 320px;
   animation: marquee 10s infinite linear;
+  top: 70px;
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .index .imgLine {
+    top: 70px;
+  }
 }
 
 .index .imgLine .raceTrack {
@@ -4637,6 +4648,7 @@ body {
   max-width: 1200px;
   width: 100%;
   z-index: 10;
+  top: 62px;
 }
 
 .index .content .rcbig {
@@ -4766,6 +4778,7 @@ body {
     width: 160px;
     right: -5%;
     bottom: -18%;
+    overflow-x: hidden;
   }
 }
 
@@ -4774,6 +4787,7 @@ body {
     width: 120px;
     right: 0%;
     bottom: -18%;
+    overflow-x: hidden;
   }
 }
 
@@ -4915,7 +4929,15 @@ body {
   margin-left: 50%;
   transform: translateX(-50%);
   z-index: -1;
-  margin-top: -6%;
+  margin-top: 10%;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .h2Games {
+    width: 250px;
+    height: 80px;
+    margin-top: 20px;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -4935,6 +4957,13 @@ body {
   color: #fff;
   text-align: center;
   margin: -25% 0 20px 0;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .h2Games h2 {
+    font-size: 32px;
+    margin: -26% 0 8px 0;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -5053,6 +5082,12 @@ body {
   left: -4%;
   top: 28%;
   z-index: -1;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .effect {
+    width: 390px;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -5191,7 +5226,8 @@ body {
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   .index .manyRC {
-    margin-left: 50px;
+    margin-left: 20px;
+    display: block;
   }
 }
 
@@ -5216,7 +5252,7 @@ body {
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   .index .manyRC .gamesIntro {
-    margin-left: 0;
+    text-align: center;
   }
 }
 
@@ -5412,9 +5448,16 @@ body {
   margin-top: 10%;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .picGames {
+    width: 425px;
+    height: 80px;
+  }
+}
+
 @media (min-width: 375px) and (max-width: 413.98px) {
   .index .picGames {
-    width: 510px;
+    width: 390px;
     height: 80px;
   }
 }
@@ -5431,10 +5474,17 @@ body {
   margin: -14% 0 0 0;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .picGames h2 {
+    font-size: 32px;
+    margin: -15.5% 0 0 0;
+  }
+}
+
 @media (min-width: 375px) and (max-width: 413.98px) {
   .index .picGames h2 {
     font-size: 32px;
-    margin: -13% 0 0 0;
+    margin: -17% 0 0 0;
   }
 }
 
@@ -5446,6 +5496,14 @@ body {
   height: 450px;
   display: table;
   position: relative;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .index .unlock {
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
@@ -5831,8 +5889,6 @@ body {
 
 .out .title {
   text-align: center;
-  line-height: 50px;
-  padding-top: 20px;
 }
 
 .out a {
@@ -5841,12 +5897,12 @@ body {
 }
 
 .out h3 {
+  margin: 20px 0;
   font-size: 24px;
 }
 
 .out p {
   font-size: 16px;
-  line-height: 25px;
 }
 
 .out section {
@@ -8827,7 +8883,6 @@ main.member_info section.popShow {
 
 .out .left {
   margin: 0 auto;
-  line-height: 50px;
 }
 
 .out .left .pp {
@@ -8849,6 +8904,10 @@ main.member_info section.popShow {
   justify-content: flex-end;
 }
 
+.out .search-form h3 {
+  margin-top: 10px;
+}
+
 .out .search-form #search-input {
   font-size: 20px;
   background: url("../src/image/intro/search.jpg");
@@ -8856,6 +8915,7 @@ main.member_info section.popShow {
   background-position: right;
   background-size: 30px;
   background-color: #fff;
+  height: 50px;
 }
 
 .out .search-form .search {
@@ -8929,11 +8989,12 @@ main.member_info section.popShow {
 .out .wrap {
   cursor: pointer;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 80px;
   display: flex;
   justify-content: center;
+  align-items: center;
   opacity: 0.6;
-  line-height: 100px;
+  line-height: 30px;
 }
 
 @media (min-width: 992px) {
