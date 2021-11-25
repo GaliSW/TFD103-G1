@@ -19,7 +19,7 @@ body{
         background-repeat: no-repeat;
         background-position: bottom right;
         width: 100%;
-        overflow-x: hidden;
+        overflow: hidden;
         .banner{
             // @include border;
             @include center;

@@ -10,6 +10,11 @@
     background-position: 0px 0px;
     margin: 90px 0 0 0;
     padding: 0;
+    .p{
+        font-size: $fontSize;
+        color:$tiffiny_green;
+        }
+
 
 
 ///////////////////////////////////////////////////////////////////角色排行
@@ -888,7 +893,7 @@
 
 .lower {
     //rightBlockborder: 1px solid red;
-    border: 1px solid red;
+    //border: 1px solid red;
     display: flex;
     justify-content: flex-end;
     align-content: center;

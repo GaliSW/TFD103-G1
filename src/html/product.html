@@ -90,6 +90,18 @@
             });
         }
 
+        function owner (username){
+            let sellerName = username;
+            $.ajax({
+                method: "POST",
+                url: "../php/product/getBuyer.php",
+                data: {},
+                dataType: "text",
+                success: function (response) {
+                    console.log(response);
+                }
+            });
+        }
 
         function callProductInfo() {
             let productid = sessionStorage.getItem('productname');
@@ -101,7 +113,7 @@
                 },
                 dataType: "json",
                 success: function (response) {
-                    // console.log(response);
+                    console.log(response);
                     let username = response[0][1];
                     let gachaid = response[0][2];
                     let price = response[0][3];
@@ -146,6 +158,7 @@
                     } else {
                         changeBtn.classList.remove('none');
                     }
+                    owner(username);
                 },
                 error: function (exception) {
                     alert("發生錯誤: " + exception.status);
@@ -231,7 +244,7 @@
                             <li><img src="../image/index/pokemon.png">角色抽取</li>
                         </a>
                         <a href="../html/trade.html">
-                            <li><img src="../image/index/role01.png">角色交易</li>
+                            <li class="ChangePhone"><img src="../image/index/role01.png">角色交易</li>
                         </a>
                         <a href="#">
                             <div class="hamLog " id="LogOutPhone" onclick="LogOut()">登出</div>
@@ -270,6 +283,7 @@
         </div>
     </header>
     <main class="allBlock" id="appp">
+        <p class="p">首頁>角色交易>所有消息</p>
 
 
         <!-- 拒絕自我交易 -->
