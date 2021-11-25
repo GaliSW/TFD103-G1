@@ -1699,10 +1699,6 @@ main.deposit {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../src/image/deposit/back.jpg);
-<<<<<<< HEAD
-  margin: 0;
-=======
->>>>>>> Calista
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-top: 90px;
@@ -3026,7 +3022,6 @@ body {
   0% {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
-<<<<<<< HEAD
   }
   50% {
     -webkit-transform: scale(1.5);
@@ -3054,35 +3049,6 @@ body {
   }
   100% {
     -webkit-transform: translateY(100px);
-=======
-  }
-  50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  51% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  100% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-}
-
-@-webkit-keyframes drop {
-  0% {
-    -webkit-transform: scale(0.7);
-  }
-  50% {
-    -webkit-transform: scale(1);
-  }
-  51% {
-    -webkit-transform: translateY(0px);
-  }
-  100% {
-    -webkit-transform: translateY(100px);
->>>>>>> Calista
   }
 }
 
@@ -6769,81 +6735,12 @@ body {
     max-width: 1200px;
     width: 100%;
   }
-<<<<<<< HEAD
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .out .total .page {
     width: 100%;
   }
-}
-
-@media (min-width: 578px) and (max-width: 767.98px) {
-  .out .total .page {
-    width: 100%;
-  }
-}
-
-@media (min-width: 414px) and (max-width: 577.98px) {
-  .out .total .page {
-    width: 100%;
-  }
-}
-
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .out .total .page {
-    width: 100%;
-  }
-}
-
-@media (min-width: 100px) and (max-width: 374.98px) {
-  .out .total .page {
-    width: 100%;
-  }
-}
-
-.out .total .page .con-2 {
-  width: 480px;
-  background-color: black;
-  text-align: center;
-  color: #efefff;
-  margin-top: 200px;
-}
-
-@media (min-width: 578px) and (max-width: 767.98px) {
-  .out .total .page .con-2 {
-    width: 100%;
-  }
-}
-
-@media (min-width: 414px) and (max-width: 577.98px) {
-  .out .total .page .con-2 {
-    width: 100%;
-  }
-}
-
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .out .total .page .con-2 {
-    width: 100%;
-  }
-}
-
-@media (min-width: 100px) and (max-width: 374.98px) {
-  .out .total .page .con-2 {
-    width: 100%;
-  }
-}
-
-.out .total .page h3 {
-  font-size: 24px;
-=======
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .out .total .page {
-    width: 100%;
-  }
->>>>>>> dev
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
