@@ -40,16 +40,16 @@
                     </a>
                 </ul>
             </nav>
-    
+
             <!-- phone nav-->
             <nav class="hamburger">
                 <div id="menuToggle">
                     <input type="checkbox" />
-    
+
                     <span></span>
                     <span></span>
                     <span></span>
-    
+
                     <ul id="headerMenu">
                         <a href="../html/index.html"><img src="../image/index/logo.png"></a>
                         <a href="../html/Intro.html">
@@ -71,7 +71,7 @@
                 </div>
             </nav>
             <!-- phone nav end -->
-    
+
             <div class="icon">
                 <botton type="button" class="button bt disappear" id="appear1">
                     <a href="../html/deposit.html"><i class="fas fa-coins fa-2x"></i></a>
@@ -122,29 +122,29 @@
         </div>
 
         <!-- 彈跳視窗 -->
-        <template id="=hiddenPopUps">
+        <!-- <template id="=hiddenPopUps">
 
             <section class="maskLayer" :class="{'popShow':pop}">
 
-                <!-- 購買 -->
-                <div class="popUpBox maskBlockM" :class="{'popBox':buy}">
-                    <div class="closeBtn" @click=clickClose()>
-                        x
-                    </div>
-                    <div class="popContent">
-                        <div class="popContent">
-                            <p>是否確認從帳戶扣除 $***點，交易 *****角色?</p>
-                        </div>
-                        <div class="confirmBlk">
-                            <button class="confirmBtn" @click=toSuccess()>是</button>
-                            <button class="confirmBtn" @click=clickClose()>否</button>
-                        </div>
-                    </div>
+                <-- 購買 -->
+        <!-- <div class="popUpBox maskBlockM" :class="{'popBox':buy}">
+            <div class="closeBtn" @click=clickClose()>
+                x
+            </div>
+            <div class="popContent">
+                <div class="popContent">
+                    <p>是否確認從帳戶扣除 $***點，交易 *****角色?</p>
                 </div>
+                <div class="confirmBlk">
+                    <button class="confirmBtn" @click=toSuccess()>是</button>
+                    <button class="confirmBtn" @click=clickClose()>否</button>
+                </div>
+            </div>
+        </div> -->
 
-                <!-- 購買成功 -->
+        <!-- 購買成功 -->
 
-                <div class="popUpBox maskBlockM" :class="{'popBox':success}">
+        <!-- <div class="popUpBox maskBlockM" :class="{'popBox':success}">
                     <div class="closeBtn" @click=clickClose()>
                         x
                     </div>
@@ -154,10 +154,10 @@
                     <div class="confirmBlk">
                         <button class="confirmBtn" @click=clickClose()>確定</button>
                     </div>
-                </div>
+                </div> -->
 
-                <!-- 交換 -->
-                <div class="popUpBox test" :class="{'box':one}">
+        <!-- 交換 -->
+        <!-- <div class="popUpBox test" :class="{'box':one}">
                     <div class="closeBtn" @click=clickClose()>
                         x
                     </div>
@@ -272,20 +272,186 @@
                         <a href="#" class="confirmBtn13" @click=toThree()>確定</a>
                     </div>
 
-                </div>
+                </div> -->
 
-                <!-- 交換完成 -->
-                <div class="popUpBox test" :class="{'box':three}">
-                    <div class="closeBtn" @click=clickClose()>
+        <!-- 交換完成 -->
+        <!-- <div class="popUpBox test" :class="{'box':three}">
+            <div class="closeBtn" @click=clickClose()>
+                x
+            </div>
+            <div class="popContent14">
+                <p>以送出交換申請，請靜候佳音！</p>
+            </div>
+        </div> -->
+
+        <!-- 沒有點數alert -->
+
+        <div id="noPointBlk" class="noPointBlk none">
+            <section class="noPointHintmaskLayer">
+                <div class="noPointPopUpBox">
+                    <div onclick="popCloseX(this)" class="noPointCloseBtn">
                         x
                     </div>
-                    <div class="popContent14">
-                        <p>以送出交換申請，請靜候佳音！</p>
+                    <div class="noPointPopContent">
+                        <p>
+                            <i class="far fa-user-circle"></i>&nbsp;您的點數不足，請前往儲值
+                        </p>
                     </div>
-
+                    <div class="noPointConfirmBlk">
+                        <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                        <button class="bonusConfirmBtn" onclick="toPoints()">前往儲值</button>
+                    </div>
                 </div>
-
             </section>
+        </div>
+        <!-- 購買確認Pop -->
+        <div id="BuyingBlk" class="BuyingBlk none">
+            <section class="BuyingHintmaskLayer">
+                <div class="BuyingPopUpBox">
+                    <div onclick="popCloseX(this)" class="BuyingCloseBtn">
+                        x
+                    </div>
+                    <div class="BuyingPopContent">
+                        <p>
+                            <i class="far fa-user-circle"></i>&nbsp;是否購入本隻角色？
+                        </p>
+                    </div>
+                    <div class="BuyingConfirmBlk">
+                        <button class="bonusConfirmBtn" onclick="popClose(this)">否</button>
+                        <button class="bonusConfirmBtn" onclick="buyRole()">是</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- 購買成功 -->
+        <div id="successBlk" class="noPointBlk none">
+            <section class="noPointHintmaskLayer">
+                <div class="noPointPopUpBox">
+                    <div onclick="popCloseX(this)" class="noPointCloseBtn">
+                        x
+                    </div>
+                    <div class="noPointPopContent">
+                        <p>
+                            <i class="far fa-user-circle"></i>&nbsp;您已購買成功
+                        </p>
+                    </div>
+                    <div class="noPointConfirmBlk">
+                        <button class="bonusConfirmBtn" onclick="popClose(this)">確定</button>
+                        <!-- <button class="bonusConfirmBtn" onclick="toPoints()">前往儲值</button> -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 交換彈窗 -->
+        <section class="sec1 none" id="transBlk">
+            <div class="flexContainer" id="flexContainer">
+            </div>
+
+            <main class="test">
+                <template id="=hiddenPopUps">
+
+                    <section class="maskLayer">
+
+                        <div class="popUpBox one" :class="{'box':one}" id="one">
+                            <div class="closeBtn" onclick=clickClose()>
+                                x
+                            </div>
+                            <div class="popContent12">
+                                <p>選擇你要申請交換的角色</p>
+                            </div>
+
+                            <div class="roleBlock1Mark">
+                                <ul class="roleList1Mark" id="roleList1Mark">
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div id="popUpBox2" class="popUpBox none" :class="{'box':two}">
+                            <div class="closeBtn" onclick=clickClose()>
+                                x
+                            </div>
+                            <div class="popContent13">
+                                <p>確認你想要交換的角色</p>
+                            </div>
+                            <div class="roleArea">
+                                <div class="myRoleBlock">
+                                    <div class="myRoleP">
+                                        <p>我的角色</p>
+                                    </div>
+
+                                    <div class="myRoleImg">
+                                        <img id="myRoleImg1" src="">
+                                    </div>
+
+                                    <div class="myRoleNameBlock">
+                                        <p id="myRoleName1"></p>
+                                    </div>
+                                </div>
+
+                                <div class="doubleArrow"><i class="fas fa-arrows-alt-h"></i></div>
+
+                                <div class="yourRoleBlock">
+                                    <div class="yourRoleP">
+                                        <p>對方角色</p>
+                                    </div>
+
+                                    <div class="yourRoleImg">
+                                        <img id="yourRoleImg1" src="">
+                                    </div>
+                                    <div class="yourRoleNameBlock">
+                                        <p id="yourRoleName1"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="confirmBlk13">
+                                <button href="#" class="confirmBtnBack13" onclick=toBack()>返回</button>
+                                <button href="#" class="confirmBtn13" onclick="toThree()">確定</button>
+                            </div>
+
+                        </div>
+
+                        <div class="popUpBox none" :class="{'box':three}" id="three">
+                            <div class="closeBtn" onclick=clickClose()>
+                                x
+                            </div>
+                            <div class="popContent14">
+                                <p class="sendP">已送出交換申請</br>請靜候佳音！</p>
+                            </div>
+
+                        </div>
+                    </section>
+
+                </template>
+            </main>
+        </section>
+
+        <!-- 沒角色alert -->
+        <div id="toGachaBlk" class="toGachaBlk none">
+            <section class="toGachaHintmaskLayer">
+                <div class="toGachaPopUpBox">
+                    <div onclick="popCloseX(this)" class="toGachaCloseBtn">
+                        x
+                    </div>
+                    <div class="toGachaPopContent">
+                        <p>
+                            <i class="far fa-user-circle"></i>&nbsp;您的角色不足，請前往扭蛋
+                        </p>
+                    </div>
+                    <div class="toGachaConfirmBlk">
+                        <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                        <button class="bonusConfirmBtn" onclick="toGacha()">前往扭蛋</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+
+        </section>
 
         </template>
     </main>
@@ -321,7 +487,157 @@
         window.onload = function () {
             status();
             display();
-        } 
+        }
+        // 購買
+        function buyingCheck() {
+            let BuyingBlk = document.getElementById('BuyingBlk');
+            BuyingBlk.classList.remove('none');
+        }
+        function buyRole() {
+            let successBlk = document.getElementById('successBlk');
+            $.ajax({
+                method: "POST",
+                url: "../php/product/buyRole.php",
+                data: {
+                    PRODUCT_ID: PRODUCT_ID,
+                },
+                dataType: "text",
+                success: function (response) {
+
+                    if (response == "y") {
+                        // 有錢而且成功
+                        successBlk.classList.remove('none');
+
+                    } else if (response = "no") {
+                        // 沒錢
+                        noPointBlk.classList.remove('none');
+                    }
+                }
+            })
+        };
+        //交換
+        function clickPopp() {
+            // 判斷是否有角色
+            if (roleList1MarkChild == 0) {
+                let toGachaBlk = document.getElementById('toGachaBlk');
+                toGachaBlk.classList.remove('none');
+            } else {
+                let transBlk = document.getElementById('transBlk');
+                transBlk.classList.remove('none');
+                $.ajax({
+                    method: "POST",
+                    url: "../php/product/callChangeRole.php",
+                    data: {},
+                    dataType: "json",
+                    success: function (response) {
+
+                        let roleList1Mark = document.getElementById('roleList1Mark');
+                        roleList1Mark.innerHTML = "";
+
+                        $.each(response, function (index, row) {
+                            let str = `<li onclick=toTwo(this)>
+                                            <div class="imgBlock1Mark" id="imgBlock1Mark" name="${row.GACHA_ID}">
+                                                <img src="../image/ROLE/${row.ROLE_IMG}" id="${row.RNAME}" name= "${row.FK_USERNAME}">
+                                            </div>
+                                        </li>`;
+                            roleList1Mark.insertAdjacentHTML("beforeend", str);
+
+
+                        })
+                        let roleList1MarkChild = document.getElementById("roleList1Mark").childNodes.length;
+                    },
+                    error: function (exception) {
+                        alert("數據載入失敗: " + exception.status);
+                    }
+                });
+            }
+        }
+        function toTwo(item) {
+            document.getElementById('one').classList.add('none');
+            document.getElementById('popUpBox2').classList.remove('none');
+            let imgg = item.querySelector("img");
+            //////////// 我的角色圖片
+
+            let imgSrc = imgg.attributes['src'].value;
+            let myRoleImg = document.getElementById('myRoleImg1');
+            myRoleImg.attributes['src'].value = imgSrc;
+
+            //////////// 我的角色名字
+
+            let imgName = imgg.attributes['id'].value;
+            let myRoleName = document.getElementById('myRoleName1');
+            myRoleName.innerText = imgName;
+            //console.log(imgName);
+
+            //////////// 你的角色圖片
+
+            let imgBlock = document.getElementsByClassName("imgBlock")[0];
+            //console.log(imgBlock);
+            let yourImg = imgBlock.querySelector("img");
+            //console.log(yourImg);
+            yourImgSrc = yourImg.attributes['src'].value;
+            let yourRoleImg1 = document.getElementById('yourRoleImg1');
+            yourRoleImg1.attributes['src'].value = yourImgSrc;
+            let name = document.getElementById("title1").innerText;
+            let yourname = document.getElementById('yourRoleName1');
+            yourname.innerText = name;
+        }
+        function toBack() {
+            document.getElementById('one').classList.remove('none');
+            document.getElementById('popUpBox2').classList.add('none');
+        };
+        function toThree() {
+            document.getElementById('one').classList.add('none');
+            document.getElementById('popUpBox2').classList.add('none');
+            document.getElementById('three').classList.remove('none');
+
+            let imgBlock1Mark = document.getElementById("imgBlock1Mark");
+            let FK_GACHA_ID = imgBlock1Mark.attributes['name'].value;
+            console.log(FK_GACHA_ID);
+
+
+            let iimgBlock = document.getElementById("iimgBlock");
+            let PRODUCT_ID = iimgBlock.attributes['name'].value;
+            console.log(PRODUCT_ID);
+
+            $.ajax({
+                method: "POST",
+                url: "../php/product/insertByCheck.php",
+                data: {
+                    // FK_USERNAME_BUY: FK_USERNAME_BUY,
+                    FK_PRODUCT_ID: PRODUCT_ID,
+                    FK_GACHA_ID_BUY: FK_GACHA_ID,
+
+                },
+                dataType: "TEXT",
+                success: function (response) {
+
+                },
+                error: function (exception) {
+                    alert("數據載入失敗: " + exception.status);
+                }
+            });
+
+        }
+
+        function clickClose() {
+            document.getElementById('transBlk').classList('transBlk');
+        }
+
+        function popClose(item) {
+            let blk = item.parentNode.parentNode.parentNode.parentNode;
+            blk.classList.add('none');
+        }
+        function popCloseX(item) {
+            let blk = item.parentNode.parentNode.parentNode;
+            blk.classList.add('none');
+        }
+        function toGacha() {
+            location.href = "./Gacha.html";
+        };
+        function toPoints() {
+            location.href = "./deposit.html";
+        };
     </script>
 </body>
 

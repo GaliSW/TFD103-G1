@@ -114,7 +114,7 @@
                     let str = `
                     <div class="items -left" id="username" name="${username}">
                         <div class="imgBlock" id="iimgBlock" name='${PRODUCT_ID}'>
-                            <img id='${PRODUCT_ID}' src="../image/ROLE${img}">
+                            <img id='${PRODUCT_ID}' src="../image/ROLE/${img}">
                         </div>
                     </div>
                     <div class="items -right">
@@ -141,9 +141,9 @@
 
                     let changeBtn = document.getElementById("changeBtn");
                     console.log(trans);
-                    if(trans == 0){
+                    if (trans == 0) {
                         changeBtn.classList.add('none');
-                    }else{
+                    } else {
                         changeBtn.classList.remove('none');
                     }
                 },
@@ -212,16 +212,16 @@
                     </a>
                 </ul>
             </nav>
-    
+
             <!-- phone nav-->
             <nav class="hamburger">
                 <div id="menuToggle">
                     <input type="checkbox" />
-    
+
                     <span></span>
                     <span></span>
                     <span></span>
-    
+
                     <ul id="headerMenu">
                         <a href="../html/index.html"><img src="../image/index/logo.png"></a>
                         <a href="../html/Intro.html">
@@ -243,7 +243,7 @@
                 </div>
             </nav>
             <!-- phone nav end -->
-    
+
             <div class="icon">
                 <botton type="button" class="button bt disappear" id="appear1">
                     <a href="../html/deposit.html"><i class="fas fa-coins fa-2x"></i></a>
@@ -293,47 +293,47 @@
             </section>
         </div>
 
-                <!-- 收藏成功alert -->
+        <!-- 收藏成功alert -->
 
-                <div id="myfavBlk" class="toGachaBlk none">
-                    <section class="toGachaHintmaskLayer">
-                        <div class="toGachaPopUpBox">
-                            <div onclick="popCloseX(this)" class="toGachaCloseBtn">
-                                x
-                            </div>
-                            <div class="toGachaPopContent">
-                                <p>
-                                    <i class="far fa-user-circle"></i>&nbsp;您已成功收藏
-                                </p>
-                            </div>
-                            <div class="toGachaConfirmBlk">
-                                <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
-                            </div>
-                        </div>
-                    </section>
+        <div id="myfavBlk" class="toGachaBlk none">
+            <section class="toGachaHintmaskLayer">
+                <div class="toGachaPopUpBox">
+                    <div onclick="popCloseX(this)" class="toGachaCloseBtn">
+                        x
+                    </div>
+                    <div class="toGachaPopContent">
+                        <p>
+                            <i class="far fa-user-circle"></i>&nbsp;您已成功收藏
+                        </p>
+                    </div>
+                    <div class="toGachaConfirmBlk">
+                        <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                    </div>
                 </div>
+            </section>
+        </div>
 
-                <!-- 取消收藏alert -->
+        <!-- 取消收藏alert -->
 
-                <div id="cancelmyfavBlk" class="toGachaBlk none">
-                    <section class="toGachaHintmaskLayer">
-                        <div class="toGachaPopUpBox">
-                            <div onclick="popCloseX(this)" class="toGachaCloseBtn">
-                                x
-                            </div>
-                            <div class="toGachaPopContent">
-                                <p>
-                                    <i class="far fa-user-circle"></i>&nbsp;您已取消收藏
-                                </p>
-                            </div>
-                            <div class="toGachaConfirmBlk">
-                                <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
-                            </div>
-                        </div>
-                    </section>
+        <div id="cancelmyfavBlk" class="toGachaBlk none">
+            <section class="toGachaHintmaskLayer">
+                <div class="toGachaPopUpBox">
+                    <div onclick="popCloseX(this)" class="toGachaCloseBtn">
+                        x
+                    </div>
+                    <div class="toGachaPopContent">
+                        <p>
+                            <i class="far fa-user-circle"></i>&nbsp;您已取消收藏
+                        </p>
+                    </div>
+                    <div class="toGachaConfirmBlk">
+                        <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                    </div>
                 </div>
+            </section>
+        </div>
 
-        
+
 
 
         <!-- 未登入alert -->
@@ -467,11 +467,11 @@
                                     </div>
 
                                     <div class="myRoleImg">
-                                        <img id="myRoleImg1" src="../dist/images/product/change/change1.png">
+                                        <img id="myRoleImg1" src="">
                                     </div>
 
                                     <div class="myRoleNameBlock">
-                                        <p id="myRoleName1">小烏龜</p>
+                                        <p id="myRoleName1"></p>
                                     </div>
                                 </div>
 
@@ -483,12 +483,12 @@
                                     </div>
 
                                     <div class="yourRoleImg">
-                                        <img id="yourRoleImg1" src="../dist/images/product/change/change2.png">
-                                    </div>    
-                                    <div class="yourRoleNameBlock">
-                                        <p id="yourRoleName1">羊咩咩</p>
+                                        <img id="yourRoleImg1" src="">
                                     </div>
-                                </div>    
+                                    <div class="yourRoleNameBlock">
+                                        <p id="yourRoleName1"></p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="confirmBlk13">
                                 <button href="#" class="confirmBtnBack13" @click=toBack()>返回</button>
@@ -562,7 +562,7 @@
         <div class="upup">
             <i class="fas fa-arrow-circle-up totop"></i>
         </div>
-    
+
 
     </main>
     <!-- footer -->
@@ -921,7 +921,7 @@
                     }
                 }
             });
-            
+
             $.ajax({
                 method: "POST",
                 url: "../php/product/loadMyFav.php",
@@ -967,7 +967,7 @@
                 success: function (response) {
                     let btnName = document.getElementById('myfav').innerText;
                     btnName.innerText = "已收藏";
-                    
+
                     // document.getElementById('buyBlk').remove('none');
                 },
                 error: function (exception) {
@@ -1029,7 +1029,7 @@
     <script src="../js/header/header.js"></script>
 
 
-    <script src="../js/news/news_in.js"></script> 
+    <script src="../js/news/news_in.js"></script>
 
 </body>
 
