@@ -3,6 +3,7 @@
 }
 
 
+
 .allBlock {
     background-image: url("../src/image/trade/background.png");
     background-repeat: no-repeat;
@@ -115,15 +116,15 @@
 
 
                     .collectBtn {
-                        @include btn_blur (70px, 5px);
+                        @include btn_blur (70px, 5px)  ;
                         border-radius: 10px;
 
                         &:hover {
-                            @include btn_on (70px, 5px)
+                            @include btn_on (70px, 5px);
                         }
 
                         &:hover {
-                            cursor: pointer
+                            cursor: pointer;
                         }
                     }
 

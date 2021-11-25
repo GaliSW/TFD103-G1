@@ -6399,8 +6399,6 @@ body {
 
 .out .title {
   text-align: center;
-  line-height: 50px;
-  padding-top: 20px;
 }
 
 .out a {
@@ -6409,12 +6407,12 @@ body {
 }
 
 .out h3 {
+  margin: 20px 0;
   font-size: 24px;
 }
 
 .out p {
   font-size: 16px;
-  line-height: 25px;
 }
 
 .out section {

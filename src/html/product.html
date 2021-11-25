@@ -198,6 +198,48 @@
             </section>
         </div>
 
+                <!-- 收藏成功alert -->
+
+                <div id="myfavBlk" class="toGachaBlk none">
+                    <section class="toGachaHintmaskLayer">
+                        <div class="toGachaPopUpBox">
+                            <div onclick="popCloseX(this)" class="toGachaCloseBtn">
+                                x
+                            </div>
+                            <div class="toGachaPopContent">
+                                <p>
+                                    <i class="far fa-user-circle"></i>&nbsp;您已成功收藏
+                                </p>
+                            </div>
+                            <div class="toGachaConfirmBlk">
+                                <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- 取消收藏alert -->
+
+                <div id="cancelmyfavBlk" class="toGachaBlk none">
+                    <section class="toGachaHintmaskLayer">
+                        <div class="toGachaPopUpBox">
+                            <div onclick="popCloseX(this)" class="toGachaCloseBtn">
+                                x
+                            </div>
+                            <div class="toGachaPopContent">
+                                <p>
+                                    <i class="far fa-user-circle"></i>&nbsp;您已取消收藏
+                                </p>
+                            </div>
+                            <div class="toGachaConfirmBlk">
+                                <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+        
+
 
         <!-- 未登入alert -->
 
@@ -422,6 +464,11 @@
             </table>
 
         </div>
+
+        <div class="upup">
+            <i class="fas fa-arrow-circle-up totop"></i>
+        </div>
+    
 
     </main>
     @@include('./footer.html')
@@ -758,8 +805,6 @@
                 dataType: "text",
                 success: function (response) {
                     if (response == "N") {
-                        // let selfBlk = document.getElementById('selfBlk');
-                        // selfBlk.classList.remove('none');
                     } else {
                         return false;
                     }
@@ -776,22 +821,23 @@
                 success: function (response) {
                     let btn = document.getElementById('myfav');
                     if (response == "YN") {
+                        let tomyfavBtn = document.getElementById('myfavBlk');
+                        tomyfavBtn.classList.remove('none');
                         insertMyfav();
-                        buyBlk
-                        let buyBlk = document.getElementById('buyBlk');
-                        buyBlk.classList.remove('none');                        
                         btn.style.background = "rgba(96, 205, 144, 1)";
                         btn.style.color = "rgba(14, 52, 97, 1)";
-                        btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
+                        btn.style.boder = "3px solid rgba(14, 52, 97, 1)";
                         btn.innerText = "已收藏";
                     } else if (response == "N") {
                         let tologinBtn = document.getElementById('tologinBlk');
                         tologinBtn.classList.remove('none');
                     } else if (response == "YY") {
+                        let cancelmyfavBtn = document.getElementById('cancelmyfavBlk');
+                        cancelmyfavBtn.classList.remove('none');
                         deletemyfav(productid);
                         btn.style.background = "rgba(14, 52, 97, 1)";
                         btn.style.color = "rgba(96, 205, 144, 1)";
-                        btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
+                        btn.style.boder = "3px solid rgba(96, 205, 144, 1)";
                         btn.innerText = "收藏";
                     }
                 }
@@ -810,7 +856,8 @@
                 success: function (response) {
                     let btnName = document.getElementById('myfav').innerText;
                     btnName.innerText = "已收藏";
-                    document.getElementById('buyBlk').remove('none');
+                    
+                    // document.getElementById('buyBlk').remove('none');
                 },
                 error: function (exception) {
                     alert("數據載入失敗: " + exception.status);
@@ -869,26 +916,6 @@
 
     <script src="../js/gacha/chart.js"></script>
 
-    <div id="buyBlk" class="toGachaBlk none">
-        <section class="buyHintmaskLayer">
-            <div class="buyPopUpBox">
-                <div onclick="popCloseX(this)" class="buyCloseBtn">
-                    x
-                </div>
-                <div class="buyPopContent">
-                    <p>
-                        <i class="far fa-user-circle">收藏成功!</i>
-                    </p>
-                </div>
-                <div class="buyConfirmBlk">
-                    <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="upup">
-        <i class="fas fa-arrow-circle-up totop"></i>
-    </div>
 
     <script src="../js/news/news_in.js"></script> 
 
