@@ -3,9 +3,15 @@ main.deposit {
     background-repeat: no-repeat;
     background-image: url(../src/image/deposit/back.jpg);
     // padding-bottom: 100px;
-    margin: 0;
+    // margin: 0;
     box-sizing: border-box;
     margin-top: 90px;
+    @include pad_small{
+        margin-top: 70px;
+    }
+    @include phone{
+        margin-top: 70px;
+    }
 
     div.container {
         width: 1200px;
@@ -14,217 +20,219 @@ main.deposit {
         @include center;
         // border: 1px solid black;
         padding-top: 100px;
-        div.sumPoint{
+
+        div.sumPoint {
             font-size: 20px;
             @include center;
             display: flex;
             margin-bottom: 20px;
             color: white;
-            p{
+
+            p {
                 margin-left: 5px;
             }
         }
-        div#app {
+
+        form#app {
             @include center;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-
-            button {
-                width: 200px;
-                height: 230px;
-                background-color: transparent;
-                padding: 0;
-                // border: transparent;
-                margin-bottom: 70px;
-                border: 0;
-                cursor: pointer;
-
-                div.point {
-                    background-image: url(../src/image/deposit/point.jpg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    overflow: hidden;
-                    @include border_r(15);
-                    height: 30px;
-                    color: white;
-                    font-weight: bold;
-                    text-align: center;
-                    margin-bottom: 2px;
-                    line-height: 30px;
-                }
-
-                div.photo {
-                    width: 100%;
-                    position: relative;
-
-                    img {
-                        max-width: 100%;
-                        z-index: 0;
-                        position: relative;
-                    }
-
-                    span {
-                        z-index: 1;
-                        position: relative;
-                        color: white;
-                        bottom: 50px;
-
-                    }
-                }
-            }
-
-            @media (max-width: 577.98px) {
                 button {
-                    height: 125px;
-                    width: 125px;
-                    margin-left: 10px;
-                    margin-right: 10px;
-                    margin-bottom: 50px;
+                    width: 200px;
+                    height: 230px;
+                    background-color: transparent;
+                    padding: 0;
+                    // border: transparent;
+                    margin-bottom: 70px;
+                    border: 0;
+                    cursor: pointer;
 
-                    // margin-bottom: 40px;
                     div.point {
-                        height: 20px;
-                        line-height: 20px;
+                        background-image: url(../src/image/deposit/point.jpg);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        overflow: hidden;
+                        @include border_r(15);
+                        height: 30px;
+                        color: white;
+                        font-weight: bold;
+                        text-align: center;
+                        margin-bottom: 2px;
+                        line-height: 30px;
                     }
 
                     div.photo {
-                        span {
-                            bottom: 40px;
-                        }
-                    }
-
-                }
-            }
-        }
-
-
-
-    }
-}
-
-// 信用卡
-main.deposit {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(../src/image/deposit/back.jpg);
-    padding-bottom: 100px;
-    margin: 0;
-    box-sizing: border-box;
-    margin-top: 90px;
-
-    a {
-        text-decoration: none;
-    }
-
-    div.container {
-        width: 1200px;
-        max-width: 95%;
-        @include grids(12);
-        @include center;
-        // border: 1px solid black;
-
-        div.deposit_pay {
-            background-color: $dark_green;
-            padding-bottom: 100px;
-
-            div.title {
-                // border: 1px solid black;
-                display: flex;
-                padding-top: 20px;
-                padding-bottom: 10px;
-
-                div.credit_img {
-                    width: 80px;
-                    height: 80px;
-                    overflow: hidden;
-                    border-radius: 50%;
-                    margin: 0 15px;
-
-                    img {
-                        width: 102%;
-                        height: 102%;
+                        width: 100%;
                         position: relative;
+
+                        img {
+                            max-width: 100%;
+                            z-index: 0;
+                            position: relative;
+                        }
+
+                        span {
+                            z-index: 1;
+                            position: relative;
+                            color: white;
+                            bottom: 50px;
+
+                        }
                     }
                 }
 
                 @media (max-width: 577.98px) {
-                    div.credit_img {
-                        margin: 0;
-                        margin-bottom: 30px;
-                    }
-                }
+                    button {
+                        height: 125px;
+                        width: 125px;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        margin-bottom: 50px;
 
-                h3 {
-                    font-size: 24px;
-                    color: white;
-                    line-height: 80px;
+                        // margin-bottom: 40px;
+                        div.point {
+                            height: 20px;
+                            line-height: 20px;
+                        }
+
+                        div.photo {
+                            span {
+                                bottom: 40px;
+                            }
+                        }
+
+                    }
                 }
             }
 
-            form.credit {
-                // border: 1px solid black;
-                color: white;
-                @include center;
 
-                div {
-                    margin-bottom: 20px;
-
-                    span.credit_detail {
-                        width: 72px;
-                        // border: 1px solid black;
-                        text-align: justify;
-                        display: inline-block;
-                        text-align-last: justify;
-                    }
-
-                    input {
-                        width: 50px;
-                        height: 25px;
-                    }
-
-                    select {
-                        height: 25px;
-                    }
-                }
-
-                button {
-                    @include btn_blur(100%, 10px);
-                    max-width: 300px;
-                    cursor: pointer;
-                }
-
-                button:hover {
-                    @include btn_on(100%, 10px);
-                    max-width: 300px;
-                    cursor: pointer;
-                }
-            }
 
         }
-
     }
 
-    @media (max-width: 577.98px) {
+    // 信用卡
+    main.deposit {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../src/image/deposit/back.jpg);
+        padding-bottom: 100px;
+        margin: 0;
+        box-sizing: border-box;
+        margin-top: 90px;
+
+        a {
+            text-decoration: none;
+        }
+
         div.container {
-            max-width: 100%;
+            width: 1200px;
+            max-width: 95%;
+            @include grids(12);
+            @include center;
+            // border: 1px solid black;
 
-            form.credit {
-                width: 95%;
-                @include center;
+            div.deposit_pay {
+                background-color: $dark_green;
+                padding-bottom: 100px;
 
-                button {
-                    display: block;
-                    @include center;
+                div.title {
+                    // border: 1px solid black;
+                    display: flex;
+                    padding-top: 20px;
+                    padding-bottom: 10px;
+
+                    div.credit_img {
+                        width: 80px;
+                        height: 80px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        margin: 0 15px;
+
+                        img {
+                            width: 102%;
+                            height: 102%;
+                            position: relative;
+                        }
+                    }
+
+                    @media (max-width: 577.98px) {
+                        div.credit_img {
+                            margin: 0;
+                            margin-bottom: 30px;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 24px;
+                        color: white;
+                        line-height: 80px;
+                    }
                 }
 
-                button:hover {
-                    display: block;
+                form.credit {
+                    // border: 1px solid black;
+                    color: white;
                     @include center;
+
+                    div {
+                        margin-bottom: 20px;
+
+                        span.credit_detail {
+                            width: 72px;
+                            // border: 1px solid black;
+                            text-align: justify;
+                            display: inline-block;
+                            text-align-last: justify;
+                        }
+
+                        input {
+                            width: 50px;
+                            height: 25px;
+                        }
+
+                        select {
+                            height: 25px;
+                        }
+                    }
+
+                    button {
+                        @include btn_blur(100%, 10px);
+                        max-width: 300px;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        @include btn_on(100%, 10px);
+                        max-width: 300px;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+        }
+
+        @media (max-width: 577.98px) {
+            div.container {
+                max-width: 100%;
+
+                form.credit {
+                    width: 95%;
+                    @include center;
+
+                    button {
+                        display: block;
+                        @include center;
+                    }
+
+                    button:hover {
+                        display: block;
+                        @include center;
+                    }
                 }
             }
         }
-    }
 
-}
+    }

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>news</title>
-    <link rel="stylesheet" type="text/css" href="../js/vendor/slick-1.8.1/slick/slick-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../js/vendor/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../vendors/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="../vendors/slick-1.8.1/slick/slick.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet"
@@ -15,10 +15,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/8988cd1b75.js" crossorigin="anonymous"></script>
+    <script src="../js/header/header.js"></script>
 
     <script>
-        
+
         window.onload = function doQuery() {
+            status();
             $.ajax({
                 method: "POST",
                 url: "../php/news/callnews.php",
@@ -32,7 +34,7 @@
                     let content = response[0][3];
                     let img = response[0][4];
                     let block_10 = document.getElementById("block_10");
-                    let str =`
+                    let str = `
                     <div class="left">
                         <p>${date}</p>
                         <h3>${title}</h3>
@@ -77,7 +79,7 @@
                             </div>
                         </div>
                     `;
-                    block_9.insertAdjacentHTML("beforeend" ,str);
+                        block_9.insertAdjacentHTML("beforeend", str);
                     });
                 },
                 error: function (exception) {
@@ -90,7 +92,7 @@
 
     <script>
 
-function sort2(){
+        function sort2() {
             $.ajax({
                 method: "POST",
                 url: "../php/news/callnews3.php",
@@ -100,7 +102,7 @@ function sort2(){
                 success: function (response) {
                     // console.log(response);
                     let block_9 = document.getElementById("block_9");
-                    block_9.innerHTML = ""; 
+                    block_9.innerHTML = "";
 
                     //更新html內容(透過jQuery跑迴圈取值)
                     $.each(response, function (index, row) {
@@ -117,7 +119,7 @@ function sort2(){
                             </div>
                         </div>
                     `;
-                    block_9.insertAdjacentHTML("beforeend" ,str);
+                        block_9.insertAdjacentHTML("beforeend", str);
                     });
                 },
                 error: function (exception) {
@@ -127,7 +129,7 @@ function sort2(){
         }
 
 
-        function sort(){
+        function sort() {
             $.ajax({
                 method: "POST",
                 url: "../php/news/callnews.php",
@@ -137,7 +139,7 @@ function sort2(){
                 success: function (response) {
                     // console.log(response);
                     let block_9 = document.getElementById("block_9");
-                    block_9.innerHTML = ""; 
+                    block_9.innerHTML = "";
 
                     //更新html內容(透過jQuery跑迴圈取值)
                     $.each(response, function (index, row) {
@@ -154,7 +156,7 @@ function sort2(){
                             </div>
                         </div>
                     `;
-                    block_9.insertAdjacentHTML("beforeend" ,str);
+                        block_9.insertAdjacentHTML("beforeend", str);
                     });
                 },
                 error: function (exception) {
@@ -165,7 +167,7 @@ function sort2(){
 
     </script>
 
-    
+
 
 
 </head>
@@ -174,7 +176,90 @@ function sort2(){
 
     <div class="otot"></div>
 
-    @@include('./header.html')
+    <header id="header">
+        <div class="container">
+            <a class="logo" href="../html/index.html">
+                <img src="../image/index/logo.png" alt="logoImg">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <a href="../html/Intro.html">
+                        <li class="Change">
+                            <img src="../image/index/pic.png">
+                            消息/介紹
+                        </li>
+                    </a>
+                    <a href="../html/Gacha.html">
+                        <li>
+                            <img src="../image/index/pokemon.png">
+                            角色抽取
+                        </li>
+                    </a>
+                    <a href="../html/trade.html">
+                        <li>
+                            <img src="../image/index/role01.png">
+                            角色交易
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+    
+            <!-- phone nav-->
+            <nav class="hamburger">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+    
+                    <span></span>
+                    <span></span>
+                    <span></span>
+    
+                    <ul id="headerMenu">
+                        <a href="../html/index.html"><img src="../image/index/logo.png"></a>
+                        <a href="../html/Intro.html">
+                            <li class="ChangePhone"><img src="../image/index/pic.png">消息/介紹</li>
+                        </a>
+                        <a href="../html/Gacha.html">
+                            <li><img src="../image/index/pokemon.png">角色抽取</li>
+                        </a>
+                        <a href="../html/trade.html">
+                            <li><img src="../image/index/role01.png">角色交易</li>
+                        </a>
+                        <a href="#">
+                            <div class="hamLog " id="LogOutPhone" onclick="LogOut()">登出</div>
+                        </a>
+                        <a href="#">
+                            <div class="hamLog logbt LogInPhone" id="LogInPhone" onclick="LogIn()">登入</div>
+                        </a>
+                    </ul>
+                </div>
+            </nav>
+            <!-- phone nav end -->
+    
+            <div class="icon">
+                <botton type="button" class="button bt disappear" id="appear1">
+                    <a href="../html/deposit.html"><i class="fas fa-coins fa-2x"></i></a>
+                    <p id="headerResult"></p>
+                    <div class="show">儲值</div>
+                </botton>
+                <botton type="button" class="button disappear" id="appear2">
+                    <a href="../html/collection.html"><i class="fab fa-gratipay fa-2x"></i></a>
+                    <div class="show">收藏</div>
+                </botton>
+                <botton type="button" class="button" onclick="memberCheck()">
+                    <a href="#"><i class="fas fa-user-circle fa-2x"></i>
+                        <h5 id="headerCountResult" class="countResul _off"></h5>
+                    </a>
+                    <div class="show">會員</div>
+                </botton>
+                <botton type="button" id="LogOut" class="LogOut" onclick="LogOut()">
+                    <a href="#">登出</a>
+                </botton>
+                <botton type="button" id="LogIn" class="LogIn logbt" onclick="LogIn()">
+                    <a href="#">登入</a>
+                </botton>
+            </div>
+        </div>
+    </header>
     <div class="out">
         <main class="mama">
             <p class="p">首頁>消息/介紹>所有消息</p>
@@ -203,13 +288,14 @@ function sort2(){
                 <div class="search-form">
                     <div style="display:flex;" class="searsear">
                         <h3>文章搜尋：</h3>
-                        <input id="search-input" onkeyup="find()" name="search-input" type="text" placeholder="關鍵字搜尋" style="outline: none;" />
+                        <input id="search-input" onkeyup="find()" name="search-input" type="text" placeholder="關鍵字搜尋"
+                            style="outline: none;" />
                         <style id="m-search"></style>
                     </div>
                 </div>
 
                 <div class="buttons">
-                    <button id="bbbn" class="btn old bbbn" onclick="sort2()" >按時間排序由舊至新</button>
+                    <button id="bbbn" class="btn old bbbn" onclick="sort2()">按時間排序由舊至新</button>
                     <button id="bbbn2" class="btn old bbbn2" onclick="sort()">按時間排序由新至舊</button>
                 </div>
 
@@ -230,12 +316,28 @@ function sort2(){
     </div>
 
 
-    @@include('./footer.html')
+    <!-- footer -->
+    <footer class="footer">
+        <div class="iconLink">
+            <a href="#"><i class="fab fa-facebook-square fa-2x i"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter-square fa-2x i"></i></a>
+        </div>
+        <div class="notice">
+            <p>
+                本網站為緯育TibaMe前端設計工程師班第70期第一組學員專題成果作品，本平台僅供學習、展示之用。<br>
+                參考資源： 馬力歐賽車、NFT。若有侵權疑慮，您可以私訊 [ 緯育TibaMe ]，後續會由專人協助處理
+            </p>
+        </div>
+        <div class="copyright">
+            <p><i class="far fa-copyright"></i> 2021 怪哩怪汽 All Rights Reserved</p>
+        </div>
+    </footer>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js"></script>
     <script>AOS.init();</script>
-    <script src="../js/vendor/slick-1.8.1/slick/slick.min.js"></script>
-    <script src="../js/vendor/slick-1.8.1/slick/slick.js"></script>
+    <script src="../vendors/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="../vendors/slick-1.8.1/slick/slick.js"></script>
     <script src="../js/news/news.js"></script>  
 
 
@@ -262,15 +364,15 @@ function sort2(){
                             <div class="wrap" >
                                     <img src="../image/intro/${row.AIMG}" class="sec" alt="slide4">
                                 <div class="name" >
-                                        <p class="p">${row.ADATE}</p>
-                                        <h3>${row.TITLE}</h3>
-                                        <p class="p">${row.CONTENT}</p>
-                                        <p >閱讀更多></p>   
+                                        <p >${row.ADATE}</p>
+                                        <h3 class="p">${row.TITLE}</h3>
+                                        <p >${row.CONTENT}</p>
+                                        <p class="p">閱讀更多></p>   
                                 </div>
                             </div>
                         </div>
                     `;
-                    block_9.insertAdjacentHTML("beforeend" ,str);
+                        block_9.insertAdjacentHTML("beforeend", str);
                     });
                 },
                 error: function (exception) {
@@ -279,14 +381,14 @@ function sort2(){
             });
         }
     </script>
-    
+
 
     <script>
         function parseCookie(item) {
             // console.log(item.childNodes[1].childNodes[3].childNodes[3].innerText);
             let title = item.childNodes[1].childNodes[3].childNodes[3].innerText;
             sessionStorage.setItem('title', title);
-            location.href="./news_in.html";
+            location.href = "./news_in.html";
         }
 
 

@@ -18,7 +18,7 @@
         // $filePath = getFilePath().$_FILES["file"]["name"];
 
         //檔案最終存放位置
-        $filePath = $ServerRoot."/TFD103-G1/src/image/intro/".$fileName;
+        $filePath = $ServerRoot."/tfd103/g1/TFD103-G1/src/image/intro/".$fileName;
         
 
         //將暫存檔搬移到正確位置
@@ -38,7 +38,9 @@
             $statement->bindValue(3 , $content);
 
             $statement->execute();
-
+            // echo  $title;
+            // echo $content;
+            // echo $_FILES["file"]["name"];
             //導頁            
             echo "<script>alert('新增成功!'); location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
             

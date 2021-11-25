@@ -3,7 +3,7 @@
     // @include grids(12);
     width: 100vw;
     height: 90px;
-    z-index: 100;
+    z-index: 800;
     position: fixed;
     top: 0;
 
@@ -124,6 +124,9 @@
                         margin-right: 10px;
                         animation-play-state: paused;
                     }
+                }
+                .Change{
+                    color: #9dfdc8;
                 }
             }
         }
@@ -249,6 +252,10 @@
                 vertical-align: bottom;
                 animation-play-state: paused;
             }
+        }
+        .ChangePhone{
+            background: #0E3461;
+            color: #9dfdc8;
         }
         .hamLog{
             display: none;

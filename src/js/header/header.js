@@ -24,32 +24,18 @@ function balance() {
 //申請中訊息提示
 function countDeal() {
     $.ajax({
-        method: "POST",
-        url: "../php/LoginCheck.php",
+        url: "../php/member/count_deal.php",
         data: {},
-        dataType: "text",
-        success: function (response) {
-            if (response == "") {
-                // 沒有登入
+        dataType: "json",
+        success: (response) => {
+            if (response > 0) {
                 $("#headerCountResult").html("");
-            } else if (response == "true") {
-                countDeal();
-                $.ajax({
-                    url: "../php/member/count_deal.php",
-                    data: {},
-                    dataType: "json",
-                    success: (response) => {
-                        if (response > 0) {
-                            $("#headerCountResult").html("");
-                            $("#headerCountResult").append(response);
-                            $("#headerCountResult").removeClass("_off");
-                        } else if (response == "") {
-                            $("#headerCountResult").html("");
-                            $("#headerCountResult").append(response);
-                            $("#headerCountResult").removeClass("_off");
-                        }
-                    }
-                });
+                $("#headerCountResult").append(response);
+                $("#headerCountResult").removeClass("_off");
+            } else if (response == "") {
+                $("#headerCountResult").html("");
+                $("#headerCountResult").append(response);
+                $("#headerCountResult").removeClass("_off");
             }
         }
     });
@@ -113,7 +99,7 @@ function LogOut() {
     });
 }
 function LogIn() {
-    location.href='./login.html'
+    location.href = './login.html'
 }
 
 function memberCheck() {

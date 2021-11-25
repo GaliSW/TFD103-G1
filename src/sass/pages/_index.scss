@@ -5,7 +5,7 @@
 }
 body{
     overflow-x: hidden;
-    background-color: #22267c;
+    z-index: -1;
 }
 
 .index{
@@ -19,6 +19,7 @@ body{
         background-repeat: no-repeat;
         background-position: bottom right;
         width: 100%;
+        overflow: hidden;
         .banner{
             // @include border;
             @include center;
@@ -90,6 +91,7 @@ body{
                     margin-top: 20px;
                 }
                 @include pad_small{
+                    background-color: rgba(95, 141, 179, .5);
                     font-size: $fontSize;
                     margin-top: 20px;
                 }
@@ -170,9 +172,9 @@ body{
         background-size: cover;
         position: relative;
         width: 100%;
-        // height: 2400px;
-        top: 100px;
+        // top: 100px;
         z-index: 2;
+        overflow-x: hidden;
         .imgBlock{
             width: 100%;
         }
@@ -195,7 +197,7 @@ body{
         position: absolute;
         width: 100%;
         height: 150px;
-        top: -150px;
+        top: -42px;
         .carId{
             // @include border;
             position: absolute;
@@ -219,8 +221,7 @@ body{
         position: absolute;
         width: 100%;
         height: 150px;
-        top: -110px;
-        overflow-x: hidden;
+        top: -42px;
         .carId{
             // @include border;
             position: absolute;
@@ -241,6 +242,10 @@ body{
         width: 100%;
         height: 320px;
         animation: marquee 10s infinite linear;
+        top: 70px;
+        @include phone{
+            top: 70px;
+        }
         .raceTrack{
             // @include border;
             width: 25%;
@@ -259,6 +264,7 @@ body{
         max-width: 1200px;
         width: 100%;
         z-index: 10;
+        top: 62px;
         .rcbig{
             // @include border;
             position: absolute;
@@ -348,11 +354,13 @@ body{
                 width: 160px;
                 right: -5%;
                 bottom: -18%;
+                overflow-x: hidden;
             }
             @include phone{
                 width: 120px;
                 right: 0%;
                 bottom: -18%;
+                overflow-x: hidden;
             }
             img{
                 width: 100%;
@@ -450,7 +458,12 @@ body{
         margin-left: 50%;
         transform: translateX(-50%);
         z-index: -1;
-        margin-top: -6%;
+        margin-top: 10%;
+        @include pad_small{
+            width: 250px;
+            height: 80px;
+            margin-top: 20px;
+        }
         @include phone{
             width: 250px;
             height: 80px;
@@ -465,6 +478,10 @@ body{
             color: #fff;
             text-align: center;
             margin: -25% 0 20px 0;
+            @include pad_small{
+                font-size: $fontSizeH1;
+                margin: -26% 0 8px 0;
+            }
             @include phone{
                 font-size: $fontSizeH1;
                 margin: -26% 0 20px 0;
@@ -559,6 +576,9 @@ body{
         left: -4%;
         top: 28%;
         z-index: -1;
+        @include pad_small{
+            width: 390px;
+        }
         @include phone{
             width: 390px;
         }
@@ -671,7 +691,8 @@ body{
         align-items: center;
         margin: 20px 0 0 15%;
         @include pad_small{
-            margin-left: 50px;
+            margin-left: 20px;
+            display: block;
         }
         @include phone{
             display: flex;
@@ -689,10 +710,7 @@ body{
         }
         .gamesIntro{
             @include pad_small{
-                margin-left: 0;
-            }
-            @include phone{
-                
+                text-align: center;
             }
             a{
                 color: $light_green;
@@ -802,8 +820,12 @@ body{
         transform: translateX(-50%);
         z-index: -1;
         margin-top: 10%;
+        @include pad_small{
+            width: 425px;
+            height: 80px;
+        }
         @include phone{
-            width: 510px;
+            width: 390px;
             height: 80px;
         }
         img{
@@ -816,9 +838,13 @@ body{
             color: #fff;
             text-align: center;
             margin: -14% 0 0 0;
+            @include pad_small{
+                font-size: $fontSizeH1;
+                margin: -15.5% 0 0 0;
+            }
             @include phone{
                 font-size: $fontSizeH1;
-                margin: -13% 0 0 0;
+                margin: -17% 0 0 0;
             }
         }
     }
@@ -833,6 +859,11 @@ body{
         height: 450px;
         display: table;
         position: relative;
+        @include pad_small{
+            max-width: 400px;
+            width: 100%;
+            height: 400px;
+        }
         @include phone{
             max-width: 400px;
             width: 100%;

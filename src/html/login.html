@@ -15,7 +15,6 @@
 </head>
 
 <body>
-    <!-- 首頁nav -->
     <header id="header">
         <div class="container">
             <a class="logo" href="../html/index.html">
@@ -64,9 +63,11 @@
                         <a href="../html/trade.html">
                             <li><img src="../image/index/role01.png">角色交易</li>
                         </a>
-
                         <a href="#">
-                            <div class="hamLog" id="LogOutPhone" class="LogOut" onclick="LogOut()">登出</div>
+                            <div class="hamLog " id="LogOutPhone" onclick="LogOut()">登出</div>
+                        </a>
+                        <a href="#">
+                            <div class="hamLog logbt LogInPhone" id="LogInPhone" onclick="LogIn()">登入</div>
                         </a>
                     </ul>
                 </div>
@@ -74,7 +75,7 @@
             <!-- phone nav end -->
 
             <div class="icon">
-                <botton type="button" class="button disappear" id="appear1">
+                <botton type="button" class="button bt disappear" id="appear1">
                     <a href="../html/deposit.html"><i class="fas fa-coins fa-2x"></i></a>
                     <p id="headerResult"></p>
                     <div class="show">儲值</div>
@@ -92,10 +93,12 @@
                 <botton type="button" id="LogOut" class="LogOut" onclick="LogOut()">
                     <a href="#">登出</a>
                 </botton>
+                <botton type="button" id="LogIn" class="LogIn logbt" onclick="LogIn()">
+                    <a href="#">登入</a>
+                </botton>
             </div>
         </div>
     </header>
-    <!-- @@include('./header.html') -->
 
     <main class="login">
         <div class="contain">
@@ -211,7 +214,23 @@
         </section>
     </div>
 
-    @@include('./footer.html')
+    <!-- footer -->
+    <footer class="footer">
+        <div class="iconLink">
+            <a href="#"><i class="fab fa-facebook-square fa-2x i"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter-square fa-2x i"></i></a>
+        </div>
+        <div class="notice">
+            <p>
+                本網站為緯育TibaMe前端設計工程師班第70期第一組學員專題成果作品，本平台僅供學習、展示之用。<br>
+                參考資源： 馬力歐賽車、NFT。若有侵權疑慮，您可以私訊 [ 緯育TibaMe ]，後續會由專人協助處理
+            </p>
+        </div>
+        <div class="copyright">
+            <p><i class="far fa-copyright"></i> 2021 怪哩怪汽 All Rights Reserved</p>
+        </div>
+    </footer>
 
 
     <script src="../js/member/login.js"></script>

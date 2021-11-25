@@ -15,6 +15,7 @@
     <script>
 
         window.onload = function getproductname() {
+            status();
             callProductInfo();
             setTimeout(function () {
                 myFavStatus();
@@ -89,6 +90,18 @@
             });
         }
 
+        function owner (username){
+            let sellerName = username;
+            $.ajax({
+                method: "POST",
+                url: "../php/product/getBuyer.php",
+                data: {},
+                dataType: "text",
+                success: function (response) {
+                    console.log(response);
+                }
+            });
+        }
 
         function callProductInfo() {
             let productid = sessionStorage.getItem('productname');
@@ -100,30 +113,31 @@
                 },
                 dataType: "json",
                 success: function (response) {
-                    // console.log(response);
+                    console.log(response);
                     let username = response[0][1];
                     let gachaid = response[0][2];
                     let price = response[0][3];
                     let title = response[0][12];
                     let img = response[0][14];
                     let content = response[0][16];
+                    let trans = response[0].TRANS;
                     let PRODUCT_ID = response[0].PRODUCT_ID;
                     let block_product = document.getElementById("flexContainer");
                     let str = `
                     <div class="items -left" id="username" name="${username}">
                         <div class="imgBlock" id="iimgBlock" name='${PRODUCT_ID}'>
-                            <img id='${PRODUCT_ID}' src="../image/product/${img}">
+                            <img id='${PRODUCT_ID}' src="../image/ROLE/${img}">
                         </div>
                     </div>
                     <div class="items -right">
-                        <h1 class="title1">${title}</h1>
+                        <h1 class="title1" id="title1">${title}</h1>
                         <p class="introduce">${content}</p>
                         <p class="price">$${price}E</p>
 
                         <div class="collectForm">
                             <div class="btnBlock1">
                                 <button type="${gachaid}" class="collectBtn" name="button" id="myfav" onclick="myfav()"><i class="fas fa-heart"></i>收藏</button>
-                                <button type="button" class="changeBtn" name="button" onclick="clickStatus()">交換</button>
+                                <button type="button" id="changeBtn" class="changeBtn" name="button" onclick="clickStatus()">交換</button>
                             </div>
                         </div>
 
@@ -134,6 +148,17 @@
                     </div>
                     `;
                     block_product.innerHTML = str;
+
+                    // 判斷是否開啟交換
+
+                    let changeBtn = document.getElementById("changeBtn");
+                    console.log(trans);
+                    if (trans == 0) {
+                        changeBtn.classList.add('none');
+                    } else {
+                        changeBtn.classList.remove('none');
+                    }
+                    owner(username);
                 },
                 error: function (exception) {
                     alert("發生錯誤: " + exception.status);
@@ -173,8 +198,92 @@
 <header></header>
 
 <body>
-    @@include('./header.html')
+    <header id="header">
+        <div class="container">
+            <a class="logo" href="../html/index.html">
+                <img src="../image/index/logo.png" alt="logoImg">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <a href="../html/Intro.html">
+                        <li>
+                            <img src="../image/index/pic.png">
+                            消息/介紹
+                        </li>
+                    </a>
+                    <a href="../html/Gacha.html">
+                        <li>
+                            <img src="../image/index/pokemon.png">
+                            角色抽取
+                        </li>
+                    </a>
+                    <a href="../html/trade.html">
+                        <li class="Change">
+                            <img src="../image/index/role01.png">
+                            角色交易
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+
+            <!-- phone nav-->
+            <nav class="hamburger">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id="headerMenu">
+                        <a href="../html/index.html"><img src="../image/index/logo.png"></a>
+                        <a href="../html/Intro.html">
+                            <li><img src="../image/index/pic.png">消息/介紹</li>
+                        </a>
+                        <a href="../html/Gacha.html">
+                            <li><img src="../image/index/pokemon.png">角色抽取</li>
+                        </a>
+                        <a href="../html/trade.html">
+                            <li class="ChangePhone"><img src="../image/index/role01.png">角色交易</li>
+                        </a>
+                        <a href="#">
+                            <div class="hamLog " id="LogOutPhone" onclick="LogOut()">登出</div>
+                        </a>
+                        <a href="#">
+                            <div class="hamLog logbt LogInPhone" id="LogInPhone" onclick="LogIn()">登入</div>
+                        </a>
+                    </ul>
+                </div>
+            </nav>
+            <!-- phone nav end -->
+
+            <div class="icon">
+                <botton type="button" class="button bt disappear" id="appear1">
+                    <a href="../html/deposit.html"><i class="fas fa-coins fa-2x"></i></a>
+                    <p id="headerResult"></p>
+                    <div class="show">儲值</div>
+                </botton>
+                <botton type="button" class="button disappear" id="appear2">
+                    <a href="../html/collection.html"><i class="fab fa-gratipay fa-2x"></i></a>
+                    <div class="show">收藏</div>
+                </botton>
+                <botton type="button" class="button" onclick="memberCheck()">
+                    <a href="#"><i class="fas fa-user-circle fa-2x"></i>
+                        <h5 id="headerCountResult" class="countResul _off"></h5>
+                    </a>
+                    <div class="show">會員</div>
+                </botton>
+                <botton type="button" id="LogOut" class="LogOut" onclick="LogOut()">
+                    <a href="#">登出</a>
+                </botton>
+                <botton type="button" id="LogIn" class="LogIn logbt" onclick="LogIn()">
+                    <a href="#">登入</a>
+                </botton>
+            </div>
+        </div>
+    </header>
     <main class="allBlock" id="appp">
+        <p class="p">首頁>角色交易>所有消息</p>
 
 
         <!-- 拒絕自我交易 -->
@@ -197,6 +306,48 @@
                 </div>
             </section>
         </div>
+
+        <!-- 收藏成功alert -->
+
+        <div id="myfavBlk" class="toGachaBlk none">
+            <section class="toGachaHintmaskLayer">
+                <div class="toGachaPopUpBox">
+                    <div onclick="popCloseX(this)" class="toGachaCloseBtn">
+                        x
+                    </div>
+                    <div class="toGachaPopContent">
+                        <p>
+                            <i class="far fa-user-circle"></i>&nbsp;您已成功收藏
+                        </p>
+                    </div>
+                    <div class="toGachaConfirmBlk">
+                        <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 取消收藏alert -->
+
+        <div id="cancelmyfavBlk" class="toGachaBlk none">
+            <section class="toGachaHintmaskLayer">
+                <div class="toGachaPopUpBox">
+                    <div onclick="popCloseX(this)" class="toGachaCloseBtn">
+                        x
+                    </div>
+                    <div class="toGachaPopContent">
+                        <p>
+                            <i class="far fa-user-circle"></i>&nbsp;您已取消收藏
+                        </p>
+                    </div>
+                    <div class="toGachaConfirmBlk">
+                        <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
 
 
         <!-- 未登入alert -->
@@ -286,7 +437,7 @@
         </div>
 
 
-
+        <!-- 交換視窗 -->
 
         <section class="sec1">
             <div class="flexContainer" id="flexContainer">
@@ -323,37 +474,36 @@
                             <div class="popContent13">
                                 <p>確認你想要交換的角色</p>
                             </div>
+                            <div class="roleArea">
+                                <div class="myRoleBlock">
+                                    <div class="myRoleP">
+                                        <p>我的角色</p>
+                                    </div>
 
-                            <div class="myRoleBlock">
-                                <div class="myRoleP">
-                                    <p>我的角色</p>
+                                    <div class="myRoleImg">
+                                        <img id="myRoleImg1" src="">
+                                    </div>
+
+                                    <div class="myRoleNameBlock">
+                                        <p id="myRoleName1"></p>
+                                    </div>
                                 </div>
 
-                                <div class="myRoleImg">
-                                    <img id="myRoleImg1" src="../dist/images/product/change/change1.png">
-                                </div>
+                                <div class="doubleArrow"><i class="fas fa-arrows-alt-h"></i></div>
 
-                                <div class="myRoleNameBlock">
-                                    <p id="myRoleName1">小烏龜</p>
+                                <div class="yourRoleBlock">
+                                    <div class="yourRoleP">
+                                        <p>對方角色</p>
+                                    </div>
+
+                                    <div class="yourRoleImg">
+                                        <img id="yourRoleImg1" src="">
+                                    </div>
+                                    <div class="yourRoleNameBlock">
+                                        <p id="yourRoleName1"></p>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="doubleArrow"><i class="fas fa-arrows-alt-h"></i></div>
-
-                            <div class="yourRoleBlock">
-                                <div class="yourRoleP">
-                                    <p>對方角色</p>
-                                </div>
-
-                                <div class="yourRoleImg">
-                                    <img id="yourRoleImg1" src="../dist/images/product/change/change2.png">
-                                </div>
-
-                                <div class="yourRoleNameBlock">
-                                    <p>羊咩咩</p>
-                                </div>
-                            </div>
-
                             <div class="confirmBlk13">
                                 <button href="#" class="confirmBtnBack13" @click=toBack()>返回</button>
                                 <button href="#" class="confirmBtn13" onclick="toThree()">確定</button>
@@ -366,7 +516,7 @@
                                 x
                             </div>
                             <div class="popContent14">
-                                <p>已送出交換申請，請靜候佳音！</p>
+                                <p class="sendP">已送出交換申請</br>請靜候佳音！</p>
                             </div>
 
                         </div>
@@ -423,8 +573,29 @@
 
         </div>
 
+        <div class="upup">
+            <i class="fas fa-arrow-circle-up totop"></i>
+        </div>
+
+
     </main>
-    @@include('./footer.html')
+    <!-- footer -->
+    <footer class="footer">
+        <div class="iconLink">
+            <a href="#"><i class="fab fa-facebook-square fa-2x i"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter-square fa-2x i"></i></a>
+        </div>
+        <div class="notice">
+            <p>
+                本網站為緯育TibaMe前端設計工程師班第70期第一組學員專題成果作品，本平台僅供學習、展示之用。<br>
+                參考資源： 馬力歐賽車、NFT。若有侵權疑慮，您可以私訊 [ 緯育TibaMe ]，後續會由專人協助處理
+            </p>
+        </div>
+        <div class="copyright">
+            <p><i class="far fa-copyright"></i> 2021 怪哩怪汽 All Rights Reserved</p>
+        </div>
+    </footer>
 
 
 
@@ -623,7 +794,7 @@
             myRoleName.innerText = imgName;
             //console.log(imgName);
 
-            //////////// 我的角色圖片
+            //////////// 你的角色圖片
 
             let imgBlock = document.getElementsByClassName("imgBlock")[0];
             //console.log(imgBlock);
@@ -632,8 +803,9 @@
             yourImgSrc = yourImg.attributes['src'].value;
             let yourRoleImg1 = document.getElementById('yourRoleImg1');
             yourRoleImg1.attributes['src'].value = yourImgSrc;
-
-
+            let name = document.getElementById("title1").innerText;
+            let yourname = document.getElementById('yourRoleName1');
+            yourname.innerText = name;
         }
 
         function toThree() {
@@ -758,8 +930,11 @@
                 dataType: "text",
                 success: function (response) {
                     if (response == "N") {
+<<<<<<< HEAD
                         // let selfBlk = document.getElementById('selfBlk');
                         // selfBlk.classList.remove('none');
+=======
+>>>>>>> dev
                     } else {
                         return false;
                     }
@@ -776,19 +951,23 @@
                 success: function (response) {
                     let btn = document.getElementById('myfav');
                     if (response == "YN") {
+                        let tomyfavBtn = document.getElementById('myfavBlk');
+                        tomyfavBtn.classList.remove('none');
                         insertMyfav();
                         btn.style.background = "rgba(96, 205, 144, 1)";
                         btn.style.color = "rgba(14, 52, 97, 1)";
-                        btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
+                        btn.style.boder = "3px solid rgba(14, 52, 97, 1)";
                         btn.innerText = "已收藏";
                     } else if (response == "N") {
                         let tologinBtn = document.getElementById('tologinBlk');
                         tologinBtn.classList.remove('none');
                     } else if (response == "YY") {
+                        let cancelmyfavBtn = document.getElementById('cancelmyfavBlk');
+                        cancelmyfavBtn.classList.remove('none');
                         deletemyfav(productid);
                         btn.style.background = "rgba(14, 52, 97, 1)";
                         btn.style.color = "rgba(96, 205, 144, 1)";
-                        btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
+                        btn.style.boder = "3px solid rgba(96, 205, 144, 1)";
                         btn.innerText = "收藏";
                     }
                 }
@@ -807,7 +986,8 @@
                 success: function (response) {
                     let btnName = document.getElementById('myfav').innerText;
                     btnName.innerText = "已收藏";
-                    document.getElementById('buyBlk').remove('none');
+
+                    // document.getElementById('buyBlk').remove('none');
                 },
                 error: function (exception) {
                     alert("數據載入失敗: " + exception.status);
@@ -865,24 +1045,11 @@
     </script>
 
     <script src="../js/gacha/chart.js"></script>
+    <script src="../js/header/header.js"></script>
 
-    <div id="buyBlk" class="toGachaBlk none">
-        <section class="buyHintmaskLayer">
-            <div class="buyPopUpBox">
-                <div onclick="popCloseX(this)" class="buyCloseBtn">
-                    x
-                </div>
-                <div class="buyPopContent">
-                    <p>
-                        <i class="far fa-user-circle"></i>&nbsp;收藏成功!
-                    </p>
-                </div>
-                <div class="buyConfirmBlk">
-                    <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
-                </div>
-            </div>
-        </section>
-    </div>
+
+    <script src="../js/news/news_in.js"></script>
+
 </body>
 
 </html>

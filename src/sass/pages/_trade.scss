@@ -10,6 +10,17 @@
     background-position: 0px 0px;
     margin: 90px 0 0 0;
     padding: 0;
+    @include pad_small{
+        margin-top: 70px;
+    }
+    @include phone{
+        margin-top: 70px;
+    }
+    .p{
+        font-size: $fontSize;
+        color:$tiffiny_green;
+        }
+
 
 
 ///////////////////////////////////////////////////////////////////角色排行
@@ -28,6 +39,11 @@
         display: flex;
         width: 900px;
         @include center;
+
+        @include desktop{
+            width:930px;
+        }
+
         @include desktop_small{
         width:750px;
         }
@@ -46,17 +62,20 @@
             margin: 0 auto;
             .imgBlock{
 
-                //border: 1px solid red;
+                //border: 1px solid green;
                 width: 250px;
                 margin: 0 auto;
 
                 @include desktop_small{
                 width: 70%;
+                max-width: 280px;
                 @include center
                 }
 
                 @include pad{
                     width: 80%;
+                    max-width: 280px;
+
                 }
             }
             .name{
@@ -209,7 +228,8 @@
 
 .ypagey {
 
-    padding-bottom: 80px;
+    //padding-bottom: 80px;
+    //border: 1px solid red;
     li{
         a{
             text-decoration: none;
@@ -254,6 +274,10 @@
         border: 2px solid rgba(16, 197, 177, 1);
         border-radius: 5px;
         overflow: auto;
+
+        @media (max-width: 768px){
+            height: 30%;
+        }
 
 
 
@@ -479,6 +503,10 @@
         }
     }
 
+
+//////////角色管理POP
+
+
     .popContent3{
         text-align: center;
         color: rgba(96, 205, 144, 1);
@@ -493,145 +521,6 @@
             border-bottom: 1px solid rgba(16, 197, 177, 1);
             font-size: 32px;
         }
-
-
-        .manageListOut{
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            //border: 1px solid blue;
-
-            .itemFlex.first{
-                padding: 0;
-            }
-
-            .itemFlex{
-                display: flex;
-                border: 1px solid rgba(16, 197, 177, 1);
-                align-items: center;
-                justify-content: space-between;
-                padding: 20px 0;
-
-                p{
-                    font-size: 24px;
-                }
-
-                .leftBlock{
-                    width: 100px;
-                    flex-shrink: 0;
-                    //border: 1px solid gold;
-
-                    .imgBlockRole{
-                        font-size: 0;
-                        margin-left: 20px;
-                    }
-                }
-
-                .middleBlock{
-
-                    flex-grow: 1;
-                    //border: 1px solid green;
-
-                    .detailInfo.firstTitle{
-                        
-                        p{
-                            font-size: 28px;
-                        }
-                    }
-
-                    .detailInfo{
-                        display: flex;
-                        justify-content: center;
-                        color: #fff;
-                        //border: 1px solid red;
-
-                        @media (min-width:375px) and (max-width:1017px){
-                            display: block;
-                            //@include border;
-
-                            p{
-                                //@include border;
-                                margin: 0 auto;
-                            }
-
-                        }
-
-                        .roleNamee{
-                            width: 150px;
-                        }
-
-                        .rolePrice{
-                            width: 100px;
-                        }
-
-                        .roleNumber{
-                            width: 150px;
-                        }
-                    }    
-                }
-
-                .rightBlock{
-
-                    //border: 1px solid purple;
-                    width: 246px;
-
-                    .btnBlock{
-                        display: flex;
-                        text-align: center;
-
-                        
-                        .downBt{
-                            text-align: center;
-                            line-height: 30px;
-                            text-decoration: none;
-                            border: 3px solid rgba(16, 197, 177, 1);
-                            color: rgba(16, 197, 177, 1);
-                            background-color: rgba(14, 52, 97, 1);
-                            width: 100px;
-                            height: 35px;
-                            border-radius: 10px;
-                            padding: 0;
-                            @include center;
-                            &:hover {@include btn_on (100px, 0px)}
-                        }
-
-                        .upBt{
-                            text-align: center;
-                            line-height: 30px;
-                            text-decoration: none;
-                            border: 3px solid rgba(16, 197, 177, 1);
-                            color: rgba(16, 197, 177, 1);
-                            background-color: rgba(14, 52, 97, 1);
-                            width: 100px;
-                            height: 35px;
-                            border-radius: 10px;
-                            padding: 0;
-                            @include center;
-                            &:hover {@include btn_on (100px, 0px)}
-                        }
-
-                        .deleteBt{
-                            text-align: center;
-                            line-height: 30px;
-                            text-decoration: none;
-                            border: 3px solid rgba(16, 197, 177, 1);
-                            color: rgba(16, 197, 177, 1);
-                            background-color: rgba(14, 52, 97, 1);
-                            width: 100px;
-                            height: 35px;
-                            border-radius: 10px;
-                            padding: 0;
-                            @include center;
-                            &:hover {@include btn_on (100px, 0px)}
-                        }
-                    }
-                }
-
-            }
-        }
-
-
-
 
         .manageList{
             margin: 0;
@@ -650,19 +539,49 @@
                 justify-content: space-between;
                 padding: 20px 0;
 
+                @media (max-width: 768px){
+                    display: block;
+                }
+
+
                 p{
                     font-size: 24px;
                 }
 
+
+                .leftBlock, .middleBlock{
+                    @media (max-width: 768px){
+                    display: inline-block;
+                    
+                    }
+                }
+
+
                 .leftBlock{
-                    width: 100px;
+                    width: 180px;
                     flex-shrink: 0;
                     //border: 2px solid yellow;
+                    @media (max-width: 585px){
+                        width: 150px;
+                    }
+
+                    @media (max-width: 585px){
+                        display: block;
+                        width: 100%;
+                    }
+
+
 
                     .imgBlockRole{
                         //border: 2px solid red;
                         font-size: 0;
                         margin-left: 20px;
+
+                        @media (max-width: 585px){
+                            width: 150px;
+                            margin: 0 auto;
+                        }
+    
                     }
                 }
 
@@ -670,6 +589,10 @@
 
                     flex-grow: 1;
                     //border: 2px solid green;
+
+                    @media (max-width: 585px){
+                        display: block;
+                    }
 
                     .detailInfo.firstTitle{
                         
@@ -679,9 +602,10 @@
                     }
 
                     .detailInfo{
-                        display: flex;
+                        display: block;
                         justify-content: center;
                         color: #fff;
+                        //border: 1px solid red;  
 
                         @media (min-width:375px) and (max-width:1017px){
                             display: block;
@@ -695,15 +619,16 @@
                         }
 
                         .roleNamee{
-                            width: 150px;
+                            //width: 150px;
                         }
 
                         .rolePrice{
-                            width: 100px;
+                            //width: 100px;
+                            margin: 20px 0;
                         }
 
                         .roleNumber{
-                            width: 150px;
+                            //width: 150px;
                         }
                     }    
                 }
@@ -711,6 +636,10 @@
                 .rightBlock{
                     //border: 2px solid black;
                     width: 250px;
+                    @media (max-width: 768px){
+                        display: block;
+                        margin: 20px auto 0;
+                        }
 
                     .btnBlock{
                         display: flex;
@@ -781,26 +710,61 @@
     margin: 0 auto;
     //@include border();
 
+
+
 .containerFlex{
+    
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
+    //@include border();
     width: 100%;
-    // flex-direction: row;
-    //@include border(1,blue);
+    
 }
 
-.container {
+
+.container{
+
+    //border: 1px solid blue;
+    margin-bottom: 30px;
+    // margin: 0 30px 30px 30px;
+    display: flex;
+    width: 25%;
+    justify-content: center;
+
+
+
+    @media (max-width:767.98px) {
+        width: 33%;
+    }
+
+    @media (max-width:530px) {
+        width: 48%;
+    }
+
+
+
+    @media (max-width:413.98px) {
+        width: 50%;
+    }
+}
+
+.containerInner {
     border: 1px solid #60cd90;
     // margin-right: 50px;
     margin-bottom: 50px;
-    width: 25%;
+    width: 90%;
     flex-wrap: wrap;
     justify-content: center;
     // align-items: center;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+    @media (max-width:1200px) {
+        width: 80%;
+    }
+
+
 
     a{
         display: inline-block;
@@ -820,19 +784,42 @@
     transform: translateY(-18%);
     //background: white;
     background: #60cd90;
+
+    @media (max-width:1200px) {
+        transform: translateY(-3%);
+    }
+
+    @media (max-width:992px) {
+        transform: translateY(-5%);
+    }
+
+    @media (max-width:575.98px) {
+        transform: translateY(-5%);
+    }
+
+    @media (max-width:530px) {
+        transform: translateY(-35%);
+    }
+
 }
 
 .container:hover .features-list {
     opacity: 1;
+    background: #60cd90;
 }
 
 .container:hover span {
-    transform: translateY(25%);
+    transform: translateY(15%);
 }
 
 .container:hover .content h2 {
     opacity: 0;
 }
+
+.container:hover .content h3 {
+    opacity: 0;
+}
+
 
 .container:hover .cardImg {
     width: 65%;
@@ -844,6 +831,7 @@
 }
 
 .inner {
+    //border: 1px solid orange;
     width: 100%;
     height: 400px;
     //background-color: pink;
@@ -852,6 +840,33 @@
     background-position: center;
     background-repeat: no-repeat;
     /* overflow: hidden; */
+
+    @media (max-width:1200px) {
+        height: 350px;
+    }
+
+    @media (max-width:992px) {
+        height: 270px;
+    }
+
+    @media (max-width:760px) {
+        height: 270px;
+    }
+
+
+    @media (max-width:575.98px) {
+        height: 250px;
+    }
+
+    @media (max-width:540px) {
+        height: 280px;
+    }
+
+    @media (max-width:420px) {
+        height: 250px;
+    }
+
+
 }
 
 .inner img {
@@ -883,17 +898,45 @@
 
 
 .lower {
+    //rightBlockborder: 1px solid red;
+    //border: 1px solid red;
     display: flex;
     justify-content: flex-end;
     align-content: center;
     flex-direction: column;
     background: transparent;
     position: relative;
-    transform: translateY(10%);
+    transform: translateY(3%);
     transition: all .5s ease;
-    height: 120px;  
-    // min-height: 40%;
-    // height: 100px;
+    width: 100%;
+    height: 32%;
+
+    @media (max-width:1200px) {
+        height: 35%;
+        transform: translateY(40%);
+
+    }
+
+    @media (max-width:992px) {
+        height: 35%;
+        transform: translateY(10%);
+
+    }
+
+    @media (max-width:590px) and (max-width:600px){
+        height: 47%;
+        transform: translateY(50%);
+    }
+
+
+
+    @media (max-width:413.98px) {
+        height: 47%;
+        transform: translateY(10%);
+
+    }
+
+
 
     .ysellerImgy, .ysellerInfoy{
         display: inline-block;
@@ -927,6 +970,7 @@
     opacity: 0;
     transition: all .2s ease;
     text-align: center;
+    //border: 2px solid green;
 }
 
 
@@ -962,7 +1006,16 @@ top: 5px; */
     font-weight: 100;
     cursor: pointer;
     transition: all .3s ease;
+
+
+    // @media (min-width:668px) and (max-width:768px){
+    //     padding-top: 25px;
+    // }
 }
+
+
+
+
 }
 
 // 沒有角色alert視窗

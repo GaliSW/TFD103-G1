@@ -1,7 +1,7 @@
 <?php
     $Name = $_POST["Name"];
     $Pass = $_POST["Pass"];
-    include "connection.php";
+    include "../connection.php";
 
     $sql = "SELECT * from MEMBER where USERNAME = ? && PASSWORD = ?";
     // $statement = $pdo->query($sql);
@@ -25,6 +25,8 @@
             echo 2;
         }
     }
+}else{
+    echo "3";
 }    
 
 ?>

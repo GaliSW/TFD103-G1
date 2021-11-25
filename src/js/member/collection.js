@@ -8,52 +8,52 @@ let vmm = new Vue({
         one: true,
         two: false,
         three: false,
-        ROLE:[],
+        ROLE: [],
     },
     methods: {
-        
+
         clickClose() {
-        vmm.$data.pop = false;
+            vmm.$data.pop = false;
         },
-        
+
         toSuccess() {
-        vmm.$data.success = true;
-        vmm.$data.buy = false;
+            vmm.$data.success = true;
+            vmm.$data.buy = false;
         },
         toTwo() {
-        vmm.$data.two = true;
-        vmm.$data.one = false;
-        vmm.$data.three = false;
+            vmm.$data.two = true;
+            vmm.$data.one = false;
+            vmm.$data.three = false;
         },
         toThree() {
-        vmm.$data.three = true;
-        vmm.$data.one = false;
-        vmm.$data.two = false;
+            vmm.$data.three = true;
+            vmm.$data.one = false;
+            vmm.$data.two = false;
         },
-                                   
+
     },
-                         
+
 });
 
 function display() {
-    
+
     $.ajax({
         method: "POST",
         url: "../php/member/getMemberRole.php",
         data: {},
         dataType: "json",
-        success: (response)=>{
+        success: (response) => {
             $("#result").html("");
             $.each(response, function (indexA, rowA) {
                 let row = rowA.ABILITY;
-                        let ab1 = row.slice(0, 1);
-                        let ab2 = row.slice(1, 2);
-                        let ab3 = row.slice(2, 3);
-                        let ab4 = row.slice(3, 4);
-                        let ab5 = row.slice(4, 5);
+                let ab1 = row.slice(0, 1);
+                let ab2 = row.slice(1, 2);
+                let ab3 = row.slice(2, 3);
+                let ab4 = row.slice(3, 4);
+                let ab5 = row.slice(4, 5);
                 if (rowA.AMOUNT == 1) {
-                        $("#result").append(
-                          `
+                    $("#result").append(
+                        `
                             <div class="contain_list">
                                 <div class="role col-2"><img src="../image/ROLE/${rowA.ROLE_IMG}"></div>
                                 <span class="role_name col-2">
@@ -75,8 +75,13 @@ function display() {
                                 </div>
                                 <span class="price col-2">${rowA.PRICE}</span>
                                 <div class="trade_button col-2">
-                                    <button class="buy" onclick="clickPop()">購買</button>
-                                    <button class="change " onclick=clickChange()>交換</button>
+<<<<<<< HEAD
+                                    <button class="buy" onclick="buyingCheck()">購買</button>
+                                    <button class="change " onclick=clickPopp()>交換</button>
+=======
+                                    <button class="buy" onclick="clickBuy(${rowA.PRODUCT_ID})">購買</button>
+                                    <button class="change " onclick=clickChange(${rowA.PRODUCT_ID})>交換</button>
+>>>>>>> Lillian
                                 </div>
                                 <div class="delete col-1">
                                     <button class="delete_btn" onclick= "deleted(${rowA.FAV_ID})"><i class="fas fa-trash-alt"></i></button>
@@ -87,10 +92,10 @@ function display() {
                                 <hr>
                             </span>
                         `
-                        );
-                }else if (rowA.AMOUNT == 0) {
-                  $("#result_off").append(
-                    `
+                    );
+                } else if (rowA.AMOUNT == 0) {
+                    $("#result_off").append(
+                        `
                         <div class="contain_list _off">
                             <div class="role col-2"><img src="../image/ROLE/${rowA.ROLE_IMG}"></div>
                             <span class="role_name col-2">${rowA.RNAME}
@@ -118,53 +123,87 @@ function display() {
                             </div>
                         </div>
                     `
-                  );
-                }      
+                    );
+                }
             })
         }
-    })                      
+    })
 }
 
 
 
 function deleted(clickId) {
     $.ajax({
-      method: "POST",
-      url: "../php/member/delete.php",
-      data: {
-        Id: clickId,
-      },
-      dataType: "text",
-      success: function (response) {
-        if (response == "Y") {
-          $("#result").html("");
-          $("#result_off").html("");
-          display();
-        } else {
-          alert("error");
-        }
-      },
-      error: function (exception) {
-        alert("發生錯誤: " + exception.status);
-      },
+        method: "POST",
+        url: "../php/member/delete.php",
+        data: {
+            Id: clickId,
+        },
+        dataType: "text",
+        success: function (response) {
+            if (response == "Y") {
+                $("#result").html("");
+                $("#result_off").html("");
+                display();
+            } else {
+                alert("error");
+            }
+        },
+        error: function (exception) {
+            alert("發生錯誤: " + exception.status);
+        },
     });
-  }
+}
 
 
 function clickPop() {
-        vmm.$data.pop = true;
-        vmm.$data.buy = true;
-        vmm.$data.success = false;
-        vmm.$data.one = false;
-        vmm.$data.two = false;
-        vmm.$data.three = false;
-        }
+    vmm.$data.pop = true;
+    vmm.$data.buy = true;
+    vmm.$data.success = false;
+    vmm.$data.one = false;
+    vmm.$data.two = false;
+    vmm.$data.three = false;
+}
 
-function clickChange() {
-        vmm.$data.pop = true;
-        vmm.$data.buy = false;
-        vmm.$data.success = false;
-        vmm.$data.one = true;
-        vmm.$data.two = false;
-        vmm.$data.three = false;
+// 點購買
+function clickBuy(product) {
+<<<<<<< HEAD
+    console.log(product);
+    //   vmm.$data.pop = true;
+    //   vmm.$data.buy = true;
+    //   vmm.$data.success = false;
+    //   vmm.$data.one = false;
+    //   vmm.$data.two = false;
+    //   vmm.$data.three = false;
+}
+=======
+        console.log(product);
+          vmm.$data.pop = true;
+          vmm.$data.buy = true;
+          vmm.$data.success = false;
+          vmm.$data.one = false;
+          vmm.$data.two = false;
+          vmm.$data.three = false;
         }
+>>>>>>> Lillian
+
+// 點交換
+function clickChange(product) {
+    console.log(product);
+<<<<<<< HEAD
+    vmm.$data.pop = true;
+    vmm.$data.buy = false;
+    vmm.$data.success = false;
+    vmm.$data.one = true;
+    vmm.$data.two = false;
+    vmm.$data.three = false;
+}
+=======
+  vmm.$data.pop = true;
+  vmm.$data.buy = false;
+  vmm.$data.success = false;
+  vmm.$data.one = true;
+  vmm.$data.two = false;
+  vmm.$data.three = false;
+}
+>>>>>>> Lillian
