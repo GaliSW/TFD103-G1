@@ -38,7 +38,9 @@
             $statement->bindValue(3 , $content);
 
             $statement->execute();
-
+            // echo  $title;
+            // echo $content;
+            // echo $_FILES["file"]["name"];
             //導頁            
             echo "<script>alert('新增成功!'); location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
             

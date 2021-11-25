@@ -664,7 +664,7 @@
                 } else if (content == "停權") {
                     edit.innerHTML = `<select name='editname'><option value='0'>${content}</option><option value='1'>正常</option></select>`;
                 }
-                item.parentNode.innerHTML = `<i class="fas fa-edit memberEdit" onclick="changeMemberAuth(this)"></i>儲存`;
+                item.parentNode.innerHTML = ` <td><button id="memberEdit" onclick="memberAuth(this)">儲存</button></td>`;
 
             } else if (btnName == '儲存') {
 
@@ -678,7 +678,7 @@
                 }
 
                 edit.innerHTML = newFont;
-                item.parentNode.innerHTML = `<i class="fas fa-edit memberEdit" onclick="changeMemberAuth(this)"></i>編輯權限`
+                item.parentNode.innerHTML = ` <td><button id="memberEdit" onclick="memberAuth(this)">編輯權限</button></td>`
                 $.ajax({
                     method: "POST",
                     url: "../php/Manager/updateMemberAuth.php",
@@ -818,7 +818,7 @@
                                     <td>${row.EMAIL}</td>
                                     <td>${row.USER_ID}</td>
                                     <td>${memberAuth}</td>
-                                    <td><i class="fas fa-edit memberEdit" onclick="memberAuth(this)"></i>編輯權限</td>
+                                    <td><button id="memberEdit" onclick="memberAuth(this)">編輯權限</button></td>
                                     <td><p id="searchPoints" onclick="linkToMemberPoints(this)">查詢儲值記錄</p></td>
                                 </tr>
                                 <br>
@@ -832,7 +832,7 @@
                                     <td>${row.EMAIL}</td>
                                     <td>${row.USER_ID}</td>
                                     <td>${memberAuth}</td>
-                                    <td><i class="fas fa-edit memberEdit" onclick="memberAuth(this)"></i>編輯權限</td>
+                                    <td><button id="memberEdit" onclick="memberAuth(this)">編輯權限</button></td>
                                     <td><p id="searchPoints" onclick="linkToMemberPoints(this)">查詢儲值記錄</p></td>
                                 </tr>
                                 <br>
@@ -1130,7 +1130,6 @@
             }
         }
 
-        //文章修改
 
         //刪除角色
         function deleteRole(item) {

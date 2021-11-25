@@ -11,13 +11,13 @@
     <script src="../js/vendor/js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2/vuex.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   
+
 </head>
 
 <body>
     @@include('./header.html')
 
-    
+
     <main class="trading_list">
         <p class="breadcrumb">首頁>會員中心>交易紀錄</p>
         <div class="main_contain">
@@ -25,10 +25,10 @@
             <!-- 上方選單 -->
             <div class="bar col-12">
                 <div class="col-4 trading">
-                    
+
                     <button class="apply_trade" onclick="location.href='./member.html'">
                         <div class="countDeal">
-                        
+
                             <i class="fas fa-list-alt"></i>
                             <p id="countResult" class="_off"></p>
                         </div>申請中交易
@@ -75,8 +75,8 @@
                             <span class="price col-2">購買金額</span>
                             <div class="dropdown col-2" id="app">
                                 <select id="buyFilter" onchange="displayBuy()">
-                                    <option value="t3" >近三個月</option>
-                                    <option value="t6" >近六個月</option>
+                                    <option value="t3">近三個月</option>
+                                    <option value="t6">近六個月</option>
                                     <option value="t9">近九個月</option>
                                     <option value="t12" selected>近一年</option>
                                 </select>
@@ -107,7 +107,7 @@
                             <span class="price col-2">我的角色</span>
                             <div class="dropdown col-2" id="app1">
                                 <select id="buyChangeFilter" onchange="displayBuyCng()">
-                                    <option value="t3" >近三個月</option>
+                                    <option value="t3">近三個月</option>
                                     <option value="t6">近六個月</option>
                                     <option value="t9">近九個月</option>
                                     <option value="t12" selected>近一年</option>
@@ -140,7 +140,7 @@
                             <span class="price col-2">販售金額</span>
                             <div class="dropdown col-2" id="app2">
                                 <select id="saleFilter" onchange="displaySale()">
-                                    <option value="t3" > 近三個月</option>
+                                    <option value="t3"> 近三個月</option>
                                     <option value="t6">近六個月</option>
                                     <option value="t9">近九個月</option>
                                     <option value="t12" selected>近一年</option>
@@ -169,15 +169,15 @@
                             <span class="method col-2">交易方式</span>
                             <span class="price col-2">交換角色</span>
                             <div class="dropdown col-2" id="app3">
-                                <select id="saleChangeFilter" >
-                                    <option value="t3" >近三個月</option>
+                                <select id="saleChangeFilter">
+                                    <option value="t3">近三個月</option>
                                     <option value="t6">近六個月</option>
                                     <option value="t9">近九個月</option>
                                     <option value="t12" selected>近一年</option>
                                 </select>
                             </div>
                         </div>
-                        
+
                         <!-- php回傳這 賣家交換-->
                         <div id="result_sale_change">
 
@@ -201,16 +201,27 @@
 
     </main>
 
+    <div class="upup">
+        <i class="fas fa-arrow-circle-up totop"></i>
+    </div>
+
+
     @@include('./footer.html')
 
     <script src="../js/member/trading_list.js"></script>
 
 
 
+    <script src="../js/news/news_in.js"></script> 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
+    <script src="../js/header/header.js"></script>
     <script>
-        window.onload = displayBuy();
+        window.onload = function () {
+            status();
+            displayBuy();
+        }
+
     </script>
 
 </body>

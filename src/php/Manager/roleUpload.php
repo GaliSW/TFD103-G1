@@ -53,13 +53,12 @@
             $statement->execute();
 
             //導頁            
-            // echo "<script>alert('新增成功!'); location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
-            echo "Y";
+            echo "<script>alert('新增成功!'); location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
             
 
         }else{
 
-            // echo "<script>alert('拷貝/移動上傳圖片失敗!'); location.href = location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+            echo "<script>alert('拷貝/移動上傳圖片失敗!'); location.href = location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
             echo "N";
             
         }

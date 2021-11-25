@@ -15,6 +15,7 @@
     <script>
 
         window.onload = function getproductname() {
+            status();
             callProductInfo();
             setTimeout(function () {
                 myFavStatus();
@@ -107,23 +108,28 @@
                     let title = response[0][12];
                     let img = response[0][14];
                     let content = response[0][16];
+                    let trans = response[0].TRANS;
                     let PRODUCT_ID = response[0].PRODUCT_ID;
                     let block_product = document.getElementById("flexContainer");
                     let str = `
                     <div class="items -left" id="username" name="${username}">
                         <div class="imgBlock" id="iimgBlock" name='${PRODUCT_ID}'>
-                            <img id='${PRODUCT_ID}' src="../image/product/${img}">
+<<<<<<< HEAD
+                            <img id='${PRODUCT_ID}' src="../image/ROLE/${img}">
+=======
+                            <img id='${PRODUCT_ID}' src="../image/ROLE${img}">
+>>>>>>> Gary
                         </div>
                     </div>
                     <div class="items -right">
-                        <h1 class="title1">${title}</h1>
+                        <h1 class="title1" id="title1">${title}</h1>
                         <p class="introduce">${content}</p>
                         <p class="price">$${price}E</p>
 
                         <div class="collectForm">
                             <div class="btnBlock1">
                                 <button type="${gachaid}" class="collectBtn" name="button" id="myfav" onclick="myfav()"><i class="fas fa-heart"></i>收藏</button>
-                                <button type="button" class="changeBtn" name="button" onclick="clickStatus()">交換</button>
+                                <button type="button" id="changeBtn" class="changeBtn" name="button" onclick="clickStatus()">交換</button>
                             </div>
                         </div>
 
@@ -134,6 +140,16 @@
                     </div>
                     `;
                     block_product.innerHTML = str;
+
+                    // 判斷是否開啟交換
+
+                    let changeBtn = document.getElementById("changeBtn");
+                    console.log(trans);
+                    if(trans == 0){
+                        changeBtn.classList.add('none');
+                    }else{
+                        changeBtn.classList.remove('none');
+                    }
                 },
                 error: function (exception) {
                     alert("發生錯誤: " + exception.status);
@@ -152,18 +168,16 @@
                 },
                 dataType: "text",
                 success: function (response) {
-
                     console.log(btn);
                     if (response == "YY") {
                         btn.style.background = "rgba(96, 205, 144, 1)";
                         btn.style.color = "rgba(14, 52, 97, 1)";
-                        btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
+                        btn.style.boder = "3px solid rgba(14, 52, 97, 1)";
                         btn.innerText = "已收藏";
                     } else if (response == "YN") {
                         btn.style.background = "rgba(14, 52, 97, 1)";
                         btn.style.color = "rgba(96, 205, 144, 1)";
-                        btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
-                        btn.innerText = "收藏";
+                        btn.style.boder = "3px solid rgba(14, 52, 97, 1)";
                     }
                 }
             });
@@ -199,6 +213,48 @@
                 </div>
             </section>
         </div>
+
+                <!-- 收藏成功alert -->
+
+                <div id="myfavBlk" class="toGachaBlk none">
+                    <section class="toGachaHintmaskLayer">
+                        <div class="toGachaPopUpBox">
+                            <div onclick="popCloseX(this)" class="toGachaCloseBtn">
+                                x
+                            </div>
+                            <div class="toGachaPopContent">
+                                <p>
+                                    <i class="far fa-user-circle"></i>&nbsp;您已成功收藏
+                                </p>
+                            </div>
+                            <div class="toGachaConfirmBlk">
+                                <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- 取消收藏alert -->
+
+                <div id="cancelmyfavBlk" class="toGachaBlk none">
+                    <section class="toGachaHintmaskLayer">
+                        <div class="toGachaPopUpBox">
+                            <div onclick="popCloseX(this)" class="toGachaCloseBtn">
+                                x
+                            </div>
+                            <div class="toGachaPopContent">
+                                <p>
+                                    <i class="far fa-user-circle"></i>&nbsp;您已取消收藏
+                                </p>
+                            </div>
+                            <div class="toGachaConfirmBlk">
+                                <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+        
 
 
         <!-- 未登入alert -->
@@ -288,7 +344,7 @@
         </div>
 
 
-
+        <!-- 交換視窗 -->
 
         <section class="sec1">
             <div class="flexContainer" id="flexContainer">
@@ -325,37 +381,36 @@
                             <div class="popContent13">
                                 <p>確認你想要交換的角色</p>
                             </div>
+                            <div class="roleArea">
+                                <div class="myRoleBlock">
+                                    <div class="myRoleP">
+                                        <p>我的角色</p>
+                                    </div>
 
-                            <div class="myRoleBlock">
-                                <div class="myRoleP">
-                                    <p>我的角色</p>
+                                    <div class="myRoleImg">
+                                        <img id="myRoleImg1" src="../dist/images/product/change/change1.png">
+                                    </div>
+
+                                    <div class="myRoleNameBlock">
+                                        <p id="myRoleName1">小烏龜</p>
+                                    </div>
                                 </div>
 
-                                <div class="myRoleImg">
-                                    <img id="myRoleImg1" src="../dist/images/product/change/change1.png">
-                                </div>
+                                <div class="doubleArrow"><i class="fas fa-arrows-alt-h"></i></div>
 
-                                <div class="myRoleNameBlock">
-                                    <p id="myRoleName1">小烏龜</p>
-                                </div>
+                                <div class="yourRoleBlock">
+                                    <div class="yourRoleP">
+                                        <p>對方角色</p>
+                                    </div>
+
+                                    <div class="yourRoleImg">
+                                        <img id="yourRoleImg1" src="../dist/images/product/change/change2.png">
+                                    </div>    
+                                    <div class="yourRoleNameBlock">
+                                        <p id="yourRoleName1">羊咩咩</p>
+                                    </div>
+                                </div>    
                             </div>
-
-                            <div class="doubleArrow"><i class="fas fa-arrows-alt-h"></i></div>
-
-                            <div class="yourRoleBlock">
-                                <div class="yourRoleP">
-                                    <p>對方角色</p>
-                                </div>
-
-                                <div class="yourRoleImg">
-                                    <img id="yourRoleImg1" src="../dist/images/product/change/change2.png">
-                                </div>
-
-                                <div class="yourRoleNameBlock">
-                                    <p>羊咩咩</p>
-                                </div>
-                            </div>
-
                             <div class="confirmBlk13">
                                 <button href="#" class="confirmBtnBack13" @click=toBack()>返回</button>
                                 <button href="#" class="confirmBtn13" onclick="toThree()">確定</button>
@@ -368,7 +423,7 @@
                                 x
                             </div>
                             <div class="popContent14">
-                                <p>已送出交換申請，請靜候佳音！</p>
+                                <p class="sendP">已送出交換申請</br>請靜候佳音！</p>
                             </div>
 
                         </div>
@@ -424,6 +479,11 @@
             </table>
 
         </div>
+
+        <div class="upup">
+            <i class="fas fa-arrow-circle-up totop"></i>
+        </div>
+    
 
     </main>
     @@include('./footer.html')
@@ -570,7 +630,6 @@
                     let roleList1Mark = document.getElementById('roleList1Mark');
                     roleList1Mark.innerHTML = "";
 
-
                     $.each(response, function (index, row) {
                         let str = `<li onclick=toTwo(this)>
                                             <div class="imgBlock1Mark" id="imgBlock1Mark" name="${row.GACHA_ID}">
@@ -626,7 +685,7 @@
             myRoleName.innerText = imgName;
             //console.log(imgName);
 
-            //////////// 我的角色圖片
+            //////////// 你的角色圖片
 
             let imgBlock = document.getElementsByClassName("imgBlock")[0];
             //console.log(imgBlock);
@@ -635,8 +694,9 @@
             yourImgSrc = yourImg.attributes['src'].value;
             let yourRoleImg1 = document.getElementById('yourRoleImg1');
             yourRoleImg1.attributes['src'].value = yourImgSrc;
-
-
+            let name = document.getElementById("title1").innerText;
+            let yourname = document.getElementById('yourRoleName1');
+            yourname.innerText = name;
         }
 
         function toThree() {
@@ -761,14 +821,12 @@
                 dataType: "text",
                 success: function (response) {
                     if (response == "N") {
-                        let selfBlk = document.getElementById('selfBlk');
-                        selfBlk.classList.remove('none');
                     } else {
                         return false;
                     }
                 }
             });
-
+            
             $.ajax({
                 method: "POST",
                 url: "../php/product/loadMyFav.php",
@@ -779,19 +837,23 @@
                 success: function (response) {
                     let btn = document.getElementById('myfav');
                     if (response == "YN") {
+                        let tomyfavBtn = document.getElementById('myfavBlk');
+                        tomyfavBtn.classList.remove('none');
                         insertMyfav();
                         btn.style.background = "rgba(96, 205, 144, 1)";
                         btn.style.color = "rgba(14, 52, 97, 1)";
-                        btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
+                        btn.style.boder = "3px solid rgba(14, 52, 97, 1)";
                         btn.innerText = "已收藏";
                     } else if (response == "N") {
-                        alert('N');
-                        // document.getElementById('tologinBlk').remove('none');
+                        let tologinBtn = document.getElementById('tologinBlk');
+                        tologinBtn.classList.remove('none');
                     } else if (response == "YY") {
+                        let cancelmyfavBtn = document.getElementById('cancelmyfavBlk');
+                        cancelmyfavBtn.classList.remove('none');
                         deletemyfav(productid);
                         btn.style.background = "rgba(14, 52, 97, 1)";
                         btn.style.color = "rgba(96, 205, 144, 1)";
-                        btn.style.boder = "1px solid rgba(14, 52, 97, 1)";
+                        btn.style.boder = "3px solid rgba(96, 205, 144, 1)";
                         btn.innerText = "收藏";
                     }
                 }
@@ -810,7 +872,8 @@
                 success: function (response) {
                     let btnName = document.getElementById('myfav').innerText;
                     btnName.innerText = "已收藏";
-                    document.getElementById('buyBlk').remove('none');
+                    
+                    // document.getElementById('buyBlk').remove('none');
                 },
                 error: function (exception) {
                     alert("數據載入失敗: " + exception.status);
@@ -868,24 +931,11 @@
     </script>
 
     <script src="../js/gacha/chart.js"></script>
+    <script src="../js/header/header.js"></script>
 
-    <div id="buyBlk" class="toGachaBlk none">
-        <section class="buyHintmaskLayer">
-            <div class="buyPopUpBox">
-                <div onclick="popCloseX(this)" class="buyCloseBtn">
-                    x
-                </div>
-                <div class="buyPopContent">
-                    <p>
-                        <i class="far fa-user-circle"></i>&nbsp;收藏成功!
-                    </p>
-                </div>
-                <div class="buyConfirmBlk">
-                    <button class="bonusConfirmBtn" onclick="popClose(this)">我知道了</button>
-                </div>
-            </div>
-        </section>
-    </div>
+
+    <script src="../js/news/news_in.js"></script> 
+
 </body>
 
 </html>

@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>entry</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="../js/header/entry.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 
@@ -14,10 +17,16 @@
     <div class="entry">
         <div class="entrybg">
             <div class="contentBox">
+                <!-- logo -->
                 <div class="logoTitle">
                     <img src="../image/index/logo.png">
                 </div>
-
+                <!-- 放大 -->
+                <div class="boxS">
+                    <img src="../image/index/car06.png" class="pic1">
+                    <img src="../image/index/car02.png" class="pic2">
+                </div>
+            
                 <div class="frontSide">
                     <a href="../html/index.html">
                         <h1>前台</h1>
@@ -29,22 +38,102 @@
                         <h1>後台</h1>
                     </a>
                 </div>
+                
 
-                <div class="word">
-                    <p>
-                        Hello! <br>
-                        Welcome to 怪哩怪汽
-                    </p>
+                <!-- 代表我們六人-->
+                <!-- 左邊三隻 -->
+                <div class="left_sidebar RoleF">
+                    <button type="button" class="btn_drawer btDL">
+                        <div class="RoleLeft animate__animated animate__wobble">
+                            <img src="../image/index/role08.png">
+                        </div>
+                    </button>
+                    <div class="sidebar">
+                        <div class="bon">
+                            <h3>楊<br>上<br>緯</h3>
+                            <img src="../image/index/Gary.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="left_sidebar2 RoleF2">
+                    <button type="button" class="btn_drawer btDL2">
+                        <div class="RoleLeft2 animate__animated animate__bounce animate__delay-2s">
+                            <img src="../image/index/role01.png">
+                        </div>
+                    </button>
+                    <div class="sidebar2">
+                        <div class="bon">
+                            <h3>呂<br>毓<br>綺</h3>
+                            <img src="../image/index/Calista.png">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="roleLeft">
-                    <img src="../image/index/role01.png">
+                <div class="left_sidebar3 RoleF3">
+                    <button type="button" class="btn_drawer btDL3">
+                        <div class="RoleLeft3 animate__animated animate__wobble animate__delay-4s">
+                            <img src="../image/index/role03.png">
+                        </div>
+                    </button>
+                    <div class="sidebar3">
+                        <div class="bon">
+                            <h3>洪<br>鈺<br>堂</h3>
+                            <img src="../image/index/Yutang.png">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右邊三隻 -->
+                <div class="right_sidebar RoleR">
+                    <button type="button" class="btn_drawer btD">
+                        <div class="RoleRight animate__animated animate__bounce animate__delay-3s">
+                            <img src="../image/index/role05.png">
+                        </div>
+                    </button>
+                    <div class="sidebar4">
+                        <div class="bon">
+                            <h3>邱<br>玄</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right_sidebar RoleR2">
+                    <button type="button" class="btn_drawer btD2">
+                        <div class="RoleRight2 animate__animated animate__wobble animate__delay-5s">
+                            <img src="../image/index/role04.png">
+                        </div>
+                    </button>
+                    <div class="sidebar5">
+                        <div class="bon">
+                            <img src="../image/index/Zhi.png">
+                            <h3>黃<br>智<br>祥</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right_sidebar3 RoleR3">
+                    <button type="button" class="btn_drawer btD3">
+                        <div class="RoleRight3 animate__animated animate__bounce animate__delay-1s">
+                            <img src="../image/index/role06.png">
+                        </div>
+                    </button>
+                    <div class="sidebar6">
+                        <div class="bon">
+                            <img src="../image/index/Lillian.png">
+                            <h3>闕<br>妤<br>臻</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div> 
+    <div class="upup">
+        <i class="fas fa-arrow-circle-up totop"></i>
     </div>
+    <script src="../js/news/news_in.js"></script> 
 
-    <!-- no footer -->
+
 </body>
+
 
 </html>
