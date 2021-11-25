@@ -8,6 +8,12 @@ main.collection {
     min-height: 100vh;
     box-sizing: border-box;
     margin-top: 90px;
+    @include pad_small{
+        margin-top: 70px;
+    }
+    @include phone{
+        margin-top: 70px;
+    }
 
     .container {
         max-width: 1200px;

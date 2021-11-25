@@ -128,7 +128,7 @@
 #header {
   width: 100vw;
   height: 90px;
-  z-index: 1000;
+  z-index: 800;
   position: fixed;
   top: 0;
   -webkit-box-shadow: 0px 5px 5px 0px #3bb6d2;
@@ -954,6 +954,18 @@ main.collection {
   margin-top: 90px;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  main.collection {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  main.collection {
+    margin-top: 70px;
+  }
+}
+
 main.collection .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -1687,10 +1699,25 @@ main.deposit {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../src/image/deposit/back.jpg);
+<<<<<<< HEAD
   margin: 0;
+=======
+>>>>>>> Calista
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-top: 90px;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  main.deposit {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  main.deposit {
+    margin-top: 70px;
+  }
 }
 
 main.deposit div.container {
@@ -2999,6 +3026,7 @@ body {
   0% {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
+<<<<<<< HEAD
   }
   50% {
     -webkit-transform: scale(1.5);
@@ -3026,6 +3054,35 @@ body {
   }
   100% {
     -webkit-transform: translateY(100px);
+=======
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  51% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+@-webkit-keyframes drop {
+  0% {
+    -webkit-transform: scale(0.7);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+  51% {
+    -webkit-transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+>>>>>>> Calista
   }
 }
 
@@ -6801,6 +6858,18 @@ main.login {
   margin-top: 90px;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  main.login {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  main.login {
+    margin-top: 70px;
+  }
+}
+
 main.login div.contain {
   margin: 0 auto;
   display: -webkit-box;
@@ -7841,6 +7910,18 @@ main.member {
   margin: 0;
   margin-top: 90px;
   min-height: 100vh;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  main.member {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  main.member {
+    margin-top: 70px;
+  }
 }
 
 main.member .main_contain {
@@ -10319,6 +10400,18 @@ main.member_info section.popShow {
   margin: 90px 0 0 0;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock {
+    margin-top: 70px;
+  }
+}
+
 .allBlock .p {
   font-size: 16px;
   color: #10c5b1;
@@ -11346,6 +11439,18 @@ main.signup {
   margin-top: 90px;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  main.signup {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  main.signup {
+    margin-top: 70px;
+  }
+}
+
 main.signup .contain {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -11722,6 +11827,18 @@ main.signup .verify_contain div.verify .falseVerify {
   background-position: 0px 0px;
   margin: 90px 0 0 0;
   padding: 0;
+}
+
+@media (min-width: 414px) and (max-width: 577.98px) {
+  .allBlock1 {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .allBlock1 {
+    margin-top: 70px;
+  }
 }
 
 .allBlock1 .p {
