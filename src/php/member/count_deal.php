@@ -4,7 +4,7 @@
     include "../connection.php";
 
     $sql = "select 
-        *
+        count(*)
         from BYCHECK T1
         left join PRODUCT T2
         on T1.FK_PRODUCT_ID = T2.PRODUCT_ID
@@ -17,7 +17,10 @@
     $statement->execute();
     
     $data = $statement->fetchAll();
-    if(count($data)> 0){
-        echo count($data);
+foreach ($data as $index => $row) {
+    if($row["count(*)"] > 0){
+        echo $row["count(*)"];
     }
+      
+}
 

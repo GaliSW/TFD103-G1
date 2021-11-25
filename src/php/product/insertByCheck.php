@@ -2,17 +2,18 @@
 // $FK_USERNAME_BUY = $_POST["FK_USERNAME_BUY"];
 $FK_PRODUCT_ID = $_POST["FK_PRODUCT_ID"];
 $FK_GACHA_ID_BUY = $_POST["FK_GACHA_ID_BUY"];
-echo $FK_GACHA_ID_BUY;
+// echo $FK_GACHA_ID_BUY;
+
 
 include "../connection.php";  
 include "../Manager.php";
-
+// echo getSession();
 //ho建立SQL 
 
         $sql = "INSERT INTO BYCHECK (FK_USERNAME_BUY, FK_PRODUCT_ID, FK_GACHA_ID_BUY, CHANGEDATE)
                 VALUES(?, ?, ?, NOW());
                 UPDATE GACHA 
-                SET STATUS = 0, GACHA_ID = ?;
+                SET STATUS = 0 WHERE GACHA_ID = ?;
                 ";
 
 

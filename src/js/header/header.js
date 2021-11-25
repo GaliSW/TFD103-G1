@@ -23,18 +23,33 @@ function balance() {
 
 //申請中訊息提示
 function countDeal() {
-    $("#headerCountResult").html("");
     $.ajax({
-        url: "../php/member/count_deal.php",
+        method: "POST",
+        url: "../php/LoginCheck.php",
         data: {},
-        dataType: "json",
-        success: (response) => {
-            if (response > 0) {
-                $("#headerCountResult").append(response);
-                $("#headerCountResult").removeClass("_off");
-            } else if (response == "") {
-                $("#headerCountResult").append(response);
-                $("#headerCountResult").removeClass("_off");
+        dataType: "text",
+        success: function (response) {
+            if (response == "") {
+                // 沒有登入
+                $("#headerCountResult").html("");
+            } else if (response == "true") {
+                countDeal();
+                $.ajax({
+                    url: "../php/member/count_deal.php",
+                    data: {},
+                    dataType: "json",
+                    success: (response) => {
+                        if (response > 0) {
+                            $("#headerCountResult").html("");
+                            $("#headerCountResult").append(response);
+                            $("#headerCountResult").removeClass("_off");
+                        } else if (response == "") {
+                            $("#headerCountResult").html("");
+                            $("#headerCountResult").append(response);
+                            $("#headerCountResult").removeClass("_off");
+                        }
+                    }
+                });
             }
         }
     });

@@ -138,7 +138,7 @@ if ($Filters == "t3") {
         && CHANGEDATE BETWEEN (now() - interval 365 DAY) AND now()
         order by BYCHECK_ID desc
         ;";      
-}
+};
 
 
 
@@ -149,10 +149,7 @@ $statement = $pdo->query($sql);
 // $statement->bindValue(1, $Name);
 $statement->execute();
 // $statement = getPDO("g1")->query($sql);
-
 //抓出全部且依照順序封裝成一個二維陣列
 $data = $statement->fetchAll();
-
-
 echo json_encode($data);
 ?>
