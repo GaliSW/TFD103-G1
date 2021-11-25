@@ -9264,6 +9264,11 @@ main.member_info section.popShow {
   margin: 90px 0 0 0;
 }
 
+.allBlock .p {
+  font-size: 16px;
+  color: #10c5b1;
+}
+
 .allBlock .sec1 {
   padding-top: 100px;
 }
@@ -10593,6 +10598,11 @@ main.signup .verify_contain div.verify .falseVerify {
   padding: 0;
 }
 
+.allBlock1 .p {
+  font-size: 16px;
+  color: #10c5b1;
+}
+
 .allBlock1 .roleRanksection h1 {
   color: #fff;
   text-align: center;
@@ -11504,7 +11514,6 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .ymainy .lower {
-  border: 1px solid red;
   display: flex;
   justify-content: flex-end;
   align-content: center;
