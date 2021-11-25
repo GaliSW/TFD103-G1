@@ -6,7 +6,7 @@ function gachaScreen(img) {
         let p1 = new Ping();
         p1.init("#ul", 3, img);
     }, 5000);
-    var tl = gsap.timeline();
+    gsap.restrat();
     //web
     gsap.fromTo('.ball', {
         x: -100,
