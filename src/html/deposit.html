@@ -38,16 +38,16 @@
                     </a>
                 </ul>
             </nav>
-    
+
             <!-- phone nav-->
             <nav class="hamburger">
                 <div id="menuToggle">
                     <input type="checkbox" />
-    
+
                     <span></span>
                     <span></span>
                     <span></span>
-    
+
                     <ul id="headerMenu">
                         <a href="../html/index.html"><img src="../image/index/logo.png"></a>
                         <a href="../html/Intro.html">
@@ -69,7 +69,7 @@
                 </div>
             </nav>
             <!-- phone nav end -->
-    
+
             <div class="icon">
                 <botton type="button" class="button bt disappear" id="appear1">
                     <a href="../html/deposit.html"><i class="fas fa-coins fa-2x"></i></a>
@@ -103,23 +103,23 @@
                 目前點數: <p id="result">0</p> E
             </div>
             <form id="app" class="col-10" action="../php/member/Credit_CreateOrder.php" method="post">
-                
-                    <button v-for="card in cards" name="total" :value=card.value>
-                        <!-- <a href="./deposit_pay.html"> -->
-                        <div class="point">
-                            <span>{{card.value}}點券</span>
-                        </div>
-                        <div class="photo">
-                            <img :src=card.imgUrl alt="">
-                            <span>以NT{{card.value}}購買</span>
-                        </div>
-                        <!-- </a> -->
-                    
-                    </button>
-                </form>
-                
 
-            
+                <button v-for="card in cards" name="total" :value=card.value>
+                    <!-- <a href="./deposit_pay.html"> -->
+                    <div class="point">
+                        <span>{{card.value}}點券</span>
+                    </div>
+                    <div class="photo">
+                        <img :src=card.imgUrl alt="">
+                        <span>以NT{{card.value}}購買</span>
+                    </div>
+                    <!-- </a> -->
+
+                </button>
+            </form>
+
+
+
         </div>
 
 
@@ -151,12 +151,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/member/dsposit.js"></script>
-    <script src="../js/news/news_in.js"></script> 
+    <script src="../js/news/news_in.js"></script>
+    <script src="../js/header/header.js"></script>
 
     <script>
         window.onload = function () {
             status();
-            balance();
+            Balance();
         }
 
     </script>

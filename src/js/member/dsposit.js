@@ -62,15 +62,15 @@ let vm = new Vue({
 
 
 
-function balance(){
+function Balance() {
   $.ajax({
     url: "../php/member/balance.php",
     data: {},
     dataType: "json",
-    method:"post",
+    method: "post",
     success: function (response) {
       $("#result").html("0");
-      if(response > 0){
+      if (response > 0) {
         $("#result").html(response);
       }
     },
