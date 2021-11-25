@@ -128,7 +128,7 @@
 #header {
   width: 100vw;
   height: 90px;
-  z-index: 100;
+  z-index: 1000;
   position: fixed;
   top: 0;
   -webkit-box-shadow: 0px 5px 5px 0px #3bb6d2;
@@ -361,6 +361,10 @@
   margin-right: 10px;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
+}
+
+#header .navbar ul a .Change {
+  color: #9dfdc8;
 }
 
 #header .hamburger {
