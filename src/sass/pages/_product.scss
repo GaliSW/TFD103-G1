@@ -3,6 +3,7 @@
 }
 
 
+
 .allBlock {
     background-image: url("../src/image/trade/background.png");
     background-repeat: no-repeat;
@@ -23,11 +24,11 @@
             @include center;
 
             @include desktop_small {
-                width: 100%;
+                width: 730px;
             }
 
             @include pad {
-                width: 100%;
+                width: 500px;
                 flex-direction: column;
 
             }
@@ -49,15 +50,37 @@
 
 
             .items.-left {
-                //@include border;
+                //border: 1px solid deeppink;
                 flex-basis: 300px;
                 flex-shrink: 0;
                 font-size: 0;
                 width: 100%;
 
+                @media (max-width: 823px){
+                    flex-basis: 250px;
+                }
+
+                @include pad{
+                    flex-basis: 180px;
+                }
+
+
                 .imgBlock {
                     width: 300px;
                     height: 300px;
+
+                    @media (max-width: 823px){
+                        width: 250px;
+                        height: 250px;
+                    }
+
+
+
+                    @media (max-width: 768px){
+                        width: 180px;
+                        height: 180px;
+                        margin: 0 auto;
+                    }
 
                     img {
                         width: 100%;
@@ -69,32 +92,59 @@
             }
 
             .items.-right {
-                //@include border;
+                //border: 1px solid yellowgreen;
                 flex-grow: 1;
                 font-size: 20px;
                 padding-left: 50px;
                 color: #fff;
 
+                @media (max-width: 768px){
+                    text-align: center;
+                    padding-left: 0px;
+                }
+
+
+
                 .title1 {
                     margin-top: 15px;
                     margin-bottom: 30px;
+
+                    @media (max-width: 768px){
+                        text-align: center;
+                    }
+    
                 }
 
+
+
                 .introduce {
+                    //border: 1px solid deepskyblue;
                     margin-bottom: 30px;
-                }
+                    width:80%;
+
+                    @media (max-width: 768px){
+                        margin: 0 auto 30px;
+                    }
+                    }
+
+                    
+
+
 
                 .price,
                 .buyForm {
                     display: inline-block;
                     //border: 1px solid red;
                     margin-bottom: 30px;
+
+                    @media (max-width: 412px){
+                        display: block;
+                    }
+
+
+
                 }
 
-                .price {
-                    //border: 1px solid red;
-                    margin-bottom: 30px;
-                }
 
 
 
@@ -103,27 +153,49 @@
                     display: inline-block;
                     //border: 1px solid blue;
                     margin-bottom: 35px;
+
+                    @media (max-width: 768px){
+                        display: block;
                 }
+            }
 
                 .price {
                     margin-left: 50px;
+                    //border: 1px solid red;
+                    margin-bottom: 30px;
+
+                    @media (max-width: 768px){
+                        margin: 0 auto 30px;
+
+                    }
+
                 }
 
                 .collectForm {
                     margin-left: 70px;
+                    @media (max-width: 768px){
+                        margin-left: 0px;
 
+                    }
 
+                    .btnBlock1{
+                        //border: 1px solid palegoldenrod;
+                        width: 180px;
+                    
+                        @media (max-width: 768px){
+                        margin: 0 auto;
+                        }
 
                     .collectBtn {
-                        @include btn_blur (70px, 5px);
+                        @include btn_blur (70px, 5px)  ;
                         border-radius: 10px;
 
                         &:hover {
-                            @include btn_on (70px, 5px)
+                            @include btn_on (70px, 5px);
                         }
 
                         &:hover {
-                            cursor: pointer
+                            cursor: pointer;
                         }
                     }
 
@@ -140,6 +212,7 @@
                         &:hover {
                             cursor: pointer
                         }
+                    }
                     }
                 }
 
@@ -178,14 +251,14 @@
         width: 500px;
         height: 500px;
         padding: 15px;
+        border: 3px solid #d8b236;
+        border-radius: 20px;
 
-        @include phone {
-            width: 100%;
+        @media(max-width: 600px){
+            width: 80%;
+            height: 80%;
         }
 
-        @include phone_small {
-            width: 100%;
-        }
     }
 
     //能力值
@@ -201,22 +274,35 @@
             width: 600px;
             height: 500px;
 
-            @include pad_small {
-                width: 100%;
+            @media (max-width: 729px) {
+                width: 500px;
+                height: 400px;
             }
 
-            @include phone {
-                width: 100%;
+            @media (max-width: 578px) {
+                width: 400px;
+                height: 300px;
             }
 
-            @include phone_small {
-                width: 100%;
+            @media (max-width: 460px) {
+                width: 360px;
+                height: 300px;
             }
+
+
 
             th,
             td {
                 border: 2px solid #fff;
                 text-align: center;
+                @media (max-width: 585px) {
+                    font-size: $fontSize;
+                }
+    
+                @media (max-width: 460px) {
+                    font-size: $fontSizeSmall;
+                }
+    
             }
         }
 

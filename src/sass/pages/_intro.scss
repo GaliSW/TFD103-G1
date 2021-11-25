@@ -99,19 +99,18 @@
     }
     .title{
       text-align:center;
-      line-height: 50px;
-      padding-top:20px;
     }    
         a{
           text-decoration: none;
           color:$tiffiny_green;
           }
         h3{
+          margin: 20px 0;
           font-size: $fontSizeH3;
         }  
         p{
           font-size:$fontSize;
-          line-height: 25px;
+          // text-align: left;
         }
 
 
