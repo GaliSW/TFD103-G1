@@ -12,7 +12,7 @@ echo $TRANS;
 echo $STATUS;
 //ho建立SQL 
       $sql = "INSERT INTO PRODUCT(FK_USERNAME, PRICE, TRANS, AMOUNT, ISSHOW, FK_GACHA_ID) VALUES (?, ?, ?, 1, 1, ?);
-            UPDATE GACHA SET STATUS = (?) WHERE GACHA_ID = $GACHA_ID";
+            UPDATE GACHA SET STATUS = ? WHERE GACHA_ID = ?";
        //執行
 
       $statement = $pdo->prepare($sql);
@@ -21,6 +21,8 @@ echo $STATUS;
       $statement->bindValue(3 , $TRANS);
       $statement->bindValue(4, $GACHA_ID);  
       $statement->bindValue(5, $STATUS);
+      $statement->bindValue(6, $GACHA_ID);
+
 
       $statement->execute();
       echo 'y';
