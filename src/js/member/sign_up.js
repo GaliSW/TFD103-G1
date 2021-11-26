@@ -140,7 +140,7 @@ function send(em, num) {
     Body: `您的驗證碼為: ${num} ，請點擊網址驗證。
           https://tibamef2e.com/tfd103/g1/TFD103-G1/src/verify.html"`
   })
-    .then(
-      message => alert(message)
-    );
+    // .then(
+    //   message => alert(message)
+    // );
 }
