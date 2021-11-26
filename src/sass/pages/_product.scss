@@ -10,11 +10,11 @@
     background-attachment: fixed;
     background-position: 0px 0px;
     margin: 90px 0 0 0;
-    @include pad_small{
-        margin-top: 70px;
-    }
-    @include phone{
-        margin-top: 70px;
+
+
+    @media (max-width: 768px){
+        margin: 70px 0 0 0;
+
     }
 
     .p{
