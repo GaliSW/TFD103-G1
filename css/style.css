@@ -1867,6 +1867,18 @@ main.deposit {
   margin-top: 90px;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  main.deposit {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  main.deposit {
+    margin-top: 70px;
+  }
+}
+
 main.deposit a {
   text-decoration: none;
 }
@@ -8604,6 +8616,18 @@ main.trading_list {
   margin-top: 90px;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  main.trading_list {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  main.trading_list {
+    margin-top: 70px;
+  }
+}
+
 main.trading_list .main_contain {
   margin: 0 auto;
   width: 95%;
@@ -8917,6 +8941,18 @@ main.points_list {
   margin-top: 90px;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  main.points_list {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  main.points_list {
+    margin-top: 70px;
+  }
+}
+
 main.points_list .main_contain {
   max-width: 1200px;
   margin: 0 auto;
@@ -9190,6 +9226,18 @@ main.member_info {
   margin-top: 90px;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  main.member_info {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  main.member_info {
+    margin-top: 70px;
+  }
+}
+
 main.member_info .main_contain {
   max-width: 1200px;
   margin: 0 auto;
@@ -9353,7 +9401,7 @@ main.member_info div.bar button._on {
 }
 
 @media (max-width: 577.98px) {
-  main.member_info div.bar .button {
+  main.member_info div.bar button {
     font-size: 14px;
   }
 }

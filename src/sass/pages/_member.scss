@@ -10,10 +10,12 @@ main.member {
     margin: 0;
     margin-top: 90px;
     min-height: 100vh;
-    @include pad_small{
+
+    @include pad_small {
         margin-top: 70px;
     }
-    @include phone{
+
+    @include phone {
         margin-top: 70px;
     }
 
@@ -556,6 +558,15 @@ main.trading_list {
     box-sizing: border-box;
     margin-top: 90px;
 
+    @include pad_small {
+        margin-top: 70px;
+    }
+
+    @include phone {
+        margin-top: 70px;
+    }
+
+
     .main_contain {
 
         @include center;
@@ -835,6 +846,15 @@ main.points_list {
     box-sizing: border-box;
     margin-top: 90px;
 
+    @include pad_small {
+        margin-top: 70px;
+    }
+
+    @include phone {
+        margin-top: 70px;
+    }
+
+
 
     .main_contain {
         max-width: 1200px;
@@ -1074,6 +1094,15 @@ main.member_info {
     box-sizing: border-box;
     margin-top: 90px;
 
+    @include pad_small {
+        margin-top: 70px;
+    }
+
+    @include phone {
+        margin-top: 70px;
+    }
+
+
     .main_contain {
         max-width: 1200px;
         @include center;
@@ -1192,7 +1221,7 @@ main.member_info {
         }
 
         @media (max-width: 577.98px) {
-            .button {
+            button {
                 font-size: 14px;
             }
         }
