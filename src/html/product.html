@@ -92,6 +92,9 @@
 
         function owner (username){
             let sellerName = username;
+            let myfavBtn = document.getElementById("myfav");
+            let changeBtn = document.getElementById("changeBtn");
+            let buyBtn = document.getElementById("buyBtn");
             $.ajax({
                 method: "POST",
                 url: "../php/product/getBuyer.php",
@@ -99,6 +102,20 @@
                 dataType: "text",
                 success: function (response) {
                     console.log(response);
+                    // 買家賣家不同人
+                    if(sellerName == response){
+                        myfavBtn.disabled = true;
+                        changeBtn.disabled = true;
+                        buyBtn.disabled = true;
+                        myfavBtn.style.opacity = ".4";
+                        changeBtn.style.opacity = ".4";
+                        buyBtn.style.opacity = ".4";
+                    }else{
+                        myfavBtn.disabled = false;
+                        changeBtn.disabled = false;
+                        buyBtn.disabled = false;
+ 
+                    }
                 }
             });
         }
@@ -142,7 +159,7 @@
                         </div>
 
                         <div class="buyForm" id="app">
-                            <button type="button" class="buyBtn" name="button" onclick="clickStatus1()">購買</button>
+                            <button type="button" class="buyBtn" id="buyBtn" name="button" onclick="clickStatus1()">購買</button>
                             <component :is="content" id="popUp" @nextacc="myClick" @click-2="myClick2"></component>
                         </div>
                     </div>
@@ -498,7 +515,7 @@
 
                                     <div class="yourRoleImg">
                                         <img id="yourRoleImg1" src="">
-                                    </div>
+                                    </div>    
                                     <div class="yourRoleNameBlock">
                                         <p id="yourRoleName1"></p>
                                     </div>
@@ -573,10 +590,7 @@
 
         </div>
 
-        <div class="upup">
-            <i class="fas fa-arrow-circle-up totop"></i>
-        </div>
-
+    
 
     </main>
     <!-- footer -->

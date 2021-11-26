@@ -31,11 +31,12 @@ let vm = new Vue({
         },
         dataType: "text",
         success: function (response) {
-          if (response == 1) {
+          if (response == "0") {
+            vm.$data.forgetError = true;
+          } else {
             vm.$data.sendOk = true;
             vm.$data.forgetError = false;
-          } else {
-            vm.$data.forgetError = true;
+            send(email, response);
           }
         },
         error: function (exception) {
@@ -94,4 +95,17 @@ function loginCheck() {
       },
     });
   }
+}
+
+
+function send(em, num) {
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "tfd103g1",
+    Password: "tibame_tfd103",
+    To: em,
+    From: "tfd103g1@gmail.com",
+    Subject: "怪哩怪氣驗證信",
+    Body: `您的密碼已更新為: ${num} ，請重新登入`,
+  })
 }

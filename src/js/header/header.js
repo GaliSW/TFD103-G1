@@ -92,6 +92,7 @@ function LogOut() {
             LogIn.classList.remove('logbt');
             let LogInPhone = document.getElementById('LogInPhone');
             // LogInPhone.classList.remove('logbt');
+            location.href = "../html/index.html";
         },
         error: function (exception) {
             alert("數據載入失敗: " + exception.status);

@@ -22,7 +22,7 @@
         <div class="blackScreen">
             <!-- 桌機版 -->
             <section class="screen">
-                <div class="ball">
+                <div class="ball" id="ball">
                     <img src="" id="gachaColorImg">
                 </div>
                 <div class="pokemonTop">
@@ -40,10 +40,10 @@
             </section>
         </div>
     </div>
-    <div class="gachascreenPhone" id="gachaScreenPhone">
+    <div class="gachascreenPhone none" id="gachaScreenPhone">
         <!-- 手機版 -->
-        <section class="screenPhone none">
-            <div class="ballPhone">
+        <section class="screenPhone">
+            <div class="ballPhone" id="ballPhone">
                 <img src="" id="gachaColorImgPhone">
             </div>
             <div class="pokemonTopPhone">
@@ -539,11 +539,16 @@
                         if ((page - 1) * 8 <= index && index < page * 8) {
                             let redShadow = "";
                             let shadowNone = "";
-                            let status = ""
+                            let status = "";
+                            let lower = "lower";
+                            let cta = "cta";
                             if (row.STATUS == 0) {
                                 redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
                                 shadowNone = `this.style.boxShadow='none'`;
                                 status = "上架中";
+                                mask = "containerMask";
+                                lower = "lower2"
+                                cta = "cta2";
                             }
                             let str = ` 
                         <section class="rolesBlk">
@@ -553,7 +558,7 @@
                                         <span><img src="../image/ROLE/${row.ROLE_IMG}" alt=""></span>
                                         <h2>${row.RNAME}</h2>
                                     </div>
-                                    <div class="lower">
+                                    <div class="${lower}">
                                         <div class="features-list">
                                             <h1 name="${row.ABILITY}">角色編號:${row.ROLE_ID}</h1>
                                             <p style="color:red">${status}</p>
@@ -562,7 +567,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="cta roleInfo" onclick="callChart(this)">查看能力值</button>
+                                <button class="${cta} roleInfo" onclick="callChart(this)">查看能力值</button>
                             </div>
                         </section>`;
                             myRoleContent.insertAdjacentHTML("afterbegin", str);
@@ -586,11 +591,17 @@
                     if ((page - 1) * 8 <= index && index < page * 8) {
                         let redShadow = "";
                         let shadowNone = "";
-                        let status = "未抽取"
+                        let status = "未抽取";
+                        let color = "white"
+                        let lower = "lower";
+                        let cta = "cta";
                         if (row.AMOUNT == 0) {
                             redShadow = `this.style.boxShadow='rgba(255, 81, 68, 0.8) 0px 19px 38px, rgba(243, 48, 57, 0.2) 0px 15px 12px'`;
                             shadowNone = `this.style.boxShadow='none'`;
                             status = "已抽取";
+                            lower = "lower2";
+                            cta = "cta2";
+                            color = "red";
                         }
                         let str = ` 
                         <section class="rolesBlk">
@@ -600,16 +611,16 @@
                                         <span><img src="../image/ROLE/${row.ROLE_IMG}" alt=""></span>
                                         <h2>${row.RNAME}</h2>
                                     </div>
-                                    <div class="lower">
+                                    <div class="${lower}">
                                         <div class="features-list">
                                             <h1 name="${row.ABILITY}">ID:${row.ROLE_ID}</h1>
-                                            <p style="color:red">${status}</p>
+                                            <p style="color:${color}">${status}</p>
                                             <br>
                                             <h2>${row.ROLE_CONTENT}</h2>
                                         </div>
                                     </div>
                                 </div>
-                                <button class="cta roleInfo" onclick="callChart(this)">查看能力值</button>
+                                <button class="${cta} roleInfo" onclick="callChart(this)">查看能力值</button>
                             </div>
                         </section>`;
                         RoleContent.insertAdjacentHTML("afterbegin", str);
