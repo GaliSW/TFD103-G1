@@ -41,6 +41,7 @@
       h1{
         font-size: $fontSizeH1;
         color:white;
+        margin: 40px 0;
       }
       
       h3{
@@ -75,6 +76,20 @@
           padding:15px;
           font-size:18px;
           margin-right:auto;
+          @include desktop{
+          }
+          @include desktop_small{
+          }
+          @include pad{
+          }
+          @include pad_small{
+          }
+    
+          @include phone{
+          }
+    
+          @include phone_small{
+          }    
           &:hover{
             @include btn_on(20,20);
           }

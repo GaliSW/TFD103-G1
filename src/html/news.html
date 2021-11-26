@@ -38,7 +38,7 @@
                     <div class="left">
                         <p>${date}</p>
                         <h3>${title}</h3>
-                        <p>${content}</p>
+                        <p class="hidden">${content}</p>
                         <a href="./news_in.html">
                             <p class="pp">
                                 <閱讀更多>
@@ -264,7 +264,7 @@
         <main class="mama">
             <p class="p">首頁>消息/介紹>所有消息</p>
             <section>
-                <h1>所有消息</h1>
+                <h1 class="titile" style="margin-top:50px;">所有消息</h1>
                 <div class="content" id="block_10">
                     <!-- <div class="left">
                         <p>2022年2月1號</p>
@@ -286,18 +286,20 @@
             <div id="block_1">
 
                 <div class="search-form">
+                    <div class="buttons">
+                        <h3>排序文章：</h3>
+                        <button id="bbbn" class="btn old bbbn" onclick="sort2()">按時間排序由舊至新</button>
+                        <button id="bbbn2" class="btn old bbbn2" onclick="sort()">按時間排序由新至舊</button>
+                    </div>
+    
                     <div style="display:flex;" class="searsear">
-                        <h3>文章搜尋：</h3>
+                        <h3>搜尋文章：</h3>
                         <input id="search-input" onkeyup="find()" name="search-input" type="text" placeholder="關鍵字搜尋"
                             style="outline: none;" />
                         <style id="m-search"></style>
                     </div>
                 </div>
 
-                <div class="buttons">
-                    <button id="bbbn" class="btn old bbbn" onclick="sort2()">按時間排序由舊至新</button>
-                    <button id="bbbn2" class="btn old bbbn2" onclick="sort()">按時間排序由新至舊</button>
-                </div>
 
                 <div id="block_9"></div>
 
