@@ -76,7 +76,12 @@ function gachaScreen(img) {
         delay: 4.5,
         duration: 3
     });
+<<<<<<< HEAD
     tl.restart();
+=======
+    tl.kill()
+    tl.play(0)
+>>>>>>> Calista
 }
 
 
