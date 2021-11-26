@@ -206,13 +206,13 @@ function play() {
                             let roleID = row.ROLE_ID;
                             let img = row.ROLE_IMG;
                             setGacha(roleID);
-                            gachaScreen(img);
 
-                            // if (window.innerWidth < 414) {
-                            //     gachaScreenPhone(img);
-                            // } else {
-                            //     gachaScreen(img);
-                            // }
+
+                            if (window.innerWidth < 414) {
+                                gachaScreenPhone(img);
+                            } else {
+                                gachaScreen(img);
+                            }
                         });
                     },
                     error: function (exception) {

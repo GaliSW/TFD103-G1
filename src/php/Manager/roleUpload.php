@@ -17,8 +17,8 @@
         // $filePath = getFilePath().$_FILES["file"]["name"];
 
         //檔案最終存放位置
-        $filePath = $ServerRoot."/tfd103/g1/TFD103-G1/src/image/ROLE/".$fileName;
-
+        // $filePath = $ServerRoot."/tfd103/g1/TFD103-G1/src/image/ROLE/".$fileName;
+        $filePath = $ServerRoot."/TFD103-G1/src/image/ROLE/".$fileName;
         //將暫存檔搬移到正確位置
         if(move_uploaded_file($filePath_Temp, $filePath)){
 
@@ -54,7 +54,7 @@
 
             //導頁            
             echo "<script>alert('新增成功!'); location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
-            echo "Y";
+            // echo "Y";
 
         }else{
 

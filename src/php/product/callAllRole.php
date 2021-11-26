@@ -10,7 +10,7 @@ include "../connection.php";
                     ON T2.FK_ROLE_ID = T3.ROLE_ID
                     LEFT JOIN MEMBER T4
                     ON T1.FK_USERNAME = T4.USERNAME
-                    WHERE  T1.AMOUNT = 1";
+                    WHERE  T1.AMOUNT = 1 && T1.FK_USERNAME is not null";
        //執行
 
     $statement= $pdo->prepare($sql);
