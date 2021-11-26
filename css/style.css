@@ -1672,6 +1672,18 @@ main.deposit {
   margin-top: 90px;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  main.deposit {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  main.deposit {
+    margin-top: 70px;
+  }
+}
+
 main.deposit a {
   text-decoration: none;
 }
@@ -2367,6 +2379,12 @@ body {
   max-width: 1200px;
 }
 
+@media (max-width: 767.98px) {
+  .gaChaLabelBtn {
+    margin-top: 100px;
+  }
+}
+
 .gaChaLabelBtn .gachaPageLable {
   margin: 0 auto;
   display: flex;
@@ -2616,6 +2634,7 @@ body {
 @media (min-width: 375px) and (max-width: 413.98px) {
   #gachaStart {
     margin-top: 400px;
+    margin-left: 64%;
   }
 }
 
@@ -3484,6 +3503,7 @@ body {
 }
 
 .rolesBlk .container {
+  position: relative;
   width: 90%;
   justify-content: center;
   align-items: center;
@@ -3506,6 +3526,12 @@ body {
 .rolesBlk .container:hover .lower {
   transform: translateY(-300%);
   background: #60cd90;
+}
+
+.rolesBlk .container:hover .lower2 {
+  -webkit-transform: translateY(-300%);
+          transform: translateY(-300%);
+  background: #a5a5a5;
 }
 
 .rolesBlk .container:hover .features-list {
@@ -3532,6 +3558,11 @@ body {
 
 .rolesBlk .container:hover .cta {
   background: #60cd90;
+  color: #151414;
+}
+
+.rolesBlk .container:hover .cta2 {
+  background: #a5a5a5;
   color: #151414;
 }
 
@@ -3658,6 +3689,53 @@ body {
   }
 }
 
+.rolesBlk .lower2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: transparent;
+  position: relative;
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  width: 100%;
+  height: 27%;
+}
+
+@media (max-width: 1200px) {
+  .rolesBlk .lower2 {
+    height: 31%;
+  }
+}
+
+@media (max-width: 992px) {
+  .rolesBlk .lower2 {
+    height: 33%;
+  }
+}
+
+@media (max-width: 413.98px) {
+  .rolesBlk .lower2 {
+    height: 47%;
+  }
+}
+
+@media (max-width: 413.98px) {
+  .rolesBlk .lower2 {
+    height: 44%;
+  }
+}
+
 .rolesBlk .features-list {
   text-align: center;
   list-style: none;
@@ -3666,6 +3744,12 @@ body {
   opacity: 0;
   width: 100%;
   transition: all .2s ease;
+}
+
+@media (max-width: 767.98px) {
+  .rolesBlk .features-list p {
+    font-size: 12px;
+  }
 }
 
 .rolesBlk .features-list h1 {
@@ -3730,6 +3814,39 @@ body {
 
 @media (max-width: 414.98px) {
   .rolesBlk .cta {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+
+.rolesBlk .cta2 {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 24px;
+  color: #000;
+  font-weight: 100;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+@media (max-width: 1200px) {
+  .rolesBlk .cta2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  .rolesBlk .cta2 {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 414.98px) {
+  .rolesBlk .cta2 {
     font-size: 14px;
     padding: 5px;
   }
@@ -7827,6 +7944,18 @@ main.trading_list {
   margin-top: 90px;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  main.trading_list {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  main.trading_list {
+    margin-top: 70px;
+  }
+}
+
 main.trading_list .main_contain {
   margin: 0 auto;
   width: 95%;
@@ -8124,6 +8253,18 @@ main.points_list {
   margin-top: 90px;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  main.points_list {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  main.points_list {
+    margin-top: 70px;
+  }
+}
+
 main.points_list .main_contain {
   max-width: 1200px;
   margin: 0 auto;
@@ -8383,6 +8524,18 @@ main.member_info {
   margin-top: 90px;
 }
 
+@media (min-width: 414px) and (max-width: 577.98px) {
+  main.member_info {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 413.98px) {
+  main.member_info {
+    margin-top: 70px;
+  }
+}
+
 main.member_info .main_contain {
   max-width: 1200px;
   margin: 0 auto;
@@ -8539,7 +8692,7 @@ main.member_info div.bar button._on {
 }
 
 @media (max-width: 577.98px) {
-  main.member_info div.bar .button {
+  main.member_info div.bar button {
     font-size: 14px;
   }
 }
