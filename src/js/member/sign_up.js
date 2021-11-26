@@ -1,3 +1,4 @@
+
 let vm = new Vue({
   el: "#app",
   data: {
@@ -7,10 +8,10 @@ let vm = new Vue({
     pwdError: false,
     emailError: false,
     pwdTwoError: false,
-    id:"",
-    newPassword:"",
-    twicePassword:"",
-    mail:"",
+    id: "",
+    newPassword: "",
+    twicePassword: "",
+    mail: "",
   },
   methods: {
     singUpSuccess: function () {
@@ -34,7 +35,7 @@ let vm = new Vue({
     },
     showPwdError: function () {
       let passwordRegular = /^[a-zA-Z0-9]*$/;
-      if (passwordRegular.test(this.newPassword) && this.newPassword !=="") {
+      if (passwordRegular.test(this.newPassword) && this.newPassword !== "") {
         vm.$data.pwdError = false;
         // console.log(this.newPassword.length);
       } else {
@@ -48,7 +49,7 @@ let vm = new Vue({
       } else {
         vm.$data.pwdTwoError = true;
       }
-      
+
     },
     showEmailError: function () {
       let mailRegular =
@@ -59,7 +60,7 @@ let vm = new Vue({
         vm.$data.emailError = true;
       }
     },
-    
+
     doThis: function () {
       if (
         this.idError == false &&
@@ -96,10 +97,13 @@ let vm = new Vue({
             if (response == "X") {
               vm.$data.id = "此帳號已被使用過，請換一個試試!!!";
             }
-            if (response == "Y") {
-              vm.$data.id ="";
+            else {
+              vm.$data.id = "";
               vm.$data.writing = false;
               vm.$data.success = true;
+              console.log(email);
+              //寄信
+              send(email, response);
 
               setTimeout(trans(), 5);
             }
@@ -122,6 +126,21 @@ let vm = new Vue({
 // };
 
 // 註冊成功跳轉驗證
-function trans(){
-        window.location.href = './verify.html';
-    };
+function trans() {
+  window.location.href = './verify.html';
+};
+function send(em, num) {
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "tfd103g1",
+    Password: "tibame_tfd103",
+    To: em,
+    From: "tfd103g1@gmail.com",
+    Subject: "怪哩怪氣驗證信",
+    Body: `您的驗證碼為: ${num} ，請點擊網址驗證。
+          https://tibamef2e.com/tfd103/g1/TFD103-G1/src/verify.html"`
+  })
+    // .then(
+    //   message => alert(message)
+    // );
+}
