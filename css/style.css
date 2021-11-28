@@ -4784,16 +4784,12 @@ body {
   background-size: cover;
   position: relative;
   width: 100%;
-  z-index: 2;
+  height: 100%;
   overflow-x: hidden;
 }
 
 .index .indexTwo .imgBlock {
   width: 100%;
-}
-
-.index .angle {
-  position: absolute;
 }
 
 .index .dpW {
