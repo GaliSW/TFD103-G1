@@ -75,8 +75,6 @@ function gachaScreen(img) {
         delay: 4.5,
         duration: 3
     });
-    tl.kill()
-    tl.play(0)
 }
 
 
