@@ -32,7 +32,7 @@
         //將暫存檔搬移到正確位置
         move_uploaded_file($filePath_Temp, $filePath);
 
-        $sql = " update member 
+        $sql = " update MEMBER 
                 set USER_IMG = ?
                 where USERNAME = ?";
 
