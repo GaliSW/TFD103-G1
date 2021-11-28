@@ -3,18 +3,28 @@
 }
 
 
-.allBlock1{
+
+.tradeBG{
     background-image: url("../src/image/trade/background.png");
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 0px 0px;
-    margin: 90px 0 0 0;
+    // background-attachment: fixed;
+    position: fixed;
+    // background-position: 0px 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
     padding: 0;
+}
+
+
+
+.allBlock1{
+    margin: 90px 0 0 0;
 
     @media (max-width: 768px){
-        margin: 70px 0 0 0;
+            margin: 70px 0 0 0;
 
-    }
+        }
 
     .p{
         font-size: $fontSize;
@@ -244,7 +254,7 @@
 
 
 .roleUpPop{
-    z-index: 2;
+    z-index: 12;
     position: relative;
     
     .maskLayer{
@@ -262,6 +272,15 @@
         }
     }
 
+    #box2{
+        @media (max-width:577.98px){
+            width: 80%;
+            height: 15%;
+
+        }
+
+    }
+
 
     .popUpBox{
 
@@ -277,9 +296,12 @@
         overflow: auto;
 
         @media (max-width: 768px){
-            height: 30%;
+            height: 50%;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+    
         }
-
 
 
         .popContent2{
@@ -288,6 +310,10 @@
             margin-top: 150px;
             height: 100px;
             font-size: 32px;
+            @media (max-width: 576px){
+                margin-top: 50px;
+
+            }
         }
 
         .closeBtn{
@@ -341,7 +367,7 @@
                 }
 
                 @media (min-width:375px) and (max-width:577px){
-                    height: 210px;
+                    height: 150px;
                     margin-top: 20px;
                 }
 
@@ -380,6 +406,7 @@
                     @media (min-width:375px) and (max-width:577px){
                         display: flex;
                         flex-direction: row;
+                        height: 80px;
                     }
 
 
@@ -397,6 +424,11 @@
                             width: 60px;
                         }
 
+                        @media (min-width:375px) and (max-width:577px){
+
+                            width: 80px;
+                            height: 80px;
+                        }
 
 
                     }
@@ -410,8 +442,8 @@
                 flex: 1;
 
                 @media (min-width:375px) and (max-width:577px){
-                    width: 200px;
-                    margin: 30px auto 0;
+                    width: 150px;
+                    margin: 20px auto 0;
     
                 }
             }

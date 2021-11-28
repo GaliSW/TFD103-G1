@@ -118,6 +118,7 @@
         </div>
     </div>
 </header>
+<div class="tradeBG"></div>
   <main class="allBlock1">
     <p class="p">首頁>角色交易</p>
 
@@ -267,7 +268,7 @@
 
           <!-- 角色上架pop-2   -->
 
-          <div class="popUpBox" :class="{'box1':two}">
+          <div class="popUpBox" :class="{'box1':two}" id="box2">
             <div class="closeBtn" @click=clickClose()>
               x
             </div>
@@ -702,7 +703,7 @@
 
 
           $.each(response, function (index, row) {
-            let str = ` <img src="../image/ROLE/${row.ROLE_IMG}" onclick="chooseImg(this)" style="width:120px;" id="${row.RNAME}" name= "${row.GACHA_ID}" alt="${row.STATUS}">`;
+            let str = ` <img src="../image/ROLE/${row.ROLE_IMG}" onclick="chooseImg(this)" id="${row.RNAME}" name= "${row.GACHA_ID}" alt="${row.STATUS}">`;
             chooseRole.insertAdjacentHTML("beforeend", str);
             innerAccount.innerHTML = `${row.FK_USERNAME}`;
 
