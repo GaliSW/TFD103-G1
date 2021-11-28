@@ -77,10 +77,13 @@ function gachaScreen(img) {
         duration: 3
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
     tl.restart();
 =======
     tl.kill()
     tl.play(0)
+>>>>>>> Calista
+=======
 >>>>>>> Calista
 }
 

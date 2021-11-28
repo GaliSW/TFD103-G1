@@ -1512,12 +1512,7 @@ main.deposit {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../src/image/deposit/back.jpg);
-<<<<<<< HEAD
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-=======
   box-sizing: border-box;
->>>>>>> c573111e5ecde372824c8db74339d03583e62a9e
   margin-top: 90px;
 }
 
@@ -2734,37 +2729,6 @@ body {
 
 @keyframes drop {
   0% {
-<<<<<<< HEAD
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-  }
-  50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  51% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  100% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-}
-
-@-webkit-keyframes drop {
-  0% {
-    -webkit-transform: scale(0.7);
-  }
-  50% {
-    -webkit-transform: scale(1);
-  }
-  51% {
-    -webkit-transform: translateY(0px);
-  }
-  100% {
-    -webkit-transform: translateY(100px);
-=======
     transform: scale(0.7);
   }
   50% {
@@ -2775,7 +2739,6 @@ body {
   }
   100% {
     transform: translateY(100px);
->>>>>>> c573111e5ecde372824c8db74339d03583e62a9e
   }
 }
 
@@ -4821,16 +4784,12 @@ body {
   background-size: cover;
   position: relative;
   width: 100%;
-  z-index: 2;
+  height: 100%;
   overflow-x: hidden;
 }
 
 .index .indexTwo .imgBlock {
   width: 100%;
-}
-
-.index .angle {
-  position: absolute;
 }
 
 .index .dpW {
@@ -9279,37 +9238,25 @@ main.member_info section.popShow {
 
 @media (min-width: 578px) and (max-width: 767.98px) {
   .out .search-form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
 @media (min-width: 414px) and (max-width: 577.98px) {
   .out .search-form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
 @media (min-width: 375px) and (max-width: 413.98px) {
   .out .search-form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
 @media (min-width: 100px) and (max-width: 374.98px) {
   .out .search-form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -9331,28 +9278,10 @@ main.member_info section.popShow {
   font-size: 30px;
 }
 
-<<<<<<< HEAD
 .out .search-form .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-right: auto;
-=======
-.out .buttons {
   display: flex;
   justify-content: center;
-  margin-top: -40px;
-  margin-bottom: 80px;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .out .buttons {
-    margin-top: 40px;
-  }
->>>>>>> c573111e5ecde372824c8db74339d03583e62a9e
+  margin-right: auto;
 }
 
 @media (min-width: 578px) and (max-width: 767.98px) {
@@ -9411,14 +9340,7 @@ main.member_info section.popShow {
   width: 100%;
   margin-top: 80px;
   display: flex;
-<<<<<<< HEAD
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-=======
-  justify-content: center;
   align-items: center;
->>>>>>> c573111e5ecde372824c8db74339d03583e62a9e
   opacity: 0.6;
   line-height: 30px;
 }
@@ -9577,85 +9499,6 @@ main.member_info section.popShow {
   transition: all .5s ease-in-out;
 }
 
-<<<<<<< HEAD
-=======
-.wrap78 {
-  display: flex;
-  width: 100%;
-  margin-top: 50px;
-  opacity: 0.6;
-  line-height: 100px;
-}
-
-@media (min-width: 992px) {
-  .wrap78 {
-    max-width: 1200px;
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .wrap78 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    opacity: 1;
-  }
-}
-
-@media (min-width: 578px) and (max-width: 767.98px) {
-  .wrap78 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    opacity: 1;
-  }
-}
-
-@media (min-width: 414px) and (max-width: 577.98px) {
-  .wrap78 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    opacity: 1;
-  }
-}
-
-@media (min-width: 375px) and (max-width: 413.98px) {
-  .wrap78 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    opacity: 1;
-  }
-}
-
-@media (min-width: 100px) and (max-width: 374.98px) {
-  .wrap78 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    opacity: 1;
-  }
-}
-
-.wrap78:hover {
-  opacity: 1;
-  transition: .3s ease-in-out;
-}
-
-.wrap78 .sec {
-  margin-right: 20px;
-  height: 250px;
-}
-
-.wrap78 .name {
-  text-align: center;
-  width: 100%;
-}
-
->>>>>>> c573111e5ecde372824c8db74339d03583e62a9e
 .out {
   margin-bottom: 50px;
 }
@@ -9776,11 +9619,17 @@ main.member_info section.popShow {
   box-sizing: border-box;
 }
 
-.allBlock {
+.productBG {
   background-image: url("../src/image/trade/background.png");
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 0px 0px;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  padding: 0;
+}
+
+.allBlock {
   margin: 90px 0 0 0;
 }
 
@@ -10132,8 +9981,8 @@ main.member_info section.popShow {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 200vh;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -10242,6 +10091,12 @@ main.member_info section.popShow {
   margin-bottom: 20px;
 }
 
+@media (max-width: 576px) {
+  .allBlock .test .maskLayer .popUpBox .popContent12 {
+    margin-top: 50px;
+  }
+}
+
 .allBlock .test .maskLayer .popUpBox .popContent12 p {
   font-size: 24px;
 }
@@ -10254,10 +10109,22 @@ main.member_info section.popShow {
   flex-wrap: wrap;
 }
 
+@media (max-width: 567px) {
+  .allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark {
+    margin: 0 20px 0 20px;
+  }
+}
+
 .allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li {
   width: calc((100% - 60px - 50px) / 4);
   margin-right: 20px;
   margin-bottom: 25px;
+}
+
+@media (max-width: 567px) {
+  .allBlock .test .maskLayer .popUpBox .roleBlock1Mark .roleList1Mark li {
+    width: 60px;
+  }
 }
 
 .test .popUpBox {
@@ -10296,7 +10163,7 @@ main.member_info section.popShow {
 }
 
 .test .popUpBox .roleArea .myRoleBlock .myRoleImg {
-  width: 230px;
+  width: 200px;
 }
 
 @media (max-width: 900px) {
@@ -10365,7 +10232,7 @@ main.member_info section.popShow {
 }
 
 .test .popUpBox .roleArea .yourRoleBlock .yourRoleImg {
-  width: 230px;
+  width: 200px;
 }
 
 @media (max-width: 900px) {
@@ -11126,13 +10993,18 @@ main.signup .verify_contain div.verify .falseVerify {
   box-sizing: border-box;
 }
 
-.allBlock1 {
+.tradeBG {
   background-image: url("../src/image/trade/background.png");
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 0px 0px;
-  margin: 90px 0 0 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
   padding: 0;
+}
+
+.allBlock1 {
+  margin: 90px 0 0 0;
 }
 
 @media (max-width: 768px) {
@@ -11393,7 +11265,7 @@ main.signup .verify_contain div.verify .falseVerify {
 }
 
 .roleUpPop {
-  z-index: 2;
+  z-index: 12;
   position: relative;
 }
 
@@ -11408,6 +11280,13 @@ main.signup .verify_contain div.verify .falseVerify {
 @media (max-width: 577.98px) {
   .roleUpPop .box1 {
     height: 650px;
+  }
+}
+
+@media (max-width: 577.98px) {
+  .roleUpPop #box2 {
+    width: 80%;
+    height: 15%;
   }
 }
 
@@ -11426,7 +11305,10 @@ main.signup .verify_contain div.verify .falseVerify {
 
 @media (max-width: 768px) {
   .roleUpPop .popUpBox {
-    height: 30%;
+    height: 50%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
   }
 }
 
@@ -11436,6 +11318,12 @@ main.signup .verify_contain div.verify .falseVerify {
   margin-top: 150px;
   height: 100px;
   font-size: 32px;
+}
+
+@media (max-width: 576px) {
+  .roleUpPop .popUpBox .popContent2 {
+    margin-top: 50px;
+  }
 }
 
 .roleUpPop .popUpBox .closeBtn {
@@ -11496,7 +11384,7 @@ main.signup .verify_contain div.verify .falseVerify {
 
 @media (min-width: 375px) and (max-width: 577px) {
   .roleUpPop .popUpBox .input .chooseRoleBlockk {
-    height: 210px;
+    height: 150px;
     margin-top: 20px;
   }
 }
@@ -11546,6 +11434,7 @@ main.signup .verify_contain div.verify .falseVerify {
   .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock {
     display: flex;
     flex-direction: row;
+    height: 80px;
   }
 }
 
@@ -11565,6 +11454,13 @@ main.signup .verify_contain div.verify .falseVerify {
   }
 }
 
+@media (min-width: 375px) and (max-width: 577px) {
+  .roleUpPop .popUpBox .input .chooseRoleBlockk .chooseRoleBlock img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .roleUpPop .popUpBox .input .showImgBlock {
   margin: 20px;
   flex: 1;
@@ -11572,8 +11468,8 @@ main.signup .verify_contain div.verify .falseVerify {
 
 @media (min-width: 375px) and (max-width: 577px) {
   .roleUpPop .popUpBox .input .showImgBlock {
-    width: 200px;
-    margin: 30px auto 0;
+    width: 150px;
+    margin: 20px auto 0;
   }
 }
 
