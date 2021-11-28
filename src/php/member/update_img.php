@@ -22,7 +22,7 @@
         // $filePath = $ServerRoot . "./TFD103-G1/src/image/MEMBER/" . $Name. $fileName;
         
         //檔案最終存放位置
-        $filePath = $ServerRoot ."/tfd103/g1/TFD103-G1/src/image/MEMBER/" . $Name . $fileName;
+        $filePath = $ServerRoot."/tfd103/g1/TFD103-G1/src/image/member/".$Name.$fileName;
 
         //判斷檔案格式是否為圖片
         $extensionName = getExtensionName($filePath);
@@ -32,13 +32,11 @@
         //將暫存檔搬移到正確位置
         move_uploaded_file($filePath_Temp, $filePath);
 
-        $sql = " update member 
-                set USER_IMG = ?
-                where USERNAME = ?";
+        $sql = " update MEMBER set USER_IMG = ? where USERNAME = ?";
 
         //執行
         $statement = $pdo->prepare($sql);
-        $statement->bindValue(1, $Name . $fileName);
+        $statement->bindValue(1, $Name.$fileName);
         $statement->bindValue(2, $Name);
         
         $statement->execute();
