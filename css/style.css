@@ -10251,7 +10251,8 @@ main.member_info section.popShow {
   margin: 0 auto;
 }
 
-.out .con h1 {
+.out .con .tititle3 {
+  text-align: center;
   margin: 50px 0;
 }
 

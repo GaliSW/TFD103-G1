@@ -39,7 +39,8 @@
         justify-content: center;
         flex-direction: column;
         @include center;
-        h1{
+        .tititle3{
+            text-align: center;
             margin:50px 0;
         }
         .news_in1{
