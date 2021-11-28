@@ -138,7 +138,7 @@ function send(em, num) {
     From: "tfd103g1@gmail.com",
     Subject: "怪哩怪氣驗證信",
     Body: `您的驗證碼為: ${num} ，請點擊網址驗證。
-          https://tibamef2e.com/tfd103/g1/TFD103-G1/src/verify.html"`
+          https://tibamef2e.com/tfd103/g1/TFD103-G1/src/html/verify.html"`
   })
     // .then(
     //   message => alert(message)
