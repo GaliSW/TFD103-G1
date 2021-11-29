@@ -32,13 +32,7 @@
         //將暫存檔搬移到正確位置
         move_uploaded_file($filePath_Temp, $filePath);
 
-<<<<<<< HEAD
-        $sql = " update MEMBER 
-                set USER_IMG = ?
-                where USERNAME = ?";
-=======
         $sql = " update MEMBER set USER_IMG = ? where USERNAME = ?";
->>>>>>> Gary
 
         //執行
         $statement = $pdo->prepare($sql);
