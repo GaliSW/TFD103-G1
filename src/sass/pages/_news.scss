@@ -216,6 +216,32 @@
     }
 }
 
+.sort{
+  display: none;
+}
+
+.sort:nth-child(1){
+  display: flex;
+}
+
+.sort:nth-child(2){
+  display: flex;
+}
+
+.sort:nth-child(3){
+  display: flex;
+}
+
+.sort:nth-child(4){
+  display: flex;
+}
+
+.sort:nth-child(5){
+  display: flex;
+}
+
+
+
 
 
 
@@ -323,7 +349,7 @@
 }
 
 #bnbn{
-  pointer-events: none;
+  // pointer-events: none;
   cursor: pointer;
   @include btn_blur(20, 20);
   @include border_r(15);

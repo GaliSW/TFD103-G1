@@ -90,7 +90,7 @@
 
 
 // $(document).ready(function(){
-//   $(".sort").slice(3,4).hide();
+//   $(".sort").slice(1,5).hide();
 //   $("#bnbn").on("click", function(e){
 //       e.preventDefault();
 //       $(".sort:hidden").slice(0, 2).slideDown();
@@ -99,6 +99,25 @@
 //       }
 //   });
 // })
+
+var wraper = document.getElementsByClassName('sort');
+var btn = document.getElementById('bnbn');
+var currentimg = 2;
+btn.addEventListener('click',function(){
+  // console.log('hi');
+  for(var i = currentimg; i<currentimg+2; i++){
+    if(wraper[i]){
+      wraper[i].style.display = 'flex';
+    }
+  }
+  currentimg +=2 ;
+  if(currentimg>=wraper.length){
+    btn.innerHTML="沒有更多內容了";
+    btn.classList.add("noContent");
+  }
+})
+
+
 
 
 
