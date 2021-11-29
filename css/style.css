@@ -9337,6 +9337,30 @@ main.member_info section.popShow {
   font-size: 18px;
 }
 
+.out .sort {
+  display: none;
+}
+
+.out .sort:nth-child(1) {
+  display: flex;
+}
+
+.out .sort:nth-child(2) {
+  display: flex;
+}
+
+.out .sort:nth-child(3) {
+  display: flex;
+}
+
+.out .sort:nth-child(4) {
+  display: flex;
+}
+
+.out .sort:nth-child(5) {
+  display: flex;
+}
+
 .out .wrap {
   cursor: pointer;
   width: 100%;
@@ -9460,7 +9484,6 @@ main.member_info section.popShow {
 }
 
 #bnbn {
-  pointer-events: none;
   cursor: pointer;
   color: #60cd90;
   width: 20;
